@@ -1,0 +1,46 @@
+---
+import dateFormat from "@/lib/utils/dateFormat";
+import { humanize, markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import ImageMod from "./ImageMod.astro";
+
+type Props = { service: CollectionEntry<"services">; index: number };
+
+const { service } = Astro.props;
+
+const { title, banner, date, categories } = service.data;
+---
+
+{
+  banner && (
+    <a href={`/services/${service.id}`}>
+      <ImageMod
+        src={banner}
+        alt={title!}
+        width={389}
+        height={277}
+        class="object-cover rounded-t w-full"
+      />
+    </a>
+  )
+}
+<div class="p-6">
+  <div class="flex flex-wrap items-center gap-2.5 mb-3">
+    {
+      categories!.map((category: string, index: number) => (
+        <p class="text-primary">
+          {humanize(category)}
+          {index !== categories!.length - 1 && ","}
+        </p>
+      ))
+    }
+    <div class="bg-black/30 h-[3px] w-[3px] rounded-full opacity-100"></div>
+
+    <p class="text-text/50 text-base">
+      {dateFormat(date!)}
+    </p>
+  </div>
+  <a href={`/services/${service.id}`}>
+    <h5 set:html={markdownify(title!)} class="h6 md:h5 [&>br]:hidden" />
+  </a>
+</div>

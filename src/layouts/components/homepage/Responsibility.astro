@@ -1,0 +1,71 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import CustomHeading from "../CustomHeading.astro";
+import ImageMod from "../ImageMod.astro";
+import VideoPlayer from "../functional-component/VideoPlayer";
+
+type Props = {
+  responsibility: CollectionEntry<"homepage">["data"]["responsibility"];
+};
+
+const { responsibility } = Astro.props;
+---
+
+<section class="section-sm pt-0 relative">
+  <div class="xl:absolute w-full max-xl:mb-14">
+    <div class="container 2xl:mt-10">
+      <p
+        set:html={markdownify(responsibility.subtitle)}
+        class="mb-6 text-primary text-base-sm max-xl:text-center"
+        data-aos="fade-up-sm"
+      />
+
+      <CustomHeading
+        as="h2"
+        text={responsibility.title}
+        class="text-h3 md:text-h2-sm mb-7 max-xl:text-center"
+        dataAos="fade-up-sm"
+        dataAosDelay="20"
+      />
+      <p
+        set:html={markdownify(responsibility.content)}
+        class="mb-7 xl:pl-[208px] max-xl:text-center text-text/80"
+        data-aos="fade-up-sm"
+        data-aos-delay="40"
+      />
+    </div>
+  </div>
+  <div class="flex flex-col md:flex-row justify-between xl:items-baseline">
+    <div class="md:w-[60%]">
+      <div class="mt-auto flex flex-col xl:flex-row">
+        <ImageMod
+          src={responsibility.image}
+          alt="responsibility"
+          width={594}
+          height={492}
+          class="xl:w-1/2 w-full object-cover"
+          data_aos="fade-up-sm"
+          data_aos_delay="60"
+        />
+        <div class="bg-primary flex flex-col justify-center gap-9 p-8">
+          {
+            responsibility.job.map((job, i) => (
+              <div data-aos="fade-up-sm" data-aos-delay={80 + i * 20}>
+                <h6
+                  set:html={markdownify(job.title)}
+                  class="text-text-light mb-2"
+                />
+                <p
+                  set:html={markdownify(job.content)}
+                  class="text-base-sm text-text-light/80"
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <VideoPlayer video={responsibility.video} client:load />
+  </div>
+</section>

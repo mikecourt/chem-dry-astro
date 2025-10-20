@@ -1,0 +1,50 @@
+{
+  "site": {
+    "title": "Cleaner - Astro Theme for Services Business",
+    "base_url": "https://cleaner-astro.vercel.app/",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo-dark.svg",
+    "footer_logo": "/images/logo.svg",
+    "logo_width": "142",
+    "logo_height": "36",
+    "logo_text": "cleaner"
+  },
+
+  "settings": {
+    "sticky_header": true
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "appointment_form_action": "#",
+    "footer_description": "Professional cleaning services <br> using innovative technology.",
+    "copyright": "[Themefisher](https://themefisher.com/) © 2025 All Rights Reserved"
+  },
+
+  "notification": {
+    "enable": true,
+    "message": "Need quick cleaning help?",
+    "link": "tel:+1-394-495-5993",
+    "label": "Call Us: +1 071 281 9795",
+    "icon": "FaPhone"
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Make An Appointment ",
+    "link": "/appointment"
+  },
+
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  },
+
+  "metadata": {
+    "meta_author": "Themefisher",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Cleaner - Astro Theme for Services Business"
+  }
+}

@@ -1,0 +1,129 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const contact = (await getEntry(
+  "contact",
+  "-index"
+)) as CollectionEntry<"contact">;
+const { contact_form_action }: { contact_form_action: string } = config.params;
+const { title, subtitle, description, meta_title, image } = contact.data;
+
+const cta = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+  <section class="section mt-24 sm:mt-20">
+    <div class="container">
+      <div class="mb-24">
+        <p
+          set:html={markdownify(subtitle!)}
+          class="text-primary text-base-sm mb-4 text-left"
+          data-aos="fade-up-sm"
+        />
+
+        <CustomHeading
+          as="h1"
+          text={title}
+          class="text-h2 lg:text-h1 text-left"
+          dataAos="fade-up-sm"
+          dataAosDelay="80"
+        />
+      </div>
+      <div class="row justify-center items-center g-5">
+        <div class="col-12 lg:col-6 order-2 lg:order-1">
+          <div
+            class="p-10 bg-light rounded-lg"
+            data-aos="fade-up-sm"
+            data-aos-delay="100">
+            <form action={contact_form_action} method="POST">
+              <div class="row">
+                <div class="col-12">
+                  <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="120">
+                    <label for="f-name" class="form-label"> First Name </label>
+                    <input
+                      id="f-name"
+                      name="f-name"
+                      class="form-input"
+                      placeholder="Your First Name"
+                      type="text"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="140">
+                    <label for="l-name" class="form-label"> Last Name </label>
+                    <input
+                      id="l-name"
+                      name="l-name"
+                      class="form-input"
+                      placeholder="Your Last Name"
+                      type="text"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="160">
+                    <label for="email" class="form-label">
+                      Email Address
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      class="form-input"
+                      placeholder="Your Email Address"
+                      type="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="180">
+                    <label for="message" class="form-label"> Message </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="form-input"
+                      placeholder="How can we help you?"
+                      rows="9"
+                      required></textarea>
+                  </div>
+                </div>
+                <div class="col" data-aos="fade-up-sm" data-aos-delay="200">
+                  <CustomButton
+                    label="Send A Message"
+                    variant="primary"
+                    button_type="submit"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-12 lg:col-6 order-1 lg:order-2" data-aos="fade-up-sm">
+          <ImageMod
+            src={image!}
+            alt={title!}
+            width={570}
+            height={806}
+            class="object-cover mx-auto max-lg:w-3/4"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <CallToAction cta={cta.data} />
+</Base>

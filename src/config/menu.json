@@ -1,0 +1,72 @@
+{
+  "main": [
+    {
+      "name": "About Us",
+      "url": "/about"
+    },
+    {
+      "name": "Services",
+      "url": "/services"
+    },
+    {
+      "name": "Gallery",
+      "url": "/gallery"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "footer": [
+    {
+      "title": "Company",
+      "children": [
+        {
+          "name": "Home",
+          "url": "/"
+        },
+        {
+          "name": "Services",
+          "url": "/services"
+        },
+        {
+          "name": "About Us",
+          "url": "/about"
+        },
+        {
+          "name": "Elements",
+          "url": "/elements"
+        },
+        {
+          "name": "Contacts",
+          "url": "/contact"
+        }
+      ]
+    },
+    {
+      "title": "Services",
+      "children": [
+        {
+          "name": "Home Cleaning",
+          "url": "/services/home-cleaning"
+        },
+        {
+          "name": "Window Cleaning",
+          "url": "/services/window-cleaning"
+        },
+        {
+          "name": "Pest Control",
+          "url": "/services/pest-control"
+        },
+        {
+          "name": "Floor Cleaning",
+          "url": "/services/floor-cleaning"
+        }
+      ]
+    }
+  ]
+}

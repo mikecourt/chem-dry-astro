@@ -1,0 +1,56 @@
+---
+import About from "@/components/homepage/About.astro";
+import Blog from "@/components/homepage/Blog.astro";
+import Customer from "@/components/homepage/Customer.astro";
+import Responsibility from "@/components/homepage/Responsibility.astro";
+import Testimonial from "@/components/homepage/Testimonial.astro";
+import Service from "@/components/services/Service.astro";
+import Base from "@/layouts/Base.astro";
+import Hero from "@/layouts/components/homepage/Hero.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+const homepage = (await getEntry(
+  "homepage",
+  "-index"
+)) as CollectionEntry<"homepage">;
+const { hero, about, responsibility, customer, testimonial, blog } =
+  homepage.data;
+
+const serviceIndex = (await getEntry(
+  "services",
+  "-index"
+)) as CollectionEntry<"services">;
+const allServices = await getSinglePage("services");
+
+const allBlogs = await getSinglePage("blog");
+
+const callToAction = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+---
+
+<Base>
+  <Hero hero={hero} />
+  {
+    serviceIndex.data.homepage_section_enable && (
+      <Service serviceIndex={serviceIndex.data} allServices={allServices} />
+    )
+  }
+  {about.enable && <About about={about} />}
+  {responsibility.enable && <Responsibility responsibility={responsibility} />}
+
+  {customer.enable && <Customer customer={customer} />}
+  {
+    customer.enable && testimonial.enable && (
+      <hr class="border-t border-border" data-aos="fade-up-sm" />
+    )
+  }
+  {testimonial.enable && <Testimonial testimonial={testimonial} />}
+
+  {blog.enable && <Blog blog={blog} allBlogs={allBlogs} />}
+  <CallToAction cta={callToAction.data} />
+</Base>

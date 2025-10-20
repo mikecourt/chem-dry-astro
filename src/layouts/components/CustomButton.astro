@@ -1,0 +1,61 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+
+const {
+  label,
+  link,
+  variant,
+  type,
+  icon,
+  className,
+  data_aos,
+  data_aos_delay,
+  button_type = "submit",
+} = Astro.props;
+
+const baseClasses = `relative overflow-hidden group ${type ? type : "btn"} ${className} ${
+  variant === "secondary"
+    ? "btn-secondary"
+    : variant === "light"
+      ? "btn-light"
+      : "btn-primary"
+}`;
+
+const hoverEffectClasses = `absolute w-full h-full -left-full -bottom-full rounded-full group-hover:-left-1 group-hover:-bottom-1 group-hover:w-[110%] group-hover:h-[110%] transition-all duration-[550ms] ${
+  variant === "secondary"
+    ? "bg-light"
+    : variant === "light"
+      ? "bg-body"
+      : "bg-text"
+}`;
+---
+
+{
+  link ? (
+    <a
+      href={link}
+      class={baseClasses}
+      data-aos={data_aos}
+      data-aos-delay={data_aos_delay}
+    >
+      {icon && (
+        <DynamicIcon icon={icon} className="relative z-10 inline-block mr-2" />
+      )}
+      <span class="relative z-10">{label}</span>
+      <div class={hoverEffectClasses} />
+    </a>
+  ) : (
+    <button
+      type={button_type}
+      class={baseClasses}
+      data-aos={data_aos}
+      data-aos-delay={data_aos_delay}
+    >
+      {icon && (
+        <DynamicIcon icon={icon} className="relative z-10 inline-block mr-2" />
+      )}
+      <span class="relative z-10">{label}</span>
+      <div class={hoverEffectClasses} />
+    </button>
+  )
+}

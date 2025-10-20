@@ -1,0 +1,66 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import CustomHeading from "../CustomHeading.astro";
+import ImageMod from "../ImageMod.astro";
+
+const { pride } = Astro.props;
+---
+
+<section class="section pt-0">
+  <div class="container">
+    <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+      <div class="w-full md:w-1/2 h-full">
+        {
+          pride?.subtitle && (
+            <p
+              set:html={markdownify(pride?.subtitle)}
+              class="mb-6 text-base-sm text-primary text-center md:text-left"
+              data-aos="fade-up-sm"
+            />
+          )
+        }
+        {
+          pride?.title && (
+            <CustomHeading
+              as="h2"
+              text={pride?.title}
+              class="text-h3-sm lg:text-h2-sm text-balance text-center md:text-left"
+              dataAos="fade-up-sm"
+            />
+          )
+        }
+      </div>
+      <div class="w-full md:w-[44%] h-full">
+        {
+          pride.content && (
+            <p
+              set:html={markdownify(pride.content)}
+              class="mb-6 last:mb-0 text-balance text-center md:text-left"
+              data-aos="fade-up-sm"
+              data-aos-delay="100"
+            />
+          )
+        }
+      </div>
+    </div>
+    <div class="row justify-center">
+      <div class="col-12">
+        <div class="grid grid-cols-2 gap-4 mt-16">
+          {
+            pride.images.map((img: string, i: number) => (
+              <ImageMod
+                src={img}
+                alt="third section img"
+                width={0}
+                height={0}
+                class={`${i === 0 ? "col-span-1 row-span-2 w-full h-full" : "col-span-1 row-span-1 w-full h-full"} object-cover rounded-lg`}
+                data_aos={i === 0 ? "fade-right-sm" : "fade-left-sm"}
+                data_aos_delay={100 + i * 50}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

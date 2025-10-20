@@ -1,0 +1,38 @@
+---
+import {
+  getCollection,
+  type CollectionEntry,
+  type CollectionKey,
+} from "astro:content";
+
+type PageData = {
+  title: string;
+  meta_title?: string;
+  description?: string;
+  image?: string;
+  draft?: boolean;
+  weight?: number; // Add weight property
+};
+
+export const getSinglePage = async <C extends CollectionKey>(
+  collectionName: C
+): Promise<CollectionEntry<C>[]> => {
+  const allPages = await getCollection(collectionName);
+
+  const removeIndex = allPages.filter((data) => data.id.match(/^(?!-)/));
+
+  const removeDrafts = removeIndex.filter((data) => {
+    const pageData = data.data as PageData;
+    return pageData.draft !== true;
+  });
+
+  // Sort by weight
+  const sortedPages = removeDrafts.sort((a, b) => {
+    const aWeight = Number((a.data as PageData).weight ?? 0);
+    const bWeight = Number((b.data as PageData).weight ?? 0);
+    return aWeight - bWeight;
+  });
+
+  return sortedPages;
+};
+---

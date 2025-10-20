@@ -1,0 +1,26 @@
+---
+// component: src/components/common/GoogleTagmanager.astro
+export interface Props {
+  id: string;
+  domain?: string;
+  container?: string;
+}
+
+const {
+  id = "GTM_MEASUREMENT_ID",
+  domain = "https://www.googletagmanager.com",
+  container = "gtm.js",
+} = Astro.props;
+
+const gtmScript = `<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'${container}'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '${domain}/${container}?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','${id}');</script>
+`;
+---
+
+<!-- Global site tag - Google Tagmanager -->
+<Fragment set:html={`${gtmScript}`} />
+<!-- Einde Global site tag - Google Tagmanager -->

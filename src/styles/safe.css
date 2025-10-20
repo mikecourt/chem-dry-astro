@@ -1,0 +1,37 @@
+/* navbar toggler */
+input#nav-toggle:checked + label #show-button {
+  @apply hidden;
+}
+input#nav-toggle:checked + label #hide-button {
+  @apply block;
+}
+#nav-menu {
+  @apply transition-all ease-in-out duration-500 overflow-hidden max-lg:max-h-0 max-lg:opacity-0;
+}
+input#nav-toggle:checked ~ #nav-menu {
+  @apply max-lg:opacity-100 max-lg:max-h-[500px];
+}
+input#nav-toggle:not(:checked) ~ #nav-menu {
+  @apply max-lg:opacity-0  max-lg:max-h-0;
+}
+
+/* form style */
+.form-label {
+  @apply mb-2.5 block font-medium text-text;
+}
+.form-input {
+  @apply w-full rounded-xl border border-border bg-body px-5 py-3.5 text-text hover:bg-primary/5 placeholder:text-[#0a0a0a4d] focus:border-primary/20 focus:ring-(--color-primary)/20;
+}
+
+/* swiper pagination */
+.review-image-wrapper.active {
+  .avatar {
+    @apply scale-100 opacity-100;
+  }
+  .quote {
+    @apply opacity-100;
+  }
+  p {
+    @apply opacity-100;
+  }
+}

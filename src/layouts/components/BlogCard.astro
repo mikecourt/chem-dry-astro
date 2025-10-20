@@ -1,0 +1,49 @@
+---
+import dateFormat from "@/lib/utils/dateFormat";
+import { humanize, markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import ImageMod from "./ImageMod.astro";
+
+type Props = { blog: CollectionEntry<"blog">; index: number };
+
+const { blog } = Astro.props;
+
+const { title, image, date, categories } = blog.data;
+---
+
+<div class="h-full">
+  {
+    image && (
+      <a href={`/blog/${blog.id}`}>
+        <ImageMod
+          src={image}
+          alt={title!}
+          width={389}
+          height={277}
+          class="object-cover rounded-t w-full"
+          loading="lazy"
+        />
+      </a>
+    )
+  }
+  <div class="p-9 bg-light rounded-b">
+    <div class="flex flex-wrap items-center gap-2.5 mb-3">
+      {
+        categories!.map((category: string, index: number) => (
+          <p class="text-primary">
+            {humanize(category)}
+            {index !== categories!.length - 1 && ","}
+          </p>
+        ))
+      }
+      <div class="bg-black/30 h-[3px] w-[3px] rounded-full opacity-100"></div>
+
+      <p class="text-text/50 text-base">
+        {dateFormat(date!)}
+      </p>
+    </div>
+    <a href={`/blog/${blog.id}`}>
+      <span set:html={markdownify(title!)} class="text-xl font-medium" />
+    </a>
+  </div>
+</div>

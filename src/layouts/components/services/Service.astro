@@ -1,0 +1,116 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import CustomHeading from "../CustomHeading.astro";
+
+type Props = {
+  serviceIndex: CollectionEntry<"services">["data"];
+  allServices: CollectionEntry<"services">[];
+  hero?: boolean;
+};
+
+const { serviceIndex, allServices, hero } = Astro.props;
+---
+
+<section class={`section ${hero && "mt-24 sm:mt-20"} ${!hero && "pt-0"}`}>
+  <div class="container">
+    <div
+      class="row max-md:gy-5 md:g-1 lg:g-4 justify-center md:justify-between items-center">
+      <div class="md:col-6 col-12">
+        {
+          serviceIndex?.subtitle && (
+            <p
+              set:html={markdownify(serviceIndex?.subtitle)}
+              class={`mb-6 text-base-sm text-primary text-center md:text-left`}
+              data-aos="fade-up-sm"
+            />
+          )
+        }
+        {
+          hero ? (
+            <CustomHeading
+              as="h1"
+              text={serviceIndex?.title}
+              class={`text-h2-sm lg:text-h1-sm lg:leading-[70px] text-center md:text-left max-xl:[&>br]:hidden`}
+              dataAos="fade-up-sm"
+            />
+          ) : (
+            <CustomHeading
+              as="h2"
+              text={serviceIndex?.home_title}
+              class="text-h3 md:text-h2-sm text-balance text-center md:text-left"
+              dataAos="fade-up-sm"
+            />
+          )
+        }
+      </div>
+      <div class="col-6 md:w-[44%] col-12">
+        {
+          serviceIndex.descriptions &&
+            serviceIndex.descriptions.map((desc: string, i) => (
+              <p
+                set:html={markdownify(desc)}
+                class={`mb-6 last:mb-0 text-center md:text-left`}
+                data-aos="fade-up-sm"
+                data-aos-delay={50 + i * 50}
+              />
+            ))
+        }
+      </div>
+
+      <div class="col-12">
+        <div
+          class="flex flex-wrap justify-center md:justify-between items-center mt-10 lg:mt-16 max-lg:gap-10 gap-y-5">
+          {
+            allServices.map((service, i) => (
+              <>
+                <div
+                  class="group"
+                  data-aos="fade-right-sm"
+                  data-aos-delay={100 + i * 50}>
+                  <div class="group-child">
+                    <DynamicIcon
+                      icon={service.data.icon!}
+                      className="mb-6 text-5xl p-2 rounded bg-secondary/70"
+                    />
+
+                    <p
+                      set:html={markdownify(service.data.title!)}
+                      class="text-xl font-medium mb-3 leading-[33px] [&>br]:block w-fit"
+                    />
+
+                    <div class="relative overflow-hidden w-fit">
+                      <a
+                        href={`/services/${service.id}`}
+                        class="font-medium text-nowrap inline-block group text-base-sm">
+                        <span class="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
+                          Discover More
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-4 h-4 ml-1">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {i !== allServices.length - 1 && (
+                  <hr class="w-30 hidden lg:block border-border rotate-90" />
+                )}
+              </>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

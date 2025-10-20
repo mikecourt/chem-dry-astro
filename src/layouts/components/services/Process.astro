@@ -1,0 +1,82 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import CustomHeading from "../CustomHeading.astro";
+
+type Props = {
+  process: CollectionEntry<"services">["data"]["process"];
+};
+const { process } = Astro.props;
+---
+
+<section class="section bg-light">
+  <div class="container">
+    <div class="row justify-center lg:justify-start">
+      <div class="mb-18 col-12">
+        {
+          process?.title && (
+            <CustomHeading
+              as="h2"
+              text={process.title}
+              class="text-h3 md:text-h2 mb-6 text-center md:text-left"
+              dataAos="fade-up-sm"
+            />
+          )
+        }
+        {
+          process?.content && (
+            <p
+              set:html={markdownify(process.content)}
+              class="text-center md:text-left"
+              data-aos="fade-up-sm"
+              data-aos-delay="100"
+            />
+          )
+        }
+      </div>
+      <div class="col-12">
+        {
+          process?.processes && (
+            <div class="row justify-start items-center g-5 xl:g-0">
+              {process.processes.map((step, index: number) => (
+                <div
+                  class="row-child col-12 md:col-6 xl:col-3 xl:not-first:pl-0 xl:not-last:pr-0 min-h-full"
+                  data-aos="fade-up-sm"
+                  data-aos-delay={index * 150}
+                >
+                  {step.icon && (
+                    <div
+                      class={`h-full mb-7 xl:mb-10 overflow-hidden xl:relative before:xl:absolute before:xl:top-[52px] before:xl:left-0 before:xl:w-full before:xl:h-[1px] before:xl:bg-gray-300 before:xl:z-0 before:transform before:xl:translate-y-[-50%] custom-before`}
+                    >
+                      <div class="bg-primary rounded-full p-5 lg:p-7 w-fit max-md:mx-auto relative z-10">
+                        <DynamicIcon
+                          icon={step.icon}
+                          className="text-2xl text-white"
+                        />
+                      </div>
+                    </div>
+                  )}
+
+                  <h3 class="text-lg mb-4 max-md:text-center">
+                    {index + 1}. <span set:html={markdownify(step.name)} />
+                  </h3>
+                  <p
+                    set:html={markdownify(step.content)}
+                    class="text-base-sm max-md:text-center text-balance"
+                  />
+                </div>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .row > .row-child:last-child .custom-before::before {
+    display: none;
+  }
+</style>

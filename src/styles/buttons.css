@@ -1,0 +1,11 @@
+.btn-primary {
+  @apply bg-primary text-white;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-text hover:bg-transparent! transition-colors! duration-10;
+}
+
+.btn-light {
+  @apply bg-primary text-text-light border border-text-light! hover:text-text hover:bg-body! transition-colors! duration-10;
+}

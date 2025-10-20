@@ -1,0 +1,111 @@
+{
+  "$ref": "#/definitions/services",
+  "definitions": {
+    "services": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "homepage_section_enable": {
+          "type": "boolean"
+        },
+        "home_title": {
+          "type": "string"
+        },
+        "meta_title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "banner": {
+          "type": "string"
+        },
+        "draft": {
+          "type": "boolean"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "weight": {
+          "type": "number"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "descriptions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "process": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "processes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "content"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "content",
+            "processes"
+          ],
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

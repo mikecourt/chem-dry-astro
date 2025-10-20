@@ -1,0 +1,29 @@
+---
+import Process from "@/components/services/Process.astro";
+import Service from "@/components/services/Service.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+const services = (await getEntry(
+  "services",
+  "-index"
+)) as CollectionEntry<"services">;
+const { title, description, meta_title, process } = services.data;
+
+const allServices = await getSinglePage("services");
+
+const callToAction = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+  <Service serviceIndex={services.data} allServices={allServices} hero />
+  <Process process={process} />
+
+  <CallToAction cta={callToAction.data} />
+</Base>

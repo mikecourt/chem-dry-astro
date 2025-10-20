@@ -1,0 +1,60 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import BlogCard from "../BlogCard.astro";
+import CustomHeading from "../CustomHeading.astro";
+
+type Props = {
+  blog: CollectionEntry<"homepage">["data"]["blog"];
+  allBlogs: CollectionEntry<"blog">[];
+};
+
+const { blog, allBlogs } = Astro.props;
+---
+
+<section class="section bg-light">
+  <div class="container">
+    <p
+      set:html={markdownify(blog.subtitle)}
+      class="mb-5 text-base-sm text-primary text-center"
+      data-aos="fade-up-sm"
+    />
+    <CustomHeading
+      as="h2"
+      text={blog.title}
+      class="text-h3 md:text-h2 mb-16 text-center"
+      dataAos="fade-up-sm"
+      dataAosDelay="50"
+    />
+
+    <div class="row mb-12 justify-center">
+      {
+        allBlogs.slice(0, 3).map((blog, i: number) => (
+          <div
+            class="col-12 md:col-6 lg:col-4"
+            data-aos="fade-up-sm"
+            data-aos-delay={100 + i * 50}
+          >
+            <BlogCard blog={blog} index={i} />
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="flex items-center justify-center">
+      <a
+        href="/blog"
+        class="font-semibold flex items-center"
+        data-aos="fade-up-sm"
+        data-aos-delay="150"
+      >
+        Read All Articles
+        <DynamicIcon
+          icon="FaArrowRightLong"
+          className="inline-block ml-2.5 text-center mx-auto"
+        />
+      </a>
+    </div>
+  </div>
+</section>

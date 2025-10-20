@@ -1,0 +1,340 @@
+{
+  "$ref": "#/definitions/homepage",
+  "definitions": {
+    "homepage": {
+      "type": "object",
+      "properties": {
+        "hero": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            },
+            "buttons": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "enable": {
+                    "type": "boolean"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "link": {
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "enable",
+                  "label",
+                  "link"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "image": {
+              "type": "string"
+            },
+            "reviews": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "company_logo": {
+                    "type": "string"
+                  },
+                  "rating": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "name",
+                  "company_logo",
+                  "rating"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "title",
+            "subtitle",
+            "buttons",
+            "image",
+            "reviews"
+          ],
+          "additionalProperties": false
+        },
+        "about": {
+          "type": "object",
+          "properties": {
+            "enable": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "schedule": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "day": {
+                    "type": "string"
+                  },
+                  "time": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "day",
+                  "time"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "button": {
+              "type": "object",
+              "properties": {
+                "enable": {
+                  "type": "boolean"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "link": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "enable",
+                "label",
+                "link"
+              ],
+              "additionalProperties": false
+            },
+            "images": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "badge": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "enable",
+            "title",
+            "subtitle",
+            "content",
+            "schedule",
+            "button",
+            "images",
+            "badge"
+          ],
+          "additionalProperties": false
+        },
+        "responsibility": {
+          "type": "object",
+          "properties": {
+            "enable": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "video": {
+              "type": "object",
+              "properties": {
+                "thumbnail": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "thumbnail",
+                "url"
+              ],
+              "additionalProperties": false
+            },
+            "job": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "title",
+                  "content"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "enable",
+            "title",
+            "subtitle",
+            "content",
+            "image",
+            "video",
+            "job"
+          ],
+          "additionalProperties": false
+        },
+        "customer": {
+          "type": "object",
+          "properties": {
+            "enable": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string"
+                },
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "logo": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "enable",
+            "title",
+            "logo"
+          ],
+          "additionalProperties": false
+        },
+        "testimonial": {
+          "type": "object",
+          "properties": {
+            "enable": {
+              "type": "boolean"
+            },
+            "review": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "about": {
+                    "type": "string"
+                  },
+                  "image": {
+                    "type": "string"
+                  },
+                  "says": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "about",
+                  "image",
+                  "says"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "enable",
+            "review"
+          ],
+          "additionalProperties": false
+        },
+        "blog": {
+          "type": "object",
+          "properties": {
+            "enable": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "enable",
+            "title",
+            "subtitle"
+          ],
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "hero",
+        "about",
+        "responsibility",
+        "customer",
+        "testimonial",
+        "blog"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

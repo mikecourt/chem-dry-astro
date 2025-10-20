@@ -1,0 +1,113 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import dateFormat from "@/lib/utils/dateFormat";
+import similarItems from "@/lib/utils/similarItems";
+import { humanize } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+import { getEntry, render, type CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const allBlogs = await getSinglePage("blog");
+  const paths = allBlogs.map((blog) => ({
+    params: {
+      single: (blog as any).id,
+    },
+    props: { blog },
+  }));
+  return paths;
+}
+
+const allBlogs = await getSinglePage("blog");
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const { blog } = Astro.props as { blog: CollectionEntry<"blog"> };
+const { title, meta_title, description, image, date, categories } = blog.data;
+const { Content } = await render(blog);
+
+const similarBlogs = similarItems(blog, allBlogs);
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <section class="section mt-24 sm:mt-20">
+    <div class="container">
+      <div class="flex items-center justify-center gap-2.5 mb-6">
+        {
+          categories!.map((category: string, index: number) => (
+            <p class="text-primary">
+              {humanize(category)}
+              {index !== categories!.length - 1 && ","}
+            </p>
+          ))
+        }
+        <div class="bg-black/30 h-[3px] w-[3px] rounded-full opacity-100"></div>
+        <p class="text-text/50 text-base">
+          {dateFormat(date!)}
+        </p>
+      </div>
+      {
+        title && (
+          <CustomHeading
+            as="h1"
+            text={title}
+            class="text-h2 md:text-h1 text-balance text-center mb-16"
+            dataAos="fade-up-sm"
+          />
+        )
+      }
+      <div class="row justify-center">
+        <div class="lg:px-25 col-12" data-aos="zoom-in-sm">
+          <ImageMod
+            src={image!}
+            alt={image!}
+            width={1256}
+            height={719}
+            class="w-full aspect-video object-cover rounded-xl mb-11"
+            loading={"eager"}
+          />
+        </div>
+        <div class="col-12 mb-11">
+          <article class="lg:px-25" data-aos="fade-up-sm">
+            <div class="content">
+              <Content />
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {similarBlogs.length > 0 && 
+  
+  
+  <hr class="border-border" />
+  
+  <section class="section">
+    <div class="container">
+      <h2 class="text-h3 md:text-h2 mb-16 text-center" data-aos="fade-up-sm">
+      Read more articles</h2>
+      <div class="row justify-center g-5">
+        {
+          similarBlogs.slice(0, 3).map((blog, i) => (
+            <div
+            class="xl:col-4 md:col-6 col-12 min-h-full"
+            data-aos="zoom-in-sm"
+            data-aos-delay={`${i * 100}`}
+            >
+              <BlogCard blog={blog} index={i} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+}
+
+<CallToAction cta={call_to_action.data} />
+</Base>

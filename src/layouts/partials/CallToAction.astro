@@ -1,0 +1,80 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  cta: CollectionEntry<"ctaSection">["data"];
+};
+
+const { cta } = Astro.props;
+---
+
+{
+  cta.enable && (
+    <section
+      class="section py-[132px] max-md:pt-20 max-lg:pb-0 bg-primary relative overflow-hidden"
+      data-aos="fade-in-sm">
+      <div class="container cta-container">
+        {cta.subtitle && (
+          <p
+            set:html={markdownify(cta.subtitle)}
+            class="mb-6 md:mb-4 text-base-sm text-text-light max-lg:text-center text-balance"
+            data-aos="fade-up-sm"
+          />
+        )}
+        {cta.title && (
+          <CustomHeading
+            as="h2"
+            svgColor="text-secondary"
+            text={cta.title}
+            class="text-h3 md:text-h2 mb-8 md:mb-6 text-text-light max-lg:text-center [&>br]:block"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        )}
+        {cta.content && (
+          <p
+            set:html={markdownify(cta.content)}
+            class="mb-10 text-text-light/80 text-balance font-light max-lg:text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="100"
+          />
+        )}
+
+        <div class="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-4">
+          {cta.buttons &&
+            cta.buttons.map(
+              (b, i: number) =>
+                b.enable && (
+                  <CustomButton
+                    link={b.link}
+                    label={b.label}
+                    className="w-fit"
+                    variant={i % 2 === 0 ? "secondary" : "light"}
+                    data_aos="fade-up-sm"
+                    data_aos_delay={100 + i * 50}
+                    icon={b?.icon && b?.icon}
+                  />
+                )
+            )}
+        </div>
+      </div>
+      {cta.image && (
+        <div class=" lg:absolute lg:bottom-0 lg:right-0 xl:w-auto lg:w-[44%] max-lg:w-[80%] max-lg:mx-auto">
+          <ImageMod
+            src={cta.image}
+            width={750}
+            height={608}
+            alt="Call to action"
+            class="object-cover"
+            data_aos="fade-left-sm"
+            data_aos_delay="250"
+          />
+        </div>
+      )}
+    </section>
+  )
+}

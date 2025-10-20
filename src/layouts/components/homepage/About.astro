@@ -1,0 +1,98 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import CustomButton from "../CustomButton.astro";
+import CustomHeading from "../CustomHeading.astro";
+import ImageMod from "../ImageMod.astro";
+
+type Props = { about: CollectionEntry<"homepage">["data"]["about"] };
+
+const { about } = Astro.props;
+---
+
+<section class="section pt-0 lg:pb-44">
+  <div class="container">
+    <div
+      class="flex flex-col lg:flex-row justify-between gap-32 lg:gap-10 items-center">
+      <div class="lg:w-[55%]">
+        <div class="relative">
+          <ImageMod
+            src={about.images[0]}
+            alt="about images"
+            width={549}
+            height={465}
+            class="rounded top-0 xl:-top-12 w-[80%]"
+            data_aos="zoom-in-sm"
+          />
+          <ImageMod
+            src={about.images[1]}
+            alt="about images"
+            width={470}
+            height={317}
+            class="absolute rounded right-0 -bottom-20 w-[60%]"
+            data_aos="zoom-in-sm"
+            data_aos_delay="20"
+          />
+          <div data-aos="zoom-in-sm" data-aos-delay="40">
+            <ImageMod
+              src={about.badge}
+              alt={about.badge}
+              width={223}
+              height={223}
+              class="hidden md:block absolute right-0 top-1/2 translate-y-[-140%] translate-x-[40%] spin-animation scale-80 w-[30%]"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-[33%]">
+        <p
+          set:html={markdownify(about.subtitle)}
+          class="mb-7 text-base-sm text-primary text-center lg:text-left"
+          data-aos="fade-up-sm"
+        />
+
+        <CustomHeading
+          as="h2"
+          text={about.title}
+          class="text-h3 md:text-h2 text-balance mb-7 text-center lg:text-left"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          set:html={markdownify(about.content)}
+          class="mb-8 text-center lg:text-left"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        />
+
+        {
+          about.schedule.map((s, i) => (
+            <p
+              class="font-medium text-base text-center lg:text-left"
+              data-aos="fade-up-sm"
+              data-aos-delay={100 + i * 50}>
+              <span set:html={markdownify(s.day)} />
+              <span set:html={markdownify(s.time)} />
+            </p>
+          ))
+        }
+        {
+          about.button.enable && (
+            <div
+              class="w-full flex justify-center lg:justify-start"
+              data-aos="fade-up-sm"
+              data-aos-delay="150">
+              <CustomButton
+                link={about.button.link}
+                label={about.button.label}
+                className="mt-8 btn-sm! sm:btn!"
+                variant="secondary"
+                icon={about.button.icon}
+              />
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>

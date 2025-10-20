@@ -1,0 +1,51 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import CustomHeading from "../CustomHeading.astro";
+import ImageMod from "../ImageMod.astro";
+
+type Props = {
+  customer: CollectionEntry<"homepage">["data"]["customer"];
+};
+
+const { customer } = Astro.props;
+---
+
+<section class="section-sm pt-0">
+  <div class="container">
+    <div
+      class="flex flex-col lg:flex-row justify-center lg:justify-between lg:items-end gap-y-10 lg:gap-4">
+      <div class="text-center lg:text-left">
+        <CustomHeading
+          as="h1"
+          text={customer.title.value}
+          class="text-h1 text-primary"
+          dataAos="fade-up-sm"
+        />
+        <p
+          set:html={markdownify(customer.title.text)}
+          class="font-medium text-lg"
+          data-aos="fade-up-sm"
+        />
+      </div>
+
+      <div class="row justify-around max-md:g-3">
+        {
+          customer.logo.map((logo, i) => (
+            <div class="col-6 sm:col">
+              <ImageMod
+                src={logo}
+                alt="logo"
+                width={168}
+                height={41}
+                class="mx-auto"
+                data_aos="fade-left-sm"
+                data_aos_delay={i * 50}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

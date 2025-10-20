@@ -1,0 +1,155 @@
+{
+  "$ref": "#/definitions/about",
+  "definitions": {
+    "about": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "meta_title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "why_us": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "button": {
+                "type": "object",
+                "properties": {
+                  "enable": {
+                    "type": "boolean"
+                  },
+                  "label": {
+                    "type": "string"
+                  },
+                  "link": {
+                    "type": "string"
+                  },
+                  "icon": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "enable",
+                  "label",
+                  "link"
+                ],
+                "additionalProperties": false
+              },
+              "image": {
+                "type": "string"
+              },
+              "bullet_points": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "subtitle": {
+                "type": "string"
+              },
+              "overlay_image": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "pride": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "images": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "content",
+            "images"
+          ],
+          "additionalProperties": false
+        },
+        "team": {
+          "type": "object",
+          "properties": {
+            "enable": {
+              "type": "boolean"
+            },
+            "title": {
+              "type": "string"
+            },
+            "subtitle": {
+              "type": "string"
+            },
+            "members": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "designation": {
+                    "type": "string"
+                  },
+                  "image": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "designation",
+                  "image"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "enable",
+            "members"
+          ],
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "why_us",
+        "pride",
+        "team"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,58 @@
+---
+import Pride from "@/components/about/Pride.astro";
+import Team from "@/components/about/Team.astro";
+import WhyUs from "@/components/about/WhyUs.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+const aboutIndex = (await getEntry(
+  "about",
+  "-index"
+)) as CollectionEntry<"about">;
+const { title, subtitle, description, meta_title, why_us, pride, team } =
+  aboutIndex.data;
+
+const callToAction = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+  <section class="section mt-24 sm:mt-20" data-aos="fade-in-sm">
+    <div class="container">
+      <div>
+        {
+          subtitle && (
+            <p
+              class="text-primary text-base mb-6 text-center md:text-left"
+              set:html={markdownify(subtitle)}
+              data-aos="fade-up-sm"
+            />
+          )
+        }
+        {
+          title && (
+            <CustomHeading
+              as="h1"
+              text={title}
+              class="text-h2 lg:text-h1 text-balance text-center md:text-left"
+              dataAos="fade-up-sm"
+              dataAosDelay="50"
+            />
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <WhyUs why_us={why_us} />
+  <Pride pride={pride} />
+  {team.enable && <Team team={team} />}
+
+  <CallToAction cta={callToAction.data} />
+</Base>

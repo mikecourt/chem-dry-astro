@@ -1,0 +1,107 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import CustomButton from "../CustomButton.astro";
+import CustomHeading from "../CustomHeading.astro";
+import ImageMod from "../ImageMod.astro";
+
+type Props = { why_us: CollectionEntry<"about">["data"]["why_us"] };
+
+const { why_us } = Astro.props;
+---
+
+{
+  why_us.map((v, i: number) => (
+    <section class="section pt-0">
+      <div class="container">
+        <div class="row gy-5 justify-center md:justify-between items-center">
+          <div
+            class={`col-12 md:col-6 md:w-[44%] ${i % 2 !== 0 ? "order-2 md:order-1" : ""}`}>
+            <div class="relative">
+              <ImageMod
+                class="rounded-lg mx-auto w-full aspect-square"
+                src={v.image!}
+                alt="first section image"
+                width={570}
+                height={585}
+                data_aos="fade-right-sm"
+              />
+              {v.overlay_image && (
+                <ImageMod
+                  class="rounded-lg absolute bottom-6 right-6 w-2/5"
+                  src={v.overlay_image}
+                  alt="first section image"
+                  width={268}
+                  height={161}
+                  data_aos="fade-right-sm"
+                  data_aos_delay="30"
+                />
+              )}
+            </div>
+          </div>
+
+          <div
+            class={`col-12 md:col-6 md:w-[53%] xl:w-[42%] ${i % 2 === 0 ? "order-1 md:order-2" : ""}`}>
+            {v.subtitle && (
+              <p
+                class="text-primary text-balance text-center md:text-left text-base-sm mb-6"
+                set:html={markdownify(v.subtitle)}
+                data-aos="fade-up-sm"
+              />
+            )}
+            {v.title && (
+              <CustomHeading
+                as="h2"
+                text={v.title}
+                class="text-h3-sm lg:text-h2-sm text-balance mb-6 text-center md:text-left"
+                dataAos="fade-up-sm"
+                dataAosDelay="60"
+              />
+            )}
+            {v.content && (
+              <p
+                class="mb-10 text-balance text-center md:text-left"
+                set:html={markdownify(v.content)}
+                data-aos="fade-up-sm"
+                data-aos-delay="90"
+              />
+            )}
+            {v.bullet_points && (
+              <ul class="mt-10 lg:mt-16">
+                {v.bullet_points.map((p: string, i: number) => (
+                  <li
+                    class="mb-3.5 flex! items-center! justify-center md:justify-start"
+                    data-aos="fade-up-sm"
+                    data-aos-delay={50 + i * 50}>
+                    <div class="bg-primary h-fit p-1 rounded-full mr-2">
+                      <DynamicIcon
+                        icon="FaCheck"
+                        className="text-white text-xs"
+                      />
+                    </div>
+                    <span set:html={markdownify(p)} class="font-medium" />
+                  </li>
+                ))}
+              </ul>
+            )}
+            {v.button?.enable && (
+              <div
+                class="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-4"
+                data-aos="fade-up-sm"
+                data-aos-delay="120">
+                <CustomButton
+                  className="w-fit"
+                  link={v.button.link}
+                  label={v.button.label}
+                  variant="secondary"
+                  icon={v.button.icon}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  ))
+}

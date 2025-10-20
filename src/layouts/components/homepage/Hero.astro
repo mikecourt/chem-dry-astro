@@ -1,0 +1,93 @@
+---
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import CustomButton from "../CustomButton.astro";
+import CustomHeading from "../CustomHeading.astro";
+import ImageMod from "../ImageMod.astro";
+
+type Props = { hero: CollectionEntry<"homepage">["data"]["hero"] };
+
+const { hero }: Props = Astro.props;
+---
+
+<section
+  class="section relative mb-22"
+  style={`background-image: url('${hero.image}'); background-size: cover; background-position: center;`}>
+  <div class="container pt-24 sm:pt-20 pb-[280px] lg:pb-[228px] relative z-20">
+    <p
+      set:html={markdownify(hero.subtitle)}
+      class="text-lg mb-5 text-center lg:text-left"
+      data-aos="fade-up-sm"
+      data-aos-delay="20"
+    />
+    <CustomHeading
+      as="h1"
+      text={hero.title}
+      class="h3 lg:text-[72px] xl:text-[80px] xl:tracking-[-3px] xl:leading-[88px] mb-9 text-center lg:text-left text-balance"
+      dataAos="fade-up-sm"
+      dataAosDelay="40"
+    />
+    <div
+      class="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-4"
+      data-aos="fade-up-sm"
+      data-aos-delay="60">
+      {
+        hero.buttons.map(
+          (b, i: number) =>
+            b.enable && (
+              <CustomButton
+                link={b.link}
+                label={b.label}
+                className="w-fit"
+                variant={i % 2 === 0 ? "secondary" : "primary"}
+                icon={b?.icon}
+                data-aos="zoom-in-sm"
+                data-aos-delay={80 + i * 20}
+              />
+            )
+        )
+      }
+    </div>
+  </div>
+
+  <div class="absolute z-30 bottom-1 left-0 w-full">
+    <div class="container">
+      <div
+        class="flex flex-col md:flex-row items-center lg:justify-start justify-center gap-14 py-10">
+        {
+          hero.reviews.map((r, i: number) => (
+            <div data-aos="fade-left-sm">
+              <ImageMod
+                src={r.company_logo}
+                alt={r.company_logo}
+                width={0}
+                height={0}
+                class="pb-5"
+                data-aos="fade-up-sm"
+                data-aos-delay={100 + i * 50}
+              />
+              <div
+                class="flex justify-start items-center gap-x-2"
+                data-aos="fade-up-sm"
+                data-aos-delay={120 + i * 50}>
+                <div
+                  class="Stars"
+                  style={`--rating: ${r.rating}`}
+                  aria-label="Rating from the company"
+                />
+                <span class="text-base ml-[10px]">{r.rating} Out of 5</span>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+  <div
+    class="absolute -bottom-1 left-0 w-full lg:w-4/6 xl:w-1/2 min-h-[330px] md:min-h-[200px] bg-body z-20">
+  </div>
+  <div
+    class="absolute inset-0 w-[78%] h-full z-10 bg-gradient-to-r from-[#c1dce2] via-[#a6c9d3] to-transparent"
+    data-aos="fade-right-sm">
+  </div>
+</section>

@@ -1,0 +1,54 @@
+---
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageGallery from "@/components/functional-component/ImageGallery";
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+import type { CollectionEntry } from "astro:content";
+import { getEntry } from "astro:content";
+
+const gallery = (await getEntry(
+  "gallery",
+  "-index"
+)) as CollectionEntry<"gallery">;
+const { title, subtitle, meta_title, description, images } = gallery.data;
+
+const callToAction = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+  <section class="section mt-24 sm:mt-20">
+    <div class="container relative gallery">
+      <div class="mb-16">
+        {
+          subtitle && (
+            <p
+              set:html={markdownify(subtitle)}
+              class="text-center text-primary text-base mb-6"
+              data-aos="fade-up-sm"
+            />
+          )
+        }
+        {
+          title && (
+            <CustomHeading
+              as="h1"
+              text={title}
+              class="text-center text-h2 md:text-h1"
+              dataAos="fade-up-sm"
+              dataAosDelay="50"
+            />
+          )
+        }
+      </div>
+
+      <div data-aos="fade-up-sm" data-aos-delay="150">
+        <ImageGallery images={images} client:load />
+      </div>
+    </div>
+  </section>
+  <CallToAction cta={callToAction.data} />
+</Base>
