@@ -1,11 +1,20 @@
 .btn-primary {
-  @apply bg-primary text-white;
+  @apply bg-primary text-white hover:bg-transparent! hover:text-primary! transition-colors! duration-10;
 }
 
 .btn-secondary {
-  @apply bg-secondary text-text hover:bg-transparent! transition-colors! duration-10;
+  @apply bg-secondary text-white hover:bg-transparent! hover:text-secondary! transition-colors! duration-10;
 }
 
 .btn-light {
-  @apply bg-primary text-text-light border border-text-light! hover:text-text hover:bg-body! transition-colors! duration-10;
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary) !important;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: var(--color-secondary);
+  color: white;
+  border-color: var(--color-secondary) !important;
 }

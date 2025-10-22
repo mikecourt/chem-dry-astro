@@ -1,0 +1,463 @@
+---
+// Example Astro Components with Chem-Dry Branding
+// Copy these into your src/components/ folder
+---
+
+<!-- ============================================ -->
+<!-- Hero Component -->
+<!-- src/components/Hero.astro -->
+<!-- ============================================ -->
+
+<section class="hero-brand">
+  <div class="container-brand">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-white text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+        <slot name="title">Carpet Cleaning in Your City, AZ</slot>
+      </h1>
+      <p class="text-white text-xl md:text-2xl mb-8 animate-fade-in-slow">
+        <slot name="subtitle">
+          Hot Carbonating Extraction uses about 80% less water, dries in 1-2 hours
+        </slot>
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+        <a href="tel:4805550100" class="btn-cta">
+          📞 Call (480) 555-0100
+        </a>
+        <a href="#services" class="btn-outline bg-white hover:bg-chemdry-blue-50">
+          View Services
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Service Card Component -->
+<!-- src/components/ServiceCard.astro -->
+<!-- ============================================ -->
+
+---
+interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+  price?: string;
+}
+
+const { title, description, icon = "✨", price } = Astro.props;
+---
+
+<div class="service-card">
+  <div class="text-5xl mb-4">{icon}</div>
+  <h3 class="text-2xl font-bold text-chemdry-blue mb-3">{title}</h3>
+  <p class="text-chemdry-body-text mb-4">{description}</p>
+  {price && (
+    <div class="text-chemdry-green font-bold text-xl">
+      Starting at {price}
+    </div>
+  )}
+  <a href="#contact" class="btn-primary mt-4 inline-block">
+    Get Free Quote
+  </a>
+</div>
+
+<!-- ============================================ -->
+<!-- Testimonial Card Component -->
+<!-- src/components/TestimonialCard.astro -->
+<!-- ============================================ -->
+
+---
+interface Props {
+  quote: string;
+  author: string;
+  city: string;
+  rating?: number;
+}
+
+const { quote, author, city, rating = 5 } = Astro.props;
+const stars = "⭐".repeat(rating);
+---
+
+<div class="testimonial-card">
+  <div class="text-2xl mb-4">{stars}</div>
+  <p class="text-lg text-chemdry-body-text italic mb-4">
+    "{quote}"
+  </p>
+  <div class="flex items-center justify-between">
+    <strong class="text-chemdry-blue">— {author}, {city}</strong>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- CTA Section Component -->
+<!-- src/components/CTASection.astro -->
+<!-- ============================================ -->
+
+---
+interface Props {
+  title?: string;
+  description?: string;
+  phoneNumber?: string;
+}
+
+const { 
+  title = "Ready for Cleaner Carpets?",
+  description = "Get your free quote today and experience the Chem-Dry difference",
+  phoneNumber = "(480) 555-0100"
+} = Astro.props;
+---
+
+<section class="section-brand">
+  <div class="container-brand text-center">
+    <h2 class="text-white text-4xl md:text-5xl font-bold mb-4">
+      {title}
+    </h2>
+    <p class="text-white text-xl mb-8 max-w-2xl mx-auto">
+      {description}
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href={`tel:${phoneNumber.replace(/\D/g, '')}`} class="btn-cta">
+        📞 Call {phoneNumber}
+      </a>
+      <a href="#contact" class="btn-secondary">
+        Request Free Quote
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Features Grid Component -->
+<!-- src/components/FeaturesGrid.astro -->
+<!-- ============================================ -->
+
+<section class="py-16 md:py-24 bg-white">
+  <div class="container-brand">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-chemdry-blue mb-4">
+        Why Choose Brimley's White Glove Chem-Dry?
+      </h2>
+      <p class="text-xl text-chemdry-body-text max-w-3xl mx-auto">
+        The process used by Chem-Dry delivers superior results
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center p-6">
+        <div class="text-6xl mb-4">💧</div>
+        <h3 class="text-2xl font-bold text-chemdry-blue mb-3">
+          About 80% Less Water
+        </h3>
+        <p class="text-chemdry-body-text">
+          Hot Carbonating Extraction uses about 80% less water than traditional steam cleaning. Your carpets dry in 1-2 hours, not days.
+        </p>
+      </div>
+
+      <div class="text-center p-6">
+        <div class="text-6xl mb-4">✨</div>
+        <h3 class="text-2xl font-bold text-chemdry-blue mb-3">
+          No Dirt-Attracting Residue
+        </h3>
+        <p class="text-chemdry-body-text">
+          The Natural® uses carbonation for a deeper clean with no dirt-attracting residue that keeps carpets cleaner longer.
+        </p>
+      </div>
+
+      <div class="text-center p-6">
+        <div class="text-6xl mb-4">🏠</div>
+        <h3 class="text-2xl font-bold text-chemdry-blue mb-3">
+          Healthier Home
+        </h3>
+        <p class="text-chemdry-body-text">
+          The method used by Chem-Dry removes 98% of allergens and 89% of airborne bacteria for a healthier living space.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Contact Form Component -->
+<!-- src/components/ContactForm.astro -->
+<!-- ============================================ -->
+
+<section class="py-16 md:py-24 bg-gradient-brand-soft" id="contact">
+  <div class="container-brand max-w-2xl">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-chemdry-blue mb-4">
+        Get Your Free Quote
+      </h2>
+      <p class="text-xl text-chemdry-body-text">
+        Fill out the form below or call us at <a href="tel:4805550100" class="phone-link">(480) 555-0100</a>
+      </p>
+    </div>
+
+    <form class="bg-white rounded-brand shadow-brand p-8 space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-chemdry-blue mb-2">
+            Your Name *
+          </label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+            class="input-brand"
+            placeholder="John Smith"
+          />
+        </div>
+
+        <div>
+          <label for="phone" class="block text-sm font-medium text-chemdry-blue mb-2">
+            Phone Number *
+          </label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            required 
+            class="input-brand"
+            placeholder="(480) 555-0123"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-chemdry-blue mb-2">
+          Email Address *
+        </label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          class="input-brand"
+          placeholder="john@example.com"
+        />
+      </div>
+
+      <div>
+        <label for="address" class="block text-sm font-medium text-chemdry-blue mb-2">
+          Address
+        </label>
+        <input 
+          type="text" 
+          id="address" 
+          name="address" 
+          class="input-brand"
+          placeholder="123 Main St, Mesa, AZ 85201"
+        />
+      </div>
+
+      <div>
+        <label for="service" class="block text-sm font-medium text-chemdry-blue mb-2">
+          Service Needed
+        </label>
+        <select id="service" name="service" class="input-brand">
+          <option value="">Select a service...</option>
+          <option value="carpet">Carpet Cleaning</option>
+          <option value="upholstery">Upholstery Cleaning</option>
+          <option value="tile">Tile & Grout Cleaning</option>
+          <option value="area-rug">Area Rug Cleaning</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-chemdry-blue mb-2">
+          Additional Details
+        </label>
+        <textarea 
+          id="message" 
+          name="message" 
+          class="textarea-brand"
+          placeholder="Tell us about your cleaning needs..."
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn-cta w-full">
+        Get My Free Quote
+      </button>
+
+      <p class="text-sm text-chemdry-body-text text-center">
+        We'll respond within 24 hours. For immediate assistance, call <a href="tel:4805550100" class="text-chemdry-blue hover:text-chemdry-green">(480) 555-0100</a>
+      </p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Neighborhoods Section Component -->
+<!-- src/components/NeighborhoodsSection.astro -->
+<!-- ============================================ -->
+
+---
+interface Props {
+  city: string;
+  neighborhoods: Array<{
+    region: string;
+    areas: string[];
+  }>;
+}
+
+const { city, neighborhoods } = Astro.props;
+---
+
+<section class="py-16 md:py-24 bg-white">
+  <div class="container-brand">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-chemdry-blue mb-4">
+        Neighborhoods We Serve in {city}
+      </h2>
+      <p class="text-xl text-chemdry-body-text">
+        Professional carpet cleaning throughout {city} and surrounding areas
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {neighborhoods.map((item) => (
+        <div class="card-brand">
+          <h3 class="text-2xl font-bold text-chemdry-green mb-4">
+            {item.region}
+          </h3>
+          <ul class="space-y-2 text-chemdry-body-text">
+            {item.areas.map((area) => (
+              <li class="flex items-start">
+                <span class="text-chemdry-secondary-green mr-2">✓</span>
+                {area}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- Footer Component -->
+<!-- src/components/Footer.astro -->
+<!-- ============================================ -->
+
+<footer class="bg-chemdry-blue text-white py-12">
+  <div class="container-brand">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Contact Us</h3>
+        <p class="mb-2">
+          <a href="tel:4805550100" class="hover:text-chemdry-secondary-green transition-colors">
+            📞 (480) 555-0100
+          </a>
+        </p>
+        <p class="mb-2">
+          <a href="mailto:info@whiteglovecarpet.com" class="hover:text-chemdry-secondary-green transition-colors">
+            ✉️ info@whiteglovecarpet.com
+          </a>
+        </p>
+        <p class="text-white/80">
+          Serving Phoenix Metro Area, AZ
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-chemdry-secondary-green transition-colors">Carpet Cleaning</a></li>
+          <li><a href="#" class="hover:text-chemdry-secondary-green transition-colors">Upholstery Cleaning</a></li>
+          <li><a href="#" class="hover:text-chemdry-secondary-green transition-colors">Tile & Grout</a></li>
+          <li><a href="#" class="hover:text-chemdry-secondary-green transition-colors">Area Rug Cleaning</a></li>
+        </ul>
+      </div>
+
+      <!-- Service Areas -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Service Areas</h3>
+        <ul class="space-y-2">
+          <li><a href="/carpet-cleaning-mesa-az" class="hover:text-chemdry-secondary-green transition-colors">Mesa</a></li>
+          <li><a href="/carpet-cleaning-gilbert-az" class="hover:text-chemdry-secondary-green transition-colors">Gilbert</a></li>
+          <li><a href="/carpet-cleaning-chandler-az" class="hover:text-chemdry-secondary-green transition-colors">Chandler</a></li>
+          <li><a href="/carpet-cleaning-tempe-az" class="hover:text-chemdry-secondary-green transition-colors">Tempe</a></li>
+          <li><a href="/carpet-cleaning-scottsdale-az" class="hover:text-chemdry-secondary-green transition-colors">Scottsdale</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/20 pt-8 text-center text-white/80">
+      <p class="mb-2">
+        © 2024 Brimley's White Glove Chem-Dry. All rights reserved.
+      </p>
+      <p class="text-sm">
+        Independently owned and operated Chem-Dry franchise.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================ -->
+<!-- Usage Example -->
+<!-- ============================================ -->
+
+<!-- 
+In your page file (e.g., src/pages/carpet-cleaning-mesa-az.astro):
+
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import FeaturesGrid from '../components/FeaturesGrid.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import NeighborhoodsSection from '../components/NeighborhoodsSection.astro';
+import CTASection from '../components/CTASection.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+
+const neighborhoods = [
+  {
+    region: "Central Mesa",
+    areas: ["Downtown Mesa", "Pioneer Park", "Mesa Grande"]
+  },
+  {
+    region: "East Mesa",
+    areas: ["Red Mountain Ranch", "Las Sendas", "Superstition Springs"]
+  },
+  // ... more neighborhoods
+];
+---
+
+<Layout title="Carpet Cleaning in Mesa, AZ | Brimley's White Glove Chem-Dry">
+  <Hero>
+    <Fragment slot="title">Carpet Cleaning in Mesa, AZ</Fragment>
+    <Fragment slot="subtitle">
+      Professional carpet cleaning using Hot Carbonating Extraction
+    </Fragment>
+  </Hero>
+
+  <FeaturesGrid />
+
+  <section class="py-16 bg-gray-50">
+    <div class="container-brand">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <ServiceCard 
+          title="Carpet Cleaning"
+          description="Deep clean with no dirt-attracting residue"
+          icon="🧹"
+          price="$99"
+        />
+        <!-- More service cards... -->
+      </div>
+    </div>
+  </section>
+
+  <NeighborhoodsSection city="Mesa" neighborhoods={neighborhoods} />
+
+  <CTASection />
+
+  <ContactForm />
+
+  <Footer />
+</Layout>
+-->

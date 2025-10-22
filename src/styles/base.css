@@ -12,7 +12,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-medium leading-tight;
+  @apply font-secondary font-medium leading-tight;
 }
 
 h1,
@@ -42,7 +42,7 @@ h6,
 
 b,
 strong {
-  @apply font-medium;
+  @apply font-extrabold;
 }
 
 code {

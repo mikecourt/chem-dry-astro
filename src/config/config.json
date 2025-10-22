@@ -1,15 +1,15 @@
 {
   "site": {
-    "title": "Cleaner - Astro Theme for Services Business",
+    "title": "Carpet Cleaning Phoenix | Brimley's Chem-Dry",
     "base_url": "https://cleaner-astro.vercel.app/",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo-dark.svg",
-    "footer_logo": "/images/logo.svg",
-    "logo_width": "142",
-    "logo_height": "36",
-    "logo_text": "cleaner"
+    "logo": "/images/logo-color.svg",
+    "footer_logo": "/images/logo-white.svg",
+    "logo_width": "200",
+    "logo_height": "91",
+    "logo_text": "Brimley's Chem-Dry"
   },
 
   "settings": {
@@ -17,23 +17,27 @@
   },
 
   "params": {
-    "contact_form_action": "#",
-    "appointment_form_action": "#",
-    "footer_description": "Professional cleaning services <br> using innovative technology.",
-    "copyright": "[Themefisher](https://themefisher.com/) © 2025 All Rights Reserved"
+    "contact_form_action": "mailto:office@whiteglovecarpet.com",
+    "appointment_form_action": "mailto:office@whiteglovecarpet.com",
+    "footer_description": "Professional carpet, upholstery, and tile cleaning <br> serving the Phoenix metro area since 1995.",
+    "copyright": "Brimley's White Glove Chem-Dry © 2025 All Rights Reserved",
+    "phone": "(480) 649-3663",
+    "email": "office@whiteglovecarpet.com",
+    "address": "1451 N Delmar, Mesa, AZ 85203",
+    "mailing_address": "2753 E Broadway Rd, Ste 101-485, Mesa, AZ 85204"
   },
 
   "notification": {
     "enable": true,
-    "message": "Need quick cleaning help?",
-    "link": "tel:+1-394-495-5993",
-    "label": "Call Us: +1 071 281 9795",
+    "message": "Need professional carpet cleaning?",
+    "link": "tel:+1-480-649-3663",
+    "label": "Call Us: (480) 649-3663",
     "icon": "FaPhone"
   },
 
   "navigation_button": {
     "enable": true,
-    "label": "Make An Appointment ",
+    "label": "Get Free Quote",
     "link": "/appointment"
   },
 
@@ -43,8 +47,8 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Brimley's White Glove Chem-Dry",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Cleaner - Astro Theme for Services Business"
+    "meta_description": "Professional carpet cleaning in Phoenix, AZ. Hot Carbonating Extraction uses about 80% less water, dries in 1-2 hours. Family-owned, 25+ years experience. Free quote!"
   }
 }

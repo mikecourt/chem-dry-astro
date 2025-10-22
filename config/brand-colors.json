@@ -1,0 +1,49 @@
+{
+  "primary": {
+    "blue": {
+      "hex": "#005DAA",
+      "rgb": "0, 93, 170",
+      "pantone": "PMS 286",
+      "usage": "Primary logo color, main headings, primary buttons, links"
+    },
+    "green": {
+      "hex": "#008752",
+      "rgb": "0, 135, 82",
+      "pantone": "PMS 348",
+      "usage": "Secondary headings, logo accent, secondary buttons"
+    },
+    "purple": {
+      "hex": "#9A4E9E",
+      "rgb": "154, 78, 158",
+      "pantone": "PMS 513",
+      "usage": "Logo accent, decorative elements"
+    }
+  },
+  "secondary": {
+    "green": {
+      "hex": "#41AD49",
+      "rgb": "65, 173, 73",
+      "pantone": "PMS 361",
+      "usage": "Call-to-action buttons, highlights, fresh/clean messaging"
+    },
+    "warmGray": {
+      "hex": "#A2958A",
+      "rgb": "162, 149, 138",
+      "pantone": "PMS 7530 C",
+      "usage": "Body text, secondary text"
+    },
+    "darkGray": {
+      "hex": "#8A7967",
+      "rgb": "138, 121, 103",
+      "pantone": "PMS 4090 C",
+      "usage": "Secondary headings, subheadings"
+    }
+  },
+  "accessibility": {
+    "blueOnWhite": "AAA",
+    "greenOnWhite": "AAA",
+    "whiteOnBlue": "AAA",
+    "whiteOnGreen": "AAA",
+    "warmGrayOnWhite": "AA"
+  }
+}

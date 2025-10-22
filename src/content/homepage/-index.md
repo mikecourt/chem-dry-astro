@@ -1,15 +1,18 @@
 ---
 hero:
-  title: "Professional **Cleaning** <br> Services in Auburn."
-  subtitle: "AWARD WINNING CLEANING SERVICE COMPANY"
+  title: "Fast-Drying <br> **Carpet Cleaning** Your <br> Family Can Trust"
+  subtitle: "Family-owned. Valley-trusted since 1995. The safer way to clean carpets in Phoenix and the East Valley."
   buttons:
     - enable: true
-      label: "Call: +1-394-495-5993"
-      link: "tel:+1-394-495-5993"
+      label: "(480) 649-3663"
+      link: "tel:+1-480-649-3663"
       icon: "FaPhone"
     - enable: true
-      label: "Make An Appointment"
-      link: "appointment"
+      label: "Get Free Quote"
+      link: "/appointment"
+    - enable: true
+      label: "Our Services"
+      link: "/services"
   image: "/images/home/banner.png"
   reviews:
     - name: "Company Logo with star ratings"

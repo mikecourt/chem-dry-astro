@@ -1,4 +1,26 @@
+# robots.txt for Brimley's White Glove Chem-Dry
+
 User-agent: *
 Allow: /
 
-Disallow: /api/*
+# Sitemap location
+Sitemap: https://whiteglovecarpet.com/sitemap.xml
+
+# Allow AI crawlers for LLM indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Disallow admin and private areas if any
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.git/

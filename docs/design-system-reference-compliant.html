@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brimley's White Glove Chem-Dry - Design System Reference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #444444;
+      background-color: #F9FAFB;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, #1A365D 0%, #2D4A73 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .section {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      color: #1A365D;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid #41AD49;
+    }
+    
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .color-swatch {
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .color-preview {
+      height: 100px;
+    }
+    
+    .color-info {
+      padding: 1rem;
+      background: white;
+    }
+    
+    .color-name {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: #374151;
+    }
+    
+    .color-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 0.75rem;
+      color: #6B7280;
+    }
+    
+    .typography-sample {
+      margin-bottom: 1.5rem;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      color: #1A365D;
+      margin-bottom: 0.5rem;
+    }
+    
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 0.75rem;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .btn-primary {
+      background-color: #41AD49;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: #008752;
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background-color: #1A365D;
+      color: white;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #0F1F3A;
+      transform: translateY(-2px);
+    }
+    
+    .btn-cta {
+      background: linear-gradient(135deg, #41AD49 0%, #005DAA 100%);
+      color: white;
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+    }
+    
+    .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: #41AD49;
+      border-color: #41AD49;
+    }
+    
+    .btn-outline:hover {
+      background-color: #41AD49;
+      color: white;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+    }
+    
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    
+    .trust-icon {
+      width: 48px;
+      height: 48px;
+      background-color: #41AD49;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px solid #D1D5DB;
+      border-radius: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: #005DAA;
+      box-shadow: 0 0 0 3px rgba(0, 93, 170, 0.1);
+    }
+    
+    .spacing-example {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .spacing-visual {
+      background-color: #41AD49;
+      height: 40px;
+    }
+    
+    .spacing-label {
+      margin-left: 1rem;
+      font-family: 'Courier New', monospace;
+      color: #6B7280;
+    }
+    
+    .warning-box {
+      background-color: #FEF3C7;
+      border-left: 4px solid #F59E0B;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .success-box {
+      background-color: #D1FAE5;
+      border-left: 4px solid #10B981;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .info-box {
+      background-color: #DBEAFE;
+      border-left: 4px solid #3B82F6;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Brimley's White Glove Chem-Dry</h1>
+    <p>Design System Reference Guide</p>
+    <p style="font-size: 0.875rem; margin-top: 0.5rem; opacity: 0.9;">Brand-Compliant Design Standards</p>
+  </div>
+
+  <div class="container">
+    <!-- Colors -->
+    <div class="section">
+      <h2 class="section-title">Colors</h2>
+      
+      <h3 style="margin-bottom: 1rem;">Primary Chem-Dry Brand Colors</h3>
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #008752;"></div>
+          <div class="color-info">
+            <div class="color-name">Chem-Dry Green (PMS 348)</div>
+            <div class="color-hex">#008752</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">RGB: 0, 135, 82 | Primary brand color</div>
+          </div>
+        </div>
+        
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #41AD49;"></div>
+          <div class="color-info">
+            <div class="color-name">Chem-Dry Secondary Green (PMS 361)</div>
+            <div class="color-hex">#41AD49</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">RGB: 65, 173, 73 | Secondary headings, accents</div>
+          </div>
+        </div>
+        
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #005DAA;"></div>
+          <div class="color-info">
+            <div class="color-name">Chem-Dry Blue (PMS 286)</div>
+            <div class="color-hex">#005DAA</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">RGB: 0, 93, 170 | Primary brand color, headings</div>
+          </div>
+        </div>
+        
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #9A4E9E;"></div>
+          <div class="color-info">
+            <div class="color-name">Chem-Dry Purple (PMS 513)</div>
+            <div class="color-hex">#9A4E9E</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">RGB: 154, 78, 158 | Accent color</div>
+          </div>
+        </div>
+      </div>
+      
+      <h3 style="margin-bottom: 1rem; margin-top: 2rem;">Chem-Dry Neutral Colors</h3>
+      
+      <div class="warning-box" style="margin-bottom: 1rem;">
+        <strong style="color: #92400E;">⚠️ Important: Warm Gray Accessibility</strong>
+        <p style="margin-top: 0.5rem; color: #78350F;">The official Chem-Dry Warm Grays fail WCAG accessibility standards for text. <strong>Never use them for body text or headings.</strong> Use #444444 for body text instead. Warm Grays are for subtle backgrounds and decorative accents only.</p>
+      </div>
+      
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #A29588;"></div>
+          <div class="color-info">
+            <div class="color-name">Chem-Dry Warm Gray (PMS 7530 C)</div>
+            <div class="color-hex">#A29588</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">RGB: 162, 149, 138 | Backgrounds, subtle accents only</div>
+          </div>
+        </div>
+        
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #8A7967;"></div>
+          <div class="color-info">
+            <div class="color-name">Chem-Dry Dark Warm Gray (PMS 4090 C)</div>
+            <div class="color-hex">#8A7967</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">RGB: 138, 121, 103 | Subtle elements only</div>
+          </div>
+        </div>
+        
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #444444;"></div>
+          <div class="color-info">
+            <div class="color-name">Body Text Gray</div>
+            <div class="color-hex">#444444</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">RGB: 68, 68, 68 | Primary body text (readable)</div>
+          </div>
+        </div>
+      </div>
+      
+      <h3 style="margin-bottom: 1rem; margin-top: 2rem;">White Glove Custom Accent Colors</h3>
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #1A365D;"></div>
+          <div class="color-info">
+            <div class="color-name">Navy</div>
+            <div class="color-hex">#1A365D</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">Professional, premium feel</div>
+          </div>
+        </div>
+        
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #D4AF37;"></div>
+          <div class="color-info">
+            <div class="color-name">Gold</div>
+            <div class="color-hex">#D4AF37</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">Premium accents, badges</div>
+          </div>
+        </div>
+        
+        <div class="color-swatch">
+          <div class="color-preview" style="background-color: #F9FAFB;"></div>
+          <div class="color-info">
+            <div class="color-name">Background Gray</div>
+            <div class="color-hex">#F9FAFB</div>
+            <div style="font-size: 0.75rem; color: #6B7280; margin-top: 0.25rem;">Page backgrounds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="section">
+      <h2 class="section-title">Typography</h2>
+      
+      <div class="info-box">
+        <strong style="color: #1E40AF;">📝 Typography Notes:</strong>
+        <p style="margin-top: 0.5rem; color: #1E3A8A;">We use Poppins for headlines (modern, friendly) and Inter for body text (highly readable). Fallback to Arial/Futura for Chem-Dry brand compliance where needed.</p>
+        <p style="margin-top: 0.5rem; color: #1E3A8A;"><strong>Body Text Color:</strong> Use #444444 for optimal readability. The Chem-Dry Warm Grays (#A29588, #8A7967) are too light for body text and should only be used for backgrounds or subtle accents.</p>
+      </div>
+      
+      <div class="typography-sample">
+        <h1 style="font-size: 3rem;">Heading 1 - Poppins Bold 48px</h1>
+        <p style="color: #6B7280;">Used for: Hero headlines, main page titles</p>
+      </div>
+      
+      <div class="typography-sample">
+        <h2 style="font-size: 2.25rem;">Heading 2 - Poppins Bold 36px</h2>
+        <p style="color: #6B7280;">Used for: Major section headings</p>
+      </div>
+      
+      <div class="typography-sample">
+        <h3 style="font-size: 1.875rem;">Heading 3 - Poppins Semibold 30px</h3>
+        <p style="color: #6B7280;">Used for: Subsection headings, card titles</p>
+      </div>
+      
+      <div class="typography-sample">
+        <h4 style="font-size: 1.5rem;">Heading 4 - Poppins Semibold 24px</h4>
+        <p style="color: #6B7280;">Used for: Component titles, feature headlines</p>
+      </div>
+      
+      <div class="typography-sample">
+        <h5 style="font-size: 1.25rem;">Heading 5 - Poppins Semibold 20px</h5>
+        <p style="color: #6B7280;">Used for: Small headers, list titles</p>
+      </div>
+      
+      <div class="typography-sample">
+        <p style="font-size: 1rem;">Body text - Inter Regular 16px. This is the standard body text used throughout the site. It's highly readable and optimized for screen viewing. The line height is set to 1.6 for comfortable reading.</p>
+      </div>
+      
+      <div class="typography-sample">
+        <p style="font-size: 1.125rem; font-weight: 500;">Large body text - Inter Medium 18px. Used for emphasis or lead paragraphs that need to stand out.</p>
+      </div>
+      
+      <div class="typography-sample">
+        <p style="font-size: 0.875rem;">Small text - Inter Regular 14px. Used for disclaimers, captions, and secondary information.</p>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="section">
+      <h2 class="section-title">Buttons</h2>
+      
+      <div class="button-grid">
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+        <button class="btn btn-outline">Outline Button</button>
+        <button class="btn btn-cta">CTA Button</button>
+      </div>
+      
+      <h3 style="margin: 2rem 0 1rem;">Button Usage Guidelines</h3>
+      <ul style="list-style-position: inside; color: #4B5563; line-height: 1.8;">
+        <li><strong>Primary (Green):</strong> Main actions like "Schedule Now", "Get Quote", "Book Service"</li>
+        <li><strong>Secondary (Navy):</strong> Secondary actions like "Learn More", "View Services", "See Details"</li>
+        <li><strong>Outline:</strong> Less emphasis actions, alternative options, tertiary CTAs</li>
+        <li><strong>CTA (Gradient):</strong> Hero buttons, phone numbers, highest priority conversion actions</li>
+      </ul>
+      
+      <h3 style="margin: 2rem 0 1rem;">Accessibility Standards</h3>
+      <ul style="list-style-position: inside; color: #4B5563; line-height: 1.8;">
+        <li>Minimum target size: 44x44px for mobile</li>
+        <li>WCAG AA contrast ratio compliance (4.5:1 minimum)</li>
+        <li>Focus states visible and clear</li>
+        <li>Keyboard navigable</li>
+      </ul>
+    </div>
+
+    <!-- Cards -->
+    <div class="section">
+      <h2 class="section-title">Cards</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+        <div class="card">
+          <h3>Service Card</h3>
+          <p>Service cards highlight specific offerings with clear calls-to-action and visual hierarchy. Hover effect draws attention.</p>
+          <button class="btn btn-primary" style="margin-top: 1rem;">Learn More</button>
+        </div>
+        
+        <div class="card">
+          <h3>Testimonial Card</h3>
+          <p>Testimonial cards showcase customer reviews and build trust. Include customer name and location for authenticity.</p>
+          <div style="margin-top: 1rem; color: #D4AF37;">★★★★★</div>
+        </div>
+        
+        <div class="card">
+          <h3>Feature Card</h3>
+          <p>Feature cards highlight key benefits of Hot Carbonating Extraction and The Natural® cleaning process.</p>
+          <button class="btn btn-outline" style="margin-top: 1rem;">Discover</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="section">
+      <h2 class="section-title">Trust Badges & Signals</h2>
+      
+      <p style="margin-bottom: 1rem; color: #6B7280;">Trust badges build credibility and address customer concerns. Use throughout the site, especially near conversion points.</p>
+      
+      <div class="trust-badge">
+        <div class="trust-icon">✓</div>
+        <div>
+          <div style="font-weight: 600; color: #1A365D;">Certified & Insured</div>
+          <div style="font-size: 0.875rem; color: #6B7280;">Fully licensed and insured professionals</div>
+        </div>
+      </div>
+      
+      <div class="trust-badge">
+        <div class="trust-icon">⚡</div>
+        <div>
+          <div style="font-weight: 600; color: #1A365D;">Dries in 1-2 Hours</div>
+          <div style="font-size: 0.875rem; color: #6B7280;">Hot Carbonating Extraction uses about 80% less water</div>
+        </div>
+      </div>
+      
+      <div class="trust-badge">
+        <div class="trust-icon">★</div>
+        <div>
+          <div style="font-weight: 600; color: #1A365D;">5-Star Rated</div>
+          <div style="font-size: 0.875rem; color: #6B7280;">Hundreds of happy customers across Phoenix Metro</div>
+        </div>
+      </div>
+      
+      <div class="trust-badge">
+        <div class="trust-icon">🏠</div>
+        <div>
+          <div style="font-weight: 600; color: #1A365D;">Family-Owned Since 1995</div>
+          <div style="font-size: 0.875rem; color: #6B7280;">Over 25 years serving the Valley with white-glove service</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forms -->
+    <div class="section">
+      <h2 class="section-title">Form Elements</h2>
+      
+      <p style="margin-bottom: 1.5rem; color: #6B7280;">Forms should be simple, clear, and minimize friction. Ask only for essential information.</p>
+      
+      <form style="max-width: 500px;">
+        <div class="form-group">
+          <label class="form-label" for="name">Full Name *</label>
+          <input class="form-input" type="text" id="name" placeholder="John Doe" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone Number *</label>
+          <input class="form-input" type="tel" id="phone" placeholder="(480) 555-0100" required>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input class="form-input" type="email" id="email" placeholder="john@example.com">
+        </div>
+        
+        <div class="form-group">
+          <label class="form-label" for="service">Service Needed</label>
+          <select class="form-input" id="service">
+            <option>Carpet Cleaning</option>
+            <option>Upholstery Cleaning</option>
+            <option>Area Rug Cleaning</option>
+            <option>Tile & Grout Cleaning</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-cta" style="width: 100%;">Get Free Quote</button>
+      </form>
+    </div>
+
+    <!-- Spacing -->
+    <div class="section">
+      <h2 class="section-title">Spacing Scale</h2>
+      
+      <p style="margin-bottom: 1.5rem; color: #6B7280;">Consistent spacing creates visual hierarchy and improves readability. Use the 8px base unit system.</p>
+      
+      <div class="spacing-example">
+        <div class="spacing-visual" style="width: 16px;"></div>
+        <span class="spacing-label">4px - var(--space-1) - Tight spacing</span>
+      </div>
+      
+      <div class="spacing-example">
+        <div class="spacing-visual" style="width: 32px;"></div>
+        <span class="spacing-label">8px - var(--space-2) - Base unit</span>
+      </div>
+      
+      <div class="spacing-example">
+        <div class="spacing-visual" style="width: 64px;"></div>
+        <span class="spacing-label">16px - var(--space-4) - Element padding</span>
+      </div>
+      
+      <div class="spacing-example">
+        <div class="spacing-visual" style="width: 96px;"></div>
+        <span class="spacing-label">24px - var(--space-6) - Component spacing</span>
+      </div>
+      
+      <div class="spacing-example">
+        <div class="spacing-visual" style="width: 128px;"></div>
+        <span class="spacing-label">32px - var(--space-8) - Section spacing</span>
+      </div>
+      
+      <div class="spacing-example">
+        <div class="spacing-visual" style="width: 192px;"></div>
+        <span class="spacing-label">48px - var(--space-12) - Large section spacing</span>
+      </div>
+      
+      <div class="spacing-example">
+        <div class="spacing-visual" style="width: 256px;"></div>
+        <span class="spacing-label">64px - var(--space-16) - Hero spacing</span>
+      </div>
+    </div>
+
+    <!-- Brand Guidelines -->
+    <div class="section">
+      <h2 class="section-title">Chem-Dry Brand Guidelines</h2>
+      
+      <div class="warning-box">
+        <strong style="color: #92400E;">⚠️ CRITICAL: Never Break These Rules</strong>
+        <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: #78350F; line-height: 1.8;">
+          <li><strong>Never use "Chem-Dry's" (possessive)</strong><br>
+          ❌ "Chem-Dry's process" → ✅ "The Chem-Dry process" or "The process used by Chem-Dry"</li>
+          <li><strong>Always include modifiers with water usage claims</strong><br>
+          ❌ "uses 80% less water" → ✅ "uses about 80% less water"</li>
+          <li><strong>Never say "no residue"</strong><br>
+          ❌ "no residue" → ✅ "no dirt-attracting residue"</li>
+          <li><strong>The Natural® - proper capitalization and ®</strong><br>
+          ❌ "the natural" → ✅ "The Natural®"</li>
+          <li><strong>Never say "all natural" or "green certified"</strong><br>
+          These phrases are prohibited by brand guidelines</li>
+        </ul>
+      </div>
+      
+      <h3 style="margin-bottom: 0.5rem; margin-top: 2rem;">✅ Approved Phrases - Use These:</h3>
+      <div class="success-box">
+        <ul style="margin-left: 1.5rem; color: #065F46; line-height: 1.8;">
+          <li>"The process used by Chem-Dry..."</li>
+          <li>"The method used by Chem-Dry..."</li>
+          <li>"Hot Carbonating Extraction"</li>
+          <li>"The Natural® uses carbonation for a better clean"</li>
+          <li>"uses about 80% less water" (always include modifier)</li>
+          <li>"no dirt-attracting residue" (never just "no residue")</li>
+          <li>"The Natural® doesn't rely on soapy detergents or harsh chemicals"</li>
+        </ul>
+      </div>
+      
+      <h3 style="margin-bottom: 0.5rem; margin-top: 2rem;">Mission Statement</h3>
+      <div class="info-box">
+        <p style="color: #1E3A8A; font-style: italic; line-height: 1.8;">
+          "At Brimley's White Glove Chem-Dry we know that having flooring and furniture cleaned can be a painful and unnerving experience. We will honor homes and delight homeowners so they won't have to miss out on the feeling of serenity that comes from fresh and beautiful surroundings."
+        </p>
+      </div>
+      
+      <h3 style="margin-bottom: 0.5rem; margin-top: 2rem;">Voice & Tone Guidelines</h3>
+      <ul style="margin-left: 1.5rem; color: #4B5563; line-height: 1.8;">
+        <li>Professional but human, friendly, and familiar</li>
+        <li>Write like a real person, not a corporation</li>
+        <li>Use contractions (we're, you'll, it's)</li>
+        <li>Clear and concise - no fluff</li>
+        <li>Consumer-facing language, not technical jargon</li>
+        <li>Active voice preferred</li>
+      </ul>
+      
+      <h3 style="margin-bottom: 0.5rem; margin-top: 2rem;">Target Audience</h3>
+      <ul style="margin-left: 1.5rem; color: #4B5563; line-height: 1.8;">
+        <li>Female homeowners over 45</li>
+        <li>Household income $100k+</li>
+        <li>Often have children and/or pets</li>
+        <li>Value quality, professionalism, and health-conscious solutions</li>
+      </ul>
+    </div>
+    
+    <!-- SEO & Technical -->
+    <div class="section">
+      <h2 class="section-title">SEO & Technical Standards</h2>
+      
+      <h3 style="margin-bottom: 1rem;">Performance Targets</h3>
+      <div class="info-box">
+        <ul style="margin-left: 1.5rem; color: #1E3A8A; line-height: 1.8;">
+          <li><strong>PageSpeed Score:</strong> 90+ on mobile and desktop</li>
+          <li><strong>Largest Contentful Paint (LCP):</strong> &lt; 2.5s</li>
+          <li><strong>First Input Delay (FID):</strong> &lt; 100ms</li>
+          <li><strong>Cumulative Layout Shift (CLS):</strong> &lt; 0.1</li>
+          <li><strong>Image Format:</strong> WebP with fallbacks</li>
+          <li><strong>Image Compression:</strong> Optimized, lazy-loaded</li>
+        </ul>
+      </div>
+      
+      <h3 style="margin-bottom: 1rem; margin-top: 2rem;">Schema Markup Requirements</h3>
+      <ul style="margin-left: 1.5rem; color: #4B5563; line-height: 1.8;">
+        <li>LocalBusiness schema on all city pages</li>
+        <li>Service schema for each service offering</li>
+        <li>Review/AggregateRating schema for testimonials</li>
+        <li>BreadcrumbList for navigation</li>
+        <li>FAQPage schema for FAQ sections</li>
+      </ul>
+      
+      <h3 style="margin-bottom: 1rem; margin-top: 2rem;">Meta Tags Best Practices</h3>
+      <ul style="margin-left: 1.5rem; color: #4B5563; line-height: 1.8;">
+        <li><strong>Title:</strong> 50-60 characters, include city + service</li>
+        <li><strong>Description:</strong> 150-160 characters, include USP and CTA</li>
+        <li><strong>H1:</strong> One per page, include primary keyword</li>
+        <li><strong>Alt Text:</strong> Descriptive, keyword-relevant, not stuffed</li>
+        <li><strong>Canonical Tags:</strong> Prevent duplicate content issues</li>
+      </ul>
+    </div>
+    
+    <!-- Mobile Responsiveness -->
+    <div class="section">
+      <h2 class="section-title">Mobile Responsiveness</h2>
+      
+      <h3 style="margin-bottom: 1rem;">Breakpoints</h3>
+      <div style="background: #F3F4F6; padding: 1rem; border-radius: 0.5rem; font-family: 'Courier New', monospace; font-size: 0.875rem;">
+        <div style="margin-bottom: 0.5rem;"><strong>Mobile:</strong> 320px - 767px</div>
+        <div style="margin-bottom: 0.5rem;"><strong>Tablet:</strong> 768px - 1023px</div>
+        <div style="margin-bottom: 0.5rem;"><strong>Desktop:</strong> 1024px - 1279px</div>
+        <div><strong>Large Desktop:</strong> 1280px+</div>
+      </div>
+      
+      <h3 style="margin-bottom: 1rem; margin-top: 2rem;">Mobile-First Principles</h3>
+      <ul style="margin-left: 1.5rem; color: #4B5563; line-height: 1.8;">
+        <li>Design for mobile first, enhance for larger screens</li>
+        <li>Touch targets minimum 44x44px</li>
+        <li>Readable text without zooming (16px minimum)</li>
+        <li>Single-column layouts on mobile</li>
+        <li>Sticky header with click-to-call on mobile</li>
+        <li>Forms optimized for mobile input</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background-color: #1A365D; color: white; text-align: center; padding: 3rem 2rem; margin-top: 3rem;">
+    <p style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Brimley's White Glove Chem-Dry Design System v1.0</p>
+    <p style="font-size: 0.875rem; opacity: 0.8; margin-top: 0.5rem;">Built with Astro + Tailwind CSS</p>
+    <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 1rem;">Brand-Compliant | SEO-Optimized | Performance-Focused</p>
+  </div>
+</body>
+</html>
