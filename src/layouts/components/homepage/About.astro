@@ -47,20 +47,20 @@ const { about } = Astro.props;
       <div class="lg:w-[33%]">
         <p
           set:html={markdownify(about.subtitle)}
-          class="mb-7 text-base-sm text-primary text-center lg:text-left"
+          class="text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center lg:text-left"
           data-aos="fade-up-sm"
         />
 
         <CustomHeading
           as="h2"
           text={about.title}
-          class="text-h3 md:text-h2 text-balance mb-7 text-center lg:text-left"
+          class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left"
           dataAos="fade-up-sm"
           dataAosDelay="50"
         />
         <p
           set:html={markdownify(about.content)}
-          class="mb-8 text-center lg:text-left"
+          class="text-lg md:text-xl text-text/80 mb-8 md:mb-12 text-center lg:text-left"
           data-aos="fade-up-sm"
           data-aos-delay="100"
         />

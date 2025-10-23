@@ -45,7 +45,7 @@ const { why_us } = Astro.props;
             class={`col-12 md:col-6 md:w-[53%] xl:w-[42%] ${i % 2 === 0 ? "order-1 md:order-2" : ""}`}>
             {v.subtitle && (
               <p
-                class="text-primary text-balance text-center md:text-left text-base-sm mb-6"
+                class="text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center md:text-left"
                 set:html={markdownify(v.subtitle)}
                 data-aos="fade-up-sm"
               />
@@ -54,7 +54,7 @@ const { why_us } = Astro.props;
               <CustomHeading
                 as="h2"
                 text={v.title}
-                class="text-h3-sm lg:text-h2-sm text-balance mb-6 text-center md:text-left"
+                class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left"
                 dataAos="fade-up-sm"
                 dataAosDelay="60"
               />

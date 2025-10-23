@@ -17,20 +17,20 @@ const { responsibility } = Astro.props;
     <div class="container 2xl:mt-10">
       <p
         set:html={markdownify(responsibility.subtitle)}
-        class="mb-6 text-primary text-base-sm max-xl:text-center"
+        class="text-sm font-semibold tracking-wider uppercase text-accent mb-3 max-xl:text-center"
         data-aos="fade-up-sm"
       />
 
       <CustomHeading
         as="h2"
         text={responsibility.title}
-        class="text-h3 md:text-h2-sm mb-7 max-xl:text-center"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 max-xl:text-center"
         dataAos="fade-up-sm"
         dataAosDelay="20"
       />
       <p
         set:html={markdownify(responsibility.content)}
-        class="mb-7 xl:pl-[208px] max-xl:text-center text-text/80"
+        class="text-lg md:text-xl text-text/80 mb-8 md:mb-12 xl:pl-[208px] max-xl:text-center"
         data-aos="fade-up-sm"
         data-aos-delay="40"
       />

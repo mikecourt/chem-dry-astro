@@ -24,19 +24,19 @@ const cta = (await getEntry(
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
-  <section class="section mt-24 sm:mt-20" data-aos="fade-up-sm">
+  <section class="py-20 md:py-32 mt-24 sm:mt-20" data-aos="fade-up-sm">
     <div class="container">
-      <div class="mb-24" data-aos="fade-up-sm">
+      <div class="mb-8 md:mb-12" data-aos="fade-up-sm">
         <p
           set:html={markdownify(subtitle!)}
-          class="text-primary text-base-sm mb-4 text-left"
+          class="text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-left"
           data-aos="fade-up-sm"
         />
 
         <CustomHeading
           as="h1"
           text={title}
-          class="text-h3 md:text-h2 lg:text-h1 text-left"
+          class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-left"
           dataAos="fade-up-sm"
         />
       </div>

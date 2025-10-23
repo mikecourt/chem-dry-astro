@@ -17,13 +17,13 @@ const { blog, allBlogs } = Astro.props;
   <div class="container">
     <p
       set:html={markdownify(blog.subtitle)}
-      class="mb-5 text-base-sm text-primary text-center"
+      class="text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center"
       data-aos="fade-up-sm"
     />
     <CustomHeading
       as="h2"
       text={blog.title}
-      class="text-h3 md:text-h2 mb-16 text-center"
+      class="text-4xl md:text-5xl font-bold text-dark mb-8 md:mb-12 text-center"
       dataAos="fade-up-sm"
       dataAosDelay="50"
     />

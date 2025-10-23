@@ -158,6 +158,9 @@ const homepageCollection = defineCollection({
     }),
     testimonial: z.object({
       enable: z.boolean(),
+      subtitle: z.string().optional(),
+      title: z.string(),
+      content: z.string().optional(),
       review: z.array(
         z.object({
           name: z.string(),

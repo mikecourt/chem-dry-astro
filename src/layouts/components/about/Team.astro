@@ -11,14 +11,14 @@ const { team } = Astro.props;
     <div>
       <p
         set:html={markdownify(team.subtitle)}
-        class="text-center text-primary text-base-sm mb-6"
+        class="text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center"
         data-aos="fade-up-sm"
       />
 
       <CustomHeading
         as="h2"
         text={team.title}
-        class="text-h3-sm lg:text-h2-sm text-center mb-14 text-balance [&>br]:block"
+        class="text-4xl md:text-5xl font-bold text-dark mb-8 md:mb-12 text-center"
         dataAos="fade-up-sm"
         dataAosDelay="100"
       />

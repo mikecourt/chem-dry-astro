@@ -72,19 +72,39 @@ customer:
 
 testimonial:
   enable: true
+  subtitle: "CUSTOMER REVIEWS"
+  title: "**30+ Years** of Happy Customers"
+  content: "See why homeowners choose Brimley's White Glove for cleaner, healthier homes"
   review:
-    - name: "Jack Morrison"
-      about: "36 y, New York"
+    - name: "Sarah Johnson"
+      about: "Phoenix Homeowner"
+      says: "Chem-Dry did an amazing job on our carpets! They were able to get out stains I thought were permanent. The carpets dried in just a couple hours like they promised, and my kids were back to playing on them the same day. Highly recommend!"
       image: "/images/home/review/1.avif"
-      says: "Cleaner is the best service i have ever get provides a wide range of cleaning services, from home cleaning to office cleaning. They used advanced technologies to keep our room looking the best. <br> <br> Their team of experts who have been in the profession for years focuses on helped us achieve optimal clean surface."
-    - name: "Jack Morrison"
-      about: "36 y, New York"
+
+    - name: "Michael Chen"
+      about: "Ahwatukee Resident"
+      says: "We've used Chem-Dry for years and they never disappoint. Their technicians are professional, arrive on time, and always do a thorough job. The fact that they use less water and eco-friendly products is a huge plus for our family."
       image: "/images/home/review/2.avif"
-      says: "Cleaner is the best service i have ever get provides a wide range of cleaning services, from home cleaning to office cleaning. They used advanced technologies to keep our room looking the best. <br> <br> Their team of experts who have been in the profession for years focuses on helped us achieve optimal clean surface."
-    - name: "Jack Morrison"
-      about: "36 y, New York"
+
+    - name: "Jennifer Martinez"
+      about: "Scottsdale Mom"
+      says: "I was skeptical at first, but Chem-Dry truly delivered. Our carpets look brand new and there's no chemical smell like with other cleaners. The technician explained everything and was very knowledgeable. Worth every penny!"
       image: "/images/home/review/1.avif"
-      says: "Cleaner is the best service i have ever get provides a wide range of cleaning services, from home cleaning to office cleaning. They used advanced technologies to keep our room looking the best. <br> <br> Their team of experts who have been in the profession for years focuses on helped us achieve optimal clean surface."
+
+    - name: "David Thompson"
+      about: "Gilbert Homeowner"
+      says: "Fast, efficient, and effective! Chem-Dry got our carpets looking better than they have in years. The quick dry time meant we didn't have to disrupt our whole day. Will definitely use them again."
+      image: "/images/home/review/2.avif"
+
+    - name: "Lisa Anderson"
+      about: "Tempe Resident"
+      says: "Our upholstery looks incredible after Chem-Dry's cleaning. They were gentle yet thorough, and all the pet odors are completely gone. The service was professional from start to finish."
+      image: "/images/home/review/1.avif"
+
+    - name: "Robert Garcia"
+      about: "Chandler Dad"
+      says: "Chem-Dry's carbonation cleaning is amazing. No harsh chemicals, safe for our kids and pets, and the results speak for themselves. Our tile and grout also look fantastic. Best cleaning service in Phoenix!"
+      image: "/images/home/review/2.avif"
 
 blog:
   enable: true

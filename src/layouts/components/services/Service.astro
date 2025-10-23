@@ -13,7 +13,7 @@ type Props = {
 const { serviceIndex, allServices, hero } = Astro.props;
 ---
 
-<section class={`section ${hero && "mt-24 sm:mt-20"} ${!hero && "pt-0"}`}>
+<section class={`${hero ? "py-20 md:py-32 mt-24 sm:mt-20" : "section pt-0"}`}>
   <div class="container">
     <div
       class="row max-md:gy-5 md:g-1 lg:g-4 justify-center md:justify-between items-center">
@@ -22,7 +22,7 @@ const { serviceIndex, allServices, hero } = Astro.props;
           serviceIndex?.subtitle && (
             <p
               set:html={markdownify(serviceIndex?.subtitle)}
-              class={`mb-6 text-base-sm text-primary text-center md:text-left`}
+              class={`text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center md:text-left`}
               data-aos="fade-up-sm"
             />
           )
@@ -32,14 +32,14 @@ const { serviceIndex, allServices, hero } = Astro.props;
             <CustomHeading
               as="h1"
               text={serviceIndex?.title}
-              class={`text-h2-sm lg:text-h1-sm lg:leading-[70px] text-center md:text-left max-xl:[&>br]:hidden`}
+              class={`text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left max-xl:[&>br]:hidden`}
               dataAos="fade-up-sm"
             />
           ) : (
             <CustomHeading
               as="h2"
               text={serviceIndex?.home_title}
-              class="text-h3 md:text-h2-sm text-balance text-center md:text-left"
+              class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left"
               dataAos="fade-up-sm"
             />
           )

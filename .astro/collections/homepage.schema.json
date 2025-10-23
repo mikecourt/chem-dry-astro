@@ -267,6 +267,15 @@
             "enable": {
               "type": "boolean"
             },
+            "subtitle": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
             "review": {
               "type": "array",
               "items": {
@@ -297,6 +306,7 @@
           },
           "required": [
             "enable",
+            "title",
             "review"
           ],
           "additionalProperties": false
