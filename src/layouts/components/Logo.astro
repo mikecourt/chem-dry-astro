@@ -16,6 +16,11 @@ const {
   logo_text: string;
   title: string;
 } = config.site;
+
+const parsedWidth = Number(String(logo_width).replace("px", ""));
+const parsedHeight = Number(String(logo_height).replace("px", ""));
+const minResponsiveWidth = Math.round(parsedWidth * 0.6);
+const clampedWidth = `clamp(${minResponsiveWidth}px, 40vw, ${parsedWidth}px)`;
 ---
 
 <a href="/" class="navbar-brand inline-block">
@@ -24,13 +29,13 @@ const {
       <>
         <ImageMod
           src={src ? src : logo}
-          class={`inline-block object-cover`}
-          width={logo_width.replace("px", "") * 2}
-          height={logo_height.replace("px", "") * 2}
+          class={`inline-block object-contain h-auto w-full`}
+          width={parsedWidth * 2}
+          height={parsedHeight * 2}
           alt={title}
           style={{
-            height: logo_height.replace("px", "") + "px",
-            width: logo_width.replace("px", "") + "px",
+            width: clampedWidth,
+            height: "auto",
           }}
           loading={"eager"}
           format="webp"

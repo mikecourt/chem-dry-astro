@@ -149,7 +149,7 @@
     letter-spacing: 3px;
     background: linear-gradient(
       90deg,
-      var(--color-secondary) calc(var(--rating) / 5 * 100%),
+      #41AD49 calc(var(--rating) / 5 * 100%),
       #e7e7e7 calc(var(--rating) / 5 * 100%)
     );
     background-clip: text;

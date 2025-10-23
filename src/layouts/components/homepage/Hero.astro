@@ -12,12 +12,12 @@ const buttonVariants = ["primary", "secondary", "light"];
 ---
 
 <section
-  class="section relative mb-0"
-  style={`background-image: url('${hero.image}'); background-size: cover; background-position: center;`}>
-  <div class="container pt-24 sm:pt-20 pb-20 relative z-20">
+  class="section relative mb-0 !pt-0"
+  style={`background-image: url('${hero.image}'); background-size: cover; background-position: right center;`}>
+  <div class="container pt-28 sm:pt-32 pb-20 relative z-20">
     <p
       set:html={markdownify(hero.subtitle)}
-      class="text-lg mb-5 text-center lg:text-left"
+      class="text-lg md:text-xl lg:text-2xl leading-relaxed mb-0 text-center lg:text-left"
       data-aos="fade-up-sm"
       data-aos-delay="20"
     />
@@ -25,14 +25,61 @@ const buttonVariants = ["primary", "secondary", "light"];
       as="h1"
       text={hero.title}
       svgColor="text-primary"
-      class="h3 lg:text-[72px] xl:text-[80px] xl:tracking-[-3px] xl:leading-[88px] mb-9 text-center lg:text-left text-balance font-bold"
+      class="text-4xl md:text-5xl lg:text-6xl leading-[1.2] lg:leading-[1.1] text-center lg:text-left text-balance font-bold mt-0 mb-6 max-w-xl md:max-w-2xl lg:max-w-none mx-auto lg:mx-0"
       dataAos="fade-up-sm"
       dataAosDelay="40"
     />
+
+    <!-- Trust Badges -->
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+      data-aos="fade-up-sm"
+      data-aos-delay="50">
+      <div class="flex items-center justify-center sm:justify-start gap-3">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+          ⚡
+        </div>
+        <div class="text-center sm:text-left">
+          <div class="font-bold text-dark text-sm md:text-base">Dries in Just 2 Hours</div>
+          <div class="text-xs md:text-sm text-gray-600">No waiting around—and you still get a deep clean</div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center sm:justify-start gap-3">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+          ⭐
+        </div>
+        <div class="text-center sm:text-left">
+          <div class="font-bold text-dark text-sm md:text-base whitespace-nowrap">5-Star Rated • 1000+ Reviews</div>
+          <div class="text-xs md:text-sm text-gray-600">White-glove service that earns every star</div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center sm:justify-start gap-3">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+          🛡️
+        </div>
+        <div class="text-center sm:text-left">
+          <div class="font-bold text-dark text-sm md:text-base">Safe for Kids & Pets</div>
+          <div class="text-xs md:text-sm text-gray-600">The Natural® uses carbonation, not harsh chemicals</div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center sm:justify-start gap-3">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+          🏠
+        </div>
+        <div class="text-center sm:text-left">
+          <div class="font-bold text-dark text-sm md:text-base">Family-Owned for 30+ Years</div>
+          <div class="text-xs md:text-sm text-gray-600">Treating your home like our own since 1995</div>
+        </div>
+      </div>
+    </div>
+
     <div
       class="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-4"
       data-aos="fade-up-sm"
-      data-aos-delay="60">
+      data-aos-delay="70">
       {
         hero.buttons.map(
           (b, i: number) =>
@@ -52,38 +99,51 @@ const buttonVariants = ["primary", "secondary", "light"];
     </div>
   </div>
 
+  <!-- Mobile/Tablet overlay -->
   <div
-    class="absolute inset-0 w-full h-full z-10 bg-[radial-gradient(circle_at_center,_rgba(162,149,138,0.35)_0%,_rgba(217,212,207,0.15)_50%,_transparent_85%)] lg:bg-[radial-gradient(circle_at_60%_50%,_rgba(162,149,138,0.35)_0%,_rgba(217,212,207,0.15)_50%,_transparent_85%)]"
+    class="absolute inset-0 w-full h-full z-10 bg-white/80 lg:hidden"
+    data-aos="fade-right-sm">
+  </div>
+  <!-- Desktop gradient overlay: Solid white to 800px, gradient out to 1200px -->
+  <div
+    class="hidden lg:block absolute inset-0 w-full h-full z-10"
+    style="background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0px, rgba(255, 255, 255, 0.9) 800px, rgba(255, 255, 255, 0) 1200px, rgba(255, 255, 255, 0) 100%);"
     data-aos="fade-right-sm">
   </div>
 </section>
 
-<section class="bg-body py-8">
+<section class="bg-body py-8 -mt-[100px] relative z-30">
   <div class="container">
     <div
-      class="flex flex-col md:flex-row items-center justify-center gap-14">
+      class="flex flex-col sm:flex-row items-center justify-center gap-14">
       {
         hero.reviews.map((r, i: number) => (
-          <div data-aos="fade-up-sm">
+          <div class="flex flex-col items-center" data-aos="fade-up-sm">
             <ImageMod
               src={r.company_logo}
               alt={r.company_logo}
-              width={0}
-              height={0}
-              class="pb-5"
+              width={360}
+              height={120}
+              class="pb-5 h-30 w-auto object-contain"
               data-aos="fade-up-sm"
               data-aos-delay={100 + i * 50}
             />
             <div
-              class="flex justify-start items-center gap-x-2"
+              class="flex flex-col items-center gap-y-2"
               data-aos="fade-up-sm"
               data-aos-delay={120 + i * 50}>
-              <div
-                class="Stars"
-                style={`--rating: ${r.rating}`}
-                aria-label="Rating from the company"
-              />
-              <span class="text-base ml-[10px]">{r.rating} Out of 5</span>
+              {r.rating > 0 ? (
+                <>
+                  <div
+                    class="Stars"
+                    style={`--rating: ${r.rating}`}
+                    aria-label="Rating from the company"
+                  />
+                  <span class="text-base text-center">{r.rating} on {r.name.replace(' Reviews', '')}</span>
+                </>
+              ) : (
+                <span class="text-base text-center max-w-[220px]">Chem-Dry National <br />Franchise of the Year Winner</span>
+              )}
             </div>
           </div>
         ))

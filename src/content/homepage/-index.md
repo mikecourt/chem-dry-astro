@@ -1,7 +1,7 @@
 ---
 hero:
-  title: "Fast-Drying <br> **Carpet Cleaning** Your <br> Family Can Trust"
-  subtitle: "Family-owned. Valley-trusted since 1995. The safer way to clean carpets in Phoenix and the East Valley."
+  title: "Carpet Cleaning in Phoenix <br> Your Family Can **Trust**"
+  subtitle: "Dries in 2 Hours. Safe for Kids & Pets. 30+ Years Serving Phoenix Families."
   buttons:
     - enable: true
       label: "(480) 649-3663"
@@ -13,14 +13,17 @@ hero:
     - enable: true
       label: "Our Services"
       link: "/services"
-  image: "/images/home/banner.png"
+  image: "/images/home/hero-family.jpg"
   reviews:
-    - name: "Company Logo with star ratings"
-      company_logo: "/images/home/2.svg"
-      rating: 4.7
-    - name: "Company Logo with star ratings"
-      company_logo: "/images/home/1.svg"
+    - name: "Google Reviews"
+      company_logo: "/images/home/Google-reviews-logo.svg"
       rating: 4.8
+    - name: "Franchise Award"
+      company_logo: "/images/home/franchise-of-the-year.svg"
+      rating: 0
+    - name: "Yelp Reviews"
+      company_logo: "/images/home/yelp-reviews-logo.svg"
+      rating: 4.6
 
 about:
   enable: true

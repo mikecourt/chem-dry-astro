@@ -24,9 +24,7 @@ const { navigation_button, notification } = config;
 const { pathname } = Astro.url;
 ---
 
-<div
-  class="absolute top-0 z-20 flex flex-col sm:flex-row justify-center items-center gap-4.5 w-full bg-primary py-2"
-  data-aos="fade-down-sm">
+<div class="notification-bar sticky top-0 z-50 flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4.5 w-full bg-primary py-2" data-aos="fade-down-sm">
   <p
     class="text-text-light/80 text-base-sm"
     set:html={markdownify(notification.message)}
@@ -38,7 +36,7 @@ const { pathname } = Astro.url;
   </a>
 </div>
 
-<header class="header z-50 absolute top-26 sm:top-12">
+<header class="header z-40 absolute w-full" style="top: var(--notification-height, 52px);">
   <nav class="navbar mx-auto max-w-[1356px]! px-[30px]">
     <!-- logo -->
     <div class="order-0" data-aos="zoom-in" data-aos-delay="20">

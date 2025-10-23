@@ -2,6 +2,10 @@
   @apply w-full;
 }
 
+.notification-bar {
+  /* Sticky notification bar that stays at top */
+}
+
 /* navbar items */
 .navbar {
   @apply py-2 relative flex flex-wrap items-center justify-between;
@@ -45,7 +49,14 @@
 
 .header-reveal {
   animation: slide-in-header 0.5s ease;
-  @apply fixed bg-body !top-0 backdrop-blur-lg shadow;
+  @apply fixed backdrop-blur-lg shadow bg-body;
+  top: var(--notification-height, 52px) !important;
+}
+
+@media (max-width: 639px) {
+  .header-reveal {
+    top: 64px !important;
+  }
 }
 
 @keyframes slide-in-header {

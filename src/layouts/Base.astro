@@ -180,7 +180,14 @@ const { title, meta_title, description, image, noindex, canonical } =
       import config from "@/config/config.json";
       const sticky_header = config.settings.sticky_header;
       const stickyNavInit = () => {
-        // fix header on 100px scroll and get back to normal on 90px scroll
+        // Set notification height CSS variable
+        const notificationBar = document.querySelector(".notification-bar");
+        if (notificationBar) {
+          const height = notificationBar.offsetHeight;
+          document.documentElement.style.setProperty('--notification-height', `${height}px`);
+        }
+
+        // Header reveal on scroll down
         const header = document.querySelector(".header");
         let lastScroll = 0;
         const onScroll = () => {

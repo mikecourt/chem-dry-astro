@@ -35,6 +35,7 @@ const callToAction = (await getEntry(
 
 <Base>
   <Hero hero={hero} />
+  {testimonial.enable && <Testimonial testimonial={testimonial} />}
   {
     serviceIndex.data.homepage_section_enable && (
       <Service serviceIndex={serviceIndex.data} allServices={allServices} />
@@ -42,15 +43,7 @@ const callToAction = (await getEntry(
   }
   {about.enable && <About about={about} />}
   {responsibility.enable && <Responsibility responsibility={responsibility} />}
-
   {customer.enable && <Customer customer={customer} />}
-  {
-    customer.enable && testimonial.enable && (
-      <hr class="border-t border-border" data-aos="fade-up-sm" />
-    )
-  }
-  {testimonial.enable && <Testimonial testimonial={testimonial} />}
-
   {blog.enable && <Blog blog={blog} allBlogs={allBlogs} />}
   <CallToAction cta={callToAction.data} />
 </Base>

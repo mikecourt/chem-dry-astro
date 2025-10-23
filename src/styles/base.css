@@ -6,13 +6,17 @@ body {
   @apply bg-body overflow-x-hidden text-base font-primary font-normal leading-relaxed text-text;
 }
 
+p {
+  @apply m-0;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  @apply font-secondary font-medium leading-tight;
+  @apply font-secondary font-medium leading-tight m-0;
 }
 
 h1,

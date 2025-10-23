@@ -221,6 +221,7 @@ h6, .h6 {
   font-weight: var(--weight-bold);
   line-height: var(--leading-tight);
   color: var(--color-text-primary);
+  margin-top: 0;
   margin-bottom: var(--space-4);
 }
 
@@ -257,7 +258,7 @@ h6, .h6 {
 }
 
 p {
-  margin-bottom: var(--space-4);
+  margin-bottom: 0;
 }
 
 /* Lead Paragraph */
