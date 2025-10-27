@@ -2,6 +2,7 @@
 import CustomHeading from "@/components/CustomHeading.astro";
 import ImageMod from "@/components/ImageMod.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -35,6 +36,7 @@ const similarPosts = similarItems(service, allServices);
 ---
 
 <Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName={title} />
   <section class="py-20 md:py-32 mt-24 sm:mt-20">
     <div class="container">
       <p class="text-base text-center text-primary mb-4" data-aos="fade-up-sm">

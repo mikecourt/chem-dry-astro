@@ -11,81 +11,104 @@ type Props = {
 };
 
 const { serviceIndex, allServices, hero } = Astro.props;
+
+// Service descriptions
+const serviceDescriptions: Record<string, string> = {
+  "carpet-cleaning": "Traditional cleaning leaves carpets wet for days. Ours dry in 1-2 hours using about 80% less water.",
+  "upholstery-cleaning": "Worried about harsh chemicals on furniture your family touches? The Natural® is powerful yet safe for kids and pets.",
+  "area-rug-cleaning": "Generic cleaning can ruin expensive rugs. Our specialists preserve colors and fibers with precision methods.",
+  "tile-grout-cleaning": "Scrubbing doesn't work on grimy grout. We restore original color and seal it to prevent future staining.",
+  "pet-urine-removal": "Odors keep returning because they're only masked. P.U.R.T.® eliminates urine crystals permanently at the molecular level."
+};
 ---
 
-<section class={`${hero ? "py-20 md:py-32 mt-24 sm:mt-20" : "section pt-0"}`}>
-  <div class="container">
+<section class={`${hero ? "section mt-24 sm:mt-20" : "section"}`}>
+  <div class="container" style="padding-left: 4px; padding-right: 4px;">
     <div
       class="row max-md:gy-5 md:g-1 lg:g-4 justify-center md:justify-between items-center">
-      <div class="md:col-6 col-12">
-        {
-          serviceIndex?.subtitle && (
-            <p
-              set:html={markdownify(serviceIndex?.subtitle)}
-              class={`text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center md:text-left`}
-              data-aos="fade-up-sm"
-            />
-          )
-        }
-        {
-          hero ? (
-            <CustomHeading
-              as="h1"
-              text={serviceIndex?.title}
-              class={`text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left max-xl:[&>br]:hidden`}
-              dataAos="fade-up-sm"
-            />
-          ) : (
-            <CustomHeading
-              as="h2"
-              text={serviceIndex?.home_title}
-              class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left"
-              dataAos="fade-up-sm"
-            />
-          )
-        }
-      </div>
-      <div class="col-6 md:w-[44%] col-12">
-        {
-          serviceIndex.descriptions &&
-            serviceIndex.descriptions.map((desc: string, i) => (
-              <p
-                set:html={markdownify(desc)}
-                class={`mb-6 last:mb-0 text-center md:text-left`}
-                data-aos="fade-up-sm"
-                data-aos-delay={50 + i * 50}
-              />
-            ))
-        }
+      <div class="col-12">
+        <div class="mx-auto max-w-[66rem] px-8 sm:px-10 lg:px-16">
+          <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] items-start">
+            <div>
+              {
+                serviceIndex?.subtitle && (
+                  <p
+                    set:html={markdownify(serviceIndex?.subtitle)}
+                    class={`text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center md:text-left`}
+                    data-aos="fade-up-sm"
+                  />
+                )
+              }
+              {
+                hero ? (
+                  <CustomHeading
+                    as="h1"
+                    text={serviceIndex?.title}
+                    class={`text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left max-xl:[&>br]:hidden`}
+                    dataAos="fade-up-sm"
+                  />
+                ) : (
+                  <CustomHeading
+                    as="h2"
+                    text={serviceIndex?.home_title}
+                    class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left"
+                    dataAos="fade-up-sm"
+                  />
+                )
+              }
+            </div>
+            <div>
+              {
+                serviceIndex.descriptions &&
+                  serviceIndex.descriptions.map((desc: string, i) => (
+                    <p
+                      set:html={markdownify(desc)}
+                      class={`mb-6 last:mb-0 text-center md:text-left`}
+                      data-aos="fade-up-sm"
+                      data-aos-delay={50 + i * 50}
+                    />
+                  ))
+              }
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="col-12">
         <div
-          class="flex flex-wrap justify-center md:justify-between items-center mt-10 lg:mt-16 max-lg:gap-10 gap-y-5">
+          class="grid mt-10 lg:mt-16 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 2xl:gap-x-12">
           {
             allServices.map((service, i) => (
-              <>
-                <div
-                  class="group"
-                  data-aos="fade-right-sm"
-                  data-aos-delay={100 + i * 50}>
-                  <div class="group-child">
-                    <DynamicIcon
-                      icon={service.data.icon!}
-                      className="mb-6 text-5xl p-2 rounded bg-secondary/70"
-                    />
+              <div
+                class="group h-full 2xl:border-l 2xl:border-border first:2xl:border-l-0 2xl:pl-8 first:2xl:pl-0"
+                data-aos="fade-right-sm"
+                data-aos-delay={100 + i * 50}>
+                <a
+                  href={`/services/${service.id}`}
+                  class="flex h-full flex-col items-center text-center">
+                  <div class="group-child h-full flex flex-col items-center">
+                    {/* Icon and Title */}
+                    <div class="flex flex-col items-center gap-3 mb-4">
+                      <DynamicIcon
+                        icon={service.data.icon!}
+                        className="text-6xl p-3 rounded bg-secondary/70 text-white"
+                      />
+                      <h3
+                        set:html={markdownify(service.data.title!)}
+                        class="text-xl font-semibold text-dark"
+                      />
+                    </div>
 
-                    <p
-                      set:html={markdownify(service.data.title!)}
-                      class="text-xl font-medium mb-3 leading-[33px] [&>br]:block w-fit"
-                    />
+                    {/* Description */}
+                    <p class="text-sm text-text/80 leading-relaxed flex-grow">
+                      {serviceDescriptions[service.id] || ""}
+                    </p>
 
-                    <div class="relative overflow-hidden w-fit">
-                      <a
-                        href={`/services/${service.id}`}
-                        class="font-medium text-nowrap inline-block group text-base-sm">
+                    {/* Learn More Link */}
+                    <div class="relative overflow-hidden w-fit mt-4 mx-auto">
+                      <span class="font-medium text-nowrap inline-flex items-center group text-base-sm text-accent group-hover:text-accent/80 transition-colors">
                         <span class="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
-                          Discover More
+                          Learn More
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -99,14 +122,11 @@ const { serviceIndex, allServices, hero } = Astro.props;
                             <polyline points="12 5 19 12 12 19" />
                           </svg>
                         </span>
-                      </a>
+                      </span>
                     </div>
                   </div>
-                </div>
-                {i !== allServices.length - 1 && (
-                  <hr class="w-30 hidden lg:block border-border rotate-90" />
-                )}
-              </>
+                </a>
+              </div>
             ))
           }
         </div>

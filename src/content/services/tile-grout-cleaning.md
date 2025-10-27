@@ -1,7 +1,7 @@
 ---
-title: "Tile & Grout <br> Cleaning"
-meta_title: "Tile and Grout Cleaning | Brimley's White Glove Chem-Dry"
-description: "Professional tile and grout cleaning in Mesa, AZ. Restore the beauty of your tile floors with our deep cleaning process."
+title: "Tile, Stone & Grout"
+meta_title: "Tile, Stone and Grout Cleaning | Brimley's White Glove Chem-Dry"
+description: "Professional tile, stone and grout cleaning in Phoenix. Restore the beauty of your tile and stone floors with our deep cleaning process."
 icon: "FaTableCellsLarge"
 banner: "/images/tile-service.jpg"
 date: 2025-01-21T05:00:00Z

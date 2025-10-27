@@ -51,19 +51,26 @@ const { testimonial } = Astro.props;
     </div>
 
     {/* Masonry Grid */}
-    <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6" data-aos="fade-up-sm" data-aos-delay="100">
+    <div id="testimonials-grid" class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6" data-aos="fade-up-sm" data-aos-delay="100">
       {
         testimonial.review.map((review, index) => (
           <div
-            class="break-inside-avoid mb-6 rounded-lg border border-border bg-body shadow-sm hover:shadow-md transition-shadow duration-300"
+            class={`testimonial-card break-inside-avoid mb-6 rounded-lg border border-border bg-body shadow-sm hover:shadow-md transition-shadow duration-300 ${index >= 6 ? 'testimonial-hidden' : ''}`}
+            itemscope
+            itemtype="https://schema.org/Review"
             data-aos="fade-up-sm"
             data-aos-delay={150 + index * 50}
           >
+            <meta itemprop="itemReviewed" content="Carpet Cleaning Service" />
+            <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <meta itemprop="ratingValue" content="5" />
+              <meta itemprop="bestRating" content="5" />
+            </div>
             <div class="px-6 py-8">
               <DynamicIcon icon="FaQuoteLeft" className="text-4xl md:text-5xl text-primary mb-4" />
               {
                 review.says && (
-                  <p class="mb-6 text-base md:text-lg leading-relaxed text-text/90" set:html={markdownify(review.says)} />
+                  <blockquote itemprop="reviewBody" class="mb-6 text-base md:text-lg leading-relaxed text-text/90" set:html={markdownify(review.says)} />
                 )
               }
               <div class="flex items-center gap-3">
@@ -80,8 +87,14 @@ const { testimonial } = Astro.props;
                   />
                 )}
                 <div>
-                  {review.name && <h4 class="text-lg md:text-xl font-bold text-dark">{review.name}</h4>}
-                  {review.about && <p class="text-sm md:text-base text-text/70">{review.about}</p>}
+                  <cite class="not-italic">
+                    {review.name && (
+                      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <h4 class="text-lg md:text-xl font-bold text-dark" itemprop="name">{review.name}</h4>
+                      </span>
+                    )}
+                    {review.about && <p class="text-sm md:text-base text-text/70" itemprop="addressLocality">{review.about}</p>}
+                  </cite>
                 </div>
               </div>
             </div>
@@ -89,12 +102,74 @@ const { testimonial } = Astro.props;
         ))
       }
     </div>
+
+    {/* See More Reviews Button */}
+    <div class="text-center mt-8" id="see-more-container">
+      <button
+        id="see-more-reviews"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-md hover:shadow-lg"
+      >
+        <span>See More Reviews</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
   </div>
 </section>
+
+<script>
+  function initTestimonialToggle() {
+    const seeMoreBtn = document.getElementById('see-more-reviews');
+    const hiddenReviews = document.querySelectorAll('.testimonial-hidden');
+    const seeMoreContainer = document.getElementById('see-more-container');
+
+    if (seeMoreBtn && hiddenReviews.length > 0) {
+      seeMoreBtn.addEventListener('click', () => {
+        hiddenReviews.forEach((review) => {
+          review.classList.remove('testimonial-hidden');
+          review.classList.add('testimonial-revealed');
+        });
+
+        // Hide the button after revealing reviews
+        if (seeMoreContainer) {
+          seeMoreContainer.style.display = 'none';
+        }
+      });
+    }
+  }
+
+  // Initialize on page load
+  initTestimonialToggle();
+
+  // Re-initialize after Astro page transitions
+  document.addEventListener('astro:page-load', initTestimonialToggle);
+</script>
 
 <style>
   /* Ensure masonry layout works smoothly */
   .columns-1 {
     column-gap: 1.5rem;
+  }
+
+  /* Hide testimonials beyond the first 6 */
+  .testimonial-hidden {
+    display: none;
+  }
+
+  /* Animate in when revealed */
+  .testimonial-revealed {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>

@@ -1,0 +1,45 @@
+---
+interface Props {
+  type?: 'homepage' | 'service';
+  serviceName?: string;
+}
+
+const { type = 'homepage', serviceName } = Astro.props;
+
+// Base business schema with aggregate rating
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Brimley's White Glove Chem-Dry",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "247",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+
+// Service-specific schema (if needed)
+const serviceSchema = serviceName ? {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": serviceName,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Brimley's White Glove Chem-Dry"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "247",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+} : null;
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+{serviceSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+)}

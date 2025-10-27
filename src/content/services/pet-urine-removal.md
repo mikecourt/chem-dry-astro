@@ -1,0 +1,37 @@
+---
+title: "Pet Urine Odor"
+meta_title: "Pet Urine & Odor Removal | Brimley's White Glove Chem-Dry"
+description: "Specialized pet urine and odor removal for carpets and upholstery. Eliminate odors at the source, not just mask them."
+icon: "FaDog"
+banner: "/images/pet-service.jpg"
+date: 2025-01-21T05:00:00Z
+categories: ["Pet Odor Removal"]
+weight: 5
+draft: false
+---
+
+### Pet Urine & Odor Removal Specialists
+
+We love our pets, but accidents happen. When pet urine soaks into carpet, it doesn't just stay on the surface—it penetrates deep into the carpet fibers, backing, and even the padding underneath. That's why surface cleaning alone won't eliminate the odor.
+
+Brimley's White Glove Chem-Dry specializes in pet urine and odor removal using our proprietary P.U.R.T.® (Pet Urine Removal Treatment). This revolutionary process doesn't just mask odors—it completely eliminates the source of the smell at the molecular level.
+
+###### Why P.U.R.T.® Works
+
+- **Molecular Breakdown** - Destroys urine crystals causing odor
+- **Deep Penetration** - Reaches padding and subfloor where urine hides
+- **Permanent Results** - Eliminates odor, not just covers it up
+- **Safe for Pets & Kids** - Non-toxic, Green Certified formula
+- **Works on Old Stains** - Effective even on dried, set-in urine
+
+###### Our Pet Urine Removal Process
+
+We use special UV lighting to identify all areas affected by pet urine, even old accidents you may not know about. After thorough inspection, we apply P.U.R.T.® directly to affected areas. The formula goes to work immediately, breaking down the uric acid crystals that cause odor. In severe cases, we may recommend padding replacement or subfloor sealing.
+
+###### Beyond Carpet
+
+We also treat upholstery, area rugs, and mattresses affected by pet accidents. Our technicians are trained to handle even the toughest pet odor problems.
+
+###### Service Guarantee
+
+We're so confident in P.U.R.T.® that we back it with a satisfaction guarantee. If the odor returns, we'll re-treat the area at no additional charge.

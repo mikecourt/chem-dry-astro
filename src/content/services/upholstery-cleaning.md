@@ -1,8 +1,8 @@
 ---
-title: "Upholstery <br> Cleaning"
+title: "Upholstery"
 meta_title: "Professional Upholstery Cleaning | Brimley's White Glove Chem-Dry"
 description: "Expert upholstery cleaning for furniture, sofas, and chairs in Mesa, AZ. Safe, effective cleaning that protects your fabric."
-icon: "FaBed"
+icon: "FaCouch"
 banner: "/images/upholstery-service.jpg"
 date: 2025-01-21T05:00:00Z
 categories: ["Upholstery Cleaning"]
