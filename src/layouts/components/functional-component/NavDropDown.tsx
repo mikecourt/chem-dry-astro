@@ -34,6 +34,26 @@ const NavDropDown = ({ menu, pathname }: { menu: any; pathname: any }) => {
               >
                 {child.name}
               </a>
+
+              {/* Render nested children if they exist */}
+              {child.hasChildren && child.children && (
+                <ul className="nav-dropdown-sublist ml-4 mt-2 space-y-1">
+                  {child.children.map((subChild: any, subIndex: number) => (
+                    <li key={subIndex}>
+                      <a
+                        href={subChild.url}
+                        aria-label={subChild.name}
+                        className={`nav-dropdown-sublink block text-sm py-1.5 px-2 rounded transition hover:text-primary hover:bg-primary/5 ${
+                          (pathname === `${subChild.url}/` || pathname === subChild.url) &&
+                          "text-primary bg-primary/5"
+                        }`}
+                      >
+                        {subChild.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>

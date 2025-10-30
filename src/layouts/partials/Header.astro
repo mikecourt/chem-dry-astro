@@ -10,6 +10,8 @@ import { markdownify } from "@/lib/utils/textConverter";
 export interface ChildNavigationLink {
   name: string;
   url: string;
+  hasChildren?: boolean;
+  children?: ChildNavigationLink[];
 }
 
 export interface NavigationLink {
@@ -17,6 +19,8 @@ export interface NavigationLink {
   url: string;
   hasChildren?: boolean;
   children?: ChildNavigationLink[];
+  className?: string;
+  icon?: string;
 }
 
 const { main }: { main: NavigationLink[] } = menu;
@@ -42,7 +46,7 @@ const { pathname } = Astro.url;
     <div class="order-0" data-aos="zoom-in" data-aos-delay="20">
       <Logo />
     </div>
-    <div class="flex items-center gap-4.5">
+    <div class="flex items-center gap-4.5 flex-1 min-w-0 justify-end lg:justify-center">
       {
         navigation_button.enable && (
           <CustomButton
@@ -92,8 +96,15 @@ const { pathname } = Astro.url;
                   data-aos-delay={100 + i * 50}>
                   <a
                     href={menu.url}
-                    class={`nav-link text-base-sm ${(pathname === `${menu.url}/` || pathname === menu.url) && "active"}`}>
-                    {menu.name}
+                    class={`nav-link text-base-sm ${menu.className ?? ""} ${(pathname === `${menu.url}/` || pathname === menu.url) && "active"}`}>
+                    <span class="inline-flex items-center">
+                      {menu.name}
+                      {
+                        menu.icon && (
+                          <DynamicIcon icon={menu.icon} className="ml-2 text-sm" aria-hidden="true" />
+                        )
+                      }
+                    </span>
                   </a>
                 </li>
               )}
@@ -108,7 +119,7 @@ const { pathname } = Astro.url;
           link={navigation_button.link}
           label={navigation_button.label}
           type="btn-sm"
-          className="order-1 hidden lg:inline-block!"
+          className="order-1 hidden lg:inline-block! flex-shrink-0"
           data_aos="zoom-in-sm"
         />
       )

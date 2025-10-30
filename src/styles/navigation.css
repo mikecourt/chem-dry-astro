@@ -19,7 +19,7 @@
 }
 
 .navbar-nav {
-  @apply rounded text-left order-3 lg:order-1 lg:flex lg:w-auto lg:gap-7 max-lg:py-4 max-lg:px-5 max-lg:opacity-0 max-lg:absolute max-lg:shadow max-lg:z-50 max-lg:top-20 max-lg:bg-body max-lg:w-[calc(100vw_-_10%)] max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2;
+  @apply rounded text-left order-3 lg:order-1 lg:flex lg:w-auto lg:gap-5 lg:pl-5 max-lg:py-4 max-lg:px-5 max-lg:opacity-0 max-lg:absolute max-lg:shadow max-lg:z-50 max-lg:top-20 max-lg:bg-body max-lg:w-[calc(100vw_-_10%)] max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2;
 }
 
 .nav-link {
@@ -30,13 +30,45 @@
   }
 }
 
+.nav-link--secondary {
+  @apply inline-flex items-center gap-2 text-secondary bg-white/80 rounded-md px-3 py-3 transition-all whitespace-nowrap;
+  &:hover,
+  &.active {
+    @apply text-text-light bg-secondary;
+  }
+}
+
 .nav-dropdown {
   @apply mr-0;
 }
 
 .nav-dropdown-list {
-  @apply z-10 rounded-lg max-lg:m-4 bg-body p-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hidden lg:invisible lg:absolute  lg:top-16 lg:left-1/2 lg:transform lg:-translate-x-1/2
-  lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100 lg:scale-95 lg:group-hover:scale-100 lg:group-hover:grid lg:grid lg:grid-cols-3 lg:gap-x-8 min-w-max  transition-all duration-300 ease-in-out;
+  @apply z-10 rounded-lg max-lg:m-4 bg-body p-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hidden lg:invisible lg:absolute lg:top-16 lg:left-1/2 lg:transform lg:-translate-x-1/2
+  lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100 lg:scale-95 lg:group-hover:scale-100 lg:group-hover:block transition-all duration-300 ease-in-out;
+
+  /* Two column layout using CSS columns */
+  @apply min-w-[600px] max-w-[680px];
+}
+
+@media (min-width: 1024px) {
+  .nav-dropdown-list {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+}
+
+.nav-dropdown-item {
+  @apply mb-2;
+  break-inside: avoid;
+}
+
+/* Force column break after 5th item (Pet Odor Removal) */
+.nav-dropdown-item:nth-child(5) {
+  break-after: column;
+}
+
+.nav-dropdown-sublist {
+  @apply border-l-2 border-primary/20 pl-3 ml-2;
 }
 
 .nav-dropdown-link {

@@ -6,65 +6,174 @@
     },
     {
       "name": "Services",
-      "url": "/services"
+      "url": "/services",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Carpet Cleaning",
+          "url": "/services/carpet-cleaning"
+        },
+        {
+          "name": "Upholstery Cleaning",
+          "url": "/services/upholstery-cleaning",
+          "hasChildren": true,
+          "children": [
+            {
+              "name": "Leather Cleaning",
+              "url": "/services/leather-cleaning"
+            },
+            {
+              "name": "Couch & Sofa Cleaning",
+              "url": "/services/couch-sofa-cleaning"
+            }
+          ]
+        },
+        {
+          "name": "Tile & Grout Cleaning",
+          "url": "/services/tile-grout-cleaning",
+          "hasChildren": true,
+          "children": [
+            {
+              "name": "Stone Tile Cleaning & Polishing",
+              "url": "/services/stone-tile-cleaning-polishing"
+            }
+          ]
+        },
+        {
+          "name": "Area Rug Cleaning",
+          "url": "/services/area-rug-cleaning"
+        },
+        {
+          "name": "Pet Odor Removal",
+          "url": "/services/pet-urine-removal"
+        },
+        {
+          "name": "Commercial Cleaning",
+          "url": "/services/commercial-cleaning"
+        },
+        {
+          "name": "Specialty Stain Removal",
+          "url": "/services/specialty-stain-removal",
+          "hasChildren": true,
+          "children": [
+            {
+              "name": "Pet Urine Stain Cleaning",
+              "url": "/services/pet-urine-stain-removal"
+            },
+            {
+              "name": "Red Wine Stain Removal",
+              "url": "/services/red-wine-stain-removal"
+            }
+          ]
+        },
+        {
+          "name": "Wood Floor Cleaning",
+          "url": "/services/wood-floor-cleaning"
+        },
+        {
+          "name": "Other Services",
+          "url": "/services",
+          "hasChildren": true,
+          "children": [
+            {
+              "name": "Granite Countertop Renewal",
+              "url": "/services/granite-countertop-renewal"
+            },
+            {
+              "name": "Allergen Removal",
+              "url": "/services/allergen-removal"
+            },
+            {
+              "name": "Dryer Vent Cleaning",
+              "url": "/services/dryer-vent-cleaning"
+            }
+          ]
+        }
+      ]
     },
     {
-      "name": "Gallery",
+      "name": "Before & After",
       "url": "/gallery"
     },
     {
-      "name": "Blog",
+      "name": "Cleaning Tips",
       "url": "/blog"
     },
     {
       "name": "Contact",
       "url": "/contact"
+    },
+    {
+      "name": "Book Online",
+      "url": "/appointment",
+      "className": "nav-link--secondary",
+      "icon": "FaRegCalendarDays"
     }
   ],
   "footer": [
     {
-      "title": "Company",
+      "title": "OUR SERVICES",
       "children": [
         {
-          "name": "Home",
-          "url": "/"
+          "name": "Carpet Cleaning",
+          "url": "/services/carpet-cleaning"
         },
         {
-          "name": "Services",
-          "url": "/services"
+          "name": "Upholstery Cleaning",
+          "url": "/services/upholstery-cleaning"
         },
         {
-          "name": "About Us",
-          "url": "/about"
+          "name": "Area Rug Cleaning",
+          "url": "/services/area-rug-cleaning"
         },
         {
-          "name": "Elements",
-          "url": "/elements"
+          "name": "Tile & Grout Cleaning",
+          "url": "/services/tile-and-grout-cleaning"
         },
         {
-          "name": "Contacts",
-          "url": "/contact"
+          "name": "Pet Odor Removal",
+          "url": "/services/pet-urine-odor-removal"
+        },
+        {
+          "name": "Leather Cleaning",
+          "url": "/services/leather-cleaning"
+        },
+        {
+          "name": "Granite Renewal",
+          "url": "/services/granite-countertop-renewal"
         }
       ]
     },
     {
-      "title": "Services",
+      "title": "SERVICE AREAS",
       "children": [
         {
-          "name": "Home Cleaning",
-          "url": "/services/home-cleaning"
+          "name": "Phoenix",
+          "url": "/service-areas/phoenix"
         },
         {
-          "name": "Window Cleaning",
-          "url": "/services/window-cleaning"
+          "name": "Mesa",
+          "url": "/service-areas/mesa"
         },
         {
-          "name": "Pest Control",
-          "url": "/services/pest-control"
+          "name": "Chandler",
+          "url": "/service-areas/chandler"
         },
         {
-          "name": "Floor Cleaning",
-          "url": "/services/floor-cleaning"
+          "name": "Gilbert",
+          "url": "/service-areas/gilbert"
+        },
+        {
+          "name": "Scottsdale",
+          "url": "/service-areas/scottsdale"
+        },
+        {
+          "name": "Glendale",
+          "url": "/service-areas/glendale"
+        },
+        {
+          "name": "Peoria",
+          "url": "/service-areas/peoria"
         }
       ]
     }
