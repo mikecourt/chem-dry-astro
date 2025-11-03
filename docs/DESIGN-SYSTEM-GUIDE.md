@@ -156,6 +156,61 @@ h2 { font-size: var(--text-4xl); }
 h1 { font-size: var(--text-6xl); }
 ```
 
+### Section Heading Pattern (STANDARD)
+
+**IMPORTANT**: Use this pattern consistently across all sections.
+
+#### Eyebrow (Section Label)
+```astro
+<p
+  set:html={markdownify(section.subtitle)}
+  class="text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center lg:text-left"
+  data-aos="fade-up-sm"
+/>
+```
+- **Always use `<p>` tag** - NOT an H-tag
+- **Classes**: `text-sm font-semibold tracking-wider uppercase text-accent mb-3`
+- **Alignment**: Center on mobile, left on desktop (`text-center lg:text-left`)
+
+#### H1 (Page Title)
+```astro
+<CustomHeading
+  as="h1"
+  text={title}
+  class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+  dataAos="fade-up-sm"
+/>
+```
+- **Classes**: `text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6`
+
+#### H2 (Section Title or Subheading)
+```astro
+<CustomHeading
+  as="h2"
+  text={title}
+  class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+  dataAos="fade-up-sm"
+/>
+```
+OR for subheading style:
+```astro
+<h2
+  class="text-lg md:text-xl text-text/80 mb-8 md:mb-12"
+  data-aos="fade-up-sm"
+>
+  Subheading text
+</h2>
+```
+
+#### Body Text
+```astro
+<p class="text-base leading-relaxed text-text/80">
+  Body content...
+</p>
+```
+- **Classes**: `text-base leading-relaxed text-text/80`
+- **Color**: Uses `text-text/80` for softer appearance
+
 ---
 
 ## Components
@@ -299,6 +354,46 @@ h1 { font-size: var(--text-6xl); }
 
 <section class="section-hero">
   <!-- Hero-specific styling -->
+</section>
+```
+
+### Standard Section Layouts
+
+#### Center-Aligned Hero Section
+```astro
+<section class="section mt-24 sm:mt-20">
+  <div class="container">
+    <div class="mx-auto max-w-[75rem] text-center">
+      <!-- Eyebrow (p tag) -->
+      <!-- H1 -->
+      <!-- H2 (optional subheading) -->
+      <!-- Body copy (can be two-column) -->
+    </div>
+  </div>
+</section>
+```
+
+#### Two-Column Body Copy Pattern
+```astro
+<div class="grid md:grid-cols-2 gap-6 lg:gap-8 text-left max-w-[65rem] mx-auto">
+  <div>
+    <p class="text-base leading-relaxed text-text/80">
+      First column content...
+    </p>
+  </div>
+  <div>
+    <p class="text-base leading-relaxed text-text/80">
+      Second column content...
+    </p>
+  </div>
+</div>
+```
+
+#### Section with Light Gray Background
+```astro
+<section class="section pt-0 bg-gray-100">
+  <!-- Use pt-0 to remove top padding when following another section -->
+  <!-- bg-gray-100 for light gray background -->
 </section>
 ```
 

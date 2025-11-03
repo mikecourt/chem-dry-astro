@@ -15,7 +15,10 @@
       "Bash(git push:*)",
       "Bash(git pull:*)",
       "Bash(vercel:*)",
-      "Bash(convert:*)"
+      "Bash(convert:*)",
+      "Bash(for file in src/layouts/components/homepage/Testimonial.astro src/layouts/components/services/Service.astro src/layouts/components/homepage/Blog.astro)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []
