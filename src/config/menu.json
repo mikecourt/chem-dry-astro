@@ -71,23 +71,16 @@
           "url": "/services/wood-floor-cleaning"
         },
         {
-          "name": "Other Services",
-          "url": "/services",
-          "hasChildren": true,
-          "children": [
-            {
-              "name": "Granite Countertop Renewal",
-              "url": "/services/granite-countertop-renewal"
-            },
-            {
-              "name": "Allergen Removal",
-              "url": "/services/allergen-removal"
-            },
-            {
-              "name": "Dryer Vent Cleaning",
-              "url": "/services/dryer-vent-cleaning"
-            }
-          ]
+          "name": "Granite Countertop Renewal",
+          "url": "/services/granite-countertop-renewal"
+        },
+        {
+          "name": "Allergen Removal",
+          "url": "/services/allergen-removal"
+        },
+        {
+          "name": "Dryer Vent Cleaning",
+          "url": "/services/dryer-vent-cleaning"
         }
       ]
     },

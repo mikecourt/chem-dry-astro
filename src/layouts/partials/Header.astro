@@ -88,7 +88,9 @@ const { pathname } = Astro.url;
           main.map((menu, i: number) => (
             <>
               {menu.hasChildren ? (
-                <NavDropDown menu={menu} pathname={pathname} client:load />
+                <div data-aos="fade-up-sm" data-aos-delay={100 + i * 50}>
+                  <NavDropDown menu={menu} pathname={pathname} client:load />
+                </div>
               ) : (
                 <li
                   class="nav-item"

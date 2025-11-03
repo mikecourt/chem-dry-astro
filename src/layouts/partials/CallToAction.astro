@@ -15,9 +15,9 @@ const { cta } = Astro.props;
 {
   cta.enable && (
     <section
-      class="section py-16 md:py-24 bg-primary relative overflow-hidden"
+      class="section pt-16 md:pt-24 pb-0 bg-primary relative overflow-hidden"
       data-aos="fade-in-sm">
-      <div class="container">
+      <div class="container relative pb-16 md:pb-24">
         <div class="flex flex-col lg:flex-row gap-8 items-start">
           {/* Left Column - Content (40%) */}
           <div class="w-full lg:w-[40%]">
@@ -68,7 +68,7 @@ const { cta } = Astro.props;
           {/* Right Column - Form (60%) */}
           <div class="w-full lg:w-[60%]" data-aos="fade-up-sm" data-aos-delay="150">
             <div class="bg-white rounded-lg p-6 md:p-8 shadow-xl">
-              <form action="/api/contact" method="POST" class="space-y-5">
+              <form action="/api/contact" method="POST" class="space-y-5" id="cta-form">
                 {/* Name Field */}
                 <div>
                   <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
@@ -158,7 +158,55 @@ const { cta } = Astro.props;
             </div>
           </div>
         </div>
+
+        {/* Team Image - Pops up from bottom */}
+        <div
+          id="team-image"
+          class="hidden lg:block absolute left-0 w-[60%] transition-transform duration-700 ease-out z-20"
+          style="bottom: 0; transform: translateY(100%);"
+        >
+          <picture>
+            <source srcset="/images/cta-team.webp" type="image/webp" />
+            <img
+              src="/images/cta-team.png"
+              alt="Brimley's White Glove Chem-Dry Team"
+              class="w-full h-auto object-contain block"
+              style="display: block; margin: 0; padding: 0;"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+          </picture>
+        </div>
       </div>
+
+      <script>
+        // Intersection Observer to trigger team image animation
+        const observerCallback = (entries: IntersectionObserverEntry[]) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const teamImage = document.getElementById('team-image');
+              if (teamImage) {
+                teamImage.style.transform = 'translateY(0)';
+              }
+            }
+          });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, {
+          threshold: 0.5,
+          rootMargin: '0px'
+        });
+
+        // Observe the submit button
+        const form = document.getElementById('cta-form');
+        if (form) {
+          const submitButton = form.querySelector('button[type="submit"]');
+          if (submitButton) {
+            observer.observe(submitButton);
+          }
+        }
+      </script>
     </section>
   )
 }

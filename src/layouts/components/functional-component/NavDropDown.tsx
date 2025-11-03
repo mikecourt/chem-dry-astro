@@ -11,11 +11,8 @@ const NavDropDown = ({ menu, pathname }: { menu: any; pathname: any }) => {
         onClick={handleChildMenuClick}
         className="nav-item nav-dropdown group"
       >
-        <span className="nav-link inline-flex items-center">
+        <span className="nav-link text-base-sm">
           {menu.name}
-          <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
-            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-          </svg>
         </span>
         <ul
           className={`nav-dropdown-list ${
@@ -27,7 +24,7 @@ const NavDropDown = ({ menu, pathname }: { menu: any; pathname: any }) => {
               <a
                 href={child.url}
                 aria-label={child.name}
-                className={`nav-dropdown-link block ${
+                className={`nav-dropdown-link text-base-sm block ${
                   (pathname === `${child.url}/` || pathname === child.url) &&
                   "active"
                 }`}
@@ -37,13 +34,13 @@ const NavDropDown = ({ menu, pathname }: { menu: any; pathname: any }) => {
 
               {/* Render nested children if they exist */}
               {child.hasChildren && child.children && (
-                <ul className="nav-dropdown-sublist ml-4 mt-2 space-y-1">
+                <ul className="nav-dropdown-sublist ml-4">
                   {child.children.map((subChild: any, subIndex: number) => (
                     <li key={subIndex}>
                       <a
                         href={subChild.url}
                         aria-label={subChild.name}
-                        className={`nav-dropdown-sublink block text-sm py-1.5 px-2 rounded transition hover:text-primary hover:bg-primary/5 ${
+                        className={`nav-dropdown-sublink text-base-sm block py-1.5 px-2 rounded transition hover:text-primary hover:bg-primary/5 ${
                           (pathname === `${subChild.url}/` || pathname === subChild.url) &&
                           "text-primary bg-primary/5"
                         }`}

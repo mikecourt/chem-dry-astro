@@ -44,21 +44,21 @@
 
 .nav-dropdown-list {
   @apply z-10 rounded-lg max-lg:m-4 bg-body p-4 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hidden lg:invisible lg:absolute lg:top-16 lg:left-1/2 lg:transform lg:-translate-x-1/2
-  lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100 lg:scale-95 lg:group-hover:scale-100 lg:group-hover:block transition-all duration-300 ease-in-out;
+  lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100 lg:scale-95 lg:group-hover:scale-100 lg:-translate-y-2 lg:group-hover:translate-y-0 lg:group-hover:block transition-all duration-200 ease-out;
 
   /* Two column layout using CSS columns */
-  @apply min-w-[600px] max-w-[680px];
+  @apply min-w-lg max-w-lg;
 }
 
 @media (min-width: 1024px) {
   .nav-dropdown-list {
     column-count: 2;
     column-gap: 2rem;
+    column-rule: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
 
 .nav-dropdown-item {
-  @apply mb-2;
   break-inside: avoid;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .nav-dropdown-link {
-  @apply text-lg block rounded p-2 font-medium transition hover:text-primary;
+  @apply text-lg block rounded p-2 font-medium transition hover:text-primary hover:bg-primary/10;
 
   &.active {
     @apply text-primary;

@@ -124,20 +124,28 @@ const { copyright } = config.params;
     {/* Trust Bar */}
     <div class="mt-12 pt-8 border-t border-text-light/20">
       <div class="flex items-center justify-center gap-8 md:gap-12 lg:gap-16 mb-8" data-aos="fade-up-sm">
-        <Image
-          src="/images/trust-badge-1.png"
-          width={200}
-          height={100}
-          alt="Chem-Dry Certification"
-          class="h-24 md:h-28 lg:h-32 w-auto opacity-80 hover:opacity-100 transition-opacity"
-        />
-        <Image
-          src="/images/trust-badge-2.png"
-          width={200}
-          height={100}
-          alt="Best of State Award"
-          class="h-24 md:h-28 lg:h-32 w-auto opacity-80 hover:opacity-100 transition-opacity"
-        />
+        <picture class="h-24 md:h-28 lg:h-32 w-auto opacity-80 hover:opacity-100 transition-opacity">
+          <source srcset="/images/trust-badge-1.webp" type="image/webp" />
+          <img
+            src="/images/trust-badge-1.png"
+            width="200"
+            height="100"
+            alt="Chem-Dry Certification"
+            class="h-24 md:h-28 lg:h-32 w-auto"
+            loading="lazy"
+          />
+        </picture>
+        <picture class="h-24 md:h-28 lg:h-32 w-auto opacity-80 hover:opacity-100 transition-opacity">
+          <source srcset="/images/trust-badge-2.webp" type="image/webp" />
+          <img
+            src="/images/trust-badge-2.png"
+            width="200"
+            height="100"
+            alt="Best of State Award"
+            class="h-24 md:h-28 lg:h-32 w-auto"
+            loading="lazy"
+          />
+        </picture>
 
         {/* Elfsight Review Widgets */}
         <!-- Elfsight Google Reviews | Untitled Google Reviews -->
@@ -149,12 +157,10 @@ const { copyright } = config.params;
     </div>
 
     {/* Copyright */}
-    <div class="pt-8 border-t border-text-light/20">
-      <p
-        class="text-center text-sm text-text-light/60 [&>a]:text-text-light"
-        set:html={markdownify(copyright)}
-        data-aos="fade-up-sm"
-      />
+    <div class="mt-12 pt-8 pb-8 border-t border-text-light/30">
+      <p class="text-center text-base text-white/60">
+        © 2025 Brimley's White Glove Chem-Dry. All Rights Reserved. | <a href="/privacy-policy" class="hover:text-white transition-colors">Privacy Policy</a> | <a href="/sitemap.xml" class="hover:text-white transition-colors">Sitemap</a> | Locally Owned & Operated Since 1995.
+      </p>
     </div>
   </div>
 </footer>
