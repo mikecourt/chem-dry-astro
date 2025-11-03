@@ -1,5 +1,4 @@
 ---
-import DynamicIcon from "@/helpers/DynamicIcon";
 import { markdownify } from "@/lib/utils/textConverter";
 import type { CollectionEntry } from "astro:content";
 import CustomHeading from "../CustomHeading.astro";
@@ -13,11 +12,42 @@ const { serviceIndex, allServices } = Astro.props;
 
 // Service descriptions for the services index page
 const serviceDescriptions: Record<string, string> = {
-  "carpet-cleaning": "Traditional cleaning leaves carpets wet for days. Ours dry in 1-2 hours using about 80% less water.",
-  "upholstery-cleaning": "Worried about harsh chemicals on furniture your family touches? The Natural® is powerful yet safe for kids and pets.",
-  "area-rug-cleaning": "Generic cleaning can ruin expensive rugs. Our specialists preserve colors and fibers with precision methods.",
-  "tile-grout-cleaning": "Scrubbing doesn't work on grimy grout. We restore original color and seal it to prevent future staining.",
-  "pet-urine-removal": "Odors keep returning because they're only masked. P.U.R.T.® eliminates urine crystals permanently at the molecular level."
+  "carpet-cleaning": "Tired of carpets that stay wet for days? Our Hot Carbonating Extraction process dries in just 1-2 hours and uses 80% less water than traditional steam cleaning. No dirt-attracting residue means your carpets stay cleaner longer.",
+  "upholstery-cleaning": "Your furniture takes a beating from daily use, spills, and allergens. Our natural cleaning solution is tough on stains yet completely safe for kids and pets. We'll bring your upholstery back to life without harsh chemicals.",
+  "tile-grout-cleaning": "Scrubbing grout on your hands and knees is exhausting and rarely works. We use professional-grade equipment to restore your tile's original color and seal it to prevent future staining and mildew.",
+  "area-rug-cleaning": "Expensive rugs deserve expert care. Our specialists understand different fibers, dyes, and construction methods to clean your investment safely. We preserve colors and prevent damage that generic cleaning can cause.",
+  "pet-urine-removal": "Most cleaners just mask the smell temporarily. Our P.U.R.T.® treatment actually breaks down urine crystals at the molecular level, eliminating odors permanently. Say goodbye to embarrassing pet odors for good.",
+  "commercial-cleaning": "Your business makes a first impression the moment clients walk in. We minimize disruption with fast-drying methods and flexible scheduling. Keep your workspace looking professional without losing productivity.",
+  "specialty-stain-removal": "Some stains seem impossible to remove. Our trained technicians know which treatments work for specific stains—from wine and coffee to ink and dye. We've seen it all and removed most of it.",
+  "wood-floor-cleaning": "Wood floors lose their luster from dirt buildup and foot traffic. Our gentle process removes grime without excess moisture that can damage wood. We'll restore the natural beauty of your hardwood.",
+  "leather-cleaning": "Leather furniture is a significant investment that needs special care. Our conditioning treatment cleans deeply while maintaining the leather's suppleness. Don't let your leather dry out, crack, or fade prematurely.",
+  "granite-countertop-renewal": "Granite countertops can lose their shine and develop stains over time. We remove buildup, restore the original polish, and seal the surface to protect your investment and keep it looking stunning.",
+  "stone-tile-cleaning-polishing": "Natural stone needs different care than ceramic tile. We understand the unique needs of marble, travertine, and other stone surfaces. Our process cleans and polishes without causing etching or damage.",
+  "pet-urine-stain-removal": "Pet stains don't just smell—they can permanently damage flooring if not treated properly. We locate hidden urine spots with UV light and treat them thoroughly. Save your floors from permanent damage.",
+  "couch-sofa-cleaning": "Your couch is where life happens—movie nights, afternoon naps, family time. It deserves regular professional cleaning to remove body oils, allergens, and odors. Extend its life and keep it fresh.",
+  "red-wine-stain-removal": "Red wine stains strike fear in homeowners' hearts. Acting fast is crucial, but even old wine stains can often be removed with professional treatment. Don't give up on that carpet or upholstery yet.",
+  "allergen-removal": "Dust mites, pollen, and pet dander hide deep in carpets and upholstery. Our Hot Carbonating Extraction removes allergens that vacuuming can't reach. Breathe easier and reduce allergy symptoms at home.",
+  "dryer-vent-cleaning": "Clogged dryer vents are a leading cause of house fires. We thoroughly clean your vent system to improve dryer efficiency, reduce energy costs, and most importantly—keep your family safe."
+};
+
+// Service images mapping
+const serviceImages: Record<string, string> = {
+  "carpet-cleaning": "/images/service/2.png",
+  "upholstery-cleaning": "/images/service/3.png",
+  "tile-grout-cleaning": "/images/service/4.png",
+  "area-rug-cleaning": "/images/service/5.png",
+  "pet-urine-removal": "/images/service/6.png",
+  "commercial-cleaning": "/images/service/2.png",
+  "specialty-stain-removal": "/images/service/3.png",
+  "wood-floor-cleaning": "/images/service/4.png",
+  "leather-cleaning": "/images/service/5.png",
+  "granite-countertop-renewal": "/images/service/6.png",
+  "stone-tile-cleaning-polishing": "/images/service/2.png",
+  "pet-urine-stain-removal": "/images/service/6.png",
+  "couch-sofa-cleaning": "/images/service/3.png",
+  "red-wine-stain-removal": "/images/service/4.png",
+  "allergen-removal": "/images/service/5.png",
+  "dryer-vent-cleaning": "/images/service/2.png"
 };
 ---
 
@@ -64,37 +94,43 @@ const serviceDescriptions: Record<string, string> = {
 
       <div class="col-12">
         <div
-          class="grid mt-10 lg:mt-16 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 2xl:gap-x-12">
+          class="grid mt-10 lg:mt-16 gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {
             allServices.map((service, i) => (
               <div
-                class="group h-full 2xl:border-l 2xl:border-border first:2xl:border-l-0 2xl:pl-8 first:2xl:pl-0"
-                data-aos="fade-right-sm"
+                class="group h-full"
+                data-aos="fade-up-sm"
                 data-aos-delay={100 + i * 50}>
                 <a
                   href={`/services/${service.id}`}
-                  class="flex h-full flex-col items-center text-center">
-                  <div class="group-child h-full flex flex-col items-center">
-                    {/* Icon and Title */}
-                    <div class="flex flex-col items-center gap-3 mb-4">
-                      <DynamicIcon
-                        icon={service.data.icon!}
-                        className="text-6xl p-3 rounded bg-secondary/70 text-white"
-                      />
-                      <h3
-                        set:html={markdownify(service.data.title!)}
-                        class="text-xl font-semibold text-dark"
-                      />
-                    </div>
+                  class="block h-full bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
+
+                  {/* Photo with hover magnification */}
+                  <div class="relative h-64 overflow-hidden">
+                    <img
+                      src={serviceImages[service.id] || "/images/service/2.png"}
+                      alt={service.data.title}
+                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+
+                  {/* Card Content */}
+                  <div class="p-6">
+                    {/* Service Name as Heading/Link */}
+                    <h3
+                      set:html={markdownify(service.data.title!)}
+                      class="text-2xl font-bold text-dark mb-3 group-hover:text-accent transition-colors"
+                    />
 
                     {/* Description */}
-                    <p class="text-sm text-text/80 leading-relaxed flex-grow">
+                    <p class="text-base text-text/80 leading-relaxed mb-4">
                       {serviceDescriptions[service.id] || ""}
                     </p>
 
                     {/* Learn More Link */}
-                    <div class="relative overflow-hidden w-fit mt-4 mx-auto">
-                      <span class="font-medium text-nowrap inline-flex items-center group text-base-sm text-accent group-hover:text-accent/80 transition-colors">
+                    <div class="relative overflow-hidden w-fit">
+                      <span class="font-medium text-nowrap inline-flex items-center group text-base text-accent group-hover:text-accent/80 transition-colors">
                         <span class="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
                           Learn More
                           <svg
