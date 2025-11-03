@@ -5,7 +5,7 @@ import Customer from "@/components/homepage/Customer.astro";
 import Responsibility from "@/components/homepage/Responsibility.astro";
 import Testimonial from "@/components/homepage/Testimonial.astro";
 import SchemaMarkup from "@/components/SchemaMarkup.astro";
-import Service from "@/components/services/Service.astro";
+import Service from "@/layouts/components/services/Service.astro";
 import Base from "@/layouts/Base.astro";
 import Hero from "@/layouts/components/homepage/Hero.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
@@ -25,6 +25,8 @@ const serviceIndex = (await getEntry(
   "-index"
 )) as CollectionEntry<"services">;
 const allServices = await getSinglePage("services");
+// Show only top 5 services on homepage
+const topServices = allServices.slice(0, 5);
 
 const allBlogs = await getSinglePage("blog");
 
@@ -40,7 +42,7 @@ const callToAction = (await getEntry(
   {testimonial.enable && <Testimonial testimonial={testimonial} />}
   {
     serviceIndex.data.homepage_section_enable && (
-      <Service serviceIndex={serviceIndex.data} allServices={allServices} />
+      <Service serviceIndex={serviceIndex.data} allServices={topServices} />
     )
   }
   {about.enable && <About about={about} />}
