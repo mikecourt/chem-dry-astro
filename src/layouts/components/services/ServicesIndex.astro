@@ -51,6 +51,7 @@ const serviceImages: Record<string, string> = {
 };
 ---
 
+<!-- Hero Section with Headline and Body Copy -->
 <section class="section mt-24 sm:mt-20">
   <div class="container" style="padding-left: 4px; padding-right: 4px;">
     <div
@@ -91,70 +92,73 @@ const serviceImages: Record<string, string> = {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="col-12">
-        <div
-          class="grid mt-10 lg:mt-16 gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {
-            allServices.map((service, i) => (
-              <div
-                class="group h-full"
-                data-aos="fade-up-sm"
-                data-aos-delay={100 + i * 50}>
-                <a
-                  href={`/services/${service.id}`}
-                  class="block h-full bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
+<!-- Service Cards Section with Light Gray Background -->
+<section class="section pt-0 bg-gray-100">
+  <div class="container">
+    <div
+      class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      {
+        allServices.map((service, i) => (
+          <div
+            class="group h-full"
+            data-aos="fade-up-sm"
+            data-aos-delay={100 + i * 50}>
+            <a
+              href={`/services/${service.id}`}
+              class="block h-full bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
 
-                  {/* Photo with hover magnification */}
-                  <div class="relative h-64 overflow-hidden">
-                    <img
-                      src={serviceImages[service.id] || "/images/service/2.png"}
-                      alt={service.data.title}
-                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-
-                  {/* Card Content */}
-                  <div class="p-6">
-                    {/* Service Name as Heading/Link */}
-                    <h3
-                      set:html={markdownify(service.data.title!)}
-                      class="text-2xl font-bold text-dark mb-3 group-hover:text-accent transition-colors"
-                    />
-
-                    {/* Description */}
-                    <p class="text-base text-text/80 leading-relaxed mb-4">
-                      {serviceDescriptions[service.id] || ""}
-                    </p>
-
-                    {/* Learn More Link */}
-                    <div class="relative overflow-hidden w-fit">
-                      <span class="font-medium text-nowrap inline-flex items-center group text-base text-accent group-hover:text-accent/80 transition-colors">
-                        <span class="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
-                          Learn More
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="w-4 h-4 ml-1">
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <polyline points="12 5 19 12 12 19" />
-                          </svg>
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                </a>
+              {/* Photo with hover magnification */}
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src={serviceImages[service.id] || "/images/service/2.png"}
+                  alt={service.data.title}
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-            ))
-          }
-        </div>
-      </div>
+
+              {/* Card Content */}
+              <div class="p-6">
+                {/* Service Name as Heading/Link */}
+                <h3
+                  set:html={markdownify(service.data.title!)}
+                  class="text-2xl font-bold text-dark mb-3 group-hover:text-accent transition-colors"
+                />
+
+                {/* Description */}
+                <p class="text-base text-text/80 leading-relaxed mb-4">
+                  {serviceDescriptions[service.id] || ""}
+                </p>
+
+                {/* Learn More Link */}
+                <div class="relative overflow-hidden w-fit">
+                  <span class="font-medium text-nowrap inline-flex items-center group text-base text-accent group-hover:text-accent/80 transition-colors">
+                    <span class="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
+                      Learn More
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="w-4 h-4 ml-1">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
