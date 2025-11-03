@@ -53,43 +53,51 @@ const serviceImages: Record<string, string> = {
 
 <!-- Hero Section with Headline and Body Copy -->
 <section class="section mt-24 sm:mt-20">
-  <div class="container" style="padding-left: 4px; padding-right: 4px;">
-    <div
-      class="row max-md:gy-5 md:g-1 lg:g-4 justify-center md:justify-between items-center">
-      <div class="col-12">
-        <div class="mx-auto max-w-[66rem] px-8 sm:px-10 lg:px-16">
-          <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] items-start">
-            <div>
-              {
-                serviceIndex?.subtitle && (
-                  <p
-                    set:html={markdownify(serviceIndex?.subtitle)}
-                    class={`text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center md:text-left`}
-                    data-aos="fade-up-sm"
-                  />
-                )
-              }
-              <CustomHeading
-                as="h1"
-                text={serviceIndex?.title}
-                class={`text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left max-xl:[&>br]:hidden`}
-                dataAos="fade-up-sm"
-              />
-            </div>
-            <div>
-              {
-                serviceIndex.descriptions &&
-                  serviceIndex.descriptions.map((desc: string, i) => (
-                    <p
-                      set:html={markdownify(desc)}
-                      class={`mb-6 last:mb-0 text-center md:text-left`}
-                      data-aos="fade-up-sm"
-                      data-aos-delay={50 + i * 50}
-                    />
-                  ))
-              }
-            </div>
-          </div>
+  <div class="container">
+    <div class="mx-auto max-w-[75rem] text-center">
+      {/* Eyebrow */}
+      {
+        serviceIndex?.subtitle && (
+          <p
+            set:html={markdownify(serviceIndex?.subtitle)}
+            class="text-sm font-semibold tracking-wider uppercase text-accent mb-3"
+            data-aos="fade-up-sm"
+          />
+        )
+      }
+
+      {/* H1 */}
+      <CustomHeading
+        as="h1"
+        text="Professional Carpet & Upholstery Cleaning Services – Phoenix Metro"
+        class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-4"
+        dataAos="fade-up-sm"
+      />
+
+      {/* H2 */}
+      <h2
+        class="text-2xl md:text-3xl font-semibold text-dark/90 mb-8"
+        data-aos="fade-up-sm"
+        data-aos-delay="50"
+      >
+        Dries in 2 Hours. Uses About 80% Less Water. Safe for Kids & Pets.
+      </h2>
+
+      {/* Body Copy in Two Columns */}
+      <div
+        class="grid md:grid-cols-2 gap-6 lg:gap-8 text-left max-w-[65rem] mx-auto"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        <div>
+          <p class="text-base leading-relaxed">
+            At Brimley's White Glove Chem-Dry, we've perfected the art of getting your home truly clean—without the wait, harsh chemicals, or sticky residue. Our Hot Carbonating Extraction process uses about 80% less water than traditional steam cleaning, so your carpets dry in just 1-2 hours.
+          </p>
+        </div>
+        <div>
+          <p class="text-base leading-relaxed">
+            The Natural® cleaning solution we use is powerful enough to remove deep-down dirt and allergens, yet gentle enough to be completely safe for kids and pets. Serving Phoenix Valley families since 1995, we offer a full range of cleaning services backed by our 100% satisfaction guarantee.
+          </p>
         </div>
       </div>
     </div>
