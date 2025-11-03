@@ -54,7 +54,7 @@ const serviceImages: Record<string, string> = {
 <!-- Hero Section with Headline and Body Copy -->
 <section class="section mt-24 sm:mt-20">
   <div class="container">
-    <div class="mx-auto max-w-[75rem] text-center">
+    <div class="mx-auto max-w-[65rem] text-center">
       {/* Eyebrow */}
       {
         serviceIndex?.subtitle && (
@@ -66,7 +66,7 @@ const serviceImages: Record<string, string> = {
         )
       }
 
-      {/* H1 - matches site-wide styling */}
+      {/* H1 - contained to body column width */}
       <CustomHeading
         as="h1"
         text="Professional Carpet & Upholstery Cleaning Services – Phoenix Metro"
@@ -74,7 +74,7 @@ const serviceImages: Record<string, string> = {
         dataAos="fade-up-sm"
       />
 
-      {/* H2 - matches site-wide styling */}
+      {/* H2 - contained to body column width */}
       <h2
         class="text-lg md:text-xl text-text/80 mb-8 md:mb-12"
         data-aos="fade-up-sm"
@@ -83,9 +83,9 @@ const serviceImages: Record<string, string> = {
         Dries in 2 Hours. Uses About 80% Less Water. Safe for Kids & Pets.
       </h2>
 
-      {/* Body Copy in Two Columns - matches site-wide spacing */}
+      {/* Body Copy in Two Columns */}
       <div
-        class="grid md:grid-cols-2 gap-6 lg:gap-8 text-left max-w-[65rem] mx-auto"
+        class="grid md:grid-cols-2 gap-6 lg:gap-8 text-left"
         data-aos="fade-up-sm"
         data-aos-delay="100"
       >
