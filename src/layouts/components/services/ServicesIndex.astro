@@ -1,0 +1,124 @@
+---
+import DynamicIcon from "@/helpers/DynamicIcon";
+import { markdownify } from "@/lib/utils/textConverter";
+import type { CollectionEntry } from "astro:content";
+import CustomHeading from "../CustomHeading.astro";
+
+type Props = {
+  serviceIndex: CollectionEntry<"services">["data"];
+  allServices: CollectionEntry<"services">[];
+};
+
+const { serviceIndex, allServices } = Astro.props;
+
+// Service descriptions for the services index page
+const serviceDescriptions: Record<string, string> = {
+  "carpet-cleaning": "Traditional cleaning leaves carpets wet for days. Ours dry in 1-2 hours using about 80% less water.",
+  "upholstery-cleaning": "Worried about harsh chemicals on furniture your family touches? The Natural® is powerful yet safe for kids and pets.",
+  "area-rug-cleaning": "Generic cleaning can ruin expensive rugs. Our specialists preserve colors and fibers with precision methods.",
+  "tile-grout-cleaning": "Scrubbing doesn't work on grimy grout. We restore original color and seal it to prevent future staining.",
+  "pet-urine-removal": "Odors keep returning because they're only masked. P.U.R.T.® eliminates urine crystals permanently at the molecular level."
+};
+---
+
+<section class="section mt-24 sm:mt-20">
+  <div class="container" style="padding-left: 4px; padding-right: 4px;">
+    <div
+      class="row max-md:gy-5 md:g-1 lg:g-4 justify-center md:justify-between items-center">
+      <div class="col-12">
+        <div class="mx-auto max-w-[66rem] px-8 sm:px-10 lg:px-16">
+          <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] items-start">
+            <div>
+              {
+                serviceIndex?.subtitle && (
+                  <p
+                    set:html={markdownify(serviceIndex?.subtitle)}
+                    class={`text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center md:text-left`}
+                    data-aos="fade-up-sm"
+                  />
+                )
+              }
+              <CustomHeading
+                as="h1"
+                text={serviceIndex?.title}
+                class={`text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center md:text-left max-xl:[&>br]:hidden`}
+                dataAos="fade-up-sm"
+              />
+            </div>
+            <div>
+              {
+                serviceIndex.descriptions &&
+                  serviceIndex.descriptions.map((desc: string, i) => (
+                    <p
+                      set:html={markdownify(desc)}
+                      class={`mb-6 last:mb-0 text-center md:text-left`}
+                      data-aos="fade-up-sm"
+                      data-aos-delay={50 + i * 50}
+                    />
+                  ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div
+          class="grid mt-10 lg:mt-16 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 2xl:gap-x-12">
+          {
+            allServices.map((service, i) => (
+              <div
+                class="group h-full 2xl:border-l 2xl:border-border first:2xl:border-l-0 2xl:pl-8 first:2xl:pl-0"
+                data-aos="fade-right-sm"
+                data-aos-delay={100 + i * 50}>
+                <a
+                  href={`/services/${service.id}`}
+                  class="flex h-full flex-col items-center text-center">
+                  <div class="group-child h-full flex flex-col items-center">
+                    {/* Icon and Title */}
+                    <div class="flex flex-col items-center gap-3 mb-4">
+                      <DynamicIcon
+                        icon={service.data.icon!}
+                        className="text-6xl p-3 rounded bg-secondary/70 text-white"
+                      />
+                      <h3
+                        set:html={markdownify(service.data.title!)}
+                        class="text-xl font-semibold text-dark"
+                      />
+                    </div>
+
+                    {/* Description */}
+                    <p class="text-sm text-text/80 leading-relaxed flex-grow">
+                      {serviceDescriptions[service.id] || ""}
+                    </p>
+
+                    {/* Learn More Link */}
+                    <div class="relative overflow-hidden w-fit mt-4 mx-auto">
+                      <span class="font-medium text-nowrap inline-flex items-center group text-base-sm text-accent group-hover:text-accent/80 transition-colors">
+                        <span class="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
+                          Learn More
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="w-4 h-4 ml-1">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
 ---
 import Process from "@/layouts/components/services/Process.astro";
-import Service from "@/layouts/components/services/Service.astro";
+import ServicesIndex from "@/layouts/components/services/ServicesIndex.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import CallToAction from "@/partials/CallToAction.astro";
@@ -22,7 +22,7 @@ const callToAction = (await getEntry(
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
-  <Service serviceIndex={services.data} allServices={allServices} hero />
+  <ServicesIndex serviceIndex={services.data} allServices={allServices} />
   <Process process={process} />
 
   <CallToAction cta={callToAction.data} />
