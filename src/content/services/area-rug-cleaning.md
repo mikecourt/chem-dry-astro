@@ -5,7 +5,7 @@ description: "Expert area rug cleaning for Persian, Oriental, wool, and syntheti
 icon: "FaRug"
 banner: "/images/rug-service.jpg"
 date: 2025-01-21T05:00:00Z
-categories: ["Area Rug Cleaning"]
+categories: ["Carpets & Rugs", "Health & Allergies", "Stains & Spills", "Pet Issues", "Business & Commercial"]
 weight: 4
 draft: false
 ---

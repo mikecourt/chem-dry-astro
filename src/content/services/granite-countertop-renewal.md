@@ -5,7 +5,7 @@ description: "Professional granite countertop cleaning, polishing, and sealing i
 icon: "FaKitchenSet"
 banner: "/images/granite-service.jpg"
 date: 2025-01-21T05:00:00Z
-categories: ["Hard Floors & Surfaces", "Restoration & Renewal"]
+categories: ["Hard Floors & Surfaces", "Business & Commercial"]
 weight: 10
 draft: false
 ---

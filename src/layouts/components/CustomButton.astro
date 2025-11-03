@@ -18,7 +18,9 @@ const baseClasses = `relative overflow-hidden group ${type ? type : "btn"} ${cla
     ? "btn-secondary"
     : variant === "light"
       ? "btn-light"
-      : "btn-primary"
+      : variant === "outline-white"
+        ? "btn-outline-white"
+        : "btn-primary"
 }`;
 
 const hoverEffectClasses = `absolute w-full h-full -left-full -bottom-full rounded-full group-hover:-left-1 group-hover:-bottom-1 group-hover:w-[110%] group-hover:h-[110%] transition-all duration-[550ms] ${
@@ -26,7 +28,9 @@ const hoverEffectClasses = `absolute w-full h-full -left-full -bottom-full round
     ? "bg-light"
     : variant === "light"
       ? "bg-secondary"
-      : "bg-light"
+      : variant === "outline-white"
+        ? "bg-white"
+        : "bg-light"
 }`;
 ---
 

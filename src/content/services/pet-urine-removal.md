@@ -5,7 +5,7 @@ description: "Specialized pet urine and odor removal for carpets and upholstery.
 icon: "FaDog"
 banner: "/images/pet-service.jpg"
 date: 2025-01-21T05:00:00Z
-categories: ["Pet Odor Removal"]
+categories: ["Pet Issues", "Stains & Spills", "Carpets & Rugs", "Furniture & Upholstery"]
 weight: 5
 draft: false
 ---

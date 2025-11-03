@@ -5,7 +5,7 @@ description: "Expert upholstery cleaning for furniture, sofas, and chairs in Mes
 icon: "FaCouch"
 banner: "/images/upholstery-service.jpg"
 date: 2025-01-21T05:00:00Z
-categories: ["Upholstery Cleaning"]
+categories: ["Furniture & Upholstery", "Health & Allergies", "Stains & Spills", "Business & Commercial"]
 weight: 2
 draft: false
 ---

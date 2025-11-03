@@ -52,7 +52,7 @@ const serviceImages: Record<string, string> = {
 ---
 
 <!-- Hero Section with Headline and Body Copy -->
-<section class="section mt-24 sm:mt-20">
+<section class="section mt-24 sm:mt-20 !pb-8 md:!pb-12">
   <div class="container">
     <div class="mx-auto max-w-[65rem] text-center">
       {/* Eyebrow */}
@@ -67,12 +67,12 @@ const serviceImages: Record<string, string> = {
       }
 
       {/* H1 - contained to body column width */}
-      <CustomHeading
-        as="h1"
-        text="Professional Carpet & Upholstery Cleaning Services – Phoenix Metro"
+      <h1
         class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
-        dataAos="fade-up-sm"
-      />
+        data-aos="fade-up-sm"
+      >
+        Professional Carpet & Upholstery<br class="hidden lg:inline" /> Cleaning Services – Phoenix Metro
+      </h1>
 
       {/* H2 - contained to body column width */}
       <h2
@@ -100,77 +100,77 @@ const serviceImages: Record<string, string> = {
           </p>
         </div>
       </div>
+    </div>
 
-      {/* Trust Badges - Light Green Pills */}
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-10 md:mt-12"
-        data-aos="fade-up-sm"
-        data-aos-delay="150"
-      >
+    {/* Trust Badges - Light Green Pills */}
+    <div
+      class="flex flex-wrap gap-3 mt-10 md:mt-12 justify-center max-w-[120rem] mx-auto"
+      data-aos="fade-up-sm"
+      data-aos-delay="150"
+    >
         {/* Certified & Insured */}
-        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
+        <div class="flex items-center justify-start gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight">Certified & Insured Technicians</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">Certified & Insured Technicians</p>
         </div>
 
         {/* Same-Day Service */}
-        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
+        <div class="flex items-center justify-start gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight">Same-Day Service Available</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">Same-Day Service Available</p>
         </div>
 
         {/* Free Estimates */}
-        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
+        <div class="flex items-center justify-start gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight">Free Estimates</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">Free Estimates</p>
         </div>
 
         {/* Satisfaction Guarantee */}
-        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
+        <div class="flex items-center justify-start gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight">100% Satisfaction Guarantee</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">100% Satisfaction Guarantee</p>
         </div>
 
         {/* Hot Carbonating Extraction */}
-        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
+        <div class="flex items-center justify-start gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight">Hot Carbonating Extraction deep-clean</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">Hot Carbonating Extraction deep-clean</p>
         </div>
 
         {/* Less Water */}
-        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
+        <div class="flex items-center justify-start gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight">About 80% less water than steam cleaning</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">About 80% less water than steam cleaning</p>
         </div>
 
         {/* No Residue */}
-        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
+        <div class="flex items-center justify-start gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight">No dirt-attracting residue</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">No dirt-attracting residue</p>
         </div>
 
         {/* Non-toxic */}
-        <div class="flex items-center gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
+        <div class="flex items-center justify-start gap-2.5 px-4 py-2.5 bg-primary/20 rounded-full">
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight">Non-toxic cleaning solutions</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">Non-toxic cleaning solutions</p>
         </div>
-      </div>
     </div>
   </div>
 </section>
@@ -178,12 +178,68 @@ const serviceImages: Record<string, string> = {
 <!-- Service Cards Section with Light Gray Background -->
 <section class="section pt-0 bg-gray-100">
   <div class="container">
+    {/* Filter Menu */}
+    <div class="pt-4 mb-6">
+      <div class="flex flex-wrap gap-2" id="filter-menu">
+        <button
+          data-category="all"
+          class="filter-btn active px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-primary text-white"
+        >
+          All Services
+        </button>
+        <button
+          data-category="Carpets & Rugs"
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white text-dark hover:bg-primary/10"
+        >
+          Carpets & Rugs
+        </button>
+        <button
+          data-category="Furniture & Upholstery"
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white text-dark hover:bg-primary/10"
+        >
+          Furniture & Upholstery
+        </button>
+        <button
+          data-category="Hard Floors & Surfaces"
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white text-dark hover:bg-primary/10"
+        >
+          Hard Floors & Surfaces
+        </button>
+        <button
+          data-category="Stains & Spills"
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white text-dark hover:bg-primary/10"
+        >
+          Stains & Spills
+        </button>
+        <button
+          data-category="Pet Issues"
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white text-dark hover:bg-primary/10"
+        >
+          Pet Issues
+        </button>
+        <button
+          data-category="Health & Allergies"
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white text-dark hover:bg-primary/10"
+        >
+          Health & Allergies
+        </button>
+        <button
+          data-category="Business & Commercial"
+          class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white text-dark hover:bg-primary/10"
+        >
+          Business & Commercial
+        </button>
+      </div>
+    </div>
+
     <div
-      class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      id="services-grid">
       {
         allServices.map((service, i) => (
           <div
-            class="group h-full"
+            class="group h-full service-card"
+            data-categories={JSON.stringify(service.data.categories || [])}
             data-aos="fade-up-sm"
             data-aos-delay={100 + i * 50}>
             <a
@@ -241,3 +297,74 @@ const serviceImages: Record<string, string> = {
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const serviceCards = document.querySelectorAll('.service-card');
+    let activeFilters = new Set(['all']);
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.dataset.category;
+
+        if (category === 'all') {
+          // Reset all filters
+          activeFilters.clear();
+          activeFilters.add('all');
+
+          // Update button states
+          filterButtons.forEach(btn => {
+            if (btn.dataset.category === 'all') {
+              btn.classList.add('active', 'bg-primary', 'text-white');
+              btn.classList.remove('bg-white', 'text-dark');
+            } else {
+              btn.classList.remove('active', 'bg-primary', 'text-white');
+              btn.classList.add('bg-white', 'text-dark');
+            }
+          });
+        } else {
+          // Remove 'all' if selecting specific category
+          activeFilters.delete('all');
+          document.querySelector('[data-category="all"]')?.classList.remove('active', 'bg-primary', 'text-white');
+          document.querySelector('[data-category="all"]')?.classList.add('bg-white', 'text-dark');
+
+          // Toggle the clicked category
+          if (activeFilters.has(category)) {
+            activeFilters.delete(category);
+            button.classList.remove('active', 'bg-primary', 'text-white');
+            button.classList.add('bg-white', 'text-dark');
+          } else {
+            activeFilters.add(category);
+            button.classList.add('active', 'bg-primary', 'text-white');
+            button.classList.remove('bg-white', 'text-dark');
+          }
+
+          // If no filters selected, show all
+          if (activeFilters.size === 0) {
+            activeFilters.add('all');
+            document.querySelector('[data-category="all"]')?.classList.add('active', 'bg-primary', 'text-white');
+            document.querySelector('[data-category="all"]')?.classList.remove('bg-white', 'text-dark');
+          }
+        }
+
+        // Filter service cards
+        filterServices();
+      });
+    });
+
+    function filterServices() {
+      serviceCards.forEach(card => {
+        const cardCategories = JSON.parse(card.dataset.categories || '[]');
+
+        if (activeFilters.has('all')) {
+          card.style.display = '';
+        } else {
+          // Show card if it has ANY of the active filters
+          const hasMatch = cardCategories.some(cat => activeFilters.has(cat));
+          card.style.display = hasMatch ? '' : 'none';
+        }
+      });
+    }
+  });
+</script>

@@ -5,7 +5,7 @@ description: "Expert stain removal for tough stains in Phoenix. Remove coffee, w
 icon: "FaSprayCan"
 weight: 7
 date: 2025-01-21T05:00:00Z
-categories: ["Stains & Spills", "Carpets & Rugs", "Furniture & Upholstery"]
+categories: ["Stains & Spills", "Carpets & Rugs", "Furniture & Upholstery", "Business & Commercial"]
 draft: false
 ---
 

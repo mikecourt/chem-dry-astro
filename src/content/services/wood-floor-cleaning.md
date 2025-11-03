@@ -5,7 +5,7 @@ description: "Expert hardwood floor cleaning in Phoenix using low-moisture metho
 icon: "FaHouseUser"
 weight: 8
 date: 2025-01-21T05:00:00Z
-categories: ["Hard Floors & Surfaces", "Restoration & Renewal", "Health & Allergies"]
+categories: ["Hard Floors & Surfaces", "Health & Allergies", "Business & Commercial"]
 draft: false
 ---
 

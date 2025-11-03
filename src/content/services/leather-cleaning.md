@@ -5,7 +5,7 @@ description: "Expert leather furniture cleaning and conditioning in Phoenix. Res
 icon: "FaCouch"
 banner: "/images/leather-service.jpg"
 date: 2025-01-21T05:00:00Z
-categories: ["Furniture & Upholstery", "Restoration & Renewal"]
+categories: ["Furniture & Upholstery", "Business & Commercial"]
 weight: 9
 draft: false
 ---

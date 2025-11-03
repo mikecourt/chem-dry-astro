@@ -5,7 +5,7 @@ description: "Expert carpet cleaning in Phoenix using our unique Hot Carbonating
 icon: "FaHouseUser"
 banner: "/images/carpet-service.jpg"
 date: 2025-01-21T05:00:00Z
-categories: ["Carpet Cleaning"]
+categories: ["Carpets & Rugs", "Health & Allergies", "Business & Commercial"]
 weight: 1
 draft: false
 ---

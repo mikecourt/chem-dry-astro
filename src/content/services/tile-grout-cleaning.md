@@ -5,7 +5,7 @@ description: "Professional tile, stone and grout cleaning in Phoenix. Restore th
 icon: "FaTableCellsLarge"
 banner: "/images/tile-service.jpg"
 date: 2025-01-21T05:00:00Z
-categories: ["Tile Cleaning"]
+categories: ["Hard Floors & Surfaces", "Business & Commercial"]
 weight: 3
 draft: false
 ---

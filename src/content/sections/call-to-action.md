@@ -1,15 +1,17 @@
 ---
 enable: true
-title: "Discuss our services or <br> make an **appointment**"
-subtitle: "CONTACT US"
-content: "We know what a sore tooth is, so do not hesitate to reach <br> us via the phone or to make an appointment online! We <br> know what a sore."
+title: "Cleaner Carpets Guaranteed"
+subtitle: "Free estimate"
+content: "Experience the Chem-Dry difference: faster drying, healthier results, and complete peace of mind with our 100% satisfaction guarantee."
 image: "/images/cta.png"
 buttons:
   - enable: true
-    label: "Call: +1-394-495-5993"
-    link: "tel:+1-394-495-5993"
+    label: "(480) 947-2000"
+    link: "tel:+14809472000"
+    icon: "FaPhone"
 
   - enable: true
-    label: "Make An Appointment"
-    link: "appointment"
+    label: "Text Us Now"
+    link: "sms:+14809472000?body=Hi%20Brimley's!%20I'd%20like%20a%20free%20estimate."
+    icon: "FaCommentSms"
 ---

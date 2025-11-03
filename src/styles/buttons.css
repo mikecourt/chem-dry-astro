@@ -18,3 +18,16 @@
   color: white;
   border-color: var(--color-secondary) !important;
 }
+
+.btn-outline-white {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+  background-color: white;
+  color: var(--color-primary);
+  border-color: white !important;
+}
