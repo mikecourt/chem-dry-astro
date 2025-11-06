@@ -43,10 +43,10 @@ const { pathname } = Astro.url;
 <header class="header z-40 absolute w-full" style="top: var(--notification-height, 52px);">
   <nav class="navbar mx-auto max-w-[1356px]! px-[30px]">
     <!-- logo -->
-    <div class="order-0" data-aos="zoom-in" data-aos-delay="20">
+    <div class="order-0 flex-shrink-0" data-aos="zoom-in" data-aos-delay="20">
       <Logo />
     </div>
-    <div class="flex items-center gap-4.5 flex-1 min-w-0 justify-end lg:justify-center">
+    <div class="flex items-center gap-4.5 flex-1 justify-end lg:justify-center">
       {
         navigation_button.enable && (
           <CustomButton

@@ -19,7 +19,7 @@
 }
 
 .navbar-nav {
-  @apply rounded text-left order-3 lg:order-1 lg:flex lg:w-auto lg:gap-5 lg:pl-5 max-lg:py-4 max-lg:px-5 max-lg:opacity-0 max-lg:absolute max-lg:shadow max-lg:z-50 max-lg:top-20 max-lg:bg-body max-lg:w-[calc(100vw_-_10%)] max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2;
+  @apply rounded text-left order-3 lg:order-1 lg:flex lg:w-auto lg:gap-5 lg:pl-2 max-lg:py-4 max-lg:px-5 max-lg:opacity-0 max-lg:absolute max-lg:shadow max-lg:z-50 max-lg:top-20 max-lg:bg-body max-lg:w-[calc(100vw_-_10%)] max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2;
 }
 
 .nav-link {
@@ -31,10 +31,10 @@
 }
 
 .nav-link--secondary {
-  @apply inline-flex items-center gap-2 text-secondary bg-white/80 rounded-md px-3 py-3 transition-all whitespace-nowrap;
+  @apply inline-flex items-center gap-2 text-secondary hover:text-primary px-2 py-3 transition-all whitespace-nowrap;
   &:hover,
   &.active {
-    @apply text-text-light bg-secondary;
+    @apply text-primary;
   }
 }
 

@@ -29,84 +29,82 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
   <SchemaMarkup type="service" serviceName="Carpet Cleaning" />
 
   <!-- Hero Section -->
-  <section class="py-20 md:py-32 mt-24 sm:mt-20">
-    <div class="container">
-      <div class="mx-auto max-w-[75rem] text-center">
-        <!-- Eyebrow -->
-        <p
-          class="text-sm font-semibold tracking-wider uppercase text-primary mb-3"
-          data-aos="fade-up-sm"
-        >
-          Carpet Cleaning
-        </p>
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
 
-        <!-- H1 -->
-        <CustomHeading
-          as="h1"
-          text="A Deeper, Drier, Healthier Carpet Cleaning for **Phoenix** & Mesa"
-          svgColor="text-primary"
-          class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
-          dataAos="fade-up-sm"
-          dataAosDelay="50"
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 30% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.4) 70%, transparent 100%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Carpet Cleaning
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="A **Deeper**, Drier, Healthier Carpet Cleaning for Phoenix & Mesa"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Our Hot Carbonating Extraction process dries in 1-2 hours and is 100% safe for kids and pets.
+      </h2>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="150">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
         />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
 
-        <!-- H2 Subheading -->
-        <h2
-          class="text-lg md:text-xl text-text/80 mb-8 md:mb-12"
-          data-aos="fade-up-sm"
-          data-aos-delay="100"
-        >
-          Our Hot Carbonating Extraction process dries in 1-2 hours and is 100% safe for kids and pets.
-        </h2>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12" data-aos="fade-up-sm" data-aos-delay="150">
-          <CustomButton
-            label="Get My Free Estimate"
-            link="#contact-form"
-            variant="primary"
-          />
-          <CustomButton
-            label="(480) 649-3663"
-            link="tel:+14806493663"
-            variant="secondary"
-            icon="FaPhone"
-          />
+      <!-- Trust Badges -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos="fade-up-sm" data-aos-delay="200">
+        <div class="flex items-center gap-3 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
+          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <span class="text-sm font-semibold text-dark">Dries in 1-2 Hours</span>
         </div>
-
-        <!-- Hero Image Placeholder -->
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-8" data-aos="zoom-in-sm" data-aos-delay="200">
-          <div class="bg-gray-200 aspect-video flex items-center justify-center text-gray-500">
-            [HERO IMAGE: Wide shot showing Brimley's uniformed technician cleaning carpet with clear before/after contrast]
+        <div class="flex items-center gap-3 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
+          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
           </div>
+          <span class="text-sm font-semibold text-dark">Safe for Kids & Pets</span>
         </div>
-
-        <!-- Trust Badges -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[50rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="250">
-          <div class="flex items-center gap-3 justify-center p-4 bg-light rounded-lg">
-            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <span class="text-sm font-semibold text-dark">Dries in 1-2 Hours</span>
+        <div class="flex items-center gap-3 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
+          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
           </div>
-          <div class="flex items-center gap-3 justify-center p-4 bg-light rounded-lg">
-            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-              </svg>
-            </div>
-            <span class="text-sm font-semibold text-dark">Safe for Kids & Pets</span>
-          </div>
-          <div class="flex items-center gap-3 justify-center p-4 bg-light rounded-lg">
-            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <span class="text-sm font-semibold text-dark">Removes 98% of Allergens</span>
-          </div>
+          <span class="text-sm font-semibold text-dark">Removes 98% of Allergens</span>
         </div>
       </div>
     </div>
