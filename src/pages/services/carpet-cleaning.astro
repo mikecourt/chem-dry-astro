@@ -1,0 +1,725 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['pet-urine-removal', 'upholstery-cleaning', 'tile-and-grout-cleaning'].includes(s.id)
+).slice(0, 3);
+
+const title = "Carpet Cleaning";
+const meta_title = "Professional Carpet Cleaning in Phoenix & Mesa | Brimley's White Glove Chem-Dry";
+const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbonating Extraction uses about 80% less water, dries in 1-2 hours. Family-owned, 25+ years experience. Free quote!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Carpet Cleaning" />
+
+  <!-- Hero Section -->
+  <section class="py-20 md:py-32 mt-24 sm:mt-20">
+    <div class="container">
+      <div class="mx-auto max-w-[75rem] text-center">
+        <!-- Eyebrow -->
+        <p
+          class="text-sm font-semibold tracking-wider uppercase text-primary mb-3"
+          data-aos="fade-up-sm"
+        >
+          Carpet Cleaning
+        </p>
+
+        <!-- H1 -->
+        <CustomHeading
+          as="h1"
+          text="A Deeper, Drier, Healthier Carpet Cleaning for **Phoenix** & Mesa"
+          svgColor="text-primary"
+          class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+
+        <!-- H2 Subheading -->
+        <h2
+          class="text-lg md:text-xl text-text/80 mb-8 md:mb-12"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Our Hot Carbonating Extraction process dries in 1-2 hours and is 100% safe for kids and pets.
+        </h2>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12" data-aos="fade-up-sm" data-aos-delay="150">
+          <CustomButton
+            label="Get My Free Estimate"
+            link="#contact-form"
+            variant="primary"
+          />
+          <CustomButton
+            label="(480) 649-3663"
+            link="tel:+14806493663"
+            variant="secondary"
+            icon="FaPhone"
+          />
+        </div>
+
+        <!-- Hero Image Placeholder -->
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-8" data-aos="zoom-in-sm" data-aos-delay="200">
+          <div class="bg-gray-200 aspect-video flex items-center justify-center text-gray-500">
+            [HERO IMAGE: Wide shot showing Brimley's uniformed technician cleaning carpet with clear before/after contrast]
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[50rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="250">
+          <div class="flex items-center gap-3 justify-center p-4 bg-light rounded-lg">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-dark">Dries in 1-2 Hours</span>
+          </div>
+          <div class="flex items-center gap-3 justify-center p-4 bg-light rounded-lg">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-dark">Safe for Kids & Pets</span>
+          </div>
+          <div class="flex items-center gap-3 justify-center p-4 bg-light rounded-lg">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-dark">Removes 98% of Allergens</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- White Glove Promise Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The "White Glove" Promise
+          </p>
+          <CustomHeading
+            as="h2"
+            text="It's Not Just Clean... It's Brimley's **White Glove** Clean"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              You deserve to feel safe and comfortable in your own home. That's why we're a customer service company first. Our "white glove" standard means we treat your home with the same respect we'd treat our own—because when you trust us with your family's health and comfort, that trust matters more than anything.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Since 1995, we've been serving Phoenix Valley families with a level of care that goes beyond clean carpets. It's about peace of mind.
+            </p>
+          </div>
+        </div>
+
+        <!-- Three Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Pillar 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Trusted, Certified Technicians</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our team consists of background-checked, IICRC-certified professionals. No subcontractors, ever. Just experienced technicians who take pride in their work.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">We Protect Your Home</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We use protective booties, corner guards, and floor mats to ensure we leave your home cleaner than we found it. Your home is respected like it's our own.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Clear, Honest Pricing</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              You'll receive a firm, accurate estimate before any work begins. No pressure tactics, no hidden fees, no surprises. Just honest service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chem-Dry Process Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Chem-Dry Process
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Our Clean is **Healthier**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <h3 class="text-2xl font-semibold text-dark mb-4" data-aos="fade-up-sm" data-aos-delay="100">
+            The Problem with Steam Cleaning (And Why We Use Carbonation)
+          </h3>
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="150">
+            Traditional steam cleaners use gallons of soapy water, leaving your carpets soaked for days and trapping dirt-attracting residue that makes them get dirty faster. We use a revolutionary process called Hot Carbonating Extraction—the same carbonation you find in sparkling water—to lift dirt up and out of your carpet fibers.
+          </p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" data-aos="fade-up-sm" data-aos-delay="200">
+          <!-- Traditional Steam Cleaning -->
+          <div class="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+            <h4 class="text-lg font-semibold text-dark mb-4">Traditional Steam Cleaning (The "Old" Way)</h4>
+            <ul class="space-y-3 text-sm text-text/80">
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Soaks carpets with 10-20 gallons of water per room</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Dries in 1-2 DAYS (risk of mold and mildew)</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Uses high-pressure soap and harsh detergents</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Leaves sticky, soapy residue that attracts new dirt faster</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Can damage carpet fibers over time</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Strong chemical smell lingers for days</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Chem-Dry HCE -->
+          <div class="bg-primary/5 p-6 rounded-lg border-2 border-primary/20">
+            <h4 class="text-lg font-semibold text-dark mb-4">Chem-Dry HCE (Our "White Glove" Way)</h4>
+            <ul class="space-y-3 text-sm text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Uses about 80% less water than steam cleaning</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Dries in just 1-2 hours</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Uses millions of carbonating bubbles to lift dirt naturally</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Leaves no dirt-attracting residue, so carpets stay cleaner longer</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Green-certified, non-toxic, safe for kids, pets, and the planet</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Fresh, clean scent—no overpowering odors</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Process Explanation -->
+        <div class="bg-light p-8 rounded-lg" data-aos="fade-up-sm" data-aos-delay="250">
+          <p class="text-base leading-relaxed text-text/80 mb-6">
+            The process used by Chem-Dry doesn't rely on harsh soaps or detergents. Instead, The Natural® uses the power of carbonation to penetrate deep into carpet fibers, explode dirt and grime to the surface, and extract it away—leaving your carpets truly clean, not just surface-level clean.
+          </p>
+
+          <!-- Diagram Placeholder -->
+          <div class="bg-white p-8 rounded-lg border-2 border-gray-200">
+            <div class="bg-gray-100 aspect-video flex items-center justify-center text-gray-500 rounded">
+              [IMAGE: Diagram showing carbonation bubbles lifting dirt particles up through carpet fibers with arrows pointing upward]
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Proof Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Proof
+          </p>
+          <CustomHeading
+            as="h2"
+            text="A **Healthier** Home"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <h3 class="text-2xl font-semibold text-dark mb-6" data-aos="fade-up-sm" data-aos-delay="100">
+            A Clean You Can Feel. Tested & Proven.
+          </h3>
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto mb-8" data-aos="fade-up-sm" data-aos-delay="150">
+            A "white glove" clean isn't just about what you see—it's about what you don't see. The method used by Chem-Dry was independently tested and proven to create a healthier home environment for your family.
+          </p>
+        </div>
+
+        <!-- Test Results -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" data-aos="fade-up-sm" data-aos-delay="200">
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+            <div class="text-5xl font-bold text-primary mb-2">98%</div>
+            <p class="text-base font-semibold text-dark mb-2">Allergen Removal</p>
+            <p class="text-sm text-text/80">Removes common household allergens from carpets and upholstery when combined with sanitizer</p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+            <div class="text-5xl font-bold text-primary mb-2">89%</div>
+            <p class="text-base font-semibold text-dark mb-2">Airborne Bacteria Removal</p>
+            <p class="text-sm text-text/80">Average removal of airborne bacteria in the home, improving indoor air quality</p>
+          </div>
+        </div>
+
+        <!-- Perfect For -->
+        <div class="bg-white p-8 rounded-lg shadow-lg mb-8" data-aos="fade-up-sm" data-aos-delay="250">
+          <h4 class="text-xl font-semibold text-dark mb-4">This is the perfect clean for:</h4>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-text/80">Families with allergies or asthma</span>
+            </div>
+            <div class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-text/80">Homes with young children who play on the floor</span>
+            </div>
+            <div class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-text/80">Pet owners concerned about odors and dander</span>
+            </div>
+            <div class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-text/80">Anyone who wants a healthier indoor environment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="bg-primary/5 p-8 rounded-lg border-l-4 border-primary" data-aos="fade-up-sm" data-aos-delay="300">
+          <p class="text-base leading-relaxed text-text/80 italic mb-4">
+            "After Alex from Brimley's cleaned our carpets, my daughter's allergies improved dramatically. I didn't realize how much dust and allergens were trapped in our carpets. We'll never go back to steam cleaning."
+          </p>
+          <p class="text-sm font-semibold text-dark">— Jennifer M., Mesa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- White Glove Service Details -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            What Makes Our Service "White Glove"?
+          </p>
+          <CustomHeading
+            as="h2"
+            text="The **Details** Matter"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Timeline -->
+        <div class="space-y-8">
+          <!-- Before -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Before We Arrive</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Confirmation call to review your needs and answer questions</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Clear communication about pricing and what to expect</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Flexible scheduling that works around your busy life</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- During -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">During Your Service</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Uniformed, professional technicians arrive on time</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Complete walk-through to understand your concerns</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Protective booties, corner guards, and floor protection</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Pre-treatment of high-traffic areas and stains</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Thorough Hot Carbonating Extraction cleaning</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Post-cleaning inspection with you to ensure satisfaction</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- After -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">After We Leave</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Care instructions for maintaining your clean carpets</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Stain removal guide for future reference</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Follow-up call to ensure you're completely satisfied</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Satisfaction guarantee—if you're not happy, we'll make it right</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Neighbors** in Phoenix & Mesa"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "I was skeptical about the 1-2 hour dry time, but they weren't kidding. My carpets were dry before bedtime, and they look brand new. Alex was so professional and respectful of our home. Highly recommend!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Sarah K., Mesa, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We have three dogs and a toddler, so our carpets take a beating. Brimley's got out stains I thought were permanent. The best part? No chemical smell and everything dried so fast the kids could play on the floor that same evening."
+            </p>
+            <p class="text-sm font-semibold text-dark">Michael R., Gilbert, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "After years of using steam cleaners, I finally understand what 'clean' really means. Our carpets haven't gotten dirty nearly as fast, and my allergies are so much better. Worth every penny."
+            </p>
+            <p class="text-sm font-semibold text-dark">Lisa T., Chandler, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Cleaning Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Than Just **Carpets**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Pet Urine Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🐾</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Have Pets?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Pet Urine Removal Treatment (P.U.R.T.®)</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Traditional cleaners mask pet odors. Our P.U.R.T.® treatment uses advanced chemistry to destroy urine crystals at their source, eliminating odors permanently—not just covering them up.
+            </p>
+            <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
+              Learn More About Pet Stain & Odor Removal →
+            </a>
+          </div>
+
+          <!-- Upholstery -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Dirty Upholstery?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Upholstery Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              The same gentle, effective Hot Carbonating Extraction process works beautifully on sofas, chairs, and other upholstery. Remove years of body oils, dust, and allergens while protecting your furniture investment.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Upholstery Cleaning →
+            </a>
+          </div>
+
+          <!-- Tile & Grout -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Grimy Tile & Grout?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Tile, Stone & Grout Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Restore the shine to your tile floors and eliminate the bacteria hiding in grout lines. Our specialized cleaning and sealing process makes tile look like new and stay cleaner longer.
+            </p>
+            <a href="/services/tile-and-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Tile & Grout Cleaning →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="space-y-6">
+          <details class="bg-white p-6 rounded-lg shadow" data-aos="fade-up-sm" data-aos-delay="100">
+            <summary class="text-lg font-semibold text-dark cursor-pointer">
+              How long does it really take to dry?
+            </summary>
+            <p class="mt-4 text-base leading-relaxed text-text/80">
+              Most carpets are dry and ready for normal foot traffic in just 1-2 hours. That's about 80% faster than steam cleaning. Heavier-traffic areas or thicker carpets may take 3-4 hours, but you'll never wait 1-2 days like with traditional methods. This means less disruption to your day and no risk of mold or mildew growth.
+            </p>
+          </details>
+
+          <details class="bg-white p-6 rounded-lg shadow" data-aos="fade-up-sm" data-aos-delay="150">
+            <summary class="text-lg font-semibold text-dark cursor-pointer">
+              Do I need to move my furniture?
+            </summary>
+            <p class="mt-4 text-base leading-relaxed text-text/80">
+              We recommend moving small items, valuables, and breakables before we arrive. We'll move most furniture (sofas, chairs, tables, beds) and clean underneath, then place everything back on protective tabs to prevent moisture transfer while your carpets finish drying. Very heavy items like entertainment centers or dressers typically stay in place.
+            </p>
+          </details>
+
+          <details class="bg-white p-6 rounded-lg shadow" data-aos="fade-up-sm" data-aos-delay="200">
+            <summary class="text-lg font-semibold text-dark cursor-pointer">
+              Is the process used by Chem-Dry really safe for my kids and pets?
+            </summary>
+            <p class="mt-4 text-base leading-relaxed text-text/80">
+              Absolutely. The Natural®, our primary cleaning solution, is green-certified, non-toxic, and contains no soaps or harsh chemicals. It's safe for your entire family—even crawling babies and curious pets. There's no need to keep kids or pets off the carpets after cleaning.
+            </p>
+          </details>
+
+          <details class="bg-white p-6 rounded-lg shadow" data-aos="fade-up-sm" data-aos-delay="250">
+            <summary class="text-lg font-semibold text-dark cursor-pointer">
+              How often should I get my carpets professionally cleaned?
+            </summary>
+            <p class="mt-4 text-base leading-relaxed text-text/80">
+              Most carpet manufacturers recommend professional cleaning every 12-18 months to maintain your warranty and extend carpet life. For homes with pets, children, or allergy sufferers, we recommend cleaning every 6-9 months to maintain optimal indoor air quality and appearance.
+            </p>
+          </details>
+
+          <details class="bg-white p-6 rounded-lg shadow" data-aos="fade-up-sm" data-aos-delay="300">
+            <summary class="text-lg font-semibold text-dark cursor-pointer">
+              What about tough stains—can you really get them out?
+            </summary>
+            <p class="mt-4 text-base leading-relaxed text-text/80">
+              While we can't guarantee removal of every stain (some substances permanently dye carpet fibers), the process used by Chem-Dry removes most common stains effectively. We pre-treat problem areas with specialized products and use our Hot Carbonating Extraction to lift stains other cleaners leave behind. If we can't remove it, we'll be honest with you.
+            </p>
+          </details>
+
+          <details class="bg-white p-6 rounded-lg shadow" data-aos="fade-up-sm" data-aos-delay="350">
+            <summary class="text-lg font-semibold text-dark cursor-pointer">
+              Do you offer a satisfaction guarantee?
+            </summary>
+            <p class="mt-4 text-base leading-relaxed text-text/80">
+              Yes. If you're not completely satisfied with our cleaning, let us know within 30 days and we'll return to re-clean any areas of concern at no charge. Your satisfaction is our priority—that's the "white glove" promise.
+            </p>
+          </details>
+
+          <details class="bg-white p-6 rounded-lg shadow" data-aos="fade-up-sm" data-aos-delay="400">
+            <summary class="text-lg font-semibold text-dark cursor-pointer">
+              What areas do you serve?
+            </summary>
+            <p class="mt-4 text-base leading-relaxed text-text/80">
+              We proudly serve the entire Phoenix Metro area, including Mesa, Gilbert, Chandler, Scottsdale, Tempe, Queen Creek, Apache Junction, San Tan Valley, and surrounding communities. If you're in the East Valley, we've got you covered.
+            </p>
+          </details>
+
+          <details class="bg-white p-6 rounded-lg shadow" data-aos="fade-up-sm" data-aos-delay="450">
+            <summary class="text-lg font-semibold text-dark cursor-pointer">
+              How much does carpet cleaning cost?
+            </summary>
+            <p class="mt-4 text-base leading-relaxed text-text/80">
+              Every home is unique, which is why we provide free, no-obligation estimates. Pricing depends on the square footage, carpet condition, and any special treatments needed. We'll give you a clear, honest price before we start—no hidden fees or surprises.
+            </p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
