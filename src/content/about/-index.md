@@ -1,8 +1,9 @@
 ---
-title: "We are a cleaning service <br> company with **expert team**"
+title: "The Brimley's **White Glove** Difference"
 meta_title: ""
 description: "this is about page"
 subtitle: "ABOUT US"
+subheadline: "A Family Business Built on Trust, One Clean Carpet at a Time"
 
 why_us:
   - title: "You can depend on us <br> to get a **good services**"

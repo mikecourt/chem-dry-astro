@@ -1,0 +1,36 @@
+---
+// Reusable Trust Bar component with awards and review widgets
+---
+
+<section class="section bg-light py-16">
+  <div class="container">
+    {/* Trust Bar */}
+    <div class="flex items-center justify-center gap-8 md:gap-12 lg:gap-16" data-aos="fade-up-sm">
+      <picture class="h-20 md:h-24 lg:h-28 w-auto opacity-80 hover:opacity-100 transition-opacity">
+        <source srcset="/images/best-of-state.webp" type="image/webp" />
+        <img
+          src="/images/best-of-state.png"
+          width="200"
+          height="100"
+          alt="Best of State Award"
+          class="h-20 md:h-24 lg:h-28 w-auto"
+          loading="lazy"
+        />
+      </picture>
+      <img
+        src="/images/franchise-of-the-year-color.svg"
+        width="200"
+        height="100"
+        alt="Franchise of the Year"
+        class="h-20 md:h-24 lg:h-28 w-auto opacity-80 hover:opacity-100 transition-opacity"
+        loading="lazy"
+      />
+
+      {/* Elfsight Google Reviews | Light Google Reviews */}
+      <div class="elfsight-app-05f0fca0-f1bd-4f5f-8455-df15080711fe" data-elfsight-app-lazy></div>
+
+      {/* Elfsight Yelp Reviews | Yelp Badge Light */}
+      <div class="elfsight-app-6b7679e3-c074-4a81-85af-6c92cfba7e2c" data-elfsight-app-lazy></div>
+    </div>
+  </div>
+</section>

@@ -42,10 +42,10 @@ const hoverEffectClasses = `absolute w-full h-full -left-full -bottom-full round
       data-aos={data_aos}
       data-aos-delay={data_aos_delay}
     >
-      {icon && (
-        <DynamicIcon icon={icon} className="relative z-10 inline-block mr-2" />
-      )}
-      <span class="relative z-10">{label}</span>
+      <span class="relative z-10 inline-flex items-center justify-center gap-2">
+        {icon && <DynamicIcon icon={icon} />}
+        <span>{label}</span>
+      </span>
       <div class={hoverEffectClasses} />
     </a>
   ) : (
@@ -55,10 +55,10 @@ const hoverEffectClasses = `absolute w-full h-full -left-full -bottom-full round
       data-aos={data_aos}
       data-aos-delay={data_aos_delay}
     >
-      {icon && (
-        <DynamicIcon icon={icon} className="relative z-10 inline-block mr-2" />
-      )}
-      <span class="relative z-10">{label}</span>
+      <span class="relative z-10 inline-flex items-center justify-center gap-2">
+        {icon && <DynamicIcon icon={icon} />}
+        <span>{label}</span>
+      </span>
       <div class={hoverEffectClasses} />
     </button>
   )

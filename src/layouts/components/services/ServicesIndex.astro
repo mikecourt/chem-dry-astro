@@ -55,24 +55,25 @@ const serviceImages: Record<string, string> = {
 <section class="section mt-24 sm:mt-20 !pb-8 md:!pb-12">
   <div class="container">
     <div class="mx-auto max-w-[65rem] text-center">
-      {/* Eyebrow */}
+      {/* Eyebrow - DESIGN SYSTEM STANDARD */}
       {
         serviceIndex?.subtitle && (
           <p
             set:html={markdownify(serviceIndex?.subtitle)}
-            class="text-sm font-semibold tracking-wider uppercase text-accent mb-3"
+            class="text-sm font-semibold tracking-wider uppercase text-primary mb-3"
             data-aos="fade-up-sm"
           />
         )
       }
 
-      {/* H1 - contained to body column width */}
-      <h1
+      {/* H1 - DESIGN SYSTEM STANDARD with swoosh under "Professional" */}
+      <CustomHeading
+        as="h1"
+        text="**Professional** Carpet & Upholstery Cleaning Services – Phoenix Metro"
+        svgColor="text-primary"
         class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
-        data-aos="fade-up-sm"
-      >
-        Professional Carpet & Upholstery<br class="hidden lg:inline" /> Cleaning Services – Phoenix Metro
-      </h1>
+        dataAos="fade-up-sm"
+      />
 
       {/* H2 - contained to body column width */}
       <h2

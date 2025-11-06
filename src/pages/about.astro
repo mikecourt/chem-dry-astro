@@ -3,6 +3,7 @@ import Pride from "@/components/about/Pride.astro";
 import Team from "@/components/about/Team.astro";
 import WhyUs from "@/components/about/WhyUs.astro";
 import CustomHeading from "@/components/CustomHeading.astro";
+import TrustBar from "@/components/TrustBar.astro";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
@@ -13,7 +14,7 @@ const aboutIndex = (await getEntry(
   "about",
   "-index"
 )) as CollectionEntry<"about">;
-const { title, subtitle, description, meta_title, why_us, pride, team } =
+const { title, subtitle, subheadline, description, meta_title, why_us, pride, team } =
   aboutIndex.data;
 
 const callToAction = (await getEntry(
@@ -23,36 +24,408 @@ const callToAction = (await getEntry(
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
-  <section class="py-20 md:py-32 mt-24 sm:mt-20" data-aos="fade-in-sm">
+  <!-- Hero Section with Team Photo -->
+  <section class="py-20 md:py-32 mt-24 sm:mt-20">
     <div class="container">
-      <div>
-        {
-          subtitle && (
-            <p
-              class="text-primary text-base mb-6 text-center md:text-left"
-              set:html={markdownify(subtitle)}
-              data-aos="fade-up-sm"
-            />
-          )
-        }
-        {
-          title && (
-            <CustomHeading
-              as="h1"
-              text={title}
-              class="text-h2 lg:text-h1 text-balance text-center md:text-left"
-              dataAos="fade-up-sm"
-              dataAosDelay="50"
-            />
-          )
-        }
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+        <!-- Left Column: Text Content -->
+        <div class="order-2 lg:order-1 lg:col-span-4">
+          <!-- Eyebrow (Section Label) - DESIGN SYSTEM STANDARD -->
+          <p
+            class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+            data-aos="fade-up-sm"
+          >
+            ABOUT US
+          </p>
+
+          <!-- H1 (Page Title) - DESIGN SYSTEM STANDARD -->
+          <CustomHeading
+            as="h1"
+            text={title}
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+
+          <!-- H2 Subheading - DESIGN SYSTEM STANDARD -->
+          <h2
+            class="text-lg md:text-xl text-text/80 mb-8 md:mb-12 text-center lg:text-left"
+            data-aos="fade-up-sm"
+            data-aos-delay="100"
+          >
+            {subheadline}
+          </h2>
+        </div>
+
+        <!-- Right Column: Team Photo with Badge (Even More Prominent) -->
+        <div class="order-1 lg:order-2 lg:col-span-8" data-aos="fade-left-sm" data-aos-delay="100">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <picture>
+              <source srcset="/images/about-team.webp" type="image/webp" />
+              <img
+                src="/images/about-team.jpg"
+                alt="The Brimley's Chem-Dry Team"
+                width="1600"
+                height="1200"
+                class="w-full h-auto"
+                loading="eager"
+              />
+            </picture>
+
+            <!-- 30+ Years Badge - Bottom Left -->
+            <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6 lg:bottom-8 lg:left-8">
+              <div class="bg-primary text-white px-6 py-4 md:px-8 md:py-5 rounded-xl shadow-lg flex items-center gap-3 backdrop-blur-sm bg-opacity-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-10 md:w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+                <div>
+                  <div class="text-2xl md:text-3xl font-bold leading-none">30+</div>
+                  <div class="text-sm md:text-base font-medium">Years</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <WhyUs why_us={why_us} />
-  <Pride pride={pride} />
-  {team.enable && <Team team={team} />}
+  <!-- White Glove Promise Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left Column: Content -->
+        <div>
+          <!-- Eyebrow - DESIGN SYSTEM STANDARD -->
+          <p
+            class="text-sm font-semibold tracking-wider uppercase text-primary mb-3"
+            data-aos="fade-up-sm"
+          >
+            Our Promise
+          </p>
+
+          <!-- H2 with SVG swoosh - DESIGN SYSTEM STANDARD -->
+          <CustomHeading
+            as="h2"
+            text="Our **White Glove** Promise"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+
+          <!-- Intro Paragraphs -->
+          <div class="space-y-4 mb-8" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              When we started Brimley's White Glove Chem-Dry in 1995, we had a simple goal: create the kind of service company we'd want in our own home.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Not the cheapest. Not the fastest. But the most trustworthy.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Twenty-five years later, that's still our mission—and it's why families across Mesa, Gilbert, Chandler, and beyond keep calling us back.
+            </p>
+          </div>
+
+          <!-- What Sets Us Apart -->
+          <h3 class="text-2xl font-bold text-dark mb-6" data-aos="fade-up-sm" data-aos-delay="150">
+            What Sets Us Apart:
+          </h3>
+
+          <div class="space-y-6">
+            <!-- Point 1 -->
+            <div class="flex gap-4" data-aos="fade-up-sm" data-aos-delay="200">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold text-dark mb-2">
+                  People You Can Trust in Your Home
+                </h4>
+                <p class="text-base leading-relaxed text-text/80">
+                  We don't hire subcontractors or day laborers. Our technicians are trained, uniformed employees who've been background-checked and mentored by our team. Many have been with us for years. When they knock on your door, you're getting a professional who cares about the work they do.
+                </p>
+              </div>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="flex gap-4" data-aos="fade-up-sm" data-aos-delay="250">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold text-dark mb-2">
+                  A True "White Glove" Standard
+                </h4>
+                <p class="text-base leading-relaxed text-text/80">
+                  Our name isn't an accident. We use corner guards to protect your walls. We wear booties to protect your floors. We lay down drop cloths. We clean up after ourselves. Your home doesn't just get clean carpets—it gets the respect it deserves.
+                </p>
+              </div>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="flex gap-4" data-aos="fade-up-sm" data-aos-delay="300">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold text-dark mb-2">
+                  Honest Service from Start to Finish
+                </h4>
+                <p class="text-base leading-relaxed text-text/80">
+                  We show up on time (or we call). We give you a written estimate before starting any work. We explain our process in plain English. And we never surprise you with extra charges or pressure tactics. That's just not how we operate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Photo -->
+        <div class="order-first lg:order-last" data-aos="fade-left-sm" data-aos-delay="100">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <picture>
+              <source srcset="/images/dave-van.webp" type="image/webp" />
+              <img
+                src="/images/dave-van.jpg"
+                alt="Dave from Brimley's White Glove Chem-Dry with company van"
+                width="1200"
+                height="900"
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A Valley Family Business Since 1995 Section -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left Column: Photo -->
+        <div data-aos="fade-right-sm" data-aos-delay="100">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <picture>
+              <source srcset="/images/mike-award.webp" type="image/webp" />
+              <img
+                src="/images/mike-award.jpg"
+                alt="Mike Court, owner of Brimley's White Glove Chem-Dry, receiving an award"
+                width="1200"
+                height="900"
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <!-- Right Column: Content -->
+        <div>
+          <!-- Eyebrow - DESIGN SYSTEM STANDARD -->
+          <p
+            class="text-sm font-semibold tracking-wider uppercase text-primary mb-3"
+            data-aos="fade-up-sm"
+          >
+            Our Story
+          </p>
+
+          <!-- H2 with SVG swoosh - DESIGN SYSTEM STANDARD -->
+          <CustomHeading
+            as="h2"
+            text="A Valley **Family** Business Since 1995"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+
+          <!-- Opening Statement -->
+          <div class="space-y-4" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              There's a reason we put "White Glove" in our name—and it's not just about how we clean.
+            </p>
+
+            <p class="text-base leading-relaxed text-text/80">
+              My name is Mike Court, and I'm the owner of Brimley's White Glove Chem-Dry. My dad started this business back in 1995 because he wanted to create a company he'd feel good about calling himself. One that showed up on time, did honest work, and treated people right.
+            </p>
+
+            <p class="text-base leading-relaxed text-text/80">
+              When I took over in 2006, I made sure we kept that same commitment. Nearly 30 years later, we're still doing exactly that. We've grown from a small family operation to serving homes and businesses throughout the entire Phoenix Valley—from Mesa to Scottsdale, Gilbert to Glendale, Chandler to Peoria, and everywhere in between. But we've never forgotten what got us here: taking care of our neighbors.
+            </p>
+
+            <p class="text-base leading-relaxed text-text/80">
+              Because that's what you are—our neighbors. We drive the same roads, deal with the same Arizona dust, and care about the same community. When you call Brimley's, you're not just hiring a service, you're supporting a local, family-owned business that's as invested in this Valley as you are.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Chem-Dry Cleans Better (and Safer) Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left Column: Content -->
+        <div>
+          <!-- H2 with SVG swoosh - DESIGN SYSTEM STANDARD -->
+          <CustomHeading
+            as="h2"
+            text="Why Chem-Dry Cleans **Better** (and Safer)"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+          />
+
+          <!-- Intro Paragraphs -->
+          <div class="space-y-4 mb-8" data-aos="fade-up-sm" data-aos-delay="50">
+            <p class="text-base leading-relaxed text-text/80">
+              Now that you know you can trust our team, let me explain why our cleaning process is different—and why it matters.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              As a Chem-Dry franchise, we use Hot Carbonating Extraction instead of traditional steam cleaning. It's not just a different method—it's a better one, especially for families who care about health and safety.
+            </p>
+          </div>
+
+          <!-- Benefits with Icons -->
+          <div class="space-y-6">
+            <!-- Benefit 1: Fast Drying -->
+            <div class="flex gap-4" data-aos="fade-up-sm" data-aos-delay="100">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold text-dark mb-2">
+                  Your Carpets Dry Fast
+                </h4>
+                <p class="text-base leading-relaxed text-text/80">
+                  The process used by Chem-Dry uses about 80% less water than steam cleaning. That means your carpets are dry in 1-2 hours instead of 1-2 days. You can walk on them the same day, and there's virtually no risk of mold or mildew developing underneath.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 2: Removes Allergens -->
+            <div class="flex gap-4" data-aos="fade-up-sm" data-aos-delay="150">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold text-dark mb-2">
+                  It Actually Removes Allergens
+                </h4>
+                <p class="text-base leading-relaxed text-text/80">
+                  Hot Carbonating Extraction has been tested and proven to remove 98% of common household allergens from carpets and upholstery. If anyone in your home struggles with allergies or asthma, this process can make a noticeable difference.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefit 3: Safe for Kids & Pets -->
+            <div class="flex gap-4" data-aos="fade-up-sm" data-aos-delay="200">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-xl font-semibold text-dark mb-2">
+                  Completely Safe for Kids and Pets
+                </h4>
+                <p class="text-base leading-relaxed text-text/80">
+                  The Natural®, our core cleaning solution, is green-certified and doesn't rely on harsh chemicals or soapy detergents. That means no toxic residue, no dirt-attracting buildup, and it's 100% safe for your family, even right after we finish.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Photo -->
+        <div class="order-first lg:order-last" data-aos="fade-left-sm" data-aos-delay="100">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <picture>
+              <source srcset="/images/family-game.webp" type="image/webp" />
+              <img
+                src="/images/family-game.jpg"
+                alt="Family playing board game on clean carpet"
+                width="1200"
+                height="900"
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 100% Satisfaction Guarantee Section -->
+  <section class="section !pt-0 !pb-0 bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[50rem]">
+        <!-- Certificate Container -->
+        <div class="bg-white rounded-2xl border-2 border-primary/20 shadow-2xl p-8 md:p-12 lg:p-16 text-center" data-aos="zoom-in-sm">
+          <!-- Icon/Badge -->
+          <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+
+          <!-- H2 with SVG swoosh - DESIGN SYSTEM STANDARD -->
+          <CustomHeading
+            as="h2"
+            text="You're Covered by Our 100% **Satisfaction** Guarantee"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+
+          <!-- Content -->
+          <div class="space-y-4" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-lg leading-relaxed text-text/80">
+              Here's our promise: if you're not completely satisfied with your cleaning, we'll make it right.
+            </p>
+
+            <p class="text-base leading-relaxed text-text/80">
+              Just give us a call. We'll come back and re-clean the area at no charge, no questions asked. And if you're still not happy after that? We'll refund your money.
+            </p>
+
+            <p class="text-base leading-relaxed text-text/80">
+              We've been doing this for nearly 30 years, and we've built our reputation on standing behind our work. Our A+ Better Business Bureau rating and thousands of 5-star Google reviews didn't happen by accident. They came from taking care of our customers, every single time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
 
   <CallToAction cta={callToAction.data} />
 </Base>

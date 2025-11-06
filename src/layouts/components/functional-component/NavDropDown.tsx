@@ -8,12 +8,24 @@ const NavDropDown = ({ menu, pathname }: { menu: any; pathname: any }) => {
   };
   return (
       <li
-        onClick={handleChildMenuClick}
         className="nav-item nav-dropdown group"
       >
-        <span className="nav-link text-base-sm">
+        <a
+          href={menu.url}
+          className={`nav-link text-base-sm ${
+            (pathname === `${menu.url}/` || pathname === menu.url) && "active"
+          }`}
+          onClick={(e) => {
+            // On mobile, toggle dropdown on first click
+            if (window.innerWidth < 1024) {
+              e.preventDefault();
+              handleChildMenuClick();
+            }
+            // On desktop, let the link work normally (dropdown shows on hover via CSS)
+          }}
+        >
           {menu.name}
-        </span>
+        </a>
         <ul
           className={`nav-dropdown-list ${
             showContent && "max-lg:block"
