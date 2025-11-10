@@ -4,6 +4,9 @@ import Blog from "@/components/homepage/Blog.astro";
 import Customer from "@/components/homepage/Customer.astro";
 import Responsibility from "@/components/homepage/Responsibility.astro";
 import Testimonial from "@/components/homepage/Testimonial.astro";
+import WhiteGlovePromise from "@/layouts/components/homepage/WhiteGlovePromise.astro";
+import ComparisonChart from "@/layouts/components/homepage/ComparisonChart.astro";
+import ReviewBadges from "@/layouts/components/homepage/ReviewBadges.astro";
 import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Service from "@/layouts/components/services/Service.astro";
 import Base from "@/layouts/Base.astro";
@@ -39,6 +42,9 @@ const callToAction = (await getEntry(
 <Base>
   <SchemaMarkup type="homepage" />
   <Hero hero={hero} />
+  <WhiteGlovePromise />
+  <ComparisonChart />
+  <ReviewBadges reviews={hero.reviews} />
   {testimonial.enable && <Testimonial testimonial={testimonial} />}
   {
     serviceIndex.data.homepage_section_enable && (

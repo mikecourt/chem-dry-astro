@@ -1,0 +1,54 @@
+---
+import ImageMod from "@/components/ImageMod.astro";
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  reviews: CollectionEntry<"homepage">["data"]["hero"]["reviews"];
+};
+
+const { reviews } = Astro.props;
+---
+
+<section class="bg-body py-8 relative z-30">
+  <div class="container">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-14">
+      {
+        reviews.map((r, i: number) => (
+          <div class="flex flex-col items-center" data-aos="fade-up-sm">
+            <ImageMod
+              src={r.company_logo}
+              alt={r.company_logo}
+              width={360}
+              height={120}
+              class="pb-5 h-30 w-auto object-contain"
+              data-aos="fade-up-sm"
+              data-aos-delay={100 + i * 50}
+            />
+            <div
+              class="flex flex-col items-center gap-y-2"
+              data-aos="fade-up-sm"
+              data-aos-delay={120 + i * 50}
+            >
+              {r.rating > 0 ? (
+                <>
+                  <div
+                    class="Stars"
+                    style={`--rating: ${r.rating}`}
+                    aria-label="Rating from the company"
+                  />
+                  <span class="text-base text-center">
+                    {r.rating} on {r.name.replace(" Reviews", "")}
+                  </span>
+                </>
+              ) : (
+                <span class="text-base text-center max-w-[220px]">
+                  Chem-Dry National <br />Franchise of the Year Winner
+                </span>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -16,6 +16,9 @@
         "subtitle": {
           "type": "string"
         },
+        "subheadline": {
+          "type": "string"
+        },
         "why_us": {
           "type": "array",
           "items": {

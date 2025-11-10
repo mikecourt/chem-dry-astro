@@ -18,7 +18,16 @@
       "Bash(convert:*)",
       "Bash(for file in src/layouts/components/homepage/Testimonial.astro src/layouts/components/services/Service.astro src/layouts/components/homepage/Blog.astro)",
       "Bash(do echo \"=== $file ===\")",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(git log --all --oneline --grep=\"who are we\" -i)",
+      "Bash(git log --all --oneline --grep=\"about\" -i)",
+      "Bash(git log --all --oneline --grep=\"safety\" -i)",
+      "Bash(git log --all --oneline --all-match --grep=\"safety\" --before=\"2025-11-01\")",
+      "Bash(npm install:*)",
+      "Bash(npx stagewise@latest)",
+      "Bash(npm uninstall:*)",
+      "Bash(magick:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
