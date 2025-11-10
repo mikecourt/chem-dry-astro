@@ -44,16 +44,14 @@ const callToAction = (await getEntry(
   <Hero hero={hero} />
   <WhiteGlovePromise />
   <ComparisonChart />
-  <ReviewBadges reviews={hero.reviews} />
-  {testimonial.enable && <Testimonial testimonial={testimonial} />}
   {
     serviceIndex.data.homepage_section_enable && (
       <Service serviceIndex={serviceIndex.data} allServices={topServices} />
     )
   }
+  {testimonial.enable && <Testimonial testimonial={testimonial} />}
+  <ReviewBadges reviews={hero.reviews} />
   {about.enable && <About about={about} />}
-  {responsibility.enable && <Responsibility responsibility={responsibility} />}
-  {customer.enable && <Customer customer={customer} />}
   {blog.enable && <Blog blog={blog} allBlogs={allBlogs} />}
   <CallToAction cta={callToAction.data} />
 </Base>
