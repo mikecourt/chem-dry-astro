@@ -10,23 +10,23 @@ type Props = { about: CollectionEntry<"homepage">["data"]["about"] };
 const { about } = Astro.props;
 ---
 
-<section class="section pt-0 lg:pb-44">
+<section class="section lg:pb-44 bg-light">
   <div class="container">
     <div
-      class="flex flex-col lg:flex-row justify-between gap-32 lg:gap-10 items-center">
+      class="flex flex-col lg:flex-row justify-between gap-32 lg:gap-10 items-center lg:items-start">
       <div class="lg:w-[55%]">
         <div class="relative">
           <ImageMod
-            src={about.images[0]}
-            alt="about images"
+            src="/images/map.jpg"
+            alt="Phoenix Valley service area map"
             width={549}
             height={465}
             class="rounded top-0 xl:-top-12 w-[80%]"
             data_aos="zoom-in-sm"
           />
           <ImageMod
-            src={about.images[1]}
-            alt="about images"
+            src="/images/phoenix-aerial.jpg"
+            alt="Phoenix aerial view"
             width={470}
             height={317}
             class="absolute rounded right-0 -bottom-20 w-[60%]"
@@ -35,8 +35,8 @@ const { about } = Astro.props;
           />
           <div data-aos="zoom-in-sm" data-aos-delay="40">
             <ImageMod
-              src={about.badge}
-              alt={about.badge}
+              src="/images/valley-badge.svg"
+              alt="Valley of the Sun"
               width={223}
               height={223}
               class="hidden md:block absolute right-0 top-1/2 translate-y-[-140%] translate-x-[40%] spin-animation scale-80 w-[30%]"
@@ -46,52 +46,105 @@ const { about } = Astro.props;
       </div>
       <div class="lg:w-[33%]">
         <p
-          set:html={markdownify(about.subtitle)}
           class="text-sm font-semibold tracking-wider uppercase text-accent mb-3 text-center lg:text-left"
           data-aos="fade-up-sm"
-        />
+        >
+          SERVICE AREA
+        </p>
 
         <CustomHeading
           as="h2"
-          text={about.title}
+          text="Professional Carpet Cleaning Across **Phoenix Metro**"
           class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left"
           dataAos="fade-up-sm"
           dataAosDelay="50"
         />
         <p
-          set:html={markdownify(about.content)}
-          class="text-lg md:text-xl text-text/80 mb-8 md:mb-12 text-center lg:text-left"
+          class="text-lg md:text-xl text-text/80 mb-6 text-center lg:text-left"
           data-aos="fade-up-sm"
           data-aos-delay="100"
-        />
+        >
+          We proudly serve homes throughout the Valley, including:
+        </p>
 
-        {
-          about.schedule.map((s, i) => (
-            <p
-              class="font-medium text-base text-center lg:text-left"
-              data-aos="fade-up-sm"
-              data-aos-delay={100 + i * 50}>
-              <span set:html={markdownify(s.day)} />
-              <span set:html={markdownify(s.time)} />
-            </p>
-          ))
-        }
-        {
-          about.button.enable && (
-            <div
-              class="w-full flex justify-center lg:justify-start"
-              data-aos="fade-up-sm"
-              data-aos-delay="150">
-              <CustomButton
-                link={about.button.link}
-                label={about.button.label}
-                className="mt-8 btn-sm! sm:btn!"
-                variant="secondary"
-                icon={about.button.icon}
-              />
-            </div>
-          )
-        }
+        <div
+          class="grid grid-cols-2 gap-3 mb-6 max-w-md mx-auto lg:mx-0 text-center lg:text-left"
+          data-aos="fade-up-sm"
+          data-aos-delay="150"
+        >
+          <div class="flex items-center justify-center lg:justify-start gap-2">
+            <span class="text-primary text-xl">✓</span>
+            <span class="text-lg font-medium">Phoenix</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-2">
+            <span class="text-primary text-xl">✓</span>
+            <span class="text-lg font-medium">Mesa</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-2">
+            <span class="text-primary text-xl">✓</span>
+            <span class="text-lg font-medium">Scottsdale</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-2">
+            <span class="text-primary text-xl">✓</span>
+            <span class="text-lg font-medium">Tempe</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-2">
+            <span class="text-primary text-xl">✓</span>
+            <span class="text-lg font-medium">Chandler</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-2">
+            <span class="text-primary text-xl">✓</span>
+            <span class="text-lg font-medium">Gilbert</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-2">
+            <span class="text-primary text-xl">✓</span>
+            <span class="text-lg font-medium">Glendale</span>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-2">
+            <span class="text-primary text-xl">✓</span>
+            <span class="text-lg font-medium">Peoria</span>
+          </div>
+        </div>
+
+        <div class="text-center mb-4 flex items-center justify-center gap-3">
+          <span
+            class="text-lg font-medium text-dark"
+            data-aos="fade-up-sm"
+            data-aos-delay="175"
+          >
+            And more!
+          </span>
+          <a
+            href="/service-areas"
+            class="text-base font-bold text-primary hover:text-primary-dark inline-flex items-center gap-2"
+            data-aos="fade-up-sm"
+            data-aos-delay="200"
+          >
+            See All Areas →
+          </a>
+        </div>
+
+        <p
+          class="text-base text-text/80 mb-4 text-center"
+          data-aos="fade-up-sm"
+          data-aos-delay="220"
+        >
+          ...or give us a call
+        </p>
+
+        <div
+          class="w-full flex justify-center"
+          data-aos="fade-up-sm"
+          data-aos-delay="240"
+        >
+          <CustomButton
+            link="tel:+14806493663"
+            label="(480) 649-3663"
+            className="btn-sm! sm:btn!"
+            variant="secondary"
+            icon="FaPhone"
+          />
+        </div>
       </div>
     </div>
   </div>
