@@ -14,7 +14,7 @@ const buttonVariants = ["primary", "secondary", "light"];
 <section
   class="py-24 md:py-40 lg:py-48 relative mb-0"
   style={`background-image: url('${hero.image}'); background-size: cover; background-position: right center;`}>
-  <div class="container relative z-20">
+  <div class="relative z-20 px-[30px]">
     <p
       set:html={markdownify(hero.subtitle)}
       class="text-lg md:text-xl lg:text-2xl leading-relaxed mb-0 text-center lg:text-left"
@@ -25,7 +25,7 @@ const buttonVariants = ["primary", "secondary", "light"];
       as="h1"
       text={hero.title}
       svgColor="text-primary"
-      class="text-4xl md:text-5xl lg:text-6xl leading-[1.2] lg:leading-[1.1] text-center lg:text-left text-balance font-bold mt-0 mb-6 max-w-xl md:max-w-2xl lg:max-w-none mx-auto lg:mx-0"
+      class="text-4xl md:text-5xl lg:text-6xl leading-[1.2] lg:leading-[1.1] text-center lg:text-left font-bold mt-0 mb-6 mx-auto lg:mx-0"
       dataAos="fade-up-sm"
       dataAosDelay="40"
     />
@@ -104,10 +104,10 @@ const buttonVariants = ["primary", "secondary", "light"];
     class="absolute inset-0 w-full h-full z-10 bg-white/80 lg:hidden"
     data-aos="fade-right-sm">
   </div>
-  <!-- Desktop gradient overlay: Solid white to 800px, gradient out to 1200px -->
+  <!-- Desktop gradient overlay -->
   <div
     class="hidden lg:block absolute inset-0 w-full h-full z-10"
-    style="background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0px, rgba(255, 255, 255, 0.9) 800px, rgba(255, 255, 255, 0) 1200px, rgba(255, 255, 255, 0) 100%);"
+    style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"
     data-aos="fade-right-sm">
   </div>
 </section>

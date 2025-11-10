@@ -34,7 +34,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
     style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
 
     <!-- White Gradient Overlay (Radial gradient from left-center) -->
-    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 30% 50%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.4) 70%, transparent 100%);"></div>
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
 
     <!-- Content Container -->
     <div class="relative z-20 px-[30px]">
@@ -49,7 +49,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
       <!-- H1 -->
       <CustomHeading
         as="h1"
-        text="A **Deeper**, Drier, Healthier Carpet Cleaning for Phoenix & Mesa"
+        text="A **Deeper**, Drier, Healthier<br class='hidden lg:block' /> Carpet Cleaning for Phoenix & Mesa"
         svgColor="text-primary"
         class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
         dataAos="fade-up-sm"
@@ -65,8 +65,54 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
         Our Hot Carbonating Extraction process dries in 1-2 hours and is 100% safe for kids and pets.
       </h2>
 
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💧
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">80% Less Water Used</div>
+            <div class="text-xs md:text-sm text-gray-600">Carpets dry faster with our carbonation method</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🌿
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Natural, Green-Certified</div>
+            <div class="text-xs md:text-sm text-gray-600">Non-toxic cleaning safe for your whole family</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ✨
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Removes 98% of Allergens</div>
+            <div class="text-xs md:text-sm text-gray-600">Healthier air quality after every cleaning</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Industry-Leading Results</div>
+            <div class="text-xs md:text-sm text-gray-600">Deep-clean extraction that lasts longer</div>
+          </div>
+        </div>
+      </div>
+
       <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="150">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
         <CustomButton
           label="Get My Free Estimate"
           link="#contact-form"
@@ -78,34 +124,6 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
           variant="secondary"
           icon="FaPhone"
         />
-      </div>
-
-      <!-- Trust Badges -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4" data-aos="fade-up-sm" data-aos-delay="200">
-        <div class="flex items-center gap-3 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
-          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <span class="text-sm font-semibold text-dark">Dries in 1-2 Hours</span>
-        </div>
-        <div class="flex items-center gap-3 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
-          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-          </div>
-          <span class="text-sm font-semibold text-dark">Safe for Kids & Pets</span>
-        </div>
-        <div class="flex items-center gap-3 p-3 bg-white/80 backdrop-blur-sm rounded-lg">
-          <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <span class="text-sm font-semibold text-dark">Removes 98% of Allergens</span>
-        </div>
       </div>
     </div>
   </section>
