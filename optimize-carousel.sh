@@ -1,0 +1,25 @@
+#!/bin/bash
+cd "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/docs/Images-to-optimize/before and after"
+
+# Process each image
+magick "IMG_20211209_124120.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/img-20211209-124120.webp"
+magick "IMG_20211209_131816.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/img-20211209-131816.webp"
+magick "before and after carpet.png" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/before-and-after-carpet.webp"
+magick "before and after upholstery.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/before-and-after-upholstery.webp"
+magick "carpet-before-2.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/carpet-before-2.webp"
+magick "carpet-difference line.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/carpet-difference-line.webp"
+magick "carpet-middle-4.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/carpet-middle-4.webp"
+magick "carpet-side-by-side-2.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/carpet-side-by-side-2.webp"
+magick "carpet-side-by-side-3.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/carpet-side-by-side-3.webp"
+magick "carpet-side-by-side-6.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/carpet-side-by-side-6.webp"
+magick "carpet-side-by-side-7.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/carpet-side-by-side-7.webp"
+magick "carpet-stain-before-after.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/carpet-stain-before-after.webp"
+magick "chair-stain-before-after.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/chair-stain-before-after.webp"
+magick "office-side-by-side.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/office-side-by-side.webp"
+magick "powerhead-clean.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/powerhead-clean.webp"
+magick "rug before-after.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/rug-before-after.webp"
+magick "stain-before-after-2.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/stain-before-after-2.webp"
+magick "stone-side-by-side.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/stone-side-by-side.webp"
+magick "tile-difference.jpg" -resize 800x600^ -gravity center -extent 800x600 -quality 85 -strip "/Users/mikecourt/Desktop/Current Projects/chem-dry-site/public/images/before-after/tile-difference.webp"
+
+echo "Optimization complete!"

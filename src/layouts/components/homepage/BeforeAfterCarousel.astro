@@ -1,0 +1,123 @@
+---
+const images = [
+  "/images/before-after/before-and-after-carpet.webp",
+  "/images/before-after/before-and-after-upholstery.webp",
+  "/images/before-after/carpet-difference-line.webp",
+  "/images/before-after/carpet-side-by-side-2.webp",
+  "/images/before-after/carpet-side-by-side-3.webp",
+  "/images/before-after/carpet-side-by-side-6.webp",
+  "/images/before-after/carpet-side-by-side-7.webp",
+  "/images/before-after/carpet-stain-before-after.webp",
+  "/images/before-after/chair-stain-before-after.webp",
+  "/images/before-after/office-side-by-side.webp",
+  "/images/before-after/rug-before-after.webp",
+  "/images/before-after/stain-before-after-2.webp",
+  "/images/before-after/stone-side-by-side.webp",
+  "/images/before-after/tile-difference.webp",
+];
+---
+
+<div class="carousel-container" data-aos="fade-up-sm" data-aos-delay="100">
+  <div class="carousel-track">
+    <!-- First set of images -->
+    {images.map((src, index) => (
+      <div class="carousel-item">
+        <img
+          src={src}
+          alt={`Before and after ${index + 1}`}
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+      </div>
+    ))}
+    <!-- Duplicate set for seamless loop -->
+    {images.map((src, index) => (
+      <div class="carousel-item">
+        <img
+          src={src}
+          alt={`Before and after ${index + 1}`}
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .carousel-container {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+    padding: 2rem 0;
+    transition: padding 0.4s ease;
+  }
+
+  .carousel-container:has(.carousel-item:hover) {
+    padding: 6rem 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 30s linear infinite;
+  }
+
+  .carousel-track:hover {
+    animation-play-state: paused;
+  }
+
+  .carousel-item {
+    flex-shrink: 0;
+    width: 400px;
+    height: 300px;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .carousel-item:hover {
+    width: 600px;
+    height: 450px;
+    transform: translateY(-50px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: object-fit 0.4s ease;
+  }
+
+  .carousel-item:hover img {
+    object-fit: contain;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .carousel-item {
+      width: 300px;
+      height: 225px;
+    }
+
+    .carousel-track {
+      gap: 1.5rem;
+    }
+  }
+</style>
