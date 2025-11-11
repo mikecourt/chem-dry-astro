@@ -10,7 +10,7 @@ type Props = { about: CollectionEntry<"homepage">["data"]["about"] };
 const { about } = Astro.props;
 ---
 
-<section class="section lg:pb-44 bg-body">
+<section class="section pb-12 lg:pb-20 bg-light">
   <div class="container">
     <div
       class="flex flex-col lg:flex-row justify-between gap-32 lg:gap-10 items-center lg:items-start">
@@ -68,45 +68,45 @@ const { about } = Astro.props;
         </p>
 
         <div
-          class="grid grid-cols-2 gap-3 mb-6 max-w-md mx-auto lg:mx-0 text-center lg:text-left"
+          class="grid grid-cols-2 gap-3 mb-6 max-w-xs mx-auto text-center"
           data-aos="fade-up-sm"
           data-aos-delay="150"
         >
-          <div class="flex items-center justify-center lg:justify-start gap-2">
+          <div class="flex items-center justify-center gap-2">
             <span class="text-primary text-xl">✓</span>
             <span class="text-lg font-medium">Phoenix</span>
           </div>
-          <div class="flex items-center justify-center lg:justify-start gap-2">
+          <div class="flex items-center justify-center gap-2">
             <span class="text-primary text-xl">✓</span>
             <span class="text-lg font-medium">Mesa</span>
           </div>
-          <div class="flex items-center justify-center lg:justify-start gap-2">
+          <div class="flex items-center justify-center gap-2">
             <span class="text-primary text-xl">✓</span>
             <span class="text-lg font-medium">Scottsdale</span>
           </div>
-          <div class="flex items-center justify-center lg:justify-start gap-2">
+          <div class="flex items-center justify-center gap-2">
             <span class="text-primary text-xl">✓</span>
             <span class="text-lg font-medium">Tempe</span>
           </div>
-          <div class="flex items-center justify-center lg:justify-start gap-2">
+          <div class="flex items-center justify-center gap-2">
             <span class="text-primary text-xl">✓</span>
             <span class="text-lg font-medium">Chandler</span>
           </div>
-          <div class="flex items-center justify-center lg:justify-start gap-2">
+          <div class="flex items-center justify-center gap-2">
             <span class="text-primary text-xl">✓</span>
             <span class="text-lg font-medium">Gilbert</span>
           </div>
-          <div class="flex items-center justify-center lg:justify-start gap-2">
+          <div class="flex items-center justify-center gap-2">
             <span class="text-primary text-xl">✓</span>
             <span class="text-lg font-medium">Glendale</span>
           </div>
-          <div class="flex items-center justify-center lg:justify-start gap-2">
+          <div class="flex items-center justify-center gap-2">
             <span class="text-primary text-xl">✓</span>
             <span class="text-lg font-medium">Peoria</span>
           </div>
         </div>
 
-        <div class="text-center mb-4 flex items-center justify-center gap-3">
+        <div class="text-center mb-2 flex items-center justify-center gap-3">
           <span
             class="text-lg font-medium text-dark"
             data-aos="fade-up-sm"
@@ -116,11 +116,11 @@ const { about } = Astro.props;
           </span>
           <a
             href="/service-areas"
-            class="text-base font-bold text-primary hover:text-primary-dark inline-flex items-center gap-2"
+            class="text-lg font-medium text-primary hover:text-primary-dark inline-flex items-center gap-2"
             data-aos="fade-up-sm"
             data-aos-delay="200"
           >
-            See All Areas →
+            See all areas →
           </a>
         </div>
 

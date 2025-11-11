@@ -7,6 +7,7 @@ import Testimonial from "@/components/homepage/Testimonial.astro";
 import WhiteGlovePromise from "@/layouts/components/homepage/WhiteGlovePromise.astro";
 import ComparisonChart from "@/layouts/components/homepage/ComparisonChart.astro";
 import ReviewBadges from "@/layouts/components/homepage/ReviewBadges.astro";
+import SatisfactionGuarantee from "@/layouts/components/homepage/SatisfactionGuarantee.astro";
 import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Service from "@/layouts/components/services/Service.astro";
 import Base from "@/layouts/Base.astro";
@@ -51,7 +52,8 @@ const callToAction = (await getEntry(
   }
   {testimonial.enable && <Testimonial testimonial={testimonial} />}
   <ReviewBadges reviews={hero.reviews} />
-  {about.enable && <About about={about} />}
   {blog.enable && <Blog blog={blog} allBlogs={allBlogs} />}
+  <SatisfactionGuarantee />
+  {about.enable && <About about={about} />}
   <CallToAction cta={callToAction.data} />
 </Base>
