@@ -1,0 +1,624 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'upholstery-cleaning', 'tile-grout-cleaning'].includes(s.id)
+).slice(0, 3);
+
+const title = "Pet Urine & Odor Removal";
+const meta_title = "Pet Urine & Odor Removal Phoenix | P.U.R.T.® Treatment | Brimley's";
+const description = "Eliminate pet urine odors permanently with P.U.R.T.® treatment in Phoenix & Mesa. Destroys urine crystals, not just masks odors. Guaranteed results!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Pet Urine & Odor Removal" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Pet Urine & Odor Removal
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Eliminate Pet Odors **Permanently**<br class='hidden lg:block' /> with P.U.R.T.® Treatment"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        P.U.R.T.® destroys urine crystals at the molecular level—it doesn't just mask odors.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🔬
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Molecular-Level Treatment</div>
+            <div class="text-xs md:text-sm text-gray-600">Destroys urine crystals, not just masks odors</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💡
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">UV Light Inspection</div>
+            <div class="text-xs md:text-sm text-gray-600">Finds hidden urine spots invisible to the eye</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🐾
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Safe for Pets & Kids</div>
+            <div class="text-xs md:text-sm text-gray-600">Non-toxic formula safe for your whole family</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ✅
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Odor-Free Guarantee</div>
+            <div class="text-xs md:text-sm text-gray-600">Backed by our 100% satisfaction promise</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Problem
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Traditional Cleaners **Fail** on Pet Urine"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Here's the truth: when your pet has an accident, the urine doesn't just stay on the surface. It penetrates deep into the carpet fibers, soaking into the padding and even reaching the subfloor. As it dries, it forms uric acid crystals that bond to the carpet at the molecular level.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Traditional cleaners—even professional steam cleaning—only mask the odor temporarily. They can't break down these urine crystals. So when humidity rises or the area gets wet again, those crystals reactivate and the smell comes roaring back. It's not just unpleasant—it's embarrassing, and it tells your pets "this is the bathroom."
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              The longer urine sits, the worse it gets. Bacteria feed on the uric acid, intensifying the smell and permanently staining your carpet. You need a solution that destroys the source of the odor, not just covers it up.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution: P.U.R.T. Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="P.U.R.T.® **Destroys** Urine Crystals at the Source"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <h3 class="text-2xl font-semibold text-dark mb-4" data-aos="fade-up-sm" data-aos-delay="100">
+            Pet Urine Removal Treatment: Revolutionary Chemistry That Works
+          </h3>
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="150">
+            P.U.R.T.® (Pet Urine Removal Treatment) isn't a cover-up—it's a permanent solution. Developed by Chem-Dry scientists, P.U.R.T.® uses advanced chemistry to break down urine crystals at the molecular level, eliminating odors completely and permanently. No other carpet cleaning company has this proprietary formula.
+          </p>
+        </div>
+
+        <!-- How P.U.R.T. Works -->
+        <div class="bg-light p-8 rounded-lg mb-12" data-aos="fade-up-sm" data-aos-delay="200">
+          <h3 class="text-2xl font-semibold text-dark mb-6 text-center">How P.U.R.T.® Works</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Step 1 -->
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <span class="text-primary font-bold text-2xl">1</span>
+              </div>
+              <h4 class="text-lg font-semibold text-dark mb-2">UV Light Detection</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                We use professional-grade UV light to identify all urine contamination—including spots you never knew existed. Even old, dried stains light up under UV inspection.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <span class="text-primary font-bold text-2xl">2</span>
+              </div>
+              <h4 class="text-lg font-semibold text-dark mb-2">Deep Penetration</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                P.U.R.T.® is applied directly to contaminated areas, penetrating deep into the carpet, padding, and subfloor—reaching every place the urine reached.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <span class="text-primary font-bold text-2xl">3</span>
+              </div>
+              <h4 class="text-lg font-semibold text-dark mb-2">Molecular Breakdown</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                The treatment breaks down uric acid crystals at the molecular level, eliminating the source of the odor permanently—not just masking it.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="bg-primary/5 p-8 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="250">
+          <h3 class="text-2xl font-semibold text-dark mb-6 text-center">The Results Speak for Themselves</h3>
+          <ul class="space-y-3 text-base text-text/80 max-w-[45rem] mx-auto">
+            <li class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span><strong>Complete odor elimination</strong> – No more embarrassing pet smells</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span><strong>Works on old and new stains</strong> – Even years-old urine damage can be treated</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span><strong>Prevents repeat accidents</strong> – Removes the scent markers that tell pets to go again</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span><strong>Safe for your family</strong> – Non-toxic formula approved for homes with children and pets</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span><strong>Guaranteed results</strong> – If the odor isn't gone, we'll retreat at no charge</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiator Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Difference
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Only **Chem-Dry** Has P.U.R.T.®"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              P.U.R.T.® is a proprietary formula developed exclusively by Chem-Dry. You can't get it anywhere else. While other companies use enzyme cleaners or deodorizers that only mask odors, P.U.R.T.® actually destroys the source of the smell.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              This isn't a spray-and-pray solution. It's backed by years of research and testing in Chem-Dry's laboratory, and it's proven effective on even the most severe pet urine contamination. That's why we can offer our odor-free guarantee: if the smell isn't gone, we'll come back and retreat the area at no additional charge. No other carpet cleaner can make that promise with confidence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" data-aos="fade-up-sm" data-aos-delay="200">
+          <!-- Other Cleaners -->
+          <div class="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+            <h4 class="text-lg font-semibold text-dark mb-4">Traditional Pet Odor Treatments</h4>
+            <ul class="space-y-3 text-sm text-text/80">
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Uses generic enzyme cleaners or deodorizers</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Only masks odors temporarily</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Can't penetrate deep into padding and subfloor</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Odors return when humidity rises</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>No UV detection to find hidden stains</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>No guarantee of odor elimination</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Chem-Dry P.U.R.T. -->
+          <div class="bg-primary/5 p-6 rounded-lg border-2 border-primary/20">
+            <h4 class="text-lg font-semibold text-dark mb-4">Chem-Dry P.U.R.T.® Treatment</h4>
+            <ul class="space-y-3 text-sm text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Proprietary formula exclusive to Chem-Dry</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Destroys urine crystals at molecular level</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Penetrates carpet, padding, and subfloor</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Eliminates odors permanently, not temporarily</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>UV light inspection finds every hidden spot</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Backed by our odor-free guarantee</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Real Results
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Pet Owners **Love** P.U.R.T.®"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Don't just take our word for it. Here's what Phoenix Valley pet owners are saying about our P.U.R.T.® treatment:
+          </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Brimley's did a fantastic job! I didn't think the dog urine smell would come out but it did! Our carpets were clean and fresh and no dog odor! The technician was polite, thorough and professional. I will use them again and would definitely recommend, especially if you have pets."
+            </p>
+            <p class="text-sm font-semibold text-dark">Kelly Terrill</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Our technician came in and did an amazing job on our carpet that our dog decided was an appropriate bathroom. He was on time and extremely professional. I will definitely recommend Brimley's White Glove to anyone looking to get their carpets cleaned."
+            </p>
+            <p class="text-sm font-semibold text-dark">Aisha Malone</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "What a great job David did on my 22 yr old carpets. He made them look like new and got rid of my puppy's little accidents. Stain and odor are gone. Thank you Brimley's. I'm glad I took my friend's recommendation and went with them."
+            </p>
+            <p class="text-sm font-semibold text-dark">Pat Smykowski</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Promise
+          </p>
+          <CustomHeading
+            as="h2"
+            text="100% Odor-Free **Guarantee**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              We stand behind P.U.R.T.® with a simple promise: if the pet urine odor isn't completely gone after treatment, we'll return and retreat the affected areas at no additional charge. No questions asked. No fine print.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              That's how confident we are in this treatment. We've seen it eliminate odors in homes with multiple pets, years of accidents, and even severe contamination that other companies said was "unfixable." If you've been told you need to replace your carpet because of pet odors, call us first. P.U.R.T.® might save you thousands of dollars.
+            </p>
+          </div>
+        </div>
+
+        <!-- Guarantee Box -->
+        <div class="bg-white p-8 rounded-lg border-2 border-primary/20 shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+          <div class="flex items-start gap-6">
+            <div class="flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-dark mb-4">Our Odor-Free Guarantee</h3>
+              <p class="text-base leading-relaxed text-text/80 mb-4">
+                If you can still detect pet urine odor after your P.U.R.T.® treatment, contact us within 30 days and we'll return to retreat the area at no additional cost. Your satisfaction is guaranteed—that's the Brimley's White Glove promise.
+              </p>
+              <p class="text-sm text-text/70 italic">
+                Note: Severely contaminated areas may require carpet padding replacement in addition to P.U.R.T.® treatment. We'll assess the extent of contamination during our UV inspection and provide honest recommendations before any work begins.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Pet-Friendly Cleaning
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Services for **Pet Owners**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            P.U.R.T.® works best when combined with our other pet-safe cleaning services:
+          </p>
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🧹</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Deep Clean Your Carpets</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Carpet Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              After P.U.R.T.® treatment, our Hot Carbonating Extraction removes dirt, dander, and allergens from your entire carpet. It's safe for pets, dries in 1-2 hours, and leaves no sticky residue to attract new dirt.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Upholstery -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Pet-Friendly Furniture</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Upholstery Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Pets love your furniture as much as you do. Remove pet hair, dander, oils, and odors from sofas, chairs, and cushions with our gentle, effective upholstery cleaning process.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Upholstery Cleaning →
+            </a>
+          </div>
+
+          <!-- Specialty Stain Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Stubborn Stains?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Specialty Stain Removal</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              From vomit and feces to mud and blood, we've seen it all. Our specialty stain removal treatments tackle the toughest pet-related stains that regular cleaning can't handle.
+            </p>
+            <a href="/services/specialty-stain-removal" class="text-primary font-semibold hover:underline">
+              Learn More About Stain Removal →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Questions About **P.U.R.T.®**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">What is P.U.R.T.® and how does it work?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              P.U.R.T.® (Pet Urine Removal Treatment) is a proprietary formula developed by Chem-Dry that breaks down urine crystals at the molecular level. Unlike enzyme cleaners or deodorizers that just mask odors, P.U.R.T.® actually destroys the source of the smell, eliminating odors permanently.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Will P.U.R.T.® work on old urine stains?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. P.U.R.T.® is effective on both new and old urine contamination. We've successfully treated urine stains that are years old. Using UV light detection, we can find and treat even dried stains you didn't know existed. The sooner you treat it, the better the results, but old stains can still be eliminated.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Is P.U.R.T.® safe for my pets and kids?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. P.U.R.T.® is non-toxic and safe for your entire family, including children and pets. There are no harsh chemicals or dangerous fumes. Once the treatment dries, your pets can safely walk on the treated areas without any concerns.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does the P.U.R.T.® treatment take to dry?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Drying time varies based on contamination severity, but most areas are dry within 24-48 hours. P.U.R.T.® must penetrate deep into the carpet padding and subfloor to reach all urine crystals, so it takes longer to dry than surface cleaning. We recommend keeping pets off treated areas until fully dry.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">What if I have multiple pets or severe contamination?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We specialize in severe pet urine contamination. Using UV light, we'll assess the full extent of the damage and provide honest recommendations. In extreme cases, carpet padding may need replacement, but P.U.R.T.® can treat the subfloor and remaining carpet to eliminate odors completely.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does P.U.R.T.® treatment cost?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing depends on the size and severity of contamination. After a UV inspection, we'll provide a clear, honest estimate before any work begins. P.U.R.T.® is an investment, but it's far less expensive than replacing carpet or living with embarrassing pet odors. Many customers say it saved them from having to replace their entire carpet.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Will P.U.R.T.® prevent my pet from having accidents again?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              By eliminating the urine odor completely, P.U.R.T.® removes the scent markers that tell your pet "this is the bathroom." This significantly reduces the likelihood of repeat accidents in the same spot. However, proper pet training and addressing underlying behavioral or medical issues are also important.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you guarantee the odor will be gone?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. We stand behind P.U.R.T.® with our odor-free guarantee. If you can still detect pet urine odor after treatment, we'll return and retreat the area at no additional charge within 30 days. Your satisfaction is our priority.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

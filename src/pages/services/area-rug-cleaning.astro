@@ -1,0 +1,620 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'upholstery-cleaning', 'pet-urine-removal'].includes(s.id)
+).slice(0, 3);
+
+const title = "Area Rug Cleaning";
+const meta_title = "Area Rug Cleaning Phoenix & Mesa | Persian, Oriental & Fine Rugs";
+const description = "Professional area rug cleaning in Phoenix. Safe for Persian, Oriental, wool & silk rugs. Expert care, quick drying. 25+ years experience. Free quote!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Area Rug Cleaning" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Area Rug Cleaning
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Gentle Yet **Thorough** Cleaning<br class='hidden lg:block' /> for Your Fine Rugs"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Expert care for Persian, Oriental, wool, silk, and synthetic area rugs. Safe cleaning that protects your investment.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🧵
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Safe for Delicate Fibers</div>
+            <div class="text-xs md:text-sm text-gray-600">Persian, Oriental, wool, and silk rugs</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💎
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Protects Your Investment</div>
+            <div class="text-xs md:text-sm text-gray-600">Extends the life of valuable rugs</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ⏱️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Quick Drying Process</div>
+            <div class="text-xs md:text-sm text-gray-600">Prevents color bleeding and mildew</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🚚
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Pickup & Delivery Available</div>
+            <div class="text-xs md:text-sm text-gray-600">For large or valuable rugs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Problem
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Area Rugs Need **Different** Care Than Wall-to-Wall Carpet"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Your area rugs—whether they're treasured Persian heirlooms, handwoven Oriental rugs, or modern synthetic pieces—require specialized care that most carpet cleaners can't provide. The wrong cleaning method can cause permanent damage.
+            </p>
+          </div>
+        </div>
+
+        <!-- Common Problems Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-dark mb-3">Harsh Cleaners Damage Delicate Fibers</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Traditional steam cleaning uses harsh chemicals and excessive water that can damage wool, silk, and natural fibers, causing shrinkage, color bleeding, and fiber damage.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-dark mb-3">Over-Wetting Causes Color Bleeding</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Soaking rugs with water can cause dyes to bleed and run, especially in hand-dyed Oriental and Persian rugs. This damage is often permanent and destroys the rug's value.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-dark mb-3">Slow Drying Promotes Mold Growth</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              When rugs stay wet for days, mold and mildew can develop in the fibers and backing, creating health hazards and permanent odors that are nearly impossible to remove.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-dark mb-3">Dirt Gets Trapped Deep in Fibers</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Surface cleaning doesn't remove ground-in dirt, allergens, and dust mites that settle deep into rug fibers. This buildup damages fibers over time and affects your indoor air quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Specialized Area Rug **Cleaning** Process"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Our specialized area rug cleaning process is designed to safely clean even the most delicate and valuable rugs. We use gentle, effective methods that remove deep dirt and allergens while protecting fibers, dyes, and backing materials.
+          </p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="space-y-8">
+          <!-- Step 1 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Inspection & Fiber Identification</h4>
+              <p class="text-base text-text/80">
+                We begin with a thorough inspection to identify fiber types, construction methods, and any existing damage or areas of concern. This allows us to customize our cleaning approach for your specific rug.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Pre-Treatment of Stains & High-Traffic Areas</h4>
+              <p class="text-base text-text/80">
+                We apply specialized, pH-balanced pre-treatments to spots, stains, and high-traffic areas. These solutions are specially formulated to be safe for delicate fibers while effectively breaking down dirt and stains.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Hot Carbonating Extraction Cleaning</h4>
+              <p class="text-base text-text/80">
+                Our signature Hot Carbonating Extraction process uses millions of carbonating bubbles to lift dirt and allergens to the surface without over-wetting the rug. This method uses about 80% less water than traditional steam cleaning, protecting your rug from color bleeding and mildew.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="250">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">4</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Quick-Drying Process</h4>
+              <p class="text-base text-text/80">
+                Because we use minimal water, most rugs dry within a few hours—not days. This quick drying prevents color bleeding, mold growth, and the musty odors associated with over-wet rugs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="300">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">5</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Optional In-Plant Cleaning for Valuable Rugs</h4>
+              <p class="text-base text-text/80">
+                For extremely valuable or delicate rugs (such as antique Persian or Oriental rugs), we offer pickup and in-plant cleaning. This allows for more controlled cleaning, thorough inspection, and specialized treatments in our dedicated facility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes Us Different Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Expertise
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Experience with **All** Rug Types"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            With over 25 years of experience serving Phoenix Valley families, we've cleaned thousands of area rugs of every type and material. Our technicians are trained in the specialized care required for each rug type.
+          </p>
+        </div>
+
+        <!-- Rug Types Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Persian Rugs -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold text-dark mb-3">Persian & Oriental Rugs</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Hand-knotted rugs with natural dyes require gentle care. We understand the delicate nature of these heirlooms and use methods that preserve their beauty and value.
+            </p>
+          </div>
+
+          <!-- Wool Rugs -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold text-dark mb-3">Wool Rugs</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Wool is durable but can be damaged by harsh chemicals and excessive water. Our process cleans deeply while maintaining the natural oils that keep wool soft and resilient.
+            </p>
+          </div>
+
+          <!-- Silk Rugs -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold text-dark mb-3">Silk & Delicate Rugs</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Silk rugs require the most delicate care. We use specialized pH-balanced solutions and gentle extraction to clean without damaging these precious fibers.
+            </p>
+          </div>
+
+          <!-- Synthetic Rugs -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold text-dark mb-3">Synthetic & Polypropylene Rugs</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Modern synthetic rugs benefit from our carbonating process, which removes deep dirt and allergens while maintaining the rug's appearance and texture.
+            </p>
+          </div>
+
+          <!-- Natural Fiber Rugs -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold text-dark mb-3">Natural Fiber Rugs (Jute, Sisal, Seagrass)</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Natural fibers can be damaged by excessive moisture. Our low-moisture process is ideal for these rugs, preventing shrinkage and deterioration.
+            </p>
+          </div>
+
+          <!-- Antique Rugs -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-lg font-semibold text-dark mb-3">Antique & Vintage Rugs</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Antique rugs deserve special attention. We assess condition, identify weak areas, and use gentle methods to clean without causing further wear or damage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Neighbors** in Phoenix & Mesa"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "James was great! Very prompt, professional and did a great job on my bedroom carpets and area rug. Scheduling was a breeze and they got me scheduled within a couple days. My carpets were dry within a few hours and they look and smell fresh and clean. I will definitely use them again and would also highly recommend them."
+            </p>
+            <p class="text-sm font-semibold text-dark">Chris O'Keefe</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Our tech was very professional and cleaned two bedrooms that had carpet, three large area rugs and two runners, in just a couple of hours. After drying over night, our carpet and rugs look brand new! I would highly recommend Brimley's White Glove!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Vicki Lahman</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Rugs were picked up as scheduled and price quote was honored even though it was under quoted. Rugs were returned early to assure they were in time for Thanksgiving. The rugs are 25 years old and look like new after their cleaning. Staff very professional and friendly. I highly recommend them for your floor or carpet cleaning."
+            </p>
+            <p class="text-sm font-semibold text-dark">Selma Kendrick, Mesa, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Satisfaction Guarantee Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border-2 border-primary/20">
+          <div class="text-center">
+            <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+
+            <CustomHeading
+              as="h2"
+              text="Our **Satisfaction** Guarantee"
+              svgColor="text-primary"
+              class="text-3xl md:text-4xl font-bold text-dark mb-4"
+              dataAos="fade-up-sm"
+            />
+
+            <p class="text-lg leading-relaxed text-text/80 mb-6">
+              We stand behind every area rug cleaning with our 30-day satisfaction guarantee. If you're not completely happy with the results, we'll return to re-clean at no charge. Your complete satisfaction is our priority—that's the "white glove" promise.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <CustomButton
+                label="Schedule Your Rug Cleaning"
+                link="#contact-form"
+                variant="primary"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Cleaning Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Than Just **Area Rugs**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Wall-to-Wall Carpet?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Carpet Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our Hot Carbonating Extraction process dries in 1-2 hours and removes 98% of allergens. Perfect for homes with kids and pets. Deep clean without the long wait.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Upholstery -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Dirty Upholstery?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Upholstery Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              The same gentle, effective cleaning process works beautifully on sofas, chairs, and other upholstery. Remove years of body oils, dust, and allergens while protecting your furniture investment.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Upholstery Cleaning →
+            </a>
+          </div>
+
+          <!-- Pet Urine Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🐾</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Pet Accidents on Your Rug?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Pet Urine Removal Treatment (P.U.R.T.®)</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Traditional cleaners mask pet odors. Our P.U.R.T.® treatment uses advanced chemistry to destroy urine crystals at their source, eliminating odors permanently—not just covering them up.
+            </p>
+            <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
+              Learn More About Pet Stain & Odor Removal →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">What types of rugs can you clean?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We clean all types of area rugs including Persian, Oriental, wool, silk, synthetic, jute, sisal, seagrass, antique, and modern rugs. Our technicians are trained to identify fiber types and use the appropriate cleaning method for each rug.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer pickup and delivery?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! For large or extremely valuable rugs (such as antique Persian or Oriental rugs), we offer convenient pickup and delivery service. We'll carefully transport your rug to our facility for in-plant cleaning and return it when complete.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does it take for rugs to dry?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Because our Hot Carbonating Extraction process uses about 80% less water than traditional steam cleaning, most rugs dry within a few hours—not days. This quick drying prevents color bleeding, mold growth, and musty odors.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Will cleaning damage my valuable Persian or Oriental rug?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our cleaning process is designed to be safe for even the most delicate rugs. We use pH-balanced solutions, minimal water, and gentle extraction methods that won't damage fibers, cause color bleeding, or harm the rug's backing or foundation.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove pet stains and odors from rugs?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. We offer specialized pet urine treatment using our P.U.R.T.® system, which destroys urine crystals at the molecular level. This eliminates odors permanently rather than just masking them. We can treat both fresh accidents and old, set-in stains.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">How often should I have my area rugs professionally cleaned?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We recommend professional cleaning every 12-18 months for most rugs. High-traffic rugs or those in homes with pets or children may benefit from cleaning every 6-9 months. Regular cleaning extends rug life and maintains indoor air quality.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Is your cleaning process safe for kids and pets?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. The Natural®, our primary cleaning solution, is green-certified, non-toxic, and contains no harsh chemicals or soaps. It's completely safe for your entire family—even crawling babies and curious pets. There's no need to keep anyone off the rug after cleaning.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you clean rugs on-site or at your facility?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We offer both options. For most rugs, we can clean them in your home. For extremely valuable, delicate, or heavily soiled rugs, we recommend our in-plant cleaning service where we can provide more controlled cleaning and specialized treatments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

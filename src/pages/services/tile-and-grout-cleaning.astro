@@ -1,0 +1,824 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'stone-cleaning', 'granite-renewal'].includes(s.id)
+).slice(0, 3);
+
+const title = "Tile & Grout Cleaning";
+const meta_title = "Professional Tile & Grout Cleaning in Phoenix | Brimley's White Glove";
+const description = "Expert tile, grout & stone cleaning in Phoenix & Mesa. Deep clean + optional sealing. Removes bacteria & restores shine. 25+ years experience. Free quote!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Tile and Grout Cleaning" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/tile-grout-cleaning-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Tile & Grout Cleaning
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Restore the **Shine**,<br class='hidden lg:block' /> Eliminate the Bacteria"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Professional deep cleaning for ceramic, porcelain, and natural stone tile. Optional grout sealing available.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🧼
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Deep Grout Cleaning</div>
+            <div class="text-xs md:text-sm text-gray-600">Removes ground-in dirt and bacteria</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💎
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Brings Back the Shine</div>
+            <div class="text-xs md:text-sm text-gray-600">Restores original color and luster</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🛡️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Optional Grout Sealing</div>
+            <div class="text-xs md:text-sm text-gray-600">Makes grout waterproof and easier to clean</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">All Tile Types</div>
+            <div class="text-xs md:text-sm text-gray-600">Ceramic, porcelain, natural stone</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- White Glove Promise Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The "White Glove" Promise
+          </p>
+          <CustomHeading
+            as="h2"
+            text="It's Not Just Clean... It's Brimley's **White Glove** Clean"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              You deserve to feel safe and comfortable in your own home. That's why we're a customer service company first. Our "white glove" standard means we treat your home with the same respect we'd treat our own—because when you trust us with your family's health and comfort, that trust matters more than anything.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Since 1995, we've been serving Phoenix Valley families with a level of care that goes beyond clean tile and grout. It's about peace of mind.
+            </p>
+          </div>
+        </div>
+
+        <!-- Three Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Pillar 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Trusted, Certified Technicians</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our team consists of background-checked, IICRC-certified professionals. No subcontractors, ever. Just experienced technicians who take pride in their work.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">We Protect Your Home</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We use protective booties, corner guards, and floor mats to ensure we leave your home cleaner than we found it. Your home is respected like it's our own.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Clear, Honest Pricing</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              You'll receive a firm, accurate estimate before any work begins. No pressure tactics, no hidden fees, no surprises. Just honest service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Problem
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Traditional Mopping **Doesn't Work**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <h3 class="text-2xl font-semibold text-dark mb-4" data-aos="fade-up-sm" data-aos-delay="100">
+            Grout is Porous—And It's Trapping Bacteria, Dirt, and Grime
+          </h3>
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="150">
+            When you mop your tile floors, you're really just moving dirty water around. The dirt, oils, and bacteria get pushed into the porous grout lines—where they settle deep below the surface. Over time, your grout darkens, harbors bacteria, and becomes a breeding ground for mold and mildew. No amount of scrubbing with a mop will get it truly clean.
+          </p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" data-aos="fade-up-sm" data-aos-delay="200">
+          <!-- Traditional Mopping -->
+          <div class="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+            <h4 class="text-lg font-semibold text-dark mb-4">Traditional Mopping (The "Old" Way)</h4>
+            <ul class="space-y-3 text-sm text-text/80">
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Just moves dirty water around the surface</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Pushes dirt, oils, and bacteria into grout lines</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Leaves floors feeling sticky or greasy</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Grout darkens and discolors over time</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Can't remove deep-set stains or bacteria</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Mold and mildew thrive in unsealed grout</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Chem-Dry Tile Cleaning -->
+          <div class="bg-primary/5 p-6 rounded-lg border-2 border-primary/20">
+            <h4 class="text-lg font-semibold text-dark mb-4">Chem-Dry Tile Cleaning (Our "White Glove" Way)</h4>
+            <ul class="space-y-3 text-sm text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Professional equipment extracts dirt from deep in grout</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Removes ground-in dirt, oils, and bacteria</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Leaves floors clean and residue-free</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Restores grout to its original color</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Optional grout sealing for long-term protection</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Safe, non-toxic cleaning process</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Additional Explanation -->
+        <div class="bg-light p-8 rounded-lg" data-aos="fade-up-sm" data-aos-delay="250">
+          <p class="text-base leading-relaxed text-text/80 mb-4">
+            Grout is naturally porous, which means it absorbs everything—dirt, spills, oils from cooking, bacteria from shoes and pets. Once that grime settles in, it's nearly impossible to remove with household cleaners.
+          </p>
+          <p class="text-base leading-relaxed text-text/80">
+            Our specialized tile and grout cleaning process uses professional-grade equipment to deep clean tile surfaces and extract embedded dirt from grout lines. We don't just clean the surface—we restore your floors to their original beauty. And with our optional grout sealing service, we can protect your investment and make future cleaning a breeze.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Solution Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Professional Tile Cleaning + **Grout Sealing**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Process Steps -->
+        <div class="space-y-8">
+          <!-- Step 1 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Deep Cleaning Extraction</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                We use professional rotary cleaning equipment combined with powerful extraction to remove years of built-up dirt, oils, and bacteria from your tile and grout. Our process penetrates deep into porous grout lines to extract what mopping leaves behind.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Restore Original Color and Shine</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                Watch as your tile and grout return to their original color and beauty. We'll remove the dull film and discoloration, bringing back the shine you remember from when your floors were new. Works on ceramic, porcelain, travertine, slate, marble, and more.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Optional Grout Sealing</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                After cleaning, we offer a professional grout sealing service that creates a protective barrier against future stains, spills, and bacteria. Sealed grout is waterproof, easier to clean, and stays looking fresh far longer. This is the key to keeping your tile floors beautiful for years to come.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A Healthier Home Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[75rem]">
+        <!-- Two Column Layout: Text Left, Image Right on Desktop -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          <!-- Left Column: Content -->
+          <div class="order-2 lg:order-1">
+            <!-- Eyebrow -->
+            <p class="text-sm font-semibold tracking-wider uppercase text-accent mb-3" data-aos="fade-up-sm">
+              Safe for Your Family
+            </p>
+
+            <!-- H1 -->
+            <CustomHeading
+              as="h1"
+              text="A Healthier Home **Starts** with Clean Floors"
+              svgColor="text-primary"
+              class="text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-dark mb-4 md:mb-6 leading-tight"
+              dataAos="fade-up-sm"
+              dataAosDelay="50"
+            />
+
+            <!-- H2 -->
+            <h2 class="text-lg md:text-xl text-text/80 mb-6" data-aos="fade-up-sm" data-aos-delay="100">
+              Eliminate Mold, Mildew, and Bacteria From Your Grout Lines
+            </h2>
+
+            <!-- Body Copy -->
+            <div class="space-y-4 mb-8">
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="150">
+                Your tile floors may look clean on the surface, but what's hiding in your grout? Bacteria, mold spores, allergens, and who-knows-what-else from years of foot traffic, spills, and everyday life. Because grout is porous, it traps all of this beneath the surface where you can't see it.
+              </p>
+
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="200">
+                Our professional tile and grout cleaning doesn't just make your floors look better—it makes your home healthier. We extract the bacteria and allergens that traditional mopping leaves behind, giving you a truly deep clean you can feel good about.
+              </p>
+
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="250">
+                Safe for kids, pets, and the planet. That's the Chem-Dry difference.
+              </p>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-up-sm" data-aos-delay="300">
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Removes Bacteria</p>
+                  <p class="text-xs text-text/70">Deep grout extraction</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Non-Toxic Process</p>
+                  <p class="text-xs text-text/70">Safe cleaning solutions</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Healthier Home</p>
+                  <p class="text-xs text-text/70">Eliminates mold & mildew</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Safe for Kids & Pets</p>
+                  <p class="text-xs text-text/70">Family-friendly cleaning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Image -->
+          <div class="order-1 lg:order-2">
+            <!-- Tile Cleaning Image -->
+            <div class="rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-left-sm">
+              <img
+                src="/images/tile-grout-cleaning-results.jpg"
+                alt="Before and after tile and grout cleaning results"
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- White Glove Service Details -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            What Makes Our Service "White Glove"?
+          </p>
+          <CustomHeading
+            as="h2"
+            text="The **Details** Matter"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Timeline -->
+        <div class="space-y-8">
+          <!-- Before -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Before We Arrive</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Confirmation call to review your needs and answer questions</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Clear communication about pricing and what to expect</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Flexible scheduling that works around your busy life</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- During -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">During Your Service</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Uniformed, professional technicians arrive on time</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Complete walk-through to understand your concerns</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Protective booties, corner guards, and floor protection</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Professional rotary cleaning and extraction</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Optional grout sealing for long-term protection</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Post-cleaning inspection with you to ensure satisfaction</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- After -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">After We Leave</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Care instructions for maintaining your tile and grout</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Tips for keeping sealed grout looking fresh</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Follow-up call to ensure you're completely satisfied</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Satisfaction guarantee—if you're not happy, we'll make it right</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Neighbors** in Phoenix & Mesa"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We have used Brimleys for many years to clean our carpet and our tile floors/grout. Always excellent results, on-time, efficient and fairly priced. Highly recommend."
+            </p>
+            <p class="text-sm font-semibold text-dark">Verified Customer</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Dave and David did an excellent job on the tile and grout at my home. They also cleaned some carpet and an area rug. It's amazing how much happier having clean floors can make you! The guys were very nice and professional. When you have kids, these are the type of people you want in your home."
+            </p>
+            <p class="text-sm font-semibold text-dark">Verified Customer</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "This was the second time that I sought Brimley's White Glove Chem-Dry services. The first time being for carpet cleaning. The second being for grout cleaning. Dave completed both services. His professionalism is unparalleled, as is his attention to detail. He is courteous, personable, and takes great care of the property."
+            </p>
+            <p class="text-sm font-semibold text-dark">Verified Customer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Cleaning Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Than Just **Tile & Grout**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🧼</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Dirty Carpets?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Carpet Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our Hot Carbonating Extraction process uses 80% less water than steam cleaning, dries in 1-2 hours, and removes 98% of allergens. Safe, effective, and certified green.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Stone Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🪨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Natural Stone Surfaces?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Stone Cleaning & Restoration</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Travertine, marble, slate, and other natural stone require specialized care. We clean, polish, and seal natural stone surfaces to protect your investment and restore their beauty.
+            </p>
+            <a href="/services/stone-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Stone Cleaning →
+            </a>
+          </div>
+
+          <!-- Granite Renewal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Dull Granite Countertops?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Granite Renewal Service</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Bring back the shine to your granite countertops. Our specialized granite renewal process removes buildup, restores the polish, and seals surfaces to keep them looking beautiful for years.
+            </p>
+            <a href="/services/granite-renewal" class="text-primary font-semibold hover:underline">
+              Learn More About Granite Renewal →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">How is professional tile cleaning different from mopping?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Mopping just moves dirty water around the surface and pushes grime into your grout. Professional tile cleaning uses rotary equipment and powerful extraction to remove dirt from deep within porous grout lines—something a mop simply can't do.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">What types of tile can you clean?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We clean all types of tile, including ceramic, porcelain, travertine, slate, marble, and other natural stone. Each surface requires specialized care, and our technicians are trained to handle them all safely and effectively.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Should I seal my grout?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. Unsealed grout is porous and absorbs everything—dirt, spills, bacteria. Sealing creates a waterproof barrier that prevents stains, makes cleaning easier, and extends the life of your grout. We highly recommend it after every deep cleaning.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does grout sealing last?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              With proper care, professionally sealed grout can last 3-5 years or longer. High-traffic areas may need resealing sooner. We'll inspect your grout during our service and let you know if resealing is necessary.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove stains from grout?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              In most cases, yes. Our professional cleaning process removes years of built-up dirt and stains, restoring grout to its original color. However, if grout has been permanently dyed by certain substances, we may recommend color sealing as an alternative.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does the cleaning take?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              It depends on the size of the area and the level of soiling. Most tile and grout cleaning jobs take 2-4 hours. If you add grout sealing, allow additional time for the sealant to cure. We'll provide a time estimate during your free consultation.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">When can I walk on the floors after cleaning?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Your tile floors are safe to walk on immediately after cleaning. If you opt for grout sealing, we recommend staying off the sealed areas for 2-4 hours to allow the sealant to cure properly. We'll provide specific care instructions based on your service.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer a satisfaction guarantee?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. If you're not completely satisfied with our tile and grout cleaning, let us know within 30 days and we'll return to re-clean any areas of concern at no charge. Your satisfaction is our priority—that's the "white glove" promise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
