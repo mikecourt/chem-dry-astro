@@ -77,7 +77,29 @@ function isSubstantive(text) {
   return true;
 }
 
-function processCSV(filePath, source) {
+function parseCSVLine(line) {
+  const result = [];
+  let current = '';
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+
+    if (char === '"') {
+      inQuotes = !inQuotes;
+    } else if (char === ',' && !inQuotes) {
+      result.push(current);
+      current = '';
+    } else {
+      current += char;
+    }
+  }
+  result.push(current);
+
+  return result.map(field => field.trim());
+}
+
+function processYelpCSV(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const lines = content.split('\n').slice(1); // Skip header
   const reviews = [];
@@ -85,24 +107,82 @@ function processCSV(filePath, source) {
   for (const line of lines) {
     if (!line.trim()) continue;
 
-    // Parse CSV line (basic parser)
-    const match = line.match(/^([^,]*),(?:"([^"]*)"|([^,]*)),([^,]*),(.*)$/);
-    if (!match) continue;
-
-    const reviewer = match[1].trim();
-    const text = (match[2] || match[3] || '').trim();
-    const reviewSource = match[4].trim();
-    const link = match[5].trim();
+    const fields = parseCSVLine(line);
+    // Yelp structure: 0=Photo, 1=Alias, 2=Business Name, 3=Rating, 4=Images, 5=Language, 6=Review, 11=Display Name, 12=Location
+    const text = fields[6] || '';
+    const reviewer = fields[11] || null;
+    const location = fields[12] || '';
 
     if (isSubstantive(text)) {
       reviews.push({
         review: text,
-        reviewer: reviewer || null,
-        source: reviewSource || source,
-        link: link || null,
+        reviewer: reviewer,
+        source: 'Yelp',
+        link: null,
+        messaging_pillars: detectPillars(text),
+        services: detectServices(text),
+        city: detectCity(text + ' ' + location)
+      });
+    }
+  }
+
+  return reviews;
+}
+
+function processFacebookCSV(filePath) {
+  const content = fs.readFileSync(filePath, 'utf-8');
+  const lines = content.split('\n').slice(1); // Skip header
+  const reviews = [];
+
+  for (const line of lines) {
+    if (!line.trim()) continue;
+
+    const fields = parseCSVLine(line);
+    // Facebook structure: 0=name, 1=text, 2=photo, 3=link, 4=stars
+    const reviewer = fields[0] || null;
+    const text = fields[1] || '';
+
+    if (isSubstantive(text)) {
+      reviews.push({
+        review: text,
+        reviewer: reviewer,
+        source: 'Facebook',
+        link: null,
         messaging_pillars: detectPillars(text),
         services: detectServices(text),
         city: detectCity(text)
+      });
+    }
+  }
+
+  return reviews;
+}
+
+function processCustomerLobbyCSV(filePath) {
+  const content = fs.readFileSync(filePath, 'utf-8');
+  const lines = content.split('\n').slice(1); // Skip header
+  const reviews = [];
+
+  for (const line of lines) {
+    if (!line.trim()) continue;
+
+    const fields = parseCSVLine(line);
+    // Customer Lobby structure: 0=first_name, 1=last_name, 4=city, 5=state, 7=review_body
+    const firstName = fields[0] || '';
+    const lastName = fields[1] || '';
+    const reviewer = `${firstName} ${lastName}`.trim() || null;
+    const city = fields[4] || '';
+    const text = fields[7] || '';
+
+    if (isSubstantive(text)) {
+      reviews.push({
+        review: text,
+        reviewer: reviewer,
+        source: 'CustomerLobby',
+        link: null,
+        messaging_pillars: detectPillars(text),
+        services: detectServices(text),
+        city: detectCity(text + ' ' + city)
       });
     }
   }
@@ -184,13 +264,13 @@ let allReviews = [];
 
 // Process CSV files
 console.log('Processing Yelp reviews...');
-allReviews = allReviews.concat(processCSV(path.join(testimonialDir, 'yelp-reviews.csv'), 'Yelp'));
+allReviews = allReviews.concat(processYelpCSV(path.join(testimonialDir, 'yelp-reviews.csv')));
 
 console.log('Processing Facebook reviews...');
-allReviews = allReviews.concat(processCSV(path.join(testimonialDir, 'facebook-reviews.csv'), 'Facebook'));
+allReviews = allReviews.concat(processFacebookCSV(path.join(testimonialDir, 'facebook-reviews.csv')));
 
 console.log('Processing Customer Lobby reviews...');
-allReviews = allReviews.concat(processCSV(path.join(testimonialDir, 'customer-lobby-reviews.csv'), 'CustomerLobby'));
+allReviews = allReviews.concat(processCustomerLobbyCSV(path.join(testimonialDir, 'customer-lobby-reviews.csv')));
 
 // Process JSON files
 console.log('Processing Google reviews...');
@@ -199,6 +279,11 @@ googleReviews.forEach(review => {
   if (review.source === 'Unknown') review.source = 'Google';
 });
 allReviews = allReviews.concat(googleReviews);
+
+// Filter to only include reviews with BOTH service mentions AND messaging pillars
+allReviews = allReviews.filter(review =>
+  review.services.length > 0 && review.messaging_pillars.length > 0
+);
 
 // Sort by number of messaging pillars (most valuable first)
 allReviews.sort((a, b) => {
