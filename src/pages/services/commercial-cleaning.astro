@@ -1,0 +1,656 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'upholstery-cleaning', 'tile-and-grout-cleaning'].includes(s.id)
+).slice(0, 3);
+
+const title = "Commercial Carpet Cleaning";
+const meta_title = "Commercial Carpet Cleaning Phoenix | Office & Business Cleaning";
+const description = "Professional commercial cleaning for Phoenix businesses. After-hours service, fast drying, minimal disruption. Offices, retail, medical. 25+ years experience!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Commercial Carpet Cleaning" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Commercial Carpet Cleaning
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning**<br class='hidden lg:block' /> for Phoenix Businesses"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Fast-drying, after-hours service that minimizes disruption to your business operations.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏢
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">After-Hours Available</div>
+            <div class="text-xs md:text-sm text-gray-600">Weekend and evening scheduling</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ⚡
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">1-2 Hour Dry Time</div>
+            <div class="text-xs md:text-sm text-gray-600">Minimal downtime for your business</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🛡️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Bonded & Insured</div>
+            <div class="text-xs md:text-sm text-gray-600">Background-checked technicians</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">25+ Years Experience</div>
+            <div class="text-xs md:text-sm text-gray-600">Serving Phoenix businesses since 1995</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Request Commercial Quote"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Challenge
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Dirty Carpets **Hurt** Your Business"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Your commercial space makes a first impression before you say a word. Dirty, stained carpets don't just look unprofessional—they impact your bottom line.
+          </p>
+        </div>
+
+        <!-- Problem Points -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-500">
+            <h3 class="text-xl font-semibold text-dark mb-3">Damages Professional Image</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Clients and customers judge your business by its appearance. Worn, dirty carpets suggest you don't care about details—or quality.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-500">
+            <h3 class="text-xl font-semibold text-dark mb-3">Increases Employee Sick Days</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Carpets trap allergens, dust, and bacteria that contribute to poor indoor air quality—leading to more sick days and lower productivity.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-red-500">
+            <h3 class="text-xl font-semibold text-dark mb-3">Reduces Carpet Lifespan</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Ground-in dirt acts like sandpaper, wearing down carpet fibers and forcing costly premature replacement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Cleaning That Works **Around** Your Schedule"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            We understand that business can't stop for carpet cleaning. That's why our Hot Carbonating Extraction process is designed specifically to minimize disruption while delivering superior results.
+          </p>
+        </div>
+
+        <!-- Solution Features -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Feature 1 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-3">Flexible Scheduling</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                After-hours, early morning, and weekend appointments available. We work when your business is closed so there's zero disruption to your operations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="flex gap-6" data-aos="fade-left-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-3">Fast Drying Time</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                Carpets dry in just 1-2 hours—not 1-2 days. Your staff can return to normal operations quickly, with no slippery, wet carpets creating hazards or delays.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-3">Safer, Healthier Cleaning</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                Our green-certified, non-toxic process removes 98% of allergens, improving air quality and reducing employee sick days without harsh chemical odors.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="flex gap-6" data-aos="fade-left-sm" data-aos-delay="250">
+            <div class="flex-shrink-0">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-3">Professional Results</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                Deep cleaning that makes your commercial space look its best, creating a professional environment that impresses clients and motivates employees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiator Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Why Choose Us
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Trusted by Phoenix **Businesses** Since 1995"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            For over 25 years, Phoenix area businesses have trusted us to maintain their professional appearance without disrupting their operations.
+          </p>
+        </div>
+
+        <!-- Differentiators -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Differentiator 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl">🏢</span>
+            </div>
+            <h3 class="text-lg font-semibold text-dark mb-2">25+ Years Serving Phoenix Businesses</h3>
+            <p class="text-sm text-text/80">
+              Family-owned and operated with deep roots in the Phoenix business community.
+            </p>
+          </div>
+
+          <!-- Differentiator 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl">🛡️</span>
+            </div>
+            <h3 class="text-lg font-semibold text-dark mb-2">Fully Bonded & Insured</h3>
+            <p class="text-sm text-text/80">
+              Comprehensive liability coverage and workers' compensation for your complete protection.
+            </p>
+          </div>
+
+          <!-- Differentiator 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl">👔</span>
+            </div>
+            <h3 class="text-lg font-semibold text-dark mb-2">Professional Appearance</h3>
+            <p class="text-sm text-text/80">
+              Uniformed, background-checked technicians who represent your business well to clients and staff.
+            </p>
+          </div>
+
+          <!-- Differentiator 4 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl">📋</span>
+            </div>
+            <h3 class="text-lg font-semibold text-dark mb-2">Flexible Service Plans</h3>
+            <p class="text-sm text-text/80">
+              One-time, quarterly, or custom schedules. No long-term contracts required.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities We Serve -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Commercial Facilities
+          </p>
+          <CustomHeading
+            as="h2"
+            text="We Serve All Types of **Commercial** Spaces"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Facility Types Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-3">🏢</div>
+            <h3 class="text-base font-semibold text-dark">Office Buildings</h3>
+          </div>
+
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-3">🏥</div>
+            <h3 class="text-base font-semibold text-dark">Medical Facilities</h3>
+          </div>
+
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-3">🏪</div>
+            <h3 class="text-base font-semibold text-dark">Retail Stores</h3>
+          </div>
+
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up-sm" data-aos-delay="250">
+            <div class="text-4xl mb-3">🍽️</div>
+            <h3 class="text-base font-semibold text-dark">Restaurants</h3>
+          </div>
+
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up-sm" data-aos-delay="300">
+            <div class="text-4xl mb-3">🏨</div>
+            <h3 class="text-base font-semibold text-dark">Hotels</h3>
+          </div>
+
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up-sm" data-aos-delay="350">
+            <div class="text-4xl mb-3">🏫</div>
+            <h3 class="text-base font-semibold text-dark">Schools</h3>
+          </div>
+
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up-sm" data-aos-delay="400">
+            <div class="text-4xl mb-3">⛪</div>
+            <h3 class="text-base font-semibold text-dark">Places of Worship</h3>
+          </div>
+
+          <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow" data-aos="fade-up-sm" data-aos-delay="450">
+            <div class="text-4xl mb-3">🏘️</div>
+            <h3 class="text-base font-semibold text-dark">Property Management</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="What Our **Clients** Say"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "I have used Brimley's White Glove ChemDry regularly since 2006. Over 7000 square feet, custom carpets and furniture—Brimley's is always up to the task. The technicians are punctual, polite, professional, clean-cut and respectful not only of me, but my property. Worth every penny."
+            </p>
+            <p class="text-sm font-semibold text-dark">AW, Phoenix</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "James was professional, friendly, courteous, diligent and the best at his business. You definitely feel comfortable having them in your space. They did a great job. Everything looked amazing. Highly recommend."
+            </p>
+            <p class="text-sm font-semibold text-dark">Property Manager, Mesa</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Very professional and knowledgeable technician. He was efficient and did an amazing job. Everything looks so much brighter! Tech was personable and communicated well. I would highly recommend Brimley's and will definitely use them again."
+            </p>
+            <p class="text-sm font-semibold text-dark">Office Manager, Gilbert</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-12 rounded-2xl text-center" data-aos="fade-up-sm">
+          <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <CustomHeading
+            as="h2"
+            text="Our **Satisfaction** Guarantee"
+            svgColor="text-primary"
+            class="text-3xl md:text-4xl font-bold text-dark mb-4"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-lg leading-relaxed text-text/80 mb-6 max-w-2xl mx-auto">
+            If you're not completely satisfied with our commercial cleaning service, we'll return to re-clean any areas of concern at no charge. Your satisfaction is our priority—that's our promise to Phoenix businesses.
+          </p>
+          <CustomButton
+            label="Request Your Commercial Quote"
+            link="#contact-form"
+            variant="primary"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-Sell Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Commercial Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Additional **Commercial** Services"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Residential Carpet Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              The same professional Hot Carbonating Extraction process we use for businesses, now available for your home. Fast-drying, deep-cleaning results you can trust.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Residential Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Upholstery -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Commercial Upholstery Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Keep your office furniture, waiting room chairs, and lobby seating looking professional. Remove years of buildup and extend the life of your investment.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Upholstery Cleaning →
+            </a>
+          </div>
+
+          <!-- Tile & Grout -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Tile & Grout Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Restore the professional appearance of your tile floors and eliminate bacteria in grout lines. Perfect for lobbies, restrooms, and commercial kitchens.
+            </p>
+            <a href="/services/tile-and-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Tile & Grout Cleaning →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Commercial Cleaning **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer after-hours and weekend service?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. We understand that business operations can't stop for cleaning. We offer flexible scheduling including early mornings, evenings, and weekends to minimize disruption to your business.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you require long-term contracts?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              No. We offer flexible service plans including one-time cleanings, quarterly maintenance schedules, or custom arrangements. You're never locked into a long-term contract—just quality service you can count on.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Are you bonded and insured?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. We carry comprehensive general liability insurance and workers' compensation coverage. All our technicians are background-checked, uniformed professionals who represent your business well.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">What types of commercial facilities do you clean?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We serve all types of commercial spaces including offices, medical facilities, retail stores, restaurants, hotels, schools, places of worship, and property management companies throughout the Phoenix area.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">How long will carpets take to dry?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our Hot Carbonating Extraction process uses about 80% less water than steam cleaning, so carpets typically dry in just 1-2 hours. This means minimal disruption to your business operations and faster return to normal foot traffic.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">Is your cleaning process safe for employees and customers?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. Our green-certified, non-toxic cleaning solution contains no harsh chemicals or soaps. It's safe for everyone, improves indoor air quality by removing 98% of allergens, and leaves no chemical odors that disrupt your workplace.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you handle large commercial spaces?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. We have the equipment and experience to handle commercial spaces of all sizes, from small offices to large facilities with thousands of square feet. We'll work with you to create a cleaning plan that fits your needs.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">How do I get a quote for commercial cleaning?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Contact us for a free, no-obligation quote. We'll discuss your facility's needs, square footage, and schedule preferences to provide accurate pricing. No hidden fees or surprises—just honest, professional service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

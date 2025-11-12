@@ -1,0 +1,721 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'upholstery-cleaning', 'pet-urine-removal'].includes(s.id)
+).slice(0, 3);
+
+const title = "Allergen Removal Service";
+const meta_title = "Allergen Removal Service Phoenix | Carpet Allergen Cleaning | Brimley's";
+const description = "Professional allergen removal in Phoenix & Mesa. Removes 98% of dust mites, pollen, pet dander. Healthier air quality. Safe, non-toxic. Free quote!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Allergen Removal Service" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Allergen Removal Service
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="**Breathe Easier** with Professional<br class='hidden lg:block' /> Allergen Removal for Phoenix & Mesa"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Remove 98% of common allergens from your carpets and upholstery—safe for allergy sufferers, kids, and pets.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🌿
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Removes 98% of Allergens</div>
+            <div class="text-xs md:text-sm text-gray-600">Dust mites, pollen, pet dander eliminated</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💨
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Healthier Indoor Air</div>
+            <div class="text-xs md:text-sm text-gray-600">Dramatically improves air quality</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🛡️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">EPA Safer Choice Certified</div>
+            <div class="text-xs md:text-sm text-gray-600">No harsh chemicals or toxic residues</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            👶
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Safe for Kids & Pets</div>
+            <div class="text-xs md:text-sm text-gray-600">Green-certified, non-toxic process</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Hidden Problem
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Your Carpets Are **Harboring** Millions of Allergens"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Every time you walk across your carpet, sit on your furniture, or let your kids play on the floor, you're stirring up invisible allergens that can trigger sneezing, congestion, itchy eyes, and even asthma attacks.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Carpets and upholstery act like filters, trapping allergens deep in their fibers—dust mites, pollen, pet dander, mold spores, and more. Regular vacuuming only removes surface dirt. The real culprits are hiding deep down.
+            </p>
+          </div>
+        </div>
+
+        <!-- Allergen Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Dust Mites -->
+          <div class="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-100 text-center">
+            <div class="text-4xl mb-3">🦠</div>
+            <h3 class="text-lg font-semibold text-dark mb-2">Dust Mites</h3>
+            <p class="text-sm text-text/80">
+              Microscopic creatures that feed on dead skin cells and thrive in carpets and bedding.
+            </p>
+          </div>
+
+          <!-- Pollen -->
+          <div class="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-100 text-center">
+            <div class="text-4xl mb-3">🌼</div>
+            <h3 class="text-lg font-semibold text-dark mb-2">Pollen</h3>
+            <p class="text-sm text-text/80">
+              Tracked in from outdoors and embedded deep in carpet fibers, triggering seasonal allergies year-round.
+            </p>
+          </div>
+
+          <!-- Pet Dander -->
+          <div class="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-100 text-center">
+            <div class="text-4xl mb-3">🐾</div>
+            <h3 class="text-lg font-semibold text-dark mb-2">Pet Dander</h3>
+            <p class="text-sm text-text/80">
+              Tiny flakes of skin from pets that become airborne and settle into carpets and furniture.
+            </p>
+          </div>
+
+          <!-- Mold Spores -->
+          <div class="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-100 text-center">
+            <div class="text-4xl mb-3">🍄</div>
+            <h3 class="text-lg font-semibold text-dark mb-2">Mold Spores</h3>
+            <p class="text-sm text-text/80">
+              Grow in damp conditions and release spores that can cause respiratory issues and allergic reactions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Symptoms -->
+        <div class="mt-12 bg-white p-8 rounded-lg border-2 border-primary/10" data-aos="fade-up-sm" data-aos-delay="200">
+          <h3 class="text-2xl font-semibold text-dark mb-4 text-center">Are You or Your Family Experiencing:</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <div class="flex items-center gap-2">
+              <span class="text-primary">✓</span>
+              <span class="text-base text-text/80">Frequent sneezing or runny nose</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-primary">✓</span>
+              <span class="text-base text-text/80">Itchy, watery eyes</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-primary">✓</span>
+              <span class="text-base text-text/80">Persistent cough or congestion</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-primary">✓</span>
+              <span class="text-base text-text/80">Asthma attacks or wheezing</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-primary">✓</span>
+              <span class="text-base text-text/80">Difficulty breathing at night</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-primary">✓</span>
+              <span class="text-base text-text/80">Skin irritation or rashes</span>
+            </div>
+          </div>
+          <p class="text-base leading-relaxed text-text/80 text-center mt-6">
+            If so, your carpets and upholstery could be the source of your discomfort.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hot Carbonating Extraction **Removes** 98% of Allergens"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Unlike traditional steam cleaning that uses gallons of water and leaves carpets soaked for days (creating the perfect environment for mold growth), our Hot Carbonating Extraction process uses millions of tiny carbonating bubbles to lift allergens up from deep within carpet fibers.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Independent laboratory testing has proven that Chem-Dry's Hot Carbonating Extraction removes an average of 98% of common household allergens from carpets and upholstery—and 89% of airborne bacteria when a sanitizer is added to the cleaning process.
+            </p>
+          </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="bg-light p-8 rounded-lg mb-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <h3 class="text-2xl font-semibold text-dark mb-6 text-center">How Our Allergen Removal Process Works</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <span class="text-primary font-bold text-2xl">1</span>
+              </div>
+              <h4 class="text-lg font-semibold text-dark mb-2">Carbonation Penetration</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                Millions of microscopic carbonating bubbles penetrate deep into carpet fibers, exploding allergens to the surface.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <span class="text-primary font-bold text-2xl">2</span>
+              </div>
+              <h4 class="text-lg font-semibold text-dark mb-2">Powerful Extraction</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                Our industrial-strength extraction system removes allergens, dirt, and contaminants from your carpets.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="text-center">
+              <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                <span class="text-primary font-bold text-2xl">3</span>
+              </div>
+              <h4 class="text-lg font-semibold text-dark mb-2">Fast Drying</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                Using 80% less water means carpets dry in 1-2 hours, not days—preventing mold and bacteria growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scientific Proof -->
+        <div class="bg-white p-8 rounded-lg border-2 border-gray-200" data-aos="fade-up-sm" data-aos-delay="200">
+          <div class="text-center mb-6">
+            <h3 class="text-2xl font-semibold text-dark mb-2">Scientifically Proven Results</h3>
+            <p class="text-base text-text/80">Independent laboratory testing confirms our effectiveness:</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="text-center p-6 bg-primary/5 rounded-lg">
+              <div class="text-5xl font-bold text-primary mb-2">98%</div>
+              <p class="text-base text-dark font-semibold mb-1">Allergen Removal</p>
+              <p class="text-sm text-text/70">From carpets and upholstery</p>
+            </div>
+            <div class="text-center p-6 bg-primary/5 rounded-lg">
+              <div class="text-5xl font-bold text-primary mb-2">89%</div>
+              <p class="text-base text-dark font-semibold mb-1">Airborne Bacteria</p>
+              <p class="text-sm text-text/70">Removed with sanitizer treatment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Differentiator Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[75rem]">
+        <!-- Two Column Layout: Text Left, Image Right on Desktop -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          <!-- Left Column: Content -->
+          <div class="order-2 lg:order-1">
+            <!-- Eyebrow -->
+            <p class="text-sm font-semibold tracking-wider uppercase text-accent mb-3" data-aos="fade-up-sm">
+              Safe for Your Family
+            </p>
+
+            <!-- H1 -->
+            <CustomHeading
+              as="h1"
+              text="Green-Certified & **Non-Toxic**<br class='hidden lg:block' /> Allergen Removal"
+              svgColor="text-primary"
+              class="text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-dark mb-4 md:mb-6 leading-tight"
+              dataAos="fade-up-sm"
+              dataAosDelay="50"
+            />
+
+            <!-- H2 -->
+            <h2 class="text-lg md:text-xl text-text/80 mb-6" data-aos="fade-up-sm" data-aos-delay="100">
+              EPA Safer Choice Certified. No Harsh Chemicals. Healthier Indoor Air Quality.
+            </h2>
+
+            <!-- The Natural Logo -->
+            <div class="flex items-center gap-4 mb-6" data-aos="fade-up-sm" data-aos-delay="150">
+              <img
+                src="/images/the-natural-bubbles.svg"
+                alt="The Natural by Chem-Dry"
+                class="h-16 w-auto"
+                loading="lazy"
+              />
+              <div>
+                <p class="text-base font-semibold text-dark">The Natural®</p>
+                <p class="text-sm text-text/70">Our Green-Certified Cleaning Solution</p>
+              </div>
+            </div>
+
+            <!-- Body Copy -->
+            <div class="space-y-4 mb-8">
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="200">
+                Many allergy sufferers are sensitive to harsh chemicals used in traditional cleaning products. That's why we use The Natural®—a plant-based solution certified by the EPA's Safer Choice program for human health and environmental safety.
+              </p>
+
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="250">
+                The Natural® contains no soaps, detergents, phosphates, or harsh chemicals that can trigger sensitivities or leave residues that attract dirt. Instead, it uses the power of carbonation to lift allergens naturally—the same bubbles you find in sparkling water.
+              </p>
+
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="300">
+                This means you get a deep, effective allergen removal without exposing your family to toxic chemicals. It's especially important for households with asthma sufferers, young children, or pets who spend time on carpeted floors.
+              </p>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-up-sm" data-aos-delay="350">
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">EPA Certified</p>
+                  <p class="text-xs text-text/70">Safer Choice approved</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">No Harsh Chemicals</p>
+                  <p class="text-xs text-text/70">Plant-based formula</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Healthier Air Quality</p>
+                  <p class="text-xs text-text/70">98% allergen reduction</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Safe for Kids & Pets</p>
+                  <p class="text-xs text-text/70">Non-toxic ingredients</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Images -->
+          <div class="order-1 lg:order-2 space-y-6">
+            <!-- Kids Playing Image -->
+            <div class="rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-left-sm">
+              <img
+                src="/images/kids-game-carpet.webp"
+                alt="Children playing safely on allergen-free carpet"
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- EPA Safer Choice Badge -->
+            <div class="bg-white p-6 rounded-xl shadow-lg flex items-center gap-4" data-aos="fade-left-sm" data-aos-delay="100">
+              <img
+                src="/images/epa-safer-choice.svg"
+                alt="EPA Safer Choice Certified"
+                class="h-20 w-auto flex-shrink-0"
+                loading="lazy"
+              />
+              <div>
+                <p class="text-sm font-semibold text-dark mb-1">EPA Safer Choice Certified</p>
+                <p class="text-xs leading-relaxed text-text/70">
+                  Meets the U.S. EPA's Safer Choice Standard for safety and performance.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Real Results from Real Families
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Phoenix & Mesa **Families**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "As soon as they finished the job, I immediately noticed a decrease in my allergies. It was incredible! I've been struggling with bloody noses and have been so stuffed up all week long, and this made an enormous difference!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Verified Customer, Phoenix Area</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "The carpets all feel much more fresh and the rooms smell much better with less dust and congestion causing allergens. I would definitely recommend using them and will use them again."
+            </p>
+            <p class="text-sm font-semibold text-dark">Andrew Wong, Mesa Area</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Our carpets look so clean—you wouldn't even know we have three kids, one of which is a crawling baby. The chemicals are baby and pet safe and truly clean amazingly. I would 100% recommend this company!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Verified Customer, Gilbert Area</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Satisfaction Guarantee Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <div class="bg-white p-12 rounded-2xl shadow-xl border-2 border-primary/10 text-center" data-aos="fade-up-sm">
+          <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <CustomHeading
+            as="h2"
+            text="Our **Satisfaction Guarantee**"
+            svgColor="text-primary"
+            class="text-3xl md:text-4xl font-bold text-dark mb-4"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-lg leading-relaxed text-text/80 max-w-2xl mx-auto mb-6">
+            If you're not completely satisfied with our allergen removal service, let us know within 30 days and we'll return to re-clean any areas of concern at no charge. Your family's health and comfort are our top priority.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <CustomButton
+              label="Schedule Your Allergen Removal"
+              link="#contact-form"
+              variant="primary"
+            />
+            <CustomButton
+              label="Call (480) 649-3663"
+              link="tel:+14806493663"
+              variant="secondary"
+              icon="FaPhone"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Home Health Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Ways to **Breathe Easier**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Complete Carpet Cleaning</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Carpet Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our comprehensive carpet cleaning service removes dirt, stains, and allergens while using 80% less water. Dries in 1-2 hours and stays cleaner longer.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Upholstery -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Furniture Allergen Removal</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Upholstery Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Remove allergens from sofas, chairs, and other upholstered furniture where dust mites and pet dander accumulate. Safe, gentle, and effective.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Upholstery Cleaning →
+            </a>
+          </div>
+
+          <!-- Pet Urine Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🐾</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Pet Allergen Elimination</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Pet Urine Removal Treatment (P.U.R.T.®)</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Eliminate pet urine odors and bacteria at their source with our revolutionary P.U.R.T.® treatment. Permanently destroys urine crystals and allergens.
+            </p>
+            <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
+              Learn More About Pet Urine Removal →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">How does allergen removal help with allergies and asthma?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our Hot Carbonating Extraction removes 98% of common allergens from carpet fibers—including dust mites, pollen, pet dander, and mold spores. This dramatically reduces the allergens that become airborne when you walk on carpets, leading to fewer symptoms like sneezing, congestion, and asthma attacks. Many customers report immediate improvement in their breathing and allergy symptoms.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">How often should I have allergen removal done?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              For allergy and asthma sufferers, we recommend professional allergen removal every 6-9 months. Homes with pets may benefit from even more frequent cleaning (every 4-6 months). Regular cleaning prevents allergen buildup and maintains healthy indoor air quality year-round.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Is the process safe for people with chemical sensitivities?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. Our Natural® cleaning solution is EPA Safer Choice certified and contains no harsh chemicals, soaps, or detergents that can trigger sensitivities. It's hypoallergenic, non-toxic, and safe for even the most chemically sensitive individuals. We've had customers with severe chemical sensitivities report zero reactions.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">How effective is it really? Is there scientific proof?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. Independent laboratory testing conducted by a leading environmental laboratory proves that Chem-Dry's Hot Carbonating Extraction removes an average of 98% of common household allergens from carpets and upholstery, and 89% of airborne bacteria when a sanitizer is added. These aren't marketing claims—they're scientifically verified results.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you clean upholstery and furniture too?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! The same allergen removal process works beautifully on upholstered furniture, where dust mites and pet dander accumulate. We can clean sofas, chairs, mattresses, and other furniture to remove allergens and improve your home's overall air quality.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does it take to dry?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most carpets are dry and ready for normal foot traffic in just 1-2 hours. Unlike steam cleaning that uses gallons of water and takes 1-2 days to dry (creating conditions for mold growth), our carbonation method uses about 80% less water, ensuring fast drying and preventing moisture-related allergen problems.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Is it safe for my kids and pets?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. Our process is so safe that kids and pets can be on the carpets immediately after cleaning. The Natural® is green-certified, non-toxic, and contains no harsh chemicals. It's actually safer than many household products you use every day.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">What areas do you serve?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We proudly serve the entire Phoenix Metro area, including Mesa, Gilbert, Chandler, Scottsdale, Tempe, Queen Creek, Apache Junction, San Tan Valley, and surrounding communities. If you're in the East Valley, we're here to help you breathe easier.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

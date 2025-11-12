@@ -1,0 +1,754 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'tile-and-grout-cleaning', 'stone-and-marble-care'].includes(s.id)
+).slice(0, 3);
+
+const title = "Wood Floor Cleaning";
+const meta_title = "Hardwood Floor Cleaning Phoenix & Mesa | Wood Floor Care | Brimley's";
+const description = "Professional hardwood floor cleaning in Phoenix & Mesa. Restore shine, remove ground-in dirt. Safe for all wood types. 25+ years experience. Free quote!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Wood Floor Cleaning" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Wood Floor Cleaning
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Restore the **Natural Beauty** of<br class='hidden lg:block' /> Your Hardwood Floors"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Professional wood floor cleaning that removes ground-in dirt, restores shine, and protects your finish—without damage.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ✨
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Restores Natural Shine</div>
+            <div class="text-xs md:text-sm text-gray-600">Brings back the luster and beauty of wood</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🛡️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Protects Your Finish</div>
+            <div class="text-xs md:text-sm text-gray-600">pH-balanced, wood-safe cleaning solution</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🌿
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Safe for All Wood Types</div>
+            <div class="text-xs md:text-sm text-gray-600">Hardwood, engineered, bamboo, and laminate</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ⚡
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Quick-Dry Process</div>
+            <div class="text-xs md:text-sm text-gray-600">Minimizes downtime, protects against moisture</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- White Glove Promise Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The "White Glove" Promise
+          </p>
+          <CustomHeading
+            as="h2"
+            text="It's Not Just Clean... It's Brimley's **White Glove** Clean"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Your hardwood floors are one of the biggest investments in your home. They deserve specialized care from professionals who understand how to clean them properly—without damaging the finish or leaving excess moisture that can warp the wood.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Since 1995, we've been serving Phoenix Valley families with a level of care that goes beyond clean floors. It's about preserving the beauty and longevity of your flooring investment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Three Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Pillar 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Wood Floor Specialists</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our IICRC-certified technicians are trained in proper hardwood floor cleaning techniques. We understand wood grain, finish types, and moisture sensitivity—so your floors get the care they deserve.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">We Protect Your Home</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We use protective booties, corner guards, and floor mats to ensure we leave your home cleaner than we found it. Your home is respected like it's our own.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Clear, Honest Pricing</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              You'll receive a firm, accurate estimate before any work begins. No pressure tactics, no hidden fees, no surprises. Just honest service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem with Wood Floors Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Challenge
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Wood Floors **Lose Their Shine**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <h3 class="text-2xl font-semibold text-dark mb-4" data-aos="fade-up-sm" data-aos-delay="100">
+            The Problem: Ground-In Dirt, Dull Finish, and Improper Cleaning
+          </h3>
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="150">
+            Even with regular sweeping and mopping, dirt and grit grind into your floor's finish over time, causing micro-scratches that make wood look dull and worn. Worse, many DIY cleaners leave sticky residue or use too much water, which can damage wood and dull the finish even faster.
+          </p>
+        </div>
+
+        <!-- Problem/Solution Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" data-aos="fade-up-sm" data-aos-delay="200">
+          <!-- The Problem -->
+          <div class="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+            <h4 class="text-lg font-semibold text-dark mb-4">Common Wood Floor Problems</h4>
+            <ul class="space-y-3 text-sm text-text/80">
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Dirt grinds into the finish, creating dull, scratched appearance</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Traditional mopping uses too much water (risk of warping)</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Store-bought cleaners leave sticky residue that attracts more dirt</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>High-traffic areas look worn and discolored</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Natural luster and shine disappear over time</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-red-500 flex-shrink-0">✗</span>
+                <span>Pet accidents, spills, and stains damage the finish</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The Solution -->
+          <div class="bg-primary/5 p-6 rounded-lg border-2 border-primary/20">
+            <h4 class="text-lg font-semibold text-dark mb-4">Our Professional Wood Floor Cleaning</h4>
+            <ul class="space-y-3 text-sm text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>pH-balanced, wood-safe cleaning solution removes dirt without damage</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Controlled moisture application—no soaking or warping risk</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Leaves no residue, so floors stay cleaner longer</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Restores natural shine and luster to all wood types</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Quick-dry process minimizes downtime</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span>Extends the life of your flooring investment</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Additional Context -->
+        <div class="bg-light p-8 rounded-lg" data-aos="fade-up-sm" data-aos-delay="250">
+          <p class="text-base leading-relaxed text-text/80 mb-4">
+            Our professional wood floor cleaning process is specifically designed to lift ground-in dirt from the finish without abrading or damaging the wood. We use specialized equipment and wood-safe cleaning solutions that remove dirt and grime while preserving the integrity of your floor's protective finish.
+          </p>
+          <p class="text-base leading-relaxed text-text/80">
+            Unlike steam cleaning or excessive wet mopping, our controlled process uses minimal moisture to clean effectively without saturating the wood—protecting against warping, cupping, or finish damage. The result? Beautifully clean floors that shine like new.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safe for All Wood Types Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[75rem]">
+        <!-- Two Column Layout: Text Left, Image Right on Desktop -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          <!-- Left Column: Content -->
+          <div class="order-2 lg:order-1">
+            <!-- Eyebrow -->
+            <p class="text-sm font-semibold tracking-wider uppercase text-accent mb-3" data-aos="fade-up-sm">
+              Safe for Your Floors
+            </p>
+
+            <!-- H2 -->
+            <CustomHeading
+              as="h2"
+              text="Safe for **All Wood** Floor Types"
+              svgColor="text-primary"
+              class="text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-dark mb-4 md:mb-6 leading-tight"
+              dataAos="fade-up-sm"
+              dataAosDelay="50"
+            />
+
+            <!-- H3 -->
+            <h3 class="text-lg md:text-xl text-text/80 mb-6" data-aos="fade-up-sm" data-aos-delay="100">
+              pH-Balanced. Wood-Safe. Results You Can See.
+            </h3>
+
+            <!-- Body Copy -->
+            <div class="space-y-4 mb-8">
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="150">
+                Not all wood floors are the same—and neither are the cleaning methods. Whether you have solid hardwood, engineered wood, bamboo, or laminate flooring, our specialized cleaning solutions are pH-balanced and safe for all finish types, including polyurethane, oil-based, and water-based finishes.
+              </p>
+
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="200">
+                Our process removes ground-in dirt and restores the natural beauty of your wood without harsh chemicals, excessive moisture, or abrasive scrubbing that can damage the finish. You'll see the difference immediately—floors that gleam with their original luster.
+              </p>
+
+              <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="250">
+                We also offer optional refinishing services for floors with deep scratches or worn finishes. Our team can assess your floors and recommend the best solution to restore their beauty.
+              </p>
+            </div>
+
+            <!-- Wood Types Grid -->
+            <div class="grid grid-cols-2 gap-4" data-aos="fade-up-sm" data-aos-delay="300">
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Solid Hardwood</p>
+                  <p class="text-xs text-text/70">Oak, maple, cherry, walnut</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Engineered Wood</p>
+                  <p class="text-xs text-text/70">Multi-layer construction</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Bamboo Flooring</p>
+                  <p class="text-xs text-text/70">Sustainable, eco-friendly</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-dark">Laminate Wood</p>
+                  <p class="text-xs text-text/70">Wood-look surface</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Image -->
+          <div class="order-1 lg:order-2">
+            <!-- Wood Floor Image -->
+            <div class="rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-left-sm">
+              <img
+                src="/images/kids-game-carpet.webp"
+                alt="Beautiful, professionally cleaned hardwood floors"
+                class="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- White Glove Service Details -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            What Makes Our Service "White Glove"?
+          </p>
+          <CustomHeading
+            as="h2"
+            text="The **Details** Matter"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Timeline -->
+        <div class="space-y-8">
+          <!-- Before -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Before We Arrive</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Floor assessment to determine wood type and finish</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Clear communication about pricing and what to expect</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Flexible scheduling that works around your busy life</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- During -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">During Your Service</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Uniformed, professional technicians arrive on time</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Complete inspection of your floors and problem areas</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Protective booties, corner guards, and floor protection</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Pre-treatment of stains and high-traffic areas</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Professional wood floor cleaning with specialized equipment</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Post-cleaning inspection with you to ensure satisfaction</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- After -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">After We Leave</h4>
+              <ul class="space-y-2 text-base text-text/80">
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Care instructions for maintaining your clean wood floors</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Recommendations for protecting high-traffic areas</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Follow-up call to ensure you're completely satisfied</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-primary">•</span>
+                  <span>Satisfaction guarantee—if you're not happy, we'll make it right</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Neighbors** in Phoenix & Mesa"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Dave and David did an excellent job on the tile and grout at my home. They also cleaned some carpet and an area rug. It's amazing how much happier having clean floors can make you! The guys were very nice and professional."
+            </p>
+            <p class="text-sm font-semibold text-dark">Kelly D., Scottsdale, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Our carpets were past needing a good cleaning. The house smells great and the floors are like new again! Will be having them back to do 2 area rugs and 2 more rooms! 100% recommend!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Marcy Moore, Phoenix, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We have used Brimleys for many years to clean our carpet and our tile floors/grout. Always excellent results, on-time, efficient and fairly priced. Highly recommend."
+            </p>
+            <p class="text-sm font-semibold text-dark">Sally Smith, Mesa, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Cleaning Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Than Just **Wood Floors**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Have Carpets Too?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Carpet Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our Hot Carbonating Extraction process uses 80% less water than steam cleaning, dries in 1-2 hours, and removes 98% of allergens. Get your carpets as clean as your wood floors.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Stone Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">💎</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Stone or Marble Floors?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Stone & Marble Care</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Natural stone requires specialized care. Our stone cleaning and sealing services protect your investment and restore the natural beauty of marble, travertine, granite, and more.
+            </p>
+            <a href="/services/stone-and-marble-care" class="text-primary font-semibold hover:underline">
+              Learn More About Stone Cleaning →
+            </a>
+          </div>
+
+          <!-- Tile & Grout -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Grimy Tile & Grout?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Tile & Grout Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Restore the shine to your tile floors and eliminate the bacteria hiding in grout lines. Our specialized cleaning and sealing process makes tile look like new and stay cleaner longer.
+            </p>
+            <a href="/services/tile-and-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Tile & Grout Cleaning →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">What types of wood floors can you clean?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We clean all types of wood flooring, including solid hardwood (oak, maple, cherry, walnut, hickory), engineered wood, bamboo, and laminate. Our pH-balanced cleaning solutions are safe for all finish types—polyurethane, oil-based, water-based, and wax finishes.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">How often should I have my wood floors professionally cleaned?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              For most homes, we recommend professional wood floor cleaning every 12-18 months to maintain their appearance and protect the finish. Homes with pets, children, or high foot traffic may benefit from cleaning every 6-9 months. Regular professional cleaning extends the life of your floors significantly.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Will cleaning damage my floor's finish?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely not. Our specialized wood floor cleaning process is specifically designed to clean without damaging the finish. We use pH-balanced, wood-safe cleaning solutions and controlled moisture application. Unlike harsh DIY cleaners or excessive wet mopping, our method protects and preserves your floor's finish while restoring its shine.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove scratches and deep stains?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our cleaning process effectively removes surface dirt, grime, and many light stains, restoring the floor's natural shine. For deep scratches, gouges, or stains that have penetrated the finish, we offer refinishing services. We'll assess your floors and recommend the best solution during your estimate.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does it take for floors to dry?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our quick-dry process minimizes downtime significantly. Most wood floors are dry and safe to walk on within 1-2 hours. We use controlled moisture application to clean effectively without saturating the wood—protecting against warping or finish damage.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you clean floors with pet damage?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! We can clean and treat many pet-related issues, including urine stains and odors. However, if pet accidents have penetrated through the finish into the wood, refinishing may be required. Our technicians will assess the damage and provide honest recommendations.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer a satisfaction guarantee?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. If you're not completely satisfied with our wood floor cleaning, let us know within 30 days and we'll return to re-clean any areas of concern at no charge. Your satisfaction is our priority—that's the "white glove" promise.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does wood floor cleaning cost?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing depends on the square footage, floor condition, wood type, and any special treatments needed. We provide free, no-obligation estimates with clear, honest pricing before we start—no hidden fees or surprises. Contact us today for your free quote.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
