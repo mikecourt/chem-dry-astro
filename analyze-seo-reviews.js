@@ -179,32 +179,26 @@ function processJSON(filePath) {
 }
 
 // Process all files
-const testimonialDir = path.join(__dirname, 'docs', 'testimonials');
+const testimonialDir = path.join(__dirname, 'docs', 'SEO Reviews');
 let allReviews = [];
 
 // Process CSV files
-console.log('Processing Angi reviews...');
-allReviews = allReviews.concat(processCSV(path.join(testimonialDir, 'angi-reviews.csv'), 'Angi'));
-
 console.log('Processing Yelp reviews...');
 allReviews = allReviews.concat(processCSV(path.join(testimonialDir, 'yelp-reviews.csv'), 'Yelp'));
 
 console.log('Processing Facebook reviews...');
-allReviews = allReviews.concat(processCSV(path.join(testimonialDir, 'brimleys_facebook_reviews.csv'), 'Facebook'));
+allReviews = allReviews.concat(processCSV(path.join(testimonialDir, 'facebook-reviews.csv'), 'Facebook'));
 
 console.log('Processing Customer Lobby reviews...');
 allReviews = allReviews.concat(processCSV(path.join(testimonialDir, 'customer-lobby-reviews.csv'), 'CustomerLobby'));
 
 // Process JSON files
 console.log('Processing Google reviews...');
-const googleReviews = processJSON(path.join(testimonialDir, 'google-reviews.json'));
+const googleReviews = processJSON(path.join(testimonialDir, 'combined-google-reviews.json'));
 googleReviews.forEach(review => {
   if (review.source === 'Unknown') review.source = 'Google';
 });
 allReviews = allReviews.concat(googleReviews);
-
-console.log('Processing Thumbtack reviews...');
-allReviews = allReviews.concat(processJSON(path.join(testimonialDir, 'thumbtack-reviews.json')));
 
 // Sort by number of messaging pillars (most valuable first)
 allReviews.sort((a, b) => {
@@ -236,7 +230,7 @@ allReviews.forEach(review => {
 });
 
 // Write output
-const outputPath = path.join(__dirname, 'docs', 'testimonials', 'seo-optimized-reviews.json');
+const outputPath = path.join(__dirname, 'docs', 'SEO Reviews', 'seo-optimized-reviews.json');
 fs.writeFileSync(outputPath, JSON.stringify(allReviews, null, 2));
 
 console.log(`\n✅ Analysis complete!`);
