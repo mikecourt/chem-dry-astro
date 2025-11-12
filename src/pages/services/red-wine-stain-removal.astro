@@ -1,0 +1,750 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'upholstery-cleaning', 'specialty-stain-removal'].includes(s.id)
+).slice(0, 3);
+
+const title = "Red Wine Stain Removal";
+const meta_title = "Red Wine Stain Removal Phoenix | Emergency Carpet Stain Service";
+const description = "Emergency red wine stain removal in Phoenix & Mesa. Specialized chemistry for wine stains on carpets & upholstery. Fast response. 25+ years experience!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Red Wine Stain Removal" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Emergency Badge -->
+      <div class="inline-flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full mb-4 text-center lg:text-left mx-auto lg:mx-0" data-aos="fade-up-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span class="font-bold text-sm uppercase tracking-wider">Emergency Service Available</span>
+      </div>
+
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="50"
+      >
+        Red Wine Stain Removal
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Emergency **Red Wine** Stain Removal<br class='hidden lg:block' /> in Phoenix & Mesa"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="100"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="150"
+      >
+        Time is critical. Our specialized wine stain chemistry works on fresh and old stains.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="200">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-red-600 text-white font-bold text-xl flex-shrink-0">
+            ⚡
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Fast Emergency Response</div>
+            <div class="text-xs md:text-sm text-gray-600">Call immediately for best results</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-red-600 text-white font-bold text-xl flex-shrink-0">
+            🍷
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Wine-Specific Chemistry</div>
+            <div class="text-xs md:text-sm text-gray-600">Specialized treatment for wine stains</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-red-600 text-white font-bold text-xl flex-shrink-0">
+            ✓
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Works on All Surfaces</div>
+            <div class="text-xs md:text-sm text-gray-600">Carpets, upholstery, and rugs</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-red-600 text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">25+ Years Experience</div>
+            <div class="text-xs md:text-sm text-gray-600">Phoenix Valley's trusted stain experts</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="250">
+        <CustomButton
+          label="Call Now - Time is Critical!"
+          link="tel:+14806493663"
+          variant="primary"
+          icon="FaPhone"
+        />
+        <CustomButton
+          label="Get Emergency Quote"
+          link="#contact-form"
+          variant="secondary"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem: Why Red Wine Stains Are So Feared -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-red-600 mb-3" data-aos="fade-up-sm">
+            The Problem
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Red Wine Stains Are One of the **Most Feared** Carpet Stains"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Red wine is one of the most challenging stains because it acts quickly. The tannins and chromogens in red wine bond to carpet fibers almost immediately, and the longer they sit, the deeper they set into the carpet backing.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              To make matters worse, common DIY methods—salt, club soda, white wine—often make the problem worse by spreading the stain or setting it deeper into the fibers. What starts as a fixable spill can become a permanent reminder of one bad moment.
+            </p>
+          </div>
+        </div>
+
+        <!-- The Dangers of DIY -->
+        <div class="bg-red-50 border-2 border-red-200 p-8 rounded-lg" data-aos="fade-up-sm" data-aos-delay="150">
+          <h3 class="text-2xl font-bold text-dark mb-4 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            Warning: DIY Methods Can Make It Worse
+          </h3>
+          <ul class="space-y-3 text-base text-text/80">
+            <li class="flex gap-2">
+              <span class="text-red-600 flex-shrink-0">✗</span>
+              <span><strong>Salt:</strong> Can set the stain permanently by drawing wine deeper into carpet backing</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-red-600 flex-shrink-0">✗</span>
+              <span><strong>Club Soda:</strong> Spreads the stain and dilutes it without actually removing the tannins</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-red-600 flex-shrink-0">✗</span>
+              <span><strong>White Wine:</strong> Adds more liquid and acidity, making stain removal more difficult</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-red-600 flex-shrink-0">✗</span>
+              <span><strong>Dish Soap:</strong> Leaves sticky residue that attracts more dirt and can damage fibers</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-red-600 flex-shrink-0">✗</span>
+              <span><strong>Scrubbing:</strong> Damages carpet fibers and drives the stain deeper into the backing</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution: Our Specialized Wine Stain Removal Process -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Specialized Wine Stain **Chemistry** That Works"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Unlike DIY methods that spread or set wine stains, we use professional-grade chemistry specifically designed to break down the tannins and chromogens in red wine. Our process doesn't just mask the stain—it removes it at the molecular level.
+          </p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl font-bold text-primary">1</span>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Assessment & Pre-Treatment</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We assess the stain's age, depth, and carpet type, then apply our specialized wine stain pre-treatment that begins breaking down tannins immediately.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl font-bold text-primary">2</span>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Targeted Stain Removal</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our wine-specific chemistry penetrates deep into carpet fibers, neutralizing chromogens and lifting the stain from the backing up to the surface.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl font-bold text-primary">3</span>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Hot Carbonating Extraction</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We use our powerful Hot Carbonating Extraction system to flush away dissolved tannins and wine residue, leaving carpets clean and dry in 1-2 hours.
+            </p>
+          </div>
+        </div>
+
+        <!-- What Makes Our Process Different -->
+        <div class="bg-primary/5 p-8 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="200">
+          <h3 class="text-2xl font-bold text-dark mb-6 text-center">What Makes Our Wine Stain Removal Different?</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <div>
+                <p class="font-semibold text-dark">Wine-Specific Chemistry</p>
+                <p class="text-sm text-text/80">Not generic cleaners—formulas designed for wine tannins</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <div>
+                <p class="font-semibold text-dark">Works on Fresh & Old Stains</p>
+                <p class="text-sm text-text/80">Better results when fresh, but effective on set-in stains</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <div>
+                <p class="font-semibold text-dark">Safe for All Carpet Types</p>
+                <p class="text-sm text-text/80">Color-safe, fiber-safe, effective on wool, nylon, polyester</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <div>
+                <p class="font-semibold text-dark">No Sticky Residue</p>
+                <p class="text-sm text-text/80">Stains won't reappear after treatment</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <div>
+                <p class="font-semibold text-dark">Fast Drying Time</p>
+                <p class="text-sm text-text/80">Back to normal in 1-2 hours, not days</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <div>
+                <p class="font-semibold text-dark">Works on Multiple Surfaces</p>
+                <p class="text-sm text-text/80">Carpets, upholstery, area rugs, and more</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Service & Time Sensitivity -->
+  <section class="section bg-red-50">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full mb-4" data-aos="fade-up-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="font-bold text-lg uppercase tracking-wider">Time is Critical</span>
+          </div>
+          <CustomHeading
+            as="h2"
+            text="Why **Immediate** Action Matters"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Fresh Spills -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark">Fresh Spills (0-24 Hours)</h3>
+            </div>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex gap-2">
+                <span class="text-green-500 flex-shrink-0">•</span>
+                <span>Wine hasn't fully bonded to carpet fibers yet</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-500 flex-shrink-0">•</span>
+                <span>Tannins can be neutralized and removed completely</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-500 flex-shrink-0">•</span>
+                <span>Higher success rate for complete stain removal</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-500 flex-shrink-0">•</span>
+                <span>Less aggressive treatment needed</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-500 flex-shrink-0">•</span>
+                <span><strong>Call immediately for best results</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Set-In Stains -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-left-sm" data-aos-delay="150">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-dark">Set-In Stains (24+ Hours)</h3>
+            </div>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex gap-2">
+                <span class="text-orange-500 flex-shrink-0">•</span>
+                <span>Tannins have bonded to carpet fibers</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-500 flex-shrink-0">•</span>
+                <span>Wine may have soaked into carpet backing</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-500 flex-shrink-0">•</span>
+                <span>More intensive treatment required</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-500 flex-shrink-0">•</span>
+                <span>May require multiple applications</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-orange-500 flex-shrink-0">•</span>
+                <span><strong>Still treatable—don't give up!</strong></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Emergency CTA -->
+        <div class="text-center mt-12" data-aos="fade-up-sm" data-aos-delay="200">
+          <p class="text-xl font-semibold text-dark mb-6">
+            Just spilled wine? Call us NOW for emergency service.
+          </p>
+          <CustomButton
+            label="Call (480) 649-3663 - Emergency Service"
+            link="tel:+14806493663"
+            variant="primary"
+            icon="FaPhone"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Also Effective on Other Food Dye Stains -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Bonus
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Also Works on **Other** Difficult Stains"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Our specialized stain removal chemistry isn't just for wine. The same professional-grade treatment works on other tough food dye and beverage stains.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <span class="text-3xl">🍇</span>
+            </div>
+            <p class="font-semibold text-dark">Grape Juice</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <span class="text-3xl">🍒</span>
+            </div>
+            <p class="font-semibold text-dark">Berry Stains</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <span class="text-3xl">☕</span>
+            </div>
+            <p class="font-semibold text-dark">Coffee & Tea</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <span class="text-3xl">🥤</span>
+            </div>
+            <p class="font-semibold text-dark">Soda & Juice</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <span class="text-3xl">🍫</span>
+            </div>
+            <p class="font-semibold text-dark">Chocolate</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <span class="text-3xl">🍅</span>
+            </div>
+            <p class="font-semibold text-dark">Tomato Sauce</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <span class="text-3xl">🍭</span>
+            </div>
+            <p class="font-semibold text-dark">Candy Dyes</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <span class="text-3xl">🎨</span>
+            </div>
+            <p class="font-semibold text-dark">Food Coloring</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Phoenix Homeowners Trust Us with Their **Toughest Stains**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Our white carpets had seen better days but Brimley's did an amazing job. There were some stains that were difficult to remove, but they got them out and the carpets look amazing! Phil was friendly and courteous and explained everything."
+            </p>
+            <p class="text-sm font-semibold text-dark">Mesa, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "My carpets take a beating with 5 kids and their friends running around. The first time they came they removed stains that had been there for years, I thought they were permanent! The employees are top notch, professional and work hard to get the job done."
+            </p>
+            <p class="text-sm font-semibold text-dark">Phoenix, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Dave did a fantastic job. He was very friendly and professional. He was able to remove the tough stains that had reappeared on our carpet. He explained the process well. I would definitely use your service again."
+            </p>
+            <p class="text-sm font-semibold text-dark">Gilbert, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Satisfaction Guarantee -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <div class="bg-gradient-to-br from-primary/10 to-primary/5 p-12 rounded-2xl text-center" data-aos="fade-up-sm">
+          <div class="w-20 h-20 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <CustomHeading
+            as="h2"
+            text="Our **Satisfaction Guarantee**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="max-w-[45rem] mx-auto space-y-4">
+            <p class="text-lg leading-relaxed text-text/80">
+              We'll give you an honest assessment before we begin treatment. While we can't guarantee removal of every wine stain (some may have permanently dyed the carpet fibers), we'll tell you upfront if the stain is treatable.
+            </p>
+            <p class="text-lg leading-relaxed text-text/80">
+              If we say we can remove it and you're not satisfied with the results, we'll return to re-treat the area at no charge within 30 days.
+            </p>
+            <p class="text-xl font-bold text-dark mt-6">
+              That's the "White Glove" promise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Stain Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More **Specialized** Cleaning Services"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">💧</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Complete Carpet Refresh?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Carpet Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              After treating your wine stain, refresh your entire carpet with our Hot Carbonating Extraction process. Dries in 1-2 hours, removes 98% of allergens, and leaves no sticky residue.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Upholstery -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Wine on Furniture?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Upholstery Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our specialized wine stain treatment works just as effectively on upholstery. We safely treat sofas, chairs, ottomans, and other furniture with the same proven chemistry.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Upholstery Cleaning →
+            </a>
+          </div>
+
+          <!-- Specialty Stain Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Other Tough Stains?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Specialty Stain Removal</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              From pet urine to ink to mystery stains, we have professional-grade solutions for virtually every type of carpet and upholstery stain. Each stain gets the specialized treatment it needs.
+            </p>
+            <a href="/services/specialty-stain-removal" class="text-primary font-semibold hover:underline">
+              Learn More About Specialty Stain Removal →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">How quickly do I need to call after spilling wine?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              The sooner the better. Wine stains set quickly—within hours, the tannins begin bonding to carpet fibers. Call us immediately for emergency service. Fresh spills (within 24 hours) have the highest success rate for complete removal. That said, we've successfully treated wine stains that were weeks or even months old.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove old wine stains?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! While fresh stains are easier to remove, our specialized chemistry can often remove or significantly lighten wine stains that have set in for weeks, months, or even years. We'll assess the stain and give you an honest evaluation of what we can achieve before we begin treatment.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">What should I do immediately after spilling wine?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Blot (don't rub) the stain gently with a clean white cloth or paper towel to absorb as much wine as possible. DO NOT use salt, club soda, or other DIY methods—these can set the stain. Then call us immediately. The less you do, the better we can treat it.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Does your wine stain treatment work on all carpet types?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. Our wine stain chemistry is safe and effective on all carpet types including nylon, polyester, wool, and blends. It's also color-safe, so it won't bleach or discolor your carpet. We adjust our treatment approach based on your specific carpet type for optimal results.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you treat wine stains on upholstery and rugs?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. Our specialized wine stain treatment works equally well on upholstery fabric and area rugs. We use the same professional chemistry and adjust our application method to safely treat sofas, chairs, ottomans, and decorative rugs.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">Will the stain come back after treatment?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Not with our process. Unlike DIY methods that leave soapy residue (which attracts new dirt and makes stains reappear), our Hot Carbonating Extraction removes the stain and all treatment residue. Once it's gone, it's gone for good.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does the treatment take?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              For a single wine stain, treatment typically takes 30-60 minutes including assessment, pre-treatment, extraction, and post-treatment inspection. Your carpet will be dry and ready for normal foot traffic in 1-2 hours.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer emergency or same-day service?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! We understand that wine stains are time-sensitive. We offer emergency response for fresh wine spills whenever possible. Call us immediately and we'll do everything we can to get to you the same day or within 24 hours.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="500">
+            <h3 class="text-xl font-bold text-dark mb-4">How can I prevent wine stains in the future?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Consider having your carpets treated with our fiber protector after cleaning. It creates an invisible barrier that gives you more time to blot spills before they set. We also recommend keeping white cloths handy for immediate blotting if spills occur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

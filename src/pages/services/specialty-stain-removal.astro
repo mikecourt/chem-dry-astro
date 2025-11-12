@@ -1,0 +1,793 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'pet-urine-removal', 'upholstery-cleaning'].includes(s.id)
+).slice(0, 3);
+
+const title = "Specialty Stain Removal";
+const meta_title = "Specialty Stain Removal Phoenix | Wine, Coffee, Ink & More | Brimley's";
+const description = "Expert stain removal in Phoenix & Mesa. Wine, coffee, ink, blood, grease stains removed. Specialized chemistry for tough stains. 25+ years experience. Free quote!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Specialty Stain Removal" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Specialty Stain Removal
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="**Expert** Stain Removal<br class='hidden lg:block' /> When Nothing Else Works"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Specialized treatments for wine, coffee, ink, blood, grease, and other stubborn stains.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🎯
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Stain-Specific Chemistry</div>
+            <div class="text-xs md:text-sm text-gray-600">Custom treatments for each stain type</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🧪
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Advanced Pre-Treatment</div>
+            <div class="text-xs md:text-sm text-gray-600">Specialized solutions break down tough stains</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🌿
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Safe, Non-Toxic Solutions</div>
+            <div class="text-xs md:text-sm text-gray-600">Family-friendly stain removers</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">25+ Years Experience</div>
+            <div class="text-xs md:text-sm text-gray-600">We've seen and removed it all</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Problem
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Stubborn Stains **Ruin** Your Carpets and Upholstery"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              You've tried everything—store-bought spot cleaners, DIY remedies, even aggressive scrubbing—but those stubborn stains just won't budge. In fact, improper cleaning can actually set stains deeper into carpet fibers, making them even harder (or impossible) to remove.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Red wine spills at dinner parties. Coffee accidents during busy mornings. Ink from pens. Blood from scraped knees. Grease from dropped food. Makeup smudges. Nail polish mishaps. These common household stains are nearly impossible to remove without professional-grade chemistry and expertise.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              The truth is, different stains require different treatments. What works on coffee won't work on ink. What removes grease won't touch blood. And using the wrong approach can permanently damage your carpet or upholstery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Common Stains Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up-sm" data-aos-delay="150">
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <div class="text-3xl mb-2">🍷</div>
+            <h4 class="font-semibold text-dark text-sm">Red Wine & Dye Stains</h4>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <div class="text-3xl mb-2">☕</div>
+            <h4 class="font-semibold text-dark text-sm">Coffee & Tea Stains</h4>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <div class="text-3xl mb-2">🖊️</div>
+            <h4 class="font-semibold text-dark text-sm">Ink & Marker Stains</h4>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <div class="text-3xl mb-2">🩸</div>
+            <h4 class="font-semibold text-dark text-sm">Blood Stains</h4>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <div class="text-3xl mb-2">🍔</div>
+            <h4 class="font-semibold text-dark text-sm">Grease & Oil Stains</h4>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <div class="text-3xl mb-2">💄</div>
+            <h4 class="font-semibold text-dark text-sm">Makeup & Cosmetics</h4>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <div class="text-3xl mb-2">💅</div>
+            <h4 class="font-semibold text-dark text-sm">Nail Polish</h4>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <div class="text-3xl mb-2">🐾</div>
+            <h4 class="font-semibold text-dark text-sm">Pet Stains</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Specialized **Stain Treatments** That Work"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <h3 class="text-2xl font-semibold text-dark mb-4" data-aos="fade-up-sm" data-aos-delay="100">
+            We Match the Right Chemistry to Every Stain Type
+          </h3>
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="150">
+            At Brimley's White Glove Chem-Dry, we understand stain chemistry. Our technicians are trained to identify stain types and apply the appropriate pre-treatment before our Hot Carbonating Extraction process lifts the stain completely from your carpet or upholstery fibers.
+          </p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="space-y-8">
+          <!-- Step 1 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Stain Identification & Assessment</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                Our technicians inspect each stain to determine its type, age, and severity. We'll give you an honest assessment of what's possible—some stains are permanent dyes that can't be removed, and we'll tell you upfront.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Stain-Specific Pre-Treatment</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                We apply specialized pre-treatment solutions designed for your specific stain type. Protein-based treatments for blood. Solvent-based for grease and oil. Oxidizers for dye stains. Color-safe treatments for delicate fabrics. Each stain gets exactly what it needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Dwell Time & Agitation</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                We give the pre-treatment time to work, breaking down the stain at a molecular level. For stubborn stains, we may gently agitate the area to help the solution penetrate deeper into the fibers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="250">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">4</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Hot Carbonating Extraction</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                Our signature Hot Carbonating Extraction process uses millions of carbonating bubbles to lift the loosened stain particles up through the carpet fibers, where our powerful extraction system whisks them away. The result? Stains removed completely, not just pushed deeper.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="300">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">5</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Post-Treatment & Protection (Optional)</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                For particularly stubborn stains or to prevent future staining, we can apply protective treatments that create an invisible barrier, making future spills easier to clean up before they become permanent stains.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes Us Different -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Why Choose Brimley's
+          </p>
+          <CustomHeading
+            as="h2"
+            text="What Makes Our Stain Removal **Different**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Three Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Pillar 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">25+ Years of Stain Experience</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We've encountered every type of stain imaginable. Our technicians bring decades of combined experience identifying and treating even the most challenging stains.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Custom Treatment Protocols</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We don't use a one-size-fits-all approach. Every stain gets a customized treatment protocol based on the stain type, carpet fiber, color fastness, and stain age.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Safe, Professional-Grade Chemistry</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our stain removers are powerful enough to tackle the toughest stains, yet safe for your family and pets. No harsh chemicals, no toxic fumes, no worries.
+            </p>
+          </div>
+        </div>
+
+        <!-- Honest Assessment Box -->
+        <div class="mt-12 bg-white p-8 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="200">
+          <h4 class="text-xl font-semibold text-dark mb-4 flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            We're Honest About What's Possible
+          </h4>
+          <p class="text-base leading-relaxed text-text/80">
+            Not every stain can be removed. Some substances permanently alter or dye carpet fibers—and no amount of treatment will reverse that damage. We'll give you an honest, upfront assessment before we begin. If we think a stain is permanent, we'll tell you. If there's a chance we can improve it, we'll let you know what to expect. That's the Brimley's White Glove difference—honesty, integrity, and transparency in every service.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From **Satisfied** Customers"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "I had a VERY severe stain/damage issue with carpet. To be honest, I had very low expectations because the damage was so bad. My tech Nick was great—he was on time, positive, and fairly optimistic about getting at least some of the damage out. Brimleys far exceeded my expectations on getting it to any level of clean, and actually got it to what might be considered a normal amount of clean!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Aedan Boscia, Phoenix, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Very professional and knowledgeable technician (Rob). He was efficient and did an amazing job on the carpets and an ottoman. He was able to get out the chocolate milk stains in the dining room and everything looks so much brighter! I had forgotten how good my carpets could look. I would highly recommend Brimley's and will definitely use them again!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Konnie Sheen, Phoenix, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We have used Brimley's White Glove ChemDry for years. Our tech had 15 years experience and did a fantastic job, even got our coffee stain out! We also had multiple pet stains which are gone and the house smells wonderful! This was also one of the fastest jobs performed. Our carpet looks great!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Lesa Cox, Mesa, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Results Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Important Information
+          </p>
+          <CustomHeading
+            as="h2"
+            text="When to Call for **Stain Removal**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Time Matters -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-dark mb-3">Time Matters—Act Fast</h3>
+                <p class="text-base leading-relaxed text-text/80 mb-4">
+                  The sooner you treat a stain, the better your chances of complete removal. Fresh stains are significantly easier to remove than old, set-in stains that have bonded with carpet fibers.
+                </p>
+                <ul class="space-y-2 text-base text-text/80">
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Blot (don't rub) fresh spills immediately</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Avoid over-the-counter cleaners (they can set stains)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Call us as soon as possible for best results</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Old Stains -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-dark mb-3">What About Old Stains?</h3>
+                <p class="text-base leading-relaxed text-text/80 mb-4">
+                  We've successfully removed stains that are months or even years old. While older stains are more challenging, our advanced chemistry and experience give us the best chance of improving or removing them.
+                </p>
+                <ul class="space-y-2 text-base text-text/80">
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>We'll assess old stains honestly before treatment</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Some old stains can be lightened significantly</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Others may have permanently altered the fibers</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Where We Clean -->
+        <div class="mt-8 bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+          <h3 class="text-xl font-semibold text-dark mb-4 text-center">Where We Remove Stains</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="text-4xl mb-2">🏠</div>
+              <h4 class="font-semibold text-dark mb-2">Carpets & Rugs</h4>
+              <p class="text-sm text-text/80">Wall-to-wall carpeting and area rugs of all types</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-2">🛋️</div>
+              <h4 class="font-semibold text-dark mb-2">Upholstery</h4>
+              <p class="text-sm text-text/80">Sofas, chairs, ottomans, and other fabric furniture</p>
+            </div>
+            <div>
+              <div class="text-4xl mb-2">🚗</div>
+              <h4 class="font-semibold text-dark mb-2">Auto Interiors</h4>
+              <p class="text-sm text-text/80">Car seats, carpets, and interior fabric surfaces</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Satisfaction Guarantee -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Guarantee
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Your **Satisfaction** is Guaranteed"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <div class="bg-primary/5 p-8 md:p-12 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="100">
+          <div class="max-w-[55rem] mx-auto">
+            <p class="text-lg leading-relaxed text-text/80 mb-6 text-center">
+              We stand behind our work with a 30-day satisfaction guarantee. If you're not completely satisfied with our stain removal service, we'll return to re-treat the area at no additional charge.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white p-6 rounded-lg">
+                <h4 class="font-semibold text-dark mb-3 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  What's Covered
+                </h4>
+                <ul class="space-y-2 text-sm text-text/80">
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Stains we assessed as removable</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Our workmanship and technique</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Re-treatment within 30 days if needed</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-white p-6 rounded-lg">
+                <h4 class="font-semibold text-dark mb-3 flex items-center gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  What's Not Covered
+                </h4>
+                <ul class="space-y-2 text-sm text-text/80">
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Permanent dye stains (disclosed upfront)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Fiber damage from stain substance</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Stains reappearing from improper DIY treatment</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mt-6 text-center">
+              Our goal is your complete satisfaction. If we've assessed a stain as treatable and you're not happy with the results, we'll make it right. That's the Brimley's White Glove promise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Related Services
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Complete **Cleaning Solutions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Need Full Carpet Cleaning?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Professional Carpet Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Beyond spot treatment, our Hot Carbonating Extraction process deep-cleans your entire carpet, removing embedded dirt, allergens, and odors while using about 80% less water than steam cleaning.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Pet Urine Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🐾</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Pet Urine Odors?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Pet Urine Removal Treatment (P.U.R.T.®)</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Pet urine requires specialized treatment. Our P.U.R.T.® service uses advanced chemistry to destroy urine crystals at their source, eliminating odors permanently—not just masking them.
+            </p>
+            <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
+              Learn More About Pet Urine Removal →
+            </a>
+          </div>
+
+          <!-- Upholstery -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Stained Upholstery?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Upholstery Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              The same gentle, effective stain removal process works beautifully on sofas, chairs, and other upholstery. Remove stains, body oils, and allergens while protecting your furniture investment.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Upholstery Cleaning →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove wine stains?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Red wine stains are one of the most challenging, but we've had excellent success removing them with our specialized pre-treatment and Hot Carbonating Extraction process. Fresh wine stains have the best removal rate. Old, set-in wine stains may be lightened significantly but might not be completely removable.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">What about ink stains?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Ink stain removal depends on the ink type. Ballpoint pen ink typically responds well to our solvent-based treatments. Permanent marker is more challenging and may only lighten. We'll test a small area first and give you an honest assessment before proceeding.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove old stains that have been there for months or years?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Possibly. Old stains are more difficult because they've had time to bond with carpet fibers, but we've successfully removed or significantly lightened many old stains. We'll assess the stain and give you realistic expectations before treatment.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Are your stain removers safe for kids and pets?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. Our stain treatments are non-toxic and safe for your entire family. We use the minimum effective concentration of professional-grade chemistry, and there's no need to keep kids or pets off treated areas after cleaning.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Do I need a full carpet cleaning, or can you just treat the stains?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Both options are available. We can perform spot stain removal on specific areas, though keep in mind that heavily treated spots may appear lighter than surrounding carpet until the whole area is cleaned. For best results and uniform appearance, we often recommend combining stain treatment with full carpet cleaning.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">Why can't some stains be removed?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Some substances permanently alter or dye carpet fibers at a chemical level. No amount of cleaning can reverse a permanent dye. Additionally, improper DIY treatment (especially heat or harsh chemicals) can set stains permanently. We'll always be honest about what's possible before we begin.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">What's the difference between your stain removal and DIY products?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              DIY products are designed to be safe for consumers to use without training, which means they're significantly less effective. Our professional-grade chemistry is more powerful, and our technicians know exactly which treatment to use for each stain type. Plus, improper DIY treatment can actually set stains permanently.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does stain removal cost?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing depends on the number, type, and severity of stains. Spot stain removal is typically less expensive than full carpet cleaning. We provide free, no-obligation estimates and will give you a clear price before we begin. Call (480) 649-3663 for a quote.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="500">
+            <h3 class="text-xl font-bold text-dark mb-4">What areas do you serve?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We proudly serve the entire Phoenix Metro area, including Mesa, Gilbert, Chandler, Scottsdale, Tempe, Queen Creek, Apache Junction, San Tan Valley, and surrounding communities. If you're in the East Valley, we've got you covered.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

@@ -1,0 +1,742 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['carpet-cleaning', 'tile-and-grout-cleaning', 'upholstery-cleaning'].includes(s.id)
+).slice(0, 3);
+
+const title = "Dryer Vent Cleaning";
+const meta_title = "Dryer Vent Cleaning Phoenix | Prevent Fires & Save Energy | Brimley's";
+const description = "Professional dryer vent cleaning in Phoenix & Mesa. Prevent fires, reduce drying time, lower energy bills. Safety inspection included. 25+ years experience!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Dryer Vent Cleaning" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/dryer-vent-cleaning-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Dryer Vent Cleaning
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Prevent Dryer Fires & **Save** Energy<br class='hidden lg:block' /> with Professional Vent Cleaning"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Protect your family from fire hazards while reducing drying time by up to 50% and lowering your energy bills.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🔥
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Prevent House Fires</div>
+            <div class="text-xs md:text-sm text-gray-600">15,000+ dryer fires occur annually</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ⚡
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Reduce Energy Bills</div>
+            <div class="text-xs md:text-sm text-gray-600">Cut drying time up to 50%</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🔍
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Professional Inspection</div>
+            <div class="text-xs md:text-sm text-gray-600">Complete safety assessment included</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">25+ Years Experience</div>
+            <div class="text-xs md:text-sm text-gray-600">Trusted Phoenix Valley experts</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Schedule Safety Inspection"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Hidden Danger Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-red-600 mb-3" data-aos="fade-up-sm">
+            The Hidden Danger in Your Home
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Lint Buildup is a **Fire Hazard** Hiding in Plain Sight"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Every time you run your dryer, lint escapes the filter and builds up in your dryer vent system. Over months and years, this highly flammable material accumulates, restricting airflow and creating a serious fire hazard.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              According to the U.S. Fire Administration, dryers cause over 15,000 house fires every year, resulting in $35+ million in property damage. The leading cause? Failure to clean dryer vents.
+            </p>
+          </div>
+        </div>
+
+        <!-- Warning Signs Grid -->
+        <div class="bg-red-50 border-2 border-red-200 rounded-lg p-8 mb-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <h3 class="text-2xl font-bold text-dark mb-6 text-center">Warning Signs Your Dryer Vent Needs Cleaning</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex gap-3 items-start">
+              <span class="text-red-600 text-xl flex-shrink-0">⚠️</span>
+              <div>
+                <p class="font-semibold text-dark">Clothes Take Longer to Dry</p>
+                <p class="text-sm text-text/80">What used to take one cycle now takes two or more</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-red-600 text-xl flex-shrink-0">⚠️</span>
+              <div>
+                <p class="font-semibold text-dark">Dryer Gets Very Hot</p>
+                <p class="text-sm text-text/80">The exterior of your dryer is hot to the touch</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-red-600 text-xl flex-shrink-0">⚠️</span>
+              <div>
+                <p class="font-semibold text-dark">Burning Smell</p>
+                <p class="text-sm text-text/80">You notice a burning odor when the dryer is running</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-red-600 text-xl flex-shrink-0">⚠️</span>
+              <div>
+                <p class="font-semibold text-dark">Lint Around Dryer Door</p>
+                <p class="text-sm text-text/80">Excessive lint accumulating around the door seal</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-red-600 text-xl flex-shrink-0">⚠️</span>
+              <div>
+                <p class="font-semibold text-dark">Vent Hood Flap Doesn't Open</p>
+                <p class="text-sm text-text/80">Outside vent flap remains closed while dryer runs</p>
+              </div>
+            </div>
+            <div class="flex gap-3 items-start">
+              <span class="text-red-600 text-xl flex-shrink-0">⚠️</span>
+              <div>
+                <p class="font-semibold text-dark">It's Been Over a Year</p>
+                <p class="text-sm text-text/80">You can't remember the last time it was cleaned</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up-sm" data-aos-delay="200">
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="text-4xl font-bold text-red-600 mb-2">15,000+</div>
+            <p class="text-sm text-text/80">Dryer fires per year in the U.S.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="text-4xl font-bold text-red-600 mb-2">$35M+</div>
+            <p class="text-sm text-text/80">In property damage annually</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="text-4xl font-bold text-primary mb-2">100%</div>
+            <p class="text-sm text-text/80">Preventable with regular cleaning</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Professional Dryer Vent **Cleaning** & Safety Inspection"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Our comprehensive dryer vent cleaning service removes years of dangerous lint buildup from your entire vent system—from the dryer connection to the exterior vent hood. We don't just clean what you can see; we clean the entire length of your vent line where the real danger hides.
+          </p>
+        </div>
+
+        <!-- Benefits Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Safety Benefits -->
+          <div class="bg-light p-8 rounded-lg">
+            <h3 class="text-2xl font-semibold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🛡️</span>
+              Safety Benefits
+            </h3>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Eliminate fire hazards</strong> by removing highly flammable lint</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Prevent carbon monoxide buildup</strong> in gas dryers</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Reduce risk of dryer overheating</strong> and malfunction</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Improve indoor air quality</strong> by ensuring proper ventilation</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Complete safety inspection</strong> of entire vent system</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Performance & Savings Benefits -->
+          <div class="bg-light p-8 rounded-lg">
+            <h3 class="text-2xl font-semibold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">💰</span>
+              Performance & Savings
+            </h3>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Reduce drying time up to 50%</strong> with improved airflow</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Lower energy bills</strong> with more efficient operation</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Extend dryer lifespan</strong> by reducing strain on components</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Clothes dry faster and more thoroughly</strong></span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Prevent premature dryer failure</strong> and costly repairs</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Process Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Process
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Complete Vent System **Cleaning**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            We use professional-grade equipment and proven techniques to thoroughly clean your entire dryer vent system, ensuring maximum safety and efficiency.
+          </p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="space-y-8">
+          <!-- Step 1 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Initial Inspection & Assessment</h4>
+              <p class="text-base text-text/80 mb-2">
+                We begin with a thorough inspection of your dryer vent system, checking the connection, vent line length, exterior hood, and overall condition. We identify any damage, improper installations, or safety concerns.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Disconnect & Access Points</h4>
+              <p class="text-base text-text/80 mb-2">
+                We carefully disconnect the dryer and access both the interior connection and exterior vent hood to ensure we can clean the entire length of the vent line.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Professional Rotary Brush Cleaning</h4>
+              <p class="text-base text-text/80 mb-2">
+                Using specialized rotary brush equipment, we thoroughly clean the entire length of your vent line, removing all lint, debris, and buildup from the walls of the ductwork. Our powerful vacuum system captures everything we remove.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="250">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">4</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Exterior Vent Hood Cleaning</h4>
+              <p class="text-base text-text/80 mb-2">
+                We clean the exterior vent hood, remove any bird nests or blockages, and ensure the flap operates properly to prevent pests from entering while allowing proper airflow.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="300">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">5</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Reconnection & Airflow Test</h4>
+              <p class="text-base text-text/80 mb-2">
+                We properly reconnect your dryer with secure, code-compliant fittings and perform an airflow test to ensure optimal performance and safety.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="350">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">6</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Final Inspection & Education</h4>
+              <p class="text-base text-text/80 mb-2">
+                We walk you through our findings, show you the lint we removed, provide safety recommendations, and educate you on maintenance best practices to keep your dryer running safely and efficiently.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Brimley's Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Brimley's Difference
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Choose Brimley's **White Glove** Service"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Three Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Pillar 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Safety-First Professionals</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our technicians are trained in dryer vent safety standards and use professional-grade equipment to ensure your home is protected from fire hazards.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Complete System Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We clean the entire vent system from dryer to exterior—not just what's easily accessible. Our thorough approach ensures maximum safety and efficiency.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">25+ Years of Trust</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Since 1995, Phoenix Valley families have trusted us to protect their homes. Our "white glove" service means we treat your home with the utmost care and respect.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Neighbors** in Phoenix & Mesa"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Our technician James was very professional, informative and did a thorough job. He graciously wore a mask and gave us detailed information that helped us make informed decisions. The service was excellent and our home feels much fresher and cleaner."
+            </p>
+            <p class="text-sm font-semibold text-dark">Andrew W., Phoenix, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "The technicians were punctual, polite, professional, clean-cut and respectful not only of me, but my property. They took as much time with the last room as they did the first. Their focus was on getting the job done right, not getting it done fast. I really appreciate their work and that I feel comfortable having them in the house."
+            </p>
+            <p class="text-sm font-semibold text-dark">AW, Mesa, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Jason and Nathan did such a superb job—house is smelling fresh and clean. Great work! Very professional, courteous, and efficient. Will recommend them to everyone!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Leeder K., Gilbert, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Satisfaction Guarantee Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[55rem] text-center">
+        <div class="bg-gradient-to-br from-primary/10 to-accent/10 p-12 rounded-2xl" data-aos="fade-up-sm">
+          <div class="w-20 h-20 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Satisfaction Guarantee</h2>
+          <p class="text-lg leading-relaxed text-text/80 mb-6">
+            Your safety and satisfaction are our top priorities. If you're not completely satisfied with our dryer vent cleaning service, we'll make it right—no questions asked. That's our "white glove" promise to you.
+          </p>
+          <CustomButton
+            label="Schedule Your Safety Inspection"
+            link="#contact-form"
+            variant="primary"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Home Services
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Ways to Protect Your **Home**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Healthier Carpets</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Carpet Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Remove allergens, dust, and dirt from your carpets with our Hot Carbonating Extraction process. Dries in 1-2 hours and removes 98% of allergens for healthier indoor air quality.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Carpet Cleaning →
+            </a>
+          </div>
+
+          <!-- Tile & Grout -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Cleaner Floors</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Tile & Grout Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Eliminate bacteria hiding in grout lines and restore the shine to your tile floors. Our specialized cleaning and sealing process makes tile look like new and stay cleaner longer.
+            </p>
+            <a href="/services/tile-and-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Tile & Grout →
+            </a>
+          </div>
+
+          <!-- Upholstery -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Fresh Furniture</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Upholstery Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Remove years of body oils, dust, and allergens from your furniture with the same gentle, effective cleaning process we use on carpets. Protect your furniture investment.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Upholstery →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">How often should I have my dryer vent cleaned?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              The National Fire Protection Association recommends annual dryer vent cleaning for most households. If you have a larger family, do multiple loads per week, or have pets that shed heavily, you may need cleaning every 6-9 months. Regular cleaning prevents fires and keeps your dryer running efficiently.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">What are the warning signs my dryer vent is clogged?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Key warning signs include: clothes taking longer than normal to dry, dryer getting very hot to the touch, burning smell when running, excessive lint around the dryer door, outside vent flap not opening when dryer runs, and higher energy bills. If you notice any of these, schedule cleaning immediately.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">What does your dryer vent cleaning process include?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We perform a complete system cleaning: initial safety inspection, disconnect dryer, clean entire vent line with professional rotary brushes, clean exterior vent hood, remove all lint and debris, reconnect dryer with proper fittings, conduct airflow test, and provide maintenance recommendations. We clean the entire system, not just what's easily accessible.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Can a clogged dryer vent really cause a fire?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. According to the U.S. Fire Administration, dryers cause over 15,000 house fires annually, resulting in $35+ million in property damage. The leading cause is failure to clean vents. Lint is highly flammable, and when combined with the heat from your dryer and restricted airflow, it creates a serious fire hazard. Regular cleaning eliminates this risk.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does dryer vent cleaning cost?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing depends on the length of your vent run, accessibility, and condition of the system. We provide free, no-obligation estimates and give you a clear price before we start. Most homeowners find our service is a worthwhile investment considering the fire prevention, energy savings, and extended dryer lifespan.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">What are the benefits of professional dryer vent cleaning?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Benefits include: eliminating fire hazards, reducing drying time by up to 50%, lowering energy bills, extending dryer lifespan, preventing costly repairs, improving indoor air quality, and peace of mind knowing your home is safe. It's one of the most important preventive maintenance tasks for your home.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does the cleaning take?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most dryer vent cleanings take 1-2 hours, depending on the length of the vent run and how much buildup is present. We work efficiently while ensuring thoroughness. Your dryer will be ready to use immediately after we finish.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">What areas do you serve?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We proudly serve the entire Phoenix Metro area, including Mesa, Gilbert, Chandler, Scottsdale, Tempe, Queen Creek, Apache Junction, San Tan Valley, and surrounding East Valley communities. If you're in the Phoenix area, we've got you covered.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="500">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer a guarantee?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. We stand behind our work with our satisfaction guarantee. If you're not completely satisfied with our dryer vent cleaning service, we'll make it right. Your safety and satisfaction are our top priorities—that's the Brimley's "white glove" promise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
