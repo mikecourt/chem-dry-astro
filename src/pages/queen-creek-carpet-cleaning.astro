@@ -1,0 +1,691 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Carpet Cleaning Queen Creek AZ";
+const meta_title = "Carpet Cleaning Queen Creek AZ | Professional Service | Brimley's";
+const description = "Professional carpet cleaning in Queen Creek, AZ. Trusted by growing families. Hot Carbonating Extraction, fast drying. Free quote! (480) 649-3663";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Carpet Cleaning in Queen Creek" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Queen Creek's Trusted Carpet Cleaning
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning** in<br class='hidden lg:block' /> Queen Creek, Arizona"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Proudly serving Queen Creek families in San Tan Heights, Meridian, Encanterra, and Montelena with safe, fast-drying carpet cleaning.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💧
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Dries in 1-2 Hours</div>
+            <div class="text-xs md:text-sm text-gray-600">Perfect for busy Queen Creek families</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🌿
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Safe for Kids & Pets</div>
+            <div class="text-xs md:text-sm text-gray-600">Green-certified, non-toxic cleaning</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏜️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Desert Dust Removal</div>
+            <div class="text-xs md:text-sm text-gray-600">Specialized for Arizona's environment</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">25+ Years Experience</div>
+            <div class="text-xs md:text-sm text-gray-600">Growing with the Queen Creek community</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section: Queen Creek Specific -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Queen Creek Challenge
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Your Beautiful Home **Deserves** Better"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Queen Creek is one of the fastest-growing communities in Arizona, with beautiful new homes and families who deserve the best. But our desert environment brings unique challenges.
+          </p>
+        </div>
+
+        <!-- Problem Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Desert Dust -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-4xl mb-4">🏜️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Desert Dust & Allergens</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Queen Creek's desert location means more dust and allergens settling deep into your carpet fibers. Traditional cleaning methods can't reach them all, leaving your family breathing in particles that never fully go away.
+            </p>
+          </div>
+
+          <!-- New Homes -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-4xl mb-4">🏡</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">New Homes Need Special Care</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Many Queen Creek homes are brand new with pristine carpets that need gentle, effective cleaning to maintain their beauty and warranty. Harsh steam cleaning can damage new carpet fibers and void warranties.
+            </p>
+          </div>
+
+          <!-- Large Spaces -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-4xl mb-4">📏</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Large Homes, Big Cleaning Jobs</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Queen Creek homes tend to be spacious, which means more square footage to clean. With traditional steam cleaning, that means days of waiting for carpets to dry and disruption to your daily life.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section: Perfect for Queen Creek -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Brimley's White Glove Difference
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Perfect for **Queen Creek** Homes"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Solution Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="100">
+          <!-- Experience with Newer Homes -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Experience with New Construction</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We understand Queen Creek's newer homes and the importance of maintaining your investment. Our gentle Hot Carbonating Extraction protects carpet fibers while delivering deep-down clean results.
+            </p>
+          </div>
+
+          <!-- Safe for All Carpet Types -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Safe for All Carpet Types</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              From plush Berber to luxury frieze, our process is gentle enough for delicate fibers while powerful enough to remove deep desert dust and allergens that settle in Queen Creek homes.
+            </p>
+          </div>
+
+          <!-- Thorough Service for Large Homes -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Efficient Service for Large Homes</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our fast-drying process means even large Queen Creek homes are ready for normal use in just 1-2 hours. No waiting days for your carpets to dry—get back to your life quickly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Process Highlight -->
+        <div class="mt-12 bg-primary/5 p-8 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="200">
+          <div class="text-center">
+            <h3 class="text-2xl font-semibold text-dark mb-4">The Chem-Dry Hot Carbonating Extraction Difference</h3>
+            <p class="text-base leading-relaxed text-text/80 max-w-3xl mx-auto mb-6">
+              Unlike steam cleaners that soak carpets with gallons of water, our Hot Carbonating Extraction uses millions of tiny carbonating bubbles to lift dirt and allergens to the surface—where they're whisked away. This means:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div class="bg-white p-4 rounded-lg">
+                <div class="text-primary text-3xl mb-2">80%</div>
+                <p class="text-sm font-semibold text-dark">Less Water Used</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg">
+                <div class="text-primary text-3xl mb-2">1-2</div>
+                <p class="text-sm font-semibold text-dark">Hours to Dry</p>
+              </div>
+              <div class="bg-white p-4 rounded-lg">
+                <div class="text-primary text-3xl mb-2">98%</div>
+                <p class="text-sm font-semibold text-dark">Allergen Removal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services in Queen Creek -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Cleaning Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Services for **Queen Creek** Homes"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            We offer comprehensive cleaning services designed for the unique needs of Queen Creek homes and families.
+          </p>
+        </div>
+
+        <!-- Service Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🧹</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Carpet Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our signature Hot Carbonating Extraction removes deep desert dust, allergens, and stains while using 80% less water than steam cleaning. Dries in 1-2 hours.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Pet Urine Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🐾</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Pet Urine & Odor Removal</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              P.U.R.T.® treatment destroys urine crystals at the molecular level, eliminating pet odors permanently—not just masking them. Safe for pets and kids.
+            </p>
+            <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Upholstery Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Upholstery Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Gentle yet effective cleaning for sofas, chairs, and other furniture. Removes dust, allergens, and stains while protecting your upholstery investment.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Tile & Grout -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="250">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Tile & Grout Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Restore the beauty of your tile floors. Our specialized cleaning and sealing process eliminates bacteria from grout lines and makes tile look like new.
+            </p>
+            <a href="/services/tile-and-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Area Rug Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="300">
+            <div class="text-4xl mb-4">🎨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Area Rug Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Expert cleaning for Oriental, Persian, and specialty rugs. We understand the delicate nature of fine rugs and clean them with care.
+            </p>
+            <a href="/services/area-rug-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Commercial Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="350">
+            <div class="text-4xl mb-4">🏢</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Commercial Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Professional cleaning services for Queen Creek businesses. Fast-drying means minimal disruption to your operations.
+            </p>
+            <a href="/services/commercial-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="What **Queen Creek** Families Say"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Hear from your neighbors about their experience with Brimley's White Glove Chem-Dry.
+          </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Review 1: John G. -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "On time and great job, the carpets look and smell fresh!"
+            </p>
+            <p class="text-sm font-semibold text-dark">John G., Queen Creek</p>
+            <p class="text-xs text-text/70">Verified Yelp Review</p>
+          </div>
+
+          <!-- Review 2: Laura H. -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "My experience was wonderful with this company! My carpet cleaning tech was Rob and he went above and beyond to ensure I got the correct package for carpet cleaning since I kid moved into a home where the carpets were saturated with cat urine. Rob had exceptional customer service and I am so thankful I used Brimleys White Glove Chem Dry not only because of their products but mainly because Rob's level of professionalism. Thank you Rob!!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Laura H., Queen Creek</p>
+            <p class="text-xs text-text/70">Verified Yelp Review</p>
+          </div>
+
+          <!-- Review 3: Emilie Sharum -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We were able to get same day carpet cleaning after we got into our home and realized how bad the carpets were. They were there within a few hours! The carpets looked completely different (in a great way) when they were done cleaning. The carpet we thought would need to be replaced ASAP now will last us for a few more years! So pleased with Brimley's. We will definitely be using them again!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Emilie Sharum, Queen Creek</p>
+            <p class="text-xs text-text/70">Verified Customer Review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Service Areas
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Serving **All** of Queen Creek"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            We proudly serve all Queen Creek neighborhoods and communities, including:
+          </p>
+        </div>
+
+        <!-- Neighborhoods Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <p class="font-semibold text-dark">San Tan Heights</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <p class="font-semibold text-dark">Meridian</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <p class="font-semibold text-dark">Encanterra</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow text-center">
+            <p class="font-semibold text-dark">Montelena</p>
+          </div>
+        </div>
+
+        <!-- Zip Codes -->
+        <div class="text-center" data-aos="fade-up-sm" data-aos-delay="200">
+          <p class="text-base text-text/80 mb-4">
+            <strong>Zip Codes Served:</strong> 85142, 85143
+          </p>
+          <p class="text-base text-text/80">
+            Not sure if we serve your area? Give us a call at <a href="tel:+14806493663" class="text-primary font-semibold hover:underline">(480) 649-3663</a> and we'll be happy to help!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Queen Creek Chooses Us -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Why Choose Us
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Queen Creek **Trusts** Brimley's"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Three Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="100">
+          <!-- We Understand Queen Creek -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">We Understand Queen Creek</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We've been serving Queen Creek families for years and understand the unique needs of this growing community—from the desert dust to the beautiful new homes that need special care.
+            </p>
+          </div>
+
+          <!-- Growing with the Area -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Growing with the Community</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              As Queen Creek grows, we grow with it. We're committed to being your long-term partner for all your carpet and home cleaning needs, providing consistent, reliable service.
+            </p>
+          </div>
+
+          <!-- Family Values -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Family Values Match Yours</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We're a family-owned business that shares Queen Creek's family-first values. We treat your home with the same care and respect we'd give our own—because that's what neighbors do.
+            </p>
+          </div>
+        </div>
+
+        <!-- Additional Trust Points -->
+        <div class="mt-12 bg-primary/5 p-8 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="200">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-dark mb-1">25+ Years of Experience</h4>
+                <p class="text-base text-text/80">Serving the Phoenix Valley since 1995 with the same commitment to excellence.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-dark mb-1">Same-Day Service Available</h4>
+                <p class="text-base text-text/80">Need cleaning fast? We offer same-day appointments when available.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-dark mb-1">100% Satisfaction Guaranteed</h4>
+                <p class="text-base text-text/80">If you're not completely satisfied, we'll make it right—no questions asked.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <h4 class="text-lg font-semibold text-dark mb-1">Upfront, Honest Pricing</h4>
+                <p class="text-base text-text/80">Clear estimates before we start. No hidden fees or surprise charges.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Queen Creek **Carpet Cleaning** FAQ"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does carpet cleaning take in Queen Creek?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              For an average Queen Creek home (1,800-2,500 sq ft), cleaning typically takes 1.5-3 hours depending on the number of rooms and carpet condition. Larger homes in communities like Encanterra may take longer, but we work efficiently to minimize disruption.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you use enough water for our dusty Queen Creek environment?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely! While we use 80% less water than steam cleaning, our Hot Carbonating Extraction is specifically designed to lift deep desert dust and allergens. The carbonating bubbles penetrate deep into carpet fibers to remove what other methods leave behind.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Is your cleaning safe for new carpets?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! Many Queen Creek homes have brand new carpets that need gentle care. Our process is recommended by leading carpet manufacturers and won't void warranties. In fact, regular professional cleaning is often required to maintain warranties.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">How often should I clean carpets in the desert?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Due to Queen Creek's desert environment, we recommend professional cleaning every 6-12 months. Homes with pets, children, or allergy sufferers benefit from cleaning every 6 months to combat dust and allergen buildup.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you service all Queen Creek neighborhoods?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! We proudly serve all Queen Creek areas including San Tan Heights, Meridian, Encanterra, Montelena, and all surrounding neighborhoods in zip codes 85142 and 85143.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does carpet cleaning cost in Queen Creek?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing varies based on square footage and carpet condition. We provide free, no-obligation estimates with clear, upfront pricing. Call us at (480) 649-3663 for your personalized quote.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove pet stains and odors?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! Our P.U.R.T.® treatment destroys pet urine crystals at the molecular level, eliminating odors permanently—not just covering them up. It's our most popular add-on service in Queen Creek.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">Are your products safe for my family?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. The Natural®, our primary cleaning solution, is EPA Safer Choice certified, non-toxic, and green-certified. It's completely safe for kids, pets, and your entire family.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="500">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer same-day service?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! When available, we offer same-day appointments for Queen Creek residents. Call us early in the day at (480) 649-3663 to check availability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

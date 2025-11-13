@@ -1,0 +1,731 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Carpet Cleaning Chandler AZ | Professional Service | Brimley's White Glove";
+const meta_title = "Carpet Cleaning Chandler AZ | Professional Service | Brimley's White Glove";
+const description = "Professional carpet cleaning in Chandler, AZ. Hot Carbonating Extraction, pet-safe, dries fast. Serving Chandler 25+ years. Free quote! (480) 649-3663";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Carpet Cleaning in Chandler, AZ" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Chandler's Trusted Carpet Cleaning Service
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning** in<br class='hidden lg:block' /> Chandler, Arizona"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Serving Chandler residents since 1995 with safe, fast-drying carpet cleaning for Ocotillo, Fulton Ranch, Sun Lakes, Pecos Ranch, and Chandler Heights
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💧
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">80% Less Water Used</div>
+            <div class="text-xs md:text-sm text-gray-600">Perfect for Chandler's dry climate</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏜️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Desert-Specific Care</div>
+            <div class="text-xs md:text-sm text-gray-600">Removes desert dust and allergens</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ✨
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Dries in 1-2 Hours</div>
+            <div class="text-xs md:text-sm text-gray-600">Back to normal fast</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">25+ Years in Chandler</div>
+            <div class="text-xs md:text-sm text-gray-600">Trusted by your neighbors</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Chandler-Specific Problems Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Chandler Carpet Challenges
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Carpet Cleaning **Challenges** Unique to Chandler"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Chandler's desert climate and high-quality homes present unique carpet care needs that require specialized expertise.
+          </p>
+        </div>
+
+        <!-- Problem Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Desert Climate -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3 text-center">Desert Dust & Sand</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Chandler's desert environment means constant exposure to fine dust and sand that penetrates deep into carpet fibers. Our Hot Carbonating Extraction process lifts these particles from the base of your carpet, not just the surface.
+            </p>
+          </div>
+
+          <!-- High-Quality Homes -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3 text-center">Premium Carpet Investment</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Chandler homes, from Ocotillo to Fulton Ranch, often feature high-quality carpeting. Our gentle, effective process protects your investment while delivering deep-down clean results that extend carpet life.
+            </p>
+          </div>
+
+          <!-- Allergens & Indoor Air Quality -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3 text-center">Desert Allergens</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Arizona's unique allergens—from mesquite pollen to dust mites—settle into carpets year-round. Our process removes 98% of allergens, creating a healthier indoor environment for your family.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Chandler Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Trusted Carpet Cleaning **in Chandler** Since 1995"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Three Solution Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Safe for Modern Homes -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Safe for Modern Chandler Homes</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our green-certified, non-toxic cleaning solution is perfect for Chandler families. Safe for children, pets, and all carpet types—from Pecos Ranch to Sun Lakes.
+            </p>
+          </div>
+
+          <!-- Quick-Dry Process -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Quick-Dry Process</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Using 80% less water than steam cleaning means your carpets dry in 1-2 hours, not days. Perfect for busy Chandler households that can't wait around.
+            </p>
+          </div>
+
+          <!-- Protects Your Investment -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Protects Carpet Investments</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              No harsh chemicals or excessive water means your carpets last longer. Our carbonation process is gentle on fibers while delivering powerful cleaning results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services in Chandler Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Cleaning Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Our Services **in Chandler**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            From carpet cleaning to upholstery and tile care, we offer comprehensive cleaning services for Chandler homes.
+          </p>
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Carpet Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our signature Hot Carbonating Extraction process delivers the deepest clean with the fastest dry time. Perfect for Chandler's climate and lifestyle.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Pet Urine Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🐾</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Pet Urine Removal (P.U.R.T.)</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Eliminate pet odors permanently with our revolutionary P.U.R.T.® treatment. Don't mask the smell—destroy it at the molecular level.
+            </p>
+            <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Upholstery Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Upholstery Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Refresh your furniture with the same gentle, effective carbonation process. Safe for all fabric types and dries quickly.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Tile & Grout -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="250">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Tile & Grout Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Restore your tile floors to like-new condition. Our specialized process removes embedded dirt and bacteria from grout lines.
+            </p>
+            <a href="/services/tile-and-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Area Rug Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="300">
+            <div class="text-4xl mb-4">🎨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Area Rug Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Professional cleaning for Persian, Oriental, and all fine rugs. Gentle care that preserves color and texture.
+            </p>
+            <a href="/services/area-rug-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Commercial Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="350">
+            <div class="text-4xl mb-4">🏢</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Commercial Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Keep your Chandler business looking professional. Fast dry times mean minimal disruption to your operations.
+            </p>
+            <a href="/services/commercial-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section - Chandler Specific -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="What **Chandler Residents** Are Saying"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Don't just take our word for it—hear from your Chandler neighbors who trust Brimley's White Glove Chem-Dry.
+          </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "I would hire this company again to clean my carpets! Robert came out and was friendly, courteous and professional. He left my carpets clean and smelling fresh! Prices are very reasonable and I was extremely happy with a job well done. I love my carpets again!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Marlene Sanchez, Chandler</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "The technician was on time and did an excellent job on both carpet cleaning and grout cleaning. Would definitely have him clean for us again."
+            </p>
+            <p class="text-sm font-semibold text-dark">Robert Utegg, Chandler</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Following a second visit for touch-up service, carpets looked cleaner and dried much more quickly. Carpet cleaners were polite and efficient--good representatives of the company."
+            </p>
+            <p class="text-sm font-semibold text-dark">Dolores Paeth, Chandler</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Service Areas
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Proudly Serving **All of Chandler**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto mb-8" data-aos="fade-up-sm" data-aos-delay="100">
+            We provide professional carpet cleaning services throughout Chandler, including all neighborhoods and zip codes.
+          </p>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Neighborhoods -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-right-sm">
+            <h3 class="text-2xl font-semibold text-dark mb-6">Chandler Neighborhoods</h3>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>Ocotillo</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>Fulton Ranch</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>Sun Lakes</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>Pecos Ranch</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>Chandler Heights</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>Downtown Chandler</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>Warner Ranch</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>Val Vista Lakes</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Zip Codes -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-left-sm">
+            <h3 class="text-2xl font-semibold text-dark mb-6">Chandler Zip Codes</h3>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>85224</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>85225</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>85226</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>85244</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>85246</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>85248</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>85249</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-primary">✓</span>
+                <span>85286</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Chandler Residents Choose Us Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Why Choose Us
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why **Chandler Residents** Choose Brimley's"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Reasons Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up-sm" data-aos-delay="100">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold text-xl">1</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-2">Local Family-Owned Business</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                We've been serving Chandler families since 1995. We're not a national chain—we're your neighbors, and we take pride in delivering personalized service to every customer.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold text-xl">2</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-2">Perfect for Arizona's Climate</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                Our low-moisture cleaning process is ideal for Chandler's dry climate. Carpets dry in 1-2 hours, preventing mold and allowing you to get back to your routine quickly.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold text-xl">3</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-2">Certified, Professional Technicians</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                Every technician is IICRC-certified, background-checked, and trained to deliver "white glove" service. We treat your home with the respect it deserves.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold text-xl">4</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-2">Healthier Home Guarantee</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                Our green-certified, non-toxic process removes 98% of allergens. Safe for children, pets, and the environment—no harsh chemicals or overpowering odors.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold text-xl">5</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-2">Transparent, Honest Pricing</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                You'll receive a firm estimate before any work begins. No hidden fees, no pressure tactics, no surprises—just honest service at a fair price.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold text-xl">6</span>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-dark mb-2">100% Satisfaction Guarantee</h3>
+              <p class="text-base leading-relaxed text-text/80">
+                If you're not completely satisfied, we'll return to re-clean any areas of concern at no charge. Your happiness is our priority.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Chandler Specific -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Carpet Cleaning **FAQs** for Chandler"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">How quickly do carpets dry in Chandler's climate?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most carpets dry in just 1-2 hours thanks to our low-moisture Hot Carbonating Extraction process and Chandler's dry climate. This is 80% faster than traditional steam cleaning, which can take 1-2 days.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove desert dust from deep in my carpets?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. Our carbonation process uses millions of tiny bubbles to lift embedded desert dust, sand, and allergens from the base of your carpet fibers—not just surface cleaning.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you serve all Chandler neighborhoods?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! We serve all Chandler neighborhoods including Ocotillo, Fulton Ranch, Sun Lakes, Pecos Ranch, Chandler Heights, and everywhere in between. All zip codes covered: 85224, 85225, 85226, 85244, 85246, 85248, 85249, and 85286.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Is your cleaning process safe for Arizona allergen sufferers?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. Our process removes 98% of common allergens including dust mites, pet dander, and pollen. Our green-certified, non-toxic solution is also safe for asthma and allergy sufferers.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does carpet cleaning cost in Chandler?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing varies based on square footage, carpet condition, and any special treatments needed. We provide free, no-obligation estimates with transparent pricing—no hidden fees or surprises. Call (480) 649-3663 for your free quote.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">How long have you been serving Chandler?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We've been proudly serving Chandler residents since 1995—over 25 years of trusted, professional carpet cleaning. We're a local, family-owned business committed to our community.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer same-day or emergency cleaning in Chandler?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We'll do our best to accommodate urgent requests. Call us at (480) 649-3663 and we'll work to fit you into our schedule as quickly as possible.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you clean high-end carpets in luxury Chandler homes?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. Our gentle yet effective carbonation process is safe for all carpet types, including wool, silk, and other delicate fibers found in premium Chandler homes. We've been trusted by homeowners throughout Ocotillo and Fulton Ranch for decades.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="500">
+            <h3 class="text-xl font-bold text-dark mb-4">What payment methods do you accept?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We accept all major credit cards, debit cards, checks, and cash for your convenience. Payment is due upon completion of service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
