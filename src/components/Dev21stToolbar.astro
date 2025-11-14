@@ -1,0 +1,31 @@
+---
+// 21st.dev Toolbar - Only loads in development mode
+const isDev = import.meta.env.DEV;
+---
+
+{isDev && (
+  <script>
+    // Inject 21st.dev toolbar in development
+    (function() {
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.innerHTML = `
+        import { initToolbar } from 'https://esm.sh/@21st-extension/toolbar@latest';
+
+        const config = {
+          plugins: [],
+        };
+
+        // Initialize toolbar when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', () => {
+            initToolbar(config);
+          });
+        } else {
+          initToolbar(config);
+        }
+      `;
+      document.head.appendChild(script);
+    })();
+  </script>
+)}

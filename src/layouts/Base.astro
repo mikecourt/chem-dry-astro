@@ -1,5 +1,6 @@
 ---
 import TwSizeIndicator from "@/components/TwSizeIndicator.astro";
+import Dev21stToolbar from "@/components/Dev21stToolbar.astro";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import { plainify } from "@/lib/utils/textConverter";
@@ -173,6 +174,9 @@ const { title, meta_title, description, image, noindex, canonical } =
         <GoogleTagmanagerNoscript id={config.google_tag_manager.gtm_id} />
       )
     }
+
+    <!-- 21st.dev Toolbar (dev mode only) -->
+    <Dev21stToolbar />
 
     <TwSizeIndicator />
     <Header />
