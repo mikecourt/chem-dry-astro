@@ -1,0 +1,769 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Professional Carpet Cleaning in Tempe, Arizona";
+const meta_title = "Carpet Cleaning Tempe AZ | ASU Area & South Tempe | Brimley's";
+const description = "Professional carpet cleaning in Tempe, AZ. Perfect for homes & rentals. Fast drying, thorough cleaning. Serving Tempe 25+ years. Free quote! (480) 649-3663";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Carpet Cleaning in Tempe" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Serving Tempe Since 1995
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning**<br class='hidden lg:block' /> in Tempe, Arizona"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-6 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Trusted by homeowners and landlords throughout South Tempe, North Tempe, ASU area, Warner Ranch, and McClintock Ranch
+      </h2>
+
+      <!-- Tempe-Specific Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏠
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Perfect for Rentals</div>
+            <div class="text-xs md:text-sm text-gray-600">Move-out cleaning specialists</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ⚡
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">1-2 Hour Dry Time</div>
+            <div class="text-xs md:text-sm text-gray-600">Back to normal fast</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🌵
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Desert Dust Experts</div>
+            <div class="text-xs md:text-sm text-gray-600">Removes allergens & dirt</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🎓
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">ASU Area Specialists</div>
+            <div class="text-xs md:text-sm text-gray-600">Flexible scheduling</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section: Tempe-Specific Challenges -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Challenge
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Tempe's Unique **Carpet Cleaning** Challenges"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Living in Tempe comes with unique challenges for your carpets. Understanding these challenges helps us deliver better results.
+          </p>
+        </div>
+
+        <!-- Challenge Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- College Town Traffic -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-4xl mb-4">🎓</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">College Town High-Traffic Areas</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Near ASU and student housing areas, carpets face constant foot traffic, parties, and everyday wear. High-traffic areas accumulate dirt quickly and need specialized cleaning to restore their appearance.
+            </p>
+          </div>
+
+          <!-- Desert Dust & Allergens -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-4xl mb-4">🌵</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Desert Dust & Allergens</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Tempe's desert climate means fine dust and allergens settle deep into carpet fibers. This affects air quality and can trigger allergies. Regular deep cleaning is essential for a healthier home.
+            </p>
+          </div>
+
+          <!-- Rental Property Challenges -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Rental Property Move-Outs</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              With Tempe's large rental market, landlords and tenants need fast, reliable carpet cleaning for move-outs. Security deposits and tenant relationships depend on professional results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section: Perfect for Tempe Homes -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Perfect for **Tempe** Homes & Rentals"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Solution Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- For Homeowners -->
+          <div class="bg-light p-8 rounded-lg" data-aos="fade-right-sm" data-aos-delay="100">
+            <h3 class="text-2xl font-semibold text-dark mb-4">For Tempe Homeowners</h3>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Removes Desert Allergens:</strong> Our Hot Carbonating Extraction removes 98% of allergens trapped in carpet fibers</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Quick Dry Time:</strong> Back to normal in 1-2 hours—perfect for busy Tempe families</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Safe for Family:</strong> Non-toxic, green-certified solution safe for kids and pets</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Long-Lasting Results:</strong> No soapy residue means carpets stay cleaner longer in dusty conditions</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- For Landlords -->
+          <div class="bg-light p-8 rounded-lg" data-aos="fade-left-sm" data-aos-delay="150">
+            <h3 class="text-2xl font-semibold text-dark mb-4">For Tempe Landlords</h3>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Fast Turnaround:</strong> Same-day service available for quick tenant turnovers</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Move-Out Specialists:</strong> Restore carpets to like-new condition for new tenants</strong></span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Competitive Pricing:</strong> Volume discounts for property managers with multiple units</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">✓</span>
+                <span><strong>Reliable Service:</strong> We show up on time and deliver consistent, professional results</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Process Highlight -->
+        <div class="bg-primary/5 p-8 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="200">
+          <h3 class="text-2xl font-semibold text-dark mb-4 text-center">Why Our Process Works Better in Tempe</h3>
+          <p class="text-base leading-relaxed text-text/80 text-center mb-6 max-w-[55rem] mx-auto">
+            Traditional steam cleaning uses gallons of water that take days to dry—a problem in humid monsoon season. Our Hot Carbonating Extraction uses 80% less water, dries in 1-2 hours, and removes more dirt from deep within carpet fibers. Perfect for Tempe's climate and lifestyle.
+          </p>
+          <div class="flex justify-center">
+            <img
+              src="/images/powerhead-graphic.webp"
+              alt="Chem-Dry Hot Carbonating Extraction process diagram"
+              class="w-full max-w-2xl h-auto rounded"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services in Tempe -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Services
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Carpet Cleaning Services in **Tempe**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Complete carpet care solutions for Tempe residents, landlords, and property managers
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Residential Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏡</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Residential Carpet Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Deep cleaning for homes throughout Tempe neighborhoods. Removes desert dust, allergens, and everyday dirt. Safe for kids and pets.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Move-Out Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">📦</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Move-Out Carpet Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Fast, thorough cleaning for rental turnovers. Perfect for tenants needing their security deposit back or landlords preparing for new tenants.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Pet Urine & Odor Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🐾</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Pet Urine & Odor Removal (P.U.R.T.)</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Permanently eliminates pet odors at the molecular level. Essential for rental properties and homes with pets. Works on old and new stains.
+            </p>
+            <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- High-Traffic Area Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="250">
+            <div class="text-4xl mb-4">👟</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">High-Traffic Area Treatment</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Extra attention to hallways, entryways, and living areas. Pre-treatment and specialized cleaning to restore heavily used carpets.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Stain Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="300">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Specialty Stain Removal</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Targeted treatment for tough stains including wine, coffee, food, and more. We pre-treat problem areas for best results.
+            </p>
+            <a href="/services/specialty-stain-removal" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Allergen Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="350">
+            <div class="text-4xl mb-4">🌿</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Allergen Removal Treatment</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Removes 98% of allergens from carpets. Perfect for allergy sufferers dealing with desert dust and pollen in Tempe.
+            </p>
+            <a href="/services/allergen-removal" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section: Tempe Reviews -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="What **Tempe** Residents Say"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Real reviews from your Tempe neighbors who trust Brimley's White Glove Chem-Dry
+          </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Review 1: Katie R. -->
+          <div class="bg-light p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Absolutely fantastic service! Well worth the money. Our specialist, Rob, was timely, super friendly, walked me through every step and allowed me to take my son to breakfast versus waiting. He called me both before arrival and when he was finished. The chemicals are baby and pet safe and truly clean amazingly. Also a shout-out to Jenny and Michael in the office. I had to reschedule many times due to mistakes made by our mortgage company, causing a delay in our signing and access to the new house. They helped me and commiserated every time I had to reschedule. I would 100% recommend this company!!!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Katie R., Tempe, AZ</p>
+          </div>
+
+          <!-- Review 2: Sarah S. -->
+          <div class="bg-light p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "I have used Brimley's for several years, but was way overdue this time and WOW! did Nate deliver! First communication was great—Appointment window was between 8-10 and at 7:40 I got word Nate was on his way. I pointed out some problem stains, including some that were years old that other techs had not been able remove. Nate made my 30-year old berber carpet look almost new again! Prompt, professional and super competent—I highly recommend Brimley's!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Sarah S., Tempe, AZ</p>
+          </div>
+
+          <!-- Review 3: Lillian Thompson -->
+          <div class="bg-light p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Phil jammed to sweet tunes with me and cleaned our carpets super thoroughly!! Fantastic experience and our carpets look amazing. Professional, friendly service that exceeded our expectations. Highly recommend Brimley's for anyone in Tempe!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Lillian Thompson, Tempe, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Service Areas
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Serving All **Tempe** Neighborhoods"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Professional carpet cleaning throughout Tempe and surrounding areas
+          </p>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Neighborhoods -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-right-sm" data-aos-delay="100">
+            <h3 class="text-2xl font-semibold text-dark mb-6">Tempe Neighborhoods We Serve</h3>
+            <ul class="space-y-3 text-base text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">•</span>
+                <span><strong>South Tempe</strong> - Warner Ranch, Pecos Ranch, Chandler Heights</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">•</span>
+                <span><strong>North Tempe</strong> - Near downtown and Mill Avenue</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">•</span>
+                <span><strong>ASU Area</strong> - College neighborhoods and student housing</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">•</span>
+                <span><strong>McClintock Ranch</strong> - South Tempe residential area</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">•</span>
+                <span><strong>Warner Ranch</strong> - Family neighborhoods</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">•</span>
+                <span><strong>Rural-Guadalupe Corridor</strong></span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary flex-shrink-0">•</span>
+                <span><strong>Tempe Town Lake Area</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ZIP Codes -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-left-sm" data-aos-delay="150">
+            <h3 class="text-2xl font-semibold text-dark mb-6">Tempe ZIP Codes We Serve</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-light p-4 rounded-lg text-center">
+                <p class="text-2xl font-bold text-primary">85280</p>
+                <p class="text-sm text-text/70 mt-1">Central Tempe</p>
+              </div>
+              <div class="bg-light p-4 rounded-lg text-center">
+                <p class="text-2xl font-bold text-primary">85281</p>
+                <p class="text-sm text-text/70 mt-1">North Tempe</p>
+              </div>
+              <div class="bg-light p-4 rounded-lg text-center">
+                <p class="text-2xl font-bold text-primary">85282</p>
+                <p class="text-sm text-text/70 mt-1">South Tempe</p>
+              </div>
+              <div class="bg-light p-4 rounded-lg text-center">
+                <p class="text-2xl font-bold text-primary">85283</p>
+                <p class="text-sm text-text/70 mt-1">East Tempe</p>
+              </div>
+              <div class="bg-light p-4 rounded-lg text-center">
+                <p class="text-2xl font-bold text-primary">85284</p>
+                <p class="text-sm text-text/70 mt-1">West Tempe</p>
+              </div>
+              <div class="bg-light p-4 rounded-lg text-center">
+                <p class="text-2xl font-bold text-primary">85285</p>
+                <p class="text-sm text-text/70 mt-1">ASU Campus</p>
+              </div>
+            </div>
+            <div class="mt-4 bg-light p-4 rounded-lg text-center">
+              <p class="text-2xl font-bold text-primary">85287</p>
+              <p class="text-sm text-text/70 mt-1">Tempe Business District</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div class="mt-8 bg-primary/5 p-6 rounded-lg border-2 border-primary/20 text-center" data-aos="fade-up-sm" data-aos-delay="200">
+          <p class="text-base leading-relaxed text-text/80">
+            Don't see your neighborhood or ZIP code listed? We serve all of Tempe and surrounding East Valley areas.
+            <a href="tel:+14806493663" class="text-primary font-semibold hover:underline">Call us at (480) 649-3663</a> to confirm service availability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Tempe Trusts Brimley's -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Why Choose Us
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Tempe **Trusts** Brimley's"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            25+ years of experience serving Tempe homeowners, landlords, and property managers
+          </p>
+        </div>
+
+        <!-- Three Columns -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <!-- Column 1 -->
+          <div class="text-center" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Experienced with Tempe Homes</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We've cleaned thousands of carpets in Tempe since 1995. We understand the unique challenges of desert dust, ASU-area traffic, and rental turnover needs.
+            </p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="text-center" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Flexible Scheduling</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Same-day and next-day appointments available. We work around your busy schedule—perfect for working families and urgent move-out deadlines.
+            </p>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="text-center" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Landlord-Friendly Service</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Fast turnaround for rental properties. Volume discounts for multi-unit properties. Detailed documentation for tenant billing and record-keeping.
+            </p>
+          </div>
+        </div>
+
+        <!-- Additional Benefits -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up-sm" data-aos-delay="250">
+          <div class="bg-light p-6 rounded-lg">
+            <h4 class="text-lg font-semibold text-dark mb-3">Local Family-Owned Business</h4>
+            <p class="text-base leading-relaxed text-text/80">
+              We're not a franchise—we're a local family business serving the Phoenix East Valley since 1995. When you call, you talk to us, not a call center.
+            </p>
+          </div>
+
+          <div class="bg-light p-6 rounded-lg">
+            <h4 class="text-lg font-semibold text-dark mb-3">White Glove Service Standard</h4>
+            <p class="text-base leading-relaxed text-text/80">
+              Uniformed technicians, protective booties, corner guards, and respect for your home. We treat your property like it's our own.
+            </p>
+          </div>
+
+          <div class="bg-light p-6 rounded-lg">
+            <h4 class="text-lg font-semibold text-dark mb-3">Satisfaction Guaranteed</h4>
+            <p class="text-base leading-relaxed text-text/80">
+              If you're not completely satisfied, we'll return to re-clean any areas at no charge. Your happiness is our priority.
+            </p>
+          </div>
+
+          <div class="bg-light p-6 rounded-lg">
+            <h4 class="text-lg font-semibold text-dark mb-3">Transparent Pricing</h4>
+            <p class="text-base leading-relaxed text-text/80">
+              Free estimates with clear, upfront pricing. No hidden fees, no pressure tactics. You'll know exactly what you're paying before we start.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section: Tempe-Specific -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Tempe Carpet Cleaning **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Answers to common questions from Tempe homeowners and landlords
+          </p>
+        </div>
+
+        <!-- FAQ Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- FAQ 1 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer move-out carpet cleaning in Tempe?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! Move-out cleaning is one of our specialties. We offer fast turnaround (often same-day or next-day service) perfect for tenants needing their security deposit back or landlords preparing for new tenants. Our 1-2 hour dry time means the property is ready quickly.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">How quickly can you schedule service in Tempe?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We offer same-day and next-day appointments when available. For urgent move-out situations, we do our best to accommodate tight deadlines. Call us at (480) 649-3663 to check current availability.
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove desert dust and allergens from carpets?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. Our Hot Carbonating Extraction process removes 98% of allergens from carpets, including desert dust, pollen, and other airborne particles that settle deep into carpet fibers. This significantly improves indoor air quality.
+            </p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer discounts for landlords with multiple units?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! We offer volume pricing for property managers and landlords with multiple rental units in Tempe. Contact us for a customized quote based on your specific needs and property portfolio.
+            </p>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Is carpet cleaning safe for ASU area rentals with students?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. Our green-certified, non-toxic cleaning solution is completely safe for everyone, including young adults. The 1-2 hour dry time means minimal disruption to busy student schedules.
+            </p>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does carpet cleaning cost in Tempe?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing depends on square footage, carpet condition, and any special treatments needed. We provide free, no-obligation estimates with clear upfront pricing—no hidden fees. Contact us for a personalized quote.
+            </p>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you clean high-traffic areas near ASU?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! We specialize in restoring high-traffic areas with pre-treatment and deep cleaning. Common areas, hallways, and entryways in student housing respond very well to our Hot Carbonating Extraction process.
+            </p>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">Do I need to be home during the cleaning?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Not necessarily. Many landlords provide access for move-out cleanings while tenants aren't present. For occupied homes, we can work with your schedule. We'll call before arrival and when we're finished.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem] text-center">
+        <CustomHeading
+          as="h2"
+          text="Ready for Cleaner Carpets in **Tempe**?"
+          svgColor="text-primary"
+          class="text-4xl md:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+        />
+        <p class="text-lg text-text/80 mb-8 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="50">
+          Whether you're a homeowner, tenant, or landlord in Tempe, we're here to help. Fast, professional carpet cleaning with results that last.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up-sm" data-aos-delay="100">
+          <CustomButton
+            label="Get Your Free Estimate"
+            link="#contact-form"
+            variant="primary"
+          />
+          <CustomButton
+            label="Call (480) 649-3663"
+            link="tel:+14806493663"
+            variant="secondary"
+            icon="FaPhone"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

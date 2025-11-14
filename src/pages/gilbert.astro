@@ -1,0 +1,720 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const featuredServices = allServices.filter(s =>
+  ['upholstery-cleaning', 'pet-urine-removal', 'tile-and-grout-cleaning', 'area-rug-cleaning', 'allergen-removal', 'commercial-cleaning'].includes(s.id)
+).slice(0, 6);
+
+const title = "Carpet Cleaning Gilbert AZ";
+const meta_title = "Carpet Cleaning Gilbert AZ | Trusted Since 1995 | Brimley's White Glove";
+const description = "Professional carpet cleaning in Gilbert, AZ. Safe for families & pets, dries in 1-2 hours. Serving Gilbert for 25+ years. Free quote! (480) 649-3663";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="local" serviceName="Carpet Cleaning" city="Gilbert" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Gilbert's Trusted Carpet Cleaning Experts
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning**<br class='hidden lg:block' /> in Gilbert, Arizona"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Trusted by Gilbert families since 1995. Safe, fast-drying carpet cleaning for your home.
+      </h2>
+
+      <!-- Trust Badges - Gilbert Specific -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏠
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Serving Gilbert Since 1995</div>
+            <div class="text-xs md:text-sm text-gray-600">25+ years of trusted service</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            👨‍👩‍👧‍👦
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Family-Safe Cleaning</div>
+            <div class="text-xs md:text-sm text-gray-600">Non-toxic & green-certified</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ⏱️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Dries in 1-2 Hours</div>
+            <div class="text-xs md:text-sm text-gray-600">Perfect for busy Gilbert families</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🌵
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Desert Dust Experts</div>
+            <div class="text-xs md:text-sm text-gray-600">Removes allergens & Valley dust</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+
+      <!-- Gilbert Neighborhoods Badge -->
+      <div class="mt-6 text-center lg:text-left" data-aos="fade-up-sm" data-aos-delay="250">
+        <p class="text-sm text-text/70">
+          Proudly serving: <span class="font-semibold text-dark">San Tan Ranch, Val Vista Lakes, Agritopia, Heritage District, Power Ranch</span> & all Gilbert neighborhoods
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section - Gilbert Specific -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Gilbert Difference
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Gilbert Families **Need** Professional Carpet Cleaning"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Problem Points -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="100">
+          <!-- Growing Families -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Growing Families Need Clean Homes</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Gilbert is home to thousands of young families. Kids, pets, and active lifestyles mean your carpets work overtime. You need cleaning that's safe, fast, and actually works.
+            </p>
+          </div>
+
+          <!-- Desert Dust -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Desert Dust & Valley Allergens</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Arizona's desert environment means dust, pollen, and allergens constantly filter into your home. These settle deep in carpet fibers, affecting your family's air quality and health.
+            </p>
+          </div>
+
+          <!-- Active Lifestyle -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Active Lifestyle Brings In Dirt</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              From Freestone Park to Gilbert Regional Park, Gilbert families love being outdoors. All that activity means dirt, grass, and grime tracked inside—your carpets need professional help.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section - Perfect for Gilbert Homes -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Perfect Solution for Gilbert Homes
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Carpet Cleaning Made for **Gilbert Families**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Our Hot Carbonating Extraction process was designed with families like yours in mind. It's safe, effective, and perfect for Gilbert's unique needs.
+          </p>
+        </div>
+
+        <!-- Solution Benefits -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Family Safe -->
+          <div class="bg-light p-6 rounded-lg">
+            <div class="text-4xl mb-4">✅</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">100% Family-Safe Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our green-certified cleaning solution is safe for kids, pets, and everyone in your Gilbert home. No harsh chemicals, no toxic fumes—just clean carpets you can feel good about.
+            </p>
+          </div>
+
+          <!-- Quick Drying -->
+          <div class="bg-light p-6 rounded-lg">
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Quick Drying for Busy Families</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Carpets dry in just 1-2 hours—not 1-2 days. Perfect for Gilbert families who can't wait around. Use your carpets the same day, with no interruption to your busy schedule.
+            </p>
+          </div>
+
+          <!-- Allergen Removal -->
+          <div class="bg-light p-6 rounded-lg">
+            <div class="text-4xl mb-4">🌿</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Removes 98% of Allergens</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Desert dust and Valley allergens trapped in your carpets affect your family's health. Our process removes 98% of allergens, creating a healthier home environment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Call-Out Box -->
+        <div class="bg-primary/5 border-2 border-primary/20 rounded-lg p-8 mt-12" data-aos="fade-up-sm" data-aos-delay="200">
+          <h3 class="text-2xl font-bold text-dark mb-4 text-center">Why Gilbert Residents Choose Brimley's White Glove</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base text-text/80">
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span>Uses 80% less water than steam cleaning</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span>Dries faster in Arizona's dry climate</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span>Safe for children and pets</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span>Removes stubborn Arizona dust</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span>No sticky residue that attracts dirt</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0">✓</span>
+              <span>Carpets stay cleaner, longer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services in Gilbert Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Cleaning Services
+          </p>
+          <CustomHeading
+            as="h2"
+            text="All Services Available in **Gilbert**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Beyond carpet cleaning, we offer comprehensive cleaning services for every area of your Gilbert home.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredServices.map((service, index) => (
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              data-aos="fade-up-sm"
+              data-aos-delay={100 + index * 50}
+            >
+              <h3 class="text-lg font-semibold text-dark mb-2">{service.data.title}</h3>
+              <p class="text-sm text-text/80 mb-4">{service.data.description?.substring(0, 120)}...</p>
+              <a href={`/services/${service.id}`} class="text-primary font-semibold hover:underline text-sm">
+                Learn More →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section - Gilbert Residents -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Gilbert Neighbors**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Don't just take our word for it—see what Gilbert residents are saying about our carpet cleaning service.
+          </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "I would like to thank everyone at Brimley's for their wonderful and professional service. Setting up an appointment was easy. Rob called to let me know he was on his way and arrived early. He was very professional and the service was faster than I expected. I even got a handwritten letter in the mail thanking me for my business. I recommend Brimley's 100%."
+            </p>
+            <p class="text-sm font-semibold text-dark">Hermes M., Gilbert, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Our technician called to narrow down the arrival time, which we appreciated. He was on time, very professional, and left the carpets in beautiful condition! Also gave us a free bottle of spot remover. Great service."
+            </p>
+            <p class="text-sm font-semibold text-dark">Ada Collins, Gilbert, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Dave and Sean were an excellent team, customer oriented and did a great job on my carpets. I have multiple cats and due to some past accidents had areas that needed extra attention. They knew exactly what needed to be done to treat those areas to be clean and odor free. They exceeded my expectations! I highly recommend Brimley's."
+            </p>
+            <p class="text-sm font-semibold text-dark">Susan Burke, Gilbert, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Service Areas
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Serving All of **Gilbert, Arizona**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Neighborhoods & Zip Codes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up-sm" data-aos-delay="100">
+          <!-- Gilbert Neighborhoods -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Popular Gilbert Neighborhoods</h3>
+            <ul class="space-y-2 text-base text-text/80">
+              <li class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>San Tan Ranch</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>Val Vista Lakes</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>Agritopia</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>Heritage District</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>Power Ranch</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>Seville</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>Ashland Ranch</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>Coronado</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Gilbert Zip Codes -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-dark mb-4">Gilbert Zip Codes We Serve</h3>
+            <div class="grid grid-cols-2 gap-4 text-base text-text/80">
+              <div class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>85233</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>85234</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>85295</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>85296</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>85297</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>85298</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-primary">•</span>
+                <span>85299</span>
+              </div>
+            </div>
+            <p class="text-sm text-text/70 mt-6">
+              Can't find your zip code? Call us at <a href="tel:+14806493663" class="text-primary font-semibold hover:underline">(480) 649-3663</a> to confirm we serve your area.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Gilbert Chooses Brimley's Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Your Local Experts
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Gilbert Families Choose **Brimley's White Glove**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Three Reasons -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="100">
+          <!-- Local Knowledge -->
+          <div class="bg-light p-6 rounded-lg text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">We Know Gilbert Neighborhoods</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              From San Tan Ranch to Agritopia, we've been serving Gilbert families for over 25 years. We understand the unique needs of homes in your community.
+            </p>
+          </div>
+
+          <!-- Family Business -->
+          <div class="bg-light p-6 rounded-lg text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Family-Owned, Serving Families</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              As a family-owned business, we understand what matters to Gilbert families. Safe cleaning, honest pricing, and service you can trust—that's our promise.
+            </p>
+          </div>
+
+          <!-- Quick Response -->
+          <div class="bg-light p-6 rounded-lg text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Quick Response Times</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Being local to the East Valley means we can respond quickly to your needs. Many Gilbert customers get same-week or even same-day service.
+            </p>
+          </div>
+        </div>
+
+        <!-- Additional Trust Factors -->
+        <div class="bg-white p-8 rounded-lg shadow-lg mt-12" data-aos="fade-up-sm" data-aos-delay="150">
+          <h3 class="text-2xl font-bold text-dark mb-6 text-center">The Brimley's White Glove Difference</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base text-text/80">
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <span><strong>25+ Years Experience:</strong> Trusted by Gilbert residents since 1995</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <span><strong>Certified Technicians:</strong> IICRC-certified professionals, never subcontractors</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <span><strong>Satisfaction Guarantee:</strong> If you're not happy, we'll make it right</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <span><strong>Clear Pricing:</strong> No hidden fees or surprise charges</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <span><strong>Fully Insured & Bonded:</strong> Your home is protected</span>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-primary flex-shrink-0 text-xl">✓</span>
+              <span><strong>Flexible Scheduling:</strong> We work around your busy Gilbert lifestyle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Gilbert Specific -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Gilbert Carpet Cleaning **Questions Answered**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">How quickly can you service my Gilbert home?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most Gilbert customers can get service within a few days, and we often have same-week availability. During busy seasons, booking a week in advance ensures your preferred time. Call (480) 649-3663 to check current availability.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Will your cleaning help with Arizona dust and allergens?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! Our Hot Carbonating Extraction removes 98% of allergens from carpets, including dust, pollen, and other irritants common in Arizona. Many Gilbert customers with allergies notice a significant improvement in air quality.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Is the fast dry time really that important?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. In Gilbert's dry climate, our 1-2 hour dry time means your family can get back to normal quickly. No waiting days for carpets to dry, and no risk of mold or mildew from excess moisture.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you service all Gilbert neighborhoods?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! We serve all Gilbert areas including San Tan Ranch, Val Vista Lakes, Agritopia, Heritage District, Power Ranch, and every neighborhood in between. If you're in Gilbert, we've got you covered.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you handle pet stains and odors?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. Our specialized P.U.R.T.® treatment destroys pet urine odors at the molecular level—not just masking them. Many Gilbert pet owners trust us to keep their homes fresh and clean despite furry family members.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">What's your pricing for Gilbert carpet cleaning?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing varies based on your home size and carpet condition. We provide free, no-obligation estimates with clear, honest pricing. Call (480) 649-3663 or request a quote online—no surprises, no hidden fees.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Are your cleaning products safe for children?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              100% yes. Our green-certified cleaning solution is non-toxic and safe for babies, kids, and pets. Gilbert families with young children love that they don't have to worry about harsh chemicals on their carpets.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">How often should Gilbert homes get carpets cleaned?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most Gilbert families benefit from professional cleaning every 6-12 months. Homes with kids, pets, or high traffic may need cleaning every 6-9 months to maintain optimal cleanliness and air quality.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="500">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer any guarantees?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. We stand behind our work with a satisfaction guarantee. If you're not completely happy with your carpet cleaning, let us know within 30 days and we'll make it right—that's the White Glove promise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[55rem] text-center">
+        <CustomHeading
+          as="h2"
+          text="Ready for Cleaner, **Healthier Carpets** in Gilbert?"
+          svgColor="text-primary"
+          class="text-4xl md:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+        />
+        <p class="text-lg text-text/80 mb-8" data-aos="fade-up-sm" data-aos-delay="50">
+          Join thousands of satisfied Gilbert families who trust Brimley's White Glove for safe, effective carpet cleaning.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up-sm" data-aos-delay="100">
+          <CustomButton
+            label="Get My Free Estimate"
+            link="#contact-form"
+            variant="primary"
+          />
+          <CustomButton
+            label="Call (480) 649-3663"
+            link="tel:+14806493663"
+            variant="secondary"
+            icon="FaPhone"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

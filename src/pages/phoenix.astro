@@ -1,0 +1,1032 @@
+---
+import Base from "@/layouts/Base.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import CustomButton from "@/layouts/components/CustomButton.astro";
+import CustomHeading from "@/layouts/components/CustomHeading.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const meta_title = "Carpet Cleaning Phoenix AZ | Ahwatukee, Arcadia, Biltmore | Brimley's";
+const meta_description = "Professional carpet cleaning in Phoenix: Ahwatukee, Arcadia, Biltmore, South Mountain. 25+ years serving Phoenix neighborhoods. Fast, safe. (480) 649-3663";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+// Phoenix testimonials from seo-optimized-reviews.json
+const phoenixReviews = [
+  {
+    says: "Great customer service! Fantastic job by Casey! He was on time and so great cleaning the carpets and tile! Larger job than expected and he made everything sparkle! Highly recommend this company and Casey! Thank you!",
+    name: "Kim S.",
+    about: "Phoenix"
+  },
+  {
+    says: "We were in a real pickle at work last week with a sewer backup that affected our bathrooms and conference room. I called several places for quotes and time-frame. Brimley's was the only company that could come out the same day we called. They were friendly, professional, courteous and expeditious. Their customer service was A++, from the people who answered the phone to the carpet technicians.",
+    name: "Donna M.",
+    about: "Phoenix"
+  },
+  {
+    says: "I have used Brimley in the past to clean the carpets. They have always done an outstanding job and today was no different. I was only going to have the carpets cleaned but decided to have my technician, Phil, do my tile. Phil took such care and did such a good job that it looks like a brand new floor! I highly recommend Brimley for your carpet cleaning.",
+    name: "Diana W.",
+    about: "Phoenix"
+  }
+];
+
+// Phoenix neighborhoods
+const neighborhoods = [
+  {
+    name: "Ahwatukee",
+    title: "Ahwatukee's Trusted Carpet Cleaning Service",
+    description: "Serving Ahwatukee families for 25+ years, we know the unique needs of homes in the Foothills area. From family rooms to master bedrooms, we treat your Ahwatukee home with the care it deserves.",
+    highlights: [
+      "25+ years serving Ahwatukee residents",
+      "Know the Foothills area intimately",
+      "Fast response times to South Mountain area",
+      "Experience with Ahwatukee home layouts"
+    ],
+    icon: "FaHome"
+  },
+  {
+    name: "Arcadia",
+    title: "Premium Service for Arcadia Homes",
+    description: "Arcadia's distinctive mid-century modern homes deserve specialized care. Our expert technicians understand the unique flooring and design elements common in this prestigious neighborhood.",
+    highlights: [
+      "Experience with mid-century modern homes",
+      "Quick service to Arcadia neighborhood",
+      "Gentle on vintage and specialty carpets",
+      "Trusted by Arcadia homeowners"
+    ],
+    icon: "FaStar"
+  },
+  {
+    name: "Biltmore",
+    title: "White Glove Service for Biltmore Area",
+    description: "The Biltmore area expects excellence, and that's exactly what we deliver. Our premium service meets the high standards of luxury homes in this iconic Phoenix neighborhood.",
+    highlights: [
+      "Luxury home expertise",
+      "Professional service Biltmore expects",
+      "High-end carpet and rug specialists",
+      "Discreet, courteous service"
+    ],
+    icon: "FaCrown"
+  },
+  {
+    name: "South Mountain",
+    title: "Serving South Mountain Communities",
+    description: "South Mountain families trust us for reliable, family-focused carpet cleaning. We understand the needs of growing families and deliver service that keeps your home healthy and clean.",
+    highlights: [
+      "Family-focused service",
+      "Quick response times",
+      "Pet-friendly cleaning solutions",
+      "Safe for kids and pets"
+    ],
+    icon: "FaMountain"
+  }
+];
+
+// Phoenix services
+const services = [
+  {
+    title: "Carpet Cleaning",
+    description: "Hot Carbonating Extraction removes desert dust, allergens, and deep-set dirt from your Phoenix home's carpets.",
+    icon: "FaHouseUser"
+  },
+  {
+    title: "Tile & Grout Cleaning",
+    description: "Restore tile floors common in Phoenix homes. Remove years of buildup from grout lines.",
+    icon: "FaTh"
+  },
+  {
+    title: "Upholstery Cleaning",
+    description: "Refresh furniture that bears the brunt of Phoenix dust and daily family life.",
+    icon: "FaCouch"
+  },
+  {
+    title: "Pet Odor Removal",
+    description: "Eliminate pet odors and stains with our P.U.R.T.® treatment. Safe for Phoenix's pet-loving families.",
+    icon: "FaPaw"
+  },
+  {
+    title: "Area Rug Cleaning",
+    description: "Specialized cleaning for the rugs that define your Phoenix home's style.",
+    icon: "FaRug"
+  },
+  {
+    title: "Allergen Removal",
+    description: "Critical in Phoenix's desert climate. Remove dust, pollen, and allergens that accumulate year-round.",
+    icon: "FaLeaf"
+  }
+];
+
+// Phoenix ZIP codes
+const phoenixZips = [
+  { zip: "85003", area: "Downtown Phoenix" },
+  { zip: "85004", area: "Central Phoenix" },
+  { zip: "85006", area: "Central Phoenix" },
+  { zip: "85007", area: "Encanto" },
+  { zip: "85008", area: "Central Phoenix" },
+  { zip: "85012", area: "Camelback East" },
+  { zip: "85013", area: "Uptown Phoenix" },
+  { zip: "85014", area: "Camelback East" },
+  { zip: "85015", area: "North Central" },
+  { zip: "85016", area: "Biltmore, Arcadia" },
+  { zip: "85017", area: "Maryvale" },
+  { zip: "85018", area: "Arcadia" },
+  { zip: "85019", area: "Maryvale" },
+  { zip: "85020", area: "North Phoenix" },
+  { zip: "85021", area: "North Phoenix" },
+  { zip: "85022", area: "Paradise Valley borders" },
+  { zip: "85023", area: "North Phoenix" },
+  { zip: "85024", area: "Desert Ridge, North Phoenix" },
+  { zip: "85027", area: "North Phoenix" },
+  { zip: "85028", area: "Camelback" },
+  { zip: "85029", area: "North Phoenix" },
+  { zip: "85031", area: "Maryvale" },
+  { zip: "85032", area: "Paradise Valley borders" },
+  { zip: "85033", area: "Maryvale" },
+  { zip: "85034", area: "Downtown Phoenix" },
+  { zip: "85035", area: "West Phoenix" },
+  { zip: "85037", area: "Laveen" },
+  { zip: "85040", area: "South Phoenix" },
+  { zip: "85041", area: "Laveen" },
+  { zip: "85042", area: "South Phoenix" },
+  { zip: "85043", area: "South Phoenix" },
+  { zip: "85044", area: "Ahwatukee" },
+  { zip: "85045", area: "Ahwatukee" },
+  { zip: "85048", area: "Ahwatukee Foothills" },
+  { zip: "85050", area: "North Phoenix" },
+  { zip: "85051", area: "North Phoenix" },
+  { zip: "85053", area: "North Phoenix" },
+];
+
+// FAQ items
+const faqs = [
+  {
+    question: "Do you serve Ahwatukee?",
+    answer: "Absolutely! Ahwatukee is one of our primary service areas. We've been serving Ahwatukee families for over 25 years and know the area intimately. Whether you're in the Foothills, near South Mountain, or anywhere in Ahwatukee, we provide fast, reliable carpet cleaning service. We serve all Ahwatukee ZIP codes: 85044, 85045, and 85048."
+  },
+  {
+    question: "Do you cover North Phoenix and Desert Ridge?",
+    answer: "Yes! We serve all of North Phoenix, including Desert Ridge, Paradise Valley borders, and surrounding areas. Our service area extends throughout the entire Phoenix metro, from North Phoenix down to Ahwatukee and everywhere in between."
+  },
+  {
+    question: "How does the fast dry time work in Phoenix's heat?",
+    answer: "Phoenix's warm, dry climate is actually perfect for our Hot Carbonating Extraction process! Because we use 80% less water than traditional steam cleaning, your carpets dry in just 1-2 hours - even faster in Phoenix's dry heat. This means you can get back to your normal routine the same day, without the humidity and dampness of traditional steam cleaning."
+  },
+  {
+    question: "Do you serve all Phoenix neighborhoods?",
+    answer: "Yes! We proudly serve every Phoenix neighborhood, including Ahwatukee, Arcadia, Biltmore, South Mountain, North Phoenix, Central Phoenix, Camelback, Desert Ridge, Maryvale, Laveen, and more. If you're in the Phoenix city limits, we serve you. Call us at (480) 649-3663 to confirm service for your specific address."
+  },
+  {
+    question: "What makes your service different for Phoenix homes?",
+    answer: "We've been serving Phoenix for over 25 years, so we understand the unique challenges Phoenix homes face: intense UV exposure, desert dust, year-round allergens, and the wear from indoor/outdoor desert living. Our Hot Carbonating Extraction is perfect for Phoenix's climate - it deep cleans without soaking carpets, removes desert dust and allergens effectively, and dries incredibly fast in our dry climate."
+  },
+  {
+    question: "Can you remove desert dust and allergens?",
+    answer: "Yes! This is one of our specialties. Our Hot Carbonating Extraction process removes 98% of allergens from carpets, including the desert dust, pollen, and particulates that are constant challenges in Phoenix. We also offer dedicated allergen removal treatments that are especially important for Phoenix residents dealing with year-round allergy triggers."
+  },
+  {
+    question: "Do you offer same-day service in Phoenix?",
+    answer: "In many cases, yes! We understand that Phoenix families have busy schedules. Depending on our technicians' availability in your Phoenix neighborhood, we can often accommodate same-day or next-day appointments. Call us at (480) 649-3663 to check availability for your area."
+  },
+  {
+    question: "What neighborhoods do you prioritize?",
+    answer: "We serve all Phoenix neighborhoods equally with the same high-quality service. That said, Ahwatukee, Arcadia, Biltmore, and South Mountain are areas where we have particularly extensive experience and fast response times. But whether you're in North Phoenix, Central Phoenix, or anywhere else in the city, you'll receive the same exceptional white-glove service."
+  }
+];
+---
+
+<Base meta_title={meta_title} description={meta_description}>
+  <SchemaMarkup type="service" serviceName="Carpet Cleaning Phoenix" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-32 lg:py-40 relative mb-0 bg-gradient-to-br from-primary/5 via-white to-accent/5"
+  >
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-5xl mx-auto">
+        <!-- Subtitle -->
+        <p
+          class="text-accent font-semibold text-lg md:text-xl mb-4 tracking-wide uppercase"
+          data-aos="fade-up-sm"
+        >
+          Carpet Cleaning Phoenix, Arizona
+        </p>
+
+        <!-- Main Heading -->
+        <CustomHeading
+          as="h1"
+          text="Professional Carpet Cleaning in Phoenix, Arizona"
+          svgColor="text-primary"
+          class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+
+        <!-- Subheading -->
+        <p
+          class="text-xl md:text-2xl text-text/80 mb-8 font-medium"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Serving Phoenix Neighborhoods Since 1995
+        </p>
+
+        <!-- Trust Badges - Phoenix Neighborhoods Focus -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="150"
+        >
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              🏠
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Ahwatukee</div>
+              <div class="text-xs md:text-sm text-gray-600">Trusted for 25+ Years</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              ⭐
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Arcadia</div>
+              <div class="text-xs md:text-sm text-gray-600">Premium Service</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              👑
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Biltmore</div>
+              <div class="text-xs md:text-sm text-gray-600">White Glove Service</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              ⛰️
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">South Mountain</div>
+              <div class="text-xs md:text-sm text-gray-600">Family Focused</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4"
+          data-aos="fade-up-sm"
+          data-aos-delay="200"
+        >
+          <CustomButton
+            link="tel:4806493663"
+            label="Call (480) 649-3663"
+            variant="primary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+          />
+          <CustomButton
+            link="/appointment"
+            label="Schedule Online"
+            variant="secondary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+          />
+        </div>
+
+        <!-- Additional Trust Points -->
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-text/70">
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Dries in 1-2 Hours</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Safe for Kids & Pets</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Family Owned Since 1995</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>All Phoenix Neighborhoods</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phoenix Neighborhoods Section - FEATURED -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p
+          class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+          data-aos="fade-up-sm"
+        >
+          Local Expertise
+        </p>
+        <CustomHeading
+          as="h2"
+          text="Phoenix Neighborhoods We Serve"
+          svgColor="text-accent"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          We're not just in Phoenix—we're of Phoenix. Our technicians know your neighborhood and understand what your home needs.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {neighborhoods.map((neighborhood, index) => (
+          <div
+            class="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border"
+            data-aos="fade-up-sm"
+            data-aos-delay={index * 100}
+          >
+            <div class="flex items-start gap-4 mb-6">
+              <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-3xl flex-shrink-0">
+                {neighborhood.icon === "FaHome" && "🏠"}
+                {neighborhood.icon === "FaStar" && "⭐"}
+                {neighborhood.icon === "FaCrown" && "👑"}
+                {neighborhood.icon === "FaMountain" && "⛰️"}
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">
+                  {neighborhood.name}
+                </h3>
+                <h4 class="text-lg md:text-xl font-semibold text-primary mb-3">
+                  {neighborhood.title}
+                </h4>
+              </div>
+            </div>
+
+            <p class="text-base md:text-lg text-text/80 mb-6 leading-relaxed">
+              {neighborhood.description}
+            </p>
+
+            <ul class="space-y-3">
+              {neighborhood.highlights.map((highlight) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-primary text-xl flex-shrink-0 mt-1">✓</span>
+                  <span class="text-text/90">{highlight}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <!-- Also Serving -->
+      <div
+        class="mt-12 text-center bg-light rounded-xl p-8"
+        data-aos="fade-up-sm"
+      >
+        <h3 class="text-xl md:text-2xl font-bold text-dark mb-4">
+          Also Proudly Serving
+        </h3>
+        <p class="text-lg text-text/80">
+          North Phoenix • Central Phoenix • Camelback • Paradise Valley (border) • Desert Ridge • Maryvale • Laveen • Encanto • Downtown Phoenix • All Phoenix ZIP codes
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section - Phoenix Challenges -->
+  <section class="section bg-gradient-to-br from-primary/10 via-white to-accent/10">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <CustomHeading
+            as="h2"
+            text="The Challenge of Living in Phoenix"
+            svgColor="text-primary"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+          />
+          <p
+            class="text-lg md:text-xl text-text/80"
+            data-aos="fade-up-sm"
+            data-aos-delay="50"
+          >
+            Phoenix's desert environment creates unique challenges for your carpets and home
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="100"
+          >
+            <div class="text-5xl mb-4">🌵</div>
+            <h3 class="text-xl font-bold text-dark mb-3">Desert Dust & Dirt</h3>
+            <p class="text-text/80">
+              Phoenix's desert location means constant dust infiltration. It settles deep into carpet fibers, creating a gritty, dirty feeling underfoot.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="150"
+          >
+            <div class="text-5xl mb-4">💨</div>
+            <h3 class="text-xl font-bold text-dark mb-3">Dust Storms & Allergens</h3>
+            <p class="text-text/80">
+              Monsoon season brings haboobs that infiltrate homes. Year-round pollen and allergens accumulate in carpets, triggering allergies and respiratory issues.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="200"
+          >
+            <div class="text-5xl mb-4">☀️</div>
+            <h3 class="text-xl font-bold text-dark mb-3">Year-Round Activity</h3>
+            <p class="text-text/80">
+              Phoenix's mild winters mean outdoor activities happen all year. Dirt, sand, and debris get tracked inside constantly, wearing down carpets faster.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section - Perfect for Phoenix -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <p
+            class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+            data-aos="fade-up-sm"
+          >
+            The Perfect Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hot Carbonating Extraction: Ideal for Phoenix Climate"
+            svgColor="text-accent"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p
+            class="text-lg md:text-xl text-text/80"
+            data-aos="fade-up-sm"
+            data-aos-delay="100"
+          >
+            Our unique cleaning process is perfectly matched to Phoenix's desert environment
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div
+            class="bg-gradient-to-br from-primary/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-right-sm"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">💧</span>
+              Lightning-Fast Drying
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Uses 80% less water than traditional steam cleaning. Combined with Phoenix's dry climate, your carpets dry in just <strong>1-2 hours</strong> instead of 1-2 days.
+            </p>
+            <p class="text-text/70">
+              Perfect for Phoenix families who need to get back to normal life quickly—no humidity, no dampness, no waiting.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-accent/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-left-sm"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🫧</span>
+              Deep Desert Dust Removal
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Millions of carbonating bubbles penetrate deep into carpet fibers, lifting embedded desert dust, dirt, and allergens to the surface where they're extracted.
+            </p>
+            <p class="text-text/70">
+              More effective than steam cleaning at removing the fine desert particulates that Phoenix homes face daily.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-primary/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-right-sm"
+            data-aos-delay="50"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🌿</span>
+              Allergen Elimination
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Removes <strong>98% of allergens</strong> from carpets—critical for Phoenix residents dealing with year-round pollen, dust mites, and desert allergens.
+            </p>
+            <p class="text-text/70">
+              Our Green Certified solution, The Natural®, is safe for kids and pets while being tough on allergens and dirt.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-accent/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-left-sm"
+            data-aos-delay="50"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🚫</span>
+              No Sticky Residue
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Unlike steam cleaning that leaves soapy residue, our carbonating process uses no soaps or harsh chemicals. No residue means dirt doesn't stick.
+            </p>
+            <p class="text-text/70">
+              Your carpets stay cleaner longer—essential when Phoenix dust is constantly trying to invade your home.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Benefits Summary -->
+        <div
+          class="bg-dark text-white rounded-2xl p-8 md:p-12 text-center"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold mb-6">
+            Why Phoenix Families Choose Our Method
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left md:text-center">
+            <div>
+              <div class="text-4xl mb-3">⚡</div>
+              <div class="font-bold text-lg mb-2">Dries in 1-2 Hours</div>
+              <div class="text-white/80 text-sm">Perfect for Phoenix's dry climate</div>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🏥</div>
+              <div class="font-bold text-lg mb-2">98% Allergen Removal</div>
+              <div class="text-white/80 text-sm">Breathe easier in your Phoenix home</div>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🌱</div>
+              <div class="font-bold text-lg mb-2">Green Certified & Safe</div>
+              <div class="text-white/80 text-sm">Safe for desert-loving families & pets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Throughout Phoenix -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p
+          class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+          data-aos="fade-up-sm"
+        >
+          Complete Cleaning Solutions
+        </p>
+        <CustomHeading
+          as="h2"
+          text="Services Throughout Phoenix"
+          svgColor="text-primary"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Comprehensive cleaning services for every Phoenix neighborhood
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <div
+            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border"
+            data-aos="fade-up-sm"
+            data-aos-delay={index * 50}
+          >
+            <div class="text-5xl mb-4">
+              {service.icon === "FaHouseUser" && "🏠"}
+              {service.icon === "FaTh" && "🔲"}
+              {service.icon === "FaCouch" && "🛋️"}
+              {service.icon === "FaPaw" && "🐾"}
+              {service.icon === "FaRug" && "🧶"}
+              {service.icon === "FaLeaf" && "🌿"}
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-dark mb-3">
+              {service.title}
+            </h3>
+            <p class="text-text/80 leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up-sm">
+        <CustomButton
+          link="tel:4806493663"
+          label="Call for Free Quote: (480) 649-3663"
+          variant="primary"
+          className="text-lg px-8 py-4"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials - Phoenix Residents -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p
+          class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+          data-aos="fade-up-sm"
+        >
+          Trusted by Phoenix Residents
+        </p>
+        <CustomHeading
+          as="h2"
+          text="What Phoenix Customers Say"
+          svgColor="text-accent"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Real reviews from Phoenix homeowners
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {phoenixReviews.map((review, index) => (
+          <div
+            class="bg-gradient-to-br from-primary/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-up-sm"
+            data-aos-delay={index * 100}
+          >
+            <div class="text-4xl text-primary mb-4">"</div>
+            <blockquote class="text-text/90 leading-relaxed mb-6 text-base md:text-lg">
+              {review.says}
+            </blockquote>
+            <div class="flex items-center gap-3 border-t border-border pt-4">
+              <div class="text-4xl text-primary/60">👤</div>
+              <div>
+                <div class="font-bold text-dark text-lg">{review.name}</div>
+                <div class="text-sm text-text/70">{review.about}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Review summary -->
+      <div
+        class="text-center mt-12 bg-dark text-white rounded-xl p-8"
+        data-aos="fade-up-sm"
+      >
+        <div class="text-5xl mb-4">⭐⭐⭐⭐⭐</div>
+        <div class="text-2xl md:text-3xl font-bold mb-2">4.9 Stars on Google</div>
+        <div class="text-lg text-white/80">Over 1,000 five-star reviews from Phoenix area customers</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas - Phoenix ZIP Codes -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <CustomHeading
+          as="h2"
+          text="Phoenix ZIP Codes We Serve"
+          svgColor="text-primary"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto mb-8"
+          data-aos="fade-up-sm"
+          data-aos-delay="50"
+        >
+          Serving all Phoenix neighborhoods and ZIP codes
+        </p>
+
+        <!-- Ahwatukee ZIP Codes Featured -->
+        <div
+          class="bg-primary text-white rounded-xl p-8 max-w-2xl mx-auto mb-12"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          <h3 class="text-2xl font-bold mb-4">🏠 Ahwatukee ZIP Codes</h3>
+          <div class="text-lg">
+            <strong>85044</strong> • <strong>85045</strong> • <strong>85048</strong>
+          </div>
+          <p class="mt-4 text-white/90">
+            Ahwatukee residents: We're your local carpet cleaning experts!
+          </p>
+        </div>
+      </div>
+
+      <!-- All Phoenix ZIPs -->
+      <div
+        class="bg-white rounded-xl p-8 md:p-12 shadow-lg max-w-5xl mx-auto"
+        data-aos="fade-up-sm"
+      >
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {phoenixZips.map((item) => (
+            <div class="text-center p-3 bg-light rounded-lg hover:bg-primary/10 transition-colors duration-200">
+              <div class="font-bold text-primary text-lg">{item.zip}</div>
+              <div class="text-sm text-text/70">{item.area}</div>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center mt-8 pt-8 border-t border-border">
+          <p class="text-text/80 mb-4">
+            Don't see your ZIP code? We serve all of Phoenix!
+          </p>
+          <CustomButton
+            link="tel:4806493663"
+            label="Call to Confirm Service: (480) 649-3663"
+            variant="primary"
+            className="text-base px-6 py-3"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Phoenix Trusts Brimley's -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <CustomHeading
+            as="h2"
+            text="Why Phoenix Trusts Brimley's White Glove Chem-Dry"
+            svgColor="text-accent"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+          />
+        </div>
+
+        <div class="space-y-8">
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-bold">
+              25+
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">25+ Years Serving Phoenix</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Since 1995, we've been cleaning carpets in Phoenix homes. We've weathered countless dust storms, served thousands of families across every Phoenix neighborhood, and built a reputation for excellence that spans generations. We're not newcomers—we're Phoenix veterans.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-left-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              🗺️
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">We Know Phoenix Neighborhoods Intimately</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                From the Foothills of Ahwatukee to the historic homes in Arcadia, from luxury properties in Biltmore to family neighborhoods near South Mountain—we know your area. We understand the unique challenges each Phoenix neighborhood faces and deliver service tailored to your home's needs.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              👨‍👩‍👧‍👦
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">Local Family Business, Not a National Chain</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                We're a family-owned Phoenix business. When you call us, you're supporting a local family that lives, works, and raises kids right here in the Valley. We treat your home like our own because we understand what Phoenix homeownership means—we're living it too.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-left-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              ⭐
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">1,000+ Five-Star Reviews</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Phoenix residents have made us the highest-rated carpet cleaning service in the area. Over 1,000 five-star reviews on Google speak to the quality, professionalism, and care we bring to every job. We don't just meet expectations—we exceed them, every single time.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              🧪
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">Technology Designed for Desert Climates</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Our Hot Carbonating Extraction isn't just effective—it's perfect for Phoenix. The minimal water usage combined with Phoenix's dry climate means carpets dry in 1-2 hours. We're removing deep desert dust while getting you back to normal life the same day. That's the Phoenix advantage.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="text-center mt-12 bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-8 md:p-12"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">
+            Join Thousands of Happy Phoenix Customers
+          </h3>
+          <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+            Experience the difference that 25+ years of Phoenix expertise makes
+          </p>
+          <CustomButton
+            link="/appointment"
+            label="Schedule Your Phoenix Appointment"
+            variant="light"
+            className="text-lg px-8 py-4"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Phoenix & Neighborhood Specific -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <p
+            class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+            data-aos="fade-up-sm"
+          >
+            Questions?
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Phoenix Carpet Cleaning FAQs"
+            svgColor="text-primary"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div
+              class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-border"
+              data-aos="fade-up-sm"
+              data-aos-delay={index * 50}
+            >
+              <h3 class="text-xl md:text-2xl font-bold text-dark mb-4 flex items-start gap-3">
+                <span class="text-primary flex-shrink-0">Q:</span>
+                <span>{faq.question}</span>
+              </h3>
+              <div class="text-base md:text-lg text-text/80 leading-relaxed pl-8">
+                <span class="text-accent font-semibold">A:</span> {faq.answer}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div
+          class="text-center mt-12 bg-dark text-white rounded-xl p-8"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl font-bold mb-4">Have More Questions?</h3>
+          <p class="text-lg text-white/90 mb-6">
+            Call us at <a href="tel:4806493663" class="text-accent hover:underline font-bold">(480) 649-3663</a> or schedule online
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <CustomButton
+              link="tel:4806493663"
+              label="Call Now"
+              variant="primary"
+              className="text-base px-6 py-3"
+            />
+            <CustomButton
+              link="/appointment"
+              label="Schedule Online"
+              variant="light"
+              className="text-base px-6 py-3"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section bg-gradient-to-br from-primary via-primary to-accent text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+          data-aos="fade-up-sm"
+        >
+          Ready for Cleaner Carpets in Your Phoenix Home?
+        </h2>
+        <p
+          class="text-xl md:text-2xl mb-8 text-white/90"
+          data-aos="fade-up-sm"
+          data-aos-delay="50"
+        >
+          Serving Ahwatukee, Arcadia, Biltmore, South Mountain & All Phoenix Neighborhoods
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          <CustomButton
+            link="tel:4806493663"
+            label="Call (480) 649-3663"
+            variant="light"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+          />
+          <CustomButton
+            link="/appointment"
+            label="Schedule Online"
+            variant="secondary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">Fast 1-2 Hour Dry Time</div>
+              <div class="text-sm text-white/80">Perfect for Phoenix climate</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">25+ Years in Phoenix</div>
+              <div class="text-sm text-white/80">Know your neighborhood</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">1,000+ Five-Star Reviews</div>
+              <div class="text-sm text-white/80">Phoenix's most trusted</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

@@ -1,0 +1,692 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Carpet Cleaning Scottsdale";
+const meta_title = "Carpet Cleaning Scottsdale AZ | Premium White Glove Service | Brimley's";
+const description = "Premium carpet cleaning in Scottsdale, AZ. White Glove service for luxury homes. Expert care for high-end carpets & rugs. 25+ years. (480) 649-3663";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Carpet Cleaning Scottsdale" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Premium Carpet Cleaning in Scottsdale
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Professional Carpet Cleaning<br class='hidden lg:block' /> in **Scottsdale**, Arizona"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Trusted by Scottsdale homeowners since 1995. White Glove service for luxury homes in North Scottsdale, Old Town, DC Ranch, Grayhawk, McDowell Mountain Ranch, and Gainey Ranch.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">White Glove Service</div>
+            <div class="text-xs md:text-sm text-gray-600">Premium care for luxury homes</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ✨
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Expert Care</div>
+            <div class="text-xs md:text-sm text-gray-600">Safe for high-end materials</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💧
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">80% Less Water Used</div>
+            <div class="text-xs md:text-sm text-gray-600">Carpets dry in 1-2 hours</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🌿
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Natural, Green-Certified</div>
+            <div class="text-xs md:text-sm text-gray-600">Non-toxic cleaning safe for your family</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section: Scottsdale Homeowner Concerns -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Premium Homes Deserve Premium Care
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Protecting Your **Valuable** Investment"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Your Scottsdale home represents a significant investment, and your luxury carpets and area rugs deserve expert treatment. Whether you're in a custom estate in DC Ranch, a contemporary home in Grayhawk, or a classic residence in Old Town, you need a carpet cleaning service that understands the unique requirements of high-end homes.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Traditional carpet cleaners use harsh chemicals and excessive water that can damage delicate fibers, leave sticky residue, and take days to dry. Your premium carpets deserve better.
+            </p>
+          </div>
+        </div>
+
+        <!-- Three Problem Areas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Problem 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Risk of Damage</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              High-end carpets and luxury area rugs require specialized care. Generic cleaning methods can damage delicate fibers, fade colors, or cause shrinkage in expensive materials.
+            </p>
+          </div>
+
+          <!-- Problem 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Extended Dry Times</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Traditional steam cleaning saturates carpets with gallons of water, leaving them wet for 1-2 days. This disrupts your lifestyle and risks mold growth in Arizona's climate.
+            </p>
+          </div>
+
+          <!-- Problem 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Harsh Chemicals</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Many carpet cleaners use strong detergents and chemical-laden solutions that leave residue, create overpowering odors, and aren't safe for your family or pets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section: White Glove Service for Scottsdale -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Scottsdale Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="White Glove Service for **Luxury** Homes"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              At Brimley's White Glove Chem-Dry, we've been serving discerning Scottsdale homeowners for over 25 years with a level of care that matches the quality of your home. Our Hot Carbonating Extraction process is gentle on luxury carpets, uses 80% less water than steam cleaning, and delivers superior results without harsh chemicals.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              We understand that your home in North Scottsdale, DC Ranch, or Gainey Ranch demands meticulous attention to detail and professional service. That's exactly what we deliver.
+            </p>
+          </div>
+        </div>
+
+        <!-- Three Solution Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Solution 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Experience with Luxury Homes</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our IICRC-certified technicians have extensive experience working with high-end carpets, Persian rugs, and luxury materials. We understand how to treat wool, silk, and other premium fibers with the care they deserve.
+            </p>
+          </div>
+
+          <!-- Solution 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Safe for High-End Materials</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              The Natural, our EPA-certified cleaning solution, is gentle enough for the finest carpets yet powerful enough to remove deep-seated dirt. No harsh chemicals, no sticky residue, no damage to delicate fibers.
+            </p>
+          </div>
+
+          <!-- Solution 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Meticulous Attention to Detail</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              From protective booties and corner guards to our thorough walk-through and post-cleaning inspection, we treat your Scottsdale home with the same respect we'd treat our own.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services in Scottsdale Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Premium Services
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Complete Cleaning Solutions for **Scottsdale** Homes"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Carpet Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Carpet Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our Hot Carbonating Extraction process uses 80% less water than steam cleaning, dries in 1-2 hours, and is safe for all carpet types including luxury materials.
+            </p>
+            <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Area Rug Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🎨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Area Rug Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Expert care for Persian rugs, Oriental rugs, and luxury area rugs. We understand the delicate nature of fine rugs and treat each piece with specialized attention.
+            </p>
+            <a href="/services/area-rug-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Upholstery Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🛋️</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Upholstery Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              The same gentle, effective process works beautifully on fine upholstery, sofas, chairs, and other furniture. Remove years of dust and allergens while protecting your investment.
+            </p>
+            <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Specialty Stain Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="250">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Specialty Stain Removal</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              From wine spills to pet accidents, we have specialized treatments to remove tough stains without damaging your luxury carpets or area rugs.
+            </p>
+            <a href="/services/specialty-stain-removal" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Tile & Grout Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="300">
+            <div class="text-4xl mb-4">💎</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Tile & Grout Cleaning</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Restore the beauty of your tile floors and eliminate bacteria hiding in grout lines. Our specialized cleaning and sealing process makes tile look like new.
+            </p>
+            <a href="/services/tile-and-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+
+          <!-- Pet Urine Removal -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="350">
+            <div class="text-4xl mb-4">🐾</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Pet Urine Removal</h3>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our P.U.R.T. treatment uses advanced chemistry to destroy urine crystals at their source, eliminating odors permanently—not just masking them.
+            </p>
+            <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
+              Learn More →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section: Scottsdale Reviews -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Neighbors** in Scottsdale"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "I called to get carpet and tile cleaned in my home. A LOT OF TILE! They were able to get me on the schedule quickly. Dave & David called me when they were on their way and arrived at the early end of my scheduled window. They were super friendly. Professional and you definitely feel comfortable having them in your home. A plus for me because I have kids. They did a great job. Everything looked amazing. I received a very personal and gracious thank you note in the mail from both Dave and David - not the office. It was so nice! Highly recommend. First time I used Chem Dry in Arizona. Have used Chem Dry for 20 years. So much better than steam cleaning!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Kelly Demos, Scottsdale, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "I recently had Dave clean my carpets and area rug. He was extremely professional and very hard working. The areas weren't big, but he gave them all extra attention and my carpets look brand new. The cream colored area rug looks great. Highly recommend their service!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Toby Rabenburg, Scottsdale, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "From my initial phone call asking for service, all the way through to the follow-up call they made the next day, everyone was professional and courteous. Dave, who cleaned my carpets, was fantastic! He showed up on time, professionally and cleanly dressed, asked the right questions, and made me feel comfortable right from the start. The carpet looks great, the stains have been removed and I am happy with the results. I highly recommend Brimley's White Glove Chem-Dry!"
+            </p>
+            <p class="text-sm font-semibold text-dark">Lj W., Scottsdale, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Service Areas
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Proudly Serving **All** of Scottsdale"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            We provide premium carpet cleaning services throughout Scottsdale and the surrounding areas, including all neighborhoods and zip codes.
+          </p>
+        </div>
+
+        <!-- Neighborhoods -->
+        <div class="mb-12" data-aos="fade-up-sm" data-aos-delay="150">
+          <h3 class="text-2xl font-semibold text-dark mb-6 text-center">Scottsdale Neighborhoods We Serve</h3>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <p class="text-base font-semibold text-dark">North Scottsdale</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <p class="text-base font-semibold text-dark">Old Town Scottsdale</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <p class="text-base font-semibold text-dark">DC Ranch</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <p class="text-base font-semibold text-dark">Grayhawk</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <p class="text-base font-semibold text-dark">McDowell Mountain Ranch</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow text-center">
+              <p class="text-base font-semibold text-dark">Gainey Ranch</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zip Codes -->
+        <div data-aos="fade-up-sm" data-aos-delay="200">
+          <h3 class="text-2xl font-semibold text-dark mb-6 text-center">Scottsdale Zip Codes We Serve</h3>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-3 text-center">
+              <div class="text-base text-text/80">85250</div>
+              <div class="text-base text-text/80">85251</div>
+              <div class="text-base text-text/80">85252</div>
+              <div class="text-base text-text/80">85253</div>
+              <div class="text-base text-text/80">85254</div>
+              <div class="text-base text-text/80">85255</div>
+              <div class="text-base text-text/80">85256</div>
+              <div class="text-base text-text/80">85257</div>
+              <div class="text-base text-text/80">85258</div>
+              <div class="text-base text-text/80">85259</div>
+              <div class="text-base text-text/80">85260</div>
+              <div class="text-base text-text/80">85261</div>
+              <div class="text-base text-text/80">85262</div>
+              <div class="text-base text-text/80">85263</div>
+              <div class="text-base text-text/80">85264</div>
+              <div class="text-base text-text/80">85266</div>
+              <div class="text-base text-text/80">85267</div>
+              <div class="text-base text-text/80">85268</div>
+              <div class="text-base text-text/80">85269</div>
+              <div class="text-base text-text/80">85271</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Scottsdale Trusts Brimley's Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Why Choose Brimley's
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Scottsdale Trusts **Brimley's** White Glove Chem-Dry"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Three Reasons -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Reason 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Premium Service Expectations</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We understand that Scottsdale homeowners expect the best. Our white glove service standard includes protective booties, corner guards, thorough walk-throughs, and a commitment to exceeding your expectations.
+            </p>
+          </div>
+
+          <!-- Reason 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Luxury Home Experience</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              With over 25 years serving Scottsdale's finest homes, we have extensive experience with high-end carpets, luxury area rugs, and premium materials. We know how to care for your valuable investments.
+            </p>
+          </div>
+
+          <!-- Reason 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-2">Professional, Courteous Technicians</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our uniformed, IICRC-certified technicians are background-checked professionals who treat your home and family with respect. You'll feel comfortable having them in your Scottsdale residence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Additional Trust Elements -->
+        <div class="mt-12 bg-primary/5 p-8 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="200">
+          <h4 class="text-2xl font-semibold text-dark mb-4 text-center">25+ Years Serving Scottsdale</h4>
+          <p class="text-base leading-relaxed text-text/80 text-center max-w-[55rem] mx-auto mb-6">
+            Since 1995, we've been the trusted choice for discerning Scottsdale homeowners who demand excellence. Our longevity in the community speaks to our commitment to quality, customer service, and results.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary mb-2">25+</div>
+              <div class="text-sm text-text/80">Years in Business</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary mb-2">100%</div>
+              <div class="text-sm text-text/80">Satisfaction Guarantee</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary mb-2">IICRC</div>
+              <div class="text-sm text-text/80">Certified Technicians</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary mb-2">EPA</div>
+              <div class="text-sm text-text/80">Safer Choice Certified</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section: Scottsdale-Specific -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">Is your service suitable for luxury homes in Scottsdale?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. We've been serving Scottsdale's finest homes for over 25 years. Our technicians have extensive experience with high-end carpets, Persian rugs, and luxury materials. We understand the premium service expectations in communities like DC Ranch, Grayhawk, and Gainey Ranch.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you clean Persian and Oriental rugs?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. We specialize in cleaning fine area rugs including Persian, Oriental, wool, silk, and other luxury materials. Our gentle Hot Carbonating Extraction process is safe for delicate fibers and won't damage or fade your valuable rugs.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does carpet cleaning take in a large Scottsdale home?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most homes take 2-4 hours depending on square footage and number of rooms. Larger estates may take longer, but we work efficiently while maintaining our meticulous attention to detail. Your carpets will be dry and ready for foot traffic in just 1-2 hours.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you use harsh chemicals or strong-smelling cleaners?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              No. The Natural, our primary cleaning solution, is EPA Safer Choice certified, green-certified, and contains no harsh chemicals or soaps. There's no overpowering odor—just a fresh, clean scent. It's completely safe for your family, pets, and fine carpets.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">What makes your process better than steam cleaning?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Our Hot Carbonating Extraction uses 80% less water than steam cleaning, so carpets dry in 1-2 hours instead of 1-2 days. We don't use soaps or detergents that leave sticky residue. The result is a deeper clean that lasts longer and is gentler on luxury carpet fibers.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer same-day or emergency carpet cleaning in Scottsdale?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We do our best to accommodate urgent requests and often have same-day or next-day availability. If you're hosting an event or have an emergency stain situation, call us at (480) 649-3663 and we'll work to fit you into our schedule.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Are your technicians background-checked and insured?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes. All our technicians are background-checked, IICRC-certified professionals. We're fully licensed, bonded, and insured. You can feel completely comfortable having our team in your Scottsdale home.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does carpet cleaning cost in Scottsdale?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing depends on square footage, carpet condition, and any specialty treatments needed. We provide free, no-obligation estimates with clear, honest pricing before we begin. Call (480) 649-3663 for your personalized quote.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="500">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer a satisfaction guarantee?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. If you're not completely satisfied with our cleaning, let us know within 30 days and we'll return to re-clean any areas of concern at no charge. Your satisfaction is guaranteed—that's the "white glove" promise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
