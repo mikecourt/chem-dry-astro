@@ -1,0 +1,696 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['tile-grout-cleaning', 'granite-countertop-renewal', 'wood-floor-cleaning'].includes(s.id)
+).slice(0, 3);
+
+const title = "Stone & Tile Cleaning and Polishing";
+const meta_title = "Stone & Marble Cleaning Phoenix | Polishing & Sealing | Brimley's";
+const description = "Professional stone, marble & granite cleaning in Phoenix. Deep clean, seal & polish. Safe for all natural stone. 25+ years experience. Free quote!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Stone and Tile Cleaning" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Stone & Tile Cleaning
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Restore Your Stone's **Natural**<br class='hidden lg:block' /> Beauty and Protection"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Professional cleaning, sealing, and polishing for marble, granite, travertine, slate, and all natural stone surfaces.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            💎
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Safe for All Natural Stone</div>
+            <div class="text-xs md:text-sm text-gray-600">Marble, granite, travertine, slate, limestone</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🛡️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Professional Sealing</div>
+            <div class="text-xs md:text-sm text-gray-600">Protects against stains and moisture</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ✨
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Restores Original Shine</div>
+            <div class="text-xs md:text-sm text-gray-600">Polishing brings back natural luster</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">25+ Years Experience</div>
+            <div class="text-xs md:text-sm text-gray-600">Trusted stone care specialists</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Stone Problem Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Problem with Natural Stone
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Your Stone **Loses** Its Beauty"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Natural stone is beautiful, but it's also porous. Unlike ceramic tile, materials like marble, granite, travertine, and slate can absorb liquids, oils, and dirt deep into their structure. Over time, this leads to:
+            </p>
+          </div>
+        </div>
+
+        <!-- Problem Points Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-dark mb-2">Stubborn Stains & Discoloration</h3>
+                <p class="text-base text-text/80">
+                  Spills from wine, coffee, oils, and even water can penetrate the surface and leave permanent-looking stains if not properly sealed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-dark mb-2">Dullness & Loss of Shine</h3>
+                <p class="text-base text-text/80">
+                  Daily wear, foot traffic, and improper cleaning methods gradually etch and scratch the surface, making your stone look tired and lifeless.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-dark mb-2">Damage from Wrong Cleaners</h3>
+                <p class="text-base text-text/80">
+                  Many household cleaners contain acids or harsh chemicals that can permanently etch and damage natural stone surfaces.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-dark mb-2">Embedded Dirt & Grime</h3>
+                <p class="text-base text-text/80">
+                  Without proper sealing, dirt and bacteria get trapped in the pores of the stone, making it harder to clean and maintain over time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Message -->
+        <div class="mt-8 text-center" data-aos="fade-up-sm" data-aos-delay="200">
+          <p class="text-lg text-text/80 italic max-w-[55rem] mx-auto">
+            The good news? With the right care, your natural stone can be restored to its original beauty and protected for years to come.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Brimley's Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Deep Clean, **Seal**, and Polish"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Our specialized stone and tile cleaning process is designed specifically for natural stone surfaces. We combine professional-grade cleaning, protective sealing, and expert polishing to restore and maintain your investment.
+          </p>
+        </div>
+
+        <!-- Three-Step Process -->
+        <div class="space-y-8">
+          <!-- Step 1: Deep Cleaning -->
+          <div class="bg-light p-8 rounded-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span class="text-2xl font-bold text-primary">1</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-semibold text-dark mb-3">Deep Cleaning</h3>
+                <p class="text-base leading-relaxed text-text/80 mb-4">
+                  We start with a thorough deep cleaning using pH-balanced, stone-safe solutions that won't damage your surfaces. Our specialized equipment removes:
+                </p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-base text-text/80">
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Embedded dirt and grime</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Oil and grease deposits</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Soap scum and residue</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Water spots and mineral deposits</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Professional Sealing -->
+          <div class="bg-light p-8 rounded-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span class="text-2xl font-bold text-primary">2</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-semibold text-dark mb-3">Professional Sealing</h3>
+                <p class="text-base leading-relaxed text-text/80 mb-4">
+                  Once clean, we apply a high-quality penetrating sealer that creates an invisible protective barrier. This critical step:
+                </p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-base text-text/80">
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Prevents liquid and stain absorption</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Resists oil and water-based stains</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Makes daily maintenance easier</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Extends the life of your stone</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Expert Polishing -->
+          <div class="bg-light p-8 rounded-lg" data-aos="fade-up-sm" data-aos-delay="250">
+            <div class="flex flex-col md:flex-row gap-6">
+              <div class="flex-shrink-0">
+                <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span class="text-2xl font-bold text-primary">3</span>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-semibold text-dark mb-3">Expert Polishing</h3>
+                <p class="text-base leading-relaxed text-text/80 mb-4">
+                  Finally, we use professional polishing techniques to restore the natural beauty and shine of your stone. Our polishing process:
+                </p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-base text-text/80">
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Removes minor scratches and etching</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Restores original luster and shine</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Brings out natural stone colors</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary">•</span>
+                    <span>Creates a smooth, reflective finish</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience with All Stone Types Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Expert Care for All Stone Types
+          </p>
+          <CustomHeading
+            as="h2"
+            text="We Know **Natural** Stone"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            With over 25 years of experience, we understand that every type of natural stone has unique characteristics and requires specialized care. We're trained and equipped to handle:
+          </p>
+        </div>
+
+        <!-- Stone Types Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-semibold text-dark mb-3">Marble</h3>
+            <p class="text-base text-text/80">
+              Elegant but delicate, marble requires gentle pH-neutral cleaners and proper sealing to prevent etching and staining.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-semibold text-dark mb-3">Granite</h3>
+            <p class="text-base text-text/80">
+              Durable and versatile, granite countertops and floors benefit from deep cleaning and re-sealing to maintain their protective barrier.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-semibold text-dark mb-3">Travertine</h3>
+            <p class="text-base text-text/80">
+              Porous and textured, travertine needs specialized cleaning to remove dirt from its natural pits without causing damage.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-semibold text-dark mb-3">Slate</h3>
+            <p class="text-base text-text/80">
+              With its natural cleft surface, slate requires careful cleaning and sealing to protect against moisture and staining.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-semibold text-dark mb-3">Limestone</h3>
+            <p class="text-base text-text/80">
+              Soft and susceptible to etching, limestone needs gentle treatment and regular sealing to preserve its natural beauty.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-semibold text-dark mb-3">Ceramic & Porcelain Tile</h3>
+            <p class="text-base text-text/80">
+              We also clean and restore ceramic and porcelain tile, focusing on grout line cleaning and sealing for lasting results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Neighbors** in Phoenix & Mesa"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We are very pleased with the service we received. Dave was on time, informative and did a great job cleaning our tile and carpet. The tile looks amazing! We are repeat customers of Brimley's White Glove Chem-Dry and happy to recommend them."
+            </p>
+            <p class="text-sm font-semibold text-dark">Melissa DeLay</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We have used Brimleys for many years to clean our carpet and our tile floors/grout. Always excellent results, on-time, efficient and fairly priced. Highly recommend."
+            </p>
+            <p class="text-sm font-semibold text-dark">Sally Smith</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Brimley's has been cleaning my wall-to-wall carpet, upholstery and tile for 5 years now. Their technicians are respectful, knowledgeable and do a thorough job. They're very careful around the several antique pieces in the living room; and the corners of doorways are protected so their equipment won't cause any damage."
+            </p>
+            <p class="text-sm font-semibold text-dark">Zoe Rudnicki</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Satisfaction Guarantee Section -->
+  <section class="section bg-primary/5">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <div class="text-center">
+          <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6" data-aos="fade-up-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+          <CustomHeading
+            as="h2"
+            text="Our **Satisfaction** Guarantee"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-lg leading-relaxed text-text/80 mb-8 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            We stand behind every job we complete. If you're not completely satisfied with our stone and tile cleaning service, let us know within 30 days and we'll return to re-clean any areas of concern at no charge. Your satisfaction is our priority—that's the "white glove" promise.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up-sm" data-aos-delay="150">
+            <CustomButton
+              label="Get Your Free Quote"
+              link="#contact-form"
+              variant="primary"
+            />
+            <CustomButton
+              label="Call Us Today"
+              link="tel:+14806493663"
+              variant="secondary"
+              icon="FaPhone"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Floor Cleaning Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Than Just **Stone**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Tile & Grout -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🧼</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Need Deep Grout Cleaning?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Tile & Grout Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our specialized tile and grout cleaning removes years of embedded dirt and bacteria from grout lines, followed by professional sealing to keep them cleaner longer.
+            </p>
+            <a href="/services/tile-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Tile & Grout Cleaning →
+            </a>
+          </div>
+
+          <!-- Granite Countertop -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Granite Countertops?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Granite Countertop Renewal</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Restore the beauty of your granite countertops with our specialized cleaning, polishing, and sealing service designed specifically for kitchen and bathroom surfaces.
+            </p>
+            <a href="/services/granite-countertop-renewal" class="text-primary font-semibold hover:underline">
+              Learn More About Granite Renewal →
+            </a>
+          </div>
+
+          <!-- Wood Floor -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🌳</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Hardwood Floors?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Wood Floor Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Our gentle yet effective wood floor cleaning process removes dirt and grime while protecting your finish, bringing back the natural beauty of your hardwood.
+            </p>
+            <a href="/services/wood-floor-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Wood Floor Cleaning →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">What types of stone can you clean?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We clean all natural stone including marble, granite, travertine, slate, limestone, sandstone, and onyx. We also service ceramic and porcelain tile. Each stone type requires different care, and our technicians are trained to handle them all properly.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">How often should stone be sealed?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most natural stone should be resealed every 1-3 years depending on the type of stone, location, and traffic. High-traffic areas like kitchen countertops may need annual sealing, while lower-traffic areas can go longer. We'll assess your stone and recommend the right schedule.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove stains from natural stone?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Many stains can be removed or significantly lightened with our specialized cleaning process. However, some deep or old stains that have penetrated unsealed stone may be permanent. We'll assess the stain and give you an honest evaluation during our inspection.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Will polishing restore the shine to my dull marble?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! Our professional polishing process can restore shine to dull, etched marble and other polished stone surfaces. For severely damaged stone, we may recommend additional honing before polishing for optimal results.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does the process take?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most stone cleaning jobs take 2-4 hours depending on the square footage and condition. Sealer needs time to cure (usually 24-48 hours) before the surface is ready for normal use. We'll provide a detailed timeline during your estimate.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">What's the best way to maintain my stone between cleanings?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Use only pH-neutral, stone-safe cleaners. Avoid vinegar, lemon juice, bleach, and acidic cleaners. Wipe up spills immediately, use coasters and trivets, and dust mop or vacuum regularly. We'll provide detailed care instructions after your service.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you clean stone showers and bathrooms?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely! We specialize in cleaning marble, granite, and travertine showers and bathroom surfaces. We'll remove soap scum, hard water deposits, and mildew while protecting your stone with proper sealing.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you offer a warranty on your work?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes, we stand behind our work with a satisfaction guarantee. If you're not happy with the results within 30 days, we'll return to address any concerns at no charge. Sealer performance depends on proper maintenance and use of appropriate cleaners.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="500">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does stone cleaning and sealing cost?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing varies based on the type of stone, square footage, condition, and services needed (cleaning, sealing, polishing). We provide free, no-obligation estimates with clear, honest pricing before any work begins—no hidden fees or surprises.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

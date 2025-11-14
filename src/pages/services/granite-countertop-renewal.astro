@@ -1,0 +1,613 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import ServiceCard from "@/components/ServiceCard.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const allServices = await getSinglePage("services");
+const relatedServices = allServices.filter(s =>
+  ['stone-tile-floor-cleaning', 'tile-and-grout-cleaning', 'kitchen-tile-cleaning'].includes(s.id)
+).slice(0, 3);
+
+const title = "Granite Countertop Renewal";
+const meta_title = "Granite Countertop Cleaning & Sealing Phoenix | Renewal Service";
+const description = "Professional granite countertop cleaning, polishing & sealing in Phoenix. Restore shine, prevent stains. Food-safe products. 25+ years experience. Free quote!";
+---
+
+<Base title={title} description={description} meta_title={meta_title}>
+  <SchemaMarkup type="service" serviceName="Granite Countertop Renewal" />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-40 lg:py-48 relative mb-0"
+    style="background-image: url('/images/carpet-cleaning-service-hero.jpg'); background-size: cover; background-position: center center;">
+
+    <!-- White Gradient Overlay (Radial gradient from left-center) -->
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-20 px-[30px]">
+      <!-- Eyebrow -->
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Granite Countertop Renewal
+      </p>
+
+      <!-- H1 -->
+      <CustomHeading
+        as="h1"
+        text="Restore the **Beauty** and<br class='hidden lg:block' /> Protection of Your Granite Countertops"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <!-- H2 Subheading -->
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Professional cleaning, polishing, and sealing that brings back the original shine and protects against stains.
+      </h2>
+
+      <!-- Trust Badges -->
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-x-2 sm:gap-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="150">
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            ✨
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Restores Original Shine</div>
+            <div class="text-xs md:text-sm text-gray-600">Removes dullness and water spots</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🛡️
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Professional-Grade Sealing</div>
+            <div class="text-xs md:text-sm text-gray-600">Prevents future stains and etching</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🍃
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">Food-Safe Products</div>
+            <div class="text-xs md:text-sm text-gray-600">Non-toxic, safe for food prep surfaces</div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center sm:justify-start gap-3">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+            🏆
+          </div>
+          <div class="text-center sm:text-left">
+            <div class="font-bold text-dark text-sm md:text-base">25+ Years Experience</div>
+            <div class="text-xs md:text-sm text-gray-600">Specialized stone care expertise</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" data-aos="fade-up-sm" data-aos-delay="200">
+        <CustomButton
+          label="Get My Free Estimate"
+          link="#contact-form"
+          variant="primary"
+        />
+        <CustomButton
+          label="(480) 649-3663"
+          link="tel:+14806493663"
+          variant="secondary"
+          icon="FaPhone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Problem
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Why Granite Countertops Lose Their **Shine**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              Your granite countertops were a beautiful investment in your kitchen. But over time, even the most stunning granite can lose its luster. Daily cooking, spills, and improper cleaning can leave your countertops looking dull, spotted, and vulnerable to permanent damage.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              The biggest culprit? Most homeowners don't realize that granite is porous—meaning it can absorb liquids, oils, and stains if not properly sealed. Without regular professional care, your granite becomes dull, develops hard water spots, and can even harbor bacteria in microscopic pores.
+            </p>
+          </div>
+        </div>
+
+        <!-- Problem Points -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <!-- Problem 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-3xl mb-4 text-red-500">😔</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Dull, Lifeless Surface</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Daily use and improper cleaners strip away the natural shine, leaving your granite looking tired and worn instead of polished and elegant.
+            </p>
+          </div>
+
+          <!-- Problem 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-3xl mb-4 text-red-500">💧</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Water Spots & Etching</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Hard water, acidic foods, and spills leave behind stubborn water spots, etch marks, and stains that seem impossible to remove.
+            </p>
+          </div>
+
+          <!-- Problem 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-3xl mb-4 text-red-500">🦠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Unsealed Pores Absorb Stains</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Without proper sealing, granite absorbs oils, wine, coffee, and other liquids deep into the stone—causing permanent discoloration and harboring bacteria.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Solution Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            The Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Professional Granite **Renewal** Process"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            Our specialized granite countertop renewal service doesn't just clean your surfaces—it restores them to their original beauty and protects them for years to come. We use professional-grade, food-safe products designed specifically for natural stone.
+          </p>
+        </div>
+
+        <!-- Process Steps -->
+        <div class="space-y-8">
+          <!-- Step 1 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="100">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">1</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Deep Cleaning</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                We start with a thorough deep cleaning using pH-balanced, stone-safe cleaners that remove built-up grime, oils, and residue without damaging the granite. This prepares the surface for polishing and sealing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="150">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">2</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Stain Treatment & Polishing</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                Stubborn stains, water spots, and etch marks are treated with specialized poultices and polishing compounds. We carefully restore the natural shine and luster your granite had when it was first installed.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-6" data-aos="fade-right-sm" data-aos-delay="200">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <span class="text-primary font-bold">3</span>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-dark mb-3">Professional-Grade Sealing</h4>
+              <p class="text-base leading-relaxed text-text/80">
+                Finally, we apply a professional-grade, food-safe sealer that penetrates deep into the granite's pores. This creates an invisible barrier that repels water, oils, and stains while allowing the stone to breathe naturally. Your countertops are protected and stay beautiful longer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiator Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            What Makes Us Different
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Specialized **Countertop** Expertise"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Differentiator Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up-sm" data-aos-delay="100">
+          <!-- Diff 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3 text-center">Stone Care Specialists</h3>
+            <p class="text-base leading-relaxed text-text/80 text-center">
+              Unlike general cleaning companies, we specialize in natural stone care. Our technicians are trained in the proper techniques for granite, marble, and quartz—ensuring your investment is protected, not damaged.
+            </p>
+          </div>
+
+          <!-- Diff 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3 text-center">Food-Safe, Non-Toxic Products</h3>
+            <p class="text-base leading-relaxed text-text/80 text-center">
+              Your countertops are where you prepare food for your family. That's why we only use food-safe, non-toxic products that are gentle on your granite and safe for your loved ones. No harsh chemicals, no lingering odors.
+            </p>
+          </div>
+
+          <!-- Diff 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3 text-center">Long-Lasting Protection</h3>
+            <p class="text-base leading-relaxed text-text/80 text-center">
+              Our professional-grade sealers provide superior protection that lasts. Unlike DIY products or inferior sealers, our treatments penetrate deeply to protect from within while maintaining the natural beauty of your stone.
+            </p>
+          </div>
+
+          <!-- Diff 4 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-dark mb-3 text-center">Works on All Stone Types</h3>
+            <p class="text-base leading-relaxed text-text/80 text-center">
+              Whether you have granite, marble, or quartz countertops, we have the expertise and products to properly care for each unique stone type. Every surface gets customized treatment based on its specific needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Testimonials
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hear From Your **Neighbors** in Phoenix & Mesa"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "Dave and David did an excellent job on the tile and grout at my home. They also cleaned some carpet and an area rug. It's amazing how much happier having clean floors can make you! The guys were very nice and professional. When you have kids, these are the type of people you want in your home."
+            </p>
+            <p class="text-sm font-semibold text-dark">Kelly D., Scottsdale, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We are very pleased with the service we received. Dave was on time, informative and did a great job cleaning our tile and carpet. The tile looks amazing! We are repeat customers of Brimley's White Glove Chem-Dry and happy to recommend them."
+            </p>
+            <p class="text-sm font-semibold text-dark">Melissa DeLay, Phoenix, AZ</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="flex gap-1 mb-4">
+              {[...Array(5)].map(() => (
+                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
+              "We have used Brimleys for many years to clean our carpet and our tile floors/grout. Always excellent results, on-time, efficient and fairly priced. Highly recommend."
+            </p>
+            <p class="text-sm font-semibold text-dark">Sally Smith, Mesa, AZ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Satisfaction Guarantee Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Our Guarantee
+          </p>
+          <CustomHeading
+            as="h2"
+            text="100% **Satisfaction** Guarantee"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
+            <p class="text-base leading-relaxed text-text/80">
+              We stand behind our work with a complete satisfaction guarantee. If you're not thrilled with the results of your granite countertop renewal, let us know within 30 days and we'll return to address any concerns at no additional charge.
+            </p>
+            <p class="text-base leading-relaxed text-text/80">
+              Your countertops are a significant investment in your home. We treat them with the same care and respect we'd give our own—because when you trust us with your home, that trust matters more than anything.
+            </p>
+          </div>
+        </div>
+
+        <!-- Guarantee Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-up-sm" data-aos-delay="150">
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="text-4xl mb-4">🤝</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">White Glove Service</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Professional, courteous technicians who treat your home with respect and care.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="text-4xl mb-4">💯</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Quality Results</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Expertly restored countertops that look beautiful and are protected for years to come.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Fast Service</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Quick turnaround so you can get back to using your kitchen without disruption.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="section">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            Complete Stone Care Solutions
+          </p>
+          <CustomHeading
+            as="h2"
+            text="More Than Just **Countertops**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- Service Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Stone Tile Floor Cleaning -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
+            <div class="text-4xl mb-4">🏠</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Stone Tile Floors?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Stone & Tile Floor Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Restore the beauty of your stone tile floors with professional cleaning and sealing. We remove years of built-up grime and protect your investment for lasting beauty.
+            </p>
+            <a href="/services/stone-tile-floor-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Stone Floor Cleaning →
+            </a>
+          </div>
+
+          <!-- Tile & Grout -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
+            <div class="text-4xl mb-4">✨</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Grimy Tile & Grout?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Tile & Grout Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Eliminate bacteria and restore the shine to your tile floors. Our specialized cleaning and sealing process makes tile look like new and stay cleaner longer.
+            </p>
+            <a href="/services/tile-and-grout-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Tile & Grout Cleaning →
+            </a>
+          </div>
+
+          <!-- Kitchen Tile -->
+          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
+            <div class="text-4xl mb-4">🍳</div>
+            <h3 class="text-xl font-semibold text-dark mb-3">Kitchen Backsplash?</h3>
+            <h4 class="text-lg font-semibold text-dark mb-2">Kitchen Tile Cleaning</h4>
+            <p class="text-base leading-relaxed text-text/80 mb-4">
+              Remove grease, grime, and years of cooking buildup from your kitchen tile and backsplash. We make your kitchen sparkle again with safe, effective cleaning.
+            </p>
+            <a href="/services/kitchen-tile-cleaning" class="text-primary font-semibold hover:underline">
+              Learn More About Kitchen Tile Cleaning →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="mx-auto max-w-[65rem]">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
+            FAQ
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Frequently Asked **Questions**"
+            svgColor="text-primary"
+            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
+            <h3 class="text-xl font-bold text-dark mb-4">How often should I have my granite countertops sealed?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most granite countertops should be professionally sealed every 1-3 years, depending on use and the quality of the previous sealer. High-traffic kitchen countertops may need more frequent sealing. We can test your granite's absorbency to determine if it needs resealing.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
+            <h3 class="text-xl font-bold text-dark mb-4">Can you remove stains from my granite?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              In most cases, yes. We use specialized poultices and treatments designed to draw out deep stains from oil, wine, coffee, and other substances. While we can't guarantee removal of every stain (some substances permanently discolor stone), we have excellent success with most common stains.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
+            <h3 class="text-xl font-bold text-dark mb-4">How long does the sealing process take?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Most countertop renewals take 2-4 hours depending on the size of your countertops and their condition. The sealer needs to cure for 24 hours before the surface is fully ready for normal use, though light use is typically fine after a few hours.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
+            <h3 class="text-xl font-bold text-dark mb-4">Will the sealer change the look of my granite?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              No. Our professional-grade sealers are penetrating sealers, meaning they absorb into the stone rather than sitting on the surface. They won't change the color, appearance, or natural beauty of your granite—they simply protect it from within.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
+            <h3 class="text-xl font-bold text-dark mb-4">Do you work on marble and quartz countertops too?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Yes! We're trained in the proper care techniques for all natural stone surfaces, including granite, marble, quartzite, and engineered quartz. Each stone type requires different products and methods, and we customize our approach accordingly.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
+            <h3 class="text-xl font-bold text-dark mb-4">Are your products safe for food preparation surfaces?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Absolutely. We only use food-safe, non-toxic products that are specifically designed for kitchen countertops. Our cleaners and sealers meet strict safety standards and won't leave any harmful residues on your food prep surfaces.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
+            <h3 class="text-xl font-bold text-dark mb-4">How do I maintain my countertops after sealing?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              We'll provide you with detailed care instructions and recommend specific products. Generally, daily cleaning with a pH-neutral stone cleaner and promptly wiping up spills will keep your sealed granite looking beautiful for years.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="450">
+            <h3 class="text-xl font-bold text-dark mb-4">How much does granite countertop renewal cost?</h3>
+            <p class="text-base leading-relaxed text-text/80">
+              Pricing depends on the size of your countertops, their current condition, and the level of treatment needed. We provide free, no-obligation estimates so you know exactly what to expect—no hidden fees or surprises. Contact us for a quote!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
