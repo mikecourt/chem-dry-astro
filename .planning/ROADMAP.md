@@ -17,7 +17,7 @@ None
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Template Standardization & Audit** - Audit and standardize existing city pages
-- [ ] **Phase 2: Content Optimization & SEO** - Optimize for local search rankings
+- [x] **Phase 2: Content Optimization & SEO** - Optimize for local search rankings
 - [ ] **Phase 3: Quote Form & Conversion Flow** - Build lead capture and optimize CTAs
 - [ ] **Phase 4: Testimonials System Migration** - Move testimonials to content collections
 - [ ] **Phase 5: Tier 2 City Pages** - Create remaining 4 city pages
@@ -64,12 +64,14 @@ Plans:
 
 **Depends on**: Phase 2
 
-**Research**: Unlikely (Netlify forms already working - adapting existing contact form pattern)
+**Research**: Complete (existing CallToAction partial has form UI, Netlify Forms pattern established)
 
-**Plans**: TBD
+**Plans**: 3
 
 Plans:
-- TBD
+- 03-01: Quote Form Backend & Netlify Integration (configure forms, create thank-you page)
+- 03-02: Dedicated Quote Page & Navigation Integration (create /free-quote, update nav)
+- 03-03: Phone CTA Optimization & Conversion Tracking (standardize phone links, add tracking)
 
 ### Phase 4: Testimonials System Migration
 **Goal**: Migrate hardcoded testimonials into content collections for maintainability, create structured testimonial data, implement dynamic display with city/service-specific filtering.
@@ -133,8 +135,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Template Standardization & Audit | 3/3 | Complete | 2026-01-15 |
-| 2. Content Optimization & SEO | 1/2 | In progress | - |
-| 3. Quote Form & Conversion Flow | 0/TBD | Not started | - |
+| 2. Content Optimization & SEO | 2/2 | Complete | 2026-01-15 |
+| 3. Quote Form & Conversion Flow | 0/3 | Plans ready | - |
 | 4. Testimonials System Migration | 0/TBD | Not started | - |
 | 5. Tier 2 City Pages | 0/TBD | Not started | - |
 | 6. Navigation & Internal Linking | 0/TBD | Not started | - |

@@ -94,32 +94,38 @@ const services = [
   {
     title: "Carpet Cleaning",
     description: "Hot Carbonating Extraction removes desert dust, allergens, and deep-set dirt from your Phoenix home's carpets.",
-    icon: "FaHouseUser"
+    icon: "FaHouseUser",
+    link: "/services/carpet-cleaning"
   },
   {
     title: "Tile & Grout Cleaning",
     description: "Restore tile floors common in Phoenix homes. Remove years of buildup from grout lines.",
-    icon: "FaTh"
+    icon: "FaTh",
+    link: "/services/tile-and-grout-cleaning"
   },
   {
     title: "Upholstery Cleaning",
     description: "Refresh furniture that bears the brunt of Phoenix dust and daily family life.",
-    icon: "FaCouch"
+    icon: "FaCouch",
+    link: "/services/upholstery-cleaning"
   },
   {
     title: "Pet Odor Removal",
     description: "Eliminate pet odors and stains with our P.U.R.T.® treatment. Safe for Phoenix's pet-loving families.",
-    icon: "FaPaw"
+    icon: "FaPaw",
+    link: "/services"
   },
   {
     title: "Area Rug Cleaning",
     description: "Specialized cleaning for the rugs that define your Phoenix home's style.",
-    icon: "FaRug"
+    icon: "FaRug",
+    link: "/services"
   },
   {
     title: "Allergen Removal",
     description: "Critical in Phoenix's desert climate. Remove dust, pollen, and allergens that accumulate year-round.",
-    icon: "FaLeaf"
+    icon: "FaLeaf",
+    link: "/services/carpet-cleaning"
   }
 ];
 
@@ -172,11 +178,11 @@ const faqs = [
   },
   {
     question: "Do you cover North Phoenix and Desert Ridge?",
-    answer: "Yes! We serve all of North Phoenix, including Desert Ridge, Paradise Valley borders, and surrounding areas. Our service area extends throughout the entire Phoenix metro, from North Phoenix down to Ahwatukee and everywhere in between."
+    answer: "Yes! We serve all of North Phoenix, including Desert Ridge, Paradise Valley borders, and surrounding areas. Our service area extends throughout the entire Phoenix metro, from North Phoenix down to Ahwatukee and everywhere in between. We also serve neighboring cities like <a href=\"/scottsdale\" class=\"text-primary hover:underline\">Scottsdale</a> and <a href=\"/tempe\" class=\"text-primary hover:underline\">Tempe</a>."
   },
   {
     question: "How does the fast dry time work in Phoenix's heat?",
-    answer: "Phoenix's warm, dry climate is actually perfect for our Hot Carbonating Extraction process! Because we use about 80% less water than traditional steam cleaning, your carpets dry in just 1-2 hours - even faster in Phoenix's dry heat. This means you can get back to your normal routine the same day, without the humidity and dampness of traditional steam cleaning."
+    answer: "Phoenix's warm, dry climate is actually perfect for our <a href=\"/services/carpet-cleaning\" class=\"text-primary hover:underline\">Hot Carbonating Extraction</a> process! Because we use about 80% less water than traditional steam cleaning, your carpets dry in just 1-2 hours - even faster in Phoenix's dry heat. This means you can get back to your normal routine the same day, without the humidity and dampness of traditional steam cleaning."
   },
   {
     question: "Do you serve all Phoenix neighborhoods?",
@@ -642,9 +648,12 @@ const faqs = [
             <h3 class="text-xl md:text-2xl font-bold text-dark mb-3">
               {service.title}
             </h3>
-            <p class="text-text/80 leading-relaxed">
+            <p class="text-text/80 leading-relaxed mb-4">
               {service.description}
             </p>
+            <a href={service.link} class="text-primary hover:underline font-semibold inline-flex items-center gap-1">
+              Learn More <span aria-hidden="true">→</span>
+            </a>
           </div>
         ))}
       </div>
@@ -780,6 +789,16 @@ const faqs = [
             variant="primary"
             className="text-base px-6 py-3"
           />
+        </div>
+
+        <!-- Nearby Cities -->
+        <div class="text-center mt-8 pt-8 border-t border-border" data-aos="fade-up-sm">
+          <h3 class="text-xl font-semibold text-dark mb-4">Also Serving Nearby Cities</h3>
+          <p class="text-text/80">
+            <a href="/mesa" class="text-primary hover:underline">Mesa</a> •
+            <a href="/tempe" class="text-primary hover:underline">Tempe</a> •
+            <a href="/scottsdale" class="text-primary hover:underline">Scottsdale</a>
+          </p>
         </div>
       </div>
     </div>
