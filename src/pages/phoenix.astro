@@ -10,7 +10,8 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { getEntry, type CollectionEntry } from "astro:content";
 
 const meta_title = "Carpet Cleaning Phoenix AZ | Ahwatukee, Arcadia, Biltmore | Brimley's";
-const meta_description = "Professional carpet cleaning in Phoenix: Ahwatukee, Arcadia, Biltmore, South Mountain. 25+ years serving Phoenix neighborhoods. Fast, safe. (480) 649-3663";
+const meta_description = "Carpet cleaning Phoenix AZ - Ahwatukee, Arcadia, Biltmore & more. Hot Carbonating Extraction dries in 1-2 hrs. 25+ yrs experience. Free quote: (480) 649-3663";
+const canonical = "https://whiteglovecarpet.com/phoenix";
 
 const call_to_action = (await getEntry(
   "ctaSection",
@@ -200,8 +201,8 @@ const faqs = [
 ];
 ---
 
-<Base meta_title={meta_title} description={meta_description}>
-  <SchemaMarkup type="service" serviceName="Carpet Cleaning Phoenix" />
+<Base meta_title={meta_title} description={meta_description} canonical={canonical}>
+  <SchemaMarkup type="city" city="Phoenix" state="Arizona" postalCodes={["85044", "85045", "85048", "85003", "85006", "85016", "85018", "85020"]} />
 
   <!-- Hero Section -->
   <section

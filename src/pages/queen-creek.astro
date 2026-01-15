@@ -14,11 +14,12 @@ const call_to_action = (await getEntry(
 
 const title = "Carpet Cleaning Queen Creek AZ";
 const meta_title = "Carpet Cleaning Queen Creek AZ | Professional Service | Brimley's";
-const description = "Professional carpet cleaning in Queen Creek, AZ. Trusted by growing families. Hot Carbonating Extraction, fast drying. Free quote! (480) 649-3663";
+const description = "Carpet cleaning Queen Creek AZ - trusted by growing families. Hot Carbonating Extraction, fast drying. 25+ years experience. Free quote: (480) 649-3663";
+const canonical = "https://whiteglovecarpet.com/queen-creek";
 ---
 
-<Base title={title} description={description} meta_title={meta_title}>
-  <SchemaMarkup type="service" serviceName="Carpet Cleaning in Queen Creek" />
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical}>
+  <SchemaMarkup type="city" city="Queen Creek" state="Arizona" postalCodes={["85142", "85143"]} />
 
   <!-- Hero Section -->
   <section

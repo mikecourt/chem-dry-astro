@@ -15,11 +15,12 @@ const call_to_action = (await getEntry(
 
 const title = "Professional Carpet Cleaning in Tempe, Arizona";
 const meta_title = "Carpet Cleaning Tempe AZ | ASU Area & South Tempe | Brimley's";
-const description = "Professional carpet cleaning in Tempe, AZ. Perfect for homes & rentals. Fast drying, thorough cleaning. Serving Tempe 25+ years. Free quote! (480) 649-3663";
+const description = "Carpet cleaning Tempe AZ - perfect for homes & rentals. Fast drying, thorough cleaning. 25+ years experience. Free quote: (480) 649-3663";
+const canonical = "https://whiteglovecarpet.com/tempe";
 ---
 
-<Base title={title} description={description} meta_title={meta_title}>
-  <SchemaMarkup type="service" serviceName="Carpet Cleaning in Tempe" />
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical}>
+  <SchemaMarkup type="city" city="Tempe" state="Arizona" postalCodes={["85280", "85281", "85282", "85283", "85284", "85285", "85287"]} />
 
   <!-- Hero Section -->
   <section

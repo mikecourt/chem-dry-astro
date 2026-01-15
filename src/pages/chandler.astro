@@ -15,11 +15,12 @@ const call_to_action = (await getEntry(
 
 const title = "Carpet Cleaning Chandler AZ | Professional Service | Brimley's White Glove";
 const meta_title = "Carpet Cleaning Chandler AZ | Professional Service | Brimley's White Glove";
-const description = "Professional carpet cleaning in Chandler, AZ. Hot Carbonating Extraction, pet-safe, dries fast. Serving Chandler 25+ years. Free quote! (480) 649-3663";
+const description = "Carpet cleaning Chandler AZ - Hot Carbonating Extraction, pet-safe, dries fast. Serving Chandler 25+ years. Free quote: (480) 649-3663";
+const canonical = "https://whiteglovecarpet.com/chandler";
 ---
 
-<Base title={title} description={description} meta_title={meta_title}>
-  <SchemaMarkup type="service" serviceName="Carpet Cleaning in Chandler, AZ" />
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical}>
+  <SchemaMarkup type="city" city="Chandler" state="Arizona" postalCodes={["85224", "85225", "85226", "85244", "85246", "85248", "85249", "85286"]} />
 
   <!-- Hero Section -->
   <section

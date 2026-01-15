@@ -15,11 +15,12 @@ const call_to_action = (await getEntry(
 
 const title = "Carpet Cleaning Scottsdale";
 const meta_title = "Carpet Cleaning Scottsdale AZ | Premium White Glove Service | Brimley's";
-const description = "Premium carpet cleaning in Scottsdale, AZ. White Glove service for luxury homes. Expert care for high-end carpets & rugs. 25+ years. (480) 649-3663";
+const description = "Carpet cleaning Scottsdale AZ - premium white glove service for luxury homes. Hot Carbonating Extraction, safe for fine rugs. Free quote: (480) 649-3663";
+const canonical = "https://whiteglovecarpet.com/scottsdale";
 ---
 
-<Base title={title} description={description} meta_title={meta_title}>
-  <SchemaMarkup type="service" serviceName="Carpet Cleaning Scottsdale" />
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical}>
+  <SchemaMarkup type="city" city="Scottsdale" state="Arizona" postalCodes={["85250", "85251", "85252", "85253", "85254", "85255", "85256", "85257", "85258", "85259", "85260", "85261", "85262", "85263", "85264", "85266", "85267", "85268", "85269", "85271"]} />
 
   <!-- Hero Section -->
   <section

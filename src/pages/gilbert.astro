@@ -22,11 +22,12 @@ const featuredServices = allServices.filter(s =>
 
 const title = "Carpet Cleaning Gilbert AZ";
 const meta_title = "Carpet Cleaning Gilbert AZ | Trusted Since 1995 | Brimley's White Glove";
-const description = "Professional carpet cleaning in Gilbert, AZ. Safe for families & pets, dries in 1-2 hours. Serving Gilbert for 25+ years. Free quote! (480) 649-3663";
+const description = "Carpet cleaning Gilbert AZ - safe for families & pets, dries in 1-2 hours. Hot Carbonating Extraction. 25+ years experience. Free quote: (480) 649-3663";
+const canonical = "https://whiteglovecarpet.com/gilbert";
 ---
 
-<Base title={title} description={description} meta_title={meta_title}>
-  <SchemaMarkup type="local" serviceName="Carpet Cleaning" city="Gilbert" />
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical}>
+  <SchemaMarkup type="city" city="Gilbert" state="Arizona" postalCodes={["85233", "85234", "85295", "85296", "85297", "85298", "85299"]} />
 
   <!-- Hero Section -->
   <section
