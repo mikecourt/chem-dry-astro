@@ -1,0 +1,89 @@
+---
+/**
+ * CityTestimonials.astro
+ * Section component that fetches and displays testimonials filtered by city.
+ * Consumes the testimonials content collection and renders a grid layout.
+ */
+
+import { getCollection } from "astro:content";
+import CustomHeading from "@/components/CustomHeading.astro";
+import TestimonialCard from "@/components/TestimonialCard.astro";
+
+type Props = {
+  city: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  limit?: number;
+};
+
+const {
+  city,
+  title,
+  subtitle,
+  description,
+  limit = 3
+} = Astro.props;
+
+// Default title uses city name with markdown bold for CustomHeading decoration
+const displayTitle = title ?? `Hear From Your **${city}** Neighbors`;
+const displaySubtitle = subtitle ?? `${city} Testimonials`;
+const displayDescription = description ?? `Don't just take our word for it - hear what ${city} homeowners say about our service.`;
+
+// Fetch testimonials filtered by city
+const allTestimonials = await getCollection("testimonials");
+const cityTestimonials = allTestimonials
+  .filter((t) => t.data.location.toLowerCase() === city.toLowerCase())
+  .slice(0, limit);
+---
+
+<section class="section">
+  <div class="container">
+    <div class="mx-auto max-w-[65rem]">
+      {/* Section Header */}
+      <div class="text-center mb-12">
+        <p
+          class="text-sm font-semibold tracking-wider uppercase text-primary mb-3"
+          data-aos="fade-up-sm"
+        >
+          {displaySubtitle}
+        </p>
+        <CustomHeading
+          as="h2"
+          text={displayTitle}
+          svgColor="text-primary"
+          class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          {displayDescription}
+        </p>
+      </div>
+
+      {/* Testimonials Grid */}
+      {cityTestimonials.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {cityTestimonials.map((testimonial, index) => (
+            <TestimonialCard
+              name={testimonial.data.name}
+              location={testimonial.data.location}
+              content={testimonial.data.content}
+              source={testimonial.data.source}
+              rating={testimonial.data.rating}
+              index={index}
+            />
+          ))}
+        </div>
+      ) : (
+        <p class="text-center text-text/60">
+          No testimonials available for {city} yet.
+        </p>
+      )}
+    </div>
+  </div>
+</section>
