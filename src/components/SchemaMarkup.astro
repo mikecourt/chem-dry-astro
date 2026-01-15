@@ -1,34 +1,108 @@
 ---
 interface Props {
-  type?: 'homepage' | 'service';
+  type?: 'homepage' | 'service' | 'city';
   serviceName?: string;
+  city?: string;
+  state?: string;
+  postalCodes?: string[];
 }
 
-const { type = 'homepage', serviceName } = Astro.props;
+const { type = 'homepage', serviceName, city, state = 'Arizona', postalCodes = [] } = Astro.props;
 
-// Base business schema with aggregate rating
+// Business coordinates (Mesa office)
+const businessGeo = {
+  "@type": "GeoCoordinates",
+  "latitude": 33.4152,
+  "longitude": -111.8315
+};
+
+// Physical address
+const businessAddress = {
+  "@type": "PostalAddress",
+  "streetAddress": "1451 N Delmar",
+  "addressLocality": "Mesa",
+  "addressRegion": "AZ",
+  "postalCode": "85203",
+  "addressCountry": "US"
+};
+
+// Opening hours (Mon-Sat 7am-6pm)
+const openingHours = [
+  "Mo-Sa 07:00-18:00"
+];
+
+// Build areaServed based on city prop
+const buildAreaServed = () => {
+  if (city) {
+    return {
+      "@type": "City",
+      "name": city,
+      "containedInPlace": {
+        "@type": "State",
+        "name": state
+      }
+    };
+  }
+  // Default: Phoenix metro area for homepage
+  return {
+    "@type": "State",
+    "name": "Arizona",
+    "containedInPlace": {
+      "@type": "Country",
+      "name": "United States"
+    }
+  };
+};
+
+// Base business schema with all local SEO properties
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Brimley's White Glove Chem-Dry",
+  "description": "Professional carpet cleaning service in the Phoenix metro area using Hot Carbonating Extraction technology. Family-owned since 1995.",
+  "url": "https://whiteglovecarpet.com",
+  "telephone": "+1-480-649-3663",
+  "email": "office@whiteglovecarpet.com",
+  "priceRange": "$$",
+  "image": "https://whiteglovecarpet.com/images/logo.png",
+  "address": businessAddress,
+  "geo": businessGeo,
+  "areaServed": buildAreaServed(),
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "07:00",
+    "closes": "18:00"
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
     "reviewCount": "247",
     "bestRating": "5",
     "worstRating": "1"
-  }
+  },
+  "sameAs": [
+    "https://www.facebook.com/WhiteGloveCarpetCleaning"
+  ]
 };
 
-// Service-specific schema (if needed)
-const serviceSchema = serviceName ? {
+// Service-specific schema (for service pages and city pages)
+const serviceSchema = (serviceName || city) ? {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": serviceName,
+  "name": serviceName || `Carpet Cleaning in ${city}, ${state}`,
+  "description": city
+    ? `Professional carpet cleaning service in ${city}, ${state}. Hot Carbonating Extraction uses about 80% less water, dries in 1-2 hours.`
+    : `Professional ${serviceName?.toLowerCase()} service in the Phoenix metro area.`,
   "provider": {
     "@type": "LocalBusiness",
-    "name": "Brimley's White Glove Chem-Dry"
+    "name": "Brimley's White Glove Chem-Dry",
+    "telephone": "+1-480-649-3663",
+    "address": businessAddress,
+    "geo": businessGeo,
+    "priceRange": "$$"
   },
+  "areaServed": buildAreaServed(),
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
