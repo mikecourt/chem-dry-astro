@@ -1,7 +1,6 @@
 ---
 import CustomButton from "@/components/CustomButton.astro";
 import CustomHeading from "@/components/CustomHeading.astro";
-import config from "@/config/config.json";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
@@ -12,8 +11,6 @@ const appointment = (await getEntry(
   "appointment",
   "-index"
 )) as CollectionEntry<"appointment">;
-const { appointment_form_action }: { appointment_form_action: string } =
-  config.params;
 const { title, subtitle, description, meta_title, contact_way } =
   appointment.data;
 
@@ -46,16 +43,16 @@ const cta = (await getEntry(
             class="p-10 bg-light rounded-lg"
             data-aos="fade-up-sm"
             data-aos-delay="100">
-            <form action={appointment_form_action} method="POST">
+            <form action="/api/contact" method="POST" id="appointment-form">
               <div class="row">
                 <div class="col-12">
                   <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="120">
-                    <label for="f-name" class="form-label"> First Name </label>
+                    <label for="name" class="form-label"> Name </label>
                     <input
-                      id="f-name"
-                      name="f-name"
+                      id="name"
+                      name="name"
                       class="form-input"
-                      placeholder="Your First Name"
+                      placeholder="Your Name"
                       type="text"
                       required
                     />
@@ -63,21 +60,8 @@ const cta = (await getEntry(
                 </div>
                 <div class="col-12">
                   <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="140">
-                    <label for="l-name" class="form-label"> Last Name </label>
-                    <input
-                      id="l-name"
-                      name="l-name"
-                      class="form-input"
-                      placeholder="Your Last Name"
-                      type="text"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="160">
                     <label for="email" class="form-label">
-                      Email Address
+                      Email Address <span class="text-red-500">*</span>
                     </label>
                     <input
                       id="email"
@@ -90,15 +74,29 @@ const cta = (await getEntry(
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="180">
-                    <label for="message" class="form-label"> Message </label>
-                    <textarea
-                      id="message"
-                      name="message"
+                  <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="160">
+                    <label for="phone" class="form-label">
+                      Phone <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
                       class="form-input"
-                      placeholder="How can we help you?"
-                      rows="9"
-                      required></textarea>
+                      placeholder="(480) 123-4567"
+                      type="tel"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="180">
+                    <label for="services" class="form-label"> Message </label>
+                    <textarea
+                      id="services"
+                      name="services"
+                      class="form-input"
+                      placeholder="What services are you interested in?"
+                      rows="9"></textarea>
                   </div>
                 </div>
                 <div class="col" data-aos="fade-up-sm" data-aos-delay="200">
@@ -136,4 +134,41 @@ const cta = (await getEntry(
     </div>
   </section>
   <CallToAction cta={cta.data} />
+
+  <script>
+    // Appointment form async submission
+    const appointmentForm = document.getElementById('appointment-form') as HTMLFormElement | null;
+    if (appointmentForm) {
+      const submitButton = appointmentForm.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      const originalButtonText = submitButton?.textContent;
+
+      appointmentForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Submitting...';
+        }
+
+        try {
+          const response = await fetch(appointmentForm.action, {
+            method: 'POST',
+            body: new FormData(appointmentForm)
+          });
+
+          if (response.ok) {
+            window.location.href = '/thank-you';
+          } else {
+            throw new Error('Submission failed');
+          }
+        } catch (error) {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText || 'Make An Appointment';
+          }
+          alert('Something went wrong. Please try again or call us at (480) 649-3663.');
+        }
+      });
+    }
+  </script>
 </Base>
