@@ -214,6 +214,21 @@ const ctaSectionsCollection = defineCollection({
   }),
 });
 
+const testimonialsCollection = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/testimonials" }),
+  schema: z.object({
+    name: z.string(),
+    location: z.string(),
+    source: z.string().optional(),
+    rating: z.number().default(5),
+    content: z.string(),
+    service: z.string().optional(),
+    date: z.date().optional(),
+    featured: z.boolean().default(false),
+    image: z.string().optional(),
+  }),
+});
+
 const servicesCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/services" }),
   schema: z.object({
@@ -256,4 +271,5 @@ export const collections = {
   pages: pagesCollection,
   ctaSection: ctaSectionsCollection,
   services: servicesCollection,
+  testimonials: testimonialsCollection,
 };
