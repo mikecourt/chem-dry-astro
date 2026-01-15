@@ -11,6 +11,9 @@ const {
   data_aos,
   data_aos_delay,
   button_type = "submit",
+  data_track,
+  data_track_location,
+  data_track_action,
 } = Astro.props;
 
 const baseClasses = `relative overflow-hidden group ${type ? type : "btn"} ${className} ${
@@ -41,6 +44,9 @@ const hoverEffectClasses = `absolute w-full h-full -left-full -bottom-full round
       class={baseClasses}
       data-aos={data_aos}
       data-aos-delay={data_aos_delay}
+      data-track={data_track}
+      data-track-location={data_track_location}
+      data-track-action={data_track_action}
     >
       <span class="relative z-10 inline-flex items-center justify-center gap-2">
         {icon && <DynamicIcon icon={icon} />}
@@ -54,6 +60,9 @@ const hoverEffectClasses = `absolute w-full h-full -left-full -bottom-full round
       class={baseClasses}
       data-aos={data_aos}
       data-aos-delay={data_aos_delay}
+      data-track={data_track}
+      data-track-location={data_track_location}
+      data-track-action={data_track_action}
     >
       <span class="relative z-10 inline-flex items-center justify-center gap-2">
         {icon && <DynamicIcon icon={icon} />}

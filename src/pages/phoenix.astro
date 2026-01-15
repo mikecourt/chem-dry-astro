@@ -301,12 +301,17 @@ const faqs = [
             label="Call (480) 649-3663"
             variant="primary"
             className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="phone-click"
+            data_track_location="hero-phoenix"
           />
           <CustomButton
             link="/appointment"
             label="Schedule Online"
             variant="secondary"
             className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="cta-click"
+            data_track_location="hero-phoenix"
+            data_track_action="navigate-appointment"
           />
         </div>
 
@@ -664,6 +669,8 @@ const faqs = [
           label="Call for Free Quote: (480) 649-3663"
           variant="primary"
           className="text-lg px-8 py-4"
+          data_track="phone-click"
+          data_track_location="services-phoenix"
         />
       </div>
     </div>
@@ -788,6 +795,8 @@ const faqs = [
             label="Call to Confirm Service: (480) 649-3663"
             variant="primary"
             className="text-base px-6 py-3"
+            data_track="phone-click"
+            data_track_location="zipcode-phoenix"
           />
         </div>
 
@@ -961,7 +970,7 @@ const faqs = [
         >
           <h3 class="text-2xl font-bold mb-4">Have More Questions?</h3>
           <p class="text-lg text-white/90 mb-6">
-            Call us at <a href="tel:4806493663" class="text-accent hover:underline font-bold">(480) 649-3663</a> or schedule online
+            Call us at <a href="tel:4806493663" class="text-accent hover:underline font-bold" data-track="phone-click" data-track-location="faq-phoenix">(480) 649-3663</a> or schedule online
           </p>
           <div class="flex flex-col sm:flex-row justify-center gap-4">
             <CustomButton
@@ -969,12 +978,17 @@ const faqs = [
               label="Call Now"
               variant="primary"
               className="text-base px-6 py-3"
+              data_track="phone-click"
+              data_track_location="faq-phoenix"
             />
             <CustomButton
               link="/appointment"
               label="Schedule Online"
               variant="light"
               className="text-base px-6 py-3"
+              data_track="cta-click"
+              data_track_location="faq-phoenix"
+              data_track_action="navigate-appointment"
             />
           </div>
         </div>
@@ -1010,12 +1024,17 @@ const faqs = [
             label="Call (480) 649-3663"
             variant="light"
             className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="phone-click"
+            data_track_location="bottom-cta-phoenix"
           />
           <CustomButton
             link="/appointment"
             label="Schedule Online"
             variant="secondary"
             className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="cta-click"
+            data_track_location="bottom-cta-phoenix"
+            data_track_action="navigate-appointment"
           />
         </div>
 
