@@ -10,11 +10,15 @@ export const POST: APIRoute = async ({ request }) => {
   const firstName = nameParts[0] || "";
   const lastName = nameParts.slice(1).join(" ") || "";
 
+  // Clean phone number - GHL expects digits only, optionally with + prefix
+  const rawPhone = data.get("phone")?.toString() || "";
+  const cleanPhone = rawPhone.replace(/\D/g, ""); // Remove all non-digits
+
   const contact = {
     firstName,
     lastName,
     email: data.get("email")?.toString() || "",
-    phone: data.get("phone")?.toString() || "",
+    phone: cleanPhone ? `+1${cleanPhone}` : "",
     postalCode: data.get("zipcode")?.toString() || "",
     locationId: import.meta.env.GHL_LOCATION_ID,
     source: "Website Quote Form",
@@ -49,6 +53,19 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     const errorData = await response.json();
+
+    // Handle duplicate contact as success - contact already exists in CRM
+    if (
+      errorData.statusCode === 400 &&
+      errorData.message?.includes("duplicated contacts")
+    ) {
+      console.log("Duplicate contact detected, treating as success:", errorData.meta?.contactId);
+      return new Response(JSON.stringify({ success: true, duplicate: true }), {
+        status: 200,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
     console.error("GHL API error:", errorData);
     return new Response(JSON.stringify({ error: "Failed to submit" }), {
       status: 500,
