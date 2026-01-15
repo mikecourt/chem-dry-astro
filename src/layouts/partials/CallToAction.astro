@@ -209,6 +209,41 @@ const { cta } = Astro.props;
             observer.observe(submitButton);
           }
         }
+
+        // Form submission handling
+        const ctaForm = document.getElementById('cta-form') as HTMLFormElement | null;
+        if (ctaForm) {
+          const formSubmitButton = ctaForm.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+          const originalButtonText = formSubmitButton?.textContent;
+
+          ctaForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            if (formSubmitButton) {
+              formSubmitButton.disabled = true;
+              formSubmitButton.textContent = 'Submitting...';
+            }
+
+            try {
+              const response = await fetch(ctaForm.action, {
+                method: 'POST',
+                body: new FormData(ctaForm)
+              });
+
+              if (response.ok) {
+                window.location.href = '/thank-you';
+              } else {
+                throw new Error('Submission failed');
+              }
+            } catch (error) {
+              if (formSubmitButton) {
+                formSubmitButton.disabled = false;
+                formSubmitButton.textContent = originalButtonText || 'Get Your Free Estimate Now';
+              }
+              alert('Something went wrong. Please try again or call us at (480) 649-3663.');
+            }
+          });
+        }
       </script>
     </section>
   )
