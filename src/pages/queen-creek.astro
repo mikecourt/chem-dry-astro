@@ -5,6 +5,7 @@ import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Base from "@/layouts/Base.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import TrustBar from "@/components/TrustBar.astro";
+import CityTestimonials from "@/components/CityTestimonials.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
 const call_to_action = (await getEntry(
@@ -370,80 +371,7 @@ const canonical = "https://whiteglovecarpet.com/queen-creek";
   </section>
 
   <!-- Testimonials Section -->
-  <section class="section">
-    <div class="container">
-      <div class="mx-auto max-w-[65rem]">
-        <!-- Section Header -->
-        <div class="text-center mb-12">
-          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3" data-aos="fade-up-sm">
-            Testimonials
-          </p>
-          <CustomHeading
-            as="h2"
-            text="What **Queen Creek** Families Say"
-            svgColor="text-primary"
-            class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
-            dataAos="fade-up-sm"
-            dataAosDelay="50"
-          />
-          <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
-            Hear from your neighbors about their experience with Brimley's White Glove Chem-Dry.
-          </p>
-        </div>
-
-        <!-- Testimonials Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Review 1: John G. -->
-          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="100">
-            <div class="flex gap-1 mb-4">
-              {[...Array(5)].map(() => (
-                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
-              "On time and great job, the carpets look and smell fresh!"
-            </p>
-            <p class="text-sm font-semibold text-dark">John G., Queen Creek</p>
-            <p class="text-xs text-text/70">Verified Yelp Review</p>
-          </div>
-
-          <!-- Review 2: Laura H. -->
-          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="150">
-            <div class="flex gap-1 mb-4">
-              {[...Array(5)].map(() => (
-                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
-              "My experience was wonderful with this company! My carpet cleaning tech was Rob and he went above and beyond to ensure I got the correct package for carpet cleaning since I kid moved into a home where the carpets were saturated with cat urine. Rob had exceptional customer service and I am so thankful I used Brimleys White Glove Chem Dry not only because of their products but mainly because Rob's level of professionalism. Thank you Rob!!"
-            </p>
-            <p class="text-sm font-semibold text-dark">Laura H., Queen Creek</p>
-            <p class="text-xs text-text/70">Verified Yelp Review</p>
-          </div>
-
-          <!-- Review 3: Emilie Sharum -->
-          <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up-sm" data-aos-delay="200">
-            <div class="flex gap-1 mb-4">
-              {[...Array(5)].map(() => (
-                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <p class="text-base leading-relaxed text-text/80 mb-4 italic">
-              "We were able to get same day carpet cleaning after we got into our home and realized how bad the carpets were. They were there within a few hours! The carpets looked completely different (in a great way) when they were done cleaning. The carpet we thought would need to be replaced ASAP now will last us for a few more years! So pleased with Brimley's. We will definitely be using them again!"
-            </p>
-            <p class="text-sm font-semibold text-dark">Emilie Sharum, Queen Creek</p>
-            <p class="text-xs text-text/70">Verified Customer Review</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <CityTestimonials city="Queen Creek" />
 
   <!-- Service Areas Section -->
   <section class="section bg-light">

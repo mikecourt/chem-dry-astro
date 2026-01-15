@@ -6,6 +6,7 @@ import CustomButton from "@/components/CustomButton.astro";
 import CustomHeading from "@/components/CustomHeading.astro";
 import TrustBar from "@/components/TrustBar.astro";
 import CallToAction from "@/partials/CallToAction.astro";
+import CityTestimonials from "@/components/CityTestimonials.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { getEntry, type CollectionEntry } from "astro:content";
 
@@ -17,25 +18,6 @@ const call_to_action = (await getEntry(
   "ctaSection",
   "call-to-action"
 )) as CollectionEntry<"ctaSection">;
-
-// Phoenix testimonials from seo-optimized-reviews.json
-const phoenixReviews = [
-  {
-    says: "Great customer service! Fantastic job by Casey! He was on time and so great cleaning the carpets and tile! Larger job than expected and he made everything sparkle! Highly recommend this company and Casey! Thank you!",
-    name: "Kim S.",
-    about: "Phoenix"
-  },
-  {
-    says: "We were in a real pickle at work last week with a sewer backup that affected our bathrooms and conference room. I called several places for quotes and time-frame. Brimley's was the only company that could come out the same day we called. They were friendly, professional, courteous and expeditious. Their customer service was A++, from the people who answered the phone to the carpet technicians.",
-    name: "Donna M.",
-    about: "Phoenix"
-  },
-  {
-    says: "I have used Brimley in the past to clean the carpets. They have always done an outstanding job and today was no different. I was only going to have the carpets cleaned but decided to have my technician, Phil, do my tile. Phil took such care and did such a good job that it looks like a brand new floor! I highly recommend Brimley for your carpet cleaning.",
-    name: "Diana W.",
-    about: "Phoenix"
-  }
-];
 
 // Phoenix neighborhoods
 const neighborhoods = [
@@ -677,65 +659,7 @@ const faqs = [
   </section>
 
   <!-- Testimonials - Phoenix Residents -->
-  <section class="section bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-16">
-        <p
-          class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
-          data-aos="fade-up-sm"
-        >
-          Trusted by Phoenix Residents
-        </p>
-        <CustomHeading
-          as="h2"
-          text="What Phoenix Customers Say"
-          svgColor="text-accent"
-          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
-          dataAos="fade-up-sm"
-          dataAosDelay="50"
-        />
-        <p
-          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto"
-          data-aos="fade-up-sm"
-          data-aos-delay="100"
-        >
-          Real reviews from Phoenix homeowners
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {phoenixReviews.map((review, index) => (
-          <div
-            class="bg-gradient-to-br from-primary/5 to-white rounded-xl p-8 shadow-lg border border-border"
-            data-aos="fade-up-sm"
-            data-aos-delay={index * 100}
-          >
-            <div class="text-4xl text-primary mb-4">"</div>
-            <blockquote class="text-text/90 leading-relaxed mb-6 text-base md:text-lg">
-              {review.says}
-            </blockquote>
-            <div class="flex items-center gap-3 border-t border-border pt-4">
-              <div class="text-4xl text-primary/60">👤</div>
-              <div>
-                <div class="font-bold text-dark text-lg">{review.name}</div>
-                <div class="text-sm text-text/70">{review.about}</div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <!-- Review summary -->
-      <div
-        class="text-center mt-12 bg-dark text-white rounded-xl p-8"
-        data-aos="fade-up-sm"
-      >
-        <div class="text-5xl mb-4">⭐⭐⭐⭐⭐</div>
-        <div class="text-2xl md:text-3xl font-bold mb-2">4.9 Stars on Google</div>
-        <div class="text-lg text-white/80">Over 1,000 five-star reviews from Phoenix area customers</div>
-      </div>
-    </div>
-  </section>
+  <CityTestimonials city="Phoenix" />
 
   <!-- Service Areas - Phoenix ZIP Codes -->
   <section class="section bg-light">
