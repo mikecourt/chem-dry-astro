@@ -71,7 +71,7 @@ const { cta } = Astro.props;
               <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6 text-center">
                 Get a Free, No-Obligation Estimate
               </h3>
-              <form action="/api/contact" method="POST" class="space-y-5" id="cta-form">
+              <form action="/api/contact" method="POST" class="space-y-5" id="cta-form" data-track="quote-form" data-track-location="cta-section">
                 {/* Name Field */}
                 <div>
                   <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
@@ -154,6 +154,8 @@ const { cta } = Astro.props;
                   style="background-color: #F5D878; color: #2D2D2D;"
                   onmouseover="this.style.backgroundColor='#E5C158'"
                   onmouseout="this.style.backgroundColor='#F5D878'"
+                  data-track="cta-click"
+                  data-track-action="submit-quote"
                 >
                   Get Your Free Estimate Now
                 </button>

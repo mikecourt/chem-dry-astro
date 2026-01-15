@@ -43,7 +43,7 @@ const cta = (await getEntry(
             class="p-10 bg-light rounded-lg"
             data-aos="fade-up-sm"
             data-aos-delay="100">
-            <form action="/api/contact" method="POST" id="appointment-form">
+            <form action="/api/contact" method="POST" id="appointment-form" data-track="quote-form" data-track-location="appointment-page">
               <div class="row">
                 <div class="col-12">
                   <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="120">
@@ -104,6 +104,8 @@ const cta = (await getEntry(
                     label="Make An Appointment"
                     variant="primary"
                     button_type="submit"
+                    data_track="cta-click"
+                    data_track_action="submit-appointment"
                   />
                 </div>
               </div>

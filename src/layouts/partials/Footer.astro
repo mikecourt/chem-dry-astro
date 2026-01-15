@@ -78,7 +78,7 @@ const { copyright } = config.params;
       {/* Column 4: Get A Free Estimate Form */}
       <div data-aos="fade-up-sm" data-aos-delay="150">
         <h3 class="mb-6 font-semibold text-white text-lg">GET A FREE ESTIMATE</h3>
-        <form action="/api/contact" method="POST" class="space-y-3">
+        <form action="/api/contact" method="POST" class="space-y-3" data-track="quote-form" data-track-location="footer">
           <input
             type="text"
             name="name"
@@ -103,6 +103,8 @@ const { copyright } = config.params;
           <button
             type="submit"
             class="w-full py-2.5 px-4 bg-primary text-white text-sm font-semibold rounded hover:bg-primary/90 transition-colors"
+            data-track="cta-click"
+            data-track-action="submit-quote"
           >
             REQUEST ESTIMATE
           </button>
