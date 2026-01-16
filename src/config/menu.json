@@ -85,6 +85,24 @@
       ]
     },
     {
+      "name": "Service Areas",
+      "url": "/service-areas",
+      "hasChildren": true,
+      "children": [
+        { "name": "Phoenix", "url": "/phoenix" },
+        { "name": "Mesa", "url": "/mesa" },
+        { "name": "Gilbert", "url": "/gilbert" },
+        { "name": "Chandler", "url": "/chandler" },
+        { "name": "Tempe", "url": "/tempe" },
+        { "name": "Scottsdale", "url": "/scottsdale" },
+        { "name": "Queen Creek", "url": "/queen-creek" },
+        { "name": "Glendale", "url": "/glendale" },
+        { "name": "Peoria", "url": "/peoria" },
+        { "name": "Apache Junction", "url": "/apache-junction" },
+        { "name": "San Tan Valley", "url": "/san-tan-valley" }
+      ]
+    },
+    {
       "name": "Before & After",
       "url": "/gallery"
     },
