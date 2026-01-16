@@ -6,16 +6,16 @@ See: .planning/PROJECT.md (updated 2026-01-13)
 
 **Core value:** Rank #1 in Google for "[city] carpet cleaning" keywords in every service area - without rankings, nothing else matters.
 
-**Current focus:** Phase 4 — Testimonials System Migration
+**Current focus:** Phase 5 — Tier 2 City Pages
 
 ## Current Position
 
-Phase: 4 of 7 (Testimonials System Migration)
-Plan: 2 of 3 complete
-Status: In progress
-Last activity: 2026-01-15 — Completed 04-02-PLAN.md (Testimonial Components)
+Phase: 5 of 7 (Tier 2 City Pages)
+Plan: 0 of TBD
+Status: Ready to plan
+Last activity: 2026-01-16 — Completed Phase 4 (Testimonials System Migration)
 
-Progress: █████████░ 65% (Phases 1-3 complete, Phase 4 in progress)
+Progress: ██████████ 57% (Phases 1-4 complete)
 
 ## Performance Metrics
 
@@ -31,11 +31,11 @@ Progress: █████████░ 65% (Phases 1-3 complete, Phase 4 in pr
 | 1 | 3/3 | 16 min | 5.3 min | ✅ Complete |
 | 2 | 2/2 | 23 min | 11.5 min | ✅ Complete |
 | 3 | 3/3 | 32 min | 10.7 min | ✅ Complete |
-| 4 | 2/3 | 14 min | 7 min | 🔄 In Progress |
+| 4 | 3/3 | 26 min | 8.7 min | ✅ Complete |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (3 min), 03-03 (10 min), 04-01 (6 min), 04-02 (8 min)
-- Phase 4 progress: Schema + seed data complete, reusable components created
+- Last 5 plans: 03-03 (10 min), 04-01 (6 min), 04-02 (8 min), 04-03 (12 min)
+- Phase 4 complete: Testimonials migrated to content collections
 
 ## Phase 1 Summary
 
@@ -185,7 +185,7 @@ None.
 - GHL API has strict requirements: E.164 phone format, no duplicates allowed
 - Passive data attributes provide tracking without JavaScript overhead
 
-## Phase 4 Summary (In Progress)
+## Phase 4 Summary (Complete)
 
 ### Completed Plans
 
@@ -201,13 +201,19 @@ None.
    - Both pure Astro components (no React hydration)
    - Duration: 8 min
 
+3. **04-03-PLAN.md** - Testimonial Content Migration ✅
+   - Created 18 new testimonial content files (21 total)
+   - Updated all 7 city pages to use CityTestimonials component
+   - Removed ~500 lines of hardcoded testimonial HTML
+   - Verified rendering on all city pages
+   - Duration: 12 min
+
 ### Artifacts Created
 
 - `.planning/phases/04-testimonials-system-migration/04-01-SUMMARY.md`
 - `.planning/phases/04-testimonials-system-migration/04-02-SUMMARY.md`
-- `src/content/testimonials/phoenix-kim-s.md`
-- `src/content/testimonials/mesa-carol-mcgowan.md`
-- `src/content/testimonials/gilbert-konnie-s.md`
+- `.planning/phases/04-testimonials-system-migration/04-03-SUMMARY.md`
+- `src/content/testimonials/*.md` (21 testimonial files)
 - `src/components/TestimonialCard.astro`
 - `src/components/CityTestimonials.astro`
 
@@ -218,15 +224,16 @@ None.
 - File naming convention: `{city}-{name-slug}.md`
 - Inline SVG for stars (avoids React hydration overhead)
 - Case-insensitive city filtering for flexibility
+- Default limit of 3 testimonials per city page
 
 ## Session Continuity
 
-Last session: 2026-01-15
-Stopped at: Completed 04-02-PLAN.md (Testimonial Components)
+Last session: 2026-01-16
+Stopped at: Completed Phase 4 (Testimonials System Migration)
 Resume file: None
 
 ## Next Steps
 
-1. Execute 04-03-PLAN.md (Migrate all city page testimonials)
-2. Complete Phase 4 (Testimonials System Migration)
-3. Continue to Phase 5 (Tier 2 City Pages)
+1. Plan Phase 5 (Tier 2 City Pages - Glendale, Peoria, Apache Junction, San Tan Valley)
+2. Execute Phase 5 plans
+3. Continue to Phase 6 (Navigation & Internal Linking)
