@@ -94,10 +94,11 @@ Plans:
 
 **Research**: Unlikely (using proven, optimized template established in Phases 1-2)
 
-**Plans**: TBD
+**Plans**: 2
 
 Plans:
-- TBD
+- 05-01: Create Glendale and Peoria city pages with testimonials
+- 05-02: Create Apache Junction and San Tan Valley city pages with testimonials
 
 ### Phase 6: Navigation & Internal Linking
 **Goal**: Build comprehensive city-to-city navigation system, enhance service area footer, establish strategic cross-linking between cities and services, and optimize sitemap for search engines.
@@ -140,6 +141,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 2. Content Optimization & SEO | 2/2 | Complete | 2026-01-15 |
 | 3. Quote Form & Conversion Flow | 3/3 | Complete | 2026-01-15 |
 | 4. Testimonials System Migration | 3/3 | Complete | 2026-01-16 |
-| 5. Tier 2 City Pages | 0/TBD | Not started | - |
+| 5. Tier 2 City Pages | 0/2 | Planned | - |
 | 6. Navigation & Internal Linking | 0/TBD | Not started | - |
 | 7. Launch Preparation & QA | 0/TBD | Not started | - |
