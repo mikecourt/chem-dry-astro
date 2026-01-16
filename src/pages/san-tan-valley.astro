@@ -1,0 +1,962 @@
+---
+import Base from "@/layouts/Base.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import CityTestimonials from "@/components/CityTestimonials.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const meta_title = "Carpet Cleaning San Tan Valley AZ | Johnson Ranch, Encanterra | Brimley's";
+const meta_description = "Carpet cleaning San Tan Valley AZ - Johnson Ranch, Encanterra, Pecan Creek. Hot Carbonating Extraction dries in 1-2 hrs. 25+ yrs experience. Free quote: (480) 649-3663";
+const canonical = "https://whiteglovecarpet.com/san-tan-valley";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+// San Tan Valley neighborhoods
+const neighborhoods = [
+  {
+    name: "Johnson Ranch",
+    title: "Johnson Ranch's Trusted Carpet Cleaning Service",
+    description: "Serving Johnson Ranch families with premium carpet care. From busy family homes to entertainment spaces, we understand the unique needs of this thriving master-planned community with its growing families.",
+    highlights: [
+      "Experience with Johnson Ranch homes",
+      "Fast response times to the area",
+      "Pet and kid-friendly solutions",
+      "Know the community intimately"
+    ],
+    icon: "FaHome"
+  },
+  {
+    name: "Encanterra",
+    title: "Premium Service for Encanterra Golf Community",
+    description: "Encanterra's beautiful golf community homes deserve specialized care. Our expert technicians understand the needs of this active adult community, including pool area carpet concerns and maintaining pristine home environments.",
+    highlights: [
+      "Golf community expertise",
+      "Pool area carpet specialists",
+      "Active adult community experience",
+      "Trusted by Encanterra homeowners"
+    ],
+    icon: "FaStar"
+  },
+  {
+    name: "Pecan Creek",
+    title: "Family-Focused Service for Pecan Creek",
+    description: "Pecan Creek families trust us for reliable, family-focused carpet cleaning. We understand the needs of growing families and deliver service that keeps your home healthy, clean, and safe for kids and pets.",
+    highlights: [
+      "Family-focused service",
+      "Quick response times",
+      "Pet-friendly cleaning solutions",
+      "Safe for kids and pets"
+    ],
+    icon: "FaCrown"
+  },
+  {
+    name: "San Tan Heights",
+    title: "Serving San Tan Heights Communities",
+    description: "San Tan Heights residents enjoy beautiful mountain views—and the desert dust that comes with them. We help keep your carpets fresh and clean despite the constant battle with Arizona's desert environment.",
+    highlights: [
+      "Desert dust specialists",
+      "Mountain area expertise",
+      "Fast 1-2 hour dry time",
+      "Flexible scheduling"
+    ],
+    icon: "FaMountain"
+  }
+];
+
+// San Tan Valley services
+const services = [
+  {
+    title: "Carpet Cleaning",
+    description: "Hot Carbonating Extraction removes desert dust, allergens, and deep-set dirt from your San Tan Valley home's carpets.",
+    icon: "FaHouseUser",
+    link: "/services/carpet-cleaning"
+  },
+  {
+    title: "Tile & Grout Cleaning",
+    description: "Restore tile floors common in San Tan Valley homes. Remove years of pool area and desert dust buildup from grout lines.",
+    icon: "FaTh",
+    link: "/services/tile-and-grout-cleaning"
+  },
+  {
+    title: "Upholstery Cleaning",
+    description: "Refresh furniture that bears the brunt of family life and desert dust in San Tan Valley homes.",
+    icon: "FaCouch",
+    link: "/services/upholstery-cleaning"
+  },
+  {
+    title: "Pet Odor Removal",
+    description: "Eliminate pet odors and stains with our P.U.R.T.® treatment. Safe for San Tan Valley's pet-loving families.",
+    icon: "FaPaw",
+    link: "/services"
+  },
+  {
+    title: "Area Rug Cleaning",
+    description: "Specialized cleaning for the rugs that define your San Tan Valley home's style.",
+    icon: "FaRug",
+    link: "/services"
+  },
+  {
+    title: "Allergen Removal",
+    description: "Critical in San Tan Valley's growing community. Remove dust, pollen, and allergens that accumulate year-round.",
+    icon: "FaLeaf",
+    link: "/services/carpet-cleaning"
+  }
+];
+
+// San Tan Valley ZIP codes
+const sanTanValleyZips = [
+  { zip: "85140", area: "San Tan Valley" },
+  { zip: "85142", area: "Queen Creek/San Tan Valley" },
+  { zip: "85143", area: "San Tan Valley" },
+  { zip: "85144", area: "Coolidge/San Tan Valley" },
+];
+
+// FAQ items
+const faqs = [
+  {
+    question: "Do you serve Johnson Ranch?",
+    answer: "Absolutely! Johnson Ranch is one of our primary service areas in San Tan Valley. We've been serving Johnson Ranch families for years and know the community well. Whether you're near the schools, parks, or anywhere in the master-planned community, we provide fast, reliable carpet cleaning service."
+  },
+  {
+    question: "Can you maintain new home carpets?",
+    answer: "Yes! Many San Tan Valley homes are newer construction with builder-grade carpets. Regular professional cleaning is essential to maintain these carpets and protect your investment. Our <a href=\"/services/carpet-cleaning\" class=\"text-primary hover:underline\">Hot Carbonating Extraction</a> process is gentle yet effective, helping extend the life of your new home's carpets."
+  },
+  {
+    question: "Do you serve Encanterra?",
+    answer: "Yes! We serve the Encanterra golf community and understand the unique needs of this active adult community. From pool area carpet concerns to maintaining a pristine home environment, our technicians are experienced with Encanterra homes. We also serve nearby communities like <a href=\"/queen-creek\" class=\"text-primary hover:underline\">Queen Creek</a> and <a href=\"/gilbert\" class=\"text-primary hover:underline\">Gilbert</a>."
+  },
+  {
+    question: "How does dry time work in San Tan Valley's climate?",
+    answer: "San Tan Valley's warm, dry desert climate is perfect for our cleaning process! Because we use about 80% less water than traditional steam cleaning, your carpets dry in just 1-2 hours. In San Tan Valley's dry climate, they often dry even faster. This means you can get back to your normal routine the same day."
+  },
+  {
+    question: "Do you serve all San Tan Valley ZIP codes?",
+    answer: "Yes! We proudly serve all San Tan Valley ZIP codes: 85140, 85142, 85143, and 85144. Whether you're in Johnson Ranch, Encanterra, Pecan Creek, San Tan Heights, or anywhere in the San Tan Valley area, we provide the same exceptional white-glove service."
+  },
+  {
+    question: "What makes your service different for new homes?",
+    answer: "We understand that San Tan Valley has many newer homes with builder-grade carpets. These carpets benefit from our low-moisture process that cleans effectively without over-wetting. We also help remove construction dust that may have settled in during the building process and can treat for allergens that accumulate in new carpet fibers."
+  },
+  {
+    question: "Can you remove pool chlorine residue?",
+    answer: "Yes! This is a common concern in San Tan Valley's pool communities. Chlorine and moisture tracked in from pools can discolor and damage carpets over time. Our Hot Carbonating Extraction process effectively removes chlorine residue, water spots, and the musty smell that can develop near pool entry areas."
+  },
+  {
+    question: "Do you offer same-day service in San Tan Valley?",
+    answer: "In many cases, yes! We understand that San Tan Valley families have busy schedules. Depending on our technicians' availability in your San Tan Valley neighborhood, we can often accommodate same-day or next-day appointments. Call us at (480) 649-3663 to check availability for your area."
+  }
+];
+---
+
+<Base meta_title={meta_title} description={meta_description} canonical={canonical}>
+  <SchemaMarkup type="city" city="San Tan Valley" state="Arizona" postalCodes={["85140", "85142", "85143", "85144"]} />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-32 lg:py-40 relative mb-0 bg-gradient-to-br from-primary/5 via-white to-accent/5"
+  >
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-5xl mx-auto">
+        <!-- Subtitle -->
+        <p
+          class="text-accent font-semibold text-lg md:text-xl mb-4 tracking-wide uppercase"
+          data-aos="fade-up-sm"
+        >
+          Carpet Cleaning San Tan Valley, Arizona
+        </p>
+
+        <!-- Main Heading -->
+        <CustomHeading
+          as="h1"
+          text="Professional Carpet Cleaning in San Tan Valley, Arizona"
+          svgColor="text-primary"
+          class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+
+        <!-- Subheading -->
+        <p
+          class="text-xl md:text-2xl text-text/80 mb-8 font-medium"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Serving San Tan Valley's Growing Communities
+        </p>
+
+        <!-- Trust Badges - San Tan Valley Neighborhoods Focus -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="150"
+        >
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              🏘️
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Johnson Ranch</div>
+              <div class="text-xs md:text-sm text-gray-600">Master-Planned</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              ⛳
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Encanterra</div>
+              <div class="text-xs md:text-sm text-gray-600">Golf Community</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              🌳
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Pecan Creek</div>
+              <div class="text-xs md:text-sm text-gray-600">Family Community</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              🏔️
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">San Tan Heights</div>
+              <div class="text-xs md:text-sm text-gray-600">Mountain Views</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4"
+          data-aos="fade-up-sm"
+          data-aos-delay="200"
+        >
+          <CustomButton
+            link="tel:4806493663"
+            label="Call (480) 649-3663"
+            variant="primary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="phone-click"
+            data_track_location="hero-san-tan-valley"
+          />
+          <CustomButton
+            link="/appointment"
+            label="Schedule Online"
+            variant="secondary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="cta-click"
+            data_track_location="hero-san-tan-valley"
+            data_track_action="navigate-appointment"
+          />
+        </div>
+
+        <!-- Additional Trust Points -->
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-text/70">
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Dries in 1-2 Hours</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Safe for Kids & Pets</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Family Owned Since 1995</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>All San Tan Valley Communities</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- San Tan Valley Neighborhoods Section - FEATURED -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p
+          class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+          data-aos="fade-up-sm"
+        >
+          Local Expertise
+        </p>
+        <CustomHeading
+          as="h2"
+          text="San Tan Valley Communities We Serve"
+          svgColor="text-accent"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          We understand San Tan Valley's growing communities and the unique needs of newer homes and active families.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {neighborhoods.map((neighborhood, index) => (
+          <div
+            class="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border"
+            data-aos="fade-up-sm"
+            data-aos-delay={index * 100}
+          >
+            <div class="flex items-start gap-4 mb-6">
+              <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-3xl flex-shrink-0">
+                {neighborhood.icon === "FaHome" && "🏘️"}
+                {neighborhood.icon === "FaStar" && "⛳"}
+                {neighborhood.icon === "FaCrown" && "🌳"}
+                {neighborhood.icon === "FaMountain" && "🏔️"}
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">
+                  {neighborhood.name}
+                </h3>
+                <h4 class="text-lg md:text-xl font-semibold text-primary mb-3">
+                  {neighborhood.title}
+                </h4>
+              </div>
+            </div>
+
+            <p class="text-base md:text-lg text-text/80 mb-6 leading-relaxed">
+              {neighborhood.description}
+            </p>
+
+            <ul class="space-y-3">
+              {neighborhood.highlights.map((highlight) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-primary text-xl flex-shrink-0 mt-1">✓</span>
+                  <span class="text-text/90">{highlight}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <!-- Also Serving -->
+      <div
+        class="mt-12 text-center bg-light rounded-xl p-8"
+        data-aos="fade-up-sm"
+      >
+        <h3 class="text-xl md:text-2xl font-bold text-dark mb-4">
+          Also Proudly Serving
+        </h3>
+        <p class="text-lg text-text/80">
+          Circle Cross Ranch • Copper Basin • Ironwood Crossing • Solera • All San Tan Valley ZIP codes
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section - San Tan Valley Challenges -->
+  <section class="section bg-gradient-to-br from-primary/10 via-white to-accent/10">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <CustomHeading
+            as="h2"
+            text="The Challenge of Living in San Tan Valley"
+            svgColor="text-primary"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+          />
+          <p
+            class="text-lg md:text-xl text-text/80"
+            data-aos="fade-up-sm"
+            data-aos-delay="50"
+          >
+            San Tan Valley's growing communities create unique challenges for your carpets and home
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="100"
+          >
+            <div class="text-5xl mb-4">🏗️</div>
+            <h3 class="text-xl font-bold text-dark mb-3">New Construction Dust</h3>
+            <p class="text-text/80">
+              San Tan Valley's rapid growth means ongoing construction nearby. Builder-grade carpets in new homes need special care, and construction dust settles in carpets throughout the area.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="150"
+          >
+            <div class="text-5xl mb-4">👨‍👩‍👧‍👦</div>
+            <h3 class="text-xl font-bold text-dark mb-3">Growing Families</h3>
+            <p class="text-text/80">
+              San Tan Valley attracts young families with kids and pets. Active households mean more foot traffic, spills, accidents, and wear on carpets that need regular professional cleaning.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="200"
+          >
+            <div class="text-5xl mb-4">🏊</div>
+            <h3 class="text-xl font-bold text-dark mb-3">Pool Communities</h3>
+            <p class="text-text/80">
+              Many San Tan Valley homes have pools or community pools. Chlorine, moisture, and wet feet constantly being tracked inside leads to carpet discoloration and musty odors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section - Perfect for San Tan Valley -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <p
+            class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+            data-aos="fade-up-sm"
+          >
+            The Perfect Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hot Carbonating Extraction: Ideal for Growing Families"
+            svgColor="text-accent"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p
+            class="text-lg md:text-xl text-text/80"
+            data-aos="fade-up-sm"
+            data-aos-delay="100"
+          >
+            Our unique cleaning process is perfectly matched to San Tan Valley's active family lifestyle
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div
+            class="bg-gradient-to-br from-primary/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-right-sm"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">💧</span>
+              Lightning-Fast Drying
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Uses about 80% less water than traditional steam cleaning. Combined with San Tan Valley's dry climate, your carpets dry in just <strong>1-2 hours</strong> instead of 1-2 days.
+            </p>
+            <p class="text-text/70">
+              Perfect for busy San Tan Valley families who need to get back to normal life quickly—no humidity, no dampness, no waiting.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-accent/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-left-sm"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🫧</span>
+              Deep Cleaning Power
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Millions of carbonating bubbles penetrate deep into carpet fibers, lifting embedded dirt, stains from kids and pets, and allergens to the surface where they're extracted.
+            </p>
+            <p class="text-text/70">
+              More effective than steam cleaning at removing the stubborn stains and ground-in dirt that active San Tan Valley families deal with daily.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-primary/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-right-sm"
+            data-aos-delay="50"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🌿</span>
+              Safe for Kids & Pets
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Our Green Certified solution, The Natural®, is <strong>safe for children and pets</strong>—critical for San Tan Valley's family-oriented communities. No harsh chemicals means peace of mind.
+            </p>
+            <p class="text-text/70">
+              Your kids and pets can play on freshly cleaned carpets as soon as they're dry—usually in just 1-2 hours.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-accent/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-left-sm"
+            data-aos-delay="50"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🚫</span>
+              No Sticky Residue
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Unlike steam cleaning that leaves soapy residue, our carbonating process uses no soaps or harsh chemicals. No dirt-attracting residue means carpets stay cleaner longer.
+            </p>
+            <p class="text-text/70">
+              With kids and pets constantly on the carpet, the last thing you need is residue that attracts more dirt—your carpets stay cleaner longer.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Benefits Summary -->
+        <div
+          class="bg-dark text-white rounded-2xl p-8 md:p-12 text-center"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold mb-6">
+            Why San Tan Valley Families Choose Our Method
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left md:text-center">
+            <div>
+              <div class="text-4xl mb-3">⚡</div>
+              <div class="font-bold text-lg mb-2">Dries in 1-2 Hours</div>
+              <div class="text-white/80 text-sm">Perfect for busy families</div>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">👶</div>
+              <div class="font-bold text-lg mb-2">Safe for Kids & Pets</div>
+              <div class="text-white/80 text-sm">Green Certified solution</div>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🌱</div>
+              <div class="font-bold text-lg mb-2">No Harsh Chemicals</div>
+              <div class="text-white/80 text-sm">Peace of mind for families</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Throughout San Tan Valley -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p
+          class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+          data-aos="fade-up-sm"
+        >
+          Complete Cleaning Solutions
+        </p>
+        <CustomHeading
+          as="h2"
+          text="Services Throughout San Tan Valley"
+          svgColor="text-primary"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Comprehensive cleaning services for every San Tan Valley community
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <div
+            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border"
+            data-aos="fade-up-sm"
+            data-aos-delay={index * 50}
+          >
+            <div class="text-5xl mb-4">
+              {service.icon === "FaHouseUser" && "🏠"}
+              {service.icon === "FaTh" && "🔲"}
+              {service.icon === "FaCouch" && "🛋️"}
+              {service.icon === "FaPaw" && "🐾"}
+              {service.icon === "FaRug" && "🧶"}
+              {service.icon === "FaLeaf" && "🌿"}
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-dark mb-3">
+              {service.title}
+            </h3>
+            <p class="text-text/80 leading-relaxed mb-4">
+              {service.description}
+            </p>
+            <a href={service.link} class="text-primary hover:underline font-semibold inline-flex items-center gap-1">
+              Learn More <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up-sm">
+        <CustomButton
+          link="tel:4806493663"
+          label="Call for Free Quote: (480) 649-3663"
+          variant="primary"
+          className="text-lg px-8 py-4"
+          data_track="phone-click"
+          data_track_location="services-san-tan-valley"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials - San Tan Valley Residents -->
+  <CityTestimonials city="San Tan Valley" />
+
+  <!-- Service Areas - San Tan Valley ZIP Codes -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <CustomHeading
+          as="h2"
+          text="San Tan Valley ZIP Codes We Serve"
+          svgColor="text-primary"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto mb-8"
+          data-aos="fade-up-sm"
+          data-aos-delay="50"
+        >
+          Serving all San Tan Valley neighborhoods and ZIP codes
+        </p>
+
+        <!-- Johnson Ranch Featured -->
+        <div
+          class="bg-primary text-white rounded-xl p-8 max-w-2xl mx-auto mb-12"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          <h3 class="text-2xl font-bold mb-4">🏘️ Johnson Ranch Area</h3>
+          <div class="text-lg">
+            <strong>85140</strong> • <strong>85143</strong>
+          </div>
+          <p class="mt-4 text-white/90">
+            Johnson Ranch residents: We're your local carpet cleaning experts!
+          </p>
+        </div>
+      </div>
+
+      <!-- All San Tan Valley ZIPs -->
+      <div
+        class="bg-white rounded-xl p-8 md:p-12 shadow-lg max-w-5xl mx-auto"
+        data-aos="fade-up-sm"
+      >
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {sanTanValleyZips.map((item) => (
+            <div class="text-center p-3 bg-light rounded-lg hover:bg-primary/10 transition-colors duration-200">
+              <div class="font-bold text-primary text-lg">{item.zip}</div>
+              <div class="text-sm text-text/70">{item.area}</div>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center mt-8 pt-8 border-t border-border">
+          <p class="text-text/80 mb-4">
+            Don't see your ZIP code? We serve all of San Tan Valley!
+          </p>
+          <CustomButton
+            link="tel:4806493663"
+            label="Call to Confirm Service: (480) 649-3663"
+            variant="primary"
+            className="text-base px-6 py-3"
+            data_track="phone-click"
+            data_track_location="zipcode-san-tan-valley"
+          />
+        </div>
+
+        <!-- Nearby Cities -->
+        <div class="text-center mt-8 pt-8 border-t border-border" data-aos="fade-up-sm">
+          <h3 class="text-xl font-semibold text-dark mb-4">Also Serving Nearby Cities</h3>
+          <p class="text-text/80">
+            <a href="/queen-creek" class="text-primary hover:underline">Queen Creek</a> •
+            <a href="/gilbert" class="text-primary hover:underline">Gilbert</a> •
+            <a href="/mesa" class="text-primary hover:underline">Mesa</a> •
+            <a href="/apache-junction" class="text-primary hover:underline">Apache Junction</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why San Tan Valley Trusts Brimley's -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <CustomHeading
+            as="h2"
+            text="Why San Tan Valley Trusts Brimley's White Glove Chem-Dry"
+            svgColor="text-accent"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+          />
+        </div>
+
+        <div class="space-y-8">
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-bold">
+              25+
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">25+ Years Serving the East Valley</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Since 1995, we've been cleaning carpets in East Valley homes. As San Tan Valley has grown, we've been there serving new homeowners and established families alike. We've built a reputation for excellence that spans generations. We're Valley veterans who understand growing communities.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-left-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              🗺️
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">We Know San Tan Valley Communities</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                From the master-planned community of Johnson Ranch to the golf courses of Encanterra, from family neighborhoods in Pecan Creek to homes in San Tan Heights—we know your area. We understand the unique needs of both new and established San Tan Valley communities.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              👨‍👩‍👧‍👦
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">Local Family Business, Not a National Chain</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                We're a family-owned Valley business. When you call us, you're supporting a local family that lives, works, and raises kids right here in Arizona. We treat your home like our own because we understand what Arizona family life means—we're living it too.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-left-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              ⭐
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">1,000+ Five-Star Reviews</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Valley residents have made us one of the highest-rated carpet cleaning services in the area. Over 1,000 five-star reviews on Google speak to the quality, professionalism, and care we bring to every job. We don't just meet expectations—we exceed them, every single time.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              🧪
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">Technology Perfect for Families</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Our Hot Carbonating Extraction is perfect for San Tan Valley families. The minimal water usage means carpets dry in 1-2 hours—so your kids and pets aren't displaced for long. And our Green Certified solution is safe for your whole family, giving you peace of mind.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="text-center mt-12 bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-8 md:p-12"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">
+            Join Thousands of Happy Valley Families
+          </h3>
+          <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+            Experience the difference that 25+ years of family-focused expertise makes
+          </p>
+          <CustomButton
+            link="/appointment"
+            label="Schedule Your San Tan Valley Appointment"
+            variant="light"
+            className="text-lg px-8 py-4"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - San Tan Valley & Neighborhood Specific -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <p
+            class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+            data-aos="fade-up-sm"
+          >
+            Questions?
+          </p>
+          <CustomHeading
+            as="h2"
+            text="San Tan Valley Carpet Cleaning FAQs"
+            svgColor="text-primary"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div
+              class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-border"
+              data-aos="fade-up-sm"
+              data-aos-delay={index * 50}
+            >
+              <h3 class="text-xl md:text-2xl font-bold text-dark mb-4 flex items-start gap-3">
+                <span class="text-primary flex-shrink-0">Q:</span>
+                <span>{faq.question}</span>
+              </h3>
+              <div class="text-base md:text-lg text-text/80 leading-relaxed pl-8" set:html={faq.answer}>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div
+          class="text-center mt-12 bg-dark text-white rounded-xl p-8"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl font-bold mb-4">Have More Questions?</h3>
+          <p class="text-lg text-white/90 mb-6">
+            Call us at <a href="tel:4806493663" class="text-accent hover:underline font-bold" data-track="phone-click" data-track-location="faq-san-tan-valley">(480) 649-3663</a> or schedule online
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <CustomButton
+              link="tel:4806493663"
+              label="Call Now"
+              variant="primary"
+              className="text-base px-6 py-3"
+              data_track="phone-click"
+              data_track_location="faq-san-tan-valley"
+            />
+            <CustomButton
+              link="/appointment"
+              label="Schedule Online"
+              variant="light"
+              className="text-base px-6 py-3"
+              data_track="cta-click"
+              data_track_location="faq-san-tan-valley"
+              data_track_action="navigate-appointment"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section bg-gradient-to-br from-primary via-primary to-accent text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+          data-aos="fade-up-sm"
+        >
+          Ready for Cleaner Carpets in Your San Tan Valley Home?
+        </h2>
+        <p
+          class="text-xl md:text-2xl mb-8 text-white/90"
+          data-aos="fade-up-sm"
+          data-aos-delay="50"
+        >
+          Serving Johnson Ranch, Encanterra, Pecan Creek & All San Tan Valley Communities
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          <CustomButton
+            link="tel:4806493663"
+            label="Call (480) 649-3663"
+            variant="light"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="phone-click"
+            data_track_location="bottom-cta-san-tan-valley"
+          />
+          <CustomButton
+            link="/appointment"
+            label="Schedule Online"
+            variant="secondary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="cta-click"
+            data_track_location="bottom-cta-san-tan-valley"
+            data_track_action="navigate-appointment"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">Fast 1-2 Hour Dry Time</div>
+              <div class="text-sm text-white/80">Perfect for busy families</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">Safe for Kids & Pets</div>
+              <div class="text-sm text-white/80">Green Certified solution</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">1,000+ Five-Star Reviews</div>
+              <div class="text-sm text-white/80">Valley's most trusted</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
