@@ -231,8 +231,8 @@ None.
 ## Session Continuity
 
 Last session: 2026-01-16
-Stopped at: Completed 06-01-PLAN.md (Footer navigation fixes)
-Resume file: None
+Stopped at: 06-02-PLAN.md Task 2 (checkpoint:human-verify pending)
+Resume file: .planning/phases/06-navigation-internal-linking/.continue-here.md
 
 ## Phase 5 Summary (Complete)
 
