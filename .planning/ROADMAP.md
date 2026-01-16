@@ -20,7 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Content Optimization & SEO** - Optimize for local search rankings
 - [x] **Phase 3: Quote Form & Conversion Flow** - Build lead capture and optimize CTAs
 - [x] **Phase 4: Testimonials System Migration** - Move testimonials to content collections
-- [ ] **Phase 5: Tier 2 City Pages** - Create remaining 4 city pages
+- [x] **Phase 5: Tier 2 City Pages** - Create remaining 4 city pages
 - [ ] **Phase 6: Navigation & Internal Linking** - Build city navigation and cross-linking
 - [ ] **Phase 7: Launch Preparation & QA** - Performance, accessibility, final quality checks
 
@@ -141,6 +141,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 2. Content Optimization & SEO | 2/2 | Complete | 2026-01-15 |
 | 3. Quote Form & Conversion Flow | 3/3 | Complete | 2026-01-15 |
 | 4. Testimonials System Migration | 3/3 | Complete | 2026-01-16 |
-| 5. Tier 2 City Pages | 1/2 | In Progress | - |
+| 5. Tier 2 City Pages | 2/2 | Complete | 2026-01-16 |
 | 6. Navigation & Internal Linking | 0/TBD | Not started | - |
 | 7. Launch Preparation & QA | 0/TBD | Not started | - |
