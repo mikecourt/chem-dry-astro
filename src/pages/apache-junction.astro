@@ -1,0 +1,962 @@
+---
+import Base from "@/layouts/Base.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import DynamicIcon from "@/helpers/DynamicIcon";
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import CityTestimonials from "@/components/CityTestimonials.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const meta_title = "Carpet Cleaning Apache Junction AZ | Gold Canyon, Superstition Mountain | Brimley's";
+const meta_description = "Carpet cleaning Apache Junction AZ - Gold Canyon, Superstition Mountain area. Hot Carbonating Extraction dries in 1-2 hrs. 25+ yrs experience. Free quote: (480) 649-3663";
+const canonical = "https://whiteglovecarpet.com/apache-junction";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+// Apache Junction neighborhoods
+const neighborhoods = [
+  {
+    name: "Gold Canyon",
+    title: "Gold Canyon's Trusted Carpet Cleaning Service",
+    description: "Serving Gold Canyon's beautiful golf community with premium carpet care. From retirement homes to family residences, we understand the unique needs of this scenic community nestled in the Superstition Mountains.",
+    highlights: [
+      "Experience with Gold Canyon homes",
+      "Golf community expertise",
+      "Pet and kid-friendly solutions",
+      "Know the community intimately"
+    ],
+    icon: "FaHome"
+  },
+  {
+    name: "Superstition Mountain",
+    title: "Premium Service for Superstition Mountain Area",
+    description: "Homes near the Superstition Mountains face unique challenges from hiking dust and desert debris. Our expert technicians understand how to deep clean carpets affected by the beautiful but dusty desert environment.",
+    highlights: [
+      "Expert at removing hiking dust",
+      "Desert debris specialists",
+      "Mountain area expertise",
+      "Trusted by local homeowners"
+    ],
+    icon: "FaStar"
+  },
+  {
+    name: "Lost Dutchman Area",
+    title: "Serving Lost Dutchman Neighborhoods",
+    description: "Living near Lost Dutchman State Park means enjoying Arizona's natural beauty - and dealing with the dust that comes with it. We help keep your carpets fresh and clean despite the desert environment.",
+    highlights: [
+      "Desert living expertise",
+      "Remove tracked-in trail dust",
+      "Fast 1-2 hour dry time",
+      "Flexible scheduling"
+    ],
+    icon: "FaCrown"
+  },
+  {
+    name: "Apache Trail Area",
+    title: "Apache Trail Area Carpet Cleaning",
+    description: "Historic Apache Trail brings visitors and adventure seekers - and extra foot traffic that wears on carpets. We help Apache Junction families maintain beautiful, clean carpets year-round.",
+    highlights: [
+      "Family-focused service",
+      "Quick response times",
+      "Pet-friendly cleaning solutions",
+      "Safe for kids and pets"
+    ],
+    icon: "FaMountain"
+  }
+];
+
+// Apache Junction services
+const services = [
+  {
+    title: "Carpet Cleaning",
+    description: "Hot Carbonating Extraction removes desert dust, hiking debris, and deep-set dirt from your Apache Junction home's carpets.",
+    icon: "FaHouseUser",
+    link: "/services/carpet-cleaning"
+  },
+  {
+    title: "Tile & Grout Cleaning",
+    description: "Restore tile floors common in Apache Junction homes. Remove years of desert dust buildup from grout lines.",
+    icon: "FaTh",
+    link: "/services/tile-and-grout-cleaning"
+  },
+  {
+    title: "Upholstery Cleaning",
+    description: "Refresh furniture that bears the brunt of desert dust and daily family life in Apache Junction.",
+    icon: "FaCouch",
+    link: "/services/upholstery-cleaning"
+  },
+  {
+    title: "Pet Odor Removal",
+    description: "Eliminate pet odors and stains with our P.U.R.T.® treatment. Safe for Apache Junction's pet-loving families.",
+    icon: "FaPaw",
+    link: "/services"
+  },
+  {
+    title: "Area Rug Cleaning",
+    description: "Specialized cleaning for the rugs that define your Apache Junction home's southwestern style.",
+    icon: "FaRug",
+    link: "/services"
+  },
+  {
+    title: "Allergen Removal",
+    description: "Critical in Apache Junction's desert climate. Remove dust, pollen, and allergens that accumulate year-round.",
+    icon: "FaLeaf",
+    link: "/services/carpet-cleaning"
+  }
+];
+
+// Apache Junction ZIP codes
+const apacheJunctionZips = [
+  { zip: "85117", area: "Gold Canyon" },
+  { zip: "85118", area: "Gold Canyon" },
+  { zip: "85119", area: "Central Apache Junction" },
+  { zip: "85120", area: "Apache Junction" },
+];
+
+// FAQ items
+const faqs = [
+  {
+    question: "Do you serve Gold Canyon?",
+    answer: "Absolutely! Gold Canyon is one of our primary service areas in Apache Junction. We've been serving Gold Canyon families for years and know the area well. Whether you're near the golf courses or in the surrounding neighborhoods, we provide fast, reliable carpet cleaning service. We serve Gold Canyon ZIP codes 85117 and 85118."
+  },
+  {
+    question: "Can you clean after hiking season?",
+    answer: "Yes! Living near the Superstition Mountains means beautiful hiking opportunities—and lots of dust and debris tracked indoors. Our <a href=\"/services/carpet-cleaning\" class=\"text-primary hover:underline\">Hot Carbonating Extraction</a> process is perfect for removing the fine desert dust and trail debris that accumulates in your carpets throughout hiking season."
+  },
+  {
+    question: "Do you serve seasonal/snowbird residents?",
+    answer: "Absolutely! We understand that many Apache Junction residents are seasonal. We offer flexible scheduling and can accommodate your timeline—whether you need cleaning before you head north for the summer or want fresh carpets when you return in the fall. Just call us at (480) 649-3663 to schedule."
+  },
+  {
+    question: "How does dry time work in Apache Junction's climate?",
+    answer: "Apache Junction's warm, dry desert climate is actually perfect for our cleaning process! Because we use about 80% less water than traditional steam cleaning, your carpets dry in just 1-2 hours. In Apache Junction's dry climate, they often dry even faster. This means you can get back to your normal routine the same day."
+  },
+  {
+    question: "Do you serve all Apache Junction ZIP codes?",
+    answer: "Yes! We proudly serve all Apache Junction ZIP codes: 85117, 85118, 85119, and 85120. Whether you're in Gold Canyon, near Lost Dutchman, or anywhere in the Apache Junction area, we provide the same exceptional white-glove service. We also serve nearby cities like <a href=\"/mesa\" class=\"text-primary hover:underline\">Mesa</a> and <a href=\"/gilbert\" class=\"text-primary hover:underline\">Gilbert</a>."
+  },
+  {
+    question: "What makes your service different for Apache Junction homes?",
+    answer: "We understand Apache Junction's unique challenges: the constant desert dust, hiking debris from the Superstitions, and the mix of year-round residents and snowbirds. Our Hot Carbonating Extraction is perfect for Apache Junction's climate—it deep cleans without soaking carpets, removes desert dust and allergens effectively, and dries incredibly fast in our dry climate."
+  },
+  {
+    question: "Can you remove desert dust and hiking debris?",
+    answer: "Yes! This is one of our specialties. Our Hot Carbonating Extraction process removes 98% of allergens from carpets, including the desert dust, trail dirt, and particulates that are constant challenges in Apache Junction. We also offer dedicated allergen removal treatments that are especially important for residents dealing with year-round desert allergens."
+  },
+  {
+    question: "Do you offer same-day service in Apache Junction?",
+    answer: "In many cases, yes! We understand that Apache Junction families have busy schedules. Depending on our technicians' availability in your Apache Junction neighborhood, we can often accommodate same-day or next-day appointments. Call us at (480) 649-3663 to check availability for your area."
+  }
+];
+---
+
+<Base meta_title={meta_title} description={meta_description} canonical={canonical}>
+  <SchemaMarkup type="city" city="Apache Junction" state="Arizona" postalCodes={["85117", "85118", "85119", "85120"]} />
+
+  <!-- Hero Section -->
+  <section
+    class="py-24 md:py-32 lg:py-40 relative mb-0 bg-gradient-to-br from-primary/5 via-white to-accent/5"
+  >
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-5xl mx-auto">
+        <!-- Subtitle -->
+        <p
+          class="text-accent font-semibold text-lg md:text-xl mb-4 tracking-wide uppercase"
+          data-aos="fade-up-sm"
+        >
+          Carpet Cleaning Apache Junction, Arizona
+        </p>
+
+        <!-- Main Heading -->
+        <CustomHeading
+          as="h1"
+          text="Professional Carpet Cleaning in Apache Junction, Arizona"
+          svgColor="text-primary"
+          class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+
+        <!-- Subheading -->
+        <p
+          class="text-xl md:text-2xl text-text/80 mb-8 font-medium"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Serving Apache Junction & Gold Canyon Since 1995
+        </p>
+
+        <!-- Trust Badges - Apache Junction Neighborhoods Focus -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="150"
+        >
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              ⛳
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Gold Canyon</div>
+              <div class="text-xs md:text-sm text-gray-600">Golf Community</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              ⛰️
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Superstition Mountain</div>
+              <div class="text-xs md:text-sm text-gray-600">Mountain Views</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              🏜️
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Lost Dutchman</div>
+              <div class="text-xs md:text-sm text-gray-600">Desert Living</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex-shrink-0">
+              🛤️
+            </div>
+            <div class="text-left">
+              <div class="font-bold text-dark text-sm md:text-base">Apache Trail</div>
+              <div class="text-xs md:text-sm text-gray-600">Historic Route</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4"
+          data-aos="fade-up-sm"
+          data-aos-delay="200"
+        >
+          <CustomButton
+            link="tel:4806493663"
+            label="Call (480) 649-3663"
+            variant="primary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="phone-click"
+            data_track_location="hero-apache-junction"
+          />
+          <CustomButton
+            link="/appointment"
+            label="Schedule Online"
+            variant="secondary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="cta-click"
+            data_track_location="hero-apache-junction"
+            data_track_action="navigate-appointment"
+          />
+        </div>
+
+        <!-- Additional Trust Points -->
+        <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-text/70">
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Dries in 1-2 Hours</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Safe for Kids & Pets</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>Family Owned Since 1995</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-primary">✓</span>
+            <span>All Apache Junction Areas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apache Junction Neighborhoods Section - FEATURED -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p
+          class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+          data-aos="fade-up-sm"
+        >
+          Local Expertise
+        </p>
+        <CustomHeading
+          as="h2"
+          text="Apache Junction Areas We Serve"
+          svgColor="text-accent"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          We're not just serving Apache Junction—we understand the unique challenges of desert living near the Superstitions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {neighborhoods.map((neighborhood, index) => (
+          <div
+            class="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 lg:p-10 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border"
+            data-aos="fade-up-sm"
+            data-aos-delay={index * 100}
+          >
+            <div class="flex items-start gap-4 mb-6">
+              <div class="flex items-center justify-center w-16 h-16 rounded-full bg-primary text-white text-3xl flex-shrink-0">
+                {neighborhood.icon === "FaHome" && "⛳"}
+                {neighborhood.icon === "FaStar" && "⛰️"}
+                {neighborhood.icon === "FaCrown" && "🏜️"}
+                {neighborhood.icon === "FaMountain" && "🛤️"}
+              </div>
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold text-dark mb-2">
+                  {neighborhood.name}
+                </h3>
+                <h4 class="text-lg md:text-xl font-semibold text-primary mb-3">
+                  {neighborhood.title}
+                </h4>
+              </div>
+            </div>
+
+            <p class="text-base md:text-lg text-text/80 mb-6 leading-relaxed">
+              {neighborhood.description}
+            </p>
+
+            <ul class="space-y-3">
+              {neighborhood.highlights.map((highlight) => (
+                <li class="flex items-start gap-3">
+                  <span class="text-primary text-xl flex-shrink-0 mt-1">✓</span>
+                  <span class="text-text/90">{highlight}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+      <!-- Also Serving -->
+      <div
+        class="mt-12 text-center bg-light rounded-xl p-8"
+        data-aos="fade-up-sm"
+      >
+        <h3 class="text-xl md:text-2xl font-bold text-dark mb-4">
+          Also Proudly Serving
+        </h3>
+        <p class="text-lg text-text/80">
+          Superstition Foothills • Meridian • Renaissance • Ironwood • All Apache Junction ZIP codes
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section - Apache Junction Challenges -->
+  <section class="section bg-gradient-to-br from-primary/10 via-white to-accent/10">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <CustomHeading
+            as="h2"
+            text="The Challenge of Living in Apache Junction"
+            svgColor="text-primary"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+          />
+          <p
+            class="text-lg md:text-xl text-text/80"
+            data-aos="fade-up-sm"
+            data-aos-delay="50"
+          >
+            Apache Junction's unique desert location creates special challenges for your carpets and home
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="100"
+          >
+            <div class="text-5xl mb-4">🥾</div>
+            <h3 class="text-xl font-bold text-dark mb-3">Mountain Hiking Debris</h3>
+            <p class="text-text/80">
+              Living near the Superstition Mountains means amazing hiking—and lots of trail dust, dirt, and debris tracked into your home. This fine particulate settles deep in carpet fibers.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="150"
+          >
+            <div class="text-5xl mb-4">🏕️</div>
+            <h3 class="text-xl font-bold text-dark mb-3">Seasonal Residents</h3>
+            <p class="text-text/80">
+              Many Apache Junction homes sit unoccupied during summer months. Dust settles, carpets need refreshing, and snowbirds need reliable service before and after their seasonal stays.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg text-center"
+            data-aos="fade-up-sm"
+            data-aos-delay="200"
+          >
+            <div class="text-5xl mb-4">🌵</div>
+            <h3 class="text-xl font-bold text-dark mb-3">Desert Dust Accumulation</h3>
+            <p class="text-text/80">
+              Apache Junction's rural desert location means more dust and allergens than urban areas. Fine desert particles constantly infiltrate homes and settle deep in carpet fibers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section - Perfect for Apache Junction -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <p
+            class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+            data-aos="fade-up-sm"
+          >
+            The Perfect Solution
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Hot Carbonating Extraction: Ideal for Desert Living"
+            svgColor="text-accent"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+          <p
+            class="text-lg md:text-xl text-text/80"
+            data-aos="fade-up-sm"
+            data-aos-delay="100"
+          >
+            Our unique cleaning process is perfectly matched to Apache Junction's desert environment
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div
+            class="bg-gradient-to-br from-primary/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-right-sm"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">💧</span>
+              Lightning-Fast Drying
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Uses about 80% less water than traditional steam cleaning. Combined with Apache Junction's dry desert climate, your carpets dry in just <strong>1-2 hours</strong> instead of 1-2 days.
+            </p>
+            <p class="text-text/70">
+              Perfect for Apache Junction families who need to get back to normal life quickly—no humidity, no dampness, no waiting.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-accent/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-left-sm"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🫧</span>
+              Deep Desert Dust Removal
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Millions of carbonating bubbles penetrate deep into carpet fibers, lifting embedded desert dust, hiking debris, and allergens to the surface where they're extracted.
+            </p>
+            <p class="text-text/70">
+              More effective than steam cleaning at removing the fine desert particulates that Apache Junction homes face daily.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-primary/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-right-sm"
+            data-aos-delay="50"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🌿</span>
+              Allergen Elimination
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Removes <strong>98% of allergens</strong> from carpets—critical for Apache Junction residents dealing with year-round pollen, dust mites, and desert allergens.
+            </p>
+            <p class="text-text/70">
+              Our Green Certified solution, The Natural®, is safe for kids and pets while being tough on allergens and dirt.
+            </p>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-accent/5 to-white rounded-xl p-8 shadow-lg border border-border"
+            data-aos="fade-left-sm"
+            data-aos-delay="50"
+          >
+            <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+              <span class="text-3xl">🚫</span>
+              No Sticky Residue
+            </h3>
+            <p class="text-lg text-text/80 mb-4">
+              Unlike steam cleaning that leaves soapy residue, our carbonating process uses no soaps or harsh chemicals. No dirt-attracting residue means carpets stay cleaner longer.
+            </p>
+            <p class="text-text/70">
+              Essential when desert dust is constantly trying to invade your Apache Junction home—your carpets stay cleaner longer.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Benefits Summary -->
+        <div
+          class="bg-dark text-white rounded-2xl p-8 md:p-12 text-center"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold mb-6">
+            Why Apache Junction Families Choose Our Method
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left md:text-center">
+            <div>
+              <div class="text-4xl mb-3">⚡</div>
+              <div class="font-bold text-lg mb-2">Dries in 1-2 Hours</div>
+              <div class="text-white/80 text-sm">Perfect for desert climate</div>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🏥</div>
+              <div class="font-bold text-lg mb-2">98% Allergen Removal</div>
+              <div class="text-white/80 text-sm">Breathe easier in your home</div>
+            </div>
+            <div>
+              <div class="text-4xl mb-3">🌱</div>
+              <div class="font-bold text-lg mb-2">Green Certified & Safe</div>
+              <div class="text-white/80 text-sm">Safe for families & pets</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Throughout Apache Junction -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p
+          class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+          data-aos="fade-up-sm"
+        >
+          Complete Cleaning Solutions
+        </p>
+        <CustomHeading
+          as="h2"
+          text="Services Throughout Apache Junction"
+          svgColor="text-primary"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Comprehensive cleaning services for every Apache Junction community
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <div
+            class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border"
+            data-aos="fade-up-sm"
+            data-aos-delay={index * 50}
+          >
+            <div class="text-5xl mb-4">
+              {service.icon === "FaHouseUser" && "🏠"}
+              {service.icon === "FaTh" && "🔲"}
+              {service.icon === "FaCouch" && "🛋️"}
+              {service.icon === "FaPaw" && "🐾"}
+              {service.icon === "FaRug" && "🧶"}
+              {service.icon === "FaLeaf" && "🌿"}
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-dark mb-3">
+              {service.title}
+            </h3>
+            <p class="text-text/80 leading-relaxed mb-4">
+              {service.description}
+            </p>
+            <a href={service.link} class="text-primary hover:underline font-semibold inline-flex items-center gap-1">
+              Learn More <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up-sm">
+        <CustomButton
+          link="tel:4806493663"
+          label="Call for Free Quote: (480) 649-3663"
+          variant="primary"
+          className="text-lg px-8 py-4"
+          data_track="phone-click"
+          data_track_location="services-apache-junction"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials - Apache Junction Residents -->
+  <CityTestimonials city="Apache Junction" />
+
+  <!-- Service Areas - Apache Junction ZIP Codes -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <CustomHeading
+          as="h2"
+          text="Apache Junction ZIP Codes We Serve"
+          svgColor="text-primary"
+          class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+          dataAos="fade-up-sm"
+        />
+        <p
+          class="text-lg md:text-xl text-text/80 max-w-3xl mx-auto mb-8"
+          data-aos="fade-up-sm"
+          data-aos-delay="50"
+        >
+          Serving all Apache Junction neighborhoods and ZIP codes
+        </p>
+
+        <!-- Gold Canyon ZIP Codes Featured -->
+        <div
+          class="bg-primary text-white rounded-xl p-8 max-w-2xl mx-auto mb-12"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          <h3 class="text-2xl font-bold mb-4">⛳ Gold Canyon ZIP Codes</h3>
+          <div class="text-lg">
+            <strong>85117</strong> • <strong>85118</strong>
+          </div>
+          <p class="mt-4 text-white/90">
+            Gold Canyon residents: We're your local carpet cleaning experts!
+          </p>
+        </div>
+      </div>
+
+      <!-- All Apache Junction ZIPs -->
+      <div
+        class="bg-white rounded-xl p-8 md:p-12 shadow-lg max-w-5xl mx-auto"
+        data-aos="fade-up-sm"
+      >
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {apacheJunctionZips.map((item) => (
+            <div class="text-center p-3 bg-light rounded-lg hover:bg-primary/10 transition-colors duration-200">
+              <div class="font-bold text-primary text-lg">{item.zip}</div>
+              <div class="text-sm text-text/70">{item.area}</div>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center mt-8 pt-8 border-t border-border">
+          <p class="text-text/80 mb-4">
+            Don't see your ZIP code? We serve all of Apache Junction!
+          </p>
+          <CustomButton
+            link="tel:4806493663"
+            label="Call to Confirm Service: (480) 649-3663"
+            variant="primary"
+            className="text-base px-6 py-3"
+            data_track="phone-click"
+            data_track_location="zipcode-apache-junction"
+          />
+        </div>
+
+        <!-- Nearby Cities -->
+        <div class="text-center mt-8 pt-8 border-t border-border" data-aos="fade-up-sm">
+          <h3 class="text-xl font-semibold text-dark mb-4">Also Serving Nearby Cities</h3>
+          <p class="text-text/80">
+            <a href="/mesa" class="text-primary hover:underline">Mesa</a> •
+            <a href="/gilbert" class="text-primary hover:underline">Gilbert</a> •
+            <a href="/queen-creek" class="text-primary hover:underline">Queen Creek</a> •
+            <a href="/san-tan-valley" class="text-primary hover:underline">San Tan Valley</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Apache Junction Trusts Brimley's -->
+  <section class="section bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <CustomHeading
+            as="h2"
+            text="Why Apache Junction Trusts Brimley's White Glove Chem-Dry"
+            svgColor="text-accent"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+          />
+        </div>
+
+        <div class="space-y-8">
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-bold">
+              25+
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">25+ Years Serving the East Valley</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Since 1995, we've been cleaning carpets in East Valley homes including Apache Junction and Gold Canyon. We've served thousands of families and built a reputation for excellence that spans generations. We're not newcomers—we're Valley veterans who understand desert living.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-left-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              🗺️
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">We Know Apache Junction's Unique Needs</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                From the golf communities of Gold Canyon to homes near Lost Dutchman State Park, from year-round residents to snowbirds—we know your area. We understand the unique challenges each Apache Junction neighborhood faces, from hiking dust to seasonal cleaning needs.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              👨‍👩‍👧‍👦
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">Local Family Business, Not a National Chain</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                We're a family-owned Valley business. When you call us, you're supporting a local family that lives, works, and raises kids right here in Arizona. We treat your home like our own because we understand what desert homeownership means—we're living it too.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-left-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              ⭐
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">1,000+ Five-Star Reviews</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Valley residents have made us one of the highest-rated carpet cleaning services in the area. Over 1,000 five-star reviews on Google speak to the quality, professionalism, and care we bring to every job. We don't just meet expectations—we exceed them, every single time.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-6 items-start"
+            data-aos="fade-right-sm"
+          >
+            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl">
+              🧪
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-dark mb-3">Technology Designed for Desert Climates</h3>
+              <p class="text-lg text-text/80 leading-relaxed">
+                Our Hot Carbonating Extraction isn't just effective—it's perfect for Apache Junction. The minimal water usage combined with the dry desert climate means carpets dry in 1-2 hours. We're removing deep desert dust while getting you back to normal life the same day.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="text-center mt-12 bg-gradient-to-r from-primary to-accent text-white rounded-2xl p-8 md:p-12"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">
+            Join Thousands of Happy East Valley Customers
+          </h3>
+          <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+            Experience the difference that 25+ years of desert expertise makes
+          </p>
+          <CustomButton
+            link="/appointment"
+            label="Schedule Your Apache Junction Appointment"
+            variant="light"
+            className="text-lg px-8 py-4"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section - Apache Junction & Neighborhood Specific -->
+  <section class="section bg-light">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <p
+            class="text-accent font-semibold text-sm md:text-base mb-3 tracking-wider uppercase"
+            data-aos="fade-up-sm"
+          >
+            Questions?
+          </p>
+          <CustomHeading
+            as="h2"
+            text="Apache Junction Carpet Cleaning FAQs"
+            svgColor="text-primary"
+            class="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-6"
+            dataAos="fade-up-sm"
+            dataAosDelay="50"
+          />
+        </div>
+
+        <div class="space-y-6">
+          {faqs.map((faq, index) => (
+            <div
+              class="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-border"
+              data-aos="fade-up-sm"
+              data-aos-delay={index * 50}
+            >
+              <h3 class="text-xl md:text-2xl font-bold text-dark mb-4 flex items-start gap-3">
+                <span class="text-primary flex-shrink-0">Q:</span>
+                <span>{faq.question}</span>
+              </h3>
+              <div class="text-base md:text-lg text-text/80 leading-relaxed pl-8" set:html={faq.answer}>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div
+          class="text-center mt-12 bg-dark text-white rounded-xl p-8"
+          data-aos="fade-up-sm"
+        >
+          <h3 class="text-2xl font-bold mb-4">Have More Questions?</h3>
+          <p class="text-lg text-white/90 mb-6">
+            Call us at <a href="tel:4806493663" class="text-accent hover:underline font-bold" data-track="phone-click" data-track-location="faq-apache-junction">(480) 649-3663</a> or schedule online
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <CustomButton
+              link="tel:4806493663"
+              label="Call Now"
+              variant="primary"
+              className="text-base px-6 py-3"
+              data_track="phone-click"
+              data_track_location="faq-apache-junction"
+            />
+            <CustomButton
+              link="/appointment"
+              label="Schedule Online"
+              variant="light"
+              className="text-base px-6 py-3"
+              data_track="cta-click"
+              data_track_location="faq-apache-junction"
+              data_track_action="navigate-appointment"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section bg-gradient-to-br from-primary via-primary to-accent text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
+          data-aos="fade-up-sm"
+        >
+          Ready for Cleaner Carpets in Your Apache Junction Home?
+        </h2>
+        <p
+          class="text-xl md:text-2xl mb-8 text-white/90"
+          data-aos="fade-up-sm"
+          data-aos-delay="50"
+        >
+          Serving Gold Canyon, Superstition Mountain Area & All Apache Junction Communities
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          <CustomButton
+            link="tel:4806493663"
+            label="Call (480) 649-3663"
+            variant="light"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="phone-click"
+            data_track_location="bottom-cta-apache-junction"
+          />
+          <CustomButton
+            link="/appointment"
+            label="Schedule Online"
+            variant="secondary"
+            className="w-full sm:w-auto text-lg px-8 py-4"
+            data_track="cta-click"
+            data_track_location="bottom-cta-apache-junction"
+            data_track_action="navigate-appointment"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">Fast 1-2 Hour Dry Time</div>
+              <div class="text-sm text-white/80">Perfect for desert climate</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">25+ Years in the Valley</div>
+              <div class="text-sm text-white/80">Know your neighborhood</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✓</span>
+            <div>
+              <div class="font-bold mb-1">1,000+ Five-Star Reviews</div>
+              <div class="text-sm text-white/80">Valley's most trusted</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
