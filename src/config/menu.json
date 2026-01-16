@@ -142,31 +142,47 @@
       "children": [
         {
           "name": "Phoenix",
-          "url": "/service-areas/phoenix"
+          "url": "/phoenix"
         },
         {
           "name": "Mesa",
-          "url": "/service-areas/mesa"
-        },
-        {
-          "name": "Chandler",
-          "url": "/service-areas/chandler"
+          "url": "/mesa"
         },
         {
           "name": "Gilbert",
-          "url": "/service-areas/gilbert"
+          "url": "/gilbert"
+        },
+        {
+          "name": "Chandler",
+          "url": "/chandler"
+        },
+        {
+          "name": "Tempe",
+          "url": "/tempe"
         },
         {
           "name": "Scottsdale",
-          "url": "/service-areas/scottsdale"
+          "url": "/scottsdale"
+        },
+        {
+          "name": "Queen Creek",
+          "url": "/queen-creek"
         },
         {
           "name": "Glendale",
-          "url": "/service-areas/glendale"
+          "url": "/glendale"
         },
         {
           "name": "Peoria",
-          "url": "/service-areas/peoria"
+          "url": "/peoria"
+        },
+        {
+          "name": "Apache Junction",
+          "url": "/apache-junction"
+        },
+        {
+          "name": "San Tan Valley",
+          "url": "/san-tan-valley"
         }
       ]
     }
