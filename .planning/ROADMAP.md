@@ -141,6 +141,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 2. Content Optimization & SEO | 2/2 | Complete | 2026-01-15 |
 | 3. Quote Form & Conversion Flow | 3/3 | Complete | 2026-01-15 |
 | 4. Testimonials System Migration | 3/3 | Complete | 2026-01-16 |
-| 5. Tier 2 City Pages | 0/2 | Planned | - |
+| 5. Tier 2 City Pages | 1/2 | In Progress | - |
 | 6. Navigation & Internal Linking | 0/TBD | Not started | - |
 | 7. Launch Preparation & QA | 0/TBD | Not started | - |

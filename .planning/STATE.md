@@ -11,11 +11,11 @@ See: .planning/PROJECT.md (updated 2026-01-13)
 ## Current Position
 
 Phase: 5 of 7 (Tier 2 City Pages)
-Plan: 0 of 2
-Status: Ready to execute
-Last activity: 2026-01-16 — Planned Phase 5 (Tier 2 City Pages)
+Plan: 1 of 2
+Status: In progress
+Last activity: 2026-01-16 — Completed 05-01 (Glendale + Peoria city pages)
 
-Progress: ██████████ 57% (Phases 1-4 complete)
+Progress: ████████████ 64% (Phases 1-4 complete, Phase 5 half done)
 
 ## Performance Metrics
 
@@ -232,8 +232,38 @@ Last session: 2026-01-16
 Stopped at: Completed Phase 4 (Testimonials System Migration)
 Resume file: None
 
+## Phase 5 Summary (In Progress)
+
+### Completed Plans
+
+1. **05-01-PLAN.md** - Glendale + Peoria City Pages ✅
+   - Created 6 testimonial content files (3 Glendale, 3 Peoria)
+   - Created glendale.astro (~968 lines) with West Valley focus
+   - Created peoria.astro (~962 lines) with Northwest Valley focus
+   - Visual verification confirmed correct rendering
+   - Commits: bb2a07fa, 60351053, 29dcdd9b, 05bdbb11
+
+### Artifacts Created
+
+- `.planning/phases/05-tier-2-city-pages/05-01-SUMMARY.md`
+- `src/content/testimonials/glendale-*.md` (3 files)
+- `src/content/testimonials/peoria-*.md` (3 files)
+- `src/pages/glendale.astro`
+- `src/pages/peoria.astro`
+
+### Key Customizations
+
+**Glendale:**
+- Neighborhoods: Arrowhead Ranch, Catlin Court, Westgate, Glendale Heights
+- Challenges: Stadium events, historic homes, West Valley dust
+- ZIPs: 85301-85312
+
+**Peoria:**
+- Neighborhoods: Vistancia, Fletcher Heights, Lake Pleasant Heights, Sunrise Mountain
+- Challenges: Lake recreation, new construction, Spring Training
+- ZIPs: 85345, 85380-85383
+
 ## Next Steps
 
-1. Execute 05-01-PLAN.md (Glendale + Peoria city pages)
-2. Execute 05-02-PLAN.md (Apache Junction + San Tan Valley city pages)
-3. Continue to Phase 6 (Navigation & Internal Linking)
+1. Execute 05-02-PLAN.md (Apache Junction + San Tan Valley city pages)
+2. Continue to Phase 6 (Navigation & Internal Linking)
