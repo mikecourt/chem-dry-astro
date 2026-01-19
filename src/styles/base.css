@@ -61,35 +61,6 @@ button {
   @apply cursor-pointer;
 }
 
-/* Global focus-visible styles for keyboard accessibility */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-[tabindex]:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 2px;
-}
-
-/* Skip link for keyboard users */
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--color-secondary);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0 0 0.5rem 0.5rem;
-  z-index: 9999;
-  transition: top 0.3s;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
 br {
   @apply hidden lg:block;
 }

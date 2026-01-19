@@ -90,7 +90,7 @@ const { testimonial } = Astro.props;
                   <cite class="not-italic">
                     {review.name && (
                       <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <p class="text-lg md:text-xl font-bold text-dark" itemprop="name">{review.name}</p>
+                        <h4 class="text-lg md:text-xl font-bold text-dark" itemprop="name">{review.name}</h4>
                       </span>
                     )}
                     {review.about && <p class="text-sm md:text-base text-text/70" itemprop="addressLocality">{review.about}</p>}

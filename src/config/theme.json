@@ -2,9 +2,9 @@
   "colors": {
     "default": {
       "theme_color": {
-        "primary": "#2f7d35",
+        "primary": "#41AD49",
         "secondary": "#005DAA",
-        "accent": "#006c42",
+        "accent": "#008752",
         "body": "#FFFFFF",
         "border": "#E3E3EE",
         "light": "#FAFAFB"

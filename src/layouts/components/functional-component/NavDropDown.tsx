@@ -7,7 +7,9 @@ const NavDropDown = ({ menu, pathname }: { menu: any; pathname: any }) => {
     setShowContent(!showContent);
   };
   return (
-      <>
+      <li
+        className="nav-item nav-dropdown group"
+      >
         <a
           href={menu.url}
           className={`nav-link text-base-sm ${
@@ -64,7 +66,7 @@ const NavDropDown = ({ menu, pathname }: { menu: any; pathname: any }) => {
             </li>
           ))}
         </ul>
-      </>
+      </li>
   );
 };
 
