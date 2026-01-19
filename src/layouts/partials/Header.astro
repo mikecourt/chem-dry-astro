@@ -28,13 +28,13 @@ const { navigation_button, notification } = config;
 const { pathname } = Astro.url;
 ---
 
-<div class="notification-bar sticky top-0 z-50 flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4.5 w-full bg-primary py-2" data-aos="fade-down-sm">
+<div class="notification-bar sticky top-0 z-50 flex flex-col sm:flex-row justify-center items-center gap-1 sm:gap-4.5 w-full bg-secondary py-2" data-aos="fade-down-sm">
   <p
-    class="text-text-light/80 text-base-sm"
+    class="text-text-light text-base-sm"
     set:html={markdownify(notification.message)}
   />
 
-  <a href={notification.link} class="text-text-light flex items-center">
+  <a href={notification.link} class="text-text-light font-semibold flex items-center hover:underline focus:underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-secondary rounded">
     <DynamicIcon icon={notification.icon} className="mr-2.5" />
     {notification.label}
   </a>
@@ -88,9 +88,12 @@ const { pathname } = Astro.url;
           main.map((menu, i: number) => (
             <>
               {menu.hasChildren ? (
-                <div data-aos="fade-up-sm" data-aos-delay={100 + i * 50}>
+                <li
+                  class="nav-item nav-dropdown group"
+                  data-aos="fade-up-sm"
+                  data-aos-delay={100 + i * 50}>
                   <NavDropDown menu={menu} pathname={pathname} client:load />
-                </div>
+                </li>
               ) : (
                 <li
                   class="nav-item"

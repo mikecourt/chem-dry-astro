@@ -41,9 +41,9 @@ const { team } = Astro.props;
                 class="w-full h-full"
               />
               <div class="py-9">
-                <h4
+                <p
                   set:html={markdownify(member.name)}
-                  class="h6 mb-1 text-center"
+                  class="h6 mb-1 text-center font-bold"
                 />
                 <p
                   set:html={markdownify(member.designation)}
