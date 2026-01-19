@@ -53,7 +53,7 @@ const { pathname } = Astro.url;
             link={navigation_button.link}
             label={navigation_button.label}
             type="btn-sm"
-            className="order-1 hidden lg:hidden! sm:inline-block"
+            className="order-1 hidden sm:inline-block !lg:hidden"
             data_aos="zoom-in-sm"
           />
         )
@@ -121,7 +121,7 @@ const { pathname } = Astro.url;
           link={navigation_button.link}
           label={navigation_button.label}
           type="btn-sm"
-          className="order-1 hidden lg:inline-block! flex-shrink-0"
+          className="order-1 hidden !lg:inline-block flex-shrink-0"
           data_aos="zoom-in-sm"
         />
       )

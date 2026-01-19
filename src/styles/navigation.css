@@ -22,6 +22,21 @@
   @apply rounded text-left order-3 lg:order-1 lg:flex lg:w-auto lg:gap-5 lg:pl-2 max-lg:py-4 max-lg:px-5 max-lg:opacity-0 max-lg:absolute max-lg:shadow max-lg:z-50 max-lg:top-20 max-lg:bg-body max-lg:w-[calc(100vw_-_10%)] max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2;
 }
 
+/* Fallback: ensure nav items become visible even if AOS fails */
+@media (min-width: 1024px) {
+  .navbar-nav .nav-item,
+  .navbar-nav > div {
+    animation: nav-fallback-reveal 0.01s 0.8s forwards;
+  }
+}
+
+@keyframes nav-fallback-reveal {
+  to {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 .nav-link {
   @apply text-text text-base hover:text-primary block transition p-3 lg:px-2 lg:py-3;
 

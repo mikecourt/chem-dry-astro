@@ -19,7 +19,7 @@ const {
 
 const parsedWidth = Number(String(logo_width).replace("px", ""));
 const parsedHeight = Number(String(logo_height).replace("px", ""));
-const minResponsiveWidth = Math.round(parsedWidth * 0.6);
+const minResponsiveWidth = Math.round(parsedWidth * 0.8);
 const clampedWidth = `clamp(${minResponsiveWidth}px, 40vw, ${parsedWidth}px)`;
 ---
 

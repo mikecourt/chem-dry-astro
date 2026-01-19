@@ -241,6 +241,10 @@ const { title, meta_title, description, image, noindex, canonical } =
           duration: 600,
           once: true,
         });
+        // Refresh AOS after a short delay to catch any elements that weren't detected
+        setTimeout(() => {
+          AOS.refresh();
+        }, 100);
       }
 
       aosInit();
