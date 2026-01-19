@@ -24,7 +24,7 @@ We've successfully removed thousands of "impossible" stains that DIY methods and
 - **Fabric-Safe Methods** – Won't damage carpet or upholstery fibers
 - **Advanced Chemistry** – Professional-grade solutions unavailable to consumers
 - **No Harsh Chemicals** – Safe, non-toxic treatments for your home
-- **No Residue** – Won't attract dirt back to cleaned areas
+- **No Dirt-Attracting Residue** – Won't attract dirt back to cleaned areas
 - **Multiple Techniques** – We have solutions when others give up
 - **Guaranteed Satisfaction** – We re-clean if you're not happy
 

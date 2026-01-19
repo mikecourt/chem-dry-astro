@@ -12,7 +12,7 @@ draft: false
 
 ### Professional Carpet Cleaning in Phoenix
 
-Brimley's White Glove Chem-Dry provides professional carpet cleaning services throughout the Phoenix metro area. Our unique Hot Carbonating Extraction process uses 80% less water than traditional steam cleaning, allowing your carpets to dry in just 2 hours instead of 1-2 days.
+Brimley's White Glove Chem-Dry provides professional carpet cleaning services throughout the Phoenix metro area. Our unique Hot Carbonating Extraction process uses about 80% less water than traditional steam cleaning, allowing your carpets to dry in just 2 hours instead of 1-2 days.
 
 Our carbonated cleaning solution lifts dirt and grime to the surface where it's whisked away, leaving your carpets clean, fresh, and quick-drying. We don't use soaps or harsh chemicals, so there's no sticky residue left behind to attract dirt.
 

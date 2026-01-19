@@ -12,7 +12,7 @@ const { serviceIndex, allServices } = Astro.props;
 
 // Service descriptions for the services index page
 const serviceDescriptions: Record<string, string> = {
-  "carpet-cleaning": "Tired of carpets that stay wet for days? Our Hot Carbonating Extraction process dries in just 1-2 hours and uses 80% less water than traditional steam cleaning. No dirt-attracting residue means your carpets stay cleaner longer.",
+  "carpet-cleaning": "Tired of carpets that stay wet for days? Our Hot Carbonating Extraction process dries in just 1-2 hours and uses about 80% less water than traditional steam cleaning. No dirt-attracting residue means your carpets stay cleaner longer.",
   "upholstery-cleaning": "Your furniture takes a beating from daily use, spills, and allergens. Our natural cleaning solution is tough on stains yet completely safe for kids and pets. We'll bring your upholstery back to life without harsh chemicals.",
   "tile-grout-cleaning": "Scrubbing grout on your hands and knees is exhausting and rarely works. We use professional-grade equipment to restore your tile's original color and seal it to prevent future staining and mildew.",
   "area-rug-cleaning": "Expensive rugs deserve expert care. Our specialists understand different fibers, dyes, and construction methods to clean your investment safely. We preserve colors and prevent damage that generic cleaning can cause.",
@@ -30,24 +30,24 @@ const serviceDescriptions: Record<string, string> = {
   "dryer-vent-cleaning": "Clogged dryer vents are a leading cause of house fires. We thoroughly clean your vent system to improve dryer efficiency, reduce energy costs, and most importantly—keep your family safe."
 };
 
-// Service images mapping
+// Service images mapping - using optimized WebP format
 const serviceImages: Record<string, string> = {
-  "carpet-cleaning": "/images/service/carpet-cleaning.jpg",
-  "upholstery-cleaning": "/images/service/upholstery-cleaning.jpg",
-  "tile-grout-cleaning": "/images/service/tile-cleaning.jpg",
-  "area-rug-cleaning": "/images/service/area-rug-cleaning.jpg",
-  "pet-urine-removal": "/images/service/pet-odor.jpg",
-  "commercial-cleaning": "/images/service/commercial-cleaning.jpg",
-  "specialty-stain-removal": "/images/service/specialty-stain.jpg",
-  "wood-floor-cleaning": "/images/service/wood-floor-cleaning.jpg",
-  "leather-cleaning": "/images/service/leather-cleaning.jpg",
-  "granite-countertop-renewal": "/images/service/granite-renewal.jpg",
-  "stone-tile-cleaning-polishing": "/images/service/stone-cleaning.jpg",
-  "pet-urine-stain-removal": "/images/service/pet-urine.jpg",
-  "couch-sofa-cleaning": "/images/service/sofa-cleaning.jpg",
-  "red-wine-stain-removal": "/images/service/wine-stain.jpg",
-  "allergen-removal": "/images/service/allergen-removal.jpg",
-  "dryer-vent-cleaning": "/images/service/dryer-vent-cleaning.jpg"
+  "carpet-cleaning": "/images/service/carpet-cleaning.webp",
+  "upholstery-cleaning": "/images/service/upholstery-cleaning.webp",
+  "tile-grout-cleaning": "/images/service/tile-cleaning.webp",
+  "area-rug-cleaning": "/images/service/area-rug-cleaning.webp",
+  "pet-urine-removal": "/images/service/pet-odor.webp",
+  "commercial-cleaning": "/images/service/commercial-cleaning.webp",
+  "specialty-stain-removal": "/images/service/specialty-stain.webp",
+  "wood-floor-cleaning": "/images/service/wood-floor-cleaning.webp",
+  "leather-cleaning": "/images/service/leather-cleaning.webp",
+  "granite-countertop-renewal": "/images/service/granite-renewal.webp",
+  "stone-tile-cleaning-polishing": "/images/service/stone-cleaning.webp",
+  "pet-urine-stain-removal": "/images/service/pet-urine.webp",
+  "couch-sofa-cleaning": "/images/service/sofa-cleaning.webp",
+  "red-wine-stain-removal": "/images/service/wine-stain.webp",
+  "allergen-removal": "/images/service/allergen-removal.webp",
+  "dryer-vent-cleaning": "/images/service/dryer-vent-cleaning.webp"
 };
 ---
 
@@ -250,7 +250,7 @@ const serviceImages: Record<string, string> = {
               {/* Photo with hover magnification */}
               <div class="relative h-64 overflow-hidden">
                 <img
-                  src={serviceImages[service.id] || "/images/service/2.png"}
+                  src={serviceImages[service.id] || "/images/service/2.webp"}
                   alt={service.data.title}
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

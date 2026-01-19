@@ -3,9 +3,9 @@ title: "The secret of cleaning your kitchen."
 meta_title: ""
 description: ""
 date: 2025-04-04T05:00:00Z
-image: "/images/blog/1.png"
+image: "/images/blog/1.webp"
 categories: ["Kitchen"]
-draft: false
+draft: true
 ---
 
 ### We give the best services

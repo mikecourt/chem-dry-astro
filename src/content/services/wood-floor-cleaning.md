@@ -19,7 +19,7 @@ The result? Floors that look refreshed, feel smooth, and maintain their protecti
 
 ###### Benefits of Professional Wood Floor Cleaning
 
-- **Low-Moisture Process** – Uses 80% less water than traditional mopping to prevent warping and water damage
+- **Low-Moisture Process** – Uses about 80% less water than traditional mopping to prevent warping and water damage
 - **Fast Drying** – Floors dry in 1-2 hours, not days
 - **Finish Protection** – Cleans without stripping or dulling your floor's protective coating
 - **Deep Cleaning** – Removes dirt from wood grain that regular mopping misses

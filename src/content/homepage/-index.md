@@ -29,16 +29,16 @@ about:
   enable: true
   title: "Your **comfort** is our main priority"
   subtitle: "WHO ARE WE"
-  content: "We appreciate your trust greatly. Our patients choose our clinic because they know we are the best in the field."
+  content: "We appreciate your trust greatly. Phoenix families choose us because they know we deliver superior cleaning results with care."
   schedule:
     - day: MON-FRI
-      time: 9 AM – 22 PM
+      time: 8 AM – 6 PM
     - day: SATURDAY
-      time: 9 AM – 20 PM
+      time: 9 AM – 3 PM
   button:
     enable: true
-    label: "Call: +1-394-495-5993"
-    link: "tel:+1-394-495-5993"
+    label: "Call: (480) 649-3663"
+    link: "tel:+1-480-649-3663"
   badge: "/images/home/about/badge.svg"
   images:
     - "/images/home/about/1.avif"
@@ -48,8 +48,8 @@ responsibility:
   enable: true
   title: "**Best cleaning** <br> company in the town"
   subtitle: "WHAT WE DO"
-  content: "Our professional dental clinic offers the whole range of <br> dentistry services: treatment of caries, gum diseases, <br> tooth whitening, implantation, dentures, h whitening, <br> implantation, dentures surgery, etc."
-  image: "/images/home/responsibility/1.png"
+  content: "We offer professional carpet, upholstery, tile, and area rug <br> cleaning services throughout the Phoenix Valley. Our Hot <br> Carbonating Extraction process delivers deeper cleaning <br> using about 80% less water than steam cleaning."
+  image: "/images/home/responsibility/1.webp"
   video:
     thumbnail: "/images/home/responsibility/thumb.webp"
     url: "https://www.youtube.com/embed/dyZcRRWiuuw?autoplay=1&mute=0"

@@ -2,8 +2,8 @@
 title: "**Professional** Carpet & Upholstery Cleaning Services in Phoenix"
 homepage_section_enable: true
 home_title: "**Professional** Carpet & Upholstery Cleaning Services in Phoenix"
-meta_title: ""
-description: "this is service page"
+meta_title: "Carpet Cleaning Services Phoenix | Brimley's White Glove Chem-Dry"
+description: "Professional carpet, upholstery, tile, and area rug cleaning services in Phoenix. Hot Carbonating Extraction dries in 1-2 hours. Family-owned since 1995."
 subtitle: "OUR SERVICES"
 descriptions:
   - "We know you're busy. That's why every service we offer is designed to fit your schedule—not disrupt it. The Hot Carbonating Extraction process used by Chem-Dry dries in just 1-2 hours, uses about 80% less water than traditional steam cleaning, and leaves no dirt-attracting residue."
@@ -11,18 +11,18 @@ descriptions:
 
 process:
   title: "The process we have been doing <br> for **over 25 years** of service"
-  content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. We use only advanced technologies to keep your smile looking the best. Our clinic provides a wide range of oral care services,"
+  content: "Our Hot Carbonating Extraction process uses carbonated cleaning solutions that lift dirt and grime from deep within carpet fibers, using about 80% less water than traditional steam cleaning."
   processes:
-    - name: "Hygiene & Clean"
+    - name: "Pre-Inspection"
       icon: "FaBottleDroplet"
-      content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. we are ready."
-    - name: "Safety Check"
+      content: "We assess your carpets, identify problem areas, and determine the best cleaning approach for your specific needs."
+    - name: "Pre-Treatment"
       icon: "FaRegHeart"
-      content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. we are ready."
-    - name: "Deep Cleaning"
+      content: "High-traffic areas and stubborn stains receive specialized pre-treatment solutions to break down dirt and oils."
+    - name: "Deep Extraction"
       icon: "FaBroom"
-      content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. we are ready."
-    - name: "Health Inspection"
+      content: "Our Hot Carbonating Extraction process lifts dirt from deep within fibers using millions of tiny carbonated bubbles."
+    - name: "Final Review"
       icon: "FaHeartCirclePlus"
-      content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. we are ready."
+      content: "We walk through with you to ensure complete satisfaction. Your carpets dry in just 1-2 hours, not days."
 ---

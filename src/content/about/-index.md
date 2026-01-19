@@ -1,55 +1,55 @@
 ---
 title: "The Brimley's **White Glove** Difference"
-meta_title: ""
-description: "this is about page"
+meta_title: "About Us | Brimley's White Glove Chem-Dry Phoenix"
+description: "Family-owned carpet cleaning in Phoenix since 1995. Hot Carbonating Extraction, certified technicians, 100% satisfaction guarantee. Learn about our story."
 subtitle: "ABOUT US"
 subheadline: "A Family Business Built on Trust, One Clean Carpet at a Time"
 
 why_us:
-  - title: "You can depend on us <br> to get a **good services**"
-    content: "Our clinic provides a wide range of oral care services checkup to fitting braces. We use only advanced technologies to keep your smile looking the best."
+  - title: "You can depend on us <br> to get **quality results**"
+    content: "We provide professional carpet, upholstery, and tile cleaning services throughout the Phoenix Valley. Our Hot Carbonating Extraction process delivers superior cleaning using about 80% less water."
     button:
       enable: true
-      label: "Call: +1-394-495-5993"
-      link: "tel:+1-394-495-5993"
+      label: "Call: (480) 649-3663"
+      link: "tel:+1-480-649-3663"
 
-    image: "/images/about/1.png"
+    image: "/images/about/1.webp"
     overlay_image: "/images/about/overlay.png"
 
-  - title: "Your **happiness** is <br> our first priority"
+  - title: "Your **satisfaction** is <br> our first priority"
     subtitle: "WHY CHOOSE US"
-    image: "/images/about/2.png"
+    image: "/images/about/2.webp"
     bullet_points:
-      - "Highly Rated & Esteemed"
-      - "We are Committed"
-      - "Fully Satisfaction Guarantee"
-      - "Insured and Branded"
-      - "Trusted Professionals"
+      - "Highly Rated & Trusted"
+      - "25+ Years of Experience"
+      - "100% Satisfaction Guarantee"
+      - "Fully Insured & Certified"
+      - "Family-Owned Business"
 
 pride:
-  title: "We are **recognized** award <br> winning company"
-  subtitle: "OUR PRIDE"
-  content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. We use only advanced technologies to keep your smile looking the best."
+  title: "Proudly serving **Phoenix** <br> for over 25 years"
+  subtitle: "OUR COMMITMENT"
+  content: "Since 1995, we've been helping Phoenix-area families keep their homes clean and healthy. Our certified technicians deliver exceptional results using Chem-Dry's proven Hot Carbonating Extraction process."
   images:
-    - "/images/about/3.png"
-    - "/images/about/4.png"
-    - "/images/about/5.png"
+    - "/images/about/3.webp"
+    - "/images/about/4.webp"
+    - "/images/about/5.webp"
 
 team:
-  enable: true
+  enable: false
   title: "We have the **best team** <br> to serve you"
   subtitle: "OUR AWESOME TEAM"
   members:
     - name: "Brandon Copperfield"
       designation: "Cleaning Manager"
-      image: "/images/about/member/1.png"
+      image: "/images/about/member/1.webp"
     - name: "Jim Sochon"
       designation: "Head in Plumbing"
-      image: "/images/about/member/3.png"
+      image: "/images/about/member/3.webp"
     - name: "Ashley Hardy"
       designation: "Cleaning Staff"
-      image: "/images/about/member/2.png"
+      image: "/images/about/member/2.webp"
     - name: "Barry Allen"
       designation: "Cleaning Staff"
-      image: "/images/about/member/4.png"
+      image: "/images/about/member/4.webp"
 ---

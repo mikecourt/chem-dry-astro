@@ -3,9 +3,9 @@ title: "6 easy ideas to clean office sofa without water."
 meta_title: ""
 description: ""
 date: 2025-04-04T05:00:00Z
-image: "/images/blog/4.png"
+image: "/images/blog/4.webp"
 categories: ["Cleaning"]
-draft: false
+draft: true
 ---
 
 ### We give the best services

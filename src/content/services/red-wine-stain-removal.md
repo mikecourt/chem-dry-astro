@@ -24,7 +24,7 @@ The key is acting fast and using the right treatment. Our technicians are traine
 - **No Bleaching** – Removes stains without lightening carpet colors
 - **Fiber-Safe** – Gentle on wool, natural fibers, and delicate upholstery
 - **Fast Response** – Call us immediately after a spill for best results
-- **No Residue** – Won't leave sticky spots that attract dirt
+- **No Dirt-Attracting Residue** – Won't leave sticky spots that attract dirt
 - **Complete Removal** – Gets stains other cleaners leave behind
 - **Safe for Home** – Non-toxic treatment safe for kids and pets
 

@@ -13,13 +13,13 @@ draft: false
 
 Your couch is the heart of your living room—where your family gathers, pets nap, and memories are made. But daily use means daily dirt, stains, and odors that regular vacuuming can't remove. Our professional couch and sofa cleaning service deep-cleans upholstery fabrics safely and effectively.
 
-Unlike DIY cleaning methods that can over-wet fabrics and cause mildew, our Hot Carbonating Extraction process uses millions of tiny bubbles to lift dirt, allergens, and stains from deep within upholstery fibers. We use 80% less water than steam cleaning, so your furniture dries in just 2 hours—not days.
+Unlike DIY cleaning methods that can over-wet fabrics and cause mildew, our Hot Carbonating Extraction process uses millions of tiny bubbles to lift dirt, allergens, and stains from deep within upholstery fibers. We use about 80% less water than steam cleaning, so your furniture dries in just 2 hours—not days.
 
 Whether you have microfiber, cotton, linen, or synthetic upholstery, we have the expertise to clean it without causing shrinkage, color bleeding, or fabric damage. Our process is safe for kids and pets, and we can tackle tough stains like coffee, food spills, and pet accidents.
 
 ###### Benefits of Professional Couch & Sofa Cleaning
 
-- **Fast Drying** – Furniture dries in 2 hours using 80% less water
+- **Fast Drying** – Furniture dries in 2 hours using about 80% less water
 - **Deep Cleaning** – Removes embedded dirt, oils, and allergens from fabric
 - **Stain Removal** – Tackles coffee, wine, food, pet stains, and more
 - **Odor Elimination** – Neutralizes smells instead of masking them

@@ -38,9 +38,11 @@ const callToAction = (await getEntry(
   "ctaSection",
   "call-to-action"
 )) as CollectionEntry<"ctaSection">;
+
+const canonical = "https://whiteglovecarpet.com/";
 ---
 
-<Base>
+<Base canonical={canonical}>
   <SchemaMarkup type="homepage" />
   <Hero hero={hero} />
   <WhiteGlovePromise />

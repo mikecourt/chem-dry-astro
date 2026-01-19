@@ -3,9 +3,9 @@ title: "The secret of cleaning your wooden furnitures."
 meta_title: ""
 description: ""
 date: 2025-04-04T05:00:00Z
-image: "/images/blog/3.png"
+image: "/images/blog/3.webp"
 categories: ["Office"]
-draft: false
+draft: true
 ---
 
 ### We give the best services

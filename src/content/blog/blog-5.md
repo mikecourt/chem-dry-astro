@@ -3,9 +3,9 @@ title: "Why is it important to clean your electronic devices."
 meta_title: ""
 description: ""
 date: 2025-04-04T05:00:00Z
-image: "/images/blog/5.png"
+image: "/images/blog/5.webp"
 categories: ["Apartment"]
-draft: false
+draft: true
 ---
 
 ### We give the best services

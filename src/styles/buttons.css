@@ -2,8 +2,18 @@
   @apply bg-primary text-white hover:bg-transparent! hover:text-primary! transition-colors! duration-10;
 }
 
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-primary);
+}
+
 .btn-secondary {
   @apply bg-secondary text-white hover:bg-transparent! hover:text-secondary! transition-colors! duration-10;
+}
+
+.btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-secondary);
 }
 
 .btn-light {
@@ -19,6 +29,11 @@
   border-color: var(--color-secondary) !important;
 }
 
+.btn-light:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--color-secondary);
+}
+
 .btn-outline-white {
   background-color: transparent;
   color: white;
@@ -30,4 +45,9 @@
   background-color: white;
   color: var(--color-primary);
   border-color: white !important;
+}
+
+.btn-outline-white:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary), 0 0 0 4px white;
 }

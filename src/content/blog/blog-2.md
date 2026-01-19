@@ -3,9 +3,9 @@ title: "How to clean wooden floors without creating dust."
 meta_title: ""
 description: ""
 date: 2025-04-04T05:00:00Z
-image: "/images/blog/2.png"
+image: "/images/blog/2.webp"
 categories: ["Apartment"]
-draft: false
+draft: true
 ---
 
 ### We give the best services

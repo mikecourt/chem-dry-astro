@@ -1,13 +1,19 @@
 ---
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 interface Props {
   type?: 'homepage' | 'service' | 'city';
   serviceName?: string;
   city?: string;
   state?: string;
   postalCodes?: string[];
+  faqs?: FAQ[];
 }
 
-const { type = 'homepage', serviceName, city, state = 'Arizona', postalCodes = [] } = Astro.props;
+const { type = 'homepage', serviceName, city, state = 'Arizona', postalCodes = [], faqs = [] } = Astro.props;
 
 // Business coordinates (Mesa office)
 const businessGeo = {
@@ -64,7 +70,7 @@ const businessSchema = {
   "telephone": "+1-480-649-3663",
   "email": "office@whiteglovecarpet.com",
   "priceRange": "$$",
-  "image": "https://whiteglovecarpet.com/images/logo.png",
+  "image": "https://whiteglovecarpet.com/images/og-image.png",
   "address": businessAddress,
   "geo": businessGeo,
   "areaServed": buildAreaServed(),
@@ -111,9 +117,29 @@ const serviceSchema = (serviceName || city) ? {
     "worstRating": "1"
   }
 } : null;
+
+// Strip HTML tags from FAQ answers for schema (schema.org recommends plain text)
+const stripHtml = (html: string) => html.replace(/<[^>]*>/g, '');
+
+// FAQPage schema (for city pages with FAQ sections)
+const faqSchema = faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": stripHtml(faq.answer)
+    }
+  }))
+} : null;
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
 {serviceSchema && (
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+)}
+{faqSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 )}
