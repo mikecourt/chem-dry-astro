@@ -13,7 +13,7 @@ hero:
     - enable: true
       label: "Our Services"
       link: "/services"
-  image: "/images/home/hero-family.jpg"
+  image: "/images/home/hero-family.webp"
   reviews:
     - name: "Google Reviews"
       company_logo: "/images/home/Google-reviews-logo.svg"
