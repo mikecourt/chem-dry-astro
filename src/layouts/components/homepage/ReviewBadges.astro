@@ -34,7 +34,8 @@ const { reviews } = Astro.props;
                   <div
                     class="Stars"
                     style={`--rating: ${r.rating}`}
-                    aria-label="Rating from the company"
+                    role="img"
+                    aria-label={`${r.rating} out of 5 stars rating`}
                   />
                   <span class="text-base text-center">
                     {r.rating} on {r.name.replace(" Reviews", "")}
