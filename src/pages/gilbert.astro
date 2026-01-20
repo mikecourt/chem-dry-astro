@@ -27,13 +27,23 @@ const description = "Carpet cleaning Gilbert AZ - safe for families & pets, drie
 const canonical = "https://whiteglovecarpet.com/gilbert";
 ---
 
-<Base title={title} description={description} meta_title={meta_title} canonical={canonical}>
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical} preloadImage="/images/carpet-cleaning-service-hero.webp">
   <SchemaMarkup type="city" city="Gilbert" state="Arizona" postalCodes={["85233", "85234", "85295", "85296", "85297", "85298", "85299"]} />
 
   <!-- Hero Section -->
   <section
-    class="py-24 md:py-40 lg:py-48 relative mb-0"
-    style="background-image: url('/images/carpet-cleaning-service-hero.webp'); background-size: cover; background-position: center center;">
+    class="hero-section py-24 md:py-40 lg:py-48 relative mb-0 overflow-hidden">
+    <!-- Hero background image - using <img> for better LCP performance -->
+    <img
+      src="/images/carpet-cleaning-service-hero.webp"
+      alt="Professional carpet cleaning service in Gilbert, AZ"
+      width="1920"
+      height="1280"
+      fetchpriority="high"
+      decoding="async"
+      loading="eager"
+      class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center"
+    />
 
     <!-- White Gradient Overlay (Radial gradient from left-center) -->
     <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>

@@ -20,13 +20,23 @@ const description = "Carpet cleaning Scottsdale AZ - premium white glove service
 const canonical = "https://whiteglovecarpet.com/scottsdale";
 ---
 
-<Base title={title} description={description} meta_title={meta_title} canonical={canonical}>
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical} preloadImage="/images/carpet-cleaning-service-hero.webp">
   <SchemaMarkup type="city" city="Scottsdale" state="Arizona" postalCodes={["85250", "85251", "85252", "85253", "85254", "85255", "85256", "85257", "85258", "85259", "85260", "85261", "85262", "85263", "85264", "85266", "85267", "85268", "85269", "85271"]} />
 
   <!-- Hero Section -->
   <section
-    class="py-24 md:py-40 lg:py-48 relative mb-0"
-    style="background-image: url('/images/carpet-cleaning-service-hero.webp'); background-size: cover; background-position: center center;">
+    class="hero-section py-24 md:py-40 lg:py-48 relative mb-0 overflow-hidden">
+    <!-- Hero background image - using <img> for better LCP performance -->
+    <img
+      src="/images/carpet-cleaning-service-hero.webp"
+      alt="Professional carpet cleaning service in Scottsdale, AZ"
+      width="1920"
+      height="1280"
+      fetchpriority="high"
+      decoding="async"
+      loading="eager"
+      class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center"
+    />
 
     <!-- White Gradient Overlay (Radial gradient from left-center) -->
     <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>

@@ -20,13 +20,24 @@ const description = "Carpet cleaning Mesa AZ - all 16 zip codes served. Hot Carb
 const canonical = "https://whiteglovecarpet.com/mesa";
 ---
 
-<Base title={title} description={description} meta_title={meta_title} canonical={canonical}>
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical} preloadImage="/images/carpet-cleaning-service-hero.webp">
   <SchemaMarkup type="city" city="Mesa" state="Arizona" postalCodes={["85201", "85202", "85203", "85204", "85205", "85206", "85207", "85208", "85209", "85210", "85211", "85212", "85213", "85214", "85215", "85216"]} />
 
   <!-- Hero Section -->
   <section
-    class="py-24 md:py-40 lg:py-48 relative mb-0"
-    style="background-image: url('/images/carpet-cleaning-service-hero.webp'); background-size: cover; background-position: center center;">
+    class="hero-section py-24 md:py-40 lg:py-48 relative mb-0 overflow-hidden">
+
+    <!-- Hero background image - using <img> for better LCP performance -->
+    <img
+      src="/images/carpet-cleaning-service-hero.webp"
+      alt="Professional carpet cleaning service in Mesa, AZ"
+      width="1920"
+      height="1280"
+      fetchpriority="high"
+      decoding="async"
+      loading="eager"
+      class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center"
+    />
 
     <!-- White Gradient Overlay -->
     <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
@@ -296,8 +307,11 @@ const canonical = "https://whiteglovecarpet.com/mesa";
             <img
               src="/images/powerhead-graphic.webp"
               alt="Diagram showing carbonation bubbles lifting dirt particles from carpet fibers"
+              width="800"
+              height="450"
               class="w-full h-auto rounded"
               loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

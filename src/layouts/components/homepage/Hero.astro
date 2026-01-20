@@ -12,8 +12,18 @@ const buttonVariants = ["primary", "secondary", "light"];
 ---
 
 <section
-  class="py-24 md:py-40 lg:py-48 relative mb-0"
-  style={`background-image: url('${hero.image}'); background-size: cover; background-position: right center;`}>
+  class="hero-section py-24 md:py-40 lg:py-48 relative mb-0 overflow-hidden">
+  <!-- Hero background image - using <img> for better LCP performance -->
+  <img
+    src={hero.image}
+    alt="Professional carpet cleaning service in Phoenix"
+    width="1920"
+    height="1280"
+    fetchpriority="high"
+    decoding="async"
+    loading="eager"
+    class="hero-bg-image absolute inset-0 w-full h-full object-cover object-right"
+  />
   <div class="relative z-20 px-[30px]">
     <p
       set:html={markdownify(hero.subtitle)}

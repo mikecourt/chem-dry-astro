@@ -42,7 +42,7 @@ const callToAction = (await getEntry(
 const canonical = "https://whiteglovecarpet.com/";
 ---
 
-<Base canonical={canonical}>
+<Base canonical={canonical} preloadImage={hero.image}>
   <SchemaMarkup type="homepage" />
   <Hero hero={hero} />
   <WhiteGlovePromise />

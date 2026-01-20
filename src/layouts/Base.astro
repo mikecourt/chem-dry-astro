@@ -42,10 +42,11 @@ export interface Props {
   image?: string;
   noindex?: boolean;
   canonical?: string;
+  preloadImage?: string; // LCP image to preload
 }
 
 // destructure frontmatter
-const { title, meta_title, description, image, noindex, canonical } =
+const { title, meta_title, description, image, noindex, canonical, preloadImage } =
   Astro.props;
 ---
 
@@ -61,6 +62,17 @@ const { title, meta_title, description, image, noindex, canonical } =
 
     <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
+
+    <!-- Preload LCP image for better performance -->
+    {preloadImage && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadImage}
+        fetchpriority="high"
+      />
+    )}
+
     <!-- theme meta -->
     <meta name="theme-name" content="cleaner-astro" />
     <meta name="msapplication-TileColor" content="#000000" />
