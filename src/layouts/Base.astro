@@ -48,17 +48,27 @@ export interface Props {
 // destructure frontmatter
 const { title, meta_title, description, image, noindex, canonical, preloadImage } =
   Astro.props;
+const canonicalUrl =
+  canonical ??
+  (config.site.base_url
+    ? `${config.site.base_url}${
+        Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, "")
+      }`
+    : undefined);
+const envGtmId = import.meta.env.PUBLIC_GTM_ID;
+const configuredGtmId = config.google_tag_manager.gtm_id;
+const gtmId = envGtmId || configuredGtmId;
+const gtmEnabled =
+  (config.google_tag_manager.enable || Boolean(envGtmId)) &&
+  Boolean(gtmId) &&
+  gtmId !== "GTM-XXXXXX";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <!-- google tag manager -->
-    {
-      config.google_tag_manager.enable && (
-        <GoogleTagmanager id={config.google_tag_manager.gtm_id} />
-      )
-    }
+    {gtmEnabled && <GoogleTagmanager id={gtmId} />}
 
     <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
@@ -125,7 +135,7 @@ const { title, meta_title, description, image, noindex, canonical, preloadImage 
     </title>
 
     <!-- canonical url -->
-    {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} item-prop="url" />}
 
     <!-- noindex robots -->
     {noindex && <meta name="robots" content="noindex,nofollow" />}
@@ -195,17 +205,16 @@ const { title, meta_title, description, image, noindex, canonical, preloadImage 
 
     <!-- Elfsight Platform Script -->
     <script src="https://elfsightcdn.com/platform.js" async></script>
+
+    <!-- TCTM Tracking Script -->
+    <script async src="//515464.tctm.co/t.js"></script>
   </head>
   <body>
     <!-- Skip link for keyboard accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     {/* google tag manager noscript */}
-    {
-      config.google_tag_manager.enable && (
-        <GoogleTagmanagerNoscript id={config.google_tag_manager.gtm_id} />
-      )
-    }
+    {gtmEnabled && <GoogleTagmanagerNoscript id={gtmId} />}
 
     <!-- 21st.dev Toolbar (dev mode only) -->
     <Dev21stToolbar />
@@ -220,7 +229,7 @@ const { title, meta_title, description, image, noindex, canonical, preloadImage 
       const sticky_header = config.settings.sticky_header;
       const stickyNavInit = () => {
         // Set notification height CSS variable
-        const notificationBar = document.querySelector(".notification-bar");
+        const notificationBar = document.querySelector(".notification-bar") as HTMLElement | null;
         if (notificationBar) {
           const height = notificationBar.offsetHeight;
           document.documentElement.style.setProperty('--notification-height', `${height}px`);
