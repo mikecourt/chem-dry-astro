@@ -26,11 +26,11 @@ The key is acting fast and using the right treatment. Our technicians are traine
 - **Fast Response** – Call us immediately after a spill for best results
 - **No Dirt-Attracting Residue** – Won't leave sticky spots that attract dirt
 - **Complete Removal** – Gets stains other cleaners leave behind
-- **Safe for Home** – Non-toxic treatment safe for kids and pets
+- **No Harsh Chemicals** – Gentle treatment for your home
 
 ###### Our Red Wine Stain Removal Process
 
-Speed is critical with red wine stains. When you call us, we'll guide you through immediate steps to prevent the stain from setting. Our technician arrives with specialized red wine stain removal solutions that break down tannins at the molecular level. We carefully apply the treatment, working from the outside of the stain inward to prevent spreading. Our Hot Carbonating Extraction process then lifts the broken-down wine from deep within carpet fibers without over-wetting. For stubborn stains, we may apply multiple treatments until complete removal is achieved. We finish by ensuring the area is completely clean and properly dried.
+Speed is critical with red wine stains. When you call us, we'll guide you through immediate steps to prevent the stain from setting. Our technician arrives with specialized red wine stain removal solutions that break down tannins effectively. We carefully apply the treatment, working from the outside of the stain inward to prevent spreading. Our Hot Carbonating Extraction process then lifts the broken-down wine from deep within carpet fibers without over-wetting. For stubborn stains, we may apply multiple treatments until complete removal is achieved. We finish by ensuring the area is completely clean and properly dried.
 
 ###### When to Call Us
 

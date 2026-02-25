@@ -13,9 +13,9 @@ draft: false
 
 Some stains won't come out with regular cleaning—they need expert treatment. Whether it's coffee spilled during your morning rush, grease from a pizza night, stubborn ink marks, or mystery stains from years past, our specialty stain removal service tackles the toughest challenges without damaging your carpets or upholstery.
 
-The key to successful stain removal is using the right treatment for the right stain. Coffee stains require different chemistry than grease stains, and what works on synthetic carpet might damage wool. Our trained technicians identify the stain type, test your fabric, and apply targeted solutions that break down stains at the molecular level.
+The key to successful stain removal is using the right treatment for the right stain. Coffee stains require different chemistry than grease stains, and what works on synthetic carpet might damage wool. Our trained technicians identify the stain type, test your fabric, and apply targeted solutions that break down and remove stains effectively.
 
-We've successfully removed thousands of "impossible" stains that DIY methods and other cleaners couldn't touch. Our advanced stain removal toolkit includes specialized enzymes, oxidizers, and solvents—all safe for your family and pets. While we can't guarantee removal of every stain (some are truly permanent), our success rate speaks for itself.
+We've successfully removed thousands of "impossible" stains that DIY methods and other cleaners couldn't touch. Our advanced stain removal toolkit includes specialized enzymes, oxidizers, and solvents—all gentle on your family and pets. While we can't guarantee removal of every stain (some are truly permanent), our success rate speaks for itself.
 
 ###### Benefits of Professional Specialty Stain Removal
 
@@ -23,7 +23,7 @@ We've successfully removed thousands of "impossible" stains that DIY methods and
 - **Expert Analysis** – We identify stain composition before treating
 - **Fabric-Safe Methods** – Won't damage carpet or upholstery fibers
 - **Advanced Chemistry** – Professional-grade solutions unavailable to consumers
-- **No Harsh Chemicals** – Safe, non-toxic treatments for your home
+- **No Harsh Chemicals** – Gentle treatments for your home
 - **No Dirt-Attracting Residue** – Won't attract dirt back to cleaned areas
 - **Multiple Techniques** – We have solutions when others give up
 - **Guaranteed Satisfaction** – We re-clean if you're not happy

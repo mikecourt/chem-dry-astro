@@ -52,8 +52,9 @@ import Base from "@/layouts/Base.astro";
   <script>
     // GTM conversion tracking (fires when ready)
     if (typeof window !== 'undefined') {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
+      const w = window as Window & { dataLayer?: Array<Record<string, string>> };
+      w.dataLayer = w.dataLayer || [];
+      w.dataLayer.push({
         event: 'form_submission_success',
         form_name: 'quote_request',
         conversion_type: 'lead'

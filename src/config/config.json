@@ -20,7 +20,7 @@
     "contact_form_action": "mailto:office@whiteglovecarpet.com",
     "appointment_form_action": "mailto:office@whiteglovecarpet.com",
     "footer_description": "Professional carpet, upholstery, and tile cleaning <br> serving the Phoenix metro area since 1995.",
-    "copyright": "Brimley's White Glove Chem-Dry © 2025 All Rights Reserved",
+    "copyright": "Brimley's White Glove Chem-Dry® © 2026. Independently Owned and Operated. All Rights Reserved.",
     "phone": "(480) 649-3663",
     "email": "office@whiteglovecarpet.com",
     "address": "1451 N Delmar, Mesa, AZ 85203",
@@ -30,20 +30,20 @@
   "notification": {
     "enable": true,
     "message": "Need professional carpet cleaning?",
-    "link": "tel:+1-480-649-3663",
+    "link": "tel:4806493663",
     "label": "Call Us: (480) 649-3663",
     "icon": "FaPhone"
   },
 
   "navigation_button": {
     "enable": true,
-    "label": "Get Free Quote",
-    "link": "/appointment"
+    "label": "Call Now",
+    "link": "tel:4806493663"
   },
 
   "google_tag_manager": {
-    "enable": false,
-    "gtm_id": "GTM-XXXXXX"
+    "enable": true,
+    "gtm_id": "GTM-TMZNSDH"
   },
 
   "metadata": {

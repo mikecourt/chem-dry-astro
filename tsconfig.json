@@ -12,13 +12,13 @@
     "incremental": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@/components/*": ["./src/layouts/components/*"],
+      "@/components/*": ["./src/components/*", "./src/layouts/components/*"],
       "@/shortcodes/*": ["./src/layouts/shortcodes/*"],
       "@/helpers/*": ["./src/layouts/helpers/*"],
       "@/partials/*": ["./src/layouts/partials/*"],
       "@/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.astro", ".astro/types.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro", ".astro/types.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

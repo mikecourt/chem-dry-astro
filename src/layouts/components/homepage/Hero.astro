@@ -70,8 +70,8 @@ const buttonVariants = ["primary", "secondary", "light"];
           🛡️
         </div>
         <div class="text-center sm:text-left">
-          <div class="font-bold text-dark text-sm md:text-base">Safe for Kids & Pets</div>
-          <div class="text-xs md:text-sm text-gray-600">The Natural® uses carbonation, not harsh chemicals</div>
+          <div class="font-bold text-dark text-sm md:text-base">No Harsh Chemicals</div>
+          <div class="text-xs md:text-sm text-gray-600">The Natural® contains no soaps, detergents, or fragrances</div>
         </div>
       </div>
 
@@ -102,6 +102,9 @@ const buttonVariants = ["primary", "secondary", "light"];
                 icon={b?.icon}
                 data-aos="zoom-in-sm"
                 data-aos-delay={80 + i * 20}
+                data_track={b.link.startsWith("tel:") ? "phone-click" : "cta-click"}
+                data_track_location="hero-home"
+                data_track_action={b.link.startsWith("tel:") ? "call-now" : "navigate"}
               />
             )
         )

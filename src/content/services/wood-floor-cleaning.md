@@ -15,7 +15,7 @@ Hardwood floors add warmth and value to your Phoenix home, but they require spec
 
 Our carbonating cleaning solution lifts dirt from deep within the wood grain without over-saturating. Your floors dry in 1-2 hours instead of days, and we never use harsh chemicals that can dull or damage the finish. Whether you have oak, maple, cherry, or exotic hardwoods, we have the expertise to clean them safely.
 
-The result? Floors that look refreshed, feel smooth, and maintain their protective finish for years to come. Plus, our process is safe for kids and pets, so your family can enjoy your beautiful floors without worry.
+The result? Floors that look refreshed, feel smooth, and maintain their protective finish for years to come. Plus, our process is gentle on kids and pets, so your family can enjoy your beautiful floors without worry.
 
 ###### Benefits of Professional Wood Floor Cleaning
 
@@ -23,7 +23,7 @@ The result? Floors that look refreshed, feel smooth, and maintain their protecti
 - **Fast Drying** – Floors dry in 1-2 hours, not days
 - **Finish Protection** – Cleans without stripping or dulling your floor's protective coating
 - **Deep Cleaning** – Removes dirt from wood grain that regular mopping misses
-- **Safe Formula** – Non-toxic, pH-balanced solution won't harm wood or finishes
+- **Gentle Formula** – pH-balanced solution, no harsh chemicals
 - **Allergen Removal** – Eliminates dust, pollen, and pet dander trapped in flooring
 - **Extends Floor Life** – Regular cleaning prevents scratches and premature wear
 

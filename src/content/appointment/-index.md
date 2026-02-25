@@ -2,7 +2,7 @@
 title: "Schedule an <br> **appointment**"
 subtitle: "BOOK A SERVICE"
 meta_title: "Book Carpet Cleaning Appointment | Brimley's White Glove Chem-Dry"
-description: "Schedule your professional carpet cleaning appointment in Phoenix metro. Fast drying, eco-friendly cleaning. Family-owned, 25+ years experience. Book online or call today!"
+description: "Schedule your professional carpet cleaning appointment in Phoenix metro. Fast drying, no harsh chemicals. Family-owned, 30+ years experience. Book online or call today!"
 contact_way:
   - name: "Phone Number"
     icon: "FaPhone"

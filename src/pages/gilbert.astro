@@ -6,8 +6,10 @@ import ServiceCard from "@/components/ServiceCard.astro";
 import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
+import { getServicePath } from "@/lib/utils/servicePath";
 import CallToAction from "@/partials/CallToAction.astro";
 import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
 import CityTestimonials from "@/components/CityTestimonials.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
@@ -18,12 +20,12 @@ const call_to_action = (await getEntry(
 
 const allServices = await getSinglePage("services");
 const featuredServices = allServices.filter(s =>
-  ['upholstery-cleaning', 'pet-urine-removal', 'tile-and-grout-cleaning', 'area-rug-cleaning', 'allergen-removal', 'commercial-cleaning'].includes(s.id)
+  ['upholstery-cleaning', 'pet-urine-removal', 'tile-grout-cleaning', 'area-rug-cleaning', 'allergen-removal', 'commercial-cleaning'].includes(s.id)
 ).slice(0, 6);
 
 const title = "Carpet Cleaning Gilbert AZ";
 const meta_title = "Carpet Cleaning Gilbert AZ | Trusted Since 1995 | Brimley's White Glove";
-const description = "Carpet cleaning Gilbert AZ - safe for families & pets, dries in 1-2 hours. Hot Carbonating Extraction. 25+ years experience. Free quote: (480) 649-3663";
+const description = "Carpet cleaning Gilbert AZ - no harsh chemicals, gentle on families & pets, dries in 1-2 hours. Hot Carbonating Extraction. 30+ years experience. Free quote: (480) 649-3663";
 const canonical = "https://whiteglovecarpet.com/gilbert";
 ---
 
@@ -88,7 +90,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
           </div>
           <div class="text-center sm:text-left">
             <div class="font-bold text-dark text-sm md:text-base">Serving Gilbert Since 1995</div>
-            <div class="text-xs md:text-sm text-gray-600">25+ years of trusted service</div>
+            <div class="text-xs md:text-sm text-gray-600">30+ years of trusted service</div>
           </div>
         </div>
 
@@ -98,7 +100,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
           </div>
           <div class="text-center sm:text-left">
             <div class="font-bold text-dark text-sm md:text-base">Family-Safe Cleaning</div>
-            <div class="text-xs md:text-sm text-gray-600">Non-toxic & green-certified</div>
+            <div class="text-xs md:text-sm text-gray-600">No harsh chemicals</div>
           </div>
         </div>
 
@@ -245,7 +247,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
             <div class="text-4xl mb-4">✅</div>
             <h3 class="text-xl font-semibold text-dark mb-3">100% Family-Safe Cleaning</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Our green-certified cleaning solution is safe for kids, pets, and everyone in your Gilbert home. No harsh chemicals, no toxic fumes—just clean carpets you can feel good about.
+              You can feel good knowing our cleaning solution contains no harsh chemicals — gentle on kids, pets, and everyone in your Gilbert home. No toxic fumes—just clean carpets you can feel good about.
             </p>
           </div>
 
@@ -282,7 +284,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
             </div>
             <div class="flex gap-3">
               <span class="text-primary flex-shrink-0">✓</span>
-              <span>Safe for children and pets</span>
+              <span>Gentle on children and pets</span>
             </div>
             <div class="flex gap-3">
               <span class="text-primary flex-shrink-0">✓</span>
@@ -334,7 +336,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
             >
               <h3 class="text-lg font-semibold text-dark mb-2">{service.data.title}</h3>
               <p class="text-sm text-text/80 mb-4">{service.data.description?.substring(0, 120)}...</p>
-              <a href={`/services/${service.id}`} class="text-primary font-semibold hover:underline text-sm">
+              <a href={getServicePath(service.id)} class="text-primary font-semibold hover:underline text-sm">
                 Learn More →
               </a>
             </div>
@@ -497,7 +499,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
             </div>
             <h3 class="text-xl font-semibold text-dark mb-3">We Know Gilbert Neighborhoods</h3>
             <p class="text-base leading-relaxed text-text/80">
-              From San Tan Ranch to Agritopia, we've been serving Gilbert families for over 25 years. We understand the unique needs of homes in your community.
+              From San Tan Ranch to Agritopia, we've been serving Gilbert families for over 30 years. We understand the unique needs of homes in your community.
             </p>
           </div>
 
@@ -534,7 +536,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base text-text/80">
             <div class="flex gap-3">
               <span class="text-primary flex-shrink-0 text-xl">✓</span>
-              <span><strong>25+ Years Experience:</strong> Trusted by Gilbert residents since 1995</span>
+              <span><strong>30+ Years Experience:</strong> Trusted by Gilbert residents since 1995</span>
             </div>
             <div class="flex gap-3">
               <span class="text-primary flex-shrink-0 text-xl">✓</span>
@@ -600,7 +602,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
             <h3 class="text-xl font-bold text-dark mb-4">Is the fast dry time really that important?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Absolutely. In Gilbert's dry climate, our 1-2 hour dry time means your family can get back to normal quickly. No waiting days for carpets to dry, and no risk of mold or mildew from excess moisture.
+              Absolutely. In Gilbert's dry climate, our 1-2 hour dry time means your family can get back to normal quickly. No waiting days for carpets to dry, and your family can get back to normal quickly.
             </p>
           </div>
 
@@ -614,7 +616,7 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="300">
             <h3 class="text-xl font-bold text-dark mb-4">Can you handle pet stains and odors?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Yes. Our specialized <a href="/services/pet-urine-removal" class="text-primary hover:underline">P.U.R.T.® treatment</a> destroys pet urine odors at the molecular level—not just masking them. Many Gilbert pet owners trust us to keep their homes fresh and clean despite furry family members.
+              Yes. Our specialized <a href="/services/pet-urine-removal" class="text-primary hover:underline">P.U.R.T.® treatment</a> destroys pet urine odors permanently—not just masking them. Many Gilbert pet owners trust us to keep their homes fresh and clean despite furry family members.
             </p>
           </div>
 
@@ -626,9 +628,9 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
           </div>
 
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="400">
-            <h3 class="text-xl font-bold text-dark mb-4">Are your cleaning products safe for children?</h3>
+            <h3 class="text-xl font-bold text-dark mb-4">Are your cleaning products gentle enough for homes with children?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              100% yes. Our green-certified cleaning solution is non-toxic and safe for babies, kids, and pets. Gilbert families with young children love that they don't have to worry about harsh chemicals on their carpets.
+              You can feel confident knowing our cleaning solution contains no harsh chemicals, soaps, or fragrances. Gentle enough for babies, kids, and pets. Gilbert families with young children love that they don't have to worry about harsh chemicals on their carpets.
             </p>
           </div>
 
@@ -685,6 +687,10 @@ const canonical = "https://whiteglovecarpet.com/gilbert";
       </div>
     </div>
   </section>
+
+  <div class="container max-w-[65rem] mx-auto px-4">
+    <AllergenDisclaimer />
+  </div>
 
   <TrustBar />
 

@@ -1,5 +1,6 @@
 ---
 import dateFormat from "@/lib/utils/dateFormat";
+import { getServicePath } from "@/lib/utils/servicePath";
 import { humanize, markdownify } from "@/lib/utils/textConverter";
 import type { CollectionEntry } from "astro:content";
 import ImageMod from "./ImageMod.astro";
@@ -13,7 +14,7 @@ const { title, banner, date, categories } = service.data;
 
 {
   banner && (
-    <a href={`/services/${service.id}`}>
+    <a href={getServicePath(service.id)}>
       <ImageMod
         src={banner}
         alt={title!}
@@ -40,7 +41,7 @@ const { title, banner, date, categories } = service.data;
       {dateFormat(date!)}
     </p>
   </div>
-  <a href={`/services/${service.id}`}>
+  <a href={getServicePath(service.id)}>
     <h5 set:html={markdownify(title!)} class="h6 md:h5 [&>br]:hidden" />
   </a>
 </div>

@@ -15,7 +15,7 @@ Your couch is the heart of your living room—where your family gathers, pets na
 
 Unlike DIY cleaning methods that can over-wet fabrics and cause mildew, our Hot Carbonating Extraction process uses millions of tiny bubbles to lift dirt, allergens, and stains from deep within upholstery fibers. We use about 80% less water than steam cleaning, so your furniture dries in just 2 hours—not days.
 
-Whether you have microfiber, cotton, linen, or synthetic upholstery, we have the expertise to clean it without causing shrinkage, color bleeding, or fabric damage. Our process is safe for kids and pets, and we can tackle tough stains like coffee, food spills, and pet accidents.
+Whether you have microfiber, cotton, linen, or synthetic upholstery, we have the expertise to clean it without causing shrinkage, color bleeding, or fabric damage. Our process is gentle on kids and pets, and we can tackle tough stains like coffee, food spills, and pet accidents.
 
 ###### Benefits of Professional Couch & Sofa Cleaning
 
@@ -26,7 +26,7 @@ Whether you have microfiber, cotton, linen, or synthetic upholstery, we have the
 - **Fabric Safe** – pH-balanced solution won't damage or discolor upholstery
 - **Allergen Reduction** – Removes dust mites, pet dander, and pollen
 - **Extended Furniture Life** – Regular cleaning prevents premature wear and fading
-- **Non-Toxic** – Safe for children and pets
+- **No Harsh Chemicals** – Gentle on children and pets
 
 ###### Our Couch & Sofa Cleaning Process
 

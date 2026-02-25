@@ -1,7 +1,7 @@
 ---
 title: "Phoenix <br> Carpet Cleaning"
 meta_title: "Carpet Cleaning Phoenix AZ | Brimley's White Glove Chem-Dry"
-description: "Professional carpet cleaning services in Phoenix, AZ. Fast-drying, eco-friendly Hot Carbonating Extraction process."
+description: "Professional carpet cleaning services in Phoenix, AZ. Fast-drying Hot Carbonating Extraction process. No harsh chemicals or soaps."
 icon: "FaLocationDot"
 banner: "/images/locations/phoenix.png"
 date: 2025-10-21T00:00:00Z
@@ -26,7 +26,7 @@ Phoenix homeowners and business owners choose Brimley's White Glove Chem-Dry for
 
 - **Fast Drying Times**: Our process uses about 80% less water, so carpets dry in 1-2 hours instead of 1-2 days
 - **Deeper Clean**: Carbonating bubbles penetrate deep into carpet fibers to lift dirt and grime
-- **Green Certified**: Our primary cleaning solution is non-toxic and safe for kids and pets
+- **No Harsh Chemicals**: Our primary cleaning solution contains no soaps, detergents, or fragrances
 - **Allergen Removal**: Removes 98% of common household allergens from carpets
 - **Local Service**: We're part of your Phoenix community and committed to your satisfaction
 

@@ -6,6 +6,7 @@ import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Base from "@/layouts/Base.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
 import CityTestimonials from "@/components/CityTestimonials.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
@@ -16,7 +17,7 @@ const call_to_action = (await getEntry(
 
 const title = "Carpet Cleaning Mesa AZ";
 const meta_title = "Carpet Cleaning Mesa AZ | Professional Service Since 1995 | Brimley's";
-const description = "Carpet cleaning Mesa AZ - all 16 zip codes served. Hot Carbonating Extraction, pet-safe, dries fast. 25+ years experience. Free quote: (480) 649-3663";
+const description = "Carpet cleaning Mesa AZ - all 16 zip codes served. Hot Carbonating Extraction, pet-safe, dries fast. 30+ years experience. Free quote: (480) 649-3663";
 const canonical = "https://whiteglovecarpet.com/mesa";
 ---
 
@@ -68,7 +69,7 @@ const canonical = "https://whiteglovecarpet.com/mesa";
         data-aos="fade-up-sm"
         data-aos-delay="100"
       >
-        Local, family-owned business serving Mesa families with deeper, drier carpet cleaning that's safe for kids and pets.
+        Local, family-owned business serving Mesa families with deeper, drier carpet cleaning that's gentle on kids and pets.
       </h2>
 
       <!-- Trust Badges -->
@@ -82,7 +83,7 @@ const canonical = "https://whiteglovecarpet.com/mesa";
           </div>
           <div class="text-center sm:text-left">
             <div class="font-bold text-dark text-sm md:text-base">Serving Mesa Since 1995</div>
-            <div class="text-xs md:text-sm text-gray-600">25+ years in your community</div>
+            <div class="text-xs md:text-sm text-gray-600">30+ years in your community</div>
           </div>
         </div>
 
@@ -211,7 +212,7 @@ const canonical = "https://whiteglovecarpet.com/mesa";
         <!-- Bottom CTA -->
         <div class="text-center mt-12" data-aos="fade-up-sm" data-aos-delay="200">
           <p class="text-lg text-text/80 mb-6">
-            After 25+ years serving Mesa homes, we know exactly what your carpets are up against.
+            After 30+ years serving Mesa homes, we know exactly what your carpets are up against.
           </p>
           <CustomButton
             label="Get Your Free Mesa Estimate"
@@ -276,10 +277,10 @@ const canonical = "https://whiteglovecarpet.com/mesa";
           <div class="bg-primary/5 p-6 rounded-lg border-2 border-primary/20">
             <h4 class="text-lg font-semibold text-dark mb-3 flex items-center gap-2">
               <span class="text-primary">✓</span>
-              Safe for Mesa Families & Pets
+              Gentle on Mesa Families & Pets
             </h4>
             <p class="text-base leading-relaxed text-text/80">
-              The Natural® is green-certified, non-toxic, and contains no harsh chemicals. Perfect for homes with kids, pets, and family members with sensitivities.
+              The Natural® contains no harsh chemicals, soaps, or fragrances. Perfect for homes with kids, pets, and family members with sensitivities.
             </p>
           </div>
 
@@ -360,7 +361,7 @@ const canonical = "https://whiteglovecarpet.com/mesa";
             <div class="text-4xl mb-4">🛋️</div>
             <h3 class="text-xl font-semibold text-dark mb-3">Upholstery Cleaning</h3>
             <p class="text-base leading-relaxed text-text/80 mb-4">
-              Refresh your sofas, chairs, and other upholstered furniture. Safe for all fabric types and dries quickly in Mesa's climate.
+              Refresh your sofas, chairs, and other upholstered furniture. Gentle on all fabric types and dries quickly in Mesa's climate.
             </p>
             <a href="/services/upholstery-cleaning" class="text-primary font-semibold hover:underline">
               Learn More →
@@ -384,7 +385,7 @@ const canonical = "https://whiteglovecarpet.com/mesa";
             <div class="text-4xl mb-4">🐾</div>
             <h3 class="text-xl font-semibold text-dark mb-3">Pet Urine Removal</h3>
             <p class="text-base leading-relaxed text-text/80 mb-4">
-              Our P.U.R.T.® treatment permanently eliminates pet urine odors and stains at the molecular level. No more masking - complete odor removal.
+              Our P.U.R.T.® treatment permanently eliminates pet urine odors and stains. No more masking - complete odor removal.
             </p>
             <a href="/services/pet-urine-removal" class="text-primary font-semibold hover:underline">
               Learn More →
@@ -657,7 +658,7 @@ const canonical = "https://whiteglovecarpet.com/mesa";
             </div>
             <h3 class="text-xl font-semibold text-dark mb-2">We Know Mesa Homes & Common Issues</h3>
             <p class="text-base leading-relaxed text-text/80">
-              After 25+ years in Mesa, we understand the unique challenges of Arizona carpets - desert dust, high traffic, and the importance of fast dry times in our climate.
+              After 30+ years in Mesa, we understand the unique challenges of Arizona carpets - desert dust, high traffic, and the importance of fast dry times in our climate.
             </p>
           </div>
 
@@ -774,7 +775,7 @@ const canonical = "https://whiteglovecarpet.com/mesa";
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="350">
             <h3 class="text-xl font-bold text-dark mb-4">Are your cleaning products safe in the Arizona heat?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Yes! The Natural®, our primary cleaning solution, is completely non-toxic, green-certified, and safe at any temperature. Plus, because we use so little water and your carpets dry quickly, there's no risk of mold or mildew growth - a common problem with steam cleaning in any climate.
+              Yes! The Natural®, our primary cleaning solution, is gentle and contains no harsh chemicals, soaps, or fragrances. Plus, because we use so little water and your carpets dry quickly, there's your carpets dry quickly.
             </p>
           </div>
 
@@ -833,6 +834,10 @@ const canonical = "https://whiteglovecarpet.com/mesa";
       </div>
     </div>
   </section>
+
+  <div class="container max-w-[65rem] mx-auto px-4">
+    <AllergenDisclaimer />
+  </div>
 
   <TrustBar />
 

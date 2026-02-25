@@ -59,6 +59,9 @@ const { cta } = Astro.props;
                         data_aos="fade-up-sm"
                         data_aos_delay={100 + i * 50}
                         icon={b?.icon && b?.icon}
+                        data_track={b.link.startsWith("tel:") ? "phone-click" : "cta-click"}
+                        data_track_location="cta-section-buttons"
+                        data_track_action={b.link.startsWith("tel:") ? "call-now" : "navigate"}
                       />
                     )
                 )}

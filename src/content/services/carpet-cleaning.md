@@ -1,7 +1,7 @@
 ---
 title: "Carpet"
 meta_title: "Professional Carpet Cleaning | Brimley's White Glove Chem-Dry"
-description: "Expert carpet cleaning in Phoenix using our unique Hot Carbonating Extraction process. Dries in 2 hours, safe for kids and pets."
+description: "Expert carpet cleaning in Phoenix using our unique Hot Carbonating Extraction process. Dries in 2 hours, no harsh chemicals."
 icon: "FaHouseUser"
 banner: "/images/carpet-service.jpg"
 date: 2025-01-21T05:00:00Z
@@ -19,8 +19,8 @@ Our carbonated cleaning solution lifts dirt and grime to the surface where it's 
 ###### Benefits of Our Carpet Cleaning
 
 - **Dries in 2 Hours** - Get back to your normal routine quickly
-- **Healthier Home** - Removes 98% of allergens from carpets
-- **Safe & Non-Toxic** - Our primary cleaner, The Natural®, is Green Certified
+- **Healthier Home** - Removes 98% of common household allergens* from carpets
+- **No Harsh Chemicals** - Our primary cleaner, The Natural®, contains no soaps, detergents, or fragrances
 - **Deeper Clean** - Hot carbonating extraction removes more dirt than steam cleaning
 - **No Sticky Residue** - Carpets stay cleaner longer
 
@@ -31,3 +31,5 @@ We start with a thorough inspection of your carpets to identify problem areas an
 ###### Service Areas
 
 We proudly serve Phoenix, Scottsdale, Mesa, Tempe, Gilbert, Chandler, Glendale, Peoria, and surrounding areas.
+
+*Removes allergens from non-living sources, such as dog and cat dander and dust mite matter. Based on results from a study conducted by an independent lab using the Chem-Dry Hot Carbonating Extraction process. Figures are an average across multiple homes.

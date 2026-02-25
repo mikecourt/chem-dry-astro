@@ -11,7 +11,7 @@ why_us:
     button:
       enable: true
       label: "Call: (480) 649-3663"
-      link: "tel:+1-480-649-3663"
+      link: "tel:4806493663"
 
     image: "/images/about/1.webp"
     overlay_image: "/images/about/overlay.png"
@@ -21,13 +21,13 @@ why_us:
     image: "/images/about/2.webp"
     bullet_points:
       - "Highly Rated & Trusted"
-      - "25+ Years of Experience"
+      - "30+ Years of Experience"
       - "100% Satisfaction Guarantee"
       - "Fully Insured & Certified"
       - "Family-Owned Business"
 
 pride:
-  title: "Proudly serving **Phoenix** <br> for over 25 years"
+  title: "Proudly serving **Phoenix** <br> for over 30 years"
   subtitle: "OUR COMMITMENT"
   content: "Since 1995, we've been helping Phoenix-area families keep their homes clean and healthy. Our certified technicians deliver exceptional results using Chem-Dry's proven Hot Carbonating Extraction process."
   images:
