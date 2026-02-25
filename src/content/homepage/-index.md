@@ -1,11 +1,11 @@
 ---
 hero:
   title: "Carpet Cleaning in Phoenix <br> Your Family Can **Trust**"
-  subtitle: "Dries in 2 Hours. Safe for Kids & Pets. 30+ Years Serving Phoenix Families."
+  subtitle: "Dries in 2 Hours. No Harsh Chemicals. 30+ Years Serving Phoenix Families."
   buttons:
     - enable: true
       label: "(480) 649-3663"
-      link: "tel:+1-480-649-3663"
+      link: "tel:4806493663"
       icon: "FaPhone"
     - enable: true
       label: "Get Free Quote"
@@ -38,7 +38,7 @@ about:
   button:
     enable: true
     label: "Call: (480) 649-3663"
-    link: "tel:+1-480-649-3663"
+    link: "tel:4806493663"
   badge: "/images/home/about/badge.svg"
   images:
     - "/images/home/about/1.avif"

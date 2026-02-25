@@ -34,7 +34,7 @@ const { pathname } = Astro.url;
     set:html={markdownify(notification.message)}
   />
 
-  <a href={notification.link} class="text-text-light font-semibold flex items-center hover:underline focus:underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-secondary rounded">
+  <a href={notification.link} class="text-text-light font-semibold flex items-center hover:underline focus:underline focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-secondary rounded" data-track="phone-click" data-track-location="header">
     <DynamicIcon icon={notification.icon} className="mr-2.5" />
     {notification.label}
   </a>
@@ -55,6 +55,9 @@ const { pathname } = Astro.url;
             type="btn-sm"
             className="order-1 hidden sm:inline-block !lg:hidden"
             data_aos="zoom-in-sm"
+            data_track={navigation_button.link.startsWith("tel:") ? "phone-click" : "cta-click"}
+            data_track_location="header-nav-mobile"
+            data_track_action={navigation_button.link.startsWith("tel:") ? "call-now" : "navigate"}
           />
         )
       }
@@ -126,6 +129,9 @@ const { pathname } = Astro.url;
           type="btn-sm"
           className="order-1 hidden !lg:inline-block flex-shrink-0"
           data_aos="zoom-in-sm"
+          data_track={navigation_button.link.startsWith("tel:") ? "phone-click" : "cta-click"}
+          data_track_location="header-nav-desktop"
+          data_track_action={navigation_button.link.startsWith("tel:") ? "call-now" : "navigate"}
         />
       )
     }

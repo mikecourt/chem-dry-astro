@@ -6,6 +6,7 @@ import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Base from "@/layouts/Base.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
 import CityTestimonials from "@/components/CityTestimonials.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
@@ -16,7 +17,7 @@ const call_to_action = (await getEntry(
 
 const title = "Carpet Cleaning Scottsdale";
 const meta_title = "Carpet Cleaning Scottsdale AZ | Premium White Glove Service | Brimley's";
-const description = "Carpet cleaning Scottsdale AZ - premium white glove service for luxury homes. Hot Carbonating Extraction, safe for fine rugs. Free quote: (480) 649-3663";
+const description = "Carpet cleaning Scottsdale AZ - premium white glove service for luxury homes. Hot Carbonating Extraction, gentle on fine rugs. Free quote: (480) 649-3663";
 const canonical = "https://whiteglovecarpet.com/scottsdale";
 ---
 
@@ -91,7 +92,7 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
           </div>
           <div class="text-center sm:text-left">
             <div class="font-bold text-dark text-sm md:text-base">Expert Care</div>
-            <div class="text-xs md:text-sm text-gray-600">Safe for high-end materials</div>
+            <div class="text-xs md:text-sm text-gray-600">Gentle on high-end materials</div>
           </div>
         </div>
 
@@ -110,8 +111,8 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
             🌿
           </div>
           <div class="text-center sm:text-left">
-            <div class="font-bold text-dark text-sm md:text-base">Natural, Green-Certified</div>
-            <div class="text-xs md:text-sm text-gray-600">Non-toxic cleaning safe for your family</div>
+            <div class="font-bold text-dark text-sm md:text-base">The Natural® Solution</div>
+            <div class="text-xs md:text-sm text-gray-600">No harsh chemicals or soaps</div>
           </div>
         </div>
       </div>
@@ -202,7 +203,7 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
             </div>
             <h3 class="text-xl font-semibold text-dark mb-2">Harsh Chemicals</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Many carpet cleaners use strong detergents and chemical-laden solutions that leave residue, create overpowering odors, and aren't safe for your family or pets.
+              Many carpet cleaners use strong detergents and chemical-laden solutions that leave residue, create overpowering odors, and can irritate your family or pets.
             </p>
           </div>
         </div>
@@ -229,7 +230,7 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
           />
           <div class="space-y-4 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="100">
             <p class="text-base leading-relaxed text-text/80">
-              At Brimley's White Glove Chem-Dry, we've been serving discerning Scottsdale homeowners for over 25 years with a level of care that matches the quality of your home. Our Hot Carbonating Extraction process is gentle on luxury carpets, uses about 80% less water than steam cleaning, and delivers superior results without harsh chemicals.
+              At Brimley's White Glove Chem-Dry, we've been serving discerning Scottsdale homeowners for over 30 years with a level of care that matches the quality of your home. Our Hot Carbonating Extraction process is gentle on luxury carpets, uses about 80% less water than steam cleaning, and delivers superior results without harsh chemicals.
             </p>
             <p class="text-base leading-relaxed text-text/80">
               We understand that your home in North Scottsdale, DC Ranch, or Gainey Ranch demands meticulous attention to detail and professional service. That's exactly what we deliver.
@@ -259,7 +260,7 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 class="text-xl font-semibold text-dark mb-2">Safe for High-End Materials</h3>
+            <h3 class="text-xl font-semibold text-dark mb-2">Gentle on High-End Materials</h3>
             <p class="text-base leading-relaxed text-text/80">
               The Natural®, our EPA-certified cleaning solution, is gentle enough for the finest carpets yet powerful enough to remove deep-seated dirt. No harsh chemicals, no dirt-attracting residue, no damage to delicate fibers.
             </p>
@@ -308,7 +309,7 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
             <div class="text-4xl mb-4">🏠</div>
             <h3 class="text-xl font-semibold text-dark mb-3">Carpet Cleaning</h3>
             <p class="text-base leading-relaxed text-text/80 mb-4">
-              Our Hot Carbonating Extraction process uses about 80% less water than steam cleaning, dries in 1-2 hours, and is safe for all carpet types including luxury materials.
+              Our Hot Carbonating Extraction process uses about 80% less water than steam cleaning, dries in 1-2 hours, and is gentle on all carpet types including luxury materials.
             </p>
             <a href="/services/carpet-cleaning" class="text-primary font-semibold hover:underline">
               Learn More →
@@ -521,7 +522,7 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
             </div>
             <h3 class="text-xl font-semibold text-dark mb-2">Luxury Home Experience</h3>
             <p class="text-base leading-relaxed text-text/80">
-              With over 25 years serving Scottsdale's finest homes, we have extensive experience with high-end carpets, luxury area rugs, and premium materials. We know how to care for your valuable investments.
+              With over 30 years serving Scottsdale's finest homes, we have extensive experience with high-end carpets, luxury area rugs, and premium materials. We know how to care for your valuable investments.
             </p>
           </div>
 
@@ -541,13 +542,13 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
 
         <!-- Additional Trust Elements -->
         <div class="mt-12 bg-primary/5 p-8 rounded-lg border-2 border-primary/20" data-aos="fade-up-sm" data-aos-delay="200">
-          <h4 class="text-2xl font-semibold text-dark mb-4 text-center">25+ Years Serving Scottsdale</h4>
+          <h4 class="text-2xl font-semibold text-dark mb-4 text-center">30+ Years Serving Scottsdale</h4>
           <p class="text-base leading-relaxed text-text/80 text-center max-w-[55rem] mx-auto mb-6">
             Since 1995, we've been the trusted choice for discerning Scottsdale homeowners who demand excellence. Our longevity in the community speaks to our commitment to quality, customer service, and results.
           </p>
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
             <div class="text-center">
-              <div class="text-3xl font-bold text-primary mb-2">25+</div>
+              <div class="text-3xl font-bold text-primary mb-2">30+</div>
               <div class="text-sm text-text/80">Years in Business</div>
             </div>
             <div class="text-center">
@@ -592,14 +593,14 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
             <h3 class="text-xl font-bold text-dark mb-4">Is your service suitable for luxury homes in Scottsdale?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Absolutely. We've been serving Scottsdale's finest homes for over 25 years. Our technicians have extensive experience with high-end carpets, Persian rugs, and luxury materials. We understand the premium service expectations in communities like DC Ranch, Grayhawk, and Gainey Ranch.
+              Absolutely. We've been serving Scottsdale's finest homes for over 30 years. Our technicians have extensive experience with high-end carpets, Persian rugs, and luxury materials. We understand the premium service expectations in communities like DC Ranch, Grayhawk, and Gainey Ranch.
             </p>
           </div>
 
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="150">
             <h3 class="text-xl font-bold text-dark mb-4">Can you clean Persian and Oriental rugs?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Yes. We specialize in cleaning fine <a href="/services/area-rug-cleaning" class="text-primary hover:underline">area rugs</a> including Persian, Oriental, wool, silk, and other luxury materials. Our gentle Hot Carbonating Extraction process is safe for delicate fibers and won't damage or fade your valuable rugs.
+              Yes. We specialize in cleaning fine <a href="/services/area-rug-cleaning" class="text-primary hover:underline">area rugs</a> including Persian, Oriental, wool, silk, and other luxury materials. Our gentle Hot Carbonating Extraction process is gentle on delicate fibers and won't damage or fade your valuable rugs.
             </p>
           </div>
 
@@ -613,7 +614,7 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="250">
             <h3 class="text-xl font-bold text-dark mb-4">Do you use harsh chemicals or strong-smelling cleaners?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              No. The Natural®, our primary cleaning solution, is EPA Safer Choice certified, green-certified, and contains no harsh chemicals or soaps. There's no overpowering odor—just a fresh, clean scent. It's completely safe for your family, pets, and fine carpets.
+              No. The Natural®, our primary cleaning solution, contains no harsh chemicals or soaps. There's no overpowering odor—just a fresh, clean scent. It's completely gentle on your family, pets, and fine carpets.
             </p>
           </div>
 
@@ -691,6 +692,10 @@ const canonical = "https://whiteglovecarpet.com/scottsdale";
       </div>
     </div>
   </section>
+
+  <div class="container max-w-[65rem] mx-auto px-4">
+    <AllergenDisclaimer />
+  </div>
 
   <TrustBar />
 

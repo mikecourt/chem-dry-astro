@@ -22,9 +22,11 @@ const images = [
     <!-- First set of images -->
     {images.map((src, index) => (
       <div class="carousel-item">
+        <span class="ba-label ba-before">Before</span>
+        <span class="ba-label ba-after">After</span>
         <img
           src={src}
-          alt={`Before and after ${index + 1}`}
+          alt={`Before and after cleaning result ${index + 1}`}
           loading="lazy"
           width="800"
           height="600"
@@ -34,9 +36,11 @@ const images = [
     <!-- Duplicate set for seamless loop -->
     {images.map((src, index) => (
       <div class="carousel-item">
+        <span class="ba-label ba-before">Before</span>
+        <span class="ba-label ba-after">After</span>
         <img
           src={src}
-          alt={`Before and after ${index + 1}`}
+          alt={`Before and after cleaning result ${index + 1}`}
           loading="lazy"
           width="800"
           height="600"
@@ -90,6 +94,33 @@ const images = [
     transform: translateY(-50px) scale(1);
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
     z-index: 100;
+  }
+
+  .ba-label {
+    position: absolute;
+    top: 1.25rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.9;
+    line-height: 1;
+  }
+
+  .ba-before {
+    left: 1.25rem;
+    background: rgba(220, 38, 38, 0.85);
+    color: white;
+  }
+
+  .ba-after {
+    right: 1.25rem;
+    background: rgba(22, 163, 74, 0.85);
+    color: white;
   }
 
   .carousel-item img {

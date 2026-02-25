@@ -8,6 +8,7 @@ import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
 const call_to_action = (await getEntry(
@@ -22,7 +23,7 @@ const relatedServices = allServices.filter(s =>
 
 const title = "Carpet Cleaning";
 const meta_title = "Professional Carpet Cleaning in Phoenix & Mesa | Brimley's White Glove Chem-Dry";
-const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbonating Extraction uses about 80% less water, dries in 1-2 hours. Family-owned, 25+ years experience. Free quote!";
+const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbonating Extraction uses about 80% less water, dries in 1-2 hours. Family-owned, 30+ years experience. Free quote!";
 ---
 
 <Base title={title} description={description} meta_title={meta_title}>
@@ -62,7 +63,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
         data-aos="fade-up-sm"
         data-aos-delay="100"
       >
-        Our Hot Carbonating Extraction process dries in 1-2 hours and is 100% safe for kids and pets.
+        Our Hot Carbonating Extraction process dries in 1-2 hours — no harsh chemicals, soaps, or fragrances.
       </h2>
 
       <!-- Trust Badges -->
@@ -85,8 +86,8 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
             🌿
           </div>
           <div class="text-center sm:text-left">
-            <div class="font-bold text-dark text-sm md:text-base">Natural, Green-Certified</div>
-            <div class="text-xs md:text-sm text-gray-600">Non-toxic cleaning safe for your whole family</div>
+            <div class="font-bold text-dark text-sm md:text-base">The Natural® Solution</div>
+            <div class="text-xs md:text-sm text-gray-600">No harsh chemicals, soaps, or fragrances</div>
           </div>
         </div>
 
@@ -95,7 +96,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
             ✨
           </div>
           <div class="text-center sm:text-left">
-            <div class="font-bold text-dark text-sm md:text-base">Removes 98% of Allergens</div>
+            <div class="font-bold text-dark text-sm md:text-base">Removes 98% of Common Household Allergens*</div>
             <div class="text-xs md:text-sm text-gray-600">Healthier air quality after every cleaning</div>
           </div>
         </div>
@@ -120,7 +121,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
         />
         <CustomButton
           label="(480) 649-3663"
-          link="tel:+14806493663"
+          link="tel:4806493663"
           variant="secondary"
           icon="FaPhone"
         />
@@ -237,7 +238,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
               </li>
               <li class="flex gap-2">
                 <span class="text-red-500 flex-shrink-0">✗</span>
-                <span>Dries in 1-2 DAYS (risk of mold and mildew)</span>
+                <span>Dries in 1-2 DAYS (carpet unusable)</span>
               </li>
               <li class="flex gap-2">
                 <span class="text-red-500 flex-shrink-0">✗</span>
@@ -280,7 +281,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
               </li>
               <li class="flex gap-2">
                 <span class="text-primary flex-shrink-0">✓</span>
-                <span>Green-certified, non-toxic, safe for kids, pets, and the planet</span>
+                <span>No harsh chemicals—gentle on your home and family</span>
               </li>
               <li class="flex gap-2">
                 <span class="text-primary flex-shrink-0">✓</span>
@@ -321,7 +322,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
           <div class="order-2 lg:order-1">
             <!-- Eyebrow -->
             <p class="text-sm font-semibold tracking-wider uppercase text-accent mb-3" data-aos="fade-up-sm">
-              Safe for Your Family
+              Gentle on Your Home
             </p>
 
             <!-- H1 -->
@@ -349,14 +350,14 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
               />
               <div>
                 <p class="text-base font-semibold text-dark">The Natural®</p>
-                <p class="text-sm text-text/70">Our Green-Certified Cleaning Solution</p>
+                <p class="text-sm text-text/70">Our Cleaning Solution</p>
               </div>
             </div>
 
             <!-- Body Copy -->
             <div class="space-y-4 mb-8">
               <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="200">
-                The Natural® is the heart of our cleaning process—a powerful, plant-based solution that's safe enough to drink (though we don't recommend it). It's certified by the EPA's Safer Choice program, which means it meets strict standards for human health and environmental safety.
+                The Natural® is the heart of our cleaning process—it uses carbonation and ingredients copied from Mother Nature. It contains no soaps, detergents, or fragrances.
               </p>
 
               <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="250">
@@ -364,7 +365,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
               </p>
 
               <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="300">
-                It's gentle on your carpets, safe for your kids and pets, and tough on dirt and allergens. This is the clean you can feel good about—because a truly clean home shouldn't come with a warning label.
+                It's gentle on your carpets, gentle on your kids and pets, and tough on dirt and allergens. This is the clean you can feel good about—because a truly clean home shouldn't come with a warning label.
               </p>
             </div>
 
@@ -390,7 +391,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
                 </div>
                 <div>
                   <p class="text-sm font-semibold text-dark">No Harsh Chemicals</p>
-                  <p class="text-xs text-text/70">Plant-based formula</p>
+                  <p class="text-xs text-text/70">No soaps or fragrances</p>
                 </div>
               </div>
 
@@ -413,8 +414,8 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
                   </svg>
                 </div>
                 <div>
-                  <p class="text-sm font-semibold text-dark">Safe for Kids & Pets</p>
-                  <p class="text-xs text-text/70">Non-toxic ingredients</p>
+                  <p class="text-sm font-semibold text-dark">No Harsh Chemicals</p>
+                  <p class="text-xs text-text/70">Gentle on kids & pets</p>
                 </div>
               </div>
             </div>
@@ -728,7 +729,7 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
             <h3 class="text-xl font-bold text-dark mb-4">How long does it really take to dry?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Most carpets are dry and ready for normal foot traffic in just 1-2 hours. That's about 80% faster than steam cleaning. Heavier-traffic areas or thicker carpets may take 3-4 hours, but you'll never wait 1-2 days like with traditional methods. This means less disruption to your day and no risk of mold or mildew growth.
+              Most carpets are dry and ready for normal foot traffic in just 1-2 hours. That's about 80% faster than steam cleaning. Heavier-traffic areas or thicker carpets may take 3-4 hours, but you'll never wait 1-2 days like with traditional methods. This means less disruption to your day and no extended drying time.
             </p>
           </div>
 
@@ -740,9 +741,9 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
           </div>
 
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
-            <h3 class="text-xl font-bold text-dark mb-4">Is the process used by Chem-Dry really safe for my kids and pets?</h3>
+            <h3 class="text-xl font-bold text-dark mb-4">Is the Chem-Dry process gentle enough for homes with kids and pets?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Absolutely. The Natural®, our primary cleaning solution, is green-certified, non-toxic, and contains no soaps or harsh chemicals. It's safe for your entire family—even crawling babies and curious pets. There's no need to keep kids or pets off the carpets after cleaning.
+              Absolutely. The Natural®, our primary cleaning solution, contains no soaps, harsh chemicals, or fragrances. You can feel confident it's gentle enough for your entire family—even crawling babies and curious pets. There's no need to keep kids or pets off the carpets after cleaning.
             </p>
           </div>
 
@@ -784,6 +785,10 @@ const description = "Professional carpet cleaning in Phoenix & Mesa. Hot Carbona
       </div>
     </div>
   </section>
+
+  <div class="container max-w-[65rem] mx-auto px-4">
+    <AllergenDisclaimer />
+  </div>
 
   <TrustBar />
 

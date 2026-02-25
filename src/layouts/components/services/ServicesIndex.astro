@@ -1,5 +1,6 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
+import { getServicePath } from "@/lib/utils/servicePath";
 import type { CollectionEntry } from "astro:content";
 import CustomHeading from "../CustomHeading.astro";
 
@@ -9,14 +10,17 @@ type Props = {
 };
 
 const { serviceIndex, allServices } = Astro.props;
+const launchableServices = allServices.filter(
+  (service) => !service.id.startsWith("_") && !service.id.startsWith("-")
+);
 
 // Service descriptions for the services index page
 const serviceDescriptions: Record<string, string> = {
   "carpet-cleaning": "Tired of carpets that stay wet for days? Our Hot Carbonating Extraction process dries in just 1-2 hours and uses about 80% less water than traditional steam cleaning. No dirt-attracting residue means your carpets stay cleaner longer.",
-  "upholstery-cleaning": "Your furniture takes a beating from daily use, spills, and allergens. Our natural cleaning solution is tough on stains yet completely safe for kids and pets. We'll bring your upholstery back to life without harsh chemicals.",
+  "upholstery-cleaning": "Your furniture takes a beating from daily use, spills, and allergens. Our natural cleaning solution is tough on stains yet gentle on kids and pets. We'll bring your upholstery back to life without harsh chemicals.",
   "tile-grout-cleaning": "Scrubbing grout on your hands and knees is exhausting and rarely works. We use professional-grade equipment to restore your tile's original color and seal it to prevent future staining and mildew.",
   "area-rug-cleaning": "Expensive rugs deserve expert care. Our specialists understand different fibers, dyes, and construction methods to clean your investment safely. We preserve colors and prevent damage that generic cleaning can cause.",
-  "pet-urine-removal": "Most cleaners just mask the smell temporarily. Our P.U.R.T.® treatment actually breaks down urine crystals at the molecular level, eliminating odors permanently. Say goodbye to embarrassing pet odors for good.",
+  "pet-urine-removal": "Most cleaners just mask the smell temporarily. Our P.U.R.T.® treatment actually eliminates pet urine odors permanently—not just covers them up. Say goodbye to embarrassing pet odors for good.",
   "commercial-cleaning": "Your business makes a first impression the moment clients walk in. We minimize disruption with fast-drying methods and flexible scheduling. Keep your workspace looking professional without losing productivity.",
   "specialty-stain-removal": "Some stains seem impossible to remove. Our trained technicians know which treatments work for specific stains—from wine and coffee to ink and dye. We've seen it all and removed most of it.",
   "wood-floor-cleaning": "Wood floors lose their luster from dirt buildup and foot traffic. Our gentle process removes grime without excess moisture that can damage wood. We'll restore the natural beauty of your hardwood.",
@@ -81,7 +85,7 @@ const serviceImages: Record<string, string> = {
         data-aos="fade-up-sm"
         data-aos-delay="50"
       >
-        Dries in 2 Hours. Uses About 80% Less Water. Safe for Kids & Pets.
+        Dries in 2 Hours. Uses About 80% Less Water. No Harsh Chemicals.
       </h2>
 
       {/* Body Copy in Two Columns */}
@@ -97,7 +101,7 @@ const serviceImages: Record<string, string> = {
         </div>
         <div>
           <p class="text-base leading-relaxed text-text/80">
-            The Natural® cleaning solution we use is powerful enough to remove deep-down dirt and allergens, yet gentle enough to be completely safe for kids and pets. Serving Phoenix Valley families since 1995, we offer a full range of cleaning services backed by our 100% satisfaction guarantee.
+            The Natural® cleaning solution we use is powerful enough to remove deep-down dirt and allergens, yet gentle enough for kids and pets. Serving Phoenix Valley families since 1995, we offer a full range of cleaning services backed by our 100% satisfaction guarantee.
           </p>
         </div>
       </div>
@@ -170,7 +174,7 @@ const serviceImages: Record<string, string> = {
           <svg class="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          <p class="text-xs font-medium text-dark leading-tight text-left">Non-toxic cleaning solutions</p>
+          <p class="text-xs font-medium text-dark leading-tight text-left">No harsh chemicals or soaps</p>
         </div>
     </div>
   </div>
@@ -237,14 +241,14 @@ const serviceImages: Record<string, string> = {
       class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
       id="services-grid">
       {
-        allServices.map((service, i) => (
+        launchableServices.map((service, i) => (
           <div
             class="group h-full service-card"
             data-categories={JSON.stringify(service.data.categories || [])}
             data-aos="fade-up-sm"
             data-aos-delay={100 + i * 50}>
             <a
-              href={`/services/${service.id}`}
+              href={getServicePath(service.id)}
               class="block h-full bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
 
               {/* Photo with hover magnification */}
@@ -273,7 +277,7 @@ const serviceImages: Record<string, string> = {
                 {/* Learn More Link */}
                 <div class="relative overflow-hidden w-fit">
                   <span class="font-medium text-nowrap inline-flex items-center group text-base text-accent group-hover:text-accent/80 transition-colors">
-                    <span class="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
+                    <span class="translate-x-0 lg:-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
                       Learn More
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -301,13 +305,13 @@ const serviceImages: Record<string, string> = {
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const serviceCards = document.querySelectorAll('.service-card');
+    const filterButtons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+    const serviceCards = document.querySelectorAll<HTMLElement>('.service-card');
     let activeFilters = new Set(['all']);
 
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
-        const category = button.dataset.category;
+        const category = button.dataset.category || '';
 
         if (category === 'all') {
           // Reset all filters
@@ -327,8 +331,8 @@ const serviceImages: Record<string, string> = {
         } else {
           // Remove 'all' if selecting specific category
           activeFilters.delete('all');
-          document.querySelector('[data-category="all"]')?.classList.remove('active', 'bg-primary', 'text-white');
-          document.querySelector('[data-category="all"]')?.classList.add('bg-white', 'text-dark');
+          document.querySelector<HTMLElement>('[data-category="all"]')?.classList.remove('active', 'bg-primary', 'text-white');
+          document.querySelector<HTMLElement>('[data-category="all"]')?.classList.add('bg-white', 'text-dark');
 
           // Toggle the clicked category
           if (activeFilters.has(category)) {
@@ -344,8 +348,8 @@ const serviceImages: Record<string, string> = {
           // If no filters selected, show all
           if (activeFilters.size === 0) {
             activeFilters.add('all');
-            document.querySelector('[data-category="all"]')?.classList.add('active', 'bg-primary', 'text-white');
-            document.querySelector('[data-category="all"]')?.classList.remove('bg-white', 'text-dark');
+            document.querySelector<HTMLElement>('[data-category="all"]')?.classList.add('active', 'bg-primary', 'text-white');
+            document.querySelector<HTMLElement>('[data-category="all"]')?.classList.remove('bg-white', 'text-dark');
           }
         }
 
@@ -356,13 +360,13 @@ const serviceImages: Record<string, string> = {
 
     function filterServices() {
       serviceCards.forEach(card => {
-        const cardCategories = JSON.parse(card.dataset.categories || '[]');
+        const cardCategories = JSON.parse(card.dataset.categories || '[]') as string[];
 
         if (activeFilters.has('all')) {
           card.style.display = '';
         } else {
           // Show card if it has ANY of the active filters
-          const hasMatch = cardCategories.some(cat => activeFilters.has(cat));
+          const hasMatch = cardCategories.some((cat: string) => activeFilters.has(cat));
           card.style.display = hasMatch ? '' : 'none';
         }
       });

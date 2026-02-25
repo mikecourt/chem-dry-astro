@@ -1,0 +1,77 @@
+---
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+import { getEntry, render, type CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const allServices = await getSinglePage("services");
+  const staticServicePages = new Set([
+    "carpet-cleaning",
+    "upholstery-cleaning",
+    "tile-and-grout-cleaning",
+    "leather-cleaning",
+    "stone-tile-cleaning-polishing",
+    "granite-countertop-renewal",
+    "dryer-vent-cleaning",
+  ]);
+  const redirectAliases = new Set(["tile-grout-cleaning"]);
+
+  return allServices
+    .filter(
+      (service) =>
+        !service.id.startsWith("_") &&
+        !staticServicePages.has(service.id) &&
+        !redirectAliases.has(service.id)
+    )
+    .map((service) => ({
+      params: { single: service.id },
+      props: { service },
+    }));
+}
+
+const { service } = Astro.props as { service: CollectionEntry<"services"> };
+const { title, meta_title, description, banner } = service.data;
+const { Content } = await render(service);
+const callToAction = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+const canonical = `https://whiteglovecarpet.com/services/${service.id}`;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={banner}
+  canonical={canonical}
+>
+  <SchemaMarkup type="service" serviceName={title} />
+  <section class="py-20 md:py-32 mt-24 sm:mt-20">
+    <div class="container">
+      <div class="mx-auto max-w-[60rem]">
+        <p class="text-sm font-semibold tracking-wider uppercase text-accent mb-3">
+          Professional Service
+        </p>
+        <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6">
+          {title}
+        </h1>
+        {
+          description && (
+            <p
+              class="text-lg text-text/80 mb-8"
+              set:html={markdownify(description)}
+            />
+          )
+        }
+        <article class="content">
+          <Content />
+        </article>
+      </div>
+    </div>
+  </section>
+  <CallToAction cta={callToAction.data} />
+</Base>

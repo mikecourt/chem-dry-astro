@@ -30,7 +30,7 @@
         },
         {
           "name": "Tile & Grout Cleaning",
-          "url": "/services/tile-grout-cleaning",
+          "url": "/services/tile-and-grout-cleaning",
           "hasChildren": true,
           "children": [
             {
@@ -84,9 +84,9 @@
         }
       ]
     },
-    {
-      "name": "Service Areas",
-      "url": "/service-areas",
+        {
+          "name": "Service Areas",
+          "url": "/service-areas",
       "hasChildren": true,
       "children": [
         { "name": "Phoenix", "url": "/phoenix" },
@@ -143,7 +143,7 @@
         },
         {
           "name": "Pet Odor Removal",
-          "url": "/services/pet-urine-odor-removal"
+          "url": "/services/pet-urine-removal"
         },
         {
           "name": "Leather Cleaning",

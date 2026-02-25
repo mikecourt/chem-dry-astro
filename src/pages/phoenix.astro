@@ -5,13 +5,14 @@ import DynamicIcon from "@/helpers/DynamicIcon";
 import CustomButton from "@/components/CustomButton.astro";
 import CustomHeading from "@/components/CustomHeading.astro";
 import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import CityTestimonials from "@/components/CityTestimonials.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { getEntry, type CollectionEntry } from "astro:content";
 
 const meta_title = "Carpet Cleaning Phoenix AZ | Ahwatukee, Arcadia, Biltmore | Brimley's";
-const meta_description = "Carpet cleaning Phoenix AZ - Ahwatukee, Arcadia, Biltmore & more. Hot Carbonating Extraction dries in 1-2 hrs. 25+ yrs experience. Free quote: (480) 649-3663";
+const meta_description = "Carpet cleaning Phoenix AZ - Ahwatukee, Arcadia, Biltmore & more. Hot Carbonating Extraction dries in 1-2 hrs. 30+ yrs experience. Free quote: (480) 649-3663";
 const canonical = "https://whiteglovecarpet.com/phoenix";
 
 const call_to_action = (await getEntry(
@@ -24,9 +25,9 @@ const neighborhoods = [
   {
     name: "Ahwatukee",
     title: "Ahwatukee's Trusted Carpet Cleaning Service",
-    description: "Serving Ahwatukee families for 25+ years, we know the unique needs of homes in the Foothills area. From family rooms to master bedrooms, we treat your Ahwatukee home with the care it deserves.",
+    description: "Serving Ahwatukee families for 30+ years, we know the unique needs of homes in the Foothills area. From family rooms to master bedrooms, we treat your Ahwatukee home with the care it deserves.",
     highlights: [
-      "25+ years serving Ahwatukee residents",
+      "30+ years serving Ahwatukee residents",
       "Know the Foothills area intimately",
       "Fast response times to South Mountain area",
       "Experience with Ahwatukee home layouts"
@@ -65,7 +66,7 @@ const neighborhoods = [
       "Family-focused service",
       "Quick response times",
       "Pet-friendly cleaning solutions",
-      "Safe for kids and pets"
+      "No harsh chemicals"
     ],
     icon: "FaMountain"
   }
@@ -93,7 +94,7 @@ const services = [
   },
   {
     title: "Pet Odor Removal",
-    description: "Eliminate pet odors and stains with our P.U.R.T.® treatment. Safe for Phoenix's pet-loving families.",
+    description: "Eliminate pet odors and stains with our P.U.R.T.® treatment. Gentle on Phoenix's pet-loving families.",
     icon: "FaPaw",
     link: "/services"
   },
@@ -156,7 +157,7 @@ const phoenixZips = [
 const faqs = [
   {
     question: "Do you serve Ahwatukee?",
-    answer: "Absolutely! Ahwatukee is one of our primary service areas. We've been serving Ahwatukee families for over 25 years and know the area intimately. Whether you're in the Foothills, near South Mountain, or anywhere in Ahwatukee, we provide fast, reliable carpet cleaning service. We serve all Ahwatukee ZIP codes: 85044, 85045, and 85048."
+    answer: "Absolutely! Ahwatukee is one of our primary service areas. We've been serving Ahwatukee families for over 30 years and know the area intimately. Whether you're in the Foothills, near South Mountain, or anywhere in Ahwatukee, we provide fast, reliable carpet cleaning service. We serve all Ahwatukee ZIP codes: 85044, 85045, and 85048."
   },
   {
     question: "Do you cover North Phoenix and Desert Ridge?",
@@ -172,7 +173,7 @@ const faqs = [
   },
   {
     question: "What makes your service different for Phoenix homes?",
-    answer: "We've been serving Phoenix for over 25 years, so we understand the unique challenges Phoenix homes face: intense UV exposure, desert dust, year-round allergens, and the wear from indoor/outdoor desert living. Our Hot Carbonating Extraction is perfect for Phoenix's climate - it deep cleans without soaking carpets, removes desert dust and allergens effectively, and dries incredibly fast in our dry climate."
+    answer: "We've been serving Phoenix for over 30 years, so we understand the unique challenges Phoenix homes face: intense UV exposure, desert dust, year-round allergens, and the wear from indoor/outdoor desert living. Our Hot Carbonating Extraction is perfect for Phoenix's climate - it deep cleans without soaking carpets, removes desert dust and allergens effectively, and dries incredibly fast in our dry climate."
   },
   {
     question: "Can you remove desert dust and allergens?",
@@ -237,7 +238,7 @@ const faqs = [
             </div>
             <div class="text-left">
               <div class="font-bold text-dark text-sm md:text-base">Ahwatukee</div>
-              <div class="text-xs md:text-sm text-gray-600">Trusted for 25+ Years</div>
+              <div class="text-xs md:text-sm text-gray-600">Trusted for 30+ Years</div>
             </div>
           </div>
 
@@ -305,7 +306,7 @@ const faqs = [
           </div>
           <div class="flex items-center gap-2">
             <span class="text-primary">✓</span>
-            <span>Safe for Kids & Pets</span>
+            <span>No Harsh Chemicals</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="text-primary">✓</span>
@@ -538,7 +539,7 @@ const faqs = [
               Removes <strong>98% of allergens</strong> from carpets—critical for Phoenix residents dealing with year-round pollen, dust mites, and desert allergens.
             </p>
             <p class="text-text/70">
-              Our Green Certified solution, The Natural®, is safe for kids and pets while being tough on allergens and dirt.
+              You can feel good knowing The Natural® contains no harsh chemicals — gentle on kids and pets while being tough on allergens and dirt.
             </p>
           </div>
 
@@ -581,8 +582,8 @@ const faqs = [
             </div>
             <div>
               <div class="text-4xl mb-3">🌱</div>
-              <div class="font-bold text-lg mb-2">Green Certified & Safe</div>
-              <div class="text-white/80 text-sm">Safe for desert-loving families & pets</div>
+              <div class="font-bold text-lg mb-2">No Harsh Chemicals</div>
+              <div class="text-white/80 text-sm">Gentle on desert-loving families & pets</div>
             </div>
           </div>
         </div>
@@ -764,10 +765,10 @@ const faqs = [
             data-aos="fade-right-sm"
           >
             <div class="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-3xl font-bold">
-              25+
+              30+
             </div>
             <div>
-              <h3 class="text-2xl font-bold text-dark mb-3">25+ Years Serving Phoenix</h3>
+              <h3 class="text-2xl font-bold text-dark mb-3">30+ Years Serving Phoenix</h3>
               <p class="text-lg text-text/80 leading-relaxed">
                 Since 1995, we've been cleaning carpets in Phoenix homes. We've weathered countless dust storms, served thousands of families across every Phoenix neighborhood, and built a reputation for excellence that spans generations. We're not newcomers—we're Phoenix veterans.
               </p>
@@ -843,7 +844,7 @@ const faqs = [
             Join Thousands of Happy Phoenix Customers
           </h3>
           <p class="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
-            Experience the difference that 25+ years of Phoenix expertise makes
+            Experience the difference that 30+ years of Phoenix expertise makes
           </p>
           <CustomButton
             link="/appointment"
@@ -980,7 +981,7 @@ const faqs = [
           <div class="flex items-start gap-3">
             <span class="text-2xl">✓</span>
             <div>
-              <div class="font-bold mb-1">25+ Years in Phoenix</div>
+              <div class="font-bold mb-1">30+ Years in Phoenix</div>
               <div class="text-sm text-white/80">Know your neighborhood</div>
             </div>
           </div>
@@ -995,6 +996,10 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <div class="container max-w-[65rem] mx-auto px-4">
+    <AllergenDisclaimer />
+  </div>
 
   <TrustBar />
 

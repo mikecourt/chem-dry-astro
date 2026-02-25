@@ -8,6 +8,7 @@ import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
 
 const call_to_action = (await getEntry(
@@ -22,7 +23,7 @@ const relatedServices = allServices.filter(s =>
 
 const title = "Upholstery Cleaning";
 const meta_title = "Professional Upholstery Cleaning in Phoenix & Mesa | Brimley's White Glove";
-const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonating Extraction is safe for all fabrics, dries in 1-2 hours. 25+ years experience. Free quote!";
+const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonating Extraction is safe for all fabrics, dries in 1-2 hours. 30+ years experience. Free quote!";
 ---
 
 <Base title={title} description={description} meta_title={meta_title}>
@@ -62,7 +63,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
         data-aos="fade-up-sm"
         data-aos-delay="100"
       >
-        Our Hot Carbonating Extraction process is safe for all fabric types, dries in 1-2 hours, and is 100% safe for kids and pets.
+        Our Hot Carbonating Extraction process is gentle on all fabric types, dries in 1-2 hours — no harsh chemicals, soaps, or fragrances.
       </h2>
 
       <!-- Trust Badges -->
@@ -105,8 +106,8 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
             🌿
           </div>
           <div class="text-center sm:text-left">
-            <div class="font-bold text-dark text-sm md:text-base">Green-Certified Process</div>
-            <div class="text-xs md:text-sm text-gray-600">Non-toxic, safe for your family</div>
+            <div class="font-bold text-dark text-sm md:text-base">Gentle Cleaning Process</div>
+            <div class="text-xs md:text-sm text-gray-600">No harsh chemicals or soaps</div>
           </div>
         </div>
       </div>
@@ -120,7 +121,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
         />
         <CustomButton
           label="(480) 649-3663"
-          link="tel:+14806493663"
+          link="tel:4806493663"
           variant="secondary"
           icon="FaPhone"
         />
@@ -221,7 +222,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
             The Problem with Traditional Upholstery Cleaning (And Why We Use Carbonation)
           </h3>
           <p class="text-base leading-relaxed text-text/80 max-w-[55rem] mx-auto" data-aos="fade-up-sm" data-aos-delay="150">
-            Traditional upholstery cleaning methods soak your furniture with gallons of water and harsh detergents, leaving cushions saturated for days and at risk of mold, mildew, or fabric damage. We use Hot Carbonating Extraction—the same gentle carbonation you find in sparkling water—to lift dirt and oils from deep within fabric fibers without over-wetting or damaging your furniture.
+            Traditional upholstery cleaning methods soak your furniture with gallons of water and harsh detergents, leaving cushions saturated for days and risking fabric damage. We use Hot Carbonating Extraction—the same gentle carbonation you find in sparkling water—to lift dirt and oils from deep within fabric fibers without over-wetting or damaging your furniture.
           </p>
         </div>
 
@@ -237,7 +238,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
               </li>
               <li class="flex gap-2">
                 <span class="text-red-500 flex-shrink-0">✗</span>
-                <span>Takes 24-48 hours to dry (risk of mold & odors)</span>
+                <span>Takes 24-48 hours to dry (furniture unusable)</span>
               </li>
               <li class="flex gap-2">
                 <span class="text-red-500 flex-shrink-0">✗</span>
@@ -280,7 +281,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
               </li>
               <li class="flex gap-2">
                 <span class="text-primary flex-shrink-0">✓</span>
-                <span>Green-certified, non-toxic, safe for kids, pets, and all fabrics</span>
+                <span>No harsh chemicals—gentle on all fabrics</span>
               </li>
               <li class="flex gap-2">
                 <span class="text-primary flex-shrink-0">✓</span>
@@ -321,7 +322,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
           <div class="order-2 lg:order-1">
             <!-- Eyebrow -->
             <p class="text-sm font-semibold tracking-wider uppercase text-accent mb-3" data-aos="fade-up-sm">
-              Safe for Your Family
+              Gentle on Your Home
             </p>
 
             <!-- H1 -->
@@ -349,14 +350,14 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
               />
               <div>
                 <p class="text-base font-semibold text-dark">The Natural®</p>
-                <p class="text-sm text-text/70">Our Green-Certified Cleaning Solution</p>
+                <p class="text-sm text-text/70">Our Cleaning Solution</p>
               </div>
             </div>
 
             <!-- Body Copy -->
             <div class="space-y-4 mb-8">
               <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="200">
-                Your family spends hours every day on your furniture—relaxing, playing, and resting. That's why we use The Natural®, a plant-based cleaning solution that's safe enough to use around crawling babies and curious pets. It's certified by the EPA's Safer Choice program for meeting strict standards for human health and environmental safety.
+                Your family spends hours every day on your furniture—relaxing, playing, and resting. That's why we use The Natural®, which uses carbonation and ingredients copied from Mother Nature. It contains no soaps, detergents, or fragrances.
               </p>
 
               <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="250">
@@ -364,7 +365,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
               </p>
 
               <p class="text-base leading-relaxed text-text/80" data-aos="fade-up-sm" data-aos-delay="300">
-                It's gentle on your upholstery, safe for your kids and pets, and tough on dirt and allergens. This is the clean you can feel good about—because a truly clean home shouldn't come with a warning label.
+                It's gentle on your upholstery, gentle on your kids and pets, and tough on dirt and allergens. This is the clean you can feel good about—because a truly clean home shouldn't come with a warning label.
               </p>
             </div>
 
@@ -390,7 +391,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
                 </div>
                 <div>
                   <p class="text-sm font-semibold text-dark">No Harsh Chemicals</p>
-                  <p class="text-xs text-text/70">Plant-based formula</p>
+                  <p class="text-xs text-text/70">No soaps or fragrances</p>
                 </div>
               </div>
 
@@ -413,8 +414,8 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
                   </svg>
                 </div>
                 <div>
-                  <p class="text-sm font-semibold text-dark">Safe for Kids & Pets</p>
-                  <p class="text-xs text-text/70">Non-toxic ingredients</p>
+                  <p class="text-sm font-semibold text-dark">No Harsh Chemicals</p>
+                  <p class="text-xs text-text/70">Gentle on kids & pets</p>
                 </div>
               </div>
             </div>
@@ -668,7 +669,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
               />
               <CustomButton
                 label="Call (480) 649-3663"
-                link="tel:+14806493663"
+                link="tel:4806493663"
                 variant="secondary"
                 icon="FaPhone"
               />
@@ -767,7 +768,7 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="100">
             <h3 class="text-xl font-bold text-dark mb-4">How long does upholstery take to dry?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Most upholstery is dry and ready to use in just 1-2 hours. Some thicker cushions or heavier fabrics may take 3-4 hours, but you'll never wait 24-48 hours like with traditional steam cleaning. Fast drying means less disruption and no risk of mold or mildew.
+              Most upholstery is dry and ready to use in just 1-2 hours. Some thicker cushions or heavier fabrics may take 3-4 hours, but you'll never wait 24-48 hours like with traditional steam cleaning. Fast drying means less disruption and less disruption to your day.
             </p>
           </div>
 
@@ -779,9 +780,9 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
           </div>
 
           <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-gray-100 hover:border-primary/20 transition-all" data-aos="fade-up-sm" data-aos-delay="200">
-            <h3 class="text-xl font-bold text-dark mb-4">Is the process safe for all furniture?</h3>
+            <h3 class="text-xl font-bold text-dark mb-4">Is the process gentle enough for all furniture?</h3>
             <p class="text-base leading-relaxed text-text/80">
-              Absolutely. The Natural®, our primary cleaning solution, is green-certified, non-toxic, and safe for all water-cleanable fabrics. It's safe for your entire family—even crawling babies and curious pets. There's no need to keep anyone off the furniture after cleaning.
+              Absolutely. The Natural®, our primary cleaning solution, contains no soaps, harsh chemicals, or fragrances. It's gentle on all water-cleanable fabrics and your entire family—even crawling babies and curious pets. There's no need to keep anyone off the furniture after cleaning.
             </p>
           </div>
 
@@ -830,6 +831,10 @@ const description = "Expert upholstery cleaning in Phoenix & Mesa. Hot Carbonati
       </div>
     </div>
   </section>
+
+  <div class="container max-w-[65rem] mx-auto px-4">
+    <AllergenDisclaimer />
+  </div>
 
   <TrustBar />
 
