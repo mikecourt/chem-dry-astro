@@ -1,0 +1,87 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
+import CityTestimonials from "@/components/CityTestimonials.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Carpet Cleaning Oak Forest IL | K&T Chem-Dry";
+const meta_title = "Carpet Cleaning Oak Forest IL | K&T Chem-Dry";
+const description = "Carpet cleaning Oak Forest IL — Hot Carbonating Extraction, pet-safe, dries in 1-2 hours. Serving Oak Forest and surrounding areas. Call (815) 469-3170.";
+const canonical = "https://ktchemdrycarpetcleaning.com/oak-forest";
+---
+
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical} preloadImage="/images/carpet-cleaning-service-hero.webp">
+  <SchemaMarkup type="city" city={"Oak Forest"} state={"Illinois"} postalCodes={["60452"]} />
+
+  <!-- Hero Section -->
+  <section
+    class="hero-section py-24 md:py-40 lg:py-48 relative mb-0 overflow-hidden">
+    <img
+      src="/images/carpet-cleaning-service-hero.webp"
+      alt="Professional carpet cleaning service in Oak Forest, IL"
+      width="1920"
+      height="1280"
+      fetchpriority="high"
+      decoding="async"
+      loading="eager"
+      class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center"
+    />
+
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <div class="relative z-20 px-[30px]">
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Carpet Cleaning in Oak Forest, IL
+      </p>
+
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning** in Oak Forest, Illinois"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Serving Oak Forest residents with safe, fast-drying carpet cleaning for Tinley Park, Orland Park, Crestwood, and Markham
+      </h2>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+        data-aos="fade-up-sm"
+        data-aos-delay="200"
+      >
+        <CustomButton href={"tel:8154693170"} style="primary">
+          Call (815) 469-3170
+        </CustomButton>
+        <CustomButton href="/appointment" style="outline">
+          Get a Free Quote
+        </CustomButton>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+  <AllergenDisclaimer />
+  <CityTestimonials city={"Oak Forest"} />
+  <CallToAction call_to_action={call_to_action} />
+</Base>
