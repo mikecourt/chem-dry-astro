@@ -3,22 +3,7 @@
     {
       "name": "Facebook",
       "icon": "FaFacebook",
-      "link": "https://www.facebook.com/"
-    },
-    {
-      "name": "Twitter",
-      "icon": "FaTwitter",
-      "link": "https://twitter.com/"
-    },
-    {
-      "name": "GitHub",
-      "icon": "FaGithub",
-      "link": "https://www.github.com/"
-    },
-    {
-      "name": "LinkedIn",
-      "icon": "FaLinkedin",
-      "link": "https://www.linkedin.com/"
+      "link": "https://www.facebook.com/ktchemdrynewlenox/"
     }
   ]
 }
