@@ -1,0 +1,87 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageMod from "@/components/ImageMod.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
+import CityTestimonials from "@/components/CityTestimonials.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Carpet Cleaning Castle Pines CO | All Pro Chem-Dry";
+const meta_title = "Carpet Cleaning Castle Pines CO | All Pro Chem-Dry";
+const description = "Carpet cleaning Castle Pines CO — Hot Carbonating Extraction, pet-safe, dries in 1-2 hours. Serving Castle Pines and surrounding areas. Call (303) 252-0517.";
+const canonical = "https://allprochemdry.com/castle-pines";
+---
+
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical} preloadImage="/images/carpet-cleaning-service-hero.webp">
+  <SchemaMarkup type="city" city={"Castle Pines"} state={"Colorado"} postalCodes={["80108"]} />
+
+  <!-- Hero Section -->
+  <section
+    class="hero-section py-24 md:py-40 lg:py-48 relative mb-0 overflow-hidden">
+    <img
+      src="/images/carpet-cleaning-service-hero.webp"
+      alt="Professional carpet cleaning service in Castle Pines, CO"
+      width="1920"
+      height="1280"
+      fetchpriority="high"
+      decoding="async"
+      loading="eager"
+      class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center"
+    />
+
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <div class="relative z-20 px-[30px]">
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Carpet Cleaning in Castle Pines, CO
+      </p>
+
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning** in Castle Pines, Colorado"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Serving Castle Pines residents with safe, fast-drying carpet cleaning for Castle Rock, Lone Tree, Parker, and Highlands Ranch
+      </h2>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+        data-aos="fade-up-sm"
+        data-aos-delay="200"
+      >
+        <CustomButton href={"tel:3032520517"} style="primary">
+          Call (303) 252-0517
+        </CustomButton>
+        <CustomButton href="/appointment" style="outline">
+          Get a Free Quote
+        </CustomButton>
+      </div>
+    </div>
+  </section>
+
+  <TrustBar />
+  <AllergenDisclaimer />
+  <CityTestimonials city={"Castle Pines"} />
+  <CallToAction call_to_action={call_to_action} />
+</Base>
