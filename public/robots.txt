@@ -1,10 +1,10 @@
-# robots.txt for Brimley's White Glove Chem-Dry
+# robots.txt for K&T Chem-Dry
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://whiteglovecarpet.com/sitemap.xml
+Sitemap: https://ktchemdrycarpetcleaning.com/sitemap-index.xml
 
 # Allow AI crawlers for LLM indexing
 User-agent: GPTBot

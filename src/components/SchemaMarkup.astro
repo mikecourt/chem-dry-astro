@@ -13,22 +13,22 @@ interface Props {
   faqs?: FAQ[];
 }
 
-const { type = 'homepage', serviceName, city, state = 'Arizona', postalCodes = [], faqs = [] } = Astro.props;
+const { type = 'homepage', serviceName, city, state = 'Illinois', postalCodes = [], faqs = [] } = Astro.props;
 
-// Business coordinates (Mesa office)
+// Business coordinates (New Lenox office)
 const businessGeo = {
   "@type": "GeoCoordinates",
-  "latitude": 33.4152,
-  "longitude": -111.8315
+  "latitude": 41.5220,
+  "longitude": -87.9987
 };
 
 // Physical address
 const businessAddress = {
   "@type": "PostalAddress",
-  "streetAddress": "1451 N Delmar",
-  "addressLocality": "Mesa",
-  "addressRegion": "AZ",
-  "postalCode": "85203",
+  "streetAddress": "1042 Star Lane",
+  "addressLocality": "New Lenox",
+  "addressRegion": "IL",
+  "postalCode": "60451",
   "addressCountry": "US"
 };
 
@@ -49,10 +49,10 @@ const buildAreaServed = () => {
       }
     };
   }
-  // Default: Phoenix metro area for homepage
+  // Default: Chicagoland area for homepage
   return {
     "@type": "State",
-    "name": "Arizona",
+    "name": "Illinois",
     "containedInPlace": {
       "@type": "Country",
       "name": "United States"
@@ -64,13 +64,13 @@ const buildAreaServed = () => {
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Brimley's White Glove Chem-Dry",
-  "description": "Professional carpet cleaning service in the Phoenix metro area using Hot Carbonating Extraction technology. Family-owned since 1995.",
-  "url": "https://whiteglovecarpet.com",
-  "telephone": "+1-480-649-3663",
-  "email": "office@whiteglovecarpet.com",
+  "name": "K&T Chem-Dry",
+  "description": "Professional carpet cleaning service in New Lenox and Chicagoland area using Hot Carbonating Extraction technology. Independently owned and operated.",
+  "url": "https://ktchemdrycarpetcleaning.com",
+  "telephone": "+1-815-469-3170",
+  
   "priceRange": "$$",
-  "image": "https://whiteglovecarpet.com/images/og-image.png",
+  "image": "https://ktchemdrycarpetcleaning.com/images/og-image.png",
   "address": businessAddress,
   "geo": businessGeo,
   "areaServed": buildAreaServed(),
@@ -83,12 +83,12 @@ const businessSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "247",
+    "reviewCount": "89",
     "bestRating": "5",
     "worstRating": "1"
   },
   "sameAs": [
-    "https://www.facebook.com/WhiteGloveCarpetCleaning"
+    "https://www.facebook.com/ktchemdrynewlenox/"
   ]
 };
 
@@ -102,8 +102,8 @@ const serviceSchema = (serviceName || city) ? {
     : `Professional ${serviceName?.toLowerCase()} service in the Phoenix metro area.`,
   "provider": {
     "@type": "LocalBusiness",
-    "name": "Brimley's White Glove Chem-Dry",
-    "telephone": "+1-480-649-3663",
+    "name": "K&T Chem-Dry",
+    "telephone": "+1-815-469-3170",
     "address": businessAddress,
     "geo": businessGeo,
     "priceRange": "$$"
@@ -112,7 +112,7 @@ const serviceSchema = (serviceName || city) ? {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "247",
+    "reviewCount": "89",
     "bestRating": "5",
     "worstRating": "1"
   }
