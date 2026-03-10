@@ -13,22 +13,22 @@ interface Props {
   faqs?: FAQ[];
 }
 
-const { type = 'homepage', serviceName, city, state = 'Arizona', postalCodes = [], faqs = [] } = Astro.props;
+const { type = 'homepage', serviceName, city, state = 'Colorado', postalCodes = [], faqs = [] } = Astro.props;
 
-// Business coordinates (Mesa office)
+// Business coordinates (Highlands Ranch office)
 const businessGeo = {
   "@type": "GeoCoordinates",
-  "latitude": 33.4152,
-  "longitude": -111.8315
+  "latitude": 39.5483,
+  "longitude": -104.9697
 };
 
 // Physical address
 const businessAddress = {
   "@type": "PostalAddress",
-  "streetAddress": "1451 N Delmar",
-  "addressLocality": "Mesa",
-  "addressRegion": "AZ",
-  "postalCode": "85203",
+  "streetAddress": "8955 S. Ridgeline Blvd Unit 1800",
+  "addressLocality": "Highlands Ranch",
+  "addressRegion": "CO",
+  "postalCode": "80129",
   "addressCountry": "US"
 };
 
@@ -49,10 +49,10 @@ const buildAreaServed = () => {
       }
     };
   }
-  // Default: Phoenix metro area for homepage
+  // Default: Denver metro area for homepage
   return {
     "@type": "State",
-    "name": "Arizona",
+    "name": "Colorado",
     "containedInPlace": {
       "@type": "Country",
       "name": "United States"
@@ -64,13 +64,12 @@ const buildAreaServed = () => {
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Brimley's White Glove Chem-Dry",
-  "description": "Professional carpet cleaning service in the Phoenix metro area using Hot Carbonating Extraction technology. Family-owned since 1995.",
-  "url": "https://whiteglovecarpet.com",
-  "telephone": "+1-480-649-3663",
-  "email": "office@whiteglovecarpet.com",
+  "name": "All Pro Chem-Dry",
+  "description": "Professional carpet cleaning service in the Denver metro and Highlands Ranch area using Hot Carbonating Extraction technology. Independently owned and operated.",
+  "url": "https://allprochemdry.com",
+  "telephone": "+1-303-252-0517",
   "priceRange": "$$",
-  "image": "https://whiteglovecarpet.com/images/og-image.png",
+  "image": "https://allprochemdry.com/images/og-image.png",
   "address": businessAddress,
   "geo": businessGeo,
   "areaServed": buildAreaServed(),
@@ -82,13 +81,13 @@ const businessSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "247",
+    "ratingValue": "4.8",
+    "reviewCount": "112",
     "bestRating": "5",
     "worstRating": "1"
   },
   "sameAs": [
-    "https://www.facebook.com/WhiteGloveCarpetCleaning"
+    "https://www.facebook.com/allprochemdry"
   ]
 };
 
@@ -99,11 +98,11 @@ const serviceSchema = (serviceName || city) ? {
   "name": serviceName || `Carpet Cleaning in ${city}, ${state}`,
   "description": city
     ? `Professional carpet cleaning service in ${city}, ${state}. Hot Carbonating Extraction uses about 80% less water, dries in 1-2 hours.`
-    : `Professional ${serviceName?.toLowerCase()} service in the Phoenix metro area.`,
+    : `Professional ${serviceName?.toLowerCase()} service in the Denver metro area.`,
   "provider": {
     "@type": "LocalBusiness",
-    "name": "Brimley's White Glove Chem-Dry",
-    "telephone": "+1-480-649-3663",
+    "name": "All Pro Chem-Dry",
+    "telephone": "+1-303-252-0517",
     "address": businessAddress,
     "geo": businessGeo,
     "priceRange": "$$"
