@@ -1,13 +1,13 @@
 ---
-title: "**Professional** Carpet & Upholstery Cleaning Services in Phoenix"
+title: "**Professional** Carpet & Upholstery Cleaning Services – Denver Metro"
 homepage_section_enable: true
-home_title: "**Professional** Carpet & Upholstery Cleaning Services in Phoenix"
-meta_title: "Carpet Cleaning Services Phoenix | Brimley's White Glove Chem-Dry"
-description: "Professional carpet, upholstery, tile, and area rug cleaning services in Phoenix. Hot Carbonating Extraction dries in 1-2 hours. Family-owned since 1995."
+home_title: "**Professional** Carpet & Upholstery Cleaning Services – Denver Metro"
+meta_title: "Carpet Cleaning Services Denver | All Pro Chem-Dry"
+description: "Professional carpet, upholstery, tile, and area rug cleaning services in Denver and Highlands Ranch. Hot Carbonating Extraction dries in 1-2 hours."
 subtitle: "OUR SERVICES"
 descriptions:
   - "We know you're busy. That's why every service we offer is designed to fit your schedule—not disrupt it. The Hot Carbonating Extraction process used by Chem-Dry dries in just 1-2 hours, uses about 80% less water than traditional steam cleaning, and leaves no dirt-attracting residue."
-  - "Whether you need a quick carpet refresh or deep stain removal, we deliver exceptional results with minimal downtime. Family-owned and serving the Phoenix Valley since 1995, we treat your home like it's our own."
+  - "Whether you need a quick carpet refresh or deep stain removal, we deliver exceptional results with minimal downtime. Independently owned and serving the Denver metro and Highlands Ranch, we treat your home like it's our own."
 
 process:
   title: "The process we have been doing <br> for **over 30 years** of service"
