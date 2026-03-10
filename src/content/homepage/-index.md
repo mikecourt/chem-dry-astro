@@ -110,3 +110,4 @@ blog:
   enable: true
   title: "Our **latest news** from blog"
   subtitle: "RECENT POSTS"
+---
