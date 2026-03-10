@@ -1,10 +1,10 @@
-# robots.txt for Brimley's White Glove Chem-Dry
+# robots.txt for All Pro Chem-Dry
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://whiteglovecarpet.com/sitemap.xml
+Sitemap: https://allprochemdry.com/sitemap-index.xml
 
 # Allow AI crawlers for LLM indexing
 User-agent: GPTBot
