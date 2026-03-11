@@ -1,0 +1,389 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
+import CityTestimonials from "@/components/CityTestimonials.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Carpet Cleaning Tinley Park IL | K&T Chem-Dry";
+const meta_title = "Carpet Cleaning Tinley Park IL | K&T Chem-Dry";
+const description = "Professional carpet cleaning in Tinley Park, IL — Hot Carbonating Extraction uses about 80% less water. Dries in 1–2 hours. Pet-safe, family-owned. Call K&T Chem-Dry (815) 469-3170.";
+const canonical = "https://ktchemdrycarpetcleaning.com/tinley-park";
+---
+
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical} preloadImage="/images/carpet-cleaning-service-hero.webp">
+  <SchemaMarkup type="city" city={"Tinley Park"} state={"Illinois"} postalCodes={["60477","60478","60487"]} />
+
+  <!-- 1. Hero Section -->
+  <section class="hero-section py-24 md:py-40 lg:py-48 relative mb-0 overflow-hidden">
+    <img
+      src="/images/carpet-cleaning-service-hero.webp"
+      alt="Professional carpet cleaning service in Tinley Park, IL"
+      width="1920"
+      height="1280"
+      fetchpriority="high"
+      decoding="async"
+      loading="eager"
+      class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center"
+    />
+
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <div class="relative z-20 px-[30px]">
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Tinley Park's Trusted Carpet Cleaning Service
+      </p>
+
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning** in Tinley Park, Illinois"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Serving Tinley Park residents with safe, fast-drying carpet cleaning for Orland Park, Mokena, Oak Forest, Frankfort, and Matteson
+      </h2>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+        data-aos="fade-up-sm"
+        data-aos-delay="200"
+      >
+        <CustomButton href={"tel:8154693170"} style="primary">
+          Call (815) 469-3170
+        </CustomButton>
+        <CustomButton href="/appointment" style="outline">
+          Get a Free Quote
+        </CustomButton>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TrustBar -->
+  <TrustBar />
+
+  <!-- 3. AllergenDisclaimer -->
+  <AllergenDisclaimer />
+
+  <!-- 4. About / Why K&T -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="row g-10 items-center">
+        <div class="col-12 lg:col-6" data-aos="fade-up-sm">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">
+            Family-Owned. Community-Focused.
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6" style="font-family: var(--font-primary, Poppins), sans-serif;">
+            Tinley Park's Local Carpet Cleaning Experts — For Over 30 Years
+          </h2>
+          <p class="text-[#444444] mb-4 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            K&T Chem-Dry has served the southwest Chicago suburbs for more than three decades. We're a family-owned business — not a franchise chain where you talk to a call center. When you book with K&T, you're working with a local team that has earned its reputation in Tinley Park, Mokena, Frankfort, and New Lenox home by home.
+          </p>
+          <p class="text-[#444444] mb-6 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            We bring the same care to every home we walk into — whether it's a first-time customer or a family that's been calling us since their kids were in grade school. Our work speaks for itself, and our neighbors keep coming back.
+          </p>
+          <ul class="space-y-3" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 mt-1 w-6 h-6 rounded-full bg-[#008752] flex items-center justify-center text-white text-xs font-bold">✓</span>
+              <span class="text-[#444444]"><strong>30+ years</strong> serving the southwest Chicago suburbs</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 mt-1 w-6 h-6 rounded-full bg-[#008752] flex items-center justify-center text-white text-xs font-bold">✓</span>
+              <span class="text-[#444444]"><strong>Locally owned</strong>, nationally backed by Chem-Dry</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 mt-1 w-6 h-6 rounded-full bg-[#008752] flex items-center justify-center text-white text-xs font-bold">✓</span>
+              <span class="text-[#444444]"><strong>100% satisfaction guarantee</strong> on every job</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 mt-1 w-6 h-6 rounded-full bg-[#008752] flex items-center justify-center text-white text-xs font-bold">✓</span>
+              <span class="text-[#444444]"><strong>Safe for kids, pets, and allergy-sensitive</strong> households</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 lg:col-6" data-aos="fade-up-sm" data-aos-delay="100">
+          <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="/images/carpet-cleaning-service-hero.webp"
+              alt="K&T Chem-Dry carpet cleaning technician in Tinley Park IL"
+              width="800"
+              height="600"
+              loading="lazy"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Services -->
+  <section class="py-16 md:py-20 bg-[#f8f9fa]">
+    <div class="container">
+      <div class="text-center mb-12" data-aos="fade-up-sm">
+        <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">What We Clean</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark" style="font-family: var(--font-primary, Poppins), sans-serif;">
+          Carpet Cleaning Services in Tinley Park, IL
+        </h2>
+        <p class="text-[#444444] mt-4 max-w-2xl mx-auto" style="font-family: var(--font-secondary, Inter), sans-serif;">
+          From bedroom carpet to kitchen tile, K&T Chem-Dry delivers professional cleaning services across every fabric surface in your Tinley Park home.
+        </p>
+      </div>
+
+      <div class="row g-6">
+        {[
+          {
+            title: "Carpet Cleaning",
+            desc: "Hot Carbonating Extraction removes deep-set soil, allergens, and stains — with no soapy residue and 1–2 hour drying time. Walk on your carpets again the same day.",
+            icon: "🏠",
+          },
+          {
+            title: "Upholstery Cleaning",
+            desc: "Living room sofas, sectionals, and dining chairs refreshed safely. Our carbonation-based process works on most upholstery fabrics without over-wetting.",
+            icon: "🛋️",
+          },
+          {
+            title: "Area Rug Cleaning",
+            desc: "Careful attention to rug fibers, dyes, and pile height. We clean both everyday machine-made rugs and higher-value decorative pieces.",
+            icon: "🟫",
+          },
+          {
+            title: "Pet Stain & Odor Removal",
+            desc: "P.U.R.T.® (Pet Urine Removal Treatment) reaches the uric acid crystals in your carpet padding — not just the surface — so odor is eliminated at the source.",
+            icon: "🐾",
+          },
+          {
+            title: "Tile & Grout Cleaning",
+            desc: "Professional tile cleaning removes the buildup that household cleaners can't reach. We restore grout color and protect tile surfaces.",
+            icon: "🔲",
+          },
+          {
+            title: "Commercial Carpet Cleaning",
+            desc: "Fast-drying commercial cleaning for offices, retail spaces, and commercial properties in Tinley Park. Minimal disruption to your business day.",
+            icon: "🏢",
+          },
+        ].map((service) => (
+          <div class="col-12 sm:col-6 lg:col-4" data-aos="fade-up-sm">
+            <div class="bg-white rounded-xl p-6 h-full shadow-sm border border-gray-100 hover:border-[#008752]/30 transition-colors">
+              <div class="text-3xl mb-3">{service.icon}</div>
+              <h3 class="text-lg font-bold text-dark mb-2" style="font-family: var(--font-primary, Poppins), sans-serif;">{service.title}</h3>
+              <p class="text-[#444444] text-sm leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">{service.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. HCE Process -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="row g-10 items-center">
+        <div class="col-12 lg:col-6 order-2 lg:order-1" data-aos="fade-up-sm">
+          <div class="space-y-6">
+            {[
+              {
+                num: "01",
+                title: "Pre-Inspection & Pre-Treatment",
+                desc: "We assess your carpets, note stains and high-traffic zones, and pre-treat problem areas before the main clean begins.",
+              },
+              {
+                num: "02",
+                title: "The Natural® Carbonated Solution",
+                desc: "The Natural® is applied — a green-certified carbonated solution that sends millions of tiny bubbles deep into carpet fibers to loosen and lift embedded soil.",
+              },
+              {
+                num: "03",
+                title: "Hot Carbonating Extraction",
+                desc: "Our HCE machine extracts the loosened debris using about 80% less water than traditional steam cleaning. Less water means less risk to your floors and your home.",
+              },
+              {
+                num: "04",
+                title: "Fast Drying — 1 to 2 Hours",
+                desc: "With far less moisture introduced, your carpets dry in 1–2 hours. Kids and pets are back on the floor the same afternoon.",
+              },
+            ].map((step) => (
+              <div class="flex gap-5">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-[#008752] flex items-center justify-center text-white text-sm font-bold" style="font-family: var(--font-primary, Poppins), sans-serif;">
+                  {step.num}
+                </div>
+                <div>
+                  <h3 class="font-bold text-dark mb-1" style="font-family: var(--font-primary, Poppins), sans-serif;">{step.title}</h3>
+                  <p class="text-[#444444] text-sm leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="col-12 lg:col-6 order-1 lg:order-2" data-aos="fade-up-sm" data-aos-delay="50">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">The Chem-Dry Difference</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6" style="font-family: var(--font-primary, Poppins), sans-serif;">
+            Why Tinley Park Families Choose Hot Carbonating Extraction
+          </h2>
+          <p class="text-[#444444] mb-4 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            Steam cleaning has been the default for decades — and its drawbacks have been accepted as unavoidable. Long drying times. Residue that pulls in new dirt. Moisture that sits in your subfloor for a day or two.
+          </p>
+          <p class="text-[#444444] mb-6 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            Hot Carbonating Extraction changes the equation. The cleaning power comes from carbonation, not water volume. The result is a genuinely deeper clean with a fraction of the moisture — and carpets that are dry before dinner.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2 bg-[#008752]/10 text-[#008752] font-semibold text-sm px-4 py-2 rounded-full">
+              <span>✓</span> About 80% less water
+            </span>
+            <span class="inline-flex items-center gap-2 bg-[#008752]/10 text-[#008752] font-semibold text-sm px-4 py-2 rounded-full">
+              <span>✓</span> Dries in 1–2 hours
+            </span>
+            <span class="inline-flex items-center gap-2 bg-[#008752]/10 text-[#008752] font-semibold text-sm px-4 py-2 rounded-full">
+              <span>✓</span> No dirt-attracting residue
+            </span>
+            <span class="inline-flex items-center gap-2 bg-[#008752]/10 text-[#008752] font-semibold text-sm px-4 py-2 rounded-full">
+              <span>✓</span> Safe for kids &amp; pets
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Local Context — Tinley Park -->
+  <section class="py-16 md:py-20 bg-[#f8f9fa]">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center" data-aos="fade-up-sm">
+        <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">Why Tinley Park Homes Need It</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6" style="font-family: var(--font-primary, Poppins), sans-serif;">
+          Carpet Cleaning for the Way Tinley Park Families Live
+        </h2>
+      </div>
+      <div class="row g-6 mt-2">
+        {[
+          {
+            heading: "Chicago Suburb Winters",
+            body: "Snow, ice melt, and mud are a Tinley Park seasonal reality. By late February, carpets near every entry point have absorbed months of tracked-in debris. Our HCE process pulls that deep-seated soil out without over-wetting your floors.",
+          },
+          {
+            heading: "Busy Households",
+            body: "Tinley Park is a family community — active households with kids, pets, and frequent guests. Our process leaves no residue behind, so carpets don't re-soil quickly. You get more time between cleanings.",
+          },
+          {
+            heading: "Indoor Allergen Control",
+            body: "From spring tree pollen to fall ragweed, southwest Chicago suburbs have a full allergen calendar. Our HCE process removes an average of 98.1% of common allergens from carpet — a meaningful benefit for households with allergy or asthma sufferers.",
+          },
+        ].map((item) => (
+          <div class="col-12 md:col-4" data-aos="fade-up-sm">
+            <div class="bg-white rounded-xl p-6 h-full shadow-sm">
+              <h3 class="font-bold text-dark mb-3" style="font-family: var(--font-primary, Poppins), sans-serif;">{item.heading}</h3>
+              <p class="text-[#444444] text-sm leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">{item.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Stats / Differentiators Bar -->
+  <section class="py-12 md:py-16" style="background: linear-gradient(90deg, #008752 0%, #005DAA 100%);">
+    <div class="container">
+      <div class="row g-6 text-center text-white">
+        {[
+          { stat: "30+", label: "Years Serving the Southwest Suburbs" },
+          { stat: "80%", label: "Less Water Than Steam Cleaning" },
+          { stat: "1–2 hrs", label: "Average Drying Time" },
+          { stat: "98.1%", label: "Of Common Allergens Removed" },
+        ].map((item) => (
+          <div class="col-6 lg:col-3" data-aos="fade-up-sm">
+            <p class="text-4xl md:text-5xl font-bold mb-1" style="font-family: var(--font-primary, Poppins), sans-serif;">{item.stat}</p>
+            <p class="text-white/80 text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Testimonials -->
+  <CityTestimonials city={"Tinley Park"} />
+
+  <!-- 10. FAQ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-10" data-aos="fade-up-sm">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">Common Questions</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark" style="font-family: var(--font-primary, Poppins), sans-serif;">
+            Carpet Cleaning FAQs — Tinley Park, IL
+          </h2>
+        </div>
+
+        <div class="space-y-5">
+          {[
+            {
+              q: "How long will my carpets take to dry after cleaning?",
+              a: "Most Tinley Park homes see carpets dry within 1 to 2 hours after a K&T Chem-Dry cleaning. Our Hot Carbonating Extraction process uses about 80% less water than traditional steam cleaning — which is why drying is so much faster. Heavy pile or high-traffic areas may take slightly longer.",
+            },
+            {
+              q: "Is the cleaning safe for my kids and pets?",
+              a: "Yes. We use The Natural® — a green-certified, carbonated cleaning solution with no harsh detergents or harsh chemicals. It's safe for use around children and pets and carries Carpet and Rug Institute certification. We recommend keeping kids and pets off freshly cleaned carpets until dry (1–2 hours).",
+            },
+            {
+              q: "Can you remove pet urine odors completely?",
+              a: "Yes. K&T Chem-Dry offers P.U.R.T.® (Pet Urine Removal Treatment) as a specialized add-on. Unlike surface deodorizers, P.U.R.T. penetrates to the uric acid crystals embedded in the carpet padding and subfloor — the actual source of the odor — and destroys them through a sustained reaction.",
+            },
+            {
+              q: "How often should Tinley Park homeowners schedule carpet cleaning?",
+              a: "For most households, once or twice a year is the right cadence — typically spring (after winter buildup) and fall (before peak indoor season). Homes with multiple pets, young children, or allergy sufferers may benefit from 3–4 cleanings per year.",
+            },
+            {
+              q: "What areas near Tinley Park do you serve?",
+              a: "We serve Tinley Park and the surrounding south and southwest suburbs, including Orland Park, Mokena, Oak Forest, Frankfort, New Lenox, Matteson, and Midlothian. Call (815) 469-3170 to confirm service in your neighborhood.",
+            },
+          ].map((faq) => (
+            <div class="border border-gray-200 rounded-xl p-6" data-aos="fade-up-sm">
+              <h3 class="font-bold text-dark mb-2" style="font-family: var(--font-primary, Poppins), sans-serif;">{faq.q}</h3>
+              <p class="text-[#444444] text-sm leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Final CTA -->
+  <section class="py-12 md:py-16 bg-[#f8f9fa]">
+    <div class="container text-center" data-aos="fade-up-sm">
+      <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4" style="font-family: var(--font-primary, Poppins), sans-serif;">
+        Ready for Clean Carpets in Tinley Park?
+      </h2>
+      <p class="text-[#444444] mb-8 max-w-xl mx-auto" style="font-family: var(--font-secondary, Inter), sans-serif;">
+        Get your free quote today. We confirm appointments within one business hour and offer same-week scheduling throughout the Tinley Park area.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <CustomButton href={"tel:8154693170"} style="primary">
+          Call (815) 469-3170
+        </CustomButton>
+        <CustomButton href="/appointment" style="outline">
+          Get a Free Quote Online
+        </CustomButton>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction cta={call_to_action.data} />
+</Base>

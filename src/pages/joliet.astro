@@ -1,0 +1,389 @@
+---
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import SchemaMarkup from "@/components/SchemaMarkup.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import TrustBar from "@/components/TrustBar.astro";
+import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
+import CityTestimonials from "@/components/CityTestimonials.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const call_to_action = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Carpet Cleaning Joliet IL | K&T Chem-Dry";
+const meta_title = "Carpet Cleaning Joliet IL | K&T Chem-Dry";
+const description = "Professional carpet cleaning in Joliet, IL — Hot Carbonating Extraction uses about 80% less water. Dries in 1–2 hours. Pet-safe, family-owned. Call K&T Chem-Dry (815) 469-3170.";
+const canonical = "https://ktchemdrycarpetcleaning.com/joliet";
+---
+
+<Base title={title} description={description} meta_title={meta_title} canonical={canonical} preloadImage="/images/carpet-cleaning-service-hero.webp">
+  <SchemaMarkup type="city" city={"Joliet"} state={"Illinois"} postalCodes={["60431","60432","60433","60435","60436"]} />
+
+  <!-- 1. Hero Section -->
+  <section class="hero-section py-24 md:py-40 lg:py-48 relative mb-0 overflow-hidden">
+    <img
+      src="/images/carpet-cleaning-service-hero.webp"
+      alt="Professional carpet cleaning service in Joliet, IL"
+      width="1920"
+      height="1280"
+      fetchpriority="high"
+      decoding="async"
+      loading="eager"
+      class="hero-bg-image absolute inset-0 w-full h-full object-cover object-center"
+    />
+
+    <div class="absolute inset-0 z-10" style="background: radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 85%);"></div>
+
+    <div class="relative z-20 px-[30px]">
+      <p
+        class="text-sm font-semibold tracking-wider uppercase text-primary mb-3 text-center lg:text-left"
+        data-aos="fade-up-sm"
+      >
+        Joliet's Trusted Carpet Cleaning Service
+      </p>
+
+      <CustomHeading
+        as="h1"
+        text="Professional **Carpet Cleaning** in Joliet, Illinois"
+        svgColor="text-primary"
+        class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6 text-center lg:text-left mx-auto lg:mx-0"
+        dataAos="fade-up-sm"
+        dataAosDelay="50"
+      />
+
+      <h2
+        class="text-lg md:text-xl text-text/80 mb-8 text-center lg:text-left"
+        data-aos="fade-up-sm"
+        data-aos-delay="100"
+      >
+        Serving Joliet residents with safe, fast-drying carpet cleaning for Lockport, Romeoville, Plainfield, Shorewood, and Crest Hill
+      </h2>
+
+      <div
+        class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+        data-aos="fade-up-sm"
+        data-aos-delay="200"
+      >
+        <CustomButton href={"tel:8154693170"} style="primary">
+          Call (815) 469-3170
+        </CustomButton>
+        <CustomButton href="/appointment" style="outline">
+          Get a Free Quote
+        </CustomButton>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TrustBar -->
+  <TrustBar />
+
+  <!-- 3. AllergenDisclaimer -->
+  <AllergenDisclaimer />
+
+  <!-- 4. About / Why K&T -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="row g-10 items-center">
+        <div class="col-12 lg:col-6" data-aos="fade-up-sm">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">
+            Family-Owned. Community-Focused.
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6" style="font-family: var(--font-primary, Poppins), sans-serif;">
+            Joliet's Local Carpet Cleaning Experts — For Over 30 Years
+          </h2>
+          <p class="text-[#444444] mb-4 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            K&T Chem-Dry has been serving the Will County area since before most of our customers were shopping online. We're a family business — not a national franchise call center — and we've built our reputation one clean carpet at a time across Joliet, Lockport, Romeoville, and the surrounding communities.
+          </p>
+          <p class="text-[#444444] mb-6 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            When you call us, you talk to someone who knows Joliet. We know the neighborhoods, the schools, and the families. We show up on time, we do the work right, and we stand behind every cleaning.
+          </p>
+          <ul class="space-y-3" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 mt-1 w-6 h-6 rounded-full bg-[#008752] flex items-center justify-center text-white text-xs font-bold">✓</span>
+              <span class="text-[#444444]"><strong>30+ years</strong> serving Will County families</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 mt-1 w-6 h-6 rounded-full bg-[#008752] flex items-center justify-center text-white text-xs font-bold">✓</span>
+              <span class="text-[#444444]"><strong>Locally owned</strong>, nationally backed by Chem-Dry</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 mt-1 w-6 h-6 rounded-full bg-[#008752] flex items-center justify-center text-white text-xs font-bold">✓</span>
+              <span class="text-[#444444]"><strong>100% satisfaction guarantee</strong> on every job</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="shrink-0 mt-1 w-6 h-6 rounded-full bg-[#008752] flex items-center justify-center text-white text-xs font-bold">✓</span>
+              <span class="text-[#444444]"><strong>Safe for kids, pets, and allergy-sensitive</strong> households</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 lg:col-6" data-aos="fade-up-sm" data-aos-delay="100">
+          <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="/images/carpet-cleaning-service-hero.webp"
+              alt="K&T Chem-Dry carpet cleaning technician in Joliet IL"
+              width="800"
+              height="600"
+              loading="lazy"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Services -->
+  <section class="py-16 md:py-20 bg-[#f8f9fa]">
+    <div class="container">
+      <div class="text-center mb-12" data-aos="fade-up-sm">
+        <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">What We Clean</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark" style="font-family: var(--font-primary, Poppins), sans-serif;">
+          Carpet Cleaning Services in Joliet, IL
+        </h2>
+        <p class="text-[#444444] mt-4 max-w-2xl mx-auto" style="font-family: var(--font-secondary, Inter), sans-serif;">
+          From wall-to-wall carpet to area rugs, upholstery, and tile — K&T Chem-Dry handles the full scope of home fabric cleaning for Joliet families.
+        </p>
+      </div>
+
+      <div class="row g-6">
+        {[
+          {
+            title: "Carpet Cleaning",
+            desc: "Deep-clean every room with Hot Carbonating Extraction — no soapy residue, no days-long drying. Most carpets are ready to walk on within 1–2 hours.",
+            icon: "🏠",
+          },
+          {
+            title: "Upholstery Cleaning",
+            desc: "Sofas, sectionals, and armchairs cleaned with the same carbonation-powered process. Safe for microfiber, cotton, and most upholstery fabrics.",
+            icon: "🛋️",
+          },
+          {
+            title: "Area Rug Cleaning",
+            desc: "Specialty rug cleaning that respects fibers, colors, and pile — whether it's a machine-made rug or a valued heirloom piece.",
+            icon: "🟫",
+          },
+          {
+            title: "Pet Stain & Odor Removal",
+            desc: "P.U.R.T.® (Pet Urine Removal Treatment) neutralizes odor at the source — not just on the surface. For Joliet homes with pets, this is the treatment that actually works.",
+            icon: "🐾",
+          },
+          {
+            title: "Tile & Grout Cleaning",
+            desc: "Kitchen and bathroom tile cleaned professionally. We restore grout color and remove built-up grime that mopping can't reach.",
+            icon: "🔲",
+          },
+          {
+            title: "Commercial Carpet Cleaning",
+            desc: "Office and commercial carpet cleaning with minimal disruption. Fast-drying means your team is back at work the same day.",
+            icon: "🏢",
+          },
+        ].map((service) => (
+          <div class="col-12 sm:col-6 lg:col-4" data-aos="fade-up-sm">
+            <div class="bg-white rounded-xl p-6 h-full shadow-sm border border-gray-100 hover:border-[#008752]/30 transition-colors">
+              <div class="text-3xl mb-3">{service.icon}</div>
+              <h3 class="text-lg font-bold text-dark mb-2" style="font-family: var(--font-primary, Poppins), sans-serif;">{service.title}</h3>
+              <p class="text-[#444444] text-sm leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">{service.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. HCE Process -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="row g-10 items-center">
+        <div class="col-12 lg:col-6 order-2 lg:order-1" data-aos="fade-up-sm">
+          <div class="space-y-6">
+            {[
+              {
+                num: "01",
+                title: "Pre-Inspection & Pre-Treatment",
+                desc: "We inspect your carpets, identify high-traffic areas and stains, and pre-treat problem spots before cleaning begins.",
+              },
+              {
+                num: "02",
+                title: "The Natural® Carbonated Solution",
+                desc: "We apply The Natural® — a green-certified carbonated cleaning solution. Millions of tiny bubbles penetrate fibers and break the bond between soil and carpet.",
+              },
+              {
+                num: "03",
+                title: "Hot Carbonating Extraction",
+                desc: "Our HCE machine extracts the loosened dirt from deep in the carpet pile, using about 80% less water than traditional steam cleaning.",
+              },
+              {
+                num: "04",
+                title: "Fast Drying — 1 to 2 Hours",
+                desc: "Because we use far less water, your carpets dry in 1–2 hours under normal conditions. Walk on them the same day. Company over that evening.",
+              },
+            ].map((step) => (
+              <div class="flex gap-5">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-[#008752] flex items-center justify-center text-white text-sm font-bold" style="font-family: var(--font-primary, Poppins), sans-serif;">
+                  {step.num}
+                </div>
+                <div>
+                  <h3 class="font-bold text-dark mb-1" style="font-family: var(--font-primary, Poppins), sans-serif;">{step.title}</h3>
+                  <p class="text-[#444444] text-sm leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="col-12 lg:col-6 order-1 lg:order-2" data-aos="fade-up-sm" data-aos-delay="50">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">The Chem-Dry Difference</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6" style="font-family: var(--font-primary, Poppins), sans-serif;">
+            How Hot Carbonating Extraction Works
+          </h2>
+          <p class="text-[#444444] mb-4 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            Traditional steam cleaning floods carpets with hot water and detergent, then struggles to extract it all. The result: 24–48 hours of wet carpet, residue that attracts future dirt, and moisture risk to your subfloor.
+          </p>
+          <p class="text-[#444444] mb-6 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            The Chem-Dry Hot Carbonating Extraction process is fundamentally different. Carbonation does the cleaning work — not water volume. The result is a deeper clean with about 80% less water and drying times measured in hours, not days.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2 bg-[#008752]/10 text-[#008752] font-semibold text-sm px-4 py-2 rounded-full">
+              <span>✓</span> About 80% less water
+            </span>
+            <span class="inline-flex items-center gap-2 bg-[#008752]/10 text-[#008752] font-semibold text-sm px-4 py-2 rounded-full">
+              <span>✓</span> Dries in 1–2 hours
+            </span>
+            <span class="inline-flex items-center gap-2 bg-[#008752]/10 text-[#008752] font-semibold text-sm px-4 py-2 rounded-full">
+              <span>✓</span> No dirt-attracting residue
+            </span>
+            <span class="inline-flex items-center gap-2 bg-[#008752]/10 text-[#008752] font-semibold text-sm px-4 py-2 rounded-full">
+              <span>✓</span> Safe for kids &amp; pets
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Local Context — Joliet -->
+  <section class="py-16 md:py-20 bg-[#f8f9fa]">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center" data-aos="fade-up-sm">
+        <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">Why Joliet Homes Need It</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6" style="font-family: var(--font-primary, Poppins), sans-serif;">
+          Carpet Cleaning for Joliet's Everyday Life
+        </h2>
+      </div>
+      <div class="row g-6 mt-2">
+        {[
+          {
+            heading: "Will County Winters",
+            body: "Joliet winters are hard on carpets. Salt from driveways and parking lots, slush from boots, and mud tracked in from the backyard all work their way into carpet fibers. Our HCE process lifts and removes that ground-in debris without soaking your floors.",
+          },
+          {
+            heading: "Active Families",
+            body: "Joliet is a community of growing families — kids' sports, pets, and everyday foot traffic add up fast. K&T Chem-Dry's process leaves no dirt-attracting residue, so your carpets stay cleaner longer between visits.",
+          },
+          {
+            heading: "Spring Allergen Season",
+            body: "When Joliet's trees and grasses bloom, pollen gets tracked inside on shoes and clothing. Our process removes an average of 98.1% of common allergens from carpet — giving allergy-sensitive households a better start to spring.",
+          },
+        ].map((item) => (
+          <div class="col-12 md:col-4" data-aos="fade-up-sm">
+            <div class="bg-white rounded-xl p-6 h-full shadow-sm">
+              <h3 class="font-bold text-dark mb-3" style="font-family: var(--font-primary, Poppins), sans-serif;">{item.heading}</h3>
+              <p class="text-[#444444] text-sm leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">{item.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Stats / Differentiators Bar -->
+  <section class="py-12 md:py-16" style="background: linear-gradient(90deg, #008752 0%, #005DAA 100%);">
+    <div class="container">
+      <div class="row g-6 text-center text-white">
+        {[
+          { stat: "30+", label: "Years Serving Will County" },
+          { stat: "80%", label: "Less Water Than Steam Cleaning" },
+          { stat: "1–2 hrs", label: "Average Drying Time" },
+          { stat: "98.1%", label: "Of Common Allergens Removed" },
+        ].map((item) => (
+          <div class="col-6 lg:col-3" data-aos="fade-up-sm">
+            <p class="text-4xl md:text-5xl font-bold mb-1" style="font-family: var(--font-primary, Poppins), sans-serif;">{item.stat}</p>
+            <p class="text-white/80 text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Testimonials -->
+  <CityTestimonials city={"Joliet"} />
+
+  <!-- 10. FAQ -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container">
+      <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-10" data-aos="fade-up-sm">
+          <p class="text-sm font-semibold tracking-wider uppercase text-primary mb-3">Common Questions</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark" style="font-family: var(--font-primary, Poppins), sans-serif;">
+            Carpet Cleaning FAQs — Joliet, IL
+          </h2>
+        </div>
+
+        <div class="space-y-5">
+          {[
+            {
+              q: "How long will my carpets take to dry?",
+              a: "In most Joliet homes under normal conditions, carpets cleaned with our Hot Carbonating Extraction process dry in 1 to 2 hours. Rooms with heavy traffic or thick pile may take slightly longer. We use about 80% less water than traditional steam cleaning — that's why drying is so much faster.",
+            },
+            {
+              q: "Is the cleaning process safe for children and pets?",
+              a: "Yes. The Natural® is a green-certified carbonated cleaning solution with no harsh chemicals. It has earned the Carpet and Rug Institute's certification and is safe for use around children and pets. We do ask that you keep kids and pets off freshly cleaned carpets until they are fully dry — typically 1–2 hours.",
+            },
+            {
+              q: "Do you clean pet stains and odors?",
+              a: "Yes. K&T Chem-Dry offers P.U.R.T.® (Pet Urine Removal Treatment) as an add-on service. P.U.R.T. penetrates to the source of pet urine odor — the uric acid crystals in the padding and subfloor — and destroys the odor at its origin rather than masking it.",
+            },
+            {
+              q: "How often should I have my carpets professionally cleaned?",
+              a: "For most Joliet homes, professional cleaning once or twice a year is sufficient — once in spring to remove winter buildup, and once in fall before peak indoor season. Homes with pets, young children, or allergy-sensitive family members may benefit from cleaning every 3–6 months.",
+            },
+            {
+              q: "What areas near Joliet do you serve?",
+              a: "We serve Joliet and the surrounding Will County area, including Lockport, Romeoville, Plainfield, Shorewood, Crest Hill, Channahon, and neighboring communities. Call us at (815) 469-3170 to confirm service in your area.",
+            },
+          ].map((faq) => (
+            <div class="border border-gray-200 rounded-xl p-6" data-aos="fade-up-sm">
+              <h3 class="font-bold text-dark mb-2" style="font-family: var(--font-primary, Poppins), sans-serif;">{faq.q}</h3>
+              <p class="text-[#444444] text-sm leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Final CTA + CallToAction -->
+  <section class="py-12 md:py-16 bg-[#f8f9fa]">
+    <div class="container text-center" data-aos="fade-up-sm">
+      <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4" style="font-family: var(--font-primary, Poppins), sans-serif;">
+        Ready for Clean Carpets in Joliet?
+      </h2>
+      <p class="text-[#444444] mb-8 max-w-xl mx-auto" style="font-family: var(--font-secondary, Inter), sans-serif;">
+        Get your free quote today. We'll confirm your appointment within one business hour.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <CustomButton href={"tel:8154693170"} style="primary">
+          Call (815) 469-3170
+        </CustomButton>
+        <CustomButton href="/appointment" style="outline">
+          Get a Free Quote Online
+        </CustomButton>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction cta={call_to_action.data} />
+</Base>
