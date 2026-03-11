@@ -1,6 +1,6 @@
 ---
-title: "Service Areas in <br> **Phoenix** Metro"
-meta_title: "Phoenix Carpet Cleaning Service Areas"
-description: "Brimley's White Glove Chem-Dry serves the greater Phoenix metropolitan area with professional carpet and upholstery cleaning services."
+title: "Service Areas in <br> **Denver** Metro"
+meta_title: "Denver Carpet Cleaning Service Areas"
+description: "All Pro Chem-Dry serves the greater Denver metropolitan area with professional carpet and upholstery cleaning services."
 subtitle: "SERVING THE VALLEY"
 ---

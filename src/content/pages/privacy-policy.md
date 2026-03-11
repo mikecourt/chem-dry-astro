@@ -1,7 +1,7 @@
 ---
-title: "Privacy Policy | Brimley's White Glove Chem-Dry"
-meta_title: "Privacy Policy | Brimley's White Glove Chem-Dry"
-description: "Learn how Brimley's White Glove Chem-Dry collects, uses, and protects your personal information."
+title: "Privacy Policy | All Pro Chem-Dry"
+meta_title: "Privacy Policy | All Pro Chem-Dry"
+description: "Learn how All Pro Chem-Dry collects, uses, and protects your personal information."
 draft: false
 ---
 
@@ -9,7 +9,7 @@ draft: false
 
 Last updated: February 23, 2026
 
-Brimley's White Glove Chem-Dry respects your privacy. This page explains what information we collect through our website and how we use it.
+All Pro Chem-Dry respects your privacy. This page explains what information we collect through our website and how we use it.
 
 ### Information We Collect
 
@@ -29,4 +29,4 @@ We do not sell personal information. We may share submitted lead data with servi
 
 ### Contact
 
-If you have questions about this policy, contact us at [office@whiteglovecarpet.com](mailto:office@whiteglovecarpet.com) or call [(480) 649-3663](tel:4806493663).
+If you have questions about this policy, contact us at [office@allprochemdry.com](mailto:office@allprochemdry.com) or call [(303) 252-0517](tel:3032520517).

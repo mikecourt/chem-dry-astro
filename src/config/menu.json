@@ -89,17 +89,17 @@
           "url": "/service-areas",
       "hasChildren": true,
       "children": [
-        { "name": "Phoenix", "url": "/phoenix" },
-        { "name": "Mesa", "url": "/mesa" },
-        { "name": "Gilbert", "url": "/gilbert" },
-        { "name": "Chandler", "url": "/chandler" },
-        { "name": "Tempe", "url": "/tempe" },
-        { "name": "Scottsdale", "url": "/scottsdale" },
-        { "name": "Queen Creek", "url": "/queen-creek" },
-        { "name": "Glendale", "url": "/glendale" },
-        { "name": "Peoria", "url": "/peoria" },
-        { "name": "Apache Junction", "url": "/apache-junction" },
-        { "name": "San Tan Valley", "url": "/san-tan-valley" }
+        { "name": "Highlands Ranch", "url": "/highlands-ranch" },
+        { "name": "Denver", "url": "/denver" },
+        { "name": "Littleton", "url": "/littleton" },
+        { "name": "Aurora", "url": "/aurora" },
+        { "name": "Centennial", "url": "/centennial" },
+        { "name": "Castle Rock", "url": "/castle-rock" },
+        { "name": "Lakewood", "url": "/lakewood" },
+        { "name": "Parker", "url": "/parker" },
+        { "name": "Englewood", "url": "/englewood" },
+        { "name": "Lone Tree", "url": "/lone-tree" },
+        { "name": "Arvada", "url": "/arvada" }
       ]
     },
     {
@@ -159,48 +159,48 @@
       "title": "SERVICE AREAS",
       "children": [
         {
-          "name": "Phoenix",
-          "url": "/phoenix"
+          "name": "Highlands Ranch",
+          "url": "/highlands-ranch"
         },
         {
-          "name": "Mesa",
-          "url": "/mesa"
+          "name": "Denver",
+          "url": "/denver"
         },
         {
-          "name": "Gilbert",
-          "url": "/gilbert"
+          "name": "Littleton",
+          "url": "/littleton"
         },
         {
-          "name": "Chandler",
-          "url": "/chandler"
+          "name": "Aurora",
+          "url": "/aurora"
         },
         {
-          "name": "Tempe",
-          "url": "/tempe"
+          "name": "Centennial",
+          "url": "/centennial"
         },
         {
-          "name": "Scottsdale",
-          "url": "/scottsdale"
+          "name": "Castle Rock",
+          "url": "/castle-rock"
         },
         {
-          "name": "Queen Creek",
-          "url": "/queen-creek"
+          "name": "Lakewood",
+          "url": "/lakewood"
         },
         {
-          "name": "Glendale",
-          "url": "/glendale"
+          "name": "Parker",
+          "url": "/parker"
         },
         {
-          "name": "Peoria",
-          "url": "/peoria"
+          "name": "Englewood",
+          "url": "/englewood"
         },
         {
-          "name": "Apache Junction",
-          "url": "/apache-junction"
+          "name": "Lone Tree",
+          "url": "/lone-tree"
         },
         {
-          "name": "San Tan Valley",
-          "url": "/san-tan-valley"
+          "name": "Arvada",
+          "url": "/arvada"
         }
       ]
     }

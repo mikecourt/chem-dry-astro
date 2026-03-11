@@ -1,17 +1,17 @@
 ---
-title: "The Brimley's **White Glove** Difference"
-meta_title: "About Us | Brimley's White Glove Chem-Dry Phoenix"
-description: "Family-owned carpet cleaning in Phoenix since 1995. Hot Carbonating Extraction, certified technicians, 100% satisfaction guarantee. Learn about our story."
+title: "The All Pro **White Glove** Difference"
+meta_title: "About Us | All Pro Chem-Dry Denver"
+description: "Family-owned carpet cleaning in Denver for 30+ years. Hot Carbonating Extraction, certified technicians, 100% satisfaction guarantee. Learn about our story."
 subtitle: "ABOUT US"
 subheadline: "A Family Business Built on Trust, One Clean Carpet at a Time"
 
 why_us:
   - title: "You can depend on us <br> to get **quality results**"
-    content: "We provide professional carpet, upholstery, and tile cleaning services throughout the Phoenix Valley. Our Hot Carbonating Extraction process delivers superior cleaning using about 80% less water."
+    content: "We provide professional carpet, upholstery, and tile cleaning services throughout the Denver metro. Our Hot Carbonating Extraction process delivers superior cleaning using about 80% less water."
     button:
       enable: true
-      label: "Call: (480) 649-3663"
-      link: "tel:4806493663"
+      label: "Call: (303) 252-0517"
+      link: "tel:3032520517"
 
     image: "/images/about/1.webp"
     overlay_image: "/images/about/overlay.png"
@@ -27,9 +27,9 @@ why_us:
       - "Family-Owned Business"
 
 pride:
-  title: "Proudly serving **Phoenix** <br> for over 30 years"
+  title: "Proudly serving **Denver** <br> for over 30 years"
   subtitle: "OUR COMMITMENT"
-  content: "Since 1995, we've been helping Phoenix-area families keep their homes clean and healthy. Our certified technicians deliver exceptional results using Chem-Dry's proven Hot Carbonating Extraction process."
+  content: "Since 1995, we've been helping Denver-area families keep their homes clean and healthy. Our certified technicians deliver exceptional results using Chem-Dry's proven Hot Carbonating Extraction process."
   images:
     - "/images/about/3.webp"
     - "/images/about/4.webp"

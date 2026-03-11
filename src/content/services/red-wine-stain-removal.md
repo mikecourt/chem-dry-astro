@@ -1,7 +1,7 @@
 ---
 title: "Red Wine Stain Removal"
-meta_title: "Professional Red Wine Stain Removal | Brimley's White Glove Chem-Dry"
-description: "Expert red wine stain removal in Phoenix. Remove wine stains from carpets and upholstery without bleaching. Safe, effective treatment for fresh and set-in stains."
+meta_title: "Professional Red Wine Stain Removal | All Pro Chem-Dry"
+description: "Expert red wine stain removal in Denver. Remove wine stains from carpets and upholstery without bleaching. Safe, effective treatment for fresh and set-in stains."
 icon: "FaWineGlass"
 weight: 14
 date: 2025-01-21T05:00:00Z

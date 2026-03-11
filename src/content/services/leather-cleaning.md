@@ -1,7 +1,7 @@
 ---
 title: "Leather Cleaning"
-meta_title: "Professional Leather Cleaning | Brimley's White Glove Chem-Dry"
-description: "Expert leather furniture cleaning and conditioning in Phoenix. Restore and protect your leather sofas, chairs, and upholstery."
+meta_title: "Professional Leather Cleaning | All Pro Chem-Dry"
+description: "Expert leather furniture cleaning and conditioning in Denver. Restore and protect your leather sofas, chairs, and upholstery."
 icon: "FaCouch"
 banner: "/images/leather-service.jpg"
 date: 2025-01-21T05:00:00Z
@@ -10,9 +10,9 @@ weight: 9
 draft: false
 ---
 
-### Professional Leather Cleaning in Phoenix
+### Professional Leather Cleaning in Denver
 
-Brimley's White Glove Chem-Dry provides expert leather cleaning and conditioning services for all types of leather furniture. Our specialized process gently cleans, conditions, and protects your valuable leather pieces.
+All Pro Chem-Dry provides expert leather cleaning and conditioning services for all types of leather furniture. Our specialized process gently cleans, conditions, and protects your valuable leather pieces.
 
 Leather furniture requires special care to maintain its beauty and durability. Our trained technicians use pH-balanced cleaning solutions specifically formulated for leather to safely remove dirt, oils, and stains while conditioning the leather to keep it soft and supple.
 
@@ -30,4 +30,4 @@ We begin with a thorough inspection of your leather furniture to identify any pr
 
 ###### Service Areas
 
-We proudly serve Phoenix, Scottsdale, Mesa, Tempe, Gilbert, Chandler, Glendale, Peoria, and surrounding areas.
+We proudly serve Highlands Ranch, Denver, Littleton, Aurora, Centennial, Castle Rock, Lakewood, Parker, and surrounding areas.

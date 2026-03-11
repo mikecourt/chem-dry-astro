@@ -1,6 +1,6 @@
 ---
 title: "Area Rugs"
-meta_title: "Professional Area Rug Cleaning | Brimley's White Glove Chem-Dry"
+meta_title: "Professional Area Rug Cleaning | All Pro Chem-Dry"
 description: "Expert area rug cleaning for Persian, Oriental, wool, and synthetic rugs. Gentle cleaning that protects delicate fibers."
 icon: "FaRug"
 banner: "/images/rug-service.jpg"
@@ -12,7 +12,7 @@ draft: false
 
 ### Professional Area Rug Cleaning
 
-Area rugs are often cherished pieces that require special care. Whether you have a valuable Persian or Oriental rug, or a modern synthetic rug, Brimley's White Glove Chem-Dry has the expertise to clean it safely and effectively.
+Area rugs are often cherished pieces that require special care. Whether you have a valuable Persian or Oriental rug, or a modern synthetic rug, All Pro Chem-Dry has the expertise to clean it safely and effectively.
 
 Our area rug cleaning process is specially designed for the unique needs of fine rugs. We can clean wool, silk, cotton, synthetic, and blended rugs with care and precision.
 

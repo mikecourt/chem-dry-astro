@@ -1,6 +1,6 @@
 ---
 title: "Pet Urine Odor"
-meta_title: "Pet Urine & Odor Removal | Brimley's White Glove Chem-Dry"
+meta_title: "Pet Urine & Odor Removal | All Pro Chem-Dry"
 description: "Specialized pet urine and odor removal for carpets and upholstery. Eliminate odors at the source, not just mask them."
 icon: "FaDog"
 banner: "/images/pet-service.jpg"
@@ -14,7 +14,7 @@ draft: false
 
 We love our pets, but accidents happen. When pet urine soaks into carpet, it doesn't just stay on the surface—it penetrates deep into the carpet fibers, backing, and even the padding underneath. That's why surface cleaning alone won't eliminate the odor.
 
-Brimley's White Glove Chem-Dry specializes in pet urine and odor removal using our proprietary P.U.R.T.® (Pet Urine Removal Treatment). This revolutionary process doesn't just mask odors—it completely eliminates the source of the smell—not just masks it.
+All Pro Chem-Dry specializes in pet urine and odor removal using our proprietary P.U.R.T.® (Pet Urine Removal Treatment). This revolutionary process doesn't just mask odors—it completely eliminates the source of the smell—not just masks it.
 
 ###### Why P.U.R.T.® Works
 

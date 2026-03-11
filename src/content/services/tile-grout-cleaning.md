@@ -1,7 +1,7 @@
 ---
 title: "Tile, Stone & Grout"
-meta_title: "Tile, Stone and Grout Cleaning | Brimley's White Glove Chem-Dry"
-description: "Professional tile, stone and grout cleaning in Phoenix. Restore the beauty of your tile and stone floors with our deep cleaning process."
+meta_title: "Tile, Stone and Grout Cleaning | All Pro Chem-Dry"
+description: "Professional tile, stone and grout cleaning in Denver. Restore the beauty of your tile and stone floors with our deep cleaning process."
 icon: "FaTableCellsLarge"
 banner: "/images/tile-service.jpg"
 date: 2025-01-21T05:00:00Z
@@ -14,7 +14,7 @@ draft: false
 
 Tile and grout can be difficult to keep clean. Dirt and grime build up in the porous surface of your grout lines, making them look dingy and dark. Regular mopping just moves the dirt around and can actually make the problem worse.
 
-Brimley's White Glove Chem-Dry provides professional tile and grout cleaning that penetrates deep into the grout to remove embedded dirt and restore the original appearance of your floors.
+All Pro Chem-Dry provides professional tile and grout cleaning that penetrates deep into the grout to remove embedded dirt and restore the original appearance of your floors.
 
 ###### Why Professional Tile Cleaning?
 
@@ -30,4 +30,4 @@ We use specialized equipment and powerful cleaning solutions designed specifical
 
 After cleaning, we recommend sealing your grout lines to protect against future staining and make regular maintenance easier.
 
-Serving Mesa and the East Valley since 1995, Brimley's White Glove Chem-Dry is your trusted source for tile and grout cleaning.
+Serving Highlands Ranch and the Denver metro for 30+ years, All Pro Chem-Dry is your trusted source for tile and grout cleaning.

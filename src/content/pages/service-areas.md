@@ -1,26 +1,30 @@
 ---
-title: "Service Areas | Brimley's White Glove Chem-Dry"
-meta_title: "Service Areas | Brimley's White Glove Chem-Dry"
-description: "Brimley's White Glove Chem-Dry proudly serves Phoenix, Mesa, Gilbert, Chandler, Tempe, Scottsdale, Queen Creek, Glendale, Peoria, Apache Junction, and San Tan Valley."
+title: "Service Areas | All Pro Chem-Dry"
+meta_title: "Service Areas | All Pro Chem-Dry"
+description: "All Pro Chem-Dry proudly serves Highlands Ranch, Denver, Littleton, Aurora, Centennial, Castle Rock, Lakewood, Parker, Englewood, Lone Tree, and Arvada."
 draft: false
 ---
 
-## Phoenix Metro Service Areas
+## Denver Metro Service Areas
 
-Brimley's White Glove Chem-Dry provides carpet, upholstery, tile, and specialty cleaning across the Phoenix metro area.
+All Pro Chem-Dry provides carpet, upholstery, tile, and specialty cleaning across the Denver metro area.
 
 ### Cities We Serve
 
-- [Phoenix](/phoenix)
-- [Mesa](/mesa)
-- [Gilbert](/gilbert)
-- [Chandler](/chandler)
-- [Tempe](/tempe)
-- [Scottsdale](/scottsdale)
-- [Queen Creek](/queen-creek)
-- [Glendale](/glendale)
-- [Peoria](/peoria)
-- [Apache Junction](/apache-junction)
-- [San Tan Valley](/san-tan-valley)
+- [Highlands Ranch](/highlands-ranch)
+- [Littleton](/littleton)
+- [Centennial](/centennial)
+- [Castle Rock](/castle-rock)
+- [Parker](/parker)
+- [Lone Tree](/lone-tree)
+- [Castle Pines](/castle-pines)
+- [Englewood](/englewood)
+- [Arvada](/arvada)
+- [Aurora](/aurora)
+- [Denver](/denver)
+- [Lakewood](/lakewood)
+- [Thornton](/thornton)
+- [Greenwood Village](/greenwood-village)
+- [Cherry Hills Village](/cherry-hills-village)
 
-Need to confirm coverage in your neighborhood? Call us at **[(480) 649-3663](tel:4806493663)**.
+Need to confirm coverage in your neighborhood? Call us at **[(303) 252-0517](tel:3032520517)**.
