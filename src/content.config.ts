@@ -108,6 +108,7 @@ const homepageCollection = defineCollection({
   schema: z.object({
     hero: z.object({
       title: z.string(),
+      h2: z.string().optional(),
       subtitle: z.string(),
       buttons: z.array(
         z.object({
