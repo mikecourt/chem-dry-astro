@@ -29,4 +29,4 @@ We do not sell personal information. We may share submitted lead data with servi
 
 ### Contact
 
-If you have questions about this policy, contact us at [office@whiteglovecarpet.com](mailto:office@whiteglovecarpet.com) or call [(815) 469-3170](tel:8154693170).
+If you have questions about this policy, contact us at [office@ktchemdrycarpetcleaning.com](mailto:office@ktchemdrycarpetcleaning.com) or call [(815) 469-3170](tel:8154693170).

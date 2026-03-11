@@ -7,9 +7,9 @@ images:
   - image: "/images/gallery/1.webp"
     description: "Professional Carpet Cleaning, Chicagoland"
   - image: "/images/gallery/2.webp"
-    description: "Upholstery Cleaning, Mesa AZ"
+    description: "Upholstery Cleaning, New Lenox IL"
   - image: "/images/gallery/3.webp"
-    description: "Tile & Grout Cleaning, Gilbert AZ"
+    description: "Tile & Grout Cleaning, Frankfort IL"
   - image: "/images/gallery/4.webp"
-    description: "Area Rug Cleaning, Scottsdale AZ"
+    description: "Area Rug Cleaning, Mokena IL"
 ---

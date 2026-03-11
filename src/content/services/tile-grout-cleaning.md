@@ -30,4 +30,4 @@ We use specialized equipment and powerful cleaning solutions designed specifical
 
 After cleaning, we recommend sealing your grout lines to protect against future staining and make regular maintenance easier.
 
-Serving New Lenox and the South suburbs since 1995, K&T Chem-Dry is your trusted source for tile and grout cleaning.
+Serving New Lenox and the South suburbs for over 30 years, K&T Chem-Dry is your trusted source for tile and grout cleaning.
