@@ -15,12 +15,12 @@
     "sticky_header": true
   },
   "params": {
-    "contact_form_action": "mailto:PLACEHOLDER_EMAIL@allprochemdry.com",
-    "appointment_form_action": "mailto:PLACEHOLDER_EMAIL@allprochemdry.com",
+    "contact_form_action": "mailto:office@allprochemdry.com",
+    "appointment_form_action": "mailto:office@allprochemdry.com",
     "footer_description": "Professional carpet, upholstery, and tile cleaning <br> serving the Denver metro and Highlands Ranch area.",
     "copyright": "All Pro Chem-Dry® © 2026. Independently Owned and Operated. All Rights Reserved.",
     "phone": "(303) 252-0517",
-    "email": "PLACEHOLDER_EMAIL@allprochemdry.com",
+    "email": "office@allprochemdry.com",
     "address": "8955 S. Ridgeline Blvd Unit 1800, Highlands Ranch, CO 80129",
     "mailing_address": "8955 S. Ridgeline Blvd Unit 1800, Highlands Ranch, CO 80129"
   },
