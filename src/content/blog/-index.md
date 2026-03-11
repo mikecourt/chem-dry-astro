@@ -1,6 +1,6 @@
 ---
-title: "Read Our **Articles**"
-meta_title: ""
-description: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS is a long established fact that a reader."
+title: "Carpet Cleaning **Tips & Insights**"
+meta_title: "Chem-Dry Blog | Carpet Cleaning Tips, Guides & Home Care Advice"
+description: "Explore expert carpet cleaning tips, home care guides, and industry insights from Phoenix's trusted Chem-Dry professionals."
 badge: "BLOG"
 ---
