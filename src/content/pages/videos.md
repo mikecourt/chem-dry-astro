@@ -1,7 +1,7 @@
 ---
-title: "Cleaning Videos | Brimley's White Glove Chem-Dry"
-meta_title: "Cleaning Videos | Brimley's White Glove Chem-Dry"
-description: "Watch cleaning tips and service demonstrations from Brimley's White Glove Chem-Dry."
+title: "Cleaning Videos | K&T Chem-Dry"
+meta_title: "Cleaning Videos | K&T Chem-Dry"
+description: "Watch cleaning tips and service demonstrations from K&T Chem-Dry."
 draft: false
 ---
 
@@ -9,6 +9,6 @@ draft: false
 
 Watch us on YouTube for cleaning tips, process videos, and homeowner education:
 
-- [Brimley's White Glove Chem-Dry YouTube Channel](https://www.youtube.com/@BrimleysWhiteGloveChemDry)
+- [K&T Chem-Dry YouTube Channel](https://www.youtube.com/@K&TsWhiteGloveChemDry)
 
-Need an estimate now? Call **[(480) 649-3663](tel:4806493663)** or [book online](/appointment).
+Need an estimate now? Call **[(815) 469-3170](tel:8154693170)** or [book online](/appointment).

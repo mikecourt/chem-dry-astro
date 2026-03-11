@@ -1,7 +1,7 @@
 ---
 title: "Stone Tile Cleaning & Polishing"
-meta_title: "Professional Stone Tile Cleaning & Polishing | Brimley's White Glove Chem-Dry"
-description: "Expert stone and tile cleaning, polishing, and sealing in Phoenix. Restore beauty to marble, travertine, slate, and natural stone surfaces."
+meta_title: "Professional Stone Tile Cleaning & Polishing | K&T Chem-Dry"
+description: "Expert stone and tile cleaning, polishing, and sealing in New Lenox. Restore beauty to marble, travertine, slate, and natural stone surfaces."
 icon: "FaGem"
 weight: 11
 date: 2025-01-21T05:00:00Z
@@ -11,7 +11,7 @@ draft: false
 
 ### Restore the Beauty of Your Natural Stone Surfaces
 
-Natural stone tiles like marble, travertine, slate, and limestone are beautiful investments that add elegance to your Phoenix home or business. But over time, dirt, grime, and etching can dull their appearance and make them look old and worn. Our professional stone tile cleaning and polishing service restores the natural beauty of your stone surfaces without harsh chemicals or abrasive methods.
+Natural stone tiles like marble, travertine, slate, and limestone are beautiful investments that add elegance to your New Lenox home or business. But over time, dirt, grime, and etching can dull their appearance and make them look old and worn. Our professional stone tile cleaning and polishing service restores the natural beauty of your stone surfaces without harsh chemicals or abrasive methods.
 
 Unlike DIY cleaners that can damage stone or leave residue, our specialized stone care process safely removes built-up dirt, grime, and stains while protecting the integrity of your natural stone. We then polish and seal your stone to restore its shine and protect it from future damage.
 

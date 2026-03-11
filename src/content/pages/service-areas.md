@@ -1,26 +1,23 @@
 ---
-title: "Service Areas | Brimley's White Glove Chem-Dry"
-meta_title: "Service Areas | Brimley's White Glove Chem-Dry"
-description: "Brimley's White Glove Chem-Dry proudly serves Phoenix, Mesa, Gilbert, Chandler, Tempe, Scottsdale, Queen Creek, Glendale, Peoria, Apache Junction, and San Tan Valley."
+title: "Service Areas | K&T Chem-Dry"
+meta_title: "Service Areas | K&T Chem-Dry"
+description: "K&T Chem-Dry proudly serves New Lenox, Frankfort, Mokena, Joliet, Homer Glen, Tinley Park, Orland Park, Lockport, and the Chicagoland area."
 draft: false
 ---
 
-## Phoenix Metro Service Areas
+## Chicagoland Service Areas
 
-Brimley's White Glove Chem-Dry provides carpet, upholstery, tile, and specialty cleaning across the Phoenix metro area.
+K&T Chem-Dry provides carpet, upholstery, tile, and specialty cleaning across the Chicagoland area.
 
 ### Cities We Serve
 
-- [Phoenix](/phoenix)
-- [Mesa](/mesa)
-- [Gilbert](/gilbert)
-- [Chandler](/chandler)
-- [Tempe](/tempe)
-- [Scottsdale](/scottsdale)
-- [Queen Creek](/queen-creek)
-- [Glendale](/glendale)
-- [Peoria](/peoria)
-- [Apache Junction](/apache-junction)
-- [San Tan Valley](/san-tan-valley)
+- [New Lenox](/new-lenox)
+- [Frankfort](/frankfort)
+- [Mokena](/mokena)
+- [Joliet](/joliet)
+- [Homer Glen](/homer-glen)
+- [Tinley Park](/tinley-park)
+- [Orland Park](/orland-park)
+- [Lockport](/lockport)
 
-Need to confirm coverage in your neighborhood? Call us at **[(480) 649-3663](tel:4806493663)**.
+Need to confirm coverage in your neighborhood? Call us at **[(815) 469-3170](tel:8154693170)**.

@@ -89,17 +89,14 @@
           "url": "/service-areas",
       "hasChildren": true,
       "children": [
-        { "name": "Phoenix", "url": "/phoenix" },
-        { "name": "Mesa", "url": "/mesa" },
-        { "name": "Gilbert", "url": "/gilbert" },
-        { "name": "Chandler", "url": "/chandler" },
-        { "name": "Tempe", "url": "/tempe" },
-        { "name": "Scottsdale", "url": "/scottsdale" },
-        { "name": "Queen Creek", "url": "/queen-creek" },
-        { "name": "Glendale", "url": "/glendale" },
-        { "name": "Peoria", "url": "/peoria" },
-        { "name": "Apache Junction", "url": "/apache-junction" },
-        { "name": "San Tan Valley", "url": "/san-tan-valley" }
+        { "name": "New Lenox", "url": "/new-lenox" },
+        { "name": "Frankfort", "url": "/frankfort" },
+        { "name": "Mokena", "url": "/mokena" },
+        { "name": "Joliet", "url": "/joliet" },
+        { "name": "Homer Glen", "url": "/homer-glen" },
+        { "name": "Tinley Park", "url": "/tinley-park" },
+        { "name": "Orland Park", "url": "/orland-park" },
+        { "name": "Lockport", "url": "/lockport" }
       ]
     },
     {
@@ -159,48 +156,36 @@
       "title": "SERVICE AREAS",
       "children": [
         {
-          "name": "Phoenix",
-          "url": "/phoenix"
+          "name": "New Lenox",
+          "url": "/new-lenox"
         },
         {
-          "name": "Mesa",
-          "url": "/mesa"
+          "name": "Frankfort",
+          "url": "/frankfort"
         },
         {
-          "name": "Gilbert",
-          "url": "/gilbert"
+          "name": "Mokena",
+          "url": "/mokena"
         },
         {
-          "name": "Chandler",
-          "url": "/chandler"
+          "name": "Joliet",
+          "url": "/joliet"
         },
         {
-          "name": "Tempe",
-          "url": "/tempe"
+          "name": "Homer Glen",
+          "url": "/homer-glen"
         },
         {
-          "name": "Scottsdale",
-          "url": "/scottsdale"
+          "name": "Tinley Park",
+          "url": "/tinley-park"
         },
         {
-          "name": "Queen Creek",
-          "url": "/queen-creek"
+          "name": "Orland Park",
+          "url": "/orland-park"
         },
         {
-          "name": "Glendale",
-          "url": "/glendale"
-        },
-        {
-          "name": "Peoria",
-          "url": "/peoria"
-        },
-        {
-          "name": "Apache Junction",
-          "url": "/apache-junction"
-        },
-        {
-          "name": "San Tan Valley",
-          "url": "/san-tan-valley"
+          "name": "Lockport",
+          "url": "/lockport"
         }
       ]
     }

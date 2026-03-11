@@ -1,7 +1,7 @@
 ---
 title: "Couch & Sofa Cleaning"
-meta_title: "Professional Couch & Sofa Cleaning | Brimley's White Glove Chem-Dry"
-description: "Expert couch and sofa cleaning in Phoenix. Remove stains, odors, and allergens from upholstery. Safe, fast-drying, effective on all fabric types."
+meta_title: "Professional Couch & Sofa Cleaning | K&T Chem-Dry"
+description: "Expert couch and sofa cleaning in New Lenox. Remove stains, odors, and allergens from upholstery. Safe, fast-drying, effective on all fabric types."
 icon: "FaCouch"
 weight: 13
 date: 2025-01-21T05:00:00Z

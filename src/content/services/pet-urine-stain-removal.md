@@ -1,7 +1,7 @@
 ---
 title: "Pet Urine Stain Cleaning"
-meta_title: "Professional Pet Urine Stain Cleaning | Brimley's White Glove Chem-Dry"
-description: "Permanent pet urine and stain removal in Phoenix using P.U.R.T.® treatment. Eliminate odors and stains permanently. Gentle on pets and kids."
+meta_title: "Professional Pet Urine Stain Cleaning | K&T Chem-Dry"
+description: "Permanent pet urine and stain removal in New Lenox using P.U.R.T.® treatment. Eliminate odors and stains permanently. Gentle on pets and kids."
 icon: "FaDog"
 weight: 12
 date: 2025-01-21T05:00:00Z

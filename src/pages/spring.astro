@@ -1,0 +1,328 @@
+---
+import Base from "@/layouts/Base.astro";
+import config from "@/config/config.json";
+
+const phone = config.params.phone;
+const telLink = `tel:${phone.replace(/\D/g, "")}`;
+
+const meta_title = "Spring Allergen Clear-Out | Save 15% on Carpet + Upholstery Cleaning";
+const meta_description =
+  "Spring Allergen Clear-Out — save 15% on carpet + upholstery cleaning. The Natural® process removes dust mites, pet dander, and pollen using about 80% less water. Book by April 15.";
+---
+
+<Base
+  title="Spring Allergen Clear-Out | Save 15% on Carpet Cleaning"
+  meta_title={meta_title}
+  description={meta_description}
+  noindex={true}
+>
+  <!-- Hero -->
+  <section class="spring-hero relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
+    <div class="container relative z-10">
+      <div class="max-w-2xl mx-auto text-center">
+        <!-- Campaign badge -->
+        <p class="inline-block bg-white/20 text-white text-sm font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-6">
+          Spring Allergen Clear-Out
+        </p>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" style="font-family: var(--font-primary, Poppins), sans-serif;">
+          Spring Is Here.<br />So Are the Allergens.<br />Clear Them Out.
+        </h1>
+
+        <p class="text-lg md:text-xl text-white/90 mb-4 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
+          We remove the dust mites, pet dander, and pollen trapped in your carpets
+          — using about 80% less water so your home is fresh in hours, not days.
+        </p>
+
+        <!-- Offer callout -->
+        <div class="bg-white rounded-2xl px-6 py-5 mb-8 shadow-xl max-w-lg mx-auto">
+          <p class="text-xs font-bold tracking-widest uppercase text-[#008752] mb-1">Limited-Time Offer</p>
+          <p class="text-2xl md:text-3xl font-bold text-dark mb-1">Save 15% on Carpet + Upholstery</p>
+          <p class="text-sm text-[#444444]">Book by April 15 for your early bird rate. 10% off April 15–30. Offer valid through April 30, 2026.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#spring-form"
+            class="btn btn-light text-lg px-8 py-4 font-semibold shadow-lg"
+            data-track="cta-click"
+            data-track-action="spring-hero-book"
+            data-track-location="hero"
+          >
+            Book My Spring Clean →
+          </a>
+          <a
+            href={telLink}
+            class="btn btn-outline-white text-lg px-8 py-4 font-semibold"
+            data-track="phone-click"
+            data-track-action="spring-hero-call"
+            data-track-location="hero"
+          >
+            Call {phone}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background gradient -->
+    <div class="absolute inset-0 -z-0" aria-hidden="true" style="background: linear-gradient(135deg, #008752 0%, #41AD49 60%, #005DAA 100%);"></div>
+  </section>
+
+  <!-- Trust signals bar -->
+  <section class="bg-[#f8f9fa] border-b border-gray-200 py-5">
+    <div class="container">
+      <ul class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-semibold text-[#444444]">
+        <li class="flex items-center gap-2">
+          <span class="text-yellow-400 text-base" aria-hidden="true">★★★★★</span>
+          4.8 Stars on Google
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-[#008752] text-base" aria-hidden="true">✓</span>
+          Locally Owned, Nationally Backed by Chem-Dry
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-[#008752] text-base" aria-hidden="true">✓</span>
+          The Natural® — No Harsh Chemicals
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-[#008752] text-base" aria-hidden="true">✓</span>
+          Safe for Kids &amp; Pets
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="text-[#008752] text-base" aria-hidden="true">📞</span>
+          <a href={telLink} class="text-primary hover:underline" data-track="phone-click" data-track-location="trust-bar">{phone}</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Features + Form -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="row g-10 items-start">
+        <!-- Feature bullets -->
+        <div class="col-12 lg:col-6" data-aos="fade-up-sm">
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-8" style="font-family: var(--font-primary, Poppins), sans-serif;">
+            Why Spring Is the Perfect Time to Clear the Air
+          </h2>
+
+          <ul class="space-y-6">
+            <li class="flex gap-4">
+              <span class="shrink-0 mt-1 w-7 h-7 rounded-full bg-[#008752] flex items-center justify-center text-white text-sm font-bold" aria-hidden="true">✓</span>
+              <div>
+                <p class="font-semibold text-dark mb-1" style="font-family: var(--font-secondary, Inter), sans-serif;">
+                  The Natural® cleaning process lifts allergens and dirt without harsh chemicals
+                </p>
+                <p class="text-[#444444] text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">
+                  No dirt-attracting residue left behind — your carpets stay cleaner longer.
+                </p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="shrink-0 mt-1 w-7 h-7 rounded-full bg-[#008752] flex items-center justify-center text-white text-sm font-bold" aria-hidden="true">✓</span>
+              <div>
+                <p class="font-semibold text-dark mb-1" style="font-family: var(--font-secondary, Inter), sans-serif;">
+                  Carpets dry hours faster than steam cleaning
+                </p>
+                <p class="text-[#444444] text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">
+                  About 80% less water means less disruption to your family — back to normal in hours, not days.
+                </p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="shrink-0 mt-1 w-7 h-7 rounded-full bg-[#008752] flex items-center justify-center text-white text-sm font-bold" aria-hidden="true">✓</span>
+              <div>
+                <p class="font-semibold text-dark mb-1" style="font-family: var(--font-secondary, Inter), sans-serif;">
+                  Safe for kids, pets, and allergy-sensitive households
+                </p>
+                <p class="text-[#444444] text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">
+                  The Natural® uses carbonated cleaning to lift dust mites, pet dander, and spring pollen from deep in carpet fibers.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Offer reminder -->
+          <div class="mt-10 p-6 rounded-xl border-2 border-[#008752] bg-[#008752]/5">
+            <p class="text-sm font-bold tracking-widest uppercase text-[#008752] mb-2">Spring Allergen Clear-Out Deal</p>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-bold text-dark">15% Off</span>
+                <span class="text-sm text-[#444444]">Carpet + Upholstery Bundle — Book by April 15</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xl font-bold text-dark">10% Off</span>
+                <span class="text-sm text-[#444444]">April 15–30 rate. Offer valid through April 30.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking form -->
+        <div class="col-12 lg:col-6" data-aos="fade-up-sm" data-aos-delay="100">
+          <div class="bg-light rounded-2xl p-8 shadow-sm" id="spring-form">
+            <h2 class="text-2xl font-bold text-dark mb-2" style="font-family: var(--font-primary, Poppins), sans-serif;">Book My Spring Clean</h2>
+            <p class="text-[#444444] text-sm mb-6" style="font-family: var(--font-secondary, Inter), sans-serif;">
+              Get your 15% off quote — we'll follow up within 1 business hour.
+            </p>
+
+            <form
+              action="/api/contact"
+              method="POST"
+              id="spring-form-el"
+              data-track="quote-form"
+              data-track-location="spring-landing"
+            >
+              <!-- Hidden campaign fields -->
+              <input type="hidden" name="campaign" value="spring-allergen-2026" />
+              <input type="hidden" name="utm_source" id="field-utm-source" value="" />
+              <input type="hidden" name="utm_medium" id="field-utm-medium" value="" />
+              <input type="hidden" name="utm_campaign" id="field-utm-campaign" value="" />
+              <input type="hidden" name="utm_content" id="field-utm-content" value="" />
+
+              <div class="space-y-4">
+                <div>
+                  <label for="spring-name" class="form-label">Name <span class="text-red-500">*</span></label>
+                  <input
+                    id="spring-name"
+                    name="name"
+                    type="text"
+                    class="form-input"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="spring-email" class="form-label">Email <span class="text-red-500">*</span></label>
+                  <input
+                    id="spring-email"
+                    name="email"
+                    type="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="spring-phone" class="form-label">Phone <span class="text-red-500">*</span></label>
+                  <input
+                    id="spring-phone"
+                    name="phone"
+                    type="tel"
+                    class="form-input"
+                    placeholder="(555) 555-1234"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="spring-services" class="form-label">What needs cleaning?</label>
+                  <textarea
+                    id="spring-services"
+                    name="services"
+                    class="form-input"
+                    rows="3"
+                    placeholder="e.g. 3 rooms of carpet + sectional sofa (Spring Allergen Clear-Out deal)"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary w-full text-base font-semibold py-3"
+                  data-track="cta-click"
+                  data-track-action="spring-form-submit"
+                >
+                  Book My Spring Clean →
+                </button>
+              </div>
+            </form>
+
+            <p class="text-xs text-[#444444] text-center mt-4" style="font-family: var(--font-secondary, Inter), sans-serif;">
+              Or call us directly: <a href={telLink} class="text-primary hover:underline font-semibold" data-track="phone-click" data-track-location="spring-form">{phone}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA strip -->
+  <section class="py-12" style="background: linear-gradient(90deg, #008752 0%, #005DAA 100%);">
+    <div class="container text-center">
+      <p class="text-white text-xl md:text-2xl font-bold mb-2" style="font-family: var(--font-primary, Poppins), sans-serif;">
+        Spring campaign ends April 30, 2026.
+      </p>
+      <p class="text-white/80 mb-6 text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">
+        Book by April 15 for your 15% early bird rate.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#spring-form"
+          class="btn btn-light px-8 py-3 font-semibold"
+          data-track="cta-click"
+          data-track-action="spring-bottom-book"
+          data-track-location="bottom-cta"
+        >
+          Book My Spring Clean →
+        </a>
+        <a
+          href={telLink}
+          class="btn btn-outline-white px-8 py-3 font-semibold"
+          data-track="phone-click"
+          data-track-action="spring-bottom-call"
+          data-track-location="bottom-cta"
+        >
+          Call {phone}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Capture UTM params from URL and populate hidden form fields
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const fields: Record<string, string> = {
+        utm_source: "field-utm-source",
+        utm_medium: "field-utm-medium",
+        utm_campaign: "field-utm-campaign",
+        utm_content: "field-utm-content",
+      };
+      for (const [param, fieldId] of Object.entries(fields)) {
+        const val = params.get(param);
+        const el = document.getElementById(fieldId) as HTMLInputElement | null;
+        if (el && val) el.value = val;
+      }
+    })();
+
+    // Async form submission
+    const form = document.getElementById("spring-form-el") as HTMLFormElement | null;
+    if (form) {
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      const originalText = btn?.textContent ?? "Book My Spring Clean →";
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (btn) {
+          btn.disabled = true;
+          btn.textContent = "Submitting...";
+        }
+        try {
+          const res = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+          });
+          if (res.ok) {
+            window.location.href = "/thank-you";
+          } else {
+            throw new Error("failed");
+          }
+        } catch {
+          if (btn) {
+            btn.disabled = false;
+            btn.textContent = originalText;
+          }
+          alert("Something went wrong. Please call us at " + document.querySelector<HTMLAnchorElement>('[data-track-location="spring-form"]')?.textContent + " to book.");
+        }
+      });
+    }
+  </script>
+</Base>

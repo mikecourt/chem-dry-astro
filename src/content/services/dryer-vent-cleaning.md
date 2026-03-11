@@ -1,7 +1,7 @@
 ---
 title: "Dryer Vent Cleaning"
-meta_title: "Dryer Vent Cleaning | Brimley's White Glove Chem-Dry"
-description: "Professional dryer vent cleaning in Phoenix. Reduce fire risk, improve efficiency, and extend the life of your dryer."
+meta_title: "Dryer Vent Cleaning | K&T Chem-Dry"
+description: "Professional dryer vent cleaning in New Lenox. Reduce fire risk, improve efficiency, and extend the life of your dryer."
 icon: "FaFan"
 banner: "/images/dryer-vent-service.jpg"
 date: 2025-01-21T05:00:00Z
@@ -10,9 +10,9 @@ weight: 16
 draft: false
 ---
 
-### Professional Dryer Vent Cleaning in Phoenix
+### Professional Dryer Vent Cleaning in New Lenox
 
-Brimley's White Glove Chem-Dry provides professional dryer vent cleaning services to keep your home safe and your dryer running efficiently. Clogged dryer vents are a leading cause of house fires and can significantly reduce your dryer's performance.
+K&T Chem-Dry provides professional dryer vent cleaning services to keep your home safe and your dryer running efficiently. Clogged dryer vents are a leading cause of house fires and can significantly reduce your dryer's performance.
 
 Lint and debris build up in dryer vents over time, restricting airflow and creating a serious fire hazard. Our thorough cleaning removes all lint, dust, and debris from your dryer vent system, improving safety and efficiency.
 
@@ -39,4 +39,4 @@ We inspect your dryer vent system to assess the level of buildup and identify an
 
 ###### Service Areas
 
-We proudly serve Phoenix, Scottsdale, Mesa, Tempe, Gilbert, Chandler, Glendale, Peoria, and surrounding areas.
+We proudly serve New Lenox, Frankfort, Mokena, Joliet, Homer Glen, Tinley Park, Orland Park, Lockport, and the Chicagoland area.

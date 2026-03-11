@@ -1,7 +1,7 @@
 ---
 title: "Wood Floor Cleaning"
-meta_title: "Professional Wood Floor Cleaning | Brimley's White Glove Chem-Dry"
-description: "Expert hardwood floor cleaning in Phoenix using low-moisture methods. Restores shine, protects finish, dries in hours. Safe for all wood types."
+meta_title: "Professional Wood Floor Cleaning | K&T Chem-Dry"
+description: "Expert hardwood floor cleaning in New Lenox using low-moisture methods. Restores shine, protects finish, dries in hours. Safe for all wood types."
 icon: "FaHouseUser"
 weight: 8
 date: 2025-01-21T05:00:00Z
@@ -11,7 +11,7 @@ draft: false
 
 ### Protect Your Investment with Professional Wood Floor Cleaning
 
-Hardwood floors add warmth and value to your Phoenix home, but they require special care. Unlike traditional wet mopping that can damage wood and leave it soaking for hours, our low-moisture cleaning method safely removes dirt, grime, and allergens while protecting your floors' finish.
+Hardwood floors add warmth and value to your New Lenox home, but they require special care. Unlike traditional wet mopping that can damage wood and leave it soaking for hours, our low-moisture cleaning method safely removes dirt, grime, and allergens while protecting your floors' finish.
 
 Our carbonating cleaning solution lifts dirt from deep within the wood grain without over-saturating. Your floors dry in 1-2 hours instead of days, and we never use harsh chemicals that can dull or damage the finish. Whether you have oak, maple, cherry, or exotic hardwoods, we have the expertise to clean them safely.
 

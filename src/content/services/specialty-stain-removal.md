@@ -1,7 +1,7 @@
 ---
 title: "Specialty Stain Removal"
-meta_title: "Professional Specialty Stain Removal | Brimley's White Glove Chem-Dry"
-description: "Expert stain removal for tough stains in Phoenix. Remove coffee, wine, grease, ink, and more from carpets and upholstery. Safe, effective treatment."
+meta_title: "Professional Specialty Stain Removal | K&T Chem-Dry"
+description: "Expert stain removal for tough stains in New Lenox. Remove coffee, wine, grease, ink, and more from carpets and upholstery. Safe, effective treatment."
 icon: "FaSprayCan"
 weight: 7
 date: 2025-01-21T05:00:00Z

@@ -1,7 +1,7 @@
 ---
 title: "Allergen Removal"
-meta_title: "Professional Allergen Removal Service | Brimley's White Glove Chem-Dry"
-description: "Remove 98% of allergens from carpets and upholstery in Phoenix. Eliminate dust mites, pet dander, and pollen. Safe, effective allergen removal."
+meta_title: "Professional Allergen Removal Service | K&T Chem-Dry"
+description: "Remove 98% of allergens from carpets and upholstery in New Lenox. Eliminate dust mites, pet dander, and pollen. Safe, effective allergen removal."
 icon: "FaShieldHeart"
 weight: 15
 date: 2025-01-21T05:00:00Z
