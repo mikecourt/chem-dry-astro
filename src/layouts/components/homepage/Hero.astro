@@ -35,10 +35,17 @@ const buttonVariants = ["primary", "secondary", "light"];
       as="h1"
       text={hero.title}
       svgColor="text-primary"
-      class="text-4xl md:text-5xl lg:text-6xl leading-[1.2] lg:leading-[1.1] text-center lg:text-left font-bold mt-0 mb-6 mx-auto lg:mx-0"
+      class="text-4xl md:text-5xl lg:text-6xl leading-[1.2] lg:leading-[1.1] text-center lg:text-left font-bold mt-0 mb-2 mx-auto lg:mx-0"
       dataAos="fade-up-sm"
       dataAosDelay="40"
     />
+    {hero.h2 && (
+      <h2
+        class="text-lg md:text-xl lg:text-2xl text-center lg:text-left font-medium text-dark/80 mt-0 mb-6 mx-auto lg:mx-0"
+        data-aos="fade-up-sm"
+        data-aos-delay="45"
+      >{hero.h2}</h2>
+    )}
 
     <!-- Trust Badges -->
     <div

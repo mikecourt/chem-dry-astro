@@ -1,6 +1,7 @@
 ---
 hero:
   title: "Carpet Cleaning in Denver <br> Your Family Can **Trust**"
+  h2: "Professional Carpet Cleaners Serving Denver CO & Highlands Ranch"
   subtitle: "Dries in 2 Hours. No Harsh Chemicals. Proudly Serving the Denver Metro & Highlands Ranch."
   buttons:
     - enable: true
@@ -48,7 +49,7 @@ responsibility:
   enable: true
   title: "**Best cleaning** <br> company in the area"
   subtitle: "WHAT WE DO"
-  content: "We offer professional carpet, upholstery, tile, and area rug <br> cleaning services throughout the Denver metro and Highlands Ranch. Our Hot <br> Carbonating Extraction process delivers deeper cleaning <br> using about 80% less water than steam cleaning."
+  content: "When you need professional carpet cleaning in Denver CO or Highlands Ranch, All Pro Chem-Dry delivers a deeper clean, faster-drying carpets, and a healthier home for your family. We serve [Denver](/denver) and the entire South Metro \u2014 from Highlands Ranch and Centennial to Englewood, Littleton, and Greenwood Village \u2014 using our proven Hot Carbonating Extraction process that\u2019s safe for kids and pets."
   image: "/images/home/responsibility/1.webp"
   video:
     thumbnail: "/images/home/responsibility/thumb.webp"

@@ -49,15 +49,18 @@ const buildAreaServed = () => {
       }
     };
   }
-  // Default: Denver metro area for homepage
-  return {
-    "@type": "State",
-    "name": "Colorado",
-    "containedInPlace": {
-      "@type": "Country",
-      "name": "United States"
-    }
-  };
+  // Default: Denver metro service area cities for homepage
+  return [
+    {"@type": "City", "name": "Denver"},
+    {"@type": "City", "name": "Highlands Ranch"},
+    {"@type": "City", "name": "Centennial"},
+    {"@type": "City", "name": "Englewood"},
+    {"@type": "City", "name": "Greenwood Village"},
+    {"@type": "City", "name": "Littleton"},
+    {"@type": "City", "name": "Lakewood"},
+    {"@type": "City", "name": "Parker"},
+    {"@type": "City", "name": "Thornton"}
+  ];
 };
 
 // Base business schema with all local SEO properties
