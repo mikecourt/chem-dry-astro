@@ -1,6 +1,6 @@
 ---
 title: "Read Our **Articles**"
-meta_title: ""
-description: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS is a long established fact that a reader."
+meta_title: "Carpet Cleaning Blog | Tips & Guides | K&T Chem-Dry"
+description: "Carpet cleaning tips, guides, and home care advice from K&T Chem-Dry in New Lenox, IL — your local Hot Carbonating Extraction experts since 1995."
 badge: "BLOG"
 ---
