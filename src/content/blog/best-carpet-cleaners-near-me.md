@@ -3,7 +3,6 @@ title: "Best Carpet Cleaners Near Me"
 meta_title: "Best Carpet Cleaners Near Me"
 description: "When it comes to choosing the best carpet cleaner for your needs, it can be difficult to determine which one is the right fit."
 date: 2024-08-08T22:35:00.000Z
-image: "/images/blog/best-carpet-cleaners-near-me.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

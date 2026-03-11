@@ -3,7 +3,6 @@ title: "4 Reasons to Hire a Professional Carpet Cleaner"
 meta_title: "4 Reasons to Hire a Professional Carpet Cleaner"
 description: "When it comes to cleaning your carpets, you might think that you have to do it yourself. While you might be able to do it yourself, you’ll likely end up ruining your expensive investment."
 date: 2024-04-20T16:45:19.000Z
-image: "/images/blog/professional-carpet-cleaner.webp"
 categories: ["Local Fun"]
 draft: false
 ---

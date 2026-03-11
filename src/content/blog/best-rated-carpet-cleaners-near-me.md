@@ -3,7 +3,6 @@ title: "Best Rated Carpet Cleaners Near Me"
 meta_title: "Best Rated Carpet Cleaners Near Me"
 description: "When it comes to keeping your home clean, one of the most important tasks is carpet cleaning."
 date: 2024-08-08T22:12:26.000Z
-image: "/images/blog/best-rated-carpet-cleaners-near-me.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

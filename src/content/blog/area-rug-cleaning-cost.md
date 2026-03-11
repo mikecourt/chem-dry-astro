@@ -3,7 +3,6 @@ title: "Area Rug Cleaning Cost"
 meta_title: "Area Rug Cleaning Cost"
 description: "The cost of area rug cleaning varies widely. It can range anywhere from $2 to $8 per square foot, but the amount you pay may depend on several factors. First, you should determine the material of your area rug."
 date: 2024-08-09T15:29:15.000Z
-image: "/images/blog/area-rug-cleaning-cost.png"
 categories: ["Rug Cleaning"]
 draft: false
 ---

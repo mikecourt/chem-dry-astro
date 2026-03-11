@@ -3,7 +3,6 @@ title: "Carpet Cleaners Near My Location"
 meta_title: "Carpet Cleaners Near My Location"
 description: "When choosing a carpet cleaner, it’s essential to find one that is affordable and offers transparent pricing."
 date: 2024-08-08T21:53:00.000Z
-image: "/images/blog/carpet-cleaners-near-my-location.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

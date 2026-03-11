@@ -3,7 +3,6 @@ title: "Carpet Cleaner Solution"
 meta_title: "Carpet Cleaner Solution"
 description: "If you are looking for a carpet cleaner solution to remove stains, dirt, and non-living allergens*, there are many choices available."
 date: 2024-08-08T21:24:12.000Z
-image: "/images/blog/carpet-cleaner-solution.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

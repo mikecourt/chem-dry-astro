@@ -3,7 +3,6 @@ title: "What is Carpet Shampoo Cleaner?"
 meta_title: "What is Carpet Shampoo Cleaner?"
 description: "Carpet shampoo cleaners are a great way to clean your carpets and rugs. They can remove dirt, dust, stains, and pet hair quickly and easily."
 date: 2024-08-08T20:02:46.000Z
-image: "/images/blog/what-is-carpet-shampoo-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

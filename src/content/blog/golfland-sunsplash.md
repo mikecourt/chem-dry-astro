@@ -3,7 +3,6 @@ title: "Golfland Sunsplash"
 meta_title: "Golfland Sunsplash"
 description: "With a water park, mini-golf course, laser tag, go-carts, and more, Golfland Sunsplash is a fun and exciting place for all ages. Plus, the entire facility is wheelchair accessible! Learn more by clicking here."
 date: 2024-08-08T16:28:10.000Z
-image: "/images/blog/golfland-sunsplash.webp"
 categories: ["Local Fun"]
 draft: false
 ---

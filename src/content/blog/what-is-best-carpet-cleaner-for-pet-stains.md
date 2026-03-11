@@ -3,7 +3,6 @@ title: "What is Best Carpet Cleaner for Pet Stains?"
 meta_title: "What is Best Carpet Cleaner for Pet Stains?"
 description: "If you have pets, then you know that pet stains are an inevitable part of life. Not only are they unsightly, but they can also be difficult to remove if not treated properly."
 date: 2024-08-09T15:32:19.000Z
-image: "/images/blog/what-is-best-carpet-cleaner-for-pet-stains.jpg"
 categories: ["Carpet Cleaning","Pet Urine Cleaning"]
 draft: false
 ---

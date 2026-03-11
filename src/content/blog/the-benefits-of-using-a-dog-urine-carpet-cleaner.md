@@ -3,7 +3,6 @@ title: "The Benefits of Using a Dog Urine Carpet Cleaner"
 meta_title: "The Benefits of Using a Dog Urine Carpet Cleaner"
 description: "Dogs are a man’s best friend, but with that title comes some responsibility. One of those responsibilities is keeping your carpets clean, especially after your dog has an accident."
 date: 2024-08-08T18:47:33.000Z
-image: "/images/blog/the-benefits-of-using-a-dog-urine-carpet-cleaner.webp"
 categories: ["Pet Urine Cleaning"]
 draft: false
 ---

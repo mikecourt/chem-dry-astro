@@ -3,7 +3,6 @@ title: "Wind Cave Trail"
 meta_title: "Wind Cave Trail"
 description: "If you want to take your dog out on a hike, try the 3.2-mile out-and-back Wind Cave Trail in Phoenix, Arizona. The trail is easy to follow and is a great way to get expansive city views."
 date: 2024-02-01T11:39:49.000Z
-image: "/images/blog/wind-cave-trail.webp"
 categories: ["Local Fun"]
 draft: false
 ---

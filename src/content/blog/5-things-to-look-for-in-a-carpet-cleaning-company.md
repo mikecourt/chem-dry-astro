@@ -3,7 +3,6 @@ title: "5 Things To Look For In A Carpet Cleaning Company"
 meta_title: "5 Things To Look For In A Carpet Cleaning Company"
 description: "Carpet is a big investment that requires regular maintenance. That’s why there are so many carpet cleaners out there vying for your business."
 date: 2024-04-25T21:28:45.000Z
-image: "/images/blog/5-things-to-look-for-in-a-carpet-cleaning-company.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

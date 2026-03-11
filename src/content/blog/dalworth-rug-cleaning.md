@@ -3,7 +3,6 @@ title: "Dalworth Rug Cleaning"
 meta_title: "Dalworth Rug Cleaning"
 description: "Rugs can be difficult to clean. They can gather a lot of dirt and dust over time, and they can also become stained or damaged. This is why it is important to have them cleaned on a regular basis."
 date: 2024-08-08T19:03:08.000Z
-image: "/images/blog/dalworth-rug-cleaning.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

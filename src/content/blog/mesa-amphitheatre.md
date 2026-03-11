@@ -3,7 +3,6 @@ title: "Mesa Amphitheatre"
 meta_title: "Mesa Amphitheatre"
 description: "The Mesa Amphitheatre is an outdoor concert venue with a maximum seating capacity of 4,950. Since its opening in 1979, this venue has stayed true to its original design."
 date: 2023-11-28T16:35:19.000Z
-image: "/images/blog/mesa-amphitheatre.webp"
 categories: ["Local Fun"]
 draft: false
 ---

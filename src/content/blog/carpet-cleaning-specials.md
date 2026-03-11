@@ -3,7 +3,6 @@ title: "Carpet Cleaning Specials"
 meta_title: "Carpet Cleaning Specials"
 description: "Cleaning your carpets can be a daunting task. Not only is it time consuming, but it can also be expensive if you hire a professional to do it for you. However, there are ways to get around this!"
 date: 2024-08-08T20:07:47.000Z
-image: "/images/blog/carpet-cleaning-specials.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

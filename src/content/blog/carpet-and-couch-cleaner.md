@@ -3,7 +3,6 @@ title: "Carpet and Couch Cleaner"
 meta_title: "Carpet and Couch Cleaner"
 description: "A carpet and couch cleaner is a useful device for cleaning carpets and couches. There are several types of carpet cleaners, but it’s best to choose the right one for your needs."
 date: 2024-08-08T21:30:39.000Z
-image: "/images/blog/carpet-and-couch-cleaner.webp"
 categories: ["Carpet Cleaning","Upholstery Cleaning"]
 draft: false
 ---

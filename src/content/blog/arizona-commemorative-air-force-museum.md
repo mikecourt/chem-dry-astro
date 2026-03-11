@@ -3,7 +3,6 @@ title: "Arizona Commemorative Air Force Museum"
 meta_title: "Arizona Commemorative Air Force Museum"
 description: "The Arizona Commemorative Air Force Museum, also known as the Airbase AZ Aircrafts Museum, is located at Falcon Field in Mesa, Arizona. It is the 10th unit of the Commemorative Air Force."
 date: 2024-08-09T15:55:00.000Z
-image: "/images/blog/arizona-commemorative-air-force-museum.webp"
 categories: ["Local Fun"]
 draft: false
 ---

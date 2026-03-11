@@ -3,7 +3,6 @@ title: "Area Rug Cleaning Pickup and Delivery Near Me"
 meta_title: "Area Rug Cleaning Pickup and Delivery Near Me"
 description: "Area rugs tend to collect a lot of dust. A wool area rug measuring 8×10 can contain as much as 10 pounds of dust. This makes them one of the largest airborne filters in a home."
 date: 2024-08-08T22:31:39.000Z
-image: "/images/blog/area-rug-cleaning-pickup-and-delivery-near-me.jpg"
 categories: ["Rug Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Kiwanis Park"
 meta_title: "Kiwanis Park"
 description: "The 125-acre park was purchased in 1972 with a 50 percent grant from the City’s Bureau of Outdoor Recreation. It was named for the Kiwanis Club which helped to sponsor the project."
 date: 2024-08-08T16:34:08.000Z
-image: "/images/blog/kiwanis-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

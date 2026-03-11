@@ -3,7 +3,6 @@ title: "Why Professional Carpet Cleaning Is Necessary"
 meta_title: "Why Professional Carpet Cleaning Is Necessary"
 description: "Carpets trap a large amount of dust, debris, and contaminants that can cause health problems. Regular vacuuming will help remove some of it, but professional cleaning can get rid of even more."
 date: 2024-08-08T17:09:49.000Z
-image: "/images/blog/why-professional-carpet-cleaning-is-necessary.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

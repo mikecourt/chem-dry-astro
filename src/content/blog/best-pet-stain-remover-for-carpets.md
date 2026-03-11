@@ -3,7 +3,6 @@ title: "Best Pet Stain Remover for Carpets"
 meta_title: "Best Pet Stain Remover for Carpets"
 description: "There are many different types of pet stain removers on the market, but which one is the best? We’ll take a look at some of the most popular brands and their features, so you can decide which one is right for you."
 date: 2024-08-08T22:14:26.000Z
-image: "/images/blog/best-pet-stain-remover-for-carpets.webp"
 categories: ["Pet Urine Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "How to Get Spots Out of Your Carpet"
 meta_title: "How to Get Spots Out of Your Carpet"
 description: "Most carpet comes with a stain-resistant coating (like StainMaster or ScotchGuard), so if you work to clean up the spot quickly, you can avoid having your spot turn into a permanent stain."
 date: 2022-05-23T21:36:07.000Z
-image: "/images/blog/how-to-get-spots-out-of-your-carpet.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

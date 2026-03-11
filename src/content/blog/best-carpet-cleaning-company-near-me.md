@@ -3,7 +3,6 @@ title: "Best Carpet Cleaning Company Near Me"
 meta_title: "Best Carpet Cleaning Company Near Me"
 description: "Finding the best carpet cleaning company near you can be a daunting task. There are so many companies to choose from, and it’s hard to know which one is right for you. But don’t worry, I’m here to help!"
 date: 2024-08-08T22:32:59.000Z
-image: "/images/blog/best-carpet-cleaning-company-near-me.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

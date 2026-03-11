@@ -3,7 +3,6 @@ title: "Carpet and Upholstery Cleaner Near Me"
 meta_title: "Carpet and Upholstery Cleaner Near Me"
 description: "When choosing a carpet and upholstery cleaner, you need to know the type of fiber your carpet is made of. Most commercial carpets are made of nylon, but some are a blend of two fibers."
 date: 2024-08-08T21:49:47.000Z
-image: "/images/blog/carpet-and-upholstery-cleaner-near-me.webp"
 categories: ["Carpet Cleaning","Upholstery Cleaning"]
 draft: false
 ---

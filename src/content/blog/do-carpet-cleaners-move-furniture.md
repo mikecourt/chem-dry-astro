@@ -3,7 +3,6 @@ title: "Do Carpet Cleaners Move Furniture?"
 meta_title: "Do Carpet Cleaners Move Furniture?"
 description: "When you’re looking for a professional carpet cleaning service, it’s important to ask the right questions so that you can be sure they will meet your needs."
 date: 2024-08-08T17:53:42.000Z
-image: "/images/blog/do-carpet-cleaners-move-furniture.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

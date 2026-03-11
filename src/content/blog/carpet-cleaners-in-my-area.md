@@ -3,7 +3,6 @@ title: "Carpet Cleaners in My Area"
 meta_title: "Carpet Cleaners in My Area"
 description: "When it comes to choosing the right carpet cleaners in my area, you should look for a company that uses organic products. Using these products helps to remove dirt, stains, and odors from carpets."
 date: 2024-08-08T21:19:36.000Z
-image: "/images/blog/carpet-cleaners-in-my-area.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

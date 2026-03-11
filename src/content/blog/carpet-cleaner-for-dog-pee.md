@@ -3,7 +3,6 @@ title: "Carpet Cleaner For Dog Pee"
 meta_title: "Carpet Cleaner For Dog Pee"
 description: "A carpet cleaner for dog pee can help you remove the smell of dog pee and neutralize the smell. This stain remover contains a solution of equal parts white vinegar and water."
 date: 2024-08-08T20:55:17.000Z
-image: "/images/blog/carpet-cleaner-for-dog-pee.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

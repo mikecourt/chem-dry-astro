@@ -3,7 +3,6 @@ title: "What is a Carpet Cleaner?"
 meta_title: "What is a Carpet Cleaner?"
 description: "A carpet cleaner is a professional who cleans your carpet to remove stains and dirt, as well as remove non-living allergens*. Common methods of carpet cleaning include hot water extraction, dry-cleaning, and vacuuming."
 date: 2024-08-08T21:51:57.000Z
-image: "/images/blog/carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

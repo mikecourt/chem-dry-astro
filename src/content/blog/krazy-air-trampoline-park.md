@@ -3,7 +3,6 @@ title: "Krazy Air Trampoline Park"
 meta_title: "Krazy Air Trampoline Park"
 description: "Krazy Air is an outdoor trampoline park located in Mesa, Arizona. With more than 28,000 square feet of jumping space, this trampoline park has something to please every jumper, from children to adults."
 date: 2024-08-09T16:12:34.000Z
-image: "/images/blog/krazy-air-trampoline-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

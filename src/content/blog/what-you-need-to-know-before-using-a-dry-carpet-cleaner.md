@@ -3,7 +3,6 @@ title: "What you Need to Know Before Using a Dry Carpet Cleaner"
 meta_title: "What you Need to Know Before Using a Dry Carpet Cleaner"
 description: "Dry carpet cleaner is a product that has become more and more popular in recent years. It is a powder that is sprinkled over the carpets and then brushe..."
 date: 2024-08-08T17:39:24.000Z
-image: "/images/blog/what-you-need-to-know-before-using-a-dry-carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

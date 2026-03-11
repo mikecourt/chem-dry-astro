@@ -3,7 +3,6 @@ title: "Best Carpet and Upholstery Cleaner"
 meta_title: "Best Carpet and Upholstery Cleaner"
 description: "If you are looking for the best carpet and upholstery cleaner, then you should look for one that is specifically designed for your type of carpet or upholstery."
 date: 2024-08-09T15:42:18.000Z
-image: "/images/blog/best-carpet-and-upholstery-cleaner.jpg"
 categories: ["Carpet Cleaning","Upholstery Cleaning"]
 draft: false
 ---

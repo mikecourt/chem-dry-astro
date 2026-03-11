@@ -3,7 +3,6 @@ title: "What is Best Carpet Cleaner?"
 meta_title: "What is Best Carpet Cleaner?"
 description: "There are many carpet cleaners on the market but finding the best one can be difficult."
 date: 2024-08-09T15:40:12.000Z
-image: "/images/blog/what-is-best-carpet-cleaner.png"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

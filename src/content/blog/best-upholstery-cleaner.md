@@ -3,7 +3,6 @@ title: "Best Upholstery Cleaner"
 meta_title: "Best Upholstery Cleaner"
 description: "When it comes to choosing the best upholstery cleaner for your needs, there are a few important factors you should consider. The first is the type of fabric your upholstery is made of."
 date: 2022-11-01T22:03:19.000Z
-image: "/images/blog/best-upholstery-cleaner.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

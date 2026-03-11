@@ -3,7 +3,6 @@ title: "Commercial Upholstery Cleaner"
 meta_title: "Commercial Upholstery Cleaner"
 description: "If you want to keep your furniture looking new, you need a good upholstery cleaner. A commercial upholstery cleaner can help to protect your furniture from spills, dirt, and dust."
 date: 2024-08-08T17:26:09.000Z
-image: "/images/blog/commercial-upholstery-cleaner.webp"
 categories: ["Commercial Cleaning"]
 draft: false
 ---

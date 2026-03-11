@@ -3,7 +3,6 @@ title: "Advantages of Using a Fabric Sofa Cleaner"
 meta_title: "Advantages of Using a Fabric Sofa Cleaner"
 description: "Fabric sofas are a popular choice for many homeowners because they offer comfort and style. However, they can be difficult to clean, and the smell can b..."
 date: 2024-08-08T18:42:48.000Z
-image: "/images/blog/advantages-of-using-a-fabric-sofa-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

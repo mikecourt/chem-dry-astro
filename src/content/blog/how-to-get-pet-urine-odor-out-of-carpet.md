@@ -3,7 +3,6 @@ title: "How to Get Pet Urine Odor Out of Carpet"
 meta_title: "How to Get Pet Urine Odor Out of Carpet"
 description: "Part of learning about how to get rid of urine odor is learning about urine and your carpet."
 date: 2022-05-23T21:48:18.000Z
-image: "/images/blog/how-to-get-pet-urine-odor-out-of-carpet.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

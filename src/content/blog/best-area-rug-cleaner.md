@@ -3,7 +3,6 @@ title: "Best Area Rug Cleaner"
 meta_title: "Best Area Rug Cleaner"
 description: "Area rug cleaning can be a daunting task. There are so many products and methods to choose from, it can be hard to know where to start. This guide will help you choose the best area rug cleaner for your needs."
 date: 2024-08-09T15:44:16.000Z
-image: "/images/blog/best-area-rug-cleaner.png"
 categories: ["Rug Cleaning"]
 draft: false
 ---

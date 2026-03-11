@@ -3,7 +3,6 @@ title: "What is the Best Carpet and Upholstery Cleaner?"
 meta_title: "What is the Best Carpet and Upholstery Cleaner?"
 description: "Carpet and upholstery cleaners come in a variety of formulas, including dry, foam, and liquid. It’s important to select the right type of cleaner for the job, as well as the right cleaning method."
 date: 2024-08-09T15:40:51.000Z
-image: "/images/blog/what-is-the-best-carpet-and-upholstery-cleaner.jpg"
 categories: ["Carpet Cleaning","Upholstery Cleaning"]
 draft: false
 ---

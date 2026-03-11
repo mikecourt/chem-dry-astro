@@ -3,7 +3,6 @@ title: "Best Rug Cleaner"
 meta_title: "Best Rug Cleaner"
 description: "There are many different types of rug cleaners on the market, so it can be difficult to decide which one is best for you."
 date: 2024-08-09T17:00:38.000Z
-image: "/images/blog/best-rug-cleaner.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

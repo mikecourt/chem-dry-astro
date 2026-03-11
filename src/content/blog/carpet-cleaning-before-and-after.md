@@ -3,7 +3,6 @@ title: "Carpet Cleaning Before and After"
 meta_title: "Carpet Cleaning Before and After"
 description: "Carpet cleaning is an important part of keeping your home looking its best."
 date: 2024-08-08T20:31:36.000Z
-image: "/images/blog/carpet-cleaning-before-and-after.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

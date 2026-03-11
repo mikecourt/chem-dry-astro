@@ -3,7 +3,6 @@ title: "Phoenix Zoo – A Fun, Educational Place For the Family"
 meta_title: "Phoenix Zoo – A Fun, Educational Place For the Family"
 description: "Phoenix Zoo is a fun, educational place to spend a day with the family. It is more than animals and walking trails; it offers many attractions and experiences, including Stingray Bay, Safari Train and Giraffe Encounter."
 date: 2024-08-08T16:31:40.000Z
-image: "/images/blog/phoenix-zoo.webp"
 categories: ["Local Fun"]
 draft: false
 ---

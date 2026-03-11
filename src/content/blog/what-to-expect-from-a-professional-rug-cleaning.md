@@ -3,7 +3,6 @@ title: "What to Expect from a Professional Rug Cleaning"
 meta_title: "What to Expect from a Professional Rug Cleaning"
 description: "Rug cleaning is the process of removing dirt, dust, and stains from a rug. It is important to clean rugs on a regular basis in order to extend their lifespan and keep them looking their best."
 date: 2024-08-08T17:42:15.000Z
-image: "/images/blog/what-to-expect-from-a-professional-rug-cleaning.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

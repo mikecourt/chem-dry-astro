@@ -3,7 +3,6 @@ title: "Benefits of Dry Carpet Cleaning"
 meta_title: "Benefits of Dry Carpet Cleaning"
 description: "Dry carpet cleaning is an environmentally friendly, cost-effective way to clean your carpets."
 date: 2023-07-17T16:22:38.000Z
-image: "/images/blog/benefits-of-dry-carpet-cleaning.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

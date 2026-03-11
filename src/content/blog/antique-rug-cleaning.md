@@ -3,7 +3,6 @@ title: "Antique Rug Cleaning"
 meta_title: "Antique Rug Cleaning"
 description: "When you want to maintain the beauty of your antique rug, you should consider the proper cleaning process."
 date: 2024-08-09T15:51:53.000Z
-image: "/images/blog/antique-rug-cleaning.jpg"
 categories: ["Rug Cleaning"]
 draft: false
 ---

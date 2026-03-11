@@ -3,7 +3,6 @@ title: "Red Mountain Ranch Country Club"
 meta_title: "Red Mountain Ranch Country Club"
 description: "Located just 23 miles from Sky Harbor Airport, Red Mountain Ranch Country Club is an exclusive membership club in Mesa, Arizona."
 date: 2024-08-09T16:06:51.000Z
-image: "/images/blog/red-mountain-ranch-country-club.webp"
 categories: ["Local Fun"]
 draft: false
 ---

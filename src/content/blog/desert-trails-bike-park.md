@@ -3,7 +3,6 @@ title: "Desert Trails Bike Park"
 meta_title: "Desert Trails Bike Park"
 description: "Desert Trails Bike Park in Mesa, AZ is a fantastic place for BMX and mountain biking enthusiasts. The park features 35 acres of rugged biking trails, big jumps, and scenic views."
 date: 2024-08-09T16:09:52.000Z
-image: "/images/blog/desert-trails-bike-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

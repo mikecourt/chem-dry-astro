@@ -3,7 +3,6 @@ title: "Best Sofa Cleaner Machine"
 meta_title: "Best Sofa Cleaner Machine"
 description: "Sofa cleaner machines are a great way to keep your furniture looking new. By using this machine on a regular basis, you can remove all the dirt, dust and stains that have built up over time."
 date: 2024-08-08T22:04:06.000Z
-image: "/images/blog/best-sofa-cleaner-machine.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

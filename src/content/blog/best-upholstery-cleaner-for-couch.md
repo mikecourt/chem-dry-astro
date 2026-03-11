@@ -3,7 +3,6 @@ title: "Best Upholstery Cleaner for Couch"
 meta_title: "Best Upholstery Cleaner for Couch"
 description: "When it comes to cleaning our upholstered furniture, most of us are at a loss. We know that we should do it, but we’re not sure where to start or what product to use."
 date: 2024-08-08T22:02:20.000Z
-image: "/images/blog/best-upholstery-cleaner-for-couch.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

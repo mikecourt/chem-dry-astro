@@ -3,7 +3,6 @@ title: "Cactus Yards"
 meta_title: "Cactus Yards"
 description: "There are several reasons to visit Cactus Yards Gilbert AZ. First, you’ll be able to enjoy free, weekly open-park baseball league play and tournaments."
 date: 2023-10-02T16:33:15.000Z
-image: "/images/blog/cactus-yards.webp"
 categories: ["Local Fun"]
 draft: false
 ---

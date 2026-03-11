@@ -3,7 +3,6 @@ title: "Cleaning Area Rugs at Home"
 meta_title: "Cleaning Area Rugs at Home"
 description: "Area rugs can be a great way to add color and pattern to a room, but they can also be a pain to clean."
 date: 2024-08-08T17:56:05.000Z
-image: "/images/blog/cleaning-area-rugs-at-home.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

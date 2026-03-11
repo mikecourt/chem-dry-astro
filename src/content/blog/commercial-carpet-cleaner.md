@@ -3,7 +3,6 @@ title: "Commercial Carpet Cleaner"
 meta_title: "Commercial Carpet Cleaner"
 description: "Commercial carpet cleaners are an important part of any business. They can help keep your carpets looking clean and new, which is important for both aesthetic and health reasons."
 date: 2024-08-08T17:19:48.000Z
-image: "/images/blog/commercial-carpet-cleaner.webp"
 categories: ["Commercial Cleaning"]
 draft: false
 ---

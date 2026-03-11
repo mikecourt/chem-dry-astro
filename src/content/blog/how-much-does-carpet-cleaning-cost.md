@@ -3,7 +3,6 @@ title: "How Much Does Carpet Cleaning Cost?"
 meta_title: "How Much Does Carpet Cleaning Cost?"
 description: "The question of how much does carpet cleaning cost varies with several factors. Some factors may affect the price of a service, including ease of access and the size of your home."
 date: 2023-06-07T16:14:30.000Z
-image: "/images/blog/how-much-does-carpet-cleaning-cost.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "How to Mop Your Tile Floor Without Just Spreading Dirt Around"
 meta_title: "How to Mop Your Tile Floor Without Just Spreading Dirt Around"
 description: "Use a cleaner with an alkaline or neutral pH. Avoid anything that is acidic, because that can cause premature wear to your grout, causing it to crack. Use as much cleaner as you need, but as little as possible."
 date: 2022-05-23T21:42:36.000Z
-image: "/images/blog/how-to-mop-your-tile-floor-without-just-spreading-dirt-around.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

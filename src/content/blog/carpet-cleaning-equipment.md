@@ -3,7 +3,6 @@ title: "Carpet Cleaning Equipment"
 meta_title: "Carpet Cleaning Equipment"
 description: "It’s no secret that carpets can quickly become stained and smelly if not properly cleaned on a regular basis."
 date: 2024-08-08T20:18:49.000Z
-image: "/images/blog/carpet-cleaning-equipment.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

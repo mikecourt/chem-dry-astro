@@ -3,7 +3,6 @@ title: "Bell Bank Park"
 meta_title: "Bell Bank Park"
 description: "Bell Bank Park is a multi-purpose sports complex in Mesa, Arizona. The relatively new facility had its grand opening in 2022, headlined by musician Lindsey Stirling. See our home page."
 date: 2024-08-08T16:57:28.000Z
-image: "/images/blog/bell-bank-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

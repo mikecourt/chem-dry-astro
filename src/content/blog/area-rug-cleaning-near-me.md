@@ -3,7 +3,6 @@ title: "Area Rug Cleaning Near Me"
 meta_title: "Area Rug Cleaning Near Me"
 description: "Area rugs are a great way to make a room look finished and clean. However, they require proper cleaning every now and then."
 date: 2024-08-09T15:20:54.000Z
-image: "/images/blog/area-rug-cleaning-near-me.png"
 categories: ["Rug Cleaning"]
 draft: false
 ---

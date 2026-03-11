@@ -3,7 +3,6 @@ title: "Carpet Cleaning Brush"
 meta_title: "Carpet Cleaning Brush"
 description: "Carpet cleaning can be a daunting task-especially if you have a lot of carpets in your home. Not only does it take a lot of time, but it can also be difficult to get the carpets clean and looking new again."
 date: 2024-08-08T20:30:39.000Z
-image: "/images/blog/carpet-cleaning-brush.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

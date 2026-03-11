@@ -3,7 +3,6 @@ title: "Espee Park"
 meta_title: "Espee Park"
 description: "There are many things to do in Chandler, Arizona. For example, you can visit the Burst of Butterflies Create and Paint Studio for a fun and laid-back activity. You’ll get to go home with one-of-a-kind artwork!"
 date: 2024-08-08T16:38:02.000Z
-image: "/images/blog/espee-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

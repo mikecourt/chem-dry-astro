@@ -3,7 +3,6 @@ title: "Best Pet Stain and Odor Remover for Carpet Cleaners"
 meta_title: "Best Pet Stain and Odor Remover for Carpet Cleaners"
 description: "Are you struggling to get rid of pet stains and odors from your carpets? If so, you’re not alone. Pets are a joy to have in our lives, but they can also be a challenge when it comes to cleaning up their messes."
 date: 2024-08-08T22:15:50.000Z
-image: "/images/blog/best-pet-stain-and-odor-remover-for-carpet-cleaners.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

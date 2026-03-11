@@ -3,7 +3,6 @@ title: "Augusta Ranch Golf Club"
 meta_title: "Augusta Ranch Golf Club"
 description: "If you are looking for a challenging 18-hole golf course in Mesa, Arizona, consider the Augusta Ranch Golf Club."
 date: 2024-01-22T16:39:03.000Z
-image: "/images/blog/augusta-ranch-golf-club.webp"
 categories: ["Local Fun"]
 draft: false
 ---

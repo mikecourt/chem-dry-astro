@@ -3,7 +3,6 @@ title: "How To Clean Upholstery with a Dry Cleaner"
 meta_title: "How To Clean Upholstery with a Dry Cleaner"
 description: "Dry upholstery cleaner is a great choice for cleaning your furniture when you don’t have any other options. It can be used to clean a variety of surfaces, and it’s perfect for spot cleaning."
 date: 2024-08-08T17:32:11.000Z
-image: "/images/blog/how-to-clean-upholstery-with-a-dry-cleaner.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Lost Dutchman State Park"
 meta_title: "Lost Dutchman State Park"
 description: "Located in Apache Junction, less than an hour from Phoenix, Lost Dutchman State Park is a popular camping destination for hikers and campers."
 date: 2024-08-08T16:59:34.000Z
-image: "/images/blog/lost-dutchman-state-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

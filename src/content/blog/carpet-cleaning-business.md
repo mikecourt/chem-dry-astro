@@ -3,7 +3,6 @@ title: "Carpet Cleaning Business"
 meta_title: "Carpet Cleaning Business"
 description: "Starting your own carpet cleaning business can be a great way to make some extra money. Carpet cleaning is a relatively low-cost business to start and there’s always a demand for it."
 date: 2024-08-08T20:29:29.000Z
-image: "/images/blog/carpet-cleaning-business.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

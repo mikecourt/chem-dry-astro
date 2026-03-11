@@ -3,7 +3,6 @@ title: "Carpet Cleaning Products"
 meta_title: "Carpet Cleaning Products"
 description: "Most people don’t think about the importance of carpet cleaning until it’s too late."
 date: 2024-08-08T20:14:10.000Z
-image: "/images/blog/carpet-cleaning-products.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

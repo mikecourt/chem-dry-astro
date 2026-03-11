@@ -3,7 +3,6 @@ title: "Best Oriental Rug Cleaning Near Me"
 meta_title: "Best Oriental Rug Cleaning Near Me"
 description: "Oriental rugs are a valuable addition to any home. Not only are they beautiful and unique, but they can also be quite expensive. That’s why it’s so important to take care of them and keep them clean."
 date: 2024-08-08T22:18:48.000Z
-image: "/images/blog/best-oriental-rug-cleaning-near-me.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

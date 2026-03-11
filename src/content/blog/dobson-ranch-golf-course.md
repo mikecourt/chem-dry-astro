@@ -3,7 +3,6 @@ title: "Dobson Ranch Golf Course"
 meta_title: "Dobson Ranch Golf Course"
 description: "The 18-hole championship golf course is rated one of the best in Arizona by Golf Digest. This facility has an extensive driving range, lighted practice greens, and a pro shop. It is located near a major highway."
 date: 2023-12-08T16:36:52.000Z
-image: "/images/blog/dobson-ranch-golf-course.webp"
 categories: ["Local Fun"]
 draft: false
 ---

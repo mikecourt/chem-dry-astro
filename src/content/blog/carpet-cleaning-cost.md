@@ -3,7 +3,6 @@ title: "Carpet Cleaning Cost"
 meta_title: "Carpet Cleaning Cost"
 description: "Carpet cleaning is an important part of home maintenance, and it’s a service that many homeowners need on a regular basis."
 date: 2024-08-08T20:24:52.000Z
-image: "/images/blog/carpet-cleaning-cost.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

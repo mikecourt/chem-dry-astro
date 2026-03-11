@@ -3,7 +3,6 @@ title: "Why Carpet Cleaning is Important"
 meta_title: "Why Carpet Cleaning is Important"
 description: "Carpet Cleaning removes trapped dirt and odors. Odors, from wet dogs to garlic sauces, settle into the base of carpet fibers where regular vacuuming can’t reach. Learn more by clicking here."
 date: 2024-08-08T17:05:13.000Z
-image: "/images/blog/why-carpet-cleaning-is-important.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

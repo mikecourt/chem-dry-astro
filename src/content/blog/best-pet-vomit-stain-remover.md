@@ -3,7 +3,6 @@ title: "Best Pet Vomit Stain Remover"
 meta_title: "Best Pet Vomit Stain Remover"
 description: "No one likes to deal with pet vomit stains, but unfortunately, they can often show up at the worst times. In this article, we’ll discuss the best ways to remove them quickly and easily."
 date: 2024-08-08T22:13:46.000Z
-image: "/images/blog/best-pet-vomit-stain-remover.webp"
 categories: ["Pet Urine Cleaning"]
 draft: false
 ---

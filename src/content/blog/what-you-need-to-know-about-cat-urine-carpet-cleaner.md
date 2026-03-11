@@ -3,7 +3,6 @@ title: "What You Need to Know About Cat Urine Carpet Cleaner"
 meta_title: "What You Need to Know About Cat Urine Carpet Cleaner"
 description: "If you have a cat, then you know that one of the biggest challenges is dealing with their urine. Cat urine can be difficult to remove from carpets, and it can also leave an unpleasant smell."
 date: 2024-08-08T17:16:18.000Z
-image: "/images/blog/what-you-need-to-know-about-cat-urine-carpet-cleaner.webp"
 categories: ["Pet Urine Cleaning"]
 draft: false
 ---

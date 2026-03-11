@@ -3,7 +3,6 @@ title: "Best Deals on Carpet Cleaners"
 meta_title: "Best Deals on Carpet Cleaners"
 description: "When it comes to keeping your carpets clean, there’s no one-size-fits-all solution."
 date: 2024-08-08T22:30:11.000Z
-image: "/images/blog/best-deals-on-carpet-cleaners.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

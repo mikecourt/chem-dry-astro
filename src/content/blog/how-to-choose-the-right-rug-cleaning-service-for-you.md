@@ -3,7 +3,6 @@ title: "How to Choose the Right Rug Cleaning Service for You"
 meta_title: "How to Choose the Right Rug Cleaning Service for You"
 description: "When it comes to taking care of your rugs, you have a few different options. You can clean them yourself, hire a professional to do it for you, or take them to a drop-off rug cleaning service."
 date: 2024-08-08T17:41:14.000Z
-image: "/images/blog/how-to-choose-the-right-rug-cleaning-service-for-you.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

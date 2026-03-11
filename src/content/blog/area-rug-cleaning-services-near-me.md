@@ -3,7 +3,6 @@ title: "Area Rug Cleaning Services Near Me"
 meta_title: "Area Rug Cleaning Services Near Me"
 description: "Area rugs receive a lot of traffic. They are often put down in high-traffic areas and are not only a great way to decorate a room, but also protect the flooring underneath."
 date: 2024-08-08T22:28:05.000Z
-image: "/images/blog/area-rug-cleaning-services-near-me.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

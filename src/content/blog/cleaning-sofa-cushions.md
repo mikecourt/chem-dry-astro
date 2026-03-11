@@ -3,7 +3,6 @@ title: "Cleaning Sofa Cushions"
 meta_title: "Cleaning Sofa Cushions"
 description: "Sofa cushions can become stained and faded over time from dirt and dust buildup. This can be a real eyesore and make your couch look old and tired."
 date: 2024-08-08T19:08:45.000Z
-image: "/images/blog/cleaning-sofa-cushions.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

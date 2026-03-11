@@ -3,7 +3,6 @@ title: "What is Best Carpet Cleaner Product?"
 meta_title: "What is Best Carpet Cleaner Product?"
 description: "Carpet cleaning is a difficult task that often requires special equipment and products."
 date: 2024-08-09T15:18:25.000Z
-image: "/images/blog/what-is-best-carpet-cleaner-product.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Carpet Cleaning Services"
 meta_title: "Carpet Cleaning Services"
 description: "Did you know that hiring a professional carpet cleaning service can benefit you in many ways? Not only will your carpets be cleaned and sanitized, but you’ll also get peace of mind knowing that the job was done right."
 date: 2024-08-08T20:12:08.000Z
-image: "/images/blog/carpet-cleaning-services.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

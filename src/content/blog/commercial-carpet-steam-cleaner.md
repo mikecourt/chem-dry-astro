@@ -3,7 +3,6 @@ title: "Commercial Carpet Steam Cleaner"
 meta_title: "Commercial Carpet Steam Cleaner"
 description: "Commercial carpet steam cleaners are a must-have for any business. Not only do they help to keep carpets clean and free of non-living allergens*, but th..."
 date: 2024-08-08T17:23:15.000Z
-image: "/images/blog/commercial-carpet-steam-cleaner.webp"
 categories: ["Commercial Cleaning"]
 draft: false
 ---

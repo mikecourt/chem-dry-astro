@@ -3,7 +3,6 @@ title: "How to Clean Tile Floors"
 meta_title: "How to Clean Tile Floors"
 description: "If you want your tile floors to stay looking fresh, you need to sweep or vacuum regularly and wet clean (mop) them at least once a week."
 date: 2024-08-08T17:09:04.000Z
-image: "/images/blog/how-to-clean-tile-floors.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

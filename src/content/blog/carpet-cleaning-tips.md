@@ -3,7 +3,6 @@ title: "Carpet Cleaning Tips"
 meta_title: "Carpet Cleaning Tips"
 description: "It’s no secret that keeping your carpets clean can be a challenge. Not only do they tend to attract dirt and dust, but they can also be difficult to stain."
 date: 2024-08-08T20:06:06.000Z
-image: "/images/blog/carpet-cleaning-tips.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

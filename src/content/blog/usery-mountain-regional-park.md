@@ -3,7 +3,6 @@ title: "Usery Mountain Regional Park"
 meta_title: "Usery Mountain Regional Park"
 description: "Usery Mountain Regional Park Mesa AZ is a 365-day-a-year destination that offers an abundance of outdoor recreational activities to locals and out-of-town visitors."
 date: 2024-08-08T17:02:47.000Z
-image: "/images/blog/usery-mountain-regional-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Carpet Cleaners in the Area"
 meta_title: "Carpet Cleaners in the Area"
 description: "Choosing the right carpet cleaner in your area is crucial if you want to have a clean and pristine carpet."
 date: 2024-08-08T21:22:27.000Z
-image: "/images/blog/carpet-cleaners-in-the-area.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Area Rug Dry Cleaning Near Me"
 meta_title: "Area Rug Dry Cleaning Near Me"
 description: "Area rugs, especially oriental rugs, can be beautiful and valuable additions to any room. However, they can also quickly become dirty, especially if they’re exposed to a large amount of traffic."
 date: 2024-05-08T22:25:50.000Z
-image: "/images/blog/area-rug-dry-cleaning-near-me.png"
 categories: ["Rug Cleaning"]
 draft: false
 ---

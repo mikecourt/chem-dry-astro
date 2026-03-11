@@ -3,7 +3,6 @@ title: "Tips for Starting a Carpet Cleaning Company"
 meta_title: "Tips for Starting a Carpet Cleaning Company"
 description: "When you are looking to start your own Carpet Cleaning Company, there are many things that you must consider."
 date: 2024-06-09T16:48:25.000Z
-image: "/images/blog/carpet-cleaning-company.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

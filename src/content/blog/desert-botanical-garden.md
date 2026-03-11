@@ -3,7 +3,6 @@ title: "Desert Botanical Garden"
 meta_title: "Desert Botanical Garden"
 description: "Desert Botanical Garden is a place for the whole family. The 140-acre attraction features five thematic trails highlighting topics like conservation, desert living, and desert wildflowers."
 date: 2024-08-08T16:33:10.000Z
-image: "/images/blog/desert-botanical-garden.webp"
 categories: ["Local Fun"]
 draft: false
 ---

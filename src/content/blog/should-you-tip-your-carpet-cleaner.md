@@ -3,7 +3,6 @@ title: "Should You Tip Your Carpet Cleaner?"
 meta_title: "Should You Tip Your Carpet Cleaner?"
 description: "Carpet cleaning is the process of removing dirt, dust, and other debris from the surface of your carpets. It is important to keep your carpets clean, as dirt and dust can cause them to become stained and faded over time."
 date: 2024-08-08T17:51:43.000Z
-image: "/images/blog/should-you-tip-your-carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

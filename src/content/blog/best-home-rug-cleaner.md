@@ -3,7 +3,6 @@ title: "Best Home Rug Cleaner"
 meta_title: "Best Home Rug Cleaner"
 description: "Anyone who has ever tried to clean a rug knows that it’s not an easy task. Not only do you have to contend with the dirt and stains, but you also have to worry about the fabric and fibers of the rug itself."
 date: 2024-08-08T22:19:47.000Z
-image: "/images/blog/best-home-rug-cleaner.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

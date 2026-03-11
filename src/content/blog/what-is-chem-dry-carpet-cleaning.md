@@ -3,7 +3,6 @@ title: "What is Chem Dry Carpet Cleaning?"
 meta_title: "What is Chem Dry Carpet Cleaning?"
 description: "Carpet cleaning is a chore that many people put off for as long as possible. But it doesn’t have to be a dreaded task. Chem-Dry is a professional carpet..."
 date: 2024-08-08T18:41:46.000Z
-image: "/images/blog/what-is-chem-dry-carpet-cleaning.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

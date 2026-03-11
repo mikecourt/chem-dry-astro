@@ -3,7 +3,6 @@ title: "The Best Way to Clean Your Carpets on A Budget"
 meta_title: "The Best Way to Clean Your Carpets on A Budget"
 description: "Carpet cleaning is an important part of home maintenance, but it can be expensive.  There are a few things to keep in mind when using a cheap carpet cleaner. First, be sure to use the correct amount of cleaner."
 date: 2024-08-08T17:17:26.000Z
-image: "/images/blog/the-best-way-to-clean-your-carpets-on-a-budget.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

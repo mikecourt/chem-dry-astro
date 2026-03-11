@@ -3,7 +3,6 @@ title: "Can You Use a Carpet Cleaner on a Rug?"
 meta_title: "Can You Use a Carpet Cleaner on a Rug?"
 description: "First off, you should know that not every rug can handle a carpet cleaner. In fact, it can do more damage than good."
 date: 2024-08-08T21:54:01.000Z
-image: "/images/blog/can-you-use-a-carpet-cleaner-on-a-rug.webp"
 categories: ["Carpet Cleaning","Rug Cleaning"]
 draft: false
 ---

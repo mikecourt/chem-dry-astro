@@ -3,7 +3,6 @@ title: "Carpet & Upholstery Cleaners"
 meta_title: "Carpet & Upholstery Cleaners"
 description: "Investing in a [carpet & upholstery cleaner](https://www.amazon."
 date: 2024-08-08T21:27:05.000Z
-image: "/images/blog/carpet-upholstery-cleaners.webp"
 categories: ["Carpet Cleaning","Upholstery Cleaning"]
 draft: false
 ---

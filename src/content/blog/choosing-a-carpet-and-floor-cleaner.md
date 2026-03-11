@@ -3,7 +3,6 @@ title: "Choosing a Carpet and Floor Cleaner"
 meta_title: "Choosing a Carpet and Floor Cleaner"
 description: "Carpet and floor cleaners come in many shapes and sizes and come with a variety of attachments. Some include hoses and mini nozzles for easy cleaning of pet hair and stains."
 date: 2024-08-08T21:32:17.000Z
-image: "/images/blog/choosing-a-carpet-and-floor-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

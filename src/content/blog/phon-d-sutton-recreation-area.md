@@ -3,7 +3,6 @@ title: "Phon D Sutton Recreation Area"
 meta_title: "Phon D Sutton Recreation Area"
 description: "A visit to Phon D Sutton Recreation Area AZ should include several activities. Kayaking, hiking, tubing, fishing, and camping are just a few of the options."
 date: 2024-03-15T16:43:11.000Z
-image: "/images/blog/phon-d-sutton-recreation-area.webp"
 categories: ["Local Fun"]
 draft: false
 ---

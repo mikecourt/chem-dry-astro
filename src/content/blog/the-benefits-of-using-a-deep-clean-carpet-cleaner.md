@@ -3,7 +3,6 @@ title: "The Benefits of Using a Deep Clean Carpet Cleaner"
 meta_title: "The Benefits of Using a Deep Clean Carpet Cleaner"
 description: "Carpet cleaning is a chore that many people put off for as long as possible. But it doesn’t have to be a difficult or time-consuming process! With the h..."
 date: 2024-08-08T17:30:11.000Z
-image: "/images/blog/the-benefits-of-using-a-deep-clean-carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

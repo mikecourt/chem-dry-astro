@@ -3,7 +3,6 @@ title: "Desert Breeze Park  – Fun Things to Do in Chandler"
 meta_title: "Desert Breeze Park  – Fun Things to Do in Chandler"
 description: "Desert Breeze Park is a large public park that offers a lake, splash pad, sports courts, fields, paths, and playgrounds. It is a great place to spend time with the family or make new memories."
 date: 2024-08-08T16:35:18.000Z
-image: "/images/blog/desert-breeze-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

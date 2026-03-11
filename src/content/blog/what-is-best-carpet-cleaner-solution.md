@@ -3,7 +3,6 @@ title: "What is Best Carpet Cleaner Solution?"
 meta_title: "What is Best Carpet Cleaner Solution?"
 description: "Carpet cleaning is a tedious task that many people put off for as long as possible. But the longer you wait, the harder it becomes-and the more dirt and dust you’re likely to track all over your house."
 date: 2024-08-08T22:37:53.000Z
-image: "/images/blog/what-is-best-carpet-cleaner-solution.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

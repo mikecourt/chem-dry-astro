@@ -3,7 +3,6 @@ title: "The Benefits and Disadvantages of Deep Carpet Cleaning"
 meta_title: "The Benefits and Disadvantages of Deep Carpet Cleaning"
 description: "If you want to give your carpet a thorough cleaning, consider hiring a professional cleaner. This service will not damage your carpet fibers, and it will remove stains."
 date: 2023-08-01T16:26:27.000Z
-image: "/images/blog/the-benefits-and-disadvantages-of-deep-carpet-cleaning.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

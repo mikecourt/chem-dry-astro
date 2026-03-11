@@ -3,7 +3,6 @@ title: "Carpet Steam Cleaning Near Me"
 meta_title: "Carpet Steam Cleaning Near Me"
 description: "If you’re like most people, you probably don’t think about cleaning your carpets very often. And that’s a big mistake, because dirty carpets can really damage your health."
 date: 2024-08-08T19:14:23.000Z
-image: "/images/blog/carpet-steam-cleaning-near-me-2.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

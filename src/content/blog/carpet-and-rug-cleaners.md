@@ -3,7 +3,6 @@ title: "Carpet and Rug Cleaners"
 meta_title: "Carpet and Rug Cleaners"
 description: "Carpet and rug cleaners can do more than simply remove dirt and stains from your home. They can also use natural and organic cleaning methods to ensure that your home looks great after a professional cleaning."
 date: 2024-08-08T21:41:10.000Z
-image: "/images/blog/carpet-and-rug-cleaners.webp"
 categories: ["Carpet Cleaning","Rug Cleaning"]
 draft: false
 ---

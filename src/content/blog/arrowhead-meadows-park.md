@@ -3,7 +3,6 @@ title: "Arrowhead Meadows Park"
 meta_title: "Arrowhead Meadows Park"
 description: "Good park and is well maintained. Lots of shade and ramadas. Pretty huge compared to other Chandler parks. The only downside is irresponsible dog owners who leave feces everywhere. Read on to learn more."
 date: 2024-08-08T16:36:58.000Z
-image: "/images/blog/arrowhead-meadows-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

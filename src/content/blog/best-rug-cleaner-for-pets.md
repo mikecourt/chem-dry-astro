@@ -3,7 +3,6 @@ title: "Best Rug Cleaner for Pets"
 meta_title: "Best Rug Cleaner for Pets"
 description: "If you have a pet, then you know that they can be hard on your carpets. Pets can track in dirt, mud and hair that can be difficult to remove without the right tools."
 date: 2024-08-08T22:09:12.000Z
-image: "/images/blog/best-rug-cleaner-for-pets.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

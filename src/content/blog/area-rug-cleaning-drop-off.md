@@ -3,7 +3,6 @@ title: "Area Rug Cleaning Drop Off"
 meta_title: "Area Rug Cleaning Drop Off"
 description: "Area rugs can be difficult to clean and often become stained and dirty. Many people choose to take them to a professional rug cleaning service to have them cleaned professionally."
 date: 2024-08-09T15:27:02.000Z
-image: "/images/blog/area-rug-cleaning-drop-off.png"
 categories: ["Rug Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "What is Carpet Rug Cleaner"
 meta_title: "What is Carpet Rug Cleaner"
 description: "Carpets and rugs can be difficult to clean, especially if they are heavily stained. But there is a great solution-carpet rug cleaner!"
 date: 2024-08-08T20:23:21.000Z
-image: "/images/blog/what-is-carpet-rug-cleaner.webp"
 categories: ["Carpet Cleaning","Rug Cleaning"]
 draft: false
 ---

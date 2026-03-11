@@ -3,7 +3,6 @@ title: "Chemdry Carpet Cleaning"
 meta_title: "Chemdry Carpet Cleaning"
 description: "Chemdry carpet cleaning is a professional grade carpet cleaning service that uses a deep-cleaning, low moisture method to clean carpets."
 date: 2024-08-08T19:13:15.000Z
-image: "/images/blog/chemdry-carpet-cleaning.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

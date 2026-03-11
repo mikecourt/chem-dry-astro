@@ -3,7 +3,6 @@ title: "Carpet Cleaner Spray"
 meta_title: "Carpet Cleaner Spray"
 description: "A carpet cleaner spray is an excellent option for cleaning your carpets. It will lift stains from your carpets and remove soap left by other cleaners. You should use this cleaner as directed to avoid foaming."
 date: 2024-08-08T21:11:49.000Z
-image: "/images/blog/carpet-cleaner-spray.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

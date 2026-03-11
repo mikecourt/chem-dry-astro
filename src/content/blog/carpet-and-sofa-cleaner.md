@@ -3,7 +3,6 @@ title: "Carpet and Sofa Cleaner"
 meta_title: "Carpet and Sofa Cleaner"
 description: "If your sofa or carpet is very dirty, there are several options available to get rid of stains. You can buy a carpet cleaner and use it on the sofa, or you can use a professional cleaner when necessary."
 date: 2024-08-08T21:45:14.000Z
-image: "/images/blog/carpet-and-sofa-cleaner.webp"
 categories: ["Carpet Cleaning","Upholstery Cleaning"]
 draft: false
 ---

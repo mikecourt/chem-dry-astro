@@ -3,7 +3,6 @@ title: "Wedding Venues in the East Valley"
 meta_title: "Wedding Venues in the East Valley"
 description: "This hotel offers a number of amenities to guests, from low-key rooms to suites with kitchenettes. It has a championship golf course and two pools, as well as a restaurant. Guests can also enjoy free Wi-Fi."
 date: 2024-08-09T15:55:52.000Z
-image: "/images/blog/arizona-golf-resort-event-center.webp"
 categories: ["Local Fun"]
 draft: false
 ---

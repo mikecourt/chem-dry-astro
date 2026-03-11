@@ -3,7 +3,6 @@ title: "Why Upholstery Cleaning Is Important"
 meta_title: "Why Upholstery Cleaning Is Important"
 description: "Upholstery furniture gets a lot of use. It is a gathering place for the family and can be a breeding ground for bacteria, non-living allergens*, dirt, mildew, and fleas. See our home page."
 date: 2024-08-08T17:11:03.000Z
-image: "/images/blog/why-upholstery-cleaning-is-important.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

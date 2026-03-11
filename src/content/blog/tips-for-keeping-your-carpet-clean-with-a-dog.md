@@ -3,7 +3,6 @@ title: "Tips for Keeping Your Carpet Clean with a Dog"
 meta_title: "Tips for Keeping Your Carpet Clean with a Dog"
 description: "Your carpet is one of the most important features of your home, and it’s important to keep it clean. Not only will this make your home look nicer, but it will also help to protect your carpet from damage."
 date: 2024-08-08T17:44:04.000Z
-image: "/images/blog/tips-for-keeping-your-carpet-clean-with-a-dog.webp"
 categories: ["Pet Urine Cleaning"]
 draft: false
 ---

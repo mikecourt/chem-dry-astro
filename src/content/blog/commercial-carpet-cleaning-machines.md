@@ -3,7 +3,6 @@ title: "Commercial Carpet Cleaning Machines"
 meta_title: "Commercial Carpet Cleaning Machines"
 description: "Commercial carpet cleaning machines are an essential piece of equipment for any business that wants to keep their carpets looking clean and new."
 date: 2024-08-08T17:24:28.000Z
-image: "/images/blog/commercial-carpet-cleaning-machines.webp"
 categories: ["Commercial Cleaning"]
 draft: false
 ---

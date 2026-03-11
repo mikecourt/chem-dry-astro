@@ -3,7 +3,6 @@ title: "Car Carpet Cleaner Machine"
 meta_title: "Car Carpet Cleaner Machine"
 description: "Buying a car carpet cleaner machine is an excellent way to maintain the cleanliness of your automobile. After all, people spend most of their time in their vehicles and germs can accumulate."
 date: 2024-08-08T21:25:14.000Z
-image: "/images/blog/car-carpet-cleaner-machine.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

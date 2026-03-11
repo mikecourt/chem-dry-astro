@@ -3,7 +3,6 @@ title: "Are You Supposed to Tip Carpet Cleaners"
 meta_title: "Are You Supposed to Tip Carpet Cleaners"
 description: "When you have your carpets cleaned, you may be tempted to leave a tip. However, it’s not customary to do so."
 date: 2024-08-09T15:48:22.000Z
-image: "/images/blog/are-you-supposed-to-tip-carpet-cleaners.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

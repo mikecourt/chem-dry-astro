@@ -3,7 +3,6 @@ title: "Why Hire a Professional Carpet Cleaner?"
 meta_title: "Why Hire a Professional Carpet Cleaner?"
 description: "Keeping carpets clean is important to the health of your family and guests. Regular professional cleaning removes dirt, stains, and embedded pollutants that can cause breathing problems."
 date: 2024-08-08T17:06:26.000Z
-image: "/images/blog/why-hire-a-professional-carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

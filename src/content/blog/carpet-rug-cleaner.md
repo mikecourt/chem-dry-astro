@@ -3,7 +3,6 @@ title: "Carpet Rug Cleaner"
 meta_title: "Carpet Rug Cleaner"
 description: "Cleaning your carpets and rugs can be a daunting task, especially if you don’t have the right tools or know how to do it properly."
 date: 2024-08-08T20:21:31.000Z
-image: "/images/blog/carpet-rug-cleaner.webp"
 categories: ["Carpet Cleaning","Rug Cleaning"]
 draft: false
 ---

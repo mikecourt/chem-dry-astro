@@ -3,7 +3,6 @@ title: "Cleaning Oriental Rugs Near Me"
 meta_title: "Cleaning Oriental Rugs Near Me"
 description: "Oriental rugs are a beautiful addition to any home, but they need to be cleaned and maintained properly in order to keep their color and luster."
 date: 2024-08-08T19:10:38.000Z
-image: "/images/blog/cleaning-oriental-rugs-near-me.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

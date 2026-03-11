@@ -3,7 +3,6 @@ title: "How to Make Your Own DIY Carpet Cleaner"
 meta_title: "How to Make Your Own DIY Carpet Cleaner"
 description: "Carpets can quickly become stained and matted if not cleaned on a regular basis. Not only is this unsightly, but it can also be dangerous for your family if dirt and dust are allowed to build up."
 date: 2024-08-08T19:01:07.000Z
-image: "/images/blog/how-to-make-your-own-diy-carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Best Sofa Cleaner"
 meta_title: "Best Sofa Cleaner"
 description: "It’s no secret that keeping a clean home is important. Not only does it make you feel good when you walk in the door, but it also helps protect your health."
 date: 2024-08-08T22:05:19.000Z
-image: "/images/blog/best-sofa-cleaner.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Carpet and Furniture Cleaning"
 meta_title: "Carpet and Furniture Cleaning"
 description: "Furniture and carpets can have a significant impact on the appearance of a room, and they need to be cleaned regularly to keep them looking their best."
 date: 2024-08-08T21:34:40.000Z
-image: "/images/blog/carpet-and-furniture-cleaning.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

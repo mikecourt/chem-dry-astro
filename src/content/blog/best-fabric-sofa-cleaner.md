@@ -3,7 +3,6 @@ title: "Best Fabric Sofa Cleaner"
 meta_title: "Best Fabric Sofa Cleaner"
 description: "Cleaning your fabric sofa can be a daunting task. But with the right tools and techniques, it can be a breeze. In this article, we will teach you how to vacuum, clean, and treat stains on your fabric sofa."
 date: 2024-08-08T22:25:39.000Z
-image: "/images/blog/best-fabric-sofa-cleaner.jpg"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

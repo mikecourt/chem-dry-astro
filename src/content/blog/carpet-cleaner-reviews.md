@@ -3,7 +3,6 @@ title: "Carpet Cleaner Reviews"
 meta_title: "Carpet Cleaner Reviews"
 description: "When looking for a carpet cleaner, the first thing you need to consider is the amount of"
 date: 2024-08-08T21:10:49.000Z
-image: "/images/blog/carpet-cleaner-reviews.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

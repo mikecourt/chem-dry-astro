@@ -3,7 +3,6 @@ title: "Best Home Carpet Steam Cleaner"
 meta_title: "Best Home Carpet Steam Cleaner"
 description: "Carpet steam cleaners are a lifesaver when it comes to deep-cleaning your carpets."
 date: 2024-08-08T22:21:27.000Z
-image: "/images/blog/best-home-carpet-steam-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

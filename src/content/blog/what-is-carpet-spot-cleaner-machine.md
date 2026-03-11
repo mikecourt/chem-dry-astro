@@ -3,7 +3,6 @@ title: "What is Carpet Spot Cleaner Machine?"
 meta_title: "What is Carpet Spot Cleaner Machine?"
 description: "Carpet spot cleaner machines are a must-have for anyone with carpets in their home. Not only do they help to remove dirt and stains from your carpets, but they also help to keep them looking new for longer."
 date: 2024-08-08T20:00:49.000Z
-image: "/images/blog/what-is-carpet-spot-cleaner-machine.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "How to Find a Carpet Cleaning Near Me"
 meta_title: "How to Find a Carpet Cleaning Near Me"
 description: "Getting your carpet cleaned by a professional company can save you from the expense of a new one. Most cleaning services charge by the square footage of your carpet or offer flat rates for the rooms in your house."
 date: 2024-05-02T16:46:35.000Z
-image: "/images/blog/carpet-cleaning-near-me.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

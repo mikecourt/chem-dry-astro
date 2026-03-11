@@ -3,7 +3,6 @@ title: "Benefits of Investing in a Carpet Cleaner Service"
 meta_title: "Benefits of Investing in a Carpet Cleaner Service"
 description: "Carpet cleaning companies can help extend the life of your carpet. They can also remove stains, dirt, and non-living allergens*."
 date: 2024-08-08T17:03:49.000Z
-image: "/images/blog/benefits-of-investing-in-a-carpet-cleaner-service.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

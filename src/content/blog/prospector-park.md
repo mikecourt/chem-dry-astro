@@ -3,7 +3,6 @@ title: "Prospector Park"
 meta_title: "Prospector Park"
 description: "Located on Idaho Rd, Prospector Park is a large & very nice park with lots of facilities. It’s surrounded by gorgeous mountain views & desert landscaping."
 date: 2024-08-08T17:01:26.000Z
-image: "/images/blog/prospector-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

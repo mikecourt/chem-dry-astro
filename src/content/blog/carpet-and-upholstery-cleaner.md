@@ -3,7 +3,6 @@ title: "Carpet and Upholstery Cleaner"
 meta_title: "Carpet and Upholstery Cleaner"
 description: "When looking for a carpet and upholstery cleaner, the first thing you should do is choose a product that works well for your type of carpet and upholstery."
 date: 2024-08-08T21:48:22.000Z
-image: "/images/blog/carpet-and-upholstery-cleaner.webp"
 categories: ["Carpet Cleaning","Upholstery Cleaning"]
 draft: false
 ---

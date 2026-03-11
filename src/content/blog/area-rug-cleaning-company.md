@@ -3,7 +3,6 @@ title: "Area Rug Cleaning Company"
 meta_title: "Area Rug Cleaning Company"
 description: "An area rug cleaning company can help you maintain the beauty of your rugs. Rugs can become dirty from everyday use, and regular vacuuming may not be enough to remove stubborn stains and odors."
 date: 2024-08-09T15:30:06.000Z
-image: "/images/blog/area-rug-cleaning-company.jpg"
 categories: ["Rug Cleaning"]
 draft: false
 ---

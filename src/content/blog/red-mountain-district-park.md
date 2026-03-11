@@ -3,7 +3,6 @@ title: "Red Mountain District Park"
 meta_title: "Red Mountain District Park"
 description: "Red Mountain District Park is a city park with lighted baseball & soccer fields and shaded picnic areas. The park also features a lake and has desert habitats like ocotillo, mesquite, saguaro cacti, jojoba, and creosote."
 date: 2024-08-08T16:52:35.000Z
-image: "/images/blog/red-mountain-district-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

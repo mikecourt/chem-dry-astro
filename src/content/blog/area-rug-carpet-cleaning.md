@@ -3,7 +3,6 @@ title: "Area Rug Carpet Cleaning"
 meta_title: "Area Rug Carpet Cleaning"
 description: "If you want to keep your area rug looking as beautiful as possible, you must follow the proper carpet cleaning procedures. This includes vacuuming it daily to remove dirt and grit."
 date: 2024-08-09T15:46:52.000Z
-image: "/images/blog/area-rug-carpet-cleaning.jpg"
 categories: ["Rug Cleaning"]
 draft: false
 ---

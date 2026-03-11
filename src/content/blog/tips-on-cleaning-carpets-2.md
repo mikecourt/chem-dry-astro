@@ -3,7 +3,6 @@ title: "Tips on Cleaning Carpets"
 meta_title: "Tips on Cleaning Carpets"
 description: "Carpet cleaning is an important part of home maintenance. It’s a job that should be done regularly to keep your carpets looking their best."
 date: 2024-08-08T19:11:39.000Z
-image: "/images/blog/tips-on-cleaning-carpets-2.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Carpet Steam Cleaning Near Me"
 meta_title: "Carpet Steam Cleaning Near Me"
 description: "You’ve probably heard about the benefits of carpet steam cleaning, but have you considered the costs? What exactly is it? What methods are available, and what types of guarantees can you expect? Read on to find out!"
 date: 2023-05-29T16:13:37.000Z
-image: "/images/blog/carpet-steam-cleaning-near-me.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

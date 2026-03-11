@@ -3,7 +3,6 @@ title: "Commercial Carpet Cleaning Equipment"
 meta_title: "Commercial Carpet Cleaning Equipment"
 description: "Commercial carpet cleaning equipment can be a great investment for your business. Not only will it help to keep your carpets looking clean and new, but it can also improve the air quality in your office or workplace."
 date: 2024-08-08T19:05:29.000Z
-image: "/images/blog/commercial-carpet-cleaning-equipment.webp"
 categories: ["Carpet Cleaning","Commercial Cleaning"]
 draft: false
 ---

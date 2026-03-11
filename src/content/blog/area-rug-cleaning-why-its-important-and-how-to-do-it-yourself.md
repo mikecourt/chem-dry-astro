@@ -3,7 +3,6 @@ title: "Area Rug Cleaning: Why It’s Important and How to Do It Yourself"
 meta_title: "Area Rug Cleaning: Why It’s Important and How to Do It Yourself"
 description: "Dropping off your area rugs for cleaning is a convenient and affordable way to keep them looking their best."
 date: 2024-08-08T17:43:09.000Z
-image: "/images/blog/area-rug-cleaning-why-its-important-and-how-to-do-it-yourself.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

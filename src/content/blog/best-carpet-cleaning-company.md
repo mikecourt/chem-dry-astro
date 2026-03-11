@@ -3,7 +3,6 @@ title: "Best Carpet Cleaning Company"
 meta_title: "Best Carpet Cleaning Company"
 description: "Finding the best carpet cleaning company can be a daunting task. With so many options available, it can be hard to know which one is right for you."
 date: 2024-08-08T22:33:59.000Z
-image: "/images/blog/best-carpet-cleaning-company.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

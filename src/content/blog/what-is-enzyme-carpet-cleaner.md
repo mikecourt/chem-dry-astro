@@ -3,7 +3,6 @@ title: "What is Enzyme Carpet Cleaner?"
 meta_title: "What is Enzyme Carpet Cleaner?"
 description: "Carpet cleaners come in all shapes and sizes, but this one is special. It uses enzymes to clean your carpets, which means it’s gentle and fresh for pets and children."
 date: 2024-08-08T18:43:49.000Z
-image: "/images/blog/what-is-enzyme-carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Cosmo Dog Park"
 meta_title: "Cosmo Dog Park"
 description: "This unique park is designed specifically for dogs, making it a popular choice among local dog owners. It has separate areas for active and timid dogs, a lake, and dog wash stations."
 date: 2024-08-08T16:39:24.000Z
-image: "/images/blog/cosmo-dog-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

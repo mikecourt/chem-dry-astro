@@ -3,7 +3,6 @@ title: "The Benefits of Using a Dry Clean Carpet Cleaner"
 meta_title: "The Benefits of Using a Dry Clean Carpet Cleaner"
 description: "Dry clean carpet cleaners offer a quick and easy way to clean your carpets without the hassle of having to lug them to a professional cleaner."
 date: 2024-08-08T17:33:32.000Z
-image: "/images/blog/the-benefits-of-using-a-dry-clean-carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

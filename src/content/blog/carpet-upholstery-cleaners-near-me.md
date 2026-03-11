@@ -3,7 +3,6 @@ title: "Carpet Upholstery Cleaners Near Me"
 meta_title: "Carpet Upholstery Cleaners Near Me"
 description: "Carpet upholstery cleaning can be a daunting task. Not only do you have to worry about getting the dirt and dust out, but you also have to make sure that the fabric is not damaged in the process."
 date: 2024-08-08T17:13:27.000Z
-image: "/images/blog/carpet-upholstery-cleaners-near-me.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

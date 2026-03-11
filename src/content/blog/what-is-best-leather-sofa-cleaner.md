@@ -3,7 +3,6 @@ title: "What is Best Leather Sofa Cleaner?"
 meta_title: "What is Best Leather Sofa Cleaner?"
 description: "When looking for a leather sofa cleaner, it’s important to choose one that is specifically designed for leather furniture. Some cleaners contain harsh chemicals that can damage the leather."
 date: 2024-08-08T22:18:01.000Z
-image: "/images/blog/what-is-best-leather-sofa-cleaner.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

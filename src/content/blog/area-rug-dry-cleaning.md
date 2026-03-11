@@ -3,7 +3,6 @@ title: "Area Rug Dry Cleaning"
 meta_title: "Area Rug Dry Cleaning"
 description: "If you have a valuable area rug, you should have it cleaned by a professional. There are many techniques that can be used to clean rugs. The first step is to test the rug’s condition."
 date: 2024-08-08T22:26:59.000Z
-image: "/images/blog/area-rug-dry-cleaning.jpg"
 categories: ["Rug Cleaning"]
 draft: false
 ---

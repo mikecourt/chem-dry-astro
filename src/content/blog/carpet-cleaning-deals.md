@@ -3,7 +3,6 @@ title: "Carpet Cleaning Deals"
 meta_title: "Carpet Cleaning Deals"
 description: "Carpet cleaning is a great way to keep your carpets looking new and fresh."
 date: 2024-08-08T21:30:52.000Z
-image: "/images/blog/carpet-cleaning-deals.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

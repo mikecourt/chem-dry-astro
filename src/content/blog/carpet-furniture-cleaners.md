@@ -3,7 +3,6 @@ title: "Carpet Furniture Cleaners"
 meta_title: "Carpet Furniture Cleaners"
 description: "Carpet furniture cleaners are an effective and affordable way to clean your furniture. By using a carpet cleaner, you can remove dirt, dust, and other non-living allergens* that may be causing you problems."
 date: 2024-08-08T20:03:42.000Z
-image: "/images/blog/carpet-furniture-cleaners.webp"
 categories: ["Carpet Cleaning","Upholstery Cleaning"]
 draft: false
 ---

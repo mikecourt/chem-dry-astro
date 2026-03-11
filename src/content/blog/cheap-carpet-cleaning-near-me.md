@@ -3,7 +3,6 @@ title: "Cheap Carpet Cleaning Near Me"
 meta_title: "Cheap Carpet Cleaning Near Me"
 description: "Carpet cleaning is an important part of home maintenance, and it’s something that should be done regularly to keep your carpets looking their best."
 date: 2024-08-08T17:18:31.000Z
-image: "/images/blog/cheap-carpet-cleaning-near-me.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

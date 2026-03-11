@@ -3,7 +3,6 @@ title: "Affordable Carpet Cleaning"
 meta_title: "Affordable Carpet Cleaning"
 description: "If you want to get a carpet cleaning done for less, you should call a few affordable companies and compare their prices and services. You should also ask them if they will treat stains."
 date: 2023-04-06T15:53:48.000Z
-image: "/images/blog/affordable-carpet-cleaning.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

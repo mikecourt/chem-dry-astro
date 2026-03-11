@@ -3,7 +3,6 @@ title: "Carpet Cleaning Supplies"
 meta_title: "Carpet Cleaning Supplies"
 description: "When it comes to carpet cleaning, there are a lot of different products and methods to choose from."
 date: 2024-08-08T20:05:10.000Z
-image: "/images/blog/carpet-cleaning-supplies.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

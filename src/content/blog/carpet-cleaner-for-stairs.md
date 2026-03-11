@@ -3,7 +3,6 @@ title: "Carpet Cleaner For Stairs"
 meta_title: "Carpet Cleaner For Stairs"
 description: "The first step in carpet cleaning stairs is to make sure that the stairs are free of debris. Before beginning, make sure to empty all of the water from the stairs and then use a carpet cleaner for stairs."
 date: 2024-08-08T21:07:34.000Z
-image: "/images/blog/carpet-cleaner-for-stairs.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

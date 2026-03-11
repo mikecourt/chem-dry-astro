@@ -3,7 +3,6 @@ title: "What is Best Carpet Cleaner Solution for Pets?"
 meta_title: "What is Best Carpet Cleaner Solution for Pets?"
 description: "If you have pets, you know that they can be a real hassle when it comes to cleaning up messes. From pet hair to stains and smells, it seems like there’s always something to clean up after them."
 date: 2022-12-07T22:36:47.000Z
-image: "/images/blog/what-is-best-carpet-cleaner-solution-for-pets.jpg"
 categories: ["Carpet Cleaning","Pet Urine Cleaning"]
 draft: false
 ---

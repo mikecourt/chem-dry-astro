@@ -3,7 +3,6 @@ title: "Best Way to Remove Pet Urine Stains from Carpet"
 meta_title: "Best Way to Remove Pet Urine Stains from Carpet"
 description: "Everyone makes mistakes, and when it comes to cleaning up pet urine stains, the sooner you can address the problem, the better. If you’re not sure how to remove the stain, don’t worry – there are plenty of ways to do it."
 date: 2024-08-08T21:56:29.000Z
-image: "/images/blog/best-way-to-remove-pet-urine-stains-from-carpet.webp"
 categories: ["Carpet Cleaning","Pet Urine Cleaning"]
 draft: false
 ---

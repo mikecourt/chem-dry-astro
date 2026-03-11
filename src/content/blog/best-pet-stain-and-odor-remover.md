@@ -3,7 +3,6 @@ title: "What is Best Pet Stain and Odor Remover?"
 meta_title: "What is Best Pet Stain and Odor Remover?"
 description: "When it comes to finding the best pet stain and odor remover, it can be tough to know where to start."
 date: 2024-08-08T22:17:14.000Z
-image: "/images/blog/best-pet-stain-and-odor-remover.webp"
 categories: ["Pet Urine Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "How to Find Carpet Cleaning Near Me"
 meta_title: "How to Find Carpet Cleaning Near Me"
 description: "If you’re looking for a carpet cleaning company in your area, the best place to start is by asking around."
 date: 2024-08-08T17:12:19.000Z
-image: "/images/blog/how-to-find-carpet-cleaning-near-me.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

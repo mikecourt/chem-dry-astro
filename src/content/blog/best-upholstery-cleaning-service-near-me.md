@@ -3,7 +3,6 @@ title: "Best Upholstery Cleaning Service Near Me"
 meta_title: "Best Upholstery Cleaning Service Near Me"
 description: "When it comes to getting your furniture cleaned, it’s important to choose a company you can trust. By doing your research ahead of time, you can find a company that will do a great job and meet your budget."
 date: 2024-08-08T22:01:08.000Z
-image: "/images/blog/best-upholstery-cleaning-service-near-me.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Area Rug Carpet Cleaning Near Me"
 meta_title: "Area Rug Carpet Cleaning Near Me"
 description: "Choosing the best area rug cleaning service for your home is an important part of maintaining the beauty and longevity of your rugs."
 date: 2023-02-25T15:39:13.000Z
-image: "/images/blog/area-rug-carpet-cleaning-near-me.jpg"
 categories: ["Carpet Cleaning","Rug Cleaning"]
 draft: false
 ---

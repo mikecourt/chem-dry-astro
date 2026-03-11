@@ -3,7 +3,6 @@ title: "How to Clean Upholstery with a DIY Solution"
 meta_title: "How to Clean Upholstery with a DIY Solution"
 description: "Most people don’t think about upholstery cleaning until there’s a problem. And by then, it can be difficult to clean the dirt and stains that have built up over time."
 date: 2024-08-08T18:59:50.000Z
-image: "/images/blog/how-to-clean-upholstery-with-a-diy-solution.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

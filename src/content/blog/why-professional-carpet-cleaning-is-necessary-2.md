@@ -3,7 +3,6 @@ title: "Why Professional Carpet Cleaning Is Necessary"
 meta_title: "Why Professional Carpet Cleaning Is Necessary"
 description: "Compared to other furnishings in a home, carpeting receives the most wear and tear. Regular cleaning by a professional cleaner can help your carpet last longer and look better."
 date: 2024-08-08T17:08:20.000Z
-image: "/images/blog/why-professional-carpet-cleaning-is-necessary-2.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

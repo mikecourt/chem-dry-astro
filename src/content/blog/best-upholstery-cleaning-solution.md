@@ -3,7 +3,6 @@ title: "Best Upholstery Cleaning Solution"
 meta_title: "Best Upholstery Cleaning Solution"
 description: "When it comes to upholstery cleaning, there are a lot of different solutions on the market. It can be difficult to decide which one is right for you, but we’re here to help!"
 date: 2024-08-08T22:00:14.000Z
-image: "/images/blog/best-upholstery-cleaning-solution.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---

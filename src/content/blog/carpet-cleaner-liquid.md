@@ -3,7 +3,6 @@ title: "Carpet Cleaner Liquid"
 meta_title: "Carpet Cleaner Liquid"
 description: "Carpet cleaner liquid can be a great way to freshen your carpet and remove stains. Some of them are designed for use in carpet cleaning machines, while others can be applied by hand."
 date: 2024-08-08T21:10:04.000Z
-image: "/images/blog/carpet-cleaner-liquid.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

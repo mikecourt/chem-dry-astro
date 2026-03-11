@@ -3,7 +3,6 @@ title: "Carpet Cleaner Vacuum"
 meta_title: "Carpet Cleaner Vacuum"
 description: "A carpet cleaner vacuum should be able to handle a variety of carpet materials. Whether you have a hard-wood floor, a carpet with lots of stains, or a combination of both, there are models available to suit your needs."
 date: 2024-08-08T21:15:54.000Z
-image: "/images/blog/carpet-cleaner-vacuum.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

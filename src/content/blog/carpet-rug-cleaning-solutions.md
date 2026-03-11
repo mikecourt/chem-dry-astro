@@ -3,7 +3,6 @@ title: "Carpet & Rug Cleaning Solutions"
 meta_title: "Carpet & Rug Cleaning Solutions"
 description: "Cleaning your carpet can be a daunting task. Some messes are hard to remove, while others may be permanent. Depending on the type of stain, you might need a specialty solution."
 date: 2024-08-08T21:26:13.000Z
-image: "/images/blog/carpet-rug-cleaning-solutions.webp"
 categories: ["Carpet Cleaning","Commercial Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Area Rug Cleaning Service"
 meta_title: "Area Rug Cleaning Service"
 description: "Hiring an area rug cleaning service is one of the best ways to maintain the beauty and quality of your rug. Heavy traffic on a rug can cause it to lose its color and fibers."
 date: 2024-08-08T22:29:00.000Z
-image: "/images/blog/area-rug-cleaning-service.jpg"
 categories: ["Rug Cleaning"]
 draft: false
 ---

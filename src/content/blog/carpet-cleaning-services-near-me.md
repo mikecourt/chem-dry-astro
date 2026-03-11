@@ -3,7 +3,6 @@ title: "Carpet Cleaning Services Near Me"
 meta_title: "Carpet Cleaning Services Near Me"
 description: "When it comes to finding a [good carpet cleaning service](https://www.whiteglovecarpet.com/), you want to be sure that you’re getting the best possible ..."
 date: 2024-08-08T20:09:57.000Z
-image: "/images/blog/carpet-cleaning-services-near-me.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "Apartment Carpet Cleaning"
 meta_title: "Apartment Carpet Cleaning"
 description: "Apartment carpet cleaning is an important process to ensure the cleanliness of the floor covering. As a soft floor covering, carpets get dirty very easily and need regular attention to remain clean and odor-free."
 date: 2024-08-09T15:49:23.000Z
-image: "/images/blog/apartment-carpet-cleaning.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

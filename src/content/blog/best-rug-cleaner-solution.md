@@ -3,7 +3,6 @@ title: "Best Rug Cleaner Solution"
 meta_title: "Best Rug Cleaner Solution"
 description: "There are many different types of rug cleaners on the market these days, but not all of them are created equal."
 date: 2024-08-08T22:08:15.000Z
-image: "/images/blog/best-rug-cleaner-solution.webp"
 categories: ["Rug Cleaning"]
 draft: false
 ---

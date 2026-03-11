@@ -3,7 +3,6 @@ title: "What to Look For in a Carpet Cleaning Company"
 meta_title: "What to Look For in a Carpet Cleaning Company"
 description: "We have all heard the saying “You get what you pay for.” When choosing a carpet cleaning company, this is especially true. Read this first!"
 date: 2024-08-08T17:07:09.000Z
-image: "/images/blog/what-to-look-for-in-a-carpet-cleaning-company.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

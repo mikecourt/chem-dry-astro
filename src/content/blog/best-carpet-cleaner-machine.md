@@ -3,7 +3,6 @@ title: "Best Carpet Cleaner Machine"
 meta_title: "Best Carpet Cleaner Machine"
 description: "When it comes to choosing the best carpet cleaner machine for your needs, there are a few factors you should consider."
 date: 2024-08-09T15:22:58.000Z
-image: "/images/blog/best-carpet-cleaner-machine.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

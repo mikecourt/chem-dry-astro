@@ -3,7 +3,6 @@ title: "What is Best Carpet Cleaner for Pet Urine?"
 meta_title: "What is Best Carpet Cleaner for Pet Urine?"
 description: "When it comes to getting rid of pet urine, there are a number of different carpet cleaners on the market that can get the job done."
 date: 2024-08-09T15:25:28.000Z
-image: "/images/blog/what-is-best-carpet-cleaner-for-pet-urine.jpg"
 categories: ["Carpet Cleaning","Pet Urine Cleaning"]
 draft: false
 ---

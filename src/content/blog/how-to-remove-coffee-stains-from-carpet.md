@@ -3,7 +3,6 @@ title: "How to Remove Coffee Stains From Carpet"
 meta_title: "How to Remove Coffee Stains From Carpet"
 description: "Need a guide on how to remove coffee stains from carpet? If you’ve spilled a cup of coffee on your carpet, you can quickly remove it using a solution of 50/50 white vinegar, lemon juice and water."
 date: 2023-01-24T21:12:30.000Z
-image: "/images/blog/how-to-remove-coffee-stains-from-carpet.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

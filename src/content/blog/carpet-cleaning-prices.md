@@ -3,7 +3,6 @@ title: "Carpet Cleaning Prices"
 meta_title: "Carpet Cleaning Prices"
 description: "Carpet cleaning is a necessary evil for many homeowners."
 date: 2024-08-08T20:16:52.000Z
-image: "/images/blog/carpet-cleaning-prices.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

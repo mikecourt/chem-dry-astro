@@ -3,7 +3,6 @@ title: "What is Carpet Steam Cleaner?"
 meta_title: "What is Carpet Steam Cleaner?"
 description: "Carpet steam cleaners are a valuable addition to any homeowner’s cleaning arsenal. Not only do they deep-clean carpets, but they also remove pet hair an..."
 date: 2024-08-08T19:15:36.000Z
-image: "/images/blog/what-is-carpet-steam-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

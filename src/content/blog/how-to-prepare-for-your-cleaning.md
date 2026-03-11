@@ -3,7 +3,6 @@ title: "How to Prepare for Your Cleaning"
 meta_title: "How to Prepare for Your Cleaning"
 description: "We don’t park on your driveway, but he open space will help us run the hoses and other cleaning equipment from the truck into your house without the risk of bumping into your vehicle."
 date: 2022-05-23T21:22:10.000Z
-image: "/images/blog/how-to-prepare-for-your-cleaning.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

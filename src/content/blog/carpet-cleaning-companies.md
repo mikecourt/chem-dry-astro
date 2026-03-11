@@ -3,7 +3,6 @@ title: "Carpet Cleaning Companies"
 meta_title: "Carpet Cleaning Companies"
 description: "There are many reasons why you might need the services of a carpet cleaning company. Maybe your pet has had an accident, or there is a lot of mud and dirt tracked in from outside."
 date: 2024-08-08T20:28:09.000Z
-image: "/images/blog/carpet-cleaning-companies.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

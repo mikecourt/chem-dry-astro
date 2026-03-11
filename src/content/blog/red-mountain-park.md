@@ -3,7 +3,6 @@ title: "Things to Do in Red Mountain Park"
 meta_title: "Things to Do in Red Mountain Park"
 description: "Disc golf, baseball, and volleyball are among the many activities at Red Mountain Park Mesa. You can even go birding here. For the ultimate Arizona experience, spend a day here. You will not be disappointed."
 date: 2024-08-09T15:56:37.000Z
-image: "/images/blog/red-mountain-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

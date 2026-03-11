@@ -3,7 +3,6 @@ title: "Better Carpet Cleaners"
 meta_title: "Better Carpet Cleaners"
 description: "Carpet cleaning is an important task that should be done regularly to keep your home looking its best."
 date: 2024-08-08T21:55:16.000Z
-image: "/images/blog/better-carpet-cleaners.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

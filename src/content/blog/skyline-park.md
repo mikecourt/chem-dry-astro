@@ -3,7 +3,6 @@ title: "Skyline Park"
 meta_title: "Skyline Park"
 description: "A beautiful 30-acre park in Mesa, AZ that features softball and baseball fields as well as basketball courts and a playground. The park also includes ramadas of varying sizes and ample picnic areas."
 date: 2024-08-08T16:54:06.000Z
-image: "/images/blog/skyline-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---

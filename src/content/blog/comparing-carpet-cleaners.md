@@ -3,7 +3,6 @@ title: "Comparing Carpet Cleaners"
 meta_title: "Comparing Carpet Cleaners"
 description: "Carpet cleaners are a necessary evil in most homes. No one really enjoys cleaning their carpets, but it’s something that needs to be done every once in a while."
 date: 2024-08-08T17:27:26.000Z
-image: "/images/blog/comparing-carpet-cleaners.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

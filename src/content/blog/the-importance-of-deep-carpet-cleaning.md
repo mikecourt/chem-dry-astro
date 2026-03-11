@@ -3,7 +3,6 @@ title: "The Importance of Deep Carpet Cleaning"
 meta_title: "The Importance of Deep Carpet Cleaning"
 description: "Carpets are often one of the first places that dirt and dust accumulate. Over time, this can lead to unsightly stains and a general deterioration in the appearance of your carpets."
 date: 2024-08-08T17:28:41.000Z
-image: "/images/blog/the-importance-of-deep-carpet-cleaning.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

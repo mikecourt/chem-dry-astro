@@ -3,7 +3,6 @@ title: "Best Carpet Cleaners in My Area"
 meta_title: "Best Carpet Cleaners in My Area"
 description: "Carpet cleaning can be a daunting task, but it doesn’t have to be. You can find the best carpet cleaners by doing your research and asking for referrals from family and friends."
 date: 2024-08-08T22:35:52.000Z
-image: "/images/blog/best-carpet-cleaners-in-my-area.jpg"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

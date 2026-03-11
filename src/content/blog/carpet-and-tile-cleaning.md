@@ -3,7 +3,6 @@ title: "Carpet and Tile Cleaning"
 meta_title: "Carpet and Tile Cleaning"
 description: "Regular carpet and tile cleaning is essential for a variety of reasons, including to extend the life of carpet tiles."
 date: 2024-08-08T21:47:38.000Z
-image: "/images/blog/carpet-and-tile-cleaning.webp"
 categories: ["Carpet Cleaning","Tile Cleaning"]
 draft: false
 ---

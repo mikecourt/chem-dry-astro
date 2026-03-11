@@ -3,7 +3,6 @@ title: "Carpet Cleaning Companies Near Me"
 meta_title: "Carpet Cleaning Companies Near Me"
 description: "When it comes to choosing a carpet cleaning company, there are many factors to consider. You want to find a company that has a good reputation, offers quality services and is affordable."
 date: 2024-08-08T20:26:21.000Z
-image: "/images/blog/carpet-cleaning-companies-near-me.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

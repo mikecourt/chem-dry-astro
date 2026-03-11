@@ -3,7 +3,6 @@ title: "Carpet and Rug Cleaners Near Me"
 meta_title: "Carpet and Rug Cleaners Near Me"
 description: "You can find the best carpet and rug cleaners near me if you look for companies that use environmentally friendly methods. Think Green Carpet Cleaning, for example, uses carbonated solutions and is insured and licensed."
 date: 2024-08-08T21:44:28.000Z
-image: "/images/blog/carpet-and-rug-cleaners-near-me.webp"
 categories: ["Carpet Cleaning","Rug Cleaning"]
 draft: false
 ---

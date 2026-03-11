@@ -3,7 +3,6 @@ title: "What is a Good Carpet Cleaner?"
 meta_title: "What is a Good Carpet Cleaner?"
 description: "Anyone who’s ever tried to clean a carpet knows that it’s not an easy task."
 date: 2024-08-08T17:31:02.000Z
-image: "/images/blog/what-is-a-good-carpet-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

@@ -3,7 +3,6 @@ title: "What is Carpet Spot Cleaner?"
 meta_title: "What is Carpet Spot Cleaner?"
 description: "If you’re like most people, you probably have a spot cleaner in your home somewhere. That’s because a spot cleaner is one of the most essential items fo..."
 date: 2024-08-08T20:01:42.000Z
-image: "/images/blog/carpet-spot-cleaner.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---

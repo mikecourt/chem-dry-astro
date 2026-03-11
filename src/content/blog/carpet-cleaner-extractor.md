@@ -3,7 +3,6 @@ title: "Carpet Cleaner Extractor"
 meta_title: "Carpet Cleaner Extractor"
 description: "There are many types of commercial carpet cleaner extractors on the market today. Choosing the right one for your company’s needs can be tricky."
 date: 2024-08-08T20:37:22.000Z
-image: "/images/blog/carpet-cleaner-extractor.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
