@@ -22,7 +22,7 @@ The allure of a freshly cleaned carpet — its vibrant colors, the soft texture 
 
 **Maintaining Warranty:** Many carpet manufacturers require regular professional cleaning to keep the warranty valid. By scheduling professional carpet cleaning, you ensure that your carpet remains under warranty, protecting your investment.
 
-## Chem-Dry's Commitment to Excellence
+## Chem-Dry Commitment to Excellence
 
 Our approach at Chem-Dry is holistic. We believe in not just cleaning but rejuvenating carpets, ensuring they look, feel, and are genuinely clean. Our advanced cleaning technology, coupled with our effective solutions, ensures a deep, thorough clean without the need for excessive water or harmful chemicals.
 

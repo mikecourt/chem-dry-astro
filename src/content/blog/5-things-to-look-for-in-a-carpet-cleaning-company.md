@@ -38,4 +38,4 @@ When it comes to the method used to clean your carpet, be aware of innovation. B
 
 Choosing a carpet cleaning company you can trust is easy when you know what to look for. With these 5 tips, you'll be able to select the highest quality, affordable service in your area.
 
-Did you know that Chem-Dry uses the revolutionary power of carbonation to clean carpets with 80% less water than steam cleaners? Get your free quote from K&T Chem-Dry — serving New Lenox, Frankfort, Mokena, and the surrounding areas.
+Did you know that Chem-Dry uses the revolutionary power of carbonation to clean carpets with about 80% less water than steam cleaners? Get your free quote from K&T Chem-Dry — serving New Lenox, Frankfort, Mokena, and the surrounding areas.

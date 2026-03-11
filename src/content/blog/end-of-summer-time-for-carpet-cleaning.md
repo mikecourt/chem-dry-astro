@@ -22,7 +22,7 @@ Before we know it, the holiday season will be upon us, bringing along family gat
 
 ### Ideal Drying Conditions
 
-While Chem-Dry's methods are known for their fast-drying benefits, the end of summer offers an added advantage. The lingering warmth and lower humidity levels during this transitional season make for ideal carpet drying conditions. This ensures your freshly cleaned carpet is ready to be walked on in the shortest time possible.
+While Chem-Dry cleaning methods are known for their fast-drying benefits, the end of summer offers an added advantage. The lingering warmth and lower humidity levels during this transitional season make for ideal carpet drying conditions. This ensures your freshly cleaned carpet is ready to be walked on in the shortest time possible.
 
 ### Allergen Reduction for Fall
 

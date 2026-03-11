@@ -29,7 +29,7 @@ why_us:
 pride:
   title: "Proudly serving **Chicagoland** <br> for over 30 years"
   subtitle: "OUR COMMITMENT"
-  content: "Since 1995, we've been helping Chicagoland families keep their homes clean and healthy. Our certified technicians deliver exceptional results using Chem-Dry's proven Hot Carbonating Extraction process."
+  content: "Since 1995, we've been helping Chicagoland families keep their homes clean and healthy. Our certified technicians deliver exceptional results using the proven Chem-Dry Hot Carbonating Extraction process."
   images:
     - "/images/about/3.webp"
     - "/images/about/4.webp"

@@ -20,11 +20,11 @@ One of the most common challenges every homeowner faces is the dreaded, unexpect
 
 **Work From the Outside In:** To prevent the stain from spreading, start cleaning from the outer edge and work your way towards the center.
 
-## Chem-Dry's Tried-and-True Recommendations
+## Chem-Dry Tried-and-True Recommendations
 
 **Water First:** Sometimes, plain cold water can effectively lift a fresh stain. Blot the stain with water, then with a dry cloth, and repeat. This method often works wonders on fresh spills without the need for additional cleaning agents.
 
-**Chem-Dry's Professional Spot Remover:** For tougher stains, we recommend our very own Chem-Dry Professional Spot Remover. Its formula is designed to break down a wide range of stains without harming your carpet fibers or the environment.
+**Chem-Dry Professional Spot Remover:** For tougher stains, we recommend our very own Chem-Dry Professional Spot Remover. Its formula is designed to break down a wide range of stains without harming your carpet fibers or the environment.
 
 **Club Soda for Wine and Beer:** If you've spilled wine or beer, immediately blotting the area with club soda can be surprisingly effective. If the stain remains after multiple applications, it might be time to call in the professionals.
 

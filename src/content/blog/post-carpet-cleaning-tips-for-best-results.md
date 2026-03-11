@@ -44,7 +44,7 @@ While spot cleaning post professional session, refrain from using harsh chemical
 
 To keep your carpets in pristine condition, it's advisable to schedule regular professional cleaning sessions. This not only addresses dirt and stains but also extends the life and aesthetic appeal of your carpet.
 
-## Chem-Dry's Commitment to Your Carpet's Wellbeing
+## Chem-Dry Commitment to Your Carpet's Wellbeing
 
 At Chem-Dry, we understand the sentimental and monetary value of your carpets. Our cleaning solutions and methods are tailored to ensure deep cleaning without compromising carpet health. However, the post-cleaning care largely lies in your hands. By following the above best practices, you ensure that the freshness and cleanliness we instill lasts far longer.
 

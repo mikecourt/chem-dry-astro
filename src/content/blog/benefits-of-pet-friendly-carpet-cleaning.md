@@ -20,7 +20,7 @@ Any pet owner can attest to the immeasurable joy and companionship our furry fri
 
 **Accidents:** Even the best-trained pets can have accidents. These incidents require immediate attention to prevent permanent staining and odor.
 
-## Chem-Dry's Solutions for Pet Owners
+## Chem-Dry Solutions for Pet Owners
 
 Being a dedicated partner in your home's cleanliness, we've developed specific strategies and products tailored to the needs of pet owners.
 

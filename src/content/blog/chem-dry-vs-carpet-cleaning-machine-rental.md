@@ -16,7 +16,7 @@ Being deeply rooted in New Lenox as a Chem-Dry franchise has taught us one vital
 
 When you rent a carpet cleaning machine, it uses a method somewhat akin to steam cleaning. This can mean using a lot of water and detergents. While it might look clean at first, the machine might not extract all the water or soap, leaving behind soapy detergents that can attract more dirt in the long run.
 
-Chem-Dry's signature approach harnesses the power of carbonation. Imagine millions of tiny bubbles penetrating deep into your carpet's fibers, lifting the dirt and grime to the surface. Our equipment then whisks it away. No soapy detergents, no over-saturation, just a deep and efficient clean.
+the Chem-Dry signature approach harnesses the power of carbonation. Imagine millions of tiny bubbles penetrating deep into your carpet's fibers, lifting the dirt and grime to the surface. Our equipment then whisks it away. No soapy detergents, no over-saturation, just a deep and efficient clean.
 
 ### Drying Time Matters
 

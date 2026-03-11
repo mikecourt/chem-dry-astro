@@ -34,7 +34,7 @@ Area rugs often endure high foot traffic, pet activity, and daily wear and tear.
 
 **Odor Elimination:** For those unavoidable smells, baking soda can be your ally. Lightly sprinkle over the rug, let sit for a few hours, then vacuum. For persistent odors, consider consulting with professionals like us.
 
-## Chem-Dry's Expertise in Area Rug Care
+## Chem-Dry Expertise in Area Rug Care
 
 Our commitment to the care of your household items extends to the treasured area rugs that adorn your floors. With our unique cleaning solutions and innovative techniques, we ensure a thorough, gentle clean that respects the delicacy and craftsmanship of every rug.
 

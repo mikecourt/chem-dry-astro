@@ -36,7 +36,7 @@ Excess moisture from traditional cleaning methods can seep into the carpet paddi
 
 Fast-drying processes are often gentler on carpet fibers. They maintain the structural integrity, color vibrancy, and overall appearance of the carpet, ensuring it looks fresh and extends its lifespan.
 
-## Chem-Dry's Commitment to Efficient Cleaning
+## Chem-Dry Commitment to Efficient Cleaning
 
 At Chem-Dry, we pride ourselves on adopting modern, efficient cleaning methods. Our proprietary techniques ensure deep cleaning with a fraction of the moisture that steam cleaning uses, resulting in carpets that dry in just a couple of hours, not days.
 
