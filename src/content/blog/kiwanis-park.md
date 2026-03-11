@@ -1,13 +1,12 @@
 ---
 title: "Kiwanis Park"
 meta_title: "Kiwanis Park"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "The 125-acre park was purchased in 1972 with a 50 percent grant from the City’s Bureau of Outdoor Recreation. It was named for the Kiwanis Club which helped to sponsor the project."
 date: 2024-08-08T16:34:08.000Z
 image: "/images/blog/kiwanis-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" hover_enabled="0" sticky_enabled="0"]
 The 125-acre park was purchased in 1972 with a 50 percent grant from the City’s Bureau of Outdoor Recreation. It was named for the Kiwanis Club which helped to sponsor the project.
 
 It includes playgrounds, a 12-acre lake, a batting range, an indoor recreation center with an indoor wave pool featuring water slides and 3-foot waves, a 15-court tennis center, and ramadas. [Read on to know more](https://www.whiteglovecarpet.com/).
@@ -49,4 +48,3 @@ The 15 tennis courts at this park are lighted and cushioned, and offer group and
 The 125-acre Kiwanis Park is also home to playgrounds, a lake, batting cages, an indoor recreation center, and a wave pool. Rent kayaks or pedal boats on the lake, and check out The Cloud, a one-of-a-kind splash park.
 
 The Kiwanis Park neighborhood is served by the Tempe Diablos, a prestigious college tournament host team. The majority of the neighborhood’s working residents commute to work by car, with most spending between 15 and 30 minutes commuting one-way. [Continue reading the next article](https://www.whiteglovecarpet.com/desert-botanical-garden/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

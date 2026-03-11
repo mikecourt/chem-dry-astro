@@ -1,13 +1,13 @@
 ---
 title: "Wedding Venues in the East Valley"
 meta_title: "Wedding Venues in the East Valley"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "This hotel offers a number of amenities to guests, from low-key rooms to suites with kitchenettes. It has a championship golf course and two pools, as well as a restaurant. Guests can also enjoy free Wi-Fi."
 date: 2024-08-09T15:55:52.000Z
 image: "/images/blog/arizona-golf-resort-event-center.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]# **Wedding Venues in the East Valley**
+# **Wedding Venues in the East Valley**
 
 This hotel offers a number of amenities to guests, from low-key rooms to suites with kitchenettes. It has a championship golf course and two pools, as well as a restaurant. Guests can also enjoy free Wi-Fi. It is located in North Mesa. In addition to its golf course, the Arizona Golf Resort has other amenities such as fitness centers and recreational facilities. It is a popular wedding venue in the area. [This article is for you](https://www.whiteglovecarpet.com/)!
 ### **Longbow Golf Club is located in North Mesa**
@@ -35,4 +35,3 @@ The Arizona Golf Resort & Event Center Mesa is located near Superstition Springs
 Located in Mesa, Arizona, the Arizona Golf Resort combines the elegance of a desert oasis with the convenience of a city. The resort features 20,000 square feet of indoor and outdoor space, including two signature ballrooms. With a beautiful golf course backdrop, these event spaces are an excellent choice for any type of wedding, including a small, intimate gathering for two or a grand reception for 1,000.
 
 Arizona has two distinct seasons, with the hotter summer months of June and August. June is a popular month in metro areas, with temperatures soaring during the summer. Spring and fall are more comfortable months for weddings, with a cooler climate. Couples should keep this in mind when booking a venue. Arizona venues are looking for ways to fill their event calendars, so getting married during an off-season will allow you to save money. [Click here for more interesting articles](https://www.whiteglovecarpet.com/arizona-commemorative-air-force-museum/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

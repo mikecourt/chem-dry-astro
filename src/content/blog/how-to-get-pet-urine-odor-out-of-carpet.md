@@ -1,13 +1,13 @@
 ---
 title: "How to Get Pet Urine Odor Out of Carpet"
 meta_title: "How to Get Pet Urine Odor Out of Carpet"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "Part of learning about how to get rid of urine odor is learning about urine and your carpet."
 date: 2022-05-23T21:48:18.000Z
 image: "/images/blog/how-to-get-pet-urine-odor-out-of-carpet.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" global_colors_info="{}"]#### Facts about urine and your carpet
+#### Facts about urine and your carpet
 
 Part of learning about how to get rid of urine odor is learning about urine and your carpet.
 
@@ -52,4 +52,4 @@ Before applying a treatment, it’s best to get as much urine out of the carpet 
 
 **[Chem-Dry’s P.U.R.T.®](https://www.whiteglovecarpet.com/pet-odor-removal/)** traps odor and destroys the odor molecule, so you don’t just cover it up with a fragrance. The spots should be kept moist so that the treatment will continue to work over the next 24 to 48 hours.
 
-Need help with your **[pet urine odor issue? We’re here to help.](https://www.whiteglovecarpet.com/pet-odor-removal/)**[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]
+Need help with your **[pet urine odor issue? We’re here to help.](https://www.whiteglovecarpet.com/pet-odor-removal/)**

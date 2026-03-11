@@ -1,13 +1,13 @@
 ---
 title: "Usery Mountain Regional Park"
 meta_title: "Usery Mountain Regional Park"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Usery Mountain Regional Park Mesa AZ is a 365-day-a-year destination that offers an abundance of outdoor recreational activities to locals and out-of-town visitors."
 date: 2024-08-08T17:02:47.000Z
 image: "/images/blog/usery-mountain-regional-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]Usery Mountain Regional Park Mesa AZ is a 365-day-a-year destination that offers an abundance of outdoor recreational activities to locals and out-of-town visitors. Camping, hiking trails (including the popular Rock Daisy Wind Cave Trail), horseback riding, and picnicking are all available at this Maricopa County park. [See more](https://www.whiteglovecarpet.com/).
+Usery Mountain Regional Park Mesa AZ is a 365-day-a-year destination that offers an abundance of outdoor recreational activities to locals and out-of-town visitors. Camping, hiking trails (including the popular Rock Daisy Wind Cave Trail), horseback riding, and picnicking are all available at this Maricopa County park. [See more](https://www.whiteglovecarpet.com/).
 
 Individual campsites can be reserved online for a fee in four-hour increments, while the group picnic areas are on a first come first serve basis. The Nature Center is a must-see attraction, hosting educational programs and moonlight hikes.
 ### Camping
@@ -47,4 +47,3 @@ This beautiful park perfectly captures the colors and landscape of the lower Son
 The park’s hiking trails offer a wide range of fitness levels and scenery. From relatively flat strolls for casual hikers to trails that will give even the most seasoned hikers a good workout.
 
 The park also offers a great variety of camping opportunities. Individual sites can be reserved online while large group ramadas are available for a fee in four-hour increments. These ramadas contain six tables, large patios, and restrooms with showers. [Check our next area of interest here](https://www.whiteglovecarpet.com/prospector-park/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

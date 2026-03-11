@@ -1,13 +1,13 @@
 ---
 title: "Arizona Commemorative Air Force Museum"
 meta_title: "Arizona Commemorative Air Force Museum"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "The Arizona Commemorative Air Force Museum, also known as the Airbase AZ Aircrafts Museum, is located at Falcon Field in Mesa, Arizona. It is the 10th unit of the Commemorative Air Force."
 date: 2024-08-09T15:55:00.000Z
 image: "/images/blog/arizona-commemorative-air-force-museum.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]## **Arizona Commemorative Air Force Museum **
+## **Arizona Commemorative Air Force Museum **
 
 The Arizona Commemorative Air Force Museum, also known as the Airbase AZ Aircrafts Museum, is located at Falcon Field in Mesa, Arizona. It is the 10th unit of the Commemorative Air Force. It is one of the largest such museums in the world. It features many aircraft, including the B-17G Sentimental Journey. There are also cadets and a Confederate Air Force exhibit. [Read this first](https://www.whiteglovecarpet.com/)!
 ### **Sentimental Journey is a B-17G**
@@ -31,6 +31,3 @@ The Arizona Commemorative Air Force Museum, also known as Airbase Arizona Aircra
 ### **Sacred Steel memorialized all those who lost their lives in the Pearl Harbor attack**
 
 During the attacks on Pearl Harbor, the Japanese Empire dropped bombs on the USS Arizona, which brought the US into World War II. The result was a devastating attack, which resulted in the greatest number of American casualties in US military history. In total, 2,335 people lost their lives in the attack – almost as many as died during D-Day. Visiting Pearl Harbor is not a somber occasion, but rather a time to reflect on the lives that were lost and the pride that the US and allied forces demonstrated in the war effort. [Next article](https://www.whiteglovecarpet.com/krazy-air-trampoline-park/).
-
- 
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

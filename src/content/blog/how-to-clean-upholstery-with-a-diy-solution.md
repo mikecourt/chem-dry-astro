@@ -1,13 +1,13 @@
 ---
 title: "How to Clean Upholstery with a DIY Solution"
 meta_title: "How to Clean Upholstery with a DIY Solution"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Most people don’t think about upholstery cleaning until there’s a problem. And by then, it can be difficult to clean the dirt and stains that have built up over time."
 date: 2024-08-08T18:59:50.000Z
 image: "/images/blog/how-to-clean-upholstery-with-a-diy-solution.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]Most people don’t think about upholstery cleaning until there’s a problem. And by then, it can be difficult to clean the dirt and stains that have built up over time. The good news is that upholstery cleaning doesn’t have to be difficult-or expensive!
+Most people don’t think about upholstery cleaning until there’s a problem. And by then, it can be difficult to clean the dirt and stains that have built up over time. The good news is that upholstery cleaning doesn’t have to be difficult-or expensive!
 
 There are a number of different upholstery cleaners on the market, but many of them contain harsh chemicals that can damage your furniture. luckily, there are a number of fresh and effective [DIY upholstery cleaners](https://www.thespruce.com/homemade-upholstery-cleaner-5073251) that you can make at home.
 
@@ -36,4 +36,3 @@ Instructions:
 So, if you’re looking for an affordable, fresh, and easy-to-use upholstery cleaner, give this recipe a try!
 
 [Click here to learn more!](https://www.whiteglovecarpet.com/how-to-make-your-own-diy-carpet-cleaner/)
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

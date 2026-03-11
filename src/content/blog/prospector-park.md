@@ -1,13 +1,13 @@
 ---
 title: "Prospector Park"
 meta_title: "Prospector Park"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Located on Idaho Rd, Prospector Park is a large & very nice park with lots of facilities. It’s surrounded by gorgeous mountain views & desert landscaping."
 date: 2024-08-08T17:01:26.000Z
 image: "/images/blog/prospector-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]Located on Idaho Rd, Prospector Park is a large & very nice park with lots of facilities. It’s surrounded by gorgeous mountain views & desert landscaping.
+Located on Idaho Rd, Prospector Park is a large & very nice park with lots of facilities. It’s surrounded by gorgeous mountain views & desert landscaping.
 
 Sara Pitcher is using her experience as a domestic violence survivor to raise awareness for victims of abuse. She hopes her efforts will inspire other women to stand up for themselves and their loved ones. [Check this out](https://www.whiteglovecarpet.com/)!
 ### Pickleball Courts
@@ -39,4 +39,3 @@ There are several picnic areas with shaded ramadas, tables, and grills in this t
 Visitors can also hike the park’s numerous trails and take in the scenery of the Sonoran Desert. The park’s Native Plant Trail features a variety of cacti and other plants including ocotillo, cholla, prickly pear, yucca, acacia, and more. A trail guide is available at the ranger station.
 
 Other trail options include the moderately difficult 4.4-mile Siphon Draw Trail or the easy 0.8-mile Jacob’s Crosscut Trail. Wildlife is abundant in the area as well with sightings of desert cottontail, quail, roadrunner, and coyote possible. [Find out more](https://www.whiteglovecarpet.com/lost-dutchman-state-park/)!
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

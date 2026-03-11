@@ -1,13 +1,13 @@
 ---
 title: "Why Upholstery Cleaning Is Important"
 meta_title: "Why Upholstery Cleaning Is Important"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Upholstery furniture gets a lot of use. It is a gathering place for the family and can be a breeding ground for bacteria, non-living allergens*, dirt, mildew, and fleas. See our home page."
 date: 2024-08-08T17:11:03.000Z
 image: "/images/blog/why-upholstery-cleaning-is-important.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]Upholstery furniture gets a lot of use. It is a gathering place for the family and can be a breeding ground for bacteria, non-living allergens*, dirt, mildew, and fleas. [See our home page](https://www.whiteglovecarpet.com/).
+Upholstery furniture gets a lot of use. It is a gathering place for the family and can be a breeding ground for bacteria, non-living allergens*, dirt, mildew, and fleas. [See our home page](https://www.whiteglovecarpet.com/).
 
 non-living allergens* like dust mites, pollen, mold spores, and pet hair can get stuck in the fibers of your sofa. This can cause respiratory problems for you and your family.
 ## 1. It Keeps Your Family Healthy
@@ -40,4 +40,3 @@ Every time you sit on your upholstered furniture, you release dirt, grime, dust 
 Dirty fabric can also absorb odors from cooking, smoking, pets, and more. Over time, this can make your furniture smell musty or even stale. Getting your upholstery professionally cleaned can get rid of these odors and leave your furniture smelling fresh and clean again.
 
 Regular cleaning can help extend the life of your upholstered furniture. It’s important to keep up with your upholstery cleaning to remove deep-down dirt and stains before they cause lasting damage. By having your upholstered furniture cleaned regularly, you’ll be able to enjoy it for longer and keep it looking nicer for longer. [Refer to This Web Page](https://www.whiteglovecarpet.com/why-professional-carpet-cleaning-is-necessary-2/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

@@ -1,13 +1,12 @@
 ---
 title: "Krazy Air Trampoline Park"
 meta_title: "Krazy Air Trampoline Park"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Krazy Air is an outdoor trampoline park located in Mesa, Arizona. With more than 28,000 square feet of jumping space, this trampoline park has something to please every jumper, from children to adults."
 date: 2024-08-09T16:12:34.000Z
 image: "/images/blog/krazy-air-trampoline-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.4" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]
 Krazy Air is an outdoor trampoline park located in Mesa, Arizona. With more than 28,000 square feet of jumping space, this trampoline park has something to please every jumper, from children to adults. The activities at Krazy Air range from dodgeball to a ninja training course. Trampoline parks have become increasingly popular in recent years, which is why Action Park Source is helping to catalog, define and promote them. You can search the database for trampoline parks in your area and browse articles and industry resources to learn more about the industry. [Read on to know more](https://www.whiteglovecarpet.com/).
 
 ### **Krazy Socks are mandatory for all jumpers**
@@ -27,4 +26,3 @@ In addition to ensuring security, you must also observe the rules of the park. Y
 ### **GiftRocket with suggested use at Krazy Air Trampoline Park**
 
 A GiftRocket with suggested use at Krazzy Air Trampoline Park Mesa Arizona is a money-related gift card that is delivered by email or can be printed out at home. The recipient is free to use the card however they choose, and there is no risk of the recipient losing the gift. Whether you’re buying a gift for a friend or family member, GiftRockets are flexible and convenient. Unlike physical gift cards, GiftRockets are available for any business in the US. [Next blog post](https://www.whiteglovecarpet.com/quail-run-sports-complex/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

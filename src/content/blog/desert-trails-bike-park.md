@@ -1,13 +1,13 @@
 ---
 title: "Desert Trails Bike Park"
 meta_title: "Desert Trails Bike Park"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Desert Trails Bike Park in Mesa, AZ is a fantastic place for BMX and mountain biking enthusiasts. The park features 35 acres of rugged biking trails, big jumps, and scenic views."
 date: 2024-08-09T16:09:52.000Z
 image: "/images/blog/desert-trails-bike-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]Desert Trails Bike Park in Mesa, AZ is a fantastic place for BMX and mountain biking enthusiasts. The park features 35 acres of rugged biking trails, big jumps, and scenic views. There is also a Pump track and skills track. In addition, the park has two hiking trails, so there is plenty of variety for everyone. [Read on for some ideas](https://www.whiteglovecarpet.com/).
+Desert Trails Bike Park in Mesa, AZ is a fantastic place for BMX and mountain biking enthusiasts. The park features 35 acres of rugged biking trails, big jumps, and scenic views. There is also a Pump track and skills track. In addition, the park has two hiking trails, so there is plenty of variety for everyone. [Read on for some ideas](https://www.whiteglovecarpet.com/).
 ### **Mountain biking**
 
 You’ll be captivated by the 35-acre bike park that features a series of challenging, rugged biking trails and big jumps. The scenic views at the park will have you salivating with anticipation. But don’t get carried away. This place is more than just a bike park – it’s a destination that will provide you with the ultimate mountain biking experience. It’s the perfect place to get out there and experience Arizona’s renowned mountain biking scene!
@@ -33,4 +33,3 @@ The skills track is made up of wooden features and a PRO vert section. The track
 For mountain biking enthusiasts, the 35-acre Desert Trails Bike Park in Mesa, Arizona is a great place to test out your new skills. The trails here feature a combination of rugged terrain, big jumps, and scenic views. The trails are perfect for beginners, while more experienced riders can experience big jumps and challenging sections. In addition to mountain biking, the park has several other types of terrain.
 
 The multi-use trails at the Desert Trials Bike Park include a one-mile walking/hiking trail. The park offers multiple jump lines, pump tracks, and flow lines. For a truly adventurous mountain bike experience, riders will appreciate the park’s progressive design. The park has parking for approximately 30 vehicles and restrooms. During quieter hours, the park is open to the public. [Up next is Red Mountain Ranch Country Club](https://www.whiteglovecarpet.com/red-mountain-ranch-country-club/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

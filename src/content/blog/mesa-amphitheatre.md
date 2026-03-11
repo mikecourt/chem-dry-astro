@@ -1,13 +1,13 @@
 ---
 title: "Mesa Amphitheatre"
 meta_title: "Mesa Amphitheatre"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "The Mesa Amphitheatre is an outdoor concert venue with a maximum seating capacity of 4,950. Since its opening in 1979, this venue has stayed true to its original design."
 date: 2023-11-28T16:35:19.000Z
 image: "/images/blog/mesa-amphitheatre.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]The Mesa Amphitheatre is an outdoor concert venue with a maximum seating capacity of 4,950. Since its opening in 1979, this venue has stayed true to its original design. Because of its tiered lawn, this venue is big enough to host popular events while remaining intimate enough to cater to smaller acts. It is a great place to enjoy an outdoor concert without the hassle of paying for expensive tickets. [Read on to know more](https://www.whiteglovecarpet.com/).
+The Mesa Amphitheatre is an outdoor concert venue with a maximum seating capacity of 4,950. Since its opening in 1979, this venue has stayed true to its original design. Because of its tiered lawn, this venue is big enough to host popular events while remaining intimate enough to cater to smaller acts. It is a great place to enjoy an outdoor concert without the hassle of paying for expensive tickets. [Read on to know more](https://www.whiteglovecarpet.com/).
 ### **Dirty Heads**
 
 Tickets for Dirty Heads at Mesa Ampheatre AZ are currently on sale, with the most popular seats on the floor. This can be a once-in-a-lifetime experience, and floor seats are by far the most expensive. You may want to look into VIP Dirty Heads meet and greet tickets, which cost significantly more than floor tickets.
@@ -38,4 +38,3 @@ The Mesa Amphitheatre was opened in 1979 and has been a popular outdoor concert 
 Toby Keith’s full-service restaurant in Mesa opened in 2009, and is named for the country singer. Toby Keith has played many locations in the U.S. and his own bar and grill in Mesa is often packed with fans. The restaurant serves American fare, including burgers and wings. The chain has 16 locations nationwide. It is open for lunch and dinner and is located in the Mesa Amphitheatre.
 
 Capri’s history was well-known to the developers of Boomtown, which in 2014 said it would build Toby Keith’s restaurants in 19 cities. The Magnolia Park restaurant was supposed to have all the same amenities, but on a smaller scale. However, construction of the restaurant was halted in July 2015. When the restaurant was not opened in 2017, the developers notified the public and a judge granted them $360,000 in damages. Boomtown officials did not respond to requests for comment. [Browse next article](https://www.whiteglovecarpet.com/phon-d-sutton-recreation-area/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

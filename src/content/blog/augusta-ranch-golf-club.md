@@ -1,13 +1,13 @@
 ---
 title: "Augusta Ranch Golf Club"
 meta_title: "Augusta Ranch Golf Club"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "If you are looking for a challenging 18-hole golf course in Mesa, Arizona, consider the Augusta Ranch Golf Club."
 date: 2024-01-22T16:39:03.000Z
 image: "/images/blog/augusta-ranch-golf-club.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]If you are looking for a challenging 18-hole golf course in Mesa, Arizona, consider the Augusta Ranch Golf Club. This 3846-yard par-61 golf course has excellent playing conditions, friendly service, and a unique layout that can challenge players of any skill level. In fact, you can complete your round of golf at Augusta Ranch in under three hours, making this the perfect place for a day at the links. [Click here to learn more](https://www.whiteglovecarpet.com/).
+If you are looking for a challenging 18-hole golf course in Mesa, Arizona, consider the Augusta Ranch Golf Club. This 3846-yard par-61 golf course has excellent playing conditions, friendly service, and a unique layout that can challenge players of any skill level. In fact, you can complete your round of golf at Augusta Ranch in under three hours, making this the perfect place for a day at the links. [Click here to learn more](https://www.whiteglovecarpet.com/).
 ### **Distances from Augusta Ranch Golf Club**
 
 If you’re looking for a beautiful golf course in Mesa, Arizona, you’ve come to the right place. Augusta Ranch Golf Club offers a wide variety of homes with contemporary and ranch builds. Many homes feature granite countertops and custom lighting fixtures, sparkling pools, and backyards. Other features of Augusta Ranch homes include community clubhouses and a pool with a view. Other benefits of living in Augusta Ranch include close proximity to two major East Valley highways.
@@ -28,4 +28,3 @@ The Augusta Ranch golf course opened in 1999. Designed by Bill Phillips, the cou
 If you are looking for a great place to play golf in the Phoenix area, then look no further than the Augusta Ranch Golf Club. Rated as one of Arizona’s best executive golf courses and as the host course of the Arizona Women’s Golf Association, Augusta Ranch is the ideal destination for anyone who is new to the game or is looking to improve their short game. With 18 holes of golf and a short game area, Augusta Ranch is a great option for the beginner golfer or the experienced player who is looking to lower their scores. The Augusta Ranch golf course is only 3 1/2 hours long and is ideal for players of all skill levels.
 
 With a par 70 and three-quarters of a mile of fairway, Augusta Ranch Golf Club is an ideal destination for beginners or those who want to improve their short game. The 18-hole course offers challenging play for golfers of all skill levels, and the staff will give you tips for a great round of golf. Augusta Ranch Golf Club is located in Mesa, Arizona, so it is easy to find parking and to reach the course with ease. [Next article](https://www.whiteglovecarpet.com/cactus-yards/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

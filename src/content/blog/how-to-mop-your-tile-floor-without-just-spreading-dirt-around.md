@@ -1,13 +1,13 @@
 ---
 title: "How to Mop Your Tile Floor Without Just Spreading Dirt Around"
 meta_title: "How to Mop Your Tile Floor Without Just Spreading Dirt Around"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "Use a cleaner with an alkaline or neutral pH. Avoid anything that is acidic, because that can cause premature wear to your grout, causing it to crack. Use as much cleaner as you need, but as little as possible."
 date: 2022-05-23T21:42:36.000Z
 image: "/images/blog/how-to-mop-your-tile-floor-without-just-spreading-dirt-around.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" global_colors_info="{}"]#### Pick the right cleaner
+#### Pick the right cleaner
 
 Use a cleaner with an alkaline or neutral pH. Avoid anything that is acidic, because that can cause premature wear to your grout, causing it to crack. Use as much cleaner as you need, but as little as possible. Also avoid cleaners that say “shine”. These types of cleaners will leave a soap on your tile that can yellow over time.
 
@@ -34,4 +34,3 @@ Use as much cleaner as you need to get the floors looking good, but then make su
 Watch what shoes you wear and how quickly you move. Telling people you broke your wrist mopping the floor is an especially embarrassing story.
 
 Need more than a maintenance **[tile cleaning? We’re here to help.](https://www.whiteglovecarpet.com/tile-grout-cleaning/)**
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

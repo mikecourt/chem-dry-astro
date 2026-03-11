@@ -1,13 +1,12 @@
 ---
 title: "Skyline Park"
 meta_title: "Skyline Park"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "A beautiful 30-acre park in Mesa, AZ that features softball and baseball fields as well as basketball courts and a playground. The park also includes ramadas of varying sizes and ample picnic areas."
 date: 2024-08-08T16:54:06.000Z
 image: "/images/blog/skyline-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" hover_enabled="0" sticky_enabled="0"]
 A beautiful 30-acre park in Mesa, AZ that features softball and baseball fields as well as basketball courts and a playground. The park also includes ramadas of varying sizes and ample picnic areas.
 
 The teens fled, but the shooter’s mother contacted the police to report what happened. Detectives interviewed the teens and retrieved all of their guns. [Read this first](https://www.whiteglovecarpet.com/)!
@@ -45,4 +44,3 @@ Located on Crismon (not Crimson) road this 30-acre park has many baseball and so
 This large, multi-field complex opened in September of 2002 and has four professionally groomed softball fields that cover over 10.5 acres. The park has two sand volleyball courts, shaded playground equipment, 3 basketball courts, and 9 ramadas of varying sizes.
 
 Heated during the winter this park offers lap swimming, water slides, a zero-depth pool, diving boards, recreational teams, swim lessons, aquatic fitness, and more. Daily passes start at $2 for residents, 10 and 30 visit passes are available. Visit the website for more info. [Next blog post](https://www.whiteglovecarpet.com/red-mountain-district-park/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

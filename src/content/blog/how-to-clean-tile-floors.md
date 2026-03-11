@@ -1,21 +1,12 @@
 ---
 title: "How to Clean Tile Floors"
 meta_title: "How to Clean Tile Floors"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "If you want your tile floors to stay looking fresh, you need to sweep or vacuum regularly and wet clean (mop) them at least once a week."
 date: 2024-08-08T17:09:04.000Z
 image: "/images/blog/how-to-clean-tile-floors.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]
- 
-
- 
-
- 
-
- 
-
 If you want your tile floors to stay looking fresh, you need to sweep or vacuum regularly and wet clean (mop) them at least once a week. While there are many specialty floor cleaners available, you can also make a highly effective and inexpensive cleaning solution from items already in your home. [Check this out](https://www.whiteglovecarpet.com/)!
 
 ### Vacuum
@@ -47,13 +38,3 @@ While ceramic and porcelain tiles are relatively forgiving and easy to keep clea
 To get rid of stubborn stains on tile floors, experts recommend applying a commercial stain remover that’s compatible with your type of floor and following the manufacturer’s instructions for use. You can also make your own cleaner from common household items, such as vinegar or baking soda.
 
 Mix a cleaning solution with warm water, using a bucket that holds enough to cover your entire floor. Dip your mop, which should be a chamois or microfiber mop, in the cleaning solution and wring it out so that it’s damp but not dripping wet. Work on a small section of the floor at a time, using a figure-eight motion to ensure you’re covering every surface of the tile. When the mop gets dirty, switch it out for a fresh one and rinse the floors.  [Definitely worth checking out](https://www.whiteglovecarpet.com/why-professional-carpet-cleaning-is-necessary/)!
-
- 
-
- 
-
- 
-
- 
-
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

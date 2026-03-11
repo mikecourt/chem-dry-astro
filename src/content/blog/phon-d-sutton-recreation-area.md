@@ -1,13 +1,13 @@
 ---
 title: "Phon D Sutton Recreation Area"
 meta_title: "Phon D Sutton Recreation Area"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "A visit to Phon D Sutton Recreation Area AZ should include several activities. Kayaking, hiking, tubing, fishing, and camping are just a few of the options."
 date: 2024-03-15T16:43:11.000Z
 image: "/images/blog/phon-d-sutton-recreation-area.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]A visit to Phon D Sutton Recreation Area AZ should include several activities. Kayaking, hiking, tubing, fishing, and camping are just a few of the options. This recreation area is also home to many interesting desert plants with spiny, thorny leaves. There are many opportunities to photograph the desert scenery and enjoy a picnic lunch. There are even restrooms on-site. Many families visit the area for its hiking trails. [Learn more](https://www.whiteglovecarpet.com/).
+A visit to Phon D Sutton Recreation Area AZ should include several activities. Kayaking, hiking, tubing, fishing, and camping are just a few of the options. This recreation area is also home to many interesting desert plants with spiny, thorny leaves. There are many opportunities to photograph the desert scenery and enjoy a picnic lunch. There are even restrooms on-site. Many families visit the area for its hiking trails. [Learn more](https://www.whiteglovecarpet.com/).
 ### **Kayaking**
 
 While most Salt River kayaking trips conclude at Granite Reef Dam, you can continue your journey by continuing downstream, starting at Phon D Sutton Recreation Area. This park has picnic shelters and pit toilets, and a large parking lot. Vehicles should park on the back half of the first parking lot, where a small path will lead to the launch site between two picnic shelters. Once you’ve made it to the launch area, paddle downstream along the slat river for approximately four miles.
@@ -38,4 +38,3 @@ For birdwatching, head to the Phon D Sutton Recreation Area, north of Granite Re
 If you’re looking for a desert wilderness with a bit of diversity, the Salt River Loop Trail offers excellent photography and wildlife views. Hikers will enjoy the stunning views of Four Peaks, the Verde River, and the desert landscape as they hike along the Salt River Loop Trail. Start your hike near the confluence of the Salt and Verde rivers. Soon after, you’ll fork the trail into a loop.
 
 To get to the Phon D Sutton Recreation Area, follow Power Rd north from Mesa, and then turn left onto Bush Highway. You’ll soon come to a parking lot and the recreation area. Make sure to purchase a recreation pass, which costs $8, before entering the park. The best time to photograph the sun setting is about an hour before sunset. To find the park, look for an orange and white orienteering sign. [Browse next article](https://www.whiteglovecarpet.com/wind-cave-trail/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

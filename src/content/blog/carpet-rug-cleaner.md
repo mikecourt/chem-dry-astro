@@ -1,13 +1,12 @@
 ---
 title: "Carpet Rug Cleaner"
 meta_title: "Carpet Rug Cleaner"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Cleaning your carpets and rugs can be a daunting task, especially if you don’t have the right tools or know how to do it properly."
 date: 2024-08-08T20:21:31.000Z
 image: "/images/blog/carpet-rug-cleaner.webp"
 categories: ["Carpet Cleaning","Rug Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]
 Cleaning your carpets and rugs can be a daunting task, especially if you don’t have the right tools or know how to do it properly. Harsh chemicals can damage your carpet and leave behind harmful soaps, so it’s important to use a gentle and [effective carpet rug cleaner](https://www.whiteglovecarpet.com/area-rug-cleaning/) instead.
 
 Baking soda, vinegar and dish soap are all natural ingredients that can be used to clean your carpets and rugs freshly and effectively. These cleaners will remove dirt, dust mites, pet hair and other debris without leaving any harmful soap behind.
@@ -27,4 +26,3 @@ Clean your carpets and rugs with a fresh and effective carpet rug cleaner every 
 If you’re not sure how to clean your carpets or rugs properly, call a professional carpet cleaner for help. They will have the knowledge and experience to get the job done right, and they can also help to extend the life of your carpets and rugs.
 
 [Continue reading next article](https://www.whiteglovecarpet.com/what-is-carpet-rug-cleaner/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

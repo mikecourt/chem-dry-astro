@@ -1,13 +1,12 @@
 ---
 title: "How to Remove Coffee Stains From Carpet"
 meta_title: "How to Remove Coffee Stains From Carpet"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Need a guide on how to remove coffee stains from carpet? If you’ve spilled a cup of coffee on your carpet, you can quickly remove it using a solution of 50/50 white vinegar, lemon juice and water."
 date: 2023-01-24T21:12:30.000Z
 image: "/images/blog/how-to-remove-coffee-stains-from-carpet.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" background_size="initial" background_position="top_left" background_repeat="repeat" hover_enabled="0" global_colors_info="{}" sticky_enabled="0"]
 Need a guide on [how to remove coffee stains from carpet](https://www.whiteglovecarpet.com/carpet-cleaning/)? If you’ve spilled a cup of coffee on your carpet, you can quickly remove it using a solution of 50/50 white vinegar, lemon juice and water. Then, dab away the stain with a clean cloth, making sure not to rub it in. This solution will usually work well for fresh stains. For more stubborn stains, you may need to use a stronger stain remover.
 
 Another option for coffee stain removal is to apply a mixture of white vinegar, liquid dish soap, and baking soda. A white cloth should be used to sponge the solution on the stain. Blot often until the stain is gone. After blotting, rinse the area thoroughly with cold water. You can repeat this process as necessary. If the stain doesn’t completely disappear, you can apply a mixture of dish soap and vinegar and try again.
@@ -29,4 +28,3 @@ Another method for removing coffee stains from carpets is the use of hydrogen 
 If you are careful and prevent the coffee spill from spreading, you’ll be able to clean it. If you don’t take action right away, it may be too late. A coffee stain can spread easily if you don’t know how to remove it properly. This is why you must act quickly.
 
 Before cleaning, it’s important to test the cleaning solution on a small patch to see if it is effective. This way, you can see if it will work on your carpet. You can then apply the cleaning solution on the area using a white microfiber cloth. Work your way inwards from the edges to the center of the stain.
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

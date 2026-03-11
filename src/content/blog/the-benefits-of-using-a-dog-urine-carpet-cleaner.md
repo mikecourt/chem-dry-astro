@@ -1,13 +1,13 @@
 ---
 title: "The Benefits of Using a Dog Urine Carpet Cleaner"
 meta_title: "The Benefits of Using a Dog Urine Carpet Cleaner"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Dogs are a man’s best friend, but with that title comes some responsibility. One of those responsibilities is keeping your carpets clean, especially after your dog has an accident."
 date: 2024-08-08T18:47:33.000Z
 image: "/images/blog/the-benefits-of-using-a-dog-urine-carpet-cleaner.webp"
 categories: ["Pet Urine Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]Dogs are a man’s best friend, but with that title comes some responsibility. One of those responsibilities is keeping your carpets clean, especially after your dog has an accident. While there are many commercial carpet cleaners on the market, did you know that there is a [dog urine carpet cleaner](https://puppysimply.com/clean-dog-urine-from-carpet/) that can get the job done just as well? This cleaner is made from natural ingredients and can be used to remove all traces of pet urine odor and stains from your carpets.
+Dogs are a man’s best friend, but with that title comes some responsibility. One of those responsibilities is keeping your carpets clean, especially after your dog has an accident. While there are many commercial carpet cleaners on the market, did you know that there is a [dog urine carpet cleaner](https://puppysimply.com/clean-dog-urine-from-carpet/) that can get the job done just as well? This cleaner is made from natural ingredients and can be used to remove all traces of pet urine odor and stains from your carpets.
 
 There are many benefits to using a dog urine carpet cleaner. Some of the most notable benefits include:
 
@@ -26,4 +26,3 @@ Once you have chosen the right dog urine carpet cleaner for your home, there are
 A dog urine carpet cleaner is a great way to keep your carpets clean and free of pet urine odor and stains. When choosing a cleaner, be sure to consider the size of your home, the type of carpet you have, and your budget. And, when using the cleaner, be sure to follow the instructions carefully to ensure the best results.
 
 [Click here to learn more.](https://www.whiteglovecarpet.com/tips-for-keeping-your-carpet-clean-with-a-dog/)
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

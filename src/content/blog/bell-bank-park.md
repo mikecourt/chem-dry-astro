@@ -1,13 +1,12 @@
 ---
 title: "Bell Bank Park"
 meta_title: "Bell Bank Park"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "Bell Bank Park is a multi-purpose sports complex in Mesa, Arizona. The relatively new facility had its grand opening in 2022, headlined by musician Lindsey Stirling. See our home page."
 date: 2024-08-08T16:57:28.000Z
 image: "/images/blog/bell-bank-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" global_colors_info="{}"]
 Bell Bank Park is a multi-purpose sports complex in Mesa, Arizona. The relatively new facility had its grand opening in 2022, headlined by musician Lindsey Stirling. [See our home page](https://www.whiteglovecarpet.com/).
 
 If you’re planning a trip to Bell Bank Park, Hotwire has some amazing vacation packages that can save you money. These deals include roundtrip airfare and a hotel stay.
@@ -43,4 +42,3 @@ If you can be flexible with your travel dates, you may be able to score even mor
 With the huge Tonto National Forest nearby, South Mountain Park a short drive west, and Phoenix less than half an hour away, having your own set of wheels makes it easier to explore everything Mesa has to offer. Renting a car with Enterprise in Phoenix-Mesa Gateway Airport gives you the flexibility to go on your own schedule and visit remote and local destinations without having to wait around for a bus or train.
 
 When you rent a 9-seater car with Enterprise in Phoenix – 2810 E Bell Rd, Arizona AZ, USA, you’ll typically get a Ford Tourneo, Ford Transit, Mercedes Vito, or Fiat Talento model that can comfortably accommodate up to eight people. Make sure you check the supplier’s age policy and bring a valid driver’s license when you pick up your vehicle. You should also pay attention to the car class and fuel/pick-up policy as prices may differ between different suppliers. Using our website, you can compare offers from multiple providers at once to find the best deal for your trip. [Next article](https://www.whiteglovecarpet.com/skyline-park/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

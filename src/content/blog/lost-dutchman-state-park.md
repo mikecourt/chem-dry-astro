@@ -1,13 +1,13 @@
 ---
 title: "Lost Dutchman State Park"
 meta_title: "Lost Dutchman State Park"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Located in Apache Junction, less than an hour from Phoenix, Lost Dutchman State Park is a popular camping destination for hikers and campers."
 date: 2024-08-08T16:59:34.000Z
 image: "/images/blog/lost-dutchman-state-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]Located in Apache Junction, less than an hour from Phoenix, Lost Dutchman State Park is a popular camping destination for hikers and campers. The park offers 135 campsites (68 with electric/water hookups) and cabins that are reserved year-round through Arizona State Parks.
+Located in Apache Junction, less than an hour from Phoenix, Lost Dutchman State Park is a popular camping destination for hikers and campers. The park offers 135 campsites (68 with electric/water hookups) and cabins that are reserved year-round through Arizona State Parks.
 
 Those looking for adventure can explore the area’s iconic Superstition Mountains on foot, by bike, or on horseback. Giant saguaro cactuses, birding, and a carpet of wildflowers add to the appeal of this 320-acre idyllic public recreation area. [More by clicking here](https://www.whiteglovecarpet.com/).
 ### Campsites
@@ -38,4 +38,3 @@ With towering saguaros, endless desert landscape & the iconic Superstition Mount
 The best time to visit is during spring or fall when the desert blooms. You’ll find lots of wildflowers, especially tulips! The Siphon Draw trail is a great hike to take for amazing views of the Superstitions.
 
 This is also a great spot for sunrise or sunset. Just make sure to arrive a few hours before the sun sets or rises so you can get out on the trails and explore the park before it gets too hot! The park also has some awesome rock formations that are just waiting to be photographed. Be sure to check out Cathedral Rock! It’s one of the most iconic spots in the park. Continue reading about [Bell Bank Park](https://www.whiteglovecarpet.com/bell-bank-park/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

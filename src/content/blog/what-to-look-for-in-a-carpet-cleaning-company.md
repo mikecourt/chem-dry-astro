@@ -1,13 +1,13 @@
 ---
 title: "What to Look For in a Carpet Cleaning Company"
 meta_title: "What to Look For in a Carpet Cleaning Company"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "We have all heard the saying “You get what you pay for.” When choosing a carpet cleaning company, this is especially true. Read this first!"
 date: 2024-08-08T17:07:09.000Z
 image: "/images/blog/what-to-look-for-in-a-carpet-cleaning-company.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]We have all heard the saying “You get what you pay for.” When choosing a carpet cleaning company, this is especially true. [Read this first](https://www.whiteglovecarpet.com/)!
+We have all heard the saying “You get what you pay for.” When choosing a carpet cleaning company, this is especially true. [Read this first](https://www.whiteglovecarpet.com/)!
 
 Online reviews can be a great way to learn about what past customers liked or didn’t like about a particular company. Be sure to read these carefully and look for details that matter most to you.
 ### Customer Service
@@ -39,4 +39,3 @@ A vehicle is an important asset for a cleaning business. It should be properly r
 The company’s vehicles should be branded with their logo, phone number, and website to make them look professional. They should also be equipped with a vacuum cleaner for efficient cleaning of carpets.
 
 A good carpet cleaning service is also capable of dealing with other surfaces that need attention, such as soiled grout or dull hardwood. You can determine their capabilities by checking their website and reading through customer reviews. [Click here for more interesting articles](https://www.whiteglovecarpet.com/why-hire-a-professional-carpet-cleaner/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

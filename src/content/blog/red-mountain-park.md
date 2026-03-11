@@ -1,13 +1,13 @@
 ---
 title: "Things to Do in Red Mountain Park"
 meta_title: "Things to Do in Red Mountain Park"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Disc golf, baseball, and volleyball are among the many activities at Red Mountain Park Mesa. You can even go birding here. For the ultimate Arizona experience, spend a day here. You will not be disappointed."
 date: 2024-08-09T15:56:37.000Z
 image: "/images/blog/red-mountain-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]# **Things to Do in Red Mountain Park **
+# **Things to Do in Red Mountain Park **
 
 Disc golf, baseball, and volleyball are among the many activities at Red Mountain Park Mesa. You can even go birding here. For the ultimate Arizona experience, spend a day here. You will not be disappointed. The park is the perfect place to relax and unwind after a day of sightseeing. Read on to discover more things to do in Red Mountain Park. You might even come back again for more! [A great post to read](https://www.whiteglovecarpet.com/).
 ### **Disc golf course**
@@ -27,6 +27,3 @@ If you enjoy birding, you will find plenty to enjoy in the immediate park area, 
 There are a few spots for birding in the area, including several wetlands, where you can view many species of water birds. Among the species you might see are the Common Loon, Hooded Merganser, Ruddy Duck, Ring-necked Duck, Gadwall, Bufflehead, and Pintail. You might also catch sight of a Great Blue Heron or a Yellowheaded Blackbird in these wetland areas. If you visit in winter, you might also be able to spot Bald Eagle, Red-tailed Hawk, or Prairie Falcon.
 
 Other birds you might find at Red Mountain Park Mesa AZ include Common Mergansers, Double-Crested Cormorants, and a wide variety of ducks. Other birds you may see include the Canyon Wren, Rock Wren, and Townsend’s Solitaire. You might also see a Pinyon Jay or even a Townsend’s Solitaire. This is a great place to go birding if you want to experience nature up close. [Click here for the next blog post](https://www.whiteglovecarpet.com/arizona-golf-resort-event-center/).
-
- 
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

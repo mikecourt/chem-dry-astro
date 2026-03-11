@@ -1,13 +1,12 @@
 ---
 title: "Desert Botanical Garden"
 meta_title: "Desert Botanical Garden"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "Desert Botanical Garden is a place for the whole family. The 140-acre attraction features five thematic trails highlighting topics like conservation, desert living, and desert wildflowers."
 date: 2024-08-08T16:33:10.000Z
 image: "/images/blog/desert-botanical-garden.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" hover_enabled="0" sticky_enabled="0"]
 Desert Botanical Garden is a place for the whole family. The 140-acre attraction features five thematic trails highlighting topics like conservation, desert living, and desert wildflowers. There are also specialized tours, horticultural programs, concerts, and more. [A great post ahead](https://www.whiteglovecarpet.com/).
 
 Bring a water bottle (the garden has two hydration stations) and sunscreen, as well as comfortable shoes.
@@ -43,4 +42,3 @@ The Garden hosts a few different events throughout the year that are sure to app
 The ‘Desert Landscape School’ is an immersive experience that allows visitors to practice their landscaping skills alongside Garden horticultural experts. For the little ones, they have ‘Let’s Grow with Books’ where children education associates lead kids ages 0-5 and their caregivers through weekly themed stories surrounding the garden and desert.
 
 For an eventful night out, head over to their ‘Flashlight Nights’ where you can enjoy the Garden after dark with performances, cool treats, hands-on activities, and creature features! This is perfect for a summer date night or family adventure. The event takes place on the second Friday of each month and your admission includes refreshing welcome drinks, live music, pop-up activities, Garden strolls, and more. [Refer to This Web Page](https://www.whiteglovecarpet.com/phoenix-zoo/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

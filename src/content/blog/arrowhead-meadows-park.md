@@ -1,13 +1,12 @@
 ---
 title: "Arrowhead Meadows Park"
 meta_title: "Arrowhead Meadows Park"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "Good park and is well maintained. Lots of shade and ramadas. Pretty huge compared to other Chandler parks. The only downside is irresponsible dog owners who leave feces everywhere. Read on to learn more."
 date: 2024-08-08T16:36:58.000Z
 image: "/images/blog/arrowhead-meadows-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" global_colors_info="{}"]
 Good park and is well maintained. Lots of shade and ramadas. Pretty huge compared to other Chandler parks. The only downside is irresponsible dog owners who leave feces everywhere. [Read on to learn more](https://www.whiteglovecarpet.com/).
 
 The average commute to work in this neighborhood is under 15 minutes, one of the shortest in America. Most residents (75.6%) drive alone in a private automobile to get to work.
@@ -41,4 +40,3 @@ The Chandler Community Center is a one-stop shop offering quality recreation and
 Arrowhead Meadows Park features pathways, ballfields, tennis courts, and a pool. It’s a great place for family outings, sports tournaments, and other events. There are also six outdoor pickleball courts that are open on a first-come, first-play basis. The courts are in good shape but are prone to dog poop from irresponsible pet owners.
 
 The neighborhood’s real estate is made up of medium-sized (three or four-bedroom) homes. Most of the residential real estate was built in the 1970s and 1999. This means that the neighborhood is considered established, but not old. Most residents commute to work in under 15 minutes, which is less than most neighborhoods across the country. This helps make Arrowhead Meadows a desirable neighborhood for families looking to buy or rent a home. [Click here for the next blog post](https://www.whiteglovecarpet.com/desert-breeze-park/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

@@ -1,13 +1,12 @@
 ---
 title: "Espee Park"
 meta_title: "Espee Park"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "There are many things to do in Chandler, Arizona. For example, you can visit the Burst of Butterflies Create and Paint Studio for a fun and laid-back activity. You’ll get to go home with one-of-a-kind artwork!"
 date: 2024-08-08T16:38:02.000Z
 image: "/images/blog/espee-park.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" background_size="initial" background_position="top_left" background_repeat="repeat" hover_enabled="0" global_colors_info="{}" sticky_enabled="0"]
 There are many things to do in Chandler, Arizona. For example, you can visit the Burst of Butterflies Create and Paint Studio for a fun and laid-back activity. You’ll get to go home with one-of-a-kind artwork!
 
 Another great option is Espee Park, which has a variety of amenities for all ages. The park features sports facilities, including a baseball field, and a splash pad with water towers, spray rings, and ground sprays. [You’ll be glad you read this](https://www.whiteglovecarpet.com/)!
@@ -43,4 +42,3 @@ Espee Park is a medium-sized community park with playgrounds, sports facilities,
 The park is a favorite among locals for its exhilarating bike park and scenic sports fields. It also has a baseball field, which can be rented for events.
 
 Besides the sports facilities, this park offers ample open space for fun activities like frisbee and other outdoor games. It also has a clean restroom and ample parking space. [Discover more interesting articles](https://www.whiteglovecarpet.com/arrowhead-meadows-park/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

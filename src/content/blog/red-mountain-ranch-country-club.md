@@ -1,13 +1,13 @@
 ---
 title: "Red Mountain Ranch Country Club"
 meta_title: "Red Mountain Ranch Country Club"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Located just 23 miles from Sky Harbor Airport, Red Mountain Ranch Country Club is an exclusive membership club in Mesa, Arizona."
 date: 2024-08-09T16:06:51.000Z
 image: "/images/blog/red-mountain-ranch-country-club.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]Located just 23 miles from Sky Harbor Airport, Red Mountain Ranch Country Club is an exclusive membership club in Mesa, Arizona. Mesa, Arizona has many things to offer, including local shops, sports, theaters, and museums. Here we will cover Red Mountain Ranch Country Club and its 18-hole Pete Dye design. Interested in joining Red Mountain Ranch Country Club? [You can find information on all of these and more by clicking here](https://www.whiteglovecarpet.com/).
+Located just 23 miles from Sky Harbor Airport, Red Mountain Ranch Country Club is an exclusive membership club in Mesa, Arizona. Mesa, Arizona has many things to offer, including local shops, sports, theaters, and museums. Here we will cover Red Mountain Ranch Country Club and its 18-hole Pete Dye design. Interested in joining Red Mountain Ranch Country Club? [You can find information on all of these and more by clicking here](https://www.whiteglovecarpet.com/).
 ### **Red Mountain Ranch Country Club**
 
 The breathtaking 6653-yard, par-72 course at Red Mountain Ranch Country Club is a Pete Dye masterpiece. The arid desert setting includes saguaro trees and spectacular rock formations. This is a golfer’s dream! The Matheson Team is your local real estate expert and is ready to help you find your perfect home! Contact us today for a tour!
@@ -33,4 +33,3 @@ Amenities at Red Mountain Ranch include several catering services. The in-house 
 If you’re considering buying a home in Red Mountain Ranch, you’ll be pleased to know that the community is conveniently located near three top-rated public schools. Red Mountain Ranch Elementary, Shepherd Junior High, and Red Mountain High School are all located within the community. For further information on these schools, contact The Matheson Team, your Scottsdale real estate experts. Cathy McLaughlin has been serving the needs of Mesa families for over 20 years. Her passion for serving others is reflected in the quality of service she provides her clients.
 
 This private country club is located in the heart of the neighborhood. Residents enjoy an 18-hole Pete Dye championship course and the 30,000-square-foot clubhouse. In addition to the golf course, Red Mountain Ranch Country Club has a fitness center and junior Olympic-sized swimming pool. Those who want to stay in shape can join the tennis program and enjoy social mixers and league play. Members can dine on the clubhouse’s casual and formal dining options, and enjoy a full slate of social events and activities. [Discover more interesting article](https://www.whiteglovecarpet.com/red-mountain-park/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

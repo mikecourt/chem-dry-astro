@@ -1,13 +1,13 @@
 ---
 title: "Wind Cave Trail"
 meta_title: "Wind Cave Trail"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "If you want to take your dog out on a hike, try the 3.2-mile out-and-back Wind Cave Trail in Phoenix, Arizona. The trail is easy to follow and is a great way to get expansive city views."
 date: 2024-02-01T11:39:49.000Z
 image: "/images/blog/wind-cave-trail.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]If you want to take your dog out on a hike, try the 3.2-mile out-and-back Wind Cave Trail in Phoenix, Arizona. The trail is easy to follow and is a great way to get expansive city views. It is an exposed trail so be sure to take plenty of water along the way, especially in the hot summer months. Rattlesnakes are commonly seen along the trail and it is important to take the proper precautions in case you see one. Other interesting animals that can be seen on this hike include deer and rabbits. [Read on to learn more](https://www.whiteglovecarpet.com/).
+If you want to take your dog out on a hike, try the 3.2-mile out-and-back Wind Cave Trail in Phoenix, Arizona. The trail is easy to follow and is a great way to get expansive city views. It is an exposed trail so be sure to take plenty of water along the way, especially in the hot summer months. Rattlesnakes are commonly seen along the trail and it is important to take the proper precautions in case you see one. Other interesting animals that can be seen on this hike include deer and rabbits. [Read on to learn more](https://www.whiteglovecarpet.com/).
 ### **3.2 mile out and back**
 
 A 3.2 mile out and back in the Wind Cave Wilderness, near Apache Junction, Arizona, is a great hike for experienced spelunkers. The trailhead for Wind Cave is in Usery Mountain Regional Park. This park is well known for its hiking trails and is a popular place to enjoy sunsets and wildflowers in the spring. The trail can be tough, so be prepared to wear comfortable shoes.
@@ -33,4 +33,3 @@ Another great spot to catch a desert sunset is from the wind caves on Wind Cave 
 The 3 mile, heavily trafficked Wind Cave Trail is located near Mesa, Arizona. The trail is moderately difficult and best suited for hiking in the fall and spring. The trail will take you about two hours to complete and is shaded. It’s best to start your hike early, when you’ll have the shaded ascend and descent. The trail is not maintained, so expect to take several breaks during your hike.
 
 The Wind Cave Trail begins at an elevation of 2,028 feet and ends at Pass Mountain Trail, which is a bit longer. The Sonoran Desert flora rivals Southern Arizona’s, including ocotillo, palo verde, prickly pear, chainfruit, and creosote. You’ll also see the Silver cholla, which is a kind of cactus, and the mountain looks like a knob. [Next blog post](https://www.whiteglovecarpet.com/augusta-ranch-golf-club/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

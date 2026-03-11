@@ -1,13 +1,12 @@
 ---
 title: "Golfland Sunsplash"
 meta_title: "Golfland Sunsplash"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\" theme_builder_area=\"post_content\"][et_pb_row _builder_version=\"4.16\" backgro..."
+description: "With a water park, mini-golf course, laser tag, go-carts, and more, Golfland Sunsplash is a fun and exciting place for all ages. Plus, the entire facility is wheelchair accessible! Learn more by clicking here."
 date: 2024-08-08T16:28:10.000Z
 image: "/images/blog/golfland-sunsplash.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}" theme_builder_area="post_content"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}" theme_builder_area="post_content"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||" theme_builder_area="post_content"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}" theme_builder_area="post_content"]
 With a water park, mini-golf course, laser tag, go-carts, and more, Golfland Sunsplash is a fun and exciting place for all ages. Plus, the entire facility is wheelchair accessible! [Learn more by clicking here.](https://www.whiteglovecarpet.com/)
 
 The water park says it’s following CDC guidelines and the pools are kept at twice the normal chlorine level. They also ask guests to maintain social distancing and other steps.
@@ -43,4 +42,3 @@ Golfland Sunsplash is a family-friendly entertainment center that has been enter
 There are also many other fun things to do in Mesa, such as hiking at Usery Mountain Regional Park. The park has over 29 miles of trails and is a great place to get outside and enjoy the stunning scenery. It is also a great place to go camping and horseback riding.
 
 For culture, check out the Mesa Arts Center, where you can see a theater or musical performance. You can also catch a baseball game at Sloan Park or visit the Arizona Museum of Natural History, which showcases dinosaur skeletons. There are also many other interesting attractions to enjoy in Mesa, such as the Mesa Grande Cultural Park, which features a centuries-old ceremonial mound and artifacts from the Hohokam people. Definitely worth checking out!
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

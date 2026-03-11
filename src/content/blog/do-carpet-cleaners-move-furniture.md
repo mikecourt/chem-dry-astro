@@ -1,13 +1,13 @@
 ---
 title: "Do Carpet Cleaners Move Furniture?"
 meta_title: "Do Carpet Cleaners Move Furniture?"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "When you’re looking for a professional carpet cleaning service, it’s important to ask the right questions so that you can be sure they will meet your needs."
 date: 2024-08-08T17:53:42.000Z
 image: "/images/blog/do-carpet-cleaners-move-furniture.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]When you’re looking for a [professional carpet cleaning service](https://www.whiteglovecarpet.com/), it’s important to ask the right questions so that you can be sure they will meet your needs. One question you may want to ask is whether or not the crew will move your furniture for you. This article will discuss what to do if your carpet cleaning company won’t move your furniture and how to prepare for your appointment. We’ll also give some tips on keeping your carpets clean in between professional cleanings!
+When you’re looking for a [professional carpet cleaning service](https://www.whiteglovecarpet.com/), it’s important to ask the right questions so that you can be sure they will meet your needs. One question you may want to ask is whether or not the crew will move your furniture for you. This article will discuss what to do if your carpet cleaning company won’t move your furniture and how to prepare for your appointment. We’ll also give some tips on keeping your carpets clean in between professional cleanings!
 
 Some people may think that once they call in a professional carpet cleaning service, the crew will move all of their furniture for them. However, this is not always the case. Depending on the company and the services they offer, some crews may be willing to move furniture for an additional fee. Be sure to ask if there is an additional charge for furniture moving before you book your appointment!
 
@@ -20,4 +20,3 @@ After your carpet has been cleaned, it’s important to take some steps to keep 
 By following these tips, you can keep your carpets looking clean and fresh in between professional cleanings!
 
 [Click here to learn more.](https://www.whiteglovecarpet.com/how-to-clean-upholstery-with-a-diy-solution/)
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

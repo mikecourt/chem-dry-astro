@@ -1,13 +1,13 @@
 ---
 title: "How to Get Spots Out of Your Carpet"
 meta_title: "How to Get Spots Out of Your Carpet"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "Most carpet comes with a stain-resistant coating (like StainMaster or ScotchGuard), so if you work to clean up the spot quickly, you can avoid having your spot turn into a permanent stain."
 date: 2022-05-23T21:36:07.000Z
 image: "/images/blog/how-to-get-spots-out-of-your-carpet.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" global_colors_info="{}"]#### Get on that spot fast
+#### Get on that spot fast
 
 Most carpet comes with a stain-resistant coating (like StainMaster or ScotchGuard), so if you work to clean up the spot quickly, you can avoid having your spot turn into a permanent stain. Also, remember to refresh the protection whenever you get a cleaning as the coating gets worn down over time.
 
@@ -30,4 +30,3 @@ When you’re done, you can put a towel with a heavy object on top to soak up an
 #### Know your limits
 
 Even after your best effort, you can be in a situation where you’re over your head. Especially if you have ink, marker, nail polish, rust, red stains, urine, or other tough spots and spills, it’s better to call a professional so as not to make the situation worse. Some stains are permanent, but you might be surprised what we can remove.
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

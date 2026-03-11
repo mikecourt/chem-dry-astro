@@ -1,13 +1,12 @@
 ---
 title: "Phoenix Zoo – A Fun, Educational Place For the Family"
 meta_title: "Phoenix Zoo – A Fun, Educational Place For the Family"
-description: "[et_pb_section fb_built=\"1\" admin_label=\"section\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row admin_label=\"row\" _builder_version=\"4.16\" b..."
+description: "Phoenix Zoo is a fun, educational place to spend a day with the family. It is more than animals and walking trails; it offers many attractions and experiences, including Stingray Bay, Safari Train and Giraffe Encounter."
 date: 2024-08-08T16:31:40.000Z
 image: "/images/blog/phoenix-zoo.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" admin_label="section" _builder_version="4.16" global_colors_info="{}"][et_pb_row admin_label="row" _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" _module_preset="default" hover_enabled="0" sticky_enabled="0"]
 Phoenix Zoo is a fun, educational place to spend a day with the family. It is more than animals and walking trails; it offers many attractions and experiences, including Stingray Bay, Safari Train and Giraffe Encounter.
 
 The zoo gained international fame for one of its elephants, Ruby, who painted pictures. Her paintings sold for thousands of dollars and were collected worldwide. [This is a fantastic article to read](https://www.whiteglovecarpet.com/).
@@ -51,4 +50,3 @@ Although it’s not one of the largest zoos in the country, Phoenix Zoo is still
 The Arizona Trail is designed to resemble the wildlife and plants native to the state, including saguaro cacti, coyote, fennec fox, Sonoran pronghorn, coyote, mountain lion, turkey vulture, thick-billed parrot, and javelina. The exhibits are spread out throughout the entire area and have a very natural feel.
 
 You should allow at least 3-4 hours to fully experience Phoenix Zoo and its 125 acres of natural habitats. If you want to cut down on your sightseeing time, consider purchasing a “Total Experience” ticket that includes admission to the immersive 4D theater, Safari train ride, and unlimited carousel rides. [Check out this interesting post](https://www.whiteglovecarpet.com/golfland-sunsplash/)!
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

@@ -1,13 +1,13 @@
 ---
 title: "Cactus Yards"
 meta_title: "Cactus Yards"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "There are several reasons to visit Cactus Yards Gilbert AZ. First, you’ll be able to enjoy free, weekly open-park baseball league play and tournaments."
 date: 2023-10-02T16:33:15.000Z
 image: "/images/blog/cactus-yards.webp"
 categories: ["Local Fun"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]There are several reasons to visit Cactus Yards Gilbert AZ. First, you’ll be able to enjoy free, weekly open-park baseball league play and tournaments. In addition, the complex will be a great place to host events such as company parties and picnics. This complex has invested $2.6 million in repairs since it first opened a decade ago. After all, that’s not bad! [A fantastic read](https://www.whiteglovecarpet.com/).
+There are several reasons to visit Cactus Yards Gilbert AZ. First, you’ll be able to enjoy free, weekly open-park baseball league play and tournaments. In addition, the complex will be a great place to host events such as company parties and picnics. This complex has invested $2.6 million in repairs since it first opened a decade ago. After all, that’s not bad! [A fantastic read](https://www.whiteglovecarpet.com/).
 ### **Cactus Yards has been named the National Complex of the Year**
 
 The USSSA Arizona Baseball Chapter named Cactus Yards Gilbert, AZ, as the Outstanding Park of the Year for both 2019 and 2020. The award was given to the facility after it considered input from stakeholders. Gilbert’s Parks and Recreation director is elated by the award and acknowledges the hard work of the staff at the complex. The complex is located near Power and Elliot roads. It has eight scaled down replicas of famous ball fields, a soccer pavilion, batting cages, and restaurants.
@@ -28,4 +28,3 @@ The city plans to use the facility for public parks and recreation programs. The
 The Gilbert, Arizona, baseball park has reopened Feb. 9 after a nearly 19-month closure. Formerly known as Big League Dreams, the Gilbert complex hosted a Presidents Day weekend baseball tournament that attracted 100 teams from as far away as Alaska. The park includes eight fields of baseball, a soccer arena, batting cages, restaurants and a playground.
 
 During the last fiscal year, the park’s fees have risen by 59 percent, to $769,446. The city had hoped to recover at least 50 percent of the cost of maintaining the fieldhouse, which includes eight scaled-down versions of major league ball fields, an indoor soccer pavilion, batting cages, a playground, and restaurants. In February, the city reopened the park after taking over operations from Big League Dreams. The park has since hosted 54 tournaments. The Gilbert Park District estimates that the Cactus Yards fieldhouse will be used by thousands of people each day. Continue reading about [McQueen Park Activity Center](https://www.whiteglovecarpet.com/mcqueen-park-activity-center/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

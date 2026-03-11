@@ -1,13 +1,12 @@
 ---
 title: "Why Carpet Cleaning is Important"
 meta_title: "Why Carpet Cleaning is Important"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "Carpet Cleaning removes trapped dirt and odors. Odors, from wet dogs to garlic sauces, settle into the base of carpet fibers where regular vacuuming can’t reach. Learn more by clicking here."
 date: 2024-08-08T17:05:13.000Z
 image: "/images/blog/why-carpet-cleaning-is-important.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]
 Carpet Cleaning removes trapped dirt and odors. Odors, from wet dogs to garlic sauces, settle into the base of carpet fibers where regular vacuuming can’t reach. [Learn more by clicking here](https://www.whiteglovecarpet.com/).
 
 Techs spray a special solution that loosens stains and dirt and agitates with a brush. Then hot water extraction, or steam cleaning, rinses away all pre-conditioner, dirt and soap.
@@ -45,4 +44,3 @@ Dirty carpets often house pollutants and grime that are a health hazard. Researc
 If your family suffers from allergies or asthma, these contaminants can cause serious problems. When they are deeply trapped in the carpet, they may get into the respiratory system and cause breathing difficulties and coughing. When these pollutants are removed by professional carpet cleaners, the health of those in your household will improve.
 
 Having dirty carpets can also cause other problems in your home or office. When dirt is not cleaned up quickly, it can cause the fabric to become weakened and worn. It can also result in the formation of dark “traffic lanes” on the carpet that can be difficult to remove and that look unsightly. Professional carpet cleaning prevents these issues and extends the life of your carpet. [Browse the next article](https://www.whiteglovecarpet.com/how-to-clean-tile-floors/).
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

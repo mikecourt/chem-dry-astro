@@ -1,13 +1,13 @@
 ---
 title: "What is Best Leather Sofa Cleaner?"
 meta_title: "What is Best Leather Sofa Cleaner?"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "When looking for a leather sofa cleaner, it’s important to choose one that is specifically designed for leather furniture. Some cleaners contain harsh chemicals that can damage the leather."
 date: 2024-08-08T22:18:01.000Z
 image: "/images/blog/what-is-best-leather-sofa-cleaner.webp"
 categories: ["Upholstery Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]When looking for a leather sofa cleaner, it’s important to choose one that is specifically designed for leather furniture. Some cleaners contain harsh chemicals that can damage the leather. Be sure to read the label before purchasing a cleaner to make sure it is fresh for use on leather.
+When looking for a leather sofa cleaner, it’s important to choose one that is specifically designed for leather furniture. Some cleaners contain harsh chemicals that can damage the leather. Be sure to read the label before purchasing a cleaner to make sure it is fresh for use on leather.
 
 Once you have selected a cleaner, follow the instructions carefully. Cleaners should be applied in a well-ventilated area and should never be sprayed directly onto the sofa. Instead, spray the cleaner onto a cloth and then use the cloth to apply it to the sofa.
 
@@ -28,5 +28,3 @@ Here are some tips for cleaning your leather sofa and keeping it looking like ne
  
 
 By following these tips, you can keep your leather sofa looking like new for years to come.
-
-[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]

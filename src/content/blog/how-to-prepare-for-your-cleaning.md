@@ -1,13 +1,13 @@
 ---
 title: "How to Prepare for Your Cleaning"
 meta_title: "How to Prepare for Your Cleaning"
-description: "[et_pb_section fb_built=\"1\" _builder_version=\"4.16\" global_colors_info=\"{}\"][et_pb_row _builder_version=\"4.16\" background_size=\"initial\" background_posi..."
+description: "We don’t park on your driveway, but he open space will help us run the hoses and other cleaning equipment from the truck into your house without the risk of bumping into your vehicle."
 date: 2022-05-23T21:22:10.000Z
 image: "/images/blog/how-to-prepare-for-your-cleaning.webp"
 categories: ["Carpet Cleaning"]
 draft: false
 ---
-[et_pb_section fb_built="1" _builder_version="4.16" global_colors_info="{}"][et_pb_row _builder_version="4.16" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"][et_pb_column type="4_4" _builder_version="4.16" custom_padding="|||" global_colors_info="{}" custom_padding__hover="|||"][et_pb_text _builder_version="4.27.0" background_size="initial" background_position="top_left" background_repeat="repeat" global_colors_info="{}"]#### Move the cars out of the driveway.
+#### Move the cars out of the driveway.
 
 We don’t park on your driveway, but he open space will help us run the hoses and other cleaning equipment from the truck into your house without the risk of bumping into your vehicle.
 #### Remove light/breakable items out of the rooms to be cleaned.
@@ -21,4 +21,4 @@ Special note for birds and fish when receiving**[ tile cleaning](https://www.wh
 
 #### Get cords, wires, and drapes off the floor.
 
-Our rotating Powerhead machine gives **[the deepest, most thorough clean ever](https://www.whiteglovecarpet.com/carpet-cleaning/)**, but it does not like electronic cords. The cords can become wrapped around the spinning head causing serious issues. Pinning drapes off the floor helps us to see the floor underneath and not let the drapes get wet from the damp carpet. Again, **our technicians are very careful** not to cause any damage, but better fresh than sorry.[/et_pb_text][/et_pb_column][/et_pb_row][/et_pb_section]
+Our rotating Powerhead machine gives **[the deepest, most thorough clean ever](https://www.whiteglovecarpet.com/carpet-cleaning/)**, but it does not like electronic cords. The cords can become wrapped around the spinning head causing serious issues. Pinning drapes off the floor helps us to see the floor underneath and not let the drapes get wet from the damp carpet. Again, **our technicians are very careful** not to cause any damage, but better fresh than sorry.
