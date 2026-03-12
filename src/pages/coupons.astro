@@ -1,0 +1,174 @@
+---
+// TODO(CHE-19): Verify current pricing with Mike before go-live.
+// Legacy allprochemdry.com pricing: $40/room, $119/3 areas, $155 minimum.
+import CustomButton from "@/components/CustomButton.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+const ctaEntry = (await getEntry(
+  "ctaSection",
+  "call-to-action"
+)) as CollectionEntry<"ctaSection">;
+
+const title = "Carpet Cleaning Coupons & Specials";
+const meta_title =
+  "Carpet Cleaning Coupons Denver CO | All Pro Chem-Dry Specials";
+const description =
+  "Save on professional carpet cleaning in Denver and Highlands Ranch. All Pro Chem-Dry offers limited-time specials on carpet, upholstery, and tile cleaning. Call to redeem.";
+
+const coupons = [
+  {
+    label: "Most Popular",
+    headline: "$40 Per Room",
+    subline: "Carpet Cleaning Special",
+    detail: "Minimum 3 rooms. Regular-sized rooms only. Stairs extra.",
+    cta: "Book This Deal",
+    href: "/appointment",
+    highlight: true,
+  },
+  {
+    label: "Best Value",
+    headline: "3 Areas for $119",
+    subline: "Whole-Home Package",
+    detail:
+      "Any 3 areas of carpet cleaning. Mix and match rooms, hallways, or stairs.",
+    cta: "Book This Deal",
+    href: "/appointment",
+    highlight: false,
+  },
+  {
+    label: "Standard Rate",
+    headline: "$155 Minimum",
+    subline: "Professional Cleaning Visit",
+    detail:
+      "Minimum service call covers up to 3 regular rooms. Additional areas billed per room.",
+    cta: "Get a Free Estimate",
+    href: "/appointment",
+    highlight: false,
+  },
+];
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+  <!-- Hero -->
+  <section class="py-20 md:py-32 mt-24 sm:mt-20">
+    <div class="container">
+      <div class="mb-12 md:mb-16 text-center" data-aos="fade-up-sm">
+        <p
+          class="text-sm font-semibold tracking-wider uppercase text-primary mb-3"
+          data-aos="fade-up-sm"
+        >
+          CURRENT SPECIALS
+        </p>
+        <CustomHeading
+          as="h1"
+          text={title}
+          svgColor="text-primary"
+          class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+        <p
+          class="text-lg text-text/80 max-w-2xl mx-auto"
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          Save on professional carpet, upholstery, and tile cleaning in Denver,
+          Highlands Ranch, and the South Metro. Call to confirm availability
+          and schedule your appointment.
+        </p>
+      </div>
+
+      <!-- Coupon Cards -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+        data-aos="fade-up-sm"
+        data-aos-delay="150"
+      >
+        {
+          coupons.map((coupon) => (
+            <div
+              class={`relative rounded-2xl border-2 p-8 flex flex-col ${
+                coupon.highlight
+                  ? "border-primary bg-primary/5"
+                  : "border-border bg-white"
+              }`}
+            >
+              {coupon.highlight && (
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-semibold px-4 py-1 rounded-full tracking-wider uppercase">
+                  {coupon.label}
+                </span>
+              )}
+              {!coupon.highlight && (
+                <span class="inline-block text-xs font-semibold text-primary tracking-wider uppercase mb-2">
+                  {coupon.label}
+                </span>
+              )}
+
+              <div class="mb-4 mt-2">
+                <p class="text-4xl font-bold text-dark leading-none mb-1">
+                  {coupon.headline}
+                </p>
+                <p class="text-base font-semibold text-primary">
+                  {coupon.subline}
+                </p>
+              </div>
+
+              <p class="text-sm text-text/70 mb-8 flex-grow">{coupon.detail}</p>
+
+              <CustomButton
+                label={coupon.cta}
+                link={coupon.href}
+                style={coupon.highlight ? "solid" : "outline"}
+                className="w-full text-center justify-center"
+              />
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Terms & Conditions -->
+      <div
+        class="bg-light rounded-xl p-6 md:p-8 mb-16 max-w-3xl mx-auto"
+        data-aos="fade-up-sm"
+      >
+        <h2 class="text-base font-semibold text-dark mb-3">
+          Terms & Conditions
+        </h2>
+        <ul class="text-sm text-text/70 space-y-1 list-disc list-inside">
+          <li>
+            Specials apply to residential carpet cleaning only unless otherwise
+            noted.
+          </li>
+          <li>
+            Must mention offer at time of booking. Cannot be combined with other
+            discounts.
+          </li>
+          <li>Minimum service charges and travel fees may apply.</li>
+          <li>
+            Pricing is subject to change. Call us to confirm current rates
+            before scheduling.
+          </li>
+          <li>Service area: Denver metro, Highlands Ranch, and South Metro.</li>
+        </ul>
+      </div>
+
+      <!-- Phone CTA -->
+      <div class="text-center" data-aos="fade-up-sm">
+        <p class="text-lg font-semibold text-dark mb-2">
+          Ready to book? Call us to redeem your special today.
+        </p>
+        <a
+          href="tel:3032520517"
+          class="text-3xl font-bold text-primary hover:underline"
+        >
+          (303) 252-0517
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction cta={ctaEntry.data} />
+</Base>

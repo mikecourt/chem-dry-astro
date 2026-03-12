@@ -103,6 +103,10 @@
       ]
     },
     {
+      "name": "Specials",
+      "url": "/coupons"
+    },
+    {
       "name": "Before & After",
       "url": "/gallery"
     },

@@ -53,7 +53,6 @@ export default defineConfig({
     "/schedule-appointment": "/appointment",
     "/reviews-testimonials": "/contact",
     "/leave-a-review": "/contact",
-    "/coupons": "/appointment",
     // Legal
     "/privacy-policy": "/privacy-policy",
     // Blog
