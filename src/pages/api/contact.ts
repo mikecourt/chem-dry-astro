@@ -84,12 +84,45 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
-    // Handle duplicate contact as success — contact already exists in CRM
+    // Handle duplicate contact — re-tag so "Tag Added" workflow fires
     if (
       response.status === 400 &&
       responseBody.includes("duplicated contacts")
     ) {
-      console.log("Duplicate contact detected, treating as success:", responseData.meta);
+      const meta = responseData.meta as Record<string, unknown> | undefined;
+      const contactId = meta?.contactId as string | undefined;
+      console.log("Duplicate contact detected:", meta);
+
+      if (contactId) {
+        const leadTags = ["website-lead", "quote-request"];
+        const tagHeaders = {
+          Authorization: `Bearer ${GHL_TOKEN}`,
+          "Content-Type": "application/json",
+          Version: "2021-07-28",
+        };
+        const tagUrl = `https://services.leadconnectorhq.com/contacts/${contactId}/tags`;
+
+        try {
+          // Step 1: Remove tags (so re-adding triggers "Tag Added" workflow)
+          await fetch(tagUrl, {
+            method: "DELETE",
+            headers: tagHeaders,
+            body: JSON.stringify({ tags: leadTags }),
+          });
+
+          // Step 2: Re-add tags to fire the workflow trigger
+          await fetch(tagUrl, {
+            method: "POST",
+            headers: tagHeaders,
+            body: JSON.stringify({ tags: leadTags }),
+          });
+
+          console.log("Re-tagged duplicate contact:", contactId);
+        } catch (tagError) {
+          console.error("Failed to re-tag duplicate contact:", contactId, tagError);
+        }
+      }
+
       return new Response(JSON.stringify({ success: true, duplicate: true }), {
         status: 200,
         headers: { "Content-Type": "application/json" },
