@@ -1,5 +1,5 @@
 ---
-title: "The All Pro **White Glove** Difference"
+title: "The All Pro **Chem-Dry** Difference"
 meta_title: "About Us | All Pro Chem-Dry Denver"
 description: "Family-owned carpet cleaning in Denver for 30+ years. Hot Carbonating Extraction, certified technicians, 100% satisfaction guarantee. Learn about our story."
 subtitle: "ABOUT US"

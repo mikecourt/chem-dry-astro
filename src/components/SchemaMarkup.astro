@@ -32,9 +32,10 @@ const businessAddress = {
   "addressCountry": "US"
 };
 
-// Opening hours (Mon-Sat 7am-6pm)
+// Opening hours (Mon-Fri 8am-5pm, Sat 8am-2pm, Sun closed)
 const openingHours = [
-  "Mo-Sa 07:00-18:00"
+  "Mo-Fr 08:00-17:00",
+  "Sa 08:00-14:00"
 ];
 
 // Build areaServed based on city prop
@@ -76,16 +77,24 @@ const businessSchema = {
   "address": businessAddress,
   "geo": businessGeo,
   "areaServed": buildAreaServed(),
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "opens": "07:00",
-    "closes": "18:00"
-  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "112",
+    "ratingValue": "4.9",
+    "reviewCount": "440",
     "bestRating": "5",
     "worstRating": "1"
   },
