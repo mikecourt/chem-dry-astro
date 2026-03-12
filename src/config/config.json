@@ -4,7 +4,7 @@
     "base_url": "https://whiteglovecarpet.com",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/favicon.ico",
     "logo": "/images/logo-color.svg",
     "footer_logo": "/images/logo-white.svg",
     "logo_width": "150",
