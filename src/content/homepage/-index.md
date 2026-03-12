@@ -9,7 +9,7 @@ hero:
       icon: "FaPhone"
     - enable: true
       label: "Get Free Quote"
-      link: "/appointment"
+      link: "#contact-form"
     - enable: true
       label: "Our Services"
       link: "/services"
