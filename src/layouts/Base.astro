@@ -280,8 +280,8 @@ const gtmEnabled =
     </script>
     <Footer />
 
-    <!-- GHL Number Pool & Session Tracking -->
-    <script src="https://backend.leadconnectorhq.com/appengine/loc/whWiJKEKIxuVxPacF4g2/pool/25VjzJBcMhtCvgmwVPpZ/number_pool.js"></script>
-    <script src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"></script>
+    <!-- GHL Session Tracking & Number Pool (is:inline prevents Astro from processing) -->
+    <script is:inline src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"></script>
+    <script is:inline src="https://backend.leadconnectorhq.com/appengine/loc/whWiJKEKIxuVxPacF4g2/pool/25VjzJBcMhtCvgmwVPpZ/number_pool.js"></script>
   </body>
 </html>
