@@ -5,9 +5,9 @@ import config from "@/config/config.json";
 const phone = config.params.phone;
 const telLink = `tel:${phone.replace(/\D/g, "")}`;
 
-const meta_title = "Spring Allergen Clear-Out | Save 15% on Carpet + Upholstery Cleaning";
+const meta_title = "Remove 98% of Indoor Allergens | Spring Carpet Cleaning | Brimley's White Glove Chem-Dry";
 const meta_description =
-  "Spring Allergen Clear-Out — save 15% on carpet + upholstery cleaning. The Natural® process removes dust mites, pet dander, and pollen using about 80% less water. Book by April 15.";
+  "Breathe easier this spring. Brimley's White Glove Chem-Dry removes 98% of common allergens — dust mites, pet dander, pollen — using The Natural® process and about 80% less water. Save 15% through April 30.";
 ---
 
 <Base
@@ -26,12 +26,13 @@ const meta_description =
         </p>
 
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" style="font-family: var(--font-primary, Poppins), sans-serif;">
-          Spring Is Here.<br />So Are the Allergens.<br />Clear Them Out.
+          Breathe Easier.<br />Remove 98% of<br />Indoor Allergens.
         </h1>
 
         <p class="text-lg md:text-xl text-white/90 mb-4 leading-relaxed" style="font-family: var(--font-secondary, Inter), sans-serif;">
-          We remove the dust mites, pet dander, and pollen trapped in your carpets
-          — using about 80% less water so your home is fresh in hours, not days.
+          Chem-Dry cleaning removes 98% of common allergens — dust mites, pet dander,
+          and spring pollen — from your carpets using about 80% less water than steam
+          cleaning, so your home is fresh and healthy in hours, not days.
         </p>
 
         <!-- Offer callout -->
@@ -49,7 +50,7 @@ const meta_description =
             data-track-action="spring-hero-book"
             data-track-location="hero"
           >
-            Book My Spring Clean →
+            Book My Allergen Clear-Out →
           </a>
           <a
             href={telLink}
@@ -102,19 +103,28 @@ const meta_description =
       <div class="row g-10 items-start">
         <!-- Feature bullets -->
         <div class="col-12 lg:col-6" data-aos="fade-up-sm">
-          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-8" style="font-family: var(--font-primary, Poppins), sans-serif;">
-            Why Spring Is the Perfect Time to Clear the Air
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4" style="font-family: var(--font-primary, Poppins), sans-serif;">
+            How the Chem-Dry Process Clears Allergens
           </h2>
+
+          <p class="text-[#444444] mb-8" style="font-family: var(--font-secondary, Inter), sans-serif;">
+            The Natural® uses carbonation — millions of tiny bubbles that penetrate deep into carpet
+            fibers — to lift allergens like dust mites, pet dander, and spring pollen to the surface
+            for extraction. Because the Chem-Dry process uses about 80% less water than traditional
+            steam cleaning, there's less moisture left in your carpet and less risk of mold and
+            mildew growth. Unlike rental machines or DIY solutions, professional Chem-Dry cleaning
+            goes beyond the surface for a genuinely healthier home environment.
+          </p>
 
           <ul class="space-y-6">
             <li class="flex gap-4">
               <span class="shrink-0 mt-1 w-7 h-7 rounded-full bg-[#008752] flex items-center justify-center text-white text-sm font-bold" aria-hidden="true">✓</span>
               <div>
                 <p class="font-semibold text-dark mb-1" style="font-family: var(--font-secondary, Inter), sans-serif;">
-                  The Natural® cleaning process lifts allergens and dirt without harsh chemicals
+                  Removes 98% of common allergens
                 </p>
                 <p class="text-[#444444] text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">
-                  No dirt-attracting residue left behind — your carpets stay cleaner longer.
+                  The Natural® carbonation lifts dust mites, pet dander, and pollen from deep in your carpet fibers — no dirt-attracting residue left behind.
                 </p>
               </div>
             </li>
@@ -122,10 +132,10 @@ const meta_description =
               <span class="shrink-0 mt-1 w-7 h-7 rounded-full bg-[#008752] flex items-center justify-center text-white text-sm font-bold" aria-hidden="true">✓</span>
               <div>
                 <p class="font-semibold text-dark mb-1" style="font-family: var(--font-secondary, Inter), sans-serif;">
-                  Carpets dry hours faster than steam cleaning
+                  Healthier air for your family
                 </p>
                 <p class="text-[#444444] text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">
-                  About 80% less water means less disruption to your family — back to normal in hours, not days.
+                  No dirt-attracting residue means allergens won't re-accumulate as quickly — your home stays fresher and cleaner through the entire allergy season.
                 </p>
               </div>
             </li>
@@ -133,10 +143,10 @@ const meta_description =
               <span class="shrink-0 mt-1 w-7 h-7 rounded-full bg-[#008752] flex items-center justify-center text-white text-sm font-bold" aria-hidden="true">✓</span>
               <div>
                 <p class="font-semibold text-dark mb-1" style="font-family: var(--font-secondary, Inter), sans-serif;">
-                  Safe for kids, pets, and allergy-sensitive households
+                  Dry in hours, not days
                 </p>
                 <p class="text-[#444444] text-sm" style="font-family: var(--font-secondary, Inter), sans-serif;">
-                  The Natural® uses carbonated cleaning to lift dust mites, pet dander, and spring pollen from deep in carpet fibers.
+                  About 80% less water than steam cleaning means your carpets dry fast — less disruption to your family, and less moisture for mold and mildew to take hold.
                 </p>
               </div>
             </li>
@@ -161,7 +171,7 @@ const meta_description =
         <!-- Booking form -->
         <div class="col-12 lg:col-6" data-aos="fade-up-sm" data-aos-delay="100">
           <div class="bg-light rounded-2xl p-8 shadow-sm" id="spring-form">
-            <h2 class="text-2xl font-bold text-dark mb-2" style="font-family: var(--font-primary, Poppins), sans-serif;">Book My Spring Clean</h2>
+            <h2 class="text-2xl font-bold text-dark mb-2" style="font-family: var(--font-primary, Poppins), sans-serif;">Book My Allergen Clear-Out</h2>
             <p class="text-[#444444] text-sm mb-6" style="font-family: var(--font-secondary, Inter), sans-serif;">
               Get your 15% off quote — we'll follow up within 1 business hour.
             </p>
@@ -230,7 +240,7 @@ const meta_description =
                   data-track="cta-click"
                   data-track-action="spring-form-submit"
                 >
-                  Book My Spring Clean →
+                  Book My Allergen Clear-Out →
                 </button>
               </div>
             </form>
@@ -297,7 +307,7 @@ const meta_description =
     const form = document.getElementById("spring-form-el") as HTMLFormElement | null;
     if (form) {
       const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
-      const originalText = btn?.textContent ?? "Book My Spring Clean →";
+      const originalText = btn?.textContent ?? "Book My Allergen Clear-Out →";
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
