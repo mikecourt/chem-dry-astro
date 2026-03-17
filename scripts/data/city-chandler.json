@@ -1,0 +1,66 @@
+{
+  "city": "Chandler",
+  "slug": "chandler",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning Chandler AZ | Professional Service | Brimley's White Glove",
+  "metaDescription": "Carpet cleaning Chandler AZ - Hot Carbonating Extraction, pet-safe, dries fast. Serving Chandler 30+ years. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/chandler",
+  "heroTitle": "Professional Carpet Cleaning in Chandler, Arizona",
+  "heroSubtitle": "Serving Chandler residents since 1995 with safe, fast-drying carpet cleaning for Ocotillo, Fulton Ranch, Sun Lakes, Pecos Ranch, and Chandler Heights",
+  "neighborhoods": [
+    { "name": "Ocotillo" },
+    { "name": "Fulton Ranch" },
+    { "name": "Sun Lakes" },
+    { "name": "Pecos Ranch" },
+    { "name": "Chandler Heights" }
+  ],
+  "services": [],
+  "zipCodes": [
+    { "zip": "85224", "area": "Chandler" },
+    { "zip": "85225", "area": "Chandler" },
+    { "zip": "85226", "area": "Chandler" },
+    { "zip": "85244", "area": "Chandler" },
+    { "zip": "85246", "area": "Chandler" },
+    { "zip": "85248", "area": "Chandler" },
+    { "zip": "85249", "area": "Chandler" },
+    { "zip": "85286", "area": "Chandler" }
+  ],
+  "faqs": [
+    {
+      "question": "How quickly do carpets dry in Chandler's climate?",
+      "answer": "Most carpets dry in just 1-2 hours thanks to our low-moisture Hot Carbonating Extraction process and Chandler's dry climate. This is 80% faster than traditional steam cleaning, which can take 1-2 days."
+    },
+    {
+      "question": "Can you remove desert dust from deep in my carpets?",
+      "answer": "Absolutely. Our carbonation process uses millions of tiny bubbles to lift embedded desert dust, sand, and allergens from the base of your carpet fibers—not just surface cleaning."
+    },
+    {
+      "question": "Do you serve all Chandler neighborhoods?",
+      "answer": "Yes! We serve all Chandler neighborhoods including Ocotillo, Fulton Ranch, Sun Lakes, Pecos Ranch, Chandler Heights, and everywhere in between. We also serve neighboring Gilbert and Tempe. All Chandler zip codes covered: 85224, 85225, 85226, 85244, 85246, 85248, 85249, and 85286."
+    },
+    {
+      "question": "Is your cleaning process gentle enough for Arizona allergen sufferers?",
+      "answer": "Yes. Our process removes 98% of common allergens including dust mites, pet dander, and pollen. Feel confident — our solution contains no harsh chemicals, making it gentle enough for asthma and allergy sufferers."
+    },
+    {
+      "question": "How much does carpet cleaning cost in Chandler?",
+      "answer": "Pricing varies based on square footage, carpet condition, and any special treatments needed. We provide free, no-obligation estimates with transparent pricing—no hidden fees or surprises. Call (480) 649-3663 for your free quote."
+    },
+    {
+      "question": "How long have you been serving Chandler?",
+      "answer": "We've been proudly serving Chandler residents since 1995—over 30 years of trusted, professional carpet cleaning. We're a local, family-owned business committed to our community."
+    },
+    {
+      "question": "Do you offer same-day or emergency cleaning in Chandler?",
+      "answer": "We'll do our best to accommodate urgent requests. Call us at (480) 649-3663 and we'll work to fit you into our schedule as quickly as possible."
+    },
+    {
+      "question": "Can you clean high-end carpets in luxury Chandler homes?",
+      "answer": "Absolutely. Our gentle yet effective carbonation process is gentle on all carpet types, including wool, silk, and other delicate fibers found in premium Chandler homes. We've been trusted by homeowners throughout Ocotillo and Fulton Ranch for decades."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards, debit cards, checks, and cash for your convenience. Payment is due upon completion of service."
+    }
+  ]
+}

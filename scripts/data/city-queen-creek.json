@@ -1,0 +1,61 @@
+{
+  "city": "Queen Creek",
+  "slug": "queen-creek",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning Queen Creek AZ | Professional Service | Brimley's",
+  "metaDescription": "Carpet cleaning Queen Creek AZ - trusted by growing families. Hot Carbonating Extraction, fast drying. 30+ years experience. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/queen-creek",
+  "heroTitle": "Professional Carpet Cleaning in Queen Creek, Arizona",
+  "heroSubtitle": "Proudly serving Queen Creek families in San Tan Heights, Meridian, Encanterra, and Montelena with safe, fast-drying carpet cleaning.",
+  "neighborhoods": [
+    { "name": "San Tan Heights" },
+    { "name": "Meridian" },
+    { "name": "Encanterra" },
+    { "name": "Montelena" }
+  ],
+  "services": [],
+  "zipCodes": [
+    { "zip": "85140", "area": "Queen Creek" },
+    { "zip": "85142", "area": "Queen Creek" },
+    { "zip": "85143", "area": "Queen Creek" },
+    { "zip": "85144", "area": "Queen Creek" }
+  ],
+  "faqs": [
+    {
+      "question": "How long does carpet cleaning take in Queen Creek?",
+      "answer": "For an average Queen Creek home (1,800-2,500 sq ft), cleaning typically takes 1.5-3 hours depending on the number of rooms and carpet condition. Larger homes in communities like Encanterra may take longer, but we work efficiently to minimize disruption."
+    },
+    {
+      "question": "Do you use enough water for our dusty Queen Creek environment?",
+      "answer": "Absolutely! While we use about 80% less water than steam cleaning, our Hot Carbonating Extraction is specifically designed to lift deep desert dust and allergens. The carbonating bubbles penetrate deep into carpet fibers to remove what other methods leave behind."
+    },
+    {
+      "question": "Is your cleaning gentle enough for new carpets?",
+      "answer": "Yes! Many Queen Creek homes have brand new carpets that need gentle care. Our process is recommended by leading carpet manufacturers and won't void warranties. In fact, regular professional cleaning is often required to maintain warranties."
+    },
+    {
+      "question": "How often should I clean carpets in the desert?",
+      "answer": "Due to Queen Creek's desert environment, we recommend professional cleaning every 6-12 months. Homes with pets, children, or allergy sufferers benefit from cleaning every 6 months to combat dust and allergen buildup."
+    },
+    {
+      "question": "Do you service all Queen Creek neighborhoods?",
+      "answer": "Yes! We proudly serve all Queen Creek and San Tan Valley areas including San Tan Heights, Meridian, Encanterra, Montelena, and all surrounding neighborhoods in zip codes 85140, 85142, 85143, and 85144."
+    },
+    {
+      "question": "How much does carpet cleaning cost in Queen Creek?",
+      "answer": "Pricing varies based on square footage and carpet condition. We provide free, no-obligation estimates with clear, upfront pricing. Call us at (480) 649-3663 for your personalized quote."
+    },
+    {
+      "question": "Can you remove pet stains and odors?",
+      "answer": "Yes! Our P.U.R.T.® treatment eliminates pet urine odors permanently—not just covering them up. It's our most popular add-on service in Queen Creek."
+    },
+    {
+      "question": "Are your products gentle enough for my family?",
+      "answer": "Absolutely. The Natural®, our primary cleaning solution, contains no harsh chemicals, soaps, or fragrances. You can feel good knowing it's gentle on kids, pets, and your entire family."
+    },
+    {
+      "question": "Do you offer same-day service?",
+      "answer": "Yes! When available, we offer same-day appointments for Queen Creek residents. Call us early in the day at (480) 649-3663 to check availability."
+    }
+  ]
+}

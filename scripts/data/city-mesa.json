@@ -1,0 +1,106 @@
+{
+  "city": "Mesa",
+  "slug": "mesa",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning Mesa AZ | Professional Service Since 1995 | Brimley's",
+  "metaDescription": "Carpet cleaning Mesa AZ - all 16 zip codes served. Hot Carbonating Extraction, pet-safe, dries fast. 30+ years experience. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/mesa",
+  "heroTitle": "Mesa's Trusted Carpet Cleaning Service Since 1995",
+  "heroSubtitle": "Local, family-owned business serving Mesa families with deeper, drier carpet cleaning that's gentle on kids and pets.",
+  "neighborhoods": [
+    { "name": "East Mesa" },
+    { "name": "West Mesa" },
+    { "name": "Red Mountain" },
+    { "name": "Superstition Springs" },
+    { "name": "Mesa Riverview" },
+    { "name": "Dobson Ranch" },
+    { "name": "Kleinman Park" },
+    { "name": "Lehi" },
+    { "name": "Citrus Groves" },
+    { "name": "Falcon Field area" }
+  ],
+  "services": [
+    {
+      "title": "Carpet Cleaning",
+      "description": "Deep-clean your carpets with our Hot Carbonating Extraction process. Removes desert dust, allergens, and stubborn stains while drying in just 1-2 hours.",
+      "link": "/services/carpet-cleaning"
+    },
+    {
+      "title": "Upholstery Cleaning",
+      "description": "Refresh your sofas, chairs, and other upholstered furniture. Gentle on all fabric types and dries quickly in Mesa's climate.",
+      "link": "/services/upholstery-cleaning"
+    },
+    {
+      "title": "Tile & Grout Cleaning",
+      "description": "Restore the beauty of your tile floors and eliminate bacteria hiding in grout lines. Perfect for Mesa kitchens, bathrooms, and entryways.",
+      "link": "/services/tile-and-grout-cleaning"
+    },
+    {
+      "title": "Pet Urine Removal",
+      "description": "Our P.U.R.T.® treatment permanently eliminates pet urine odors and stains. No more masking - complete odor removal.",
+      "link": "/services/pet-urine-removal"
+    },
+    {
+      "title": "Area Rug Cleaning",
+      "description": "Specialized cleaning for Persian, Oriental, and modern area rugs. We protect your investment while removing years of embedded soil.",
+      "link": "/services/area-rug-cleaning"
+    },
+    {
+      "title": "Specialty Stain Removal",
+      "description": "Tough stains like wine, coffee, and ink require special treatment. Our technicians are trained in advanced stain removal techniques.",
+      "link": "/services/specialty-stain-removal"
+    }
+  ],
+  "zipCodes": [
+    { "zip": "85201", "area": "Mesa" },
+    { "zip": "85202", "area": "Mesa" },
+    { "zip": "85203", "area": "Mesa" },
+    { "zip": "85204", "area": "Mesa" },
+    { "zip": "85205", "area": "Mesa" },
+    { "zip": "85206", "area": "Mesa" },
+    { "zip": "85207", "area": "Mesa" },
+    { "zip": "85208", "area": "Mesa" },
+    { "zip": "85209", "area": "Mesa" },
+    { "zip": "85210", "area": "Mesa" },
+    { "zip": "85211", "area": "Mesa" },
+    { "zip": "85212", "area": "Mesa" },
+    { "zip": "85213", "area": "Mesa" },
+    { "zip": "85214", "area": "Mesa" },
+    { "zip": "85215", "area": "Mesa" },
+    { "zip": "85216", "area": "Mesa" }
+  ],
+  "faqs": [
+    {
+      "question": "Do you serve all of Mesa?",
+      "answer": "Yes! We serve all Mesa zip codes from 85201 to 85216, including East Mesa, West Mesa, Red Mountain, Superstition Springs, Dobson Ranch, and every neighborhood in between. If you're in Mesa, we've got you covered."
+    },
+    {
+      "question": "How long does it take carpets to dry in Arizona heat?",
+      "answer": "In Mesa's climate, our carpets typically dry in just 1-2 hours - sometimes even faster in the summer! Our Hot Carbonating Extraction uses about 80% less water than steam cleaning, so you're not left with soaking wet carpets for days."
+    },
+    {
+      "question": "Do you serve East Mesa and West Mesa?",
+      "answer": "Absolutely! We serve both East Mesa (including the Red Mountain and Superstition Springs areas) and West Mesa (including downtown Mesa and the Mesa Riverview area). We're centrally located in Mesa, so we can reach any part of the city quickly."
+    },
+    {
+      "question": "Can you provide same-day carpet cleaning in Mesa?",
+      "answer": "We offer same-day service when our schedule allows. Because we're based right here in Mesa (not driving in from Phoenix), we can often accommodate urgent requests. Give us a call at (480) 649-3663 and we'll do our best to fit you in!"
+    },
+    {
+      "question": "How does your process handle Mesa's desert dust?",
+      "answer": "Mesa's fine desert dust is particularly challenging because it embeds deep in carpet fibers. Our Hot Carbonating Extraction uses millions of carbonating bubbles that penetrate deep and lift the dust up and out - not just push it around on the surface. We also pre-vacuum and pre-treat high-traffic areas to ensure thorough dust removal."
+    },
+    {
+      "question": "Are your cleaning products safe in the Arizona heat?",
+      "answer": "Yes! The Natural®, our primary cleaning solution, is gentle and contains no harsh chemicals, soaps, or fragrances. Plus, because we use so little water and your carpets dry quickly, there's no worry about moisture-related issues."
+    },
+    {
+      "question": "Do you offer discounts for Mesa residents?",
+      "answer": "We regularly offer special promotions and discounts for our Mesa neighbors, plus repeat customer discounts. Give us a call or check our website for current offers. We also provide free, no-obligation estimates for all Mesa residents."
+    },
+    {
+      "question": "How much does carpet cleaning cost in Mesa?",
+      "answer": "Every home is unique, so we provide free estimates based on your specific needs - square footage, carpet condition, and any special treatments needed. We believe in upfront, honest pricing with no hidden fees. Call (480) 649-3663 for your free Mesa estimate today!"
+    }
+  ]
+}

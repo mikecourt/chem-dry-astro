@@ -1,0 +1,138 @@
+{
+  "city": "Apache Junction",
+  "slug": "apache-junction",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning Apache Junction AZ | Gold Canyon, Superstition Mountain | Brimley's",
+  "metaDescription": "Carpet cleaning Apache Junction AZ - Gold Canyon, Superstition Mountain area. Hot Carbonating Extraction dries in 1-2 hrs. 30+ yrs experience. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/apache-junction",
+  "heroTitle": "Professional Carpet Cleaning in Apache Junction, Arizona",
+  "heroSubtitle": "Serving Apache Junction & Gold Canyon Since 1995",
+  "neighborhoods": [
+    {
+      "name": "Gold Canyon",
+      "title": "Gold Canyon's Trusted Carpet Cleaning Service",
+      "description": "Serving Gold Canyon's beautiful golf community with premium carpet care. From retirement homes to family residences, we understand the unique needs of this scenic community nestled in the Superstition Mountains.",
+      "highlights": [
+        "Experience with Gold Canyon homes",
+        "Golf community expertise",
+        "Pet and kid-friendly solutions",
+        "Know the community intimately"
+      ],
+      "icon": "FaHome"
+    },
+    {
+      "name": "Superstition Mountain",
+      "title": "Premium Service for Superstition Mountain Area",
+      "description": "Homes near the Superstition Mountains face unique challenges from hiking dust and desert debris. Our expert technicians understand how to deep clean carpets affected by the beautiful but dusty desert environment.",
+      "highlights": [
+        "Expert at removing hiking dust",
+        "Desert debris specialists",
+        "Mountain area expertise",
+        "Trusted by local homeowners"
+      ],
+      "icon": "FaStar"
+    },
+    {
+      "name": "Lost Dutchman Area",
+      "title": "Serving Lost Dutchman Neighborhoods",
+      "description": "Living near Lost Dutchman State Park means enjoying Arizona's natural beauty - and dealing with the dust that comes with it. We help keep your carpets fresh and clean despite the desert environment.",
+      "highlights": [
+        "Desert living expertise",
+        "Remove tracked-in trail dust",
+        "Fast 1-2 hour dry time",
+        "Flexible scheduling"
+      ],
+      "icon": "FaCrown"
+    },
+    {
+      "name": "Apache Trail Area",
+      "title": "Apache Trail Area Carpet Cleaning",
+      "description": "Historic Apache Trail brings visitors and adventure seekers - and extra foot traffic that wears on carpets. We help Apache Junction families maintain beautiful, clean carpets year-round.",
+      "highlights": [
+        "Family-focused service",
+        "Quick response times",
+        "Pet-friendly cleaning solutions",
+        "No harsh chemicals"
+      ],
+      "icon": "FaMountain"
+    }
+  ],
+  "services": [
+    {
+      "title": "Carpet Cleaning",
+      "description": "Hot Carbonating Extraction removes desert dust, hiking debris, and deep-set dirt from your Apache Junction home's carpets.",
+      "icon": "FaHouseUser",
+      "link": "/services/carpet-cleaning"
+    },
+    {
+      "title": "Tile & Grout Cleaning",
+      "description": "Restore tile floors common in Apache Junction homes. Remove years of desert dust buildup from grout lines.",
+      "icon": "FaTh",
+      "link": "/services/tile-and-grout-cleaning"
+    },
+    {
+      "title": "Upholstery Cleaning",
+      "description": "Refresh furniture that bears the brunt of desert dust and daily family life in Apache Junction.",
+      "icon": "FaCouch",
+      "link": "/services/upholstery-cleaning"
+    },
+    {
+      "title": "Pet Odor Removal",
+      "description": "Eliminate pet odors and stains with our P.U.R.T.® treatment. Gentle on Apache Junction's pet-loving families.",
+      "icon": "FaPaw",
+      "link": "/services"
+    },
+    {
+      "title": "Area Rug Cleaning",
+      "description": "Specialized cleaning for the rugs that define your Apache Junction home's southwestern style.",
+      "icon": "FaRug",
+      "link": "/services"
+    },
+    {
+      "title": "Allergen Removal",
+      "description": "Critical in Apache Junction's desert climate. Remove dust, pollen, and allergens that accumulate year-round.",
+      "icon": "FaLeaf",
+      "link": "/services/carpet-cleaning"
+    }
+  ],
+  "zipCodes": [
+    { "zip": "85117", "area": "Gold Canyon" },
+    { "zip": "85118", "area": "Gold Canyon" },
+    { "zip": "85119", "area": "Central Apache Junction" },
+    { "zip": "85120", "area": "Apache Junction" }
+  ],
+  "faqs": [
+    {
+      "question": "Do you serve Gold Canyon?",
+      "answer": "Absolutely! Gold Canyon is one of our primary service areas in Apache Junction. We've been serving Gold Canyon families for years and know the area well. Whether you're near the golf courses or in the surrounding neighborhoods, we provide fast, reliable carpet cleaning service. We serve Gold Canyon ZIP codes 85117 and 85118."
+    },
+    {
+      "question": "Can you clean after hiking season?",
+      "answer": "Yes! Living near the Superstition Mountains means beautiful hiking opportunities—and lots of dust and debris tracked indoors. Our Hot Carbonating Extraction process is perfect for removing the fine desert dust and trail debris that accumulates in your carpets throughout hiking season."
+    },
+    {
+      "question": "Do you serve seasonal/snowbird residents?",
+      "answer": "Absolutely! We understand that many Apache Junction residents are seasonal. We offer flexible scheduling and can accommodate your timeline—whether you need cleaning before you head north for the summer or want fresh carpets when you return in the fall. Just call us at (480) 649-3663 to schedule."
+    },
+    {
+      "question": "How does dry time work in Apache Junction's climate?",
+      "answer": "Apache Junction's warm, dry desert climate is actually perfect for our cleaning process! Because we use about 80% less water than traditional steam cleaning, your carpets dry in just 1-2 hours. In Apache Junction's dry climate, they often dry even faster. This means you can get back to your normal routine the same day."
+    },
+    {
+      "question": "Do you serve all Apache Junction ZIP codes?",
+      "answer": "Yes! We proudly serve all Apache Junction ZIP codes: 85117, 85118, 85119, and 85120. Whether you're in Gold Canyon, near Lost Dutchman, or anywhere in the Apache Junction area, we provide the same exceptional white-glove service. We also serve nearby cities like Mesa and Gilbert."
+    },
+    {
+      "question": "What makes your service different for Apache Junction homes?",
+      "answer": "We understand Apache Junction's unique challenges: the constant desert dust, hiking debris from the Superstitions, and the mix of year-round residents and snowbirds. Our Hot Carbonating Extraction is perfect for Apache Junction's climate—it deep cleans without soaking carpets, removes desert dust and allergens effectively, and dries incredibly fast in our dry climate."
+    },
+    {
+      "question": "Can you remove desert dust and hiking debris?",
+      "answer": "Yes! This is one of our specialties. Our Hot Carbonating Extraction process removes 98% of allergens from carpets, including the desert dust, trail dirt, and particulates that are constant challenges in Apache Junction. We also offer dedicated allergen removal treatments that are especially important for residents dealing with year-round desert allergens."
+    },
+    {
+      "question": "Do you offer same-day service in Apache Junction?",
+      "answer": "In many cases, yes! We understand that Apache Junction families have busy schedules. Depending on our technicians' availability in your Apache Junction neighborhood, we can often accommodate same-day or next-day appointments. Call us at (480) 649-3663 to check availability for your area."
+    }
+  ]
+}

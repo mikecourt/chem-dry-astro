@@ -1,0 +1,65 @@
+{
+  "city": "Gilbert",
+  "slug": "gilbert",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning Gilbert AZ | Trusted Since 1995 | Brimley's White Glove",
+  "metaDescription": "Carpet cleaning Gilbert AZ - no harsh chemicals, gentle on families & pets, dries in 1-2 hours. Hot Carbonating Extraction. 30+ years experience. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/gilbert",
+  "heroTitle": "Professional Carpet Cleaning in Gilbert, Arizona",
+  "heroSubtitle": "Trusted by Gilbert families since 1995. Safe, fast-drying carpet cleaning for your home.",
+  "neighborhoods": [
+    { "name": "San Tan Ranch" },
+    { "name": "Val Vista Lakes" },
+    { "name": "Agritopia" },
+    { "name": "Heritage District" },
+    { "name": "Power Ranch" }
+  ],
+  "services": [],
+  "zipCodes": [
+    { "zip": "85233", "area": "Gilbert" },
+    { "zip": "85234", "area": "Gilbert" },
+    { "zip": "85295", "area": "Gilbert" },
+    { "zip": "85296", "area": "Gilbert" },
+    { "zip": "85297", "area": "Gilbert" },
+    { "zip": "85298", "area": "Gilbert" },
+    { "zip": "85299", "area": "Gilbert" }
+  ],
+  "faqs": [
+    {
+      "question": "How quickly can you service my Gilbert home?",
+      "answer": "Most Gilbert customers can get service within a few days, and we often have same-week availability. During busy seasons, booking a week in advance ensures your preferred time. Call (480) 649-3663 to check current availability."
+    },
+    {
+      "question": "Will your cleaning help with Arizona dust and allergens?",
+      "answer": "Yes! Our Hot Carbonating Extraction removes 98% of allergens from carpets, including dust, pollen, and other irritants common in Arizona. Many Gilbert customers with allergies notice a significant improvement in air quality."
+    },
+    {
+      "question": "Is the fast dry time really that important?",
+      "answer": "Absolutely. In Gilbert's dry climate, our 1-2 hour dry time means your family can get back to normal quickly. No waiting days for carpets to dry, and your family can get back to normal quickly."
+    },
+    {
+      "question": "Do you service all Gilbert neighborhoods?",
+      "answer": "Yes! We serve all Gilbert areas including San Tan Ranch, Val Vista Lakes, Agritopia, Heritage District, Power Ranch, and every neighborhood in between. If you're in Gilbert, we've got you covered."
+    },
+    {
+      "question": "Can you handle pet stains and odors?",
+      "answer": "Yes. Our specialized P.U.R.T.® treatment destroys pet urine odors permanently—not just masking them. Many Gilbert pet owners trust us to keep their homes fresh and clean despite furry family members."
+    },
+    {
+      "question": "What's your pricing for Gilbert carpet cleaning?",
+      "answer": "Pricing varies based on your home size and carpet condition. We provide free, no-obligation estimates with clear, honest pricing. Call (480) 649-3663 or request a quote online—no surprises, no hidden fees."
+    },
+    {
+      "question": "Are your cleaning products gentle enough for homes with children?",
+      "answer": "You can feel confident knowing our cleaning solution contains no harsh chemicals, soaps, or fragrances. Gentle enough for babies, kids, and pets. Gilbert families with young children love that they don't have to worry about harsh chemicals on their carpets."
+    },
+    {
+      "question": "How often should Gilbert homes get carpets cleaned?",
+      "answer": "Most Gilbert families benefit from professional cleaning every 6-12 months. Homes with kids, pets, or high traffic may need cleaning every 6-9 months to maintain optimal cleanliness and air quality."
+    },
+    {
+      "question": "Do you offer any guarantees?",
+      "answer": "Yes. We stand behind our work with a satisfaction guarantee. If you're not completely happy with your carpet cleaning, let us know within 30 days and we'll make it right—that's the White Glove promise."
+    }
+  ]
+}

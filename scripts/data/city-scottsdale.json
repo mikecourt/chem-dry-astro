@@ -1,0 +1,79 @@
+{
+  "city": "Scottsdale",
+  "slug": "scottsdale",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning Scottsdale AZ | Premium White Glove Service | Brimley's",
+  "metaDescription": "Carpet cleaning Scottsdale AZ - premium white glove service for luxury homes. Hot Carbonating Extraction, gentle on fine rugs. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/scottsdale",
+  "heroTitle": "Professional Carpet Cleaning in Scottsdale, Arizona",
+  "heroSubtitle": "Trusted by Scottsdale homeowners since 1995. White Glove service for luxury homes in North Scottsdale, Old Town, DC Ranch, Grayhawk, McDowell Mountain Ranch, and Gainey Ranch.",
+  "neighborhoods": [
+    { "name": "North Scottsdale" },
+    { "name": "Old Town Scottsdale" },
+    { "name": "DC Ranch" },
+    { "name": "Grayhawk" },
+    { "name": "McDowell Mountain Ranch" },
+    { "name": "Gainey Ranch" }
+  ],
+  "services": [],
+  "zipCodes": [
+    { "zip": "85250", "area": "Scottsdale" },
+    { "zip": "85251", "area": "Scottsdale" },
+    { "zip": "85252", "area": "Scottsdale" },
+    { "zip": "85253", "area": "Scottsdale" },
+    { "zip": "85254", "area": "Scottsdale" },
+    { "zip": "85255", "area": "North Scottsdale" },
+    { "zip": "85256", "area": "Scottsdale" },
+    { "zip": "85257", "area": "Scottsdale" },
+    { "zip": "85258", "area": "Scottsdale" },
+    { "zip": "85259", "area": "Scottsdale" },
+    { "zip": "85260", "area": "Scottsdale" },
+    { "zip": "85261", "area": "Scottsdale" },
+    { "zip": "85262", "area": "North Scottsdale" },
+    { "zip": "85263", "area": "Scottsdale" },
+    { "zip": "85264", "area": "Scottsdale" },
+    { "zip": "85266", "area": "North Scottsdale" },
+    { "zip": "85267", "area": "Scottsdale" },
+    { "zip": "85268", "area": "Fountain Hills area" },
+    { "zip": "85269", "area": "Scottsdale" },
+    { "zip": "85271", "area": "Scottsdale" }
+  ],
+  "faqs": [
+    {
+      "question": "Is your service suitable for luxury homes in Scottsdale?",
+      "answer": "Absolutely. We've been serving Scottsdale's finest homes for over 30 years. Our technicians have extensive experience with high-end carpets, Persian rugs, and luxury materials. We understand the premium service expectations in communities like DC Ranch, Grayhawk, and Gainey Ranch."
+    },
+    {
+      "question": "Can you clean Persian and Oriental rugs?",
+      "answer": "Yes. We specialize in cleaning fine area rugs including Persian, Oriental, wool, silk, and other luxury materials. Our gentle Hot Carbonating Extraction process is gentle on delicate fibers and won't damage or fade your valuable rugs."
+    },
+    {
+      "question": "How long does carpet cleaning take in a large Scottsdale home?",
+      "answer": "Most homes take 2-4 hours depending on square footage and number of rooms. Larger estates may take longer, but we work efficiently while maintaining our meticulous attention to detail. Your carpets will be dry and ready for foot traffic in just 1-2 hours."
+    },
+    {
+      "question": "Do you use harsh chemicals or strong-smelling cleaners?",
+      "answer": "No. The Natural®, our primary cleaning solution, contains no harsh chemicals or soaps. There's no overpowering odor—just a fresh, clean scent. It's completely gentle on your family, pets, and fine carpets."
+    },
+    {
+      "question": "What makes your process better than steam cleaning?",
+      "answer": "Our Hot Carbonating Extraction uses about 80% less water than steam cleaning, so carpets dry in 1-2 hours instead of 1-2 days. We don't use soaps or detergents that leave dirt-attracting residue. The result is a deeper clean that lasts longer and is gentler on luxury carpet fibers."
+    },
+    {
+      "question": "Do you offer same-day or emergency carpet cleaning in Scottsdale?",
+      "answer": "We do our best to accommodate urgent requests and often have same-day or next-day availability. If you're hosting an event or have an emergency stain situation, call us at (480) 649-3663 and we'll work to fit you into our schedule."
+    },
+    {
+      "question": "Are your technicians background-checked and insured?",
+      "answer": "Yes. All our technicians are background-checked, IICRC-certified professionals. We're fully licensed, bonded, and insured. You can feel completely comfortable having our team in your Scottsdale home."
+    },
+    {
+      "question": "How much does carpet cleaning cost in Scottsdale?",
+      "answer": "Pricing depends on square footage, carpet condition, and any specialty treatments needed. We provide free, no-obligation estimates with clear, honest pricing before we begin. Call (480) 649-3663 for your personalized quote."
+    },
+    {
+      "question": "Do you offer a satisfaction guarantee?",
+      "answer": "Absolutely. If you're not completely satisfied with our cleaning, let us know within 30 days and we'll return to re-clean any areas of concern at no charge. Your satisfaction is guaranteed—that's the \"white glove\" promise."
+    }
+  ]
+}

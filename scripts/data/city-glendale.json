@@ -1,0 +1,145 @@
+{
+  "city": "Glendale",
+  "slug": "glendale",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning Glendale AZ | Arrowhead Ranch, Westgate | Brimley's",
+  "metaDescription": "Carpet cleaning Glendale AZ - Arrowhead Ranch, Westgate, Historic Catlin Court & more. Hot Carbonating Extraction dries in 1-2 hrs. 30+ yrs experience. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/glendale",
+  "heroTitle": "Professional Carpet Cleaning in Glendale, Arizona",
+  "heroSubtitle": "Serving Glendale Neighborhoods for 30+ Years",
+  "neighborhoods": [
+    {
+      "name": "Arrowhead Ranch",
+      "title": "Arrowhead Ranch's Trusted Carpet Cleaning Service",
+      "description": "Serving Arrowhead Ranch families with premium carpet care. From busy family homes to entertainment spaces, we understand the unique needs of this thriving master-planned community.",
+      "highlights": [
+        "Experience with Arrowhead Ranch homes",
+        "Fast response times to North Glendale",
+        "Pet and kid-friendly solutions",
+        "Know the community intimately"
+      ],
+      "icon": "FaHome"
+    },
+    {
+      "name": "Historic Catlin Court",
+      "title": "Specialized Care for Historic Homes",
+      "description": "Catlin Court's charming historic homes deserve specialized care. Our expert technicians understand how to clean vintage carpets and original flooring with the gentle touch these treasured properties require.",
+      "highlights": [
+        "Gentle on vintage and original carpets",
+        "Experience with historic home layouts",
+        "Preserves carpet integrity",
+        "Trusted by Catlin Court homeowners"
+      ],
+      "icon": "FaStar"
+    },
+    {
+      "name": "Westgate Entertainment District",
+      "title": "Quick Service for Westgate Area",
+      "description": "Living near Westgate means hosting friends for games and events. We help keep your carpets fresh and clean, ready for your next gathering—with fast dry times so you're never waiting.",
+      "highlights": [
+        "Event-ready turnaround times",
+        "Remove tracked-in dirt from gatherings",
+        "Fast 1-2 hour dry time",
+        "Flexible scheduling around your events"
+      ],
+      "icon": "FaCrown"
+    },
+    {
+      "name": "Glendale Heights",
+      "title": "Serving Glendale Heights Families",
+      "description": "Glendale Heights families trust us for reliable, family-focused carpet cleaning. We understand the needs of growing families and deliver service that keeps your home healthy and clean.",
+      "highlights": [
+        "Family-focused service",
+        "Quick response times",
+        "Pet-friendly cleaning solutions",
+        "No harsh chemicals"
+      ],
+      "icon": "FaMountain"
+    }
+  ],
+  "services": [
+    {
+      "title": "Carpet Cleaning",
+      "description": "Hot Carbonating Extraction removes desert dust, allergens, and deep-set dirt from your Glendale home's carpets.",
+      "icon": "FaHouseUser",
+      "link": "/services/carpet-cleaning"
+    },
+    {
+      "title": "Tile & Grout Cleaning",
+      "description": "Restore tile floors common in Glendale homes. Remove years of buildup from grout lines.",
+      "icon": "FaTh",
+      "link": "/services/tile-and-grout-cleaning"
+    },
+    {
+      "title": "Upholstery Cleaning",
+      "description": "Refresh furniture that bears the brunt of West Valley dust and daily family life.",
+      "icon": "FaCouch",
+      "link": "/services/upholstery-cleaning"
+    },
+    {
+      "title": "Pet Odor Removal",
+      "description": "Eliminate pet odors and stains with our P.U.R.T.® treatment. Gentle on Glendale's pet-loving families.",
+      "icon": "FaPaw",
+      "link": "/services"
+    },
+    {
+      "title": "Area Rug Cleaning",
+      "description": "Specialized cleaning for the rugs that define your Glendale home's style.",
+      "icon": "FaRug",
+      "link": "/services"
+    },
+    {
+      "title": "Allergen Removal",
+      "description": "Critical in Glendale's West Valley climate. Remove dust, pollen, and allergens that accumulate year-round.",
+      "icon": "FaLeaf",
+      "link": "/services/carpet-cleaning"
+    }
+  ],
+  "zipCodes": [
+    { "zip": "85301", "area": "Downtown Glendale" },
+    { "zip": "85302", "area": "Central Glendale" },
+    { "zip": "85303", "area": "West Glendale" },
+    { "zip": "85304", "area": "North Glendale" },
+    { "zip": "85305", "area": "Westgate Area" },
+    { "zip": "85306", "area": "Arrowhead Ranch" },
+    { "zip": "85307", "area": "Northwest Glendale" },
+    { "zip": "85308", "area": "Arrowhead Area" },
+    { "zip": "85310", "area": "Far North Glendale" },
+    { "zip": "85311", "area": "Glendale (PO Box)" },
+    { "zip": "85312", "area": "Glendale (PO Box)" }
+  ],
+  "faqs": [
+    {
+      "question": "Do you serve the Arrowhead Ranch area?",
+      "answer": "Absolutely! Arrowhead Ranch is one of our primary service areas in Glendale. We've been serving Arrowhead families for years and know the area well. Whether you're near Arrowhead Towne Center or in the surrounding neighborhoods, we provide fast, reliable carpet cleaning service. We serve Arrowhead ZIP codes 85306 and 85308."
+    },
+    {
+      "question": "Do you cover the Westgate and stadium area?",
+      "answer": "Yes! We serve the entire Westgate Entertainment District and areas near State Farm Stadium. We understand that game days and events mean extra foot traffic and tracked-in dirt. Our fast dry times mean you can have your carpets cleaned and dried before your next gathering. We also serve nearby cities like Phoenix and Peoria."
+    },
+    {
+      "question": "How does the fast dry time work in Glendale's climate?",
+      "answer": "Glendale's warm, dry climate is perfect for our Hot Carbonating Extraction process! Because we use about 80% less water than traditional steam cleaning, your carpets dry in just 1-2 hours. This means you can get back to your normal routine the same day, without the humidity and dampness of traditional steam cleaning."
+    },
+    {
+      "question": "Do you clean carpets in historic Glendale homes?",
+      "answer": "Yes, and we take special care with them! Historic Catlin Court and other older Glendale neighborhoods often have original carpets that require gentle, specialized cleaning. Our technicians are experienced with vintage carpets and understand how to clean them effectively while preserving their integrity. Our low-moisture process is ideal for these delicate situations."
+    },
+    {
+      "question": "What makes your service different for Glendale homes?",
+      "answer": "We understand Glendale's unique challenges: the West Valley dust, stadium event traffic tracking in dirt, and the mix of historic and newer homes. Our Hot Carbonating Extraction is perfect for Glendale's climate—it deep cleans without soaking carpets, removes desert dust and allergens effectively, and dries incredibly fast in our dry climate."
+    },
+    {
+      "question": "Can you remove desert dust and allergens?",
+      "answer": "Yes! This is one of our specialties. Our Hot Carbonating Extraction process removes 98% of allergens from carpets, including the desert dust, pollen, and particulates that are constant challenges in Glendale. We also offer dedicated allergen removal treatments that are especially important for West Valley residents dealing with year-round allergy triggers."
+    },
+    {
+      "question": "Do you offer same-day service in Glendale?",
+      "answer": "In many cases, yes! We understand that Glendale families have busy schedules. Depending on our technicians' availability in your Glendale neighborhood, we can often accommodate same-day or next-day appointments. Call us at (480) 649-3663 to check availability for your area."
+    },
+    {
+      "question": "What neighborhoods do you serve in Glendale?",
+      "answer": "We serve all Glendale neighborhoods with the same high-quality service, including Arrowhead Ranch, Historic Catlin Court, Westgate, Glendale Heights, Sahuaro Ranch, Downtown Glendale, and more. Whether you're in North Glendale near Thunderbird or closer to Downtown, you'll receive the same exceptional white-glove service."
+    }
+  ]
+}

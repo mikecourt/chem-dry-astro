@@ -1,0 +1,138 @@
+{
+  "city": "San Tan Valley",
+  "slug": "san-tan-valley",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning San Tan Valley AZ | Johnson Ranch, Encanterra | Brimley's",
+  "metaDescription": "Carpet cleaning San Tan Valley AZ - Johnson Ranch, Encanterra, Pecan Creek. Hot Carbonating Extraction dries in 1-2 hrs. 30+ yrs experience. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/san-tan-valley",
+  "heroTitle": "Professional Carpet Cleaning in San Tan Valley, Arizona",
+  "heroSubtitle": "Serving San Tan Valley's Growing Communities",
+  "neighborhoods": [
+    {
+      "name": "Johnson Ranch",
+      "title": "Johnson Ranch's Trusted Carpet Cleaning Service",
+      "description": "Serving Johnson Ranch families with premium carpet care. From busy family homes to entertainment spaces, we understand the unique needs of this thriving master-planned community with its growing families.",
+      "highlights": [
+        "Experience with Johnson Ranch homes",
+        "Fast response times to the area",
+        "Pet and kid-friendly solutions",
+        "Know the community intimately"
+      ],
+      "icon": "FaHome"
+    },
+    {
+      "name": "Encanterra",
+      "title": "Premium Service for Encanterra Golf Community",
+      "description": "Encanterra's beautiful golf community homes deserve specialized care. Our expert technicians understand the needs of this active adult community, including pool area carpet concerns and maintaining pristine home environments.",
+      "highlights": [
+        "Golf community expertise",
+        "Pool area carpet specialists",
+        "Active adult community experience",
+        "Trusted by Encanterra homeowners"
+      ],
+      "icon": "FaStar"
+    },
+    {
+      "name": "Pecan Creek",
+      "title": "Family-Focused Service for Pecan Creek",
+      "description": "Pecan Creek families trust us for reliable, family-focused carpet cleaning. We understand the needs of growing families and deliver service that keeps your home healthy, clean, and gentle on kids and pets.",
+      "highlights": [
+        "Family-focused service",
+        "Quick response times",
+        "Pet-friendly cleaning solutions",
+        "No harsh chemicals"
+      ],
+      "icon": "FaCrown"
+    },
+    {
+      "name": "San Tan Heights",
+      "title": "Serving San Tan Heights Communities",
+      "description": "San Tan Heights residents enjoy beautiful mountain views—and the desert dust that comes with them. We help keep your carpets fresh and clean despite the constant battle with Arizona's desert environment.",
+      "highlights": [
+        "Desert dust specialists",
+        "Mountain area expertise",
+        "Fast 1-2 hour dry time",
+        "Flexible scheduling"
+      ],
+      "icon": "FaMountain"
+    }
+  ],
+  "services": [
+    {
+      "title": "Carpet Cleaning",
+      "description": "Hot Carbonating Extraction removes desert dust, allergens, and deep-set dirt from your San Tan Valley home's carpets.",
+      "icon": "FaHouseUser",
+      "link": "/services/carpet-cleaning"
+    },
+    {
+      "title": "Tile & Grout Cleaning",
+      "description": "Restore tile floors common in San Tan Valley homes. Remove years of pool area and desert dust buildup from grout lines.",
+      "icon": "FaTh",
+      "link": "/services/tile-and-grout-cleaning"
+    },
+    {
+      "title": "Upholstery Cleaning",
+      "description": "Refresh furniture that bears the brunt of family life and desert dust in San Tan Valley homes.",
+      "icon": "FaCouch",
+      "link": "/services/upholstery-cleaning"
+    },
+    {
+      "title": "Pet Odor Removal",
+      "description": "Eliminate pet odors and stains with our P.U.R.T.® treatment. Gentle on San Tan Valley's pet-loving families.",
+      "icon": "FaPaw",
+      "link": "/services"
+    },
+    {
+      "title": "Area Rug Cleaning",
+      "description": "Specialized cleaning for the rugs that define your San Tan Valley home's style.",
+      "icon": "FaRug",
+      "link": "/services"
+    },
+    {
+      "title": "Allergen Removal",
+      "description": "Critical in San Tan Valley's growing community. Remove dust, pollen, and allergens that accumulate year-round.",
+      "icon": "FaLeaf",
+      "link": "/services/carpet-cleaning"
+    }
+  ],
+  "zipCodes": [
+    { "zip": "85140", "area": "San Tan Valley" },
+    { "zip": "85142", "area": "Queen Creek/San Tan Valley" },
+    { "zip": "85143", "area": "San Tan Valley" },
+    { "zip": "85144", "area": "Coolidge/San Tan Valley" }
+  ],
+  "faqs": [
+    {
+      "question": "Do you serve Johnson Ranch?",
+      "answer": "Absolutely! Johnson Ranch is one of our primary service areas in San Tan Valley. We've been serving Johnson Ranch families for years and know the community well. Whether you're near the schools, parks, or anywhere in the master-planned community, we provide fast, reliable carpet cleaning service."
+    },
+    {
+      "question": "Can you maintain new home carpets?",
+      "answer": "Yes! Many San Tan Valley homes are newer construction with builder-grade carpets. Regular professional cleaning is essential to maintain these carpets and protect your investment. Our Hot Carbonating Extraction process is gentle yet effective, helping extend the life of your new home's carpets."
+    },
+    {
+      "question": "Do you serve Encanterra?",
+      "answer": "Yes! We serve the Encanterra golf community and understand the unique needs of this active adult community. From pool area carpet concerns to maintaining a pristine home environment, our technicians are experienced with Encanterra homes. We also serve nearby communities like Queen Creek and Gilbert."
+    },
+    {
+      "question": "How does dry time work in San Tan Valley's climate?",
+      "answer": "San Tan Valley's warm, dry desert climate is perfect for our cleaning process! Because we use about 80% less water than traditional steam cleaning, your carpets dry in just 1-2 hours. In San Tan Valley's dry climate, they often dry even faster. This means you can get back to your normal routine the same day."
+    },
+    {
+      "question": "Do you serve all San Tan Valley ZIP codes?",
+      "answer": "Yes! We proudly serve all San Tan Valley ZIP codes: 85140, 85142, 85143, and 85144. Whether you're in Johnson Ranch, Encanterra, Pecan Creek, San Tan Heights, or anywhere in the San Tan Valley area, we provide the same exceptional white-glove service."
+    },
+    {
+      "question": "What makes your service different for new homes?",
+      "answer": "We understand that San Tan Valley has many newer homes with builder-grade carpets. These carpets benefit from our low-moisture process that cleans effectively without over-wetting. We also help remove construction dust that may have settled in during the building process and can treat for allergens that accumulate in new carpet fibers."
+    },
+    {
+      "question": "Can you remove pool chlorine residue?",
+      "answer": "Yes! This is a common concern in San Tan Valley's pool communities. Chlorine and moisture tracked in from pools can discolor and damage carpets over time. Our Hot Carbonating Extraction process effectively removes chlorine residue, water spots, and the musty smell that can develop near pool entry areas."
+    },
+    {
+      "question": "Do you offer same-day service in San Tan Valley?",
+      "answer": "In many cases, yes! We understand that San Tan Valley families have busy schedules. Depending on our technicians' availability in your San Tan Valley neighborhood, we can often accommodate same-day or next-day appointments. Call us at (480) 649-3663 to check availability for your area."
+    }
+  ]
+}

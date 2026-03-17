@@ -1,0 +1,61 @@
+{
+  "city": "Tempe",
+  "slug": "tempe",
+  "state": "Arizona",
+  "metaTitle": "Carpet Cleaning Tempe AZ | ASU Area & South Tempe | Brimley's",
+  "metaDescription": "Carpet cleaning Tempe AZ - perfect for homes & rentals. Fast drying, thorough cleaning. 30+ years experience. Free quote: (480) 649-3663",
+  "canonical": "https://whiteglovecarpet.com/tempe",
+  "heroTitle": "Professional Carpet Cleaning in Tempe, Arizona",
+  "heroSubtitle": "Trusted by homeowners and landlords throughout South Tempe, North Tempe, ASU area, Warner Ranch, and McClintock Ranch",
+  "neighborhoods": [
+    { "name": "South Tempe" },
+    { "name": "North Tempe" },
+    { "name": "ASU area" },
+    { "name": "Warner Ranch" },
+    { "name": "McClintock Ranch" }
+  ],
+  "services": [],
+  "zipCodes": [
+    { "zip": "85280", "area": "Tempe" },
+    { "zip": "85281", "area": "Tempe" },
+    { "zip": "85282", "area": "Tempe" },
+    { "zip": "85283", "area": "Tempe" },
+    { "zip": "85284", "area": "Tempe" },
+    { "zip": "85285", "area": "Tempe" },
+    { "zip": "85287", "area": "Tempe" }
+  ],
+  "faqs": [
+    {
+      "question": "Do you offer move-out carpet cleaning in Tempe?",
+      "answer": "Yes! Move-out cleaning is one of our specialties. We offer fast turnaround (often same-day or next-day service) perfect for tenants needing their security deposit back or landlords preparing for new tenants. Our 1-2 hour dry time means the property is ready quickly."
+    },
+    {
+      "question": "How quickly can you schedule service in Tempe?",
+      "answer": "We offer same-day and next-day appointments when available. For urgent move-out situations, we do our best to accommodate tight deadlines. Call us at (480) 649-3663 to check current availability."
+    },
+    {
+      "question": "Can you remove desert dust and allergens from carpets?",
+      "answer": "Absolutely. Our Hot Carbonating Extraction process removes 98% of allergens from carpets, including desert dust, pollen, and other airborne particles that settle deep into carpet fibers. This significantly improves indoor air quality."
+    },
+    {
+      "question": "Do you offer discounts for landlords with multiple units?",
+      "answer": "Yes! We offer volume pricing for property managers and landlords with multiple rental units in Tempe. Contact us for a customized quote based on your specific needs and property portfolio."
+    },
+    {
+      "question": "Is carpet cleaning a good fit for ASU area rentals with students?",
+      "answer": "Yes. You can feel confident — our cleaning solution contains no harsh chemicals, and is gentle enough for everyone, including young adults. The 1-2 hour dry time means minimal disruption to busy student schedules."
+    },
+    {
+      "question": "How much does carpet cleaning cost in Tempe?",
+      "answer": "Pricing depends on square footage, carpet condition, and any special treatments needed. We provide free, no-obligation estimates with clear upfront pricing—no hidden fees. Contact us for a personalized quote."
+    },
+    {
+      "question": "Can you clean high-traffic areas near ASU?",
+      "answer": "Yes! We specialize in restoring high-traffic areas with pre-treatment and deep cleaning. Common areas, hallways, and entryways in student housing respond very well to our Hot Carbonating Extraction process. We also serve nearby Scottsdale and Phoenix."
+    },
+    {
+      "question": "Do I need to be home during the cleaning?",
+      "answer": "Not necessarily. Many landlords provide access for move-out cleanings while tenants aren't present. For occupied homes, we can work with your schedule. We'll call before arrival and when we're finished."
+    }
+  ]
+}
