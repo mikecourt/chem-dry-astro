@@ -7,6 +7,15 @@ type Props = {
 };
 
 const { reviews } = Astro.props;
+
+function getLogoUrl(logo: any): string {
+  if (typeof logo === "string") return logo;
+  // Handle Sanity image references
+  if (logo?.asset?._ref) return urlFor(logo).width(360).url();
+  // Handle migration format where SVG paths were stored as sanityAsset URLs
+  if (logo?.asset?.url) return logo.asset.url;
+  return "";
+}
 ---
 
 <section class="bg-body py-8 relative z-30">
@@ -16,7 +25,7 @@ const { reviews } = Astro.props;
         reviews.map((r, i: number) => (
           <div class="flex flex-col items-center" data-aos="fade-up-sm">
             <ImageMod
-              src={typeof r.company_logo === "string" ? r.company_logo : urlFor(r.company_logo).width(360).url()}
+              src={getLogoUrl(r.company_logo)}
               alt={r.name ?? ""}
               width={360}
               height={120}
