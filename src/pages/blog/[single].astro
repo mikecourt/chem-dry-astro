@@ -1,39 +1,68 @@
 ---
 import BlogCard from "@/components/BlogCard.astro";
 import CustomHeading from "@/components/CustomHeading.astro";
-import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 import config from "@/config/config.json";
-import { getSinglePage } from "@/lib/contentParser.astro";
+import { sanityClient } from "@/lib/sanity";
 import dateFormat from "@/lib/utils/dateFormat";
-import similarItems from "@/lib/utils/similarItems";
 import { humanize } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
-import { getEntry, render, type CollectionEntry } from "astro:content";
+import { PortableText } from "astro-portabletext";
+import { getEntry, type CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
-  const allBlogs = await getSinglePage("blog");
-  const paths = allBlogs.map((blog) => ({
-    params: {
-      single: (blog as any).id,
-    },
-    props: { blog },
-  }));
-  return paths;
+  const posts = await sanityClient.fetch(
+    `*[_type == "blogPost" && !draft]{ "slug": slug.current }`
+  );
+  return posts.map((p: any) => ({ params: { single: p.slug } }));
 }
 
-const allBlogs = await getSinglePage("blog");
 const call_to_action = (await getEntry(
   "ctaSection",
   "call-to-action"
 )) as CollectionEntry<"ctaSection">;
 
-const { blog } = Astro.props as { blog: CollectionEntry<"blog"> };
-const { title, meta_title, description, image, date, categories } = blog.data;
-const { Content } = await render(blog);
+const { single } = Astro.params;
+const post = await sanityClient.fetch(
+  `*[_type == "blogPost" && slug.current == $slug][0]{
+    title,
+    "slug": slug.current,
+    metaTitle,
+    description,
+    date,
+    "image": image.asset->url,
+    categories,
+    badge,
+    body
+  }`,
+  { slug: single }
+);
+
+const allPosts = await sanityClient.fetch(
+  `*[_type == "blogPost" && !draft && slug.current != $slug] | order(date desc) {
+    title,
+    "slug": slug.current,
+    description,
+    date,
+    categories,
+    "image": image.asset->url
+  }`,
+  { slug: single }
+);
+
+// Find similar posts by shared categories (up to 3)
+const similarBlogs: any[] = (() => {
+  if (!post.categories || post.categories.length === 0) return allPosts.slice(0, 3);
+  const byCategory = allPosts.filter((p: any) =>
+    p.categories && p.categories.some((c: string) => post.categories.includes(c))
+  );
+  return byCategory.length > 0 ? byCategory.slice(0, 3) : allPosts.slice(0, 3);
+})();
+
+const { title, metaTitle, description, image, date, categories, body } = post;
 
 const baseUrl = config.site.base_url;
-const postUrl = `${baseUrl}/blog/${(blog as any).id}`;
+const postUrl = `${baseUrl}/blog/${single}`;
 const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -42,7 +71,7 @@ const blogPostingSchema = {
   "url": postUrl,
   "datePublished": date ? new Date(date).toISOString() : undefined,
   "dateModified": date ? new Date(date).toISOString() : undefined,
-  "image": image ? `${baseUrl}${image}` : undefined,
+  "image": image || undefined,
   "author": {
     "@type": "Organization",
     "name": "Brimley's White Glove Chem-Dry",
@@ -62,27 +91,29 @@ const blogPostingSchema = {
     "@id": postUrl,
   },
 };
-
-const similarBlogs = similarItems(blog, allBlogs);
 ---
 
-<Base title={title} description={description} meta_title={meta_title}>
+<Base title={title} description={description} meta_title={metaTitle}>
   <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
   <section class="py-20 md:py-32 mt-24 sm:mt-20">
     <div class="container">
       <div class="flex items-center justify-center gap-2.5 mb-6">
         {
-          categories!.map((category: string, index: number) => (
+          categories && categories.map((category: string, index: number) => (
             <p class="text-primary">
               {humanize(category)}
-              {index !== categories!.length - 1 && ","}
+              {index !== categories.length - 1 && ","}
             </p>
           ))
         }
-        <div class="bg-black/30 h-[3px] w-[3px] rounded-full opacity-100"></div>
-        <p class="text-text/50 text-base">
-          {dateFormat(date!)}
-        </p>
+        {date && (
+          <>
+            <div class="bg-black/30 h-[3px] w-[3px] rounded-full opacity-100"></div>
+            <p class="text-text/50 text-base">
+              {dateFormat(date)}
+            </p>
+          </>
+        )}
       </div>
       {
         title && (
@@ -96,19 +127,21 @@ const similarBlogs = similarItems(blog, allBlogs);
       }
       <div class="row justify-center">
         <div class="lg:px-25 col-12" data-aos="zoom-in-sm">
-          <ImageMod
-            src={image!}
-            alt={image!}
-            width={1256}
-            height={719}
-            class="w-full aspect-video object-cover rounded-xl mb-11"
-            loading={"eager"}
-          />
+          {image && (
+            <img
+              src={image}
+              alt={title}
+              width={1256}
+              height={719}
+              class="w-full aspect-video object-cover rounded-xl mb-11"
+              loading="eager"
+            />
+          )}
         </div>
         <div class="col-12 mb-11">
           <article class="lg:px-25" data-aos="fade-up-sm">
             <div class="content">
-              <Content />
+              {body && <PortableText value={body} />}
             </div>
           </article>
         </div>
@@ -116,18 +149,18 @@ const similarBlogs = similarItems(blog, allBlogs);
     </div>
   </section>
 
-  {similarBlogs.length > 0 && 
-  
-  
+  {similarBlogs.length > 0 &&
+
+
   <hr class="border-border" />
-  
+
   <section class="section">
     <div class="container">
       <h2 class="text-h3 md:text-h2 mb-16 text-center" data-aos="fade-up-sm">
       Read more articles</h2>
       <div class="row justify-center g-5">
         {
-          similarBlogs.slice(0, 3).map((blog, i) => (
+          similarBlogs.map((blog: any, i: number) => (
             <div
             class="xl:col-4 md:col-6 col-12 min-h-full"
             data-aos="zoom-in-sm"
