@@ -1,0 +1,19 @@
+{
+  "name": "chem-dry-sanity",
+  "version": "1.0.0",
+  "description": "Sanity Studio for Chem-Dry website CMS",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity deploy --graphql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sanity/vision": "^5.17.1",
+    "sanity": "^5.17.1"
+  }
+}
