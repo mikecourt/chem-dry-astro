@@ -4,19 +4,18 @@ import ImageGallery from "@/components/functional-component/ImageGallery";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
-import type { CollectionEntry } from "astro:content";
-import { getEntry } from "astro:content";
+import { sanityClient, urlFor } from "@/lib/sanity";
 
-const gallery = (await getEntry(
-  "gallery",
-  "-index"
-)) as CollectionEntry<"gallery">;
-const { title, subtitle, meta_title, description, images } = gallery.data;
+const galleryDoc = await sanityClient.fetch(`*[_type == "galleryPage"][0]`);
+const { title, subtitle, meta_title, description } = galleryDoc ?? {};
 
-const callToAction = (await getEntry(
-  "ctaSection",
-  "call-to-action"
-)) as CollectionEntry<"ctaSection">;
+// Transform Sanity image references into { image: string, description?: string }
+const images = (galleryDoc?.images ?? []).map((item: any) => ({
+  image: item.image ? urlFor(item.image).width(635).url() : "",
+  description: item.description,
+}));
+
+const callToAction = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
@@ -50,5 +49,5 @@ const callToAction = (await getEntry(
       </div>
     </div>
   </section>
-  <CallToAction cta={callToAction.data} />
+  <CallToAction cta={callToAction} />
 </Base>

@@ -1,14 +1,13 @@
 ---
 import DynamicIcon from "@/helpers/DynamicIcon";
 import { markdownify } from "@/lib/utils/textConverter";
-import type { CollectionEntry } from "astro:content";
 import BlogCard from "../BlogCard.astro";
 import CustomHeading from "../CustomHeading.astro";
 import BeforeAfterCarousel from "./BeforeAfterCarousel.astro";
 
 type Props = {
-  blog: CollectionEntry<"homepage">["data"]["blog"];
-  allBlogs: CollectionEntry<"blog">[];
+  blog: any;
+  allBlogs: any[];
 };
 
 const { blog, allBlogs } = Astro.props;

@@ -5,18 +5,14 @@ import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
-import { getEntry, type CollectionEntry } from "astro:content";
+import { sanityClient, urlFor } from "@/lib/sanity";
 
-const contact = (await getEntry(
-  "contact",
-  "-index"
-)) as CollectionEntry<"contact">;
-const { title, subtitle, description, meta_title, image } = contact.data;
+const contact = await sanityClient.fetch(`*[_type == "contactPage"][0]`);
+const { title, subtitle, description, meta_title } = contact ?? {};
+// Resolve contact page image from Sanity
+const image = contact?.image ? urlFor(contact.image).width(570).url() : null;
 
-const cta = (await getEntry(
-  "ctaSection",
-  "call-to-action"
-)) as CollectionEntry<"ctaSection">;
+const cta = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
@@ -126,7 +122,7 @@ const cta = (await getEntry(
       </div>
     </div>
   </section>
-  <CallToAction cta={cta.data} />
+  <CallToAction cta={cta} />
 
   <script>
     // Contact form async submission

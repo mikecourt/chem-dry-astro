@@ -3,10 +3,9 @@ import CustomButton from "@/components/CustomButton.astro";
 import CustomHeading from "@/components/CustomHeading.astro";
 import ImageMod from "@/components/ImageMod.astro";
 import { markdownify } from "@/lib/utils/textConverter";
-import type { CollectionEntry } from "astro:content";
 
 type Props = {
-  cta: CollectionEntry<"ctaSection">["data"];
+  cta: any;
 };
 
 const { cta } = Astro.props;

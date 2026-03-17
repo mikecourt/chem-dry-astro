@@ -1,9 +1,9 @@
 ---
 import ImageMod from "@/components/ImageMod.astro";
-import type { CollectionEntry } from "astro:content";
+import { urlFor } from "@/lib/sanity";
 
 type Props = {
-  reviews: CollectionEntry<"homepage">["data"]["hero"]["reviews"];
+  reviews: any[];
 };
 
 const { reviews } = Astro.props;
@@ -16,8 +16,8 @@ const { reviews } = Astro.props;
         reviews.map((r, i: number) => (
           <div class="flex flex-col items-center" data-aos="fade-up-sm">
             <ImageMod
-              src={r.company_logo}
-              alt={r.company_logo}
+              src={typeof r.company_logo === "string" ? r.company_logo : urlFor(r.company_logo).width(360).url()}
+              alt={r.name ?? ""}
               width={360}
               height={120}
               class="pb-5 h-30 w-auto object-contain"

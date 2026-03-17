@@ -7,20 +7,13 @@ import TrustBar from "@/components/TrustBar.astro";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
-import type { CollectionEntry } from "astro:content";
-import { getEntry } from "astro:content";
+import { sanityClient } from "@/lib/sanity";
 
-const aboutIndex = (await getEntry(
-  "about",
-  "-index"
-)) as CollectionEntry<"about">;
+const aboutIndex = await sanityClient.fetch(`*[_type == "aboutPage"][0]`);
 const { title, subtitle, subheadline, description, meta_title, why_us, pride, team } =
-  aboutIndex.data;
+  aboutIndex ?? {};
 
-const callToAction = (await getEntry(
-  "ctaSection",
-  "call-to-action"
-)) as CollectionEntry<"ctaSection">;
+const callToAction = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
@@ -427,5 +420,5 @@ const callToAction = (await getEntry(
 
   <TrustBar />
 
-  <CallToAction cta={callToAction.data} />
+  <CallToAction cta={callToAction} />
 </Base>

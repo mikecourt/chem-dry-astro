@@ -5,7 +5,7 @@
  * Consumes the testimonials content collection and renders a grid layout.
  */
 
-import { getCollection } from "astro:content";
+import { sanityClient } from "@/lib/sanity";
 import CustomHeading from "@/components/CustomHeading.astro";
 import TestimonialCard from "@/components/TestimonialCard.astro";
 
@@ -30,10 +30,12 @@ const displayTitle = title ?? `Hear From Your **${city}** Neighbors`;
 const displaySubtitle = subtitle ?? `${city} Testimonials`;
 const displayDescription = description ?? `Don't just take our word for it - hear what ${city} homeowners say about our service.`;
 
-// Fetch testimonials filtered by city
-const allTestimonials = await getCollection("testimonials");
+// Fetch testimonials from Sanity, filtered by city
+const allTestimonials = await sanityClient.fetch(
+  `*[_type == "testimonial"] | order(rating desc)`
+);
 const cityTestimonials = allTestimonials
-  .filter((t) => t.data.location.toLowerCase() === city.toLowerCase())
+  .filter((t: any) => t.location?.toLowerCase() === city.toLowerCase())
   .slice(0, limit);
 ---
 
@@ -68,13 +70,13 @@ const cityTestimonials = allTestimonials
       {/* Testimonials Grid */}
       {cityTestimonials.length > 0 ? (
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {cityTestimonials.map((testimonial, index) => (
+          {cityTestimonials.map((testimonial: any, index: number) => (
             <TestimonialCard
-              name={testimonial.data.name}
-              location={testimonial.data.location}
-              content={testimonial.data.content}
-              source={testimonial.data.source}
-              rating={testimonial.data.rating}
+              name={testimonial.name}
+              location={testimonial.location}
+              content={testimonial.content}
+              source={testimonial.source}
+              rating={testimonial.rating}
               index={index}
             />
           ))}

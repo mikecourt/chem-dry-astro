@@ -1,11 +1,10 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
-import type { CollectionEntry } from "astro:content";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import CustomHeading from "../CustomHeading.astro";
 
 type Props = {
-  testimonial: CollectionEntry<"homepage">["data"]["testimonial"];
+  testimonial: any;
 };
 
 const { testimonial } = Astro.props;

@@ -1,11 +1,10 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
-import type { CollectionEntry } from "astro:content";
 import CustomButton from "../CustomButton.astro";
 import CustomHeading from "../CustomHeading.astro";
 import ImageMod from "../ImageMod.astro";
 
-type Props = { hero: CollectionEntry<"homepage">["data"]["hero"] };
+type Props = { hero: any };
 
 const { hero }: Props = Astro.props;
 const buttonVariants = ["primary", "secondary", "light"];

@@ -14,16 +14,19 @@ import Base from "@/layouts/Base.astro";
 import Hero from "@/layouts/components/homepage/Hero.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import CallToAction from "@/partials/CallToAction.astro";
+import { sanityClient, urlFor } from "@/lib/sanity";
 import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
 
-const homepage = (await getEntry(
-  "homepage",
-  "-index"
-)) as CollectionEntry<"homepage">;
-const { hero, about, responsibility, customer, testimonial, blog } =
-  homepage.data;
+const homepage = await sanityClient.fetch(`*[_type == "homepage"][0]`);
+const { hero, about, responsibility, customer, testimonial, blog } = homepage;
 
+// Resolve hero image URL from Sanity image reference
+const heroImageUrl = hero?.image ? urlFor(hero.image).width(1920).url() : "";
+
+const callToAction = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
+
+// Service section still uses content collections
 const serviceIndex = (await getEntry(
   "services",
   "-index"
@@ -34,17 +37,12 @@ const topServices = allServices.slice(0, 5);
 
 const allBlogs = await getSinglePage("blog");
 
-const callToAction = (await getEntry(
-  "ctaSection",
-  "call-to-action"
-)) as CollectionEntry<"ctaSection">;
-
 const canonical = "https://whiteglovecarpet.com/";
 ---
 
-<Base canonical={canonical} preloadImage={hero.image}>
+<Base canonical={canonical} preloadImage={heroImageUrl}>
   <SchemaMarkup type="homepage" />
-  <Hero hero={hero} />
+  <Hero hero={{ ...hero, image: heroImageUrl }} />
   <WhiteGlovePromise />
   <ComparisonChart />
   {
@@ -52,10 +50,10 @@ const canonical = "https://whiteglovecarpet.com/";
       <Service serviceIndex={serviceIndex.data} allServices={topServices} />
     )
   }
-  {testimonial.enable && <Testimonial testimonial={testimonial} />}
-  <ReviewBadges reviews={hero.reviews} />
-  {blog.enable && <Blog blog={blog} allBlogs={allBlogs} />}
+  {testimonial?.enable && <Testimonial testimonial={testimonial} />}
+  <ReviewBadges reviews={hero?.reviews ?? []} />
+  {blog?.enable && <Blog blog={blog} allBlogs={allBlogs} />}
   <SatisfactionGuarantee />
-  {about.enable && <About about={about} />}
-  <CallToAction cta={callToAction.data} />
+  {about?.enable && <About about={about} />}
+  <CallToAction cta={callToAction} />
 </Base>
