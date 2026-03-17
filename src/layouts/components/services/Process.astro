@@ -1,9 +1,8 @@
 ---
 import TrustBar from "@/components/TrustBar.astro";
-import type { CollectionEntry } from "astro:content";
 
 type Props = {
-  process: CollectionEntry<"services">["data"]["process"];
+  process?: unknown;
 };
 const { process } = Astro.props;
 ---

@@ -1,13 +1,14 @@
 ---
 import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Base from "@/layouts/Base.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
+import { sanityClient } from "@/lib/sanity";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
-import { getEntry, render, type CollectionEntry } from "astro:content";
+import { PortableText } from "astro-portabletext";
+import { getEntry, type CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
-  const allServices = await getSinglePage("services");
+  // Slugs handled by dedicated .astro pages — exclude them from dynamic routing
   const staticServicePages = new Set([
     "carpet-cleaning",
     "upholstery-cleaning",
@@ -19,37 +20,46 @@ export async function getStaticPaths() {
   ]);
   const redirectAliases = new Set(["tile-grout-cleaning"]);
 
-  return allServices
+  const services: { slug: string }[] = await sanityClient.fetch(
+    `*[_type == "service" && !draft]{ "slug": slug.current }`
+  );
+
+  return services
     .filter(
-      (service) =>
-        !service.id.startsWith("_") &&
-        !staticServicePages.has(service.id) &&
-        !redirectAliases.has(service.id)
+      (s) => !staticServicePages.has(s.slug) && !redirectAliases.has(s.slug)
     )
-    .map((service) => ({
-      params: { single: service.id },
-      props: { service },
-    }));
+    .map((s) => ({ params: { single: s.slug } }));
 }
 
-const { service } = Astro.props as { service: CollectionEntry<"services"> };
-const { title, meta_title, description, banner } = service.data;
-const { Content } = await render(service);
+const { single } = Astro.params;
+const service = await sanityClient.fetch(
+  `*[_type == "service" && slug.current == $slug && !draft][0]{
+    title,
+    "slug": slug.current,
+    meta_title,
+    description,
+    "banner": banner.asset->url,
+    body
+  }`,
+  { slug: single }
+);
+
 const callToAction = (await getEntry(
   "ctaSection",
   "call-to-action"
 )) as CollectionEntry<"ctaSection">;
-const canonical = `https://whiteglovecarpet.com/services/${service.id}`;
+
+const canonical = `https://whiteglovecarpet.com/services/${single}`;
 ---
 
 <Base
-  title={title}
-  meta_title={meta_title}
-  description={description}
-  image={banner}
+  title={service?.title}
+  meta_title={service?.meta_title}
+  description={service?.description}
+  image={service?.banner}
   canonical={canonical}
 >
-  <SchemaMarkup type="service" serviceName={title} />
+  <SchemaMarkup type="service" serviceName={service?.title} />
   <section class="py-20 md:py-32 mt-24 sm:mt-20">
     <div class="container">
       <div class="mx-auto max-w-[60rem]">
@@ -57,18 +67,18 @@ const canonical = `https://whiteglovecarpet.com/services/${service.id}`;
           Professional Service
         </p>
         <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4 md:mb-6">
-          {title}
+          {service?.title}
         </h1>
         {
-          description && (
+          service?.description && (
             <p
               class="text-lg text-text/80 mb-8"
-              set:html={markdownify(description)}
+              set:html={markdownify(service.description)}
             />
           )
         }
         <article class="content">
-          <Content />
+          {service?.body && <PortableText value={service.body} />}
         </article>
       </div>
     </div>

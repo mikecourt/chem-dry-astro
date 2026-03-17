@@ -5,7 +5,6 @@ import ImageMod from "@/components/ImageMod.astro";
 import ServiceCard from "@/components/ServiceCard.astro";
 import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Base from "@/layouts/Base.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import TrustBar from "@/components/TrustBar.astro";
 import { getEntry, type CollectionEntry } from "astro:content";
@@ -14,11 +13,6 @@ const call_to_action = (await getEntry(
   "ctaSection",
   "call-to-action"
 )) as CollectionEntry<"ctaSection">;
-
-const allServices = await getSinglePage("services");
-const relatedServices = allServices.filter(s =>
-  ['carpet-cleaning', 'stone-cleaning', 'granite-renewal'].includes(s.id)
-).slice(0, 3);
 
 const title = "Tile & Grout Cleaning";
 const meta_title = "Professional Tile & Grout Cleaning in Phoenix | Brimley's White Glove";

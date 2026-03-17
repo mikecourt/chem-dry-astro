@@ -1,18 +1,28 @@
 ---
 import { markdownify } from "@/lib/utils/textConverter";
 import { getServicePath } from "@/lib/utils/servicePath";
-import type { CollectionEntry } from "astro:content";
 import CustomHeading from "../CustomHeading.astro";
 
+type SanityService = {
+  slug: string;
+  title: string;
+  categories?: string[];
+};
+
+type ServiceIndexData = {
+  subtitle?: string;
+  title?: string;
+  description?: string;
+  meta_title?: string;
+};
+
 type Props = {
-  serviceIndex: CollectionEntry<"services">["data"];
-  allServices: CollectionEntry<"services">[];
+  serviceIndex: ServiceIndexData;
+  allServices: SanityService[];
 };
 
 const { serviceIndex, allServices } = Astro.props;
-const launchableServices = allServices.filter(
-  (service) => !service.id.startsWith("_") && !service.id.startsWith("-")
-);
+const launchableServices = allServices;
 
 // Service descriptions for the services index page
 const serviceDescriptions: Record<string, string> = {
@@ -244,18 +254,18 @@ const serviceImages: Record<string, string> = {
         launchableServices.map((service, i) => (
           <div
             class="group h-full service-card"
-            data-categories={JSON.stringify(service.data.categories || [])}
+            data-categories={JSON.stringify(service.categories || [])}
             data-aos="fade-up-sm"
             data-aos-delay={100 + i * 50}>
             <a
-              href={getServicePath(service.id)}
+              href={getServicePath(service.slug)}
               class="block h-full bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300">
 
               {/* Photo with hover magnification */}
               <div class="relative h-64 overflow-hidden">
                 <img
-                  src={serviceImages[service.id] || "/images/service/2.webp"}
-                  alt={service.data.title}
+                  src={serviceImages[service.slug] || "/images/service/2.webp"}
+                  alt={service.title}
                   class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -265,13 +275,13 @@ const serviceImages: Record<string, string> = {
               <div class="p-6">
                 {/* Service Name as Heading/Link */}
                 <h3
-                  set:html={markdownify(service.data.title!)}
+                  set:html={markdownify(service.title!)}
                   class="text-2xl font-bold text-dark mb-3 group-hover:text-accent transition-colors"
                 />
 
                 {/* Description */}
                 <p class="text-base text-text/80 leading-relaxed mb-4">
-                  {serviceDescriptions[service.id] || ""}
+                  {serviceDescriptions[service.slug] || ""}
                 </p>
 
                 {/* Learn More Link */}
