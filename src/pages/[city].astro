@@ -22,6 +22,12 @@ export async function getStaticPaths() {
 
 const { city: citySlug } = Astro.params;
 
+// Fetch all city slugs for the "Nearby Cities" section
+const allCitySlugs = await sanityClient.fetch<Array<{ slug: string; city: string }>>(
+  `*[_type == "cityPage" && slug.current != $slug]{ "slug": slug.current, city }`,
+  { slug: citySlug }
+);
+
 // Fetch full city page data from Sanity
 const data = await sanityClient.fetch<{
   city: string;
@@ -613,22 +619,20 @@ function serviceEmoji(icon: string): string {
             />
           </div>
 
-          <!-- Nearby Cities -->
-          <div class="text-center mt-8 pt-8 border-t border-border" data-aos="fade-up-sm">
-            <h3 class="text-xl font-semibold text-dark mb-4">Also Serving Nearby Cities</h3>
-            <p class="text-text/80">
-              <a href="/mesa" class="text-primary hover:underline">Mesa</a> •
-              <a href="/gilbert" class="text-primary hover:underline">Gilbert</a> •
-              <a href="/chandler" class="text-primary hover:underline">Chandler</a> •
-              <a href="/tempe" class="text-primary hover:underline">Tempe</a> •
-              <a href="/scottsdale" class="text-primary hover:underline">Scottsdale</a> •
-              <a href="/queen-creek" class="text-primary hover:underline">Queen Creek</a> •
-              <a href="/glendale" class="text-primary hover:underline">Glendale</a> •
-              <a href="/peoria" class="text-primary hover:underline">Peoria</a> •
-              <a href="/apache-junction" class="text-primary hover:underline">Apache Junction</a> •
-              <a href="/san-tan-valley" class="text-primary hover:underline">San Tan Valley</a>
-            </p>
-          </div>
+          <!-- Nearby Cities (dynamic from Sanity) -->
+          {allCitySlugs.length > 0 && (
+            <div class="text-center mt-8 pt-8 border-t border-border" data-aos="fade-up-sm">
+              <h3 class="text-xl font-semibold text-dark mb-4">Also Serving Nearby Cities</h3>
+              <p class="text-text/80">
+                {allCitySlugs.map((c, i) => (
+                  <>
+                    {i > 0 && " • "}
+                    <a href={`/${c.slug}`} class="text-primary hover:underline">{c.city}</a>
+                  </>
+                ))}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>

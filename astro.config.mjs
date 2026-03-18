@@ -8,7 +8,25 @@ import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import sharp from "sharp";
+import { createClient } from "@sanity/client";
 import config from "./src/config/config.json";
+
+// Fetch city slugs from Sanity at build time for sitemap
+const sanityBuildClient = createClient({
+  projectId: process.env.SANITY_PROJECT_ID || "mi2de5uc",
+  dataset: process.env.SANITY_DATASET || "production",
+  apiVersion: "2026-03-01",
+  useCdn: true,
+});
+
+let citySlugs = [];
+try {
+  citySlugs = await sanityBuildClient.fetch(
+    `*[_type == "cityPage"]{ "slug": slug.current }`
+  );
+} catch (e) {
+  console.warn("[sitemap] Failed to fetch city slugs from Sanity:", e.message);
+}
 
 let highlighter;
 async function getHighlighter() {
@@ -253,7 +271,9 @@ export default defineConfig({
   vite: { plugins: [tailwindcss()] },
   integrations: [
     react(),
-    sitemap(),
+    sitemap({
+      customPages: citySlugs.map((c) => `${config.site.base_url}/${c.slug}`),
+    }),
     AutoImport({
       imports: [
         "@/shortcodes/Button",
