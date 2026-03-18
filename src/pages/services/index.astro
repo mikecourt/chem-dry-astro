@@ -4,8 +4,7 @@ import ServicesIndex from "@/layouts/components/services/ServicesIndex.astro";
 import Base from "@/layouts/Base.astro";
 import { sanityClient } from "@/lib/sanity";
 import CallToAction from "@/partials/CallToAction.astro";
-import { getEntry } from "astro:content";
-import type { CollectionEntry } from "astro:content";
+import { fetchCta } from "@/lib/fetchCta";
 
 // Fetch the services index metadata from Sanity (the singleton "servicesIndex" doc if it exists,
 // otherwise fall back to a hardcoded default that matches the old -index.md content)
@@ -29,15 +28,12 @@ const allServices = await sanityClient.fetch(
   }`
 );
 
-const callToAction = (await getEntry(
-  "ctaSection",
-  "call-to-action"
-)) as CollectionEntry<"ctaSection">;
+const callToAction = await fetchCta();
 ---
 
 <Base title={serviceIndex.title} meta_title={serviceIndex.meta_title} description={serviceIndex.description}>
   <ServicesIndex serviceIndex={serviceIndex} allServices={allServices} />
   <Process process={undefined} />
 
-  <CallToAction cta={callToAction.data} />
+  <CallToAction cta={callToAction} />
 </Base>

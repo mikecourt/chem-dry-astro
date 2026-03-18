@@ -7,8 +7,8 @@ import TrustBar from "@/components/TrustBar.astro";
 import AllergenDisclaimer from "@/components/AllergenDisclaimer.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import CityTestimonials from "@/components/CityTestimonials.astro";
-import { getEntry, type CollectionEntry } from "astro:content";
 import { sanityClient } from "@/lib/sanity";
+import { fetchCta } from "@/lib/fetchCta";
 
 export async function getStaticPaths() {
   const slugs = await sanityClient.fetch<Array<{ slug: { current: string } }>>(
@@ -65,11 +65,7 @@ const data = await sanityClient.fetch<{
   { slug: citySlug }
 );
 
-// Fetch CTA from content collection (not yet migrated to Sanity)
-const call_to_action = (await getEntry(
-  "ctaSection",
-  "call-to-action"
-)) as CollectionEntry<"ctaSection">;
+const call_to_action = await fetchCta();
 
 const neighborhoods = data?.neighborhoods ?? [];
 const services = data?.services ?? [];
@@ -905,5 +901,5 @@ function serviceEmoji(icon: string): string {
 
   <TrustBar />
 
-  <CallToAction cta={call_to_action.data} />
+  <CallToAction cta={call_to_action} />
 </Base>

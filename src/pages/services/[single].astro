@@ -8,6 +8,7 @@ import Base from "@/layouts/Base.astro";
 import { sanityClient, urlFor } from "@/lib/sanity";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction.astro";
+import { fetchCta } from "@/lib/fetchCta";
 import { PortableText } from "astro-portabletext";
 
 export async function getStaticPaths() {
@@ -41,15 +42,7 @@ const service = await sanityClient.fetch(
   { slug: single }
 );
 
-// Fetch CTA from Sanity (fallback to content collection if not migrated yet)
-let ctaData: any;
-try {
-  ctaData = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
-} catch {
-  const { getEntry } = await import("astro:content");
-  const cta = await getEntry("ctaSection", "call-to-action");
-  ctaData = cta?.data;
-}
+const ctaData = await fetchCta();
 
 const hasRichLayout = !!(service?.heroImageUrl || service?.heroHeading);
 const heroImage = service?.heroImageUrl || service?.bannerUrl || "";

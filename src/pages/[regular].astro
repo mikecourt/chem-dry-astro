@@ -2,8 +2,8 @@
 import Base from "@/layouts/Base.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
 import CallToAction from "@/partials/CallToAction.astro";
-import type { CollectionEntry } from "astro:content";
-import { getEntry, render } from "astro:content";
+import { fetchCta } from "@/lib/fetchCta";
+import { render } from "astro:content";
 
 // get static paths for all pages
 export async function getStaticPaths() {
@@ -24,10 +24,7 @@ const { page } = Astro.props;
 const { title, meta_title, description } = page.data;
 const { Content } = await render(page);
 
-const cta = (await getEntry(
-  "ctaSection",
-  "call-to-action"
-)) as CollectionEntry<"ctaSection">;
+const cta = await fetchCta();
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
@@ -45,5 +42,5 @@ const cta = (await getEntry(
     </div>
   </section>
 
-  <CallToAction cta={cta.data} />
+  <CallToAction cta={cta} />
 </Base>

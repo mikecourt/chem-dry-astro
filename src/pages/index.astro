@@ -12,11 +12,9 @@ import SchemaMarkup from "@/components/SchemaMarkup.astro";
 import Service from "@/layouts/components/services/Service.astro";
 import Base from "@/layouts/Base.astro";
 import Hero from "@/layouts/components/homepage/Hero.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
 import CallToAction from "@/partials/CallToAction.astro";
 import { sanityClient, urlFor } from "@/lib/sanity";
-import type { CollectionEntry } from "astro:content";
-import { getEntry } from "astro:content";
+import { fetchCta } from "@/lib/fetchCta";
 
 const homepage = await sanityClient.fetch(`*[_type == "homepage"][0]`);
 const { hero, about, responsibility, customer, testimonial, blog } = homepage;
@@ -24,18 +22,25 @@ const { hero, about, responsibility, customer, testimonial, blog } = homepage;
 // Resolve hero image URL from Sanity image reference
 const heroImageUrl = hero?.image ? urlFor(hero.image).width(1920).url() : "";
 
-const callToAction = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
+const callToAction = await fetchCta();
 
-// Service section still uses content collections
-const serviceIndex = (await getEntry(
-  "services",
-  "-index"
-)) as CollectionEntry<"services">;
-const allServices = await getSinglePage("services");
-// Show only top 5 services on homepage
+// Fetch services from Sanity for homepage section
+const allServices = await sanityClient.fetch(
+  `*[_type == "service" && !draft && homepage_section_enable == true] | order(weight asc) {
+    title, "slug": slug.current, home_title, icon, descriptions, categories
+  }`
+);
+const serviceIndex = await sanityClient.fetch(
+  `*[_type == "servicesIndex"][0]{ title, subtitle, homepage_section_enable }`
+).catch(() => ({ homepage_section_enable: true, title: "Our Services", subtitle: "What We Do" }));
 const topServices = allServices.slice(0, 5);
 
-const allBlogs = await getSinglePage("blog");
+// Fetch blog posts from Sanity for homepage
+const allBlogs = await sanityClient.fetch(
+  `*[_type == "blogPost" && !draft] | order(date desc) [0..5] {
+    title, "slug": slug.current, description, date, categories, badge, "image": image.asset->url
+  }`
+);
 
 const canonical = "https://whiteglovecarpet.com/";
 ---
@@ -46,8 +51,8 @@ const canonical = "https://whiteglovecarpet.com/";
   <WhiteGlovePromise />
   <ComparisonChart />
   {
-    serviceIndex.data.homepage_section_enable && (
-      <Service serviceIndex={serviceIndex.data} allServices={topServices} />
+    serviceIndex?.homepage_section_enable && (
+      <Service serviceIndex={serviceIndex} allServices={topServices} />
     )
   }
   {testimonial?.enable && <Testimonial testimonial={testimonial} />}
