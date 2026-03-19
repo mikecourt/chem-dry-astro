@@ -40,6 +40,10 @@ const cta = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
             data-aos="fade-up-sm"
             data-aos-delay="100">
             <form action="/api/contact" method="POST" id="contact-form" data-track="quote-form" data-track-location="contact-page">
+              <div style="position:absolute;left:-9999px" aria-hidden="true">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+              <input type="hidden" name="_loadTime" id="contact-loadTime" />
               <div class="row">
                 <div class="col-12">
                   <div class="mb-6" data-aos="fade-up-sm" data-aos-delay="120">
@@ -125,6 +129,10 @@ const cta = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
   <CallToAction cta={cta} />
 
   <script>
+    // Set load time for anti-spam timing check
+    const loadTimeInput = document.getElementById('contact-loadTime') as HTMLInputElement | null;
+    if (loadTimeInput) loadTimeInput.value = Date.now().toString();
+
     // Contact form async submission
     const contactForm = document.getElementById('contact-form') as HTMLFormElement | null;
     if (contactForm) {

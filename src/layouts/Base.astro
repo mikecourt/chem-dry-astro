@@ -123,6 +123,9 @@ const gtmEnabled =
       ]}
     />
 
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title={config.site.title} href="/rss.xml" />
+
     <!-- responsive meta -->
     <meta
       name="viewport"
@@ -216,6 +219,14 @@ const gtmEnabled =
     {/* google tag manager noscript */}
     {gtmEnabled && <GoogleTagmanagerNoscript id={gtmId} />}
 
+    {/* dataLayer location push */}
+    {gtmEnabled && (
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ location: "phoenix" });
+      </script>
+    )}
+
     <!-- 21st.dev Toolbar (dev mode only) -->
     <Dev21stToolbar />
 
@@ -280,8 +291,14 @@ const gtmEnabled =
     </script>
     <Footer />
 
-    <!-- GHL Session Tracking & Number Pool (is:inline prevents Astro from processing) -->
-    <script is:inline src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"></script>
-    <script is:inline src="https://backend.leadconnectorhq.com/appengine/loc/whWiJKEKIxuVxPacF4g2/pool/25VjzJBcMhtCvgmwVPpZ/number_pool.js"></script>
+    <!-- GHL Session Tracking & Number Pool (conditional on location config) -->
+    {import.meta.env.GHL_LOCATION_ID && (
+      <>
+        <script is:inline src="https://backend.leadconnectorhq.com/appengine/js/user_session.js"></script>
+        {import.meta.env.GHL_PHONE_POOL_ID && (
+          <script is:inline src={`https://backend.leadconnectorhq.com/appengine/loc/${import.meta.env.GHL_LOCATION_ID}/pool/${import.meta.env.GHL_PHONE_POOL_ID}/number_pool.js`}></script>
+        )}
+      </>
+    )}
   </body>
 </html>

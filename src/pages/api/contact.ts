@@ -16,6 +16,24 @@ export const POST: APIRoute = async ({ request }) => {
 
   const data = await request.formData();
 
+  // Anti-spam: honeypot check
+  const honeypot = data.get("website")?.toString() || "";
+  if (honeypot) {
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // Anti-spam: timing check (reject if submitted in under 3 seconds)
+  const loadTime = Number(data.get("_loadTime") || 0);
+  if (loadTime && Date.now() - loadTime < 3000) {
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
   // Parse name into first/last
   const fullName = data.get("name")?.toString().trim() || "";
   const nameParts = fullName.split(/\s+/);
