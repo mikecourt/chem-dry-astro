@@ -46,6 +46,10 @@ export default defineConfig({
   redirects: {
     // ── Phoenix (whiteglovecarpet.com) — Legacy WordPress → New Astro ──
     // Service / booking aliases
+    "/gallery": {
+      status: 301,
+      destination: "/before-after",
+    },
     "/booknow": "/appointment",
     "/frequently-asked-questions": "/contact",
     "/why-chem-dry": "/about",
