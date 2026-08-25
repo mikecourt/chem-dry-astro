@@ -3,8 +3,8 @@ import CustomHeading from "@/components/CustomHeading.astro";
 import ImageGallery from "@/components/functional-component/ImageGallery";
 import type { BeforeAfterPair } from "@/components/functional-component/ImageGallery";
 import Base from "@/layouts/Base.astro";
+import { fetchCta } from "@/lib/fetchCta";
 import CallToAction from "@/partials/CallToAction.astro";
-import { sanityClient } from "@/lib/sanity";
 
 const title = "Before **& After**";
 const meta_title = "Before & After | Brimley's White Glove Chem-Dry";
@@ -90,7 +90,7 @@ const pairs: BeforeAfterPair[] = [
   },
 ];
 
-const callToAction = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
+const callToAction = await fetchCta();
 ---
 
 <Base title={title} meta_title={meta_title} description={description}>
