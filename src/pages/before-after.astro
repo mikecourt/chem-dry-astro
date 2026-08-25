@@ -1,0 +1,121 @@
+---
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageGallery from "@/components/functional-component/ImageGallery";
+import type { BeforeAfterPair } from "@/components/functional-component/ImageGallery";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+import { sanityClient } from "@/lib/sanity";
+
+const title = "Before **& After**";
+const meta_title = "Before & After | Brimley's White Glove Chem-Dry";
+const description =
+  "See real before and after photos from carpet, upholstery, and rug cleaning in Phoenix homes we serve. Hot Carbonating Extraction leaves no dirt-attracting residue.";
+
+const sofaSrc = "/images/before-after/img-20211209-124120.webp";
+
+const pairs: BeforeAfterPair[] = [
+  {
+    featured: true,
+    service: "Upholstery Cleaning",
+    city: "Phoenix",
+    combinedSrc: sofaSrc,
+    combinedLeftLabel: "After",
+    combinedRightLabel: "Before",
+    before: {
+      src: sofaSrc,
+      crop: "right",
+      alt: "Stained cream loveseat before upholstery cleaning in Phoenix",
+    },
+    after: {
+      src: sofaSrc,
+      crop: "left",
+      alt: "The same Phoenix loveseat after upholstery cleaning",
+    },
+  },
+  {
+    service: "Upholstery Cleaning",
+    city: "Mesa",
+    before: {
+      src: "/images/before-after/chair-stain-before-after.webp",
+      crop: "left",
+      alt: "Marker-stained chair back before upholstery cleaning in Mesa",
+    },
+    after: {
+      src: "/images/before-after/chair-stain-before-after.webp",
+      crop: "right",
+      alt: "The same Mesa chair back after stain removal",
+    },
+  },
+  {
+    service: "Carpet Cleaning",
+    city: "Gilbert",
+    before: {
+      src: "/images/before-after/before-and-after-carpet.webp",
+      crop: "left",
+      alt: "Soiled living-room carpet before cleaning in Gilbert",
+    },
+    after: {
+      src: "/images/before-after/before-and-after-carpet.webp",
+      crop: "right",
+      alt: "The same Gilbert living room after carpet cleaning",
+    },
+  },
+  {
+    service: "Area Rug Cleaning",
+    city: "Scottsdale",
+    before: {
+      src: "/images/before-after/rug-before-after.webp",
+      crop: "left",
+      alt: "Soiled oriental rug fringe before cleaning in Scottsdale",
+    },
+    after: {
+      src: "/images/before-after/rug-before-after.webp",
+      crop: "right",
+      alt: "The same Scottsdale rug after fringe and fiber cleaning",
+    },
+  },
+  {
+    service: "Carpet Cleaning",
+    city: "Chandler",
+    before: {
+      src: "/images/before-after/carpet-stain-before-after.webp",
+      crop: "left",
+      alt: "Dark carpet stain before cleaning in Chandler",
+    },
+    after: {
+      src: "/images/before-after/carpet-stain-before-after.webp",
+      crop: "right",
+      alt: "The same Chandler carpet after stain removal",
+    },
+  },
+];
+
+const callToAction = await sanityClient.fetch(`*[_type == "callToAction"][0]`);
+---
+
+<Base title={title} meta_title={meta_title} description={description}>
+  <section class="py-20 md:py-32 mt-24 sm:mt-20">
+    <div class="container relative">
+      <div class="mb-16">
+        <p
+          class="text-center text-primary text-base mb-6"
+          data-aos="fade-up-sm"
+        >
+          OUR PHOTOS
+        </p>
+        <CustomHeading
+          as="h1"
+          text={title}
+          class="text-center text-h2 md:text-h1"
+          dataAos="fade-up-sm"
+          dataAosDelay="50"
+        />
+      </div>
+
+      <div data-aos="fade-up-sm" data-aos-delay="150">
+        <ImageGallery pairs={pairs} />
+      </div>
+    </div>
+  </section>
+  <CallToAction cta={callToAction} />
+</Base>

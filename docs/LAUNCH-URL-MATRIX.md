@@ -30,7 +30,7 @@
 - `/videos`
 - `/privacy-policy`
 - `/blog`
-- `/gallery`
+- `/before-after`
 - `/phoenix`
 - `/mesa`
 - `/gilbert`
@@ -45,6 +45,7 @@
 
 ## Redirect URLs (legacy/alias)
 
+- `/gallery` -> `/before-after`
 - `/booknow` -> `/appointment`
 - `/services/tile-cleaning` -> `/services/tile-and-grout-cleaning`
 - `/services/tile-grout-cleaning` -> `/services/tile-and-grout-cleaning`
